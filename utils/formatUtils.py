@@ -29,7 +29,6 @@ def reset_yaml_content(yaml_obj):
     with open("template.json", "r", encoding="utf8") as template_file:
         template = json.load(template_file)
 
-    rules = yaml_obj.get("rules")
     proxies = yaml_obj.get("proxies")
     merged_proxy = dict()
     for proxy in proxies:
@@ -58,7 +57,7 @@ def reset_yaml_content(yaml_obj):
             proxy.get("name")
         ] = proxies_md5_name_dict.get(data_md5)
 
-    template_proxy_groups = yaml_obj.get("proxy-groups")
+    template_proxy_groups = template.get("proxy-groups")
 
     proxy_groups = dict()
     for group in template_proxy_groups:
