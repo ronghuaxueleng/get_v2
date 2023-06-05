@@ -6,89 +6,80 @@
     "log-level": "info",
     "external-controller": "0.0.0.0:9090",
     "proxies": [],
-    "proxy-groups": [{
-            "name": "🔰 节点选择",
+    "proxy-groups": [
+        {
+            "name": "PROXY",
             "type": "select",
             "proxies": [
-                "♻️ 自动选择",
-                "🎯 全球直连"
-            ]
-        },
-        {
-            "name": "♻️ 自动选择",
-            "type": "url-test",
-            "url": "http://www.gstatic.com/generate_204",
-            "interval": 300,
-            "proxies": []
-        },
-        {
-            "name": "🌍 国外媒体",
-            "type": "select",
-            "proxies": [
-                "🔰 节点选择",
-                "♻️ 自动选择",
-                "🎯 全球直连"
-            ]
-        },
-        {
-            "name": "🌏 国内媒体",
-            "type": "select",
-            "proxies": [
-                "🎯 全球直连",
-                "🔰 节点选择"
-            ]
-        },
-        {
-            "name": "📲 电报信息",
-            "type": "select",
-            "proxies": [
-                "🔰 节点选择",
-                "🎯 全球直连"
-            ]
-        },
-        {
-            "name": "🍎 苹果服务",
-            "type": "select",
-            "proxies": [
-                "🔰 节点选择",
-                "🎯 全球直连",
-                "♻️ 自动选择"
-            ]
-        },
-        {
-            "name": "🎯 全球直连",
-            "type": "select",
-            "proxies": [
+                "URL-TEST",
+                "LOAD-BALANCE",
+                "SELECT",
                 "DIRECT"
             ]
         },
         {
-            "name": "🛑 全球拦截",
+            "name": "OTHER",
+            "type": "select",
+            "proxies": [
+                "PROXY",
+                "DIRECT"
+            ]
+        },
+        {
+            "name": "AD",
             "type": "select",
             "proxies": [
                 "REJECT",
-                "DIRECT"
+                "DIRECT",
+                "PROXY"
             ]
         },
         {
-            "name": "🐟 漏网之鱼",
+            "name": "URL-TEST",
+            "type": "url-test",
+            "url": "http://www.gstatic.com/generate_204",
+            "interval": 600,
+            "lazy": true,
+            "tolerance": 100,
+            "proxies": [
+            ]
+        },
+        {
+            "name": "LOAD-BALANCE",
+            "type": "load-balance",
+            "url": "http://www.gstatic.com/generate_204",
+            "interval": 600,
+            "proxies": [
+            ]
+        },
+        {
+            "name": "SELECT",
             "type": "select",
             "proxies": [
-                "🔰 节点选择",
-                "🎯 全球直连",
-                "♻️ 自动选择"
             ]
         }
     ],
-    "rules": [],
+    "rules": [
+        "RULE-SET,applications,DIRECT",
+        "DOMAIN,clash.razord.top,DIRECT",
+        "DOMAIN,yacd.haishan.me,DIRECT",
+        "RULE-SET,private,DIRECT",
+        "RULE-SET,reject,AD",
+        "RULE-SET,icloud,DIRECT",
+        "RULE-SET,apple,DIRECT",
+        "RULE-SET,google,DIRECT",
+        "RULE-SET,tld-not-cn,PROXY",
+        "RULE-SET,gfw,PROXY",
+        "RULE-SET,greatfire,PROXY",
+        "RULE-SET,telegramcidr,PROXY",
+        "RULE-SET,lancidr,DIRECT",
+        "RULE-SET,cncidr,DIRECT",
+        "GEOIP,CN,DIRECT",
+        "RULE-SET,direct,DIRECT",
+        "RULE-SET,proxy,OTHER",
+        "MATCH,OTHER"
+    ],
     "rule-providers": {
-        "AntiAd": {
-            "type": "http",
-            "behavior": "domain",
-            "url": "https://raw.fastgit.org/privacy-protection-tools/anti-AD/master/anti-ad-clash.yaml",
-            "path": "./ruleset/AntiAd.yaml",
-            "interval": 86400
-        },
         "reject": {
             "type": "http",
             "behavior": "domain",
@@ -187,5 +178,6 @@
             "path": "./ruleset/applications.yaml",
             "interval": 86400
         }
-    }
+    },
+    "mixed-port": 7890
 }
