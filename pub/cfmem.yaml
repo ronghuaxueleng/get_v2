@@ -5,19 +5,22 @@ mode: Rule
 log-level: info
 external-controller: 0.0.0.0:9090
 proxies:
-  - name: 🇨🇳_CN_中国->🇯🇵_JP_日本
+  - &id001
+    name: 🇨🇳_CN_中国->🇯🇵_JP_日本
     type: ss
     server: free.themars.top
     port: 32102
     password: b89b39c2-dc8d-4595-a4c5-54b4fbab3fc2
     cipher: chacha20-ietf-poly1305
-  - name: 🇨🇦_CA_加拿大
+  - &id002
+    name: 🇨🇦_CA_加拿大
     type: ss
     server: 134.195.196.149
     port: 3306
     password: Y6R9pAtvxxzmGC
     cipher: aes-256-gcm
-  - name: 🇺🇸_US_美国_1
+  - &id003
+    name: 🇺🇸_US_美国_1
     type: vmess
     server: 137.175.61.130
     port: 46679
@@ -26,37 +29,43 @@ proxies:
     alterId: 64
     tls: false
     skip-cert-verify: true
-  - name: 🇰🇷_KR_韩国_1
+  - &id004
+    name: 🇰🇷_KR_韩国_1
     type: ss
     server: 43.202.49.224
     port: 443
     password: amazonskr05
     cipher: aes-256-cfb
-  - name: 🇰🇷_KR_韩国_2
+  - &id005
+    name: 🇰🇷_KR_韩国_2
     type: ss
     server: 43.200.1.53
     port: 443
     password: amazonskr05
     cipher: aes-256-cfb
-  - name: 🇰🇷_KR_韩国_3
+  - &id006
+    name: 🇰🇷_KR_韩国_3
     type: ss
     server: 43.202.46.135
     port: 443
     password: amazonskr05
     cipher: aes-256-cfb
-  - name: 🇰🇷_KR_韩国_4
+  - &id007
+    name: 🇰🇷_KR_韩国_4
     type: ss
     server: 43.202.45.84
     port: 443
     password: amazonskr05
     cipher: aes-256-cfb
-  - name: 🇰🇷_KR_韩国_5
+  - &id008
+    name: 🇰🇷_KR_韩国_5
     type: ss
     server: 43.200.7.118
     port: 443
     password: amazonskr05
     cipher: aes-256-cfb
-  - name: 🇨🇳_CN_中国_1
+  - &id009
+    name: 🇨🇳_CN_中国_1
     type: vmess
     server: 112.132.215.189
     port: 50002
@@ -66,7 +75,8 @@ proxies:
     tls: false
     skip-cert-verify: true
     network: tcp
-  - name: 🇺🇸_US_美国_2
+  - &id010
+    name: 🇺🇸_US_美国_2
     type: vmess
     server: 107.167.7.12
     port: 41654
@@ -76,7 +86,8 @@ proxies:
     tls: false
     skip-cert-verify: true
     network: tcp
-  - name: 🇺🇸_US_美国_3
+  - &id011
+    name: 🇺🇸_US_美国_3
     type: vmess
     server: 23.224.9.146
     port: 48729
@@ -86,19 +97,22 @@ proxies:
     tls: false
     skip-cert-verify: true
     network: tcp
-  - name: 🇰🇷_KR_韩国_6
+  - &id012
+    name: 🇰🇷_KR_韩国_6
     type: ss
     server: 43.201.251.42
     port: 443
     password: amazonskr05
     cipher: aes-256-cfb
-  - name: 🇨🇳_CN_中国_2
+  - &id013
+    name: 🇨🇳_CN_中国_2
     type: ss
     server: 36.137.106.115
     port: 11023
     password: ll668668@
     cipher: aes-256-gcm
-  - name: 🇨🇳_CN_中国->🇺🇸_US_美国
+  - &id014
+    name: 🇨🇳_CN_中国->🇺🇸_US_美国
     type: vmess
     server: 120.226.50.68
     port: 48767
@@ -109,13 +123,15 @@ proxies:
     skip-cert-verify: true
     servername: cr3.biger.club
     network: tcp
-  - name: 🇯🇵_JP_日本_1
+  - &id015
+    name: 🇯🇵_JP_日本_1
     type: ss
     server: 54.64.76.95
     port: 443
     password: amazonskr05
     cipher: aes-256-cfb
-  - name: 🇯🇵_JP_日本_2
+  - &id016
+    name: 🇯🇵_JP_日本_2
     type: ssr
     server: jp-am48-6.eqnode.net
     port: 8081
@@ -123,7 +139,8 @@ proxies:
     cipher: aes-256-cfb
     obfs: tls1.2_ticket_auth
     protocol: origin
-  - name: 🇸🇬_SG_新加坡
+  - &id017
+    name: 🇸🇬_SG_新加坡
     type: ssr
     server: sg-am3.eqsunshine.com
     port: 32001
@@ -131,7 +148,8 @@ proxies:
     cipher: aes-256-cfb
     obfs: tls1.2_ticket_auth
     protocol: origin
-  - name: 🇺🇸_US_美国_4
+  - &id018
+    name: 🇺🇸_US_美国_4
     type: vmess
     server: 137.175.69.234
     port: 44920
@@ -141,7 +159,8 @@ proxies:
     tls: false
     skip-cert-verify: true
     network: tcp
-  - name: 🇺🇸_US_美国_5
+  - &id019
+    name: 🇺🇸_US_美国_5
     type: vmess
     server: 137.175.52.18
     port: 33002
@@ -151,7 +170,8 @@ proxies:
     tls: false
     skip-cert-verify: true
     network: tcp
-  - name: 🇭🇰_HK_香港
+  - &id020
+    name: 🇭🇰_HK_香港
     type: trojan
     server: awshk5-tg-data.amazonwebservicess.com
     port: 443
@@ -159,7 +179,8 @@ proxies:
     password: ca7febc2-bb45-4e6d-810e-ab0af6009c4e
     skip-cert-verify: true
     network: tcp
-  - name: 🇨🇳_CN_中国_3
+  - &id021
+    name: 🇨🇳_CN_中国_3
     type: vmess
     server: 36.133.171.209
     port: 11023
@@ -168,7 +189,8 @@ proxies:
     alterId: 0
     tls: false
     skip-cert-verify: true
-  - name: 🇺🇸_US_美国_6
+  - &id022
+    name: 🇺🇸_US_美国_6
     type: vmess
     server: 142.4.126.76
     port: 31002
@@ -178,19 +200,22 @@ proxies:
     tls: false
     skip-cert-verify: true
     network: tcp
-  - name: 🇨🇳_CN_中国_4
+  - &id023
+    name: 🇨🇳_CN_中国_4
     type: ss
     server: 36.138.193.128
     port: 11023
     password: ll668668@
     cipher: aes-256-gcm
-  - name: 🇨🇳_CN_中国->🇸🇬_SG_新加坡
+  - &id024
+    name: 🇨🇳_CN_中国->🇸🇬_SG_新加坡
     type: ss
     server: free.themars.top
     port: 32103
     password: b89b39c2-dc8d-4595-a4c5-54b4fbab3fc2
     cipher: chacha20-ietf-poly1305
-  - name: 🇫🇷_FR_法国
+  - &id025
+    name: 🇫🇷_FR_法国
     type: ssr
     server: fr-am1-5.eqsunshine.com
     port: 8181
@@ -198,7 +223,8 @@ proxies:
     cipher: aes-256-cfb
     obfs: tls1.2_ticket_auth
     protocol: origin
-  - name: 🇮🇳_IN_印度
+  - &id026
+    name: 🇮🇳_IN_印度
     type: ssr
     server: z0114.security-cloudfront-cdn.com
     port: 42833
@@ -206,7 +232,8 @@ proxies:
     cipher: aes-256-cfb
     obfs: http_simple
     protocol: origin
-  - name: 🇻🇳_VN_越南
+  - &id027
+    name: 🇻🇳_VN_越南
     type: trojan
     server: vn2.microsoft-orgwly.vip
     port: 443
@@ -216,249 +243,120 @@ proxies:
     skip-cert-verify: true
     network: tcp
 proxy-groups:
-  - name: 🚀 节点选择
+  - name: PROXY
     type: select
     proxies:
-      - ♻️ 自动选择
+      - URL-TEST
+      - LOAD-BALANCE
+      - SELECT
       - DIRECT
-      - 🇨🇳_CN_中国->🇯🇵_JP_日本
-      - 🇨🇦_CA_加拿大
-      - 🇺🇸_US_美国_1
-      - 🇰🇷_KR_韩国_1
-      - 🇰🇷_KR_韩国_2
-      - 🇰🇷_KR_韩国_3
-      - 🇰🇷_KR_韩国_4
-      - 🇰🇷_KR_韩国_5
-      - 🇨🇳_CN_中国_1
-      - 🇺🇸_US_美国_2
-      - 🇺🇸_US_美国_3
-      - 🇰🇷_KR_韩国_6
-      - 🇨🇳_CN_中国_2
-      - 🇨🇳_CN_中国->🇺🇸_US_美国
-      - 🇯🇵_JP_日本_1
-      - 🇯🇵_JP_日本_2
-      - 🇸🇬_SG_新加坡
-      - 🇺🇸_US_美国_4
-      - 🇺🇸_US_美国_5
-      - 🇭🇰_HK_香港
-      - 🇨🇳_CN_中国_3
-      - 🇺🇸_US_美国_6
-      - 🇨🇳_CN_中国_4
-      - 🇨🇳_CN_中国->🇸🇬_SG_新加坡
-      - 🇫🇷_FR_法国
-      - 🇮🇳_IN_印度
-      - 🇻🇳_VN_越南
-  - name: ♻️ 自动选择
+  - name: OTHER
+    type: select
+    proxies:
+      - PROXY
+      - DIRECT
+  - name: AD
+    type: select
+    proxies:
+      - REJECT
+      - DIRECT
+      - PROXY
+  - name: URL-TEST
     type: url-test
     url: http://www.gstatic.com/generate_204
-    interval: 300
-    tolerance: 50
+    interval: 600
+    lazy: true
+    tolerance: 100
     proxies:
-      - 🇨🇳_CN_中国->🇯🇵_JP_日本
-      - 🇨🇦_CA_加拿大
-      - 🇺🇸_US_美国_1
-      - 🇰🇷_KR_韩国_1
-      - 🇰🇷_KR_韩国_2
-      - 🇰🇷_KR_韩国_3
-      - 🇰🇷_KR_韩国_4
-      - 🇰🇷_KR_韩国_5
-      - 🇨🇳_CN_中国_1
-      - 🇺🇸_US_美国_2
-      - 🇺🇸_US_美国_3
-      - 🇰🇷_KR_韩国_6
-      - 🇨🇳_CN_中国_2
-      - 🇨🇳_CN_中国->🇺🇸_US_美国
-      - 🇯🇵_JP_日本_1
-      - 🇯🇵_JP_日本_2
-      - 🇸🇬_SG_新加坡
-      - 🇺🇸_US_美国_4
-      - 🇺🇸_US_美国_5
-      - 🇭🇰_HK_香港
-      - 🇨🇳_CN_中国_3
-      - 🇺🇸_US_美国_6
-      - 🇨🇳_CN_中国_4
-      - 🇨🇳_CN_中国->🇸🇬_SG_新加坡
-      - 🇫🇷_FR_法国
-      - 🇮🇳_IN_印度
-      - 🇻🇳_VN_越南
-  - name: 🌍 国外媒体
+      - *id001
+      - *id002
+      - *id003
+      - *id004
+      - *id005
+      - *id006
+      - *id007
+      - *id008
+      - *id009
+      - *id010
+      - *id011
+      - *id012
+      - *id013
+      - *id014
+      - *id015
+      - *id016
+      - *id017
+      - *id018
+      - *id019
+      - *id020
+      - *id021
+      - *id022
+      - *id023
+      - *id024
+      - *id025
+      - *id026
+      - *id027
+  - name: LOAD-BALANCE
+    type: load-balance
+    url: http://www.gstatic.com/generate_204
+    interval: 600
+    proxies:
+      - *id001
+      - *id002
+      - *id003
+      - *id004
+      - *id005
+      - *id006
+      - *id007
+      - *id008
+      - *id009
+      - *id010
+      - *id011
+      - *id012
+      - *id013
+      - *id014
+      - *id015
+      - *id016
+      - *id017
+      - *id018
+      - *id019
+      - *id020
+      - *id021
+      - *id022
+      - *id023
+      - *id024
+      - *id025
+      - *id026
+      - *id027
+  - name: SELECT
     type: select
     proxies:
-      - 🚀 节点选择
-      - ♻️ 自动选择
-      - 🎯 全球直连
-      - 🇨🇳_CN_中国->🇯🇵_JP_日本
-      - 🇨🇦_CA_加拿大
-      - 🇺🇸_US_美国_1
-      - 🇰🇷_KR_韩国_1
-      - 🇰🇷_KR_韩国_2
-      - 🇰🇷_KR_韩国_3
-      - 🇰🇷_KR_韩国_4
-      - 🇰🇷_KR_韩国_5
-      - 🇨🇳_CN_中国_1
-      - 🇺🇸_US_美国_2
-      - 🇺🇸_US_美国_3
-      - 🇰🇷_KR_韩国_6
-      - 🇨🇳_CN_中国_2
-      - 🇨🇳_CN_中国->🇺🇸_US_美国
-      - 🇯🇵_JP_日本_1
-      - 🇯🇵_JP_日本_2
-      - 🇸🇬_SG_新加坡
-      - 🇺🇸_US_美国_4
-      - 🇺🇸_US_美国_5
-      - 🇭🇰_HK_香港
-      - 🇨🇳_CN_中国_3
-      - 🇺🇸_US_美国_6
-      - 🇨🇳_CN_中国_4
-      - 🇨🇳_CN_中国->🇸🇬_SG_新加坡
-      - 🇫🇷_FR_法国
-      - 🇮🇳_IN_印度
-      - 🇻🇳_VN_越南
-  - name: 📲 电报信息
-    type: select
-    proxies:
-      - 🚀 节点选择
-      - 🎯 全球直连
-      - 🇨🇳_CN_中国->🇯🇵_JP_日本
-      - 🇨🇦_CA_加拿大
-      - 🇺🇸_US_美国_1
-      - 🇰🇷_KR_韩国_1
-      - 🇰🇷_KR_韩国_2
-      - 🇰🇷_KR_韩国_3
-      - 🇰🇷_KR_韩国_4
-      - 🇰🇷_KR_韩国_5
-      - 🇨🇳_CN_中国_1
-      - 🇺🇸_US_美国_2
-      - 🇺🇸_US_美国_3
-      - 🇰🇷_KR_韩国_6
-      - 🇨🇳_CN_中国_2
-      - 🇨🇳_CN_中国->🇺🇸_US_美国
-      - 🇯🇵_JP_日本_1
-      - 🇯🇵_JP_日本_2
-      - 🇸🇬_SG_新加坡
-      - 🇺🇸_US_美国_4
-      - 🇺🇸_US_美国_5
-      - 🇭🇰_HK_香港
-      - 🇨🇳_CN_中国_3
-      - 🇺🇸_US_美国_6
-      - 🇨🇳_CN_中国_4
-      - 🇨🇳_CN_中国->🇸🇬_SG_新加坡
-      - 🇫🇷_FR_法国
-      - 🇮🇳_IN_印度
-      - 🇻🇳_VN_越南
-  - name: Ⓜ️ 微软服务
-    type: select
-    proxies:
-      - 🎯 全球直连
-      - 🚀 节点选择
-      - 🇨🇳_CN_中国->🇯🇵_JP_日本
-      - 🇨🇦_CA_加拿大
-      - 🇺🇸_US_美国_1
-      - 🇰🇷_KR_韩国_1
-      - 🇰🇷_KR_韩国_2
-      - 🇰🇷_KR_韩国_3
-      - 🇰🇷_KR_韩国_4
-      - 🇰🇷_KR_韩国_5
-      - 🇨🇳_CN_中国_1
-      - 🇺🇸_US_美国_2
-      - 🇺🇸_US_美国_3
-      - 🇰🇷_KR_韩国_6
-      - 🇨🇳_CN_中国_2
-      - 🇨🇳_CN_中国->🇺🇸_US_美国
-      - 🇯🇵_JP_日本_1
-      - 🇯🇵_JP_日本_2
-      - 🇸🇬_SG_新加坡
-      - 🇺🇸_US_美国_4
-      - 🇺🇸_US_美国_5
-      - 🇭🇰_HK_香港
-      - 🇨🇳_CN_中国_3
-      - 🇺🇸_US_美国_6
-      - 🇨🇳_CN_中国_4
-      - 🇨🇳_CN_中国->🇸🇬_SG_新加坡
-      - 🇫🇷_FR_法国
-      - 🇮🇳_IN_印度
-      - 🇻🇳_VN_越南
-  - name: 🍎 苹果服务
-    type: select
-    proxies:
-      - 🚀 节点选择
-      - 🎯 全球直连
-      - 🇨🇳_CN_中国->🇯🇵_JP_日本
-      - 🇨🇦_CA_加拿大
-      - 🇺🇸_US_美国_1
-      - 🇰🇷_KR_韩国_1
-      - 🇰🇷_KR_韩国_2
-      - 🇰🇷_KR_韩国_3
-      - 🇰🇷_KR_韩国_4
-      - 🇰🇷_KR_韩国_5
-      - 🇨🇳_CN_中国_1
-      - 🇺🇸_US_美国_2
-      - 🇺🇸_US_美国_3
-      - 🇰🇷_KR_韩国_6
-      - 🇨🇳_CN_中国_2
-      - 🇨🇳_CN_中国->🇺🇸_US_美国
-      - 🇯🇵_JP_日本_1
-      - 🇯🇵_JP_日本_2
-      - 🇸🇬_SG_新加坡
-      - 🇺🇸_US_美国_4
-      - 🇺🇸_US_美国_5
-      - 🇭🇰_HK_香港
-      - 🇨🇳_CN_中国_3
-      - 🇺🇸_US_美国_6
-      - 🇨🇳_CN_中国_4
-      - 🇨🇳_CN_中国->🇸🇬_SG_新加坡
-      - 🇫🇷_FR_法国
-      - 🇮🇳_IN_印度
-      - 🇻🇳_VN_越南
-  - name: 🎯 全球直连
-    type: select
-    proxies:
-      - DIRECT
-      - 🚀 节点选择
-      - ♻️ 自动选择
-  - name: 🛑 全球拦截
-    type: select
-    proxies:
-      - REJECT
-      - DIRECT
-  - name: 🍃 应用净化
-    type: select
-    proxies:
-      - REJECT
-      - DIRECT
-  - name: 🐟 漏网之鱼
-    type: select
-    proxies:
-      - 🚀 节点选择
-      - 🎯 全球直连
-      - ♻️ 自动选择
-      - 🇨🇳_CN_中国->🇯🇵_JP_日本
-      - 🇨🇦_CA_加拿大
-      - 🇺🇸_US_美国_1
-      - 🇰🇷_KR_韩国_1
-      - 🇰🇷_KR_韩国_2
-      - 🇰🇷_KR_韩国_3
-      - 🇰🇷_KR_韩国_4
-      - 🇰🇷_KR_韩国_5
-      - 🇨🇳_CN_中国_1
-      - 🇺🇸_US_美国_2
-      - 🇺🇸_US_美国_3
-      - 🇰🇷_KR_韩国_6
-      - 🇨🇳_CN_中国_2
-      - 🇨🇳_CN_中国->🇺🇸_US_美国
-      - 🇯🇵_JP_日本_1
-      - 🇯🇵_JP_日本_2
-      - 🇸🇬_SG_新加坡
-      - 🇺🇸_US_美国_4
-      - 🇺🇸_US_美国_5
-      - 🇭🇰_HK_香港
-      - 🇨🇳_CN_中国_3
-      - 🇺🇸_US_美国_6
-      - 🇨🇳_CN_中国_4
-      - 🇨🇳_CN_中国->🇸🇬_SG_新加坡
-      - 🇫🇷_FR_法国
-      - 🇮🇳_IN_印度
-      - 🇻🇳_VN_越南
+      - *id001
+      - *id002
+      - *id003
+      - *id004
+      - *id005
+      - *id006
+      - *id007
+      - *id008
+      - *id009
+      - *id010
+      - *id011
+      - *id012
+      - *id013
+      - *id014
+      - *id015
+      - *id016
+      - *id017
+      - *id018
+      - *id019
+      - *id020
+      - *id021
+      - *id022
+      - *id023
+      - *id024
+      - *id025
+      - *id026
+      - *id027
 rules:
   - RULE-SET,applications,DIRECT
   - DOMAIN,clash.razord.top,DIRECT
