@@ -17,8 +17,6 @@ jobs:
           ssh-private-key: ${{ secrets.token_Private_Keys }}
       - name: 检出代码
         uses: actions/checkout@v2
-        with:
-          repository: git@github.com:ronghuaxueleng/get_v2.git
       - name: '安装python环境'
         uses: actions/setup-python@v1
         with:
