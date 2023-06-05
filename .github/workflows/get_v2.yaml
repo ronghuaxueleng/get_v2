@@ -39,8 +39,7 @@ jobs:
       - name: 获取订阅
         run: |
           python3 get_clash.py
-          cd pub
-          git add .
+          git add pub
           git pull
           git commit --allow-empty -m "up"
           git push
