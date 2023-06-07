@@ -6,231 +6,265 @@ log-level: info
 external-controller: 0.0.0.0:9090
 proxies:
   - &id001
-    name: 🇨🇳_CN_中国->🇺🇸_US_美国
+    name: 🇺🇸_US_美国_1
     type: vmess
-    server: 120.226.50.68
-    port: 34214
+    server: 192.74.228.179
+    port: 42857
     cipher: auto
-    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+    uuid: 051b844f-efe3-4847-92aa-66b5de0b6d4e
     alterId: 64
     tls: false
     skip-cert-verify: true
-    network: tcp
   - &id002
-    name: 🇨🇳_CN_中国->🇹🇼_TW_台湾
-    type: ss
-    server: 14.29.124.168
-    port: 24001
-    password: QazEdcTgb159@$*
-    cipher: aes-128-cfb
-  - &id003
-    name: 🇰🇷_KR_韩国_1
-    type: ss
-    server: 43.200.7.118
+    name: 🇨🇳_CN_中国->🇬🇧_GB_英国
+    type: ssr
+    server: en2.vfun.icu
     port: 443
-    password: amazonskr05
+    password: vyunme
     cipher: aes-256-cfb
+    obfs: plain
+    protocol: auth_aes128_sha1
+    obfs-param: ab93117422.jd.hk
+    protocol-param: 17422:TTp0SX
+  - &id003
+    name: 🇫🇷_FR_法国
+    type: ssr
+    server: 94.23.116.190
+    port: 443
+    password: HowdyBypasser2022
+    cipher: aes-256-ctr
+    obfs: tls1.2_ticket_auth
+    protocol: origin
   - &id004
-    name: 🇺🇸_US_美国_1
+    name: 🇺🇸_US_美国_2
     type: vmess
-    server: 137.175.29.38
-    port: 53986
+    server: 107.167.16.101
+    port: 47074
     cipher: auto
-    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+    uuid: b74f4afa-1a57-4aff-b7e5-8ad5ea33566f
     alterId: 64
     tls: false
     skip-cert-verify: true
     network: tcp
   - &id005
-    name: 🇰🇷_KR_韩国_2
-    type: ss
-    server: 43.202.52.108
-    port: 443
-    password: amazonskr05
-    cipher: aes-256-cfb
-  - &id006
-    name: 🇺🇸_US_美国->🇬🇧_GB_英国
-    type: vmess
-    server: cdn.ikuan.dev
-    port: 2052
-    cipher: auto
-    uuid: 3185c2f3-4246-49c4-ba8a-5ea8fb2ef6b8
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /FreeForGFW
-      headers:
-        host: freeforgfw.ikuan.dev
-  - &id007
-    name: 🇺🇸_US_美国_2
+    name: 🇰🇷_KR_韩国
     type: trojan
-    server: 148.59.74.52
-    port: 443
+    server: kr.cc2.zhoushuren.top
+    port: 58853
     udp: true
-    password: 41bec492-cd79-4b57-9a15-7d2bb00fcfca
-    sni: 18-140-66-207.nhost.00cdn.com
+    password: 431218b0-8b07-4d71-89a4-c20aa92fce30
+    sni: kr.cc2.zhoushuren.top
     skip-cert-verify: true
     network: tcp
-  - &id008
-    name: 🇰🇷_KR_韩国_3
+  - &id006
+    name: 🇹🇼_TW_台湾_1
     type: ss
-    server: 43.202.49.224
+    server: 103.177.33.180
     port: 443
-    password: amazonskr05
-    cipher: aes-256-cfb
-  - &id009
-    name: 🇰🇷_KR_韩国_4
-    type: ss
-    server: 43.202.46.135
-    port: 443
-    password: amazonskr05
-    cipher: aes-256-cfb
-  - &id010
-    name: 🇨🇳_CN_中国_1
+    password: 9e44e9ffe5c2
+    cipher: chacha20-ietf-poly1305
+    plugin: v2ray-plugin
+    plugin-opts:
+      mode: websocket
+      host: wtw1000mline004.chilines.club
+      path: /isaifqaagpi
+      mux: true
+  - &id007
+    name: 🇹🇼_TW_台湾_2
     type: vmess
-    server: 36.133.171.209
-    port: 11023
+    server: tw99-hinet.mynodes001.one
+    port: 445
     cipher: auto
-    uuid: 8c042a38-71c1-1dcb-00df-54880236e0dc
+    uuid: 5f04de84-6b7e-3564-82c2-d2a998002629
     alterId: 0
     tls: false
     skip-cert-verify: true
-  - &id011
+  - &id008
+    name: 🇷🇺_RU_俄罗斯联邦
+    type: ss
+    server: 46.17.43.192
+    port: 12345
+    password: dongtaiwang.com
+    cipher: aes-256-gcm
+  - &id009
     name: 🇺🇸_US_美国_3
     type: vmess
-    server: usg.fljsm.com
+    server: 69.25.115.162
     port: 443
     cipher: auto
-    uuid: e5543efd-5400-3760-9bb6-02767728e888
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /video
-      headers:
-        host: usg.fljsm.com
-  - &id012
-    name: 🇮🇱_IL_以色列->🇭🇰_HK_香港
-    type: trojan
-    server: hk1.chuqiangtou.net
-    port: 4003
-    udp: true
-    password: TJCfE7Mx2YcA8kX8zg
-    skip-cert-verify: true
-    network: tcp
-  - &id013
-    name: 🇺🇦_UA_乌克兰->🇩🇪_DE_德国
-    type: vmess
-    server: dearmb.76898102.xyz
-    port: 2052
-    cipher: auto
-    uuid: d264f990-a6a5-3832-bf37-1fccaed298dd
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /ancihgrt
-      headers:
-        host: dearmb.76898102.xyz
-  - &id014
-    name: 🇨🇳_CN_中国_2
-    type: ss
-    server: 36.137.106.45
-    port: 11023
-    password: ll668668@
-    cipher: aes-256-gcm
-  - &id015
-    name: 🇨🇾_CY_塞浦路斯->🇬🇧_GB_英国
-    type: vmess
-    server: freenodecdn.ikuan.dev
-    port: 2052
-    cipher: auto
-    uuid: 3185c2f3-4246-49c4-ba8a-5ea8fb2ef6b8
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /FreeForGFW
-      headers:
-        host: freeforgfw.ikuan.dev
-  - &id016
-    name: 🇺🇸_US_美国_4
-    type: vmess
-    server: bb.hk1997.pro
-    port: 443
-    cipher: auto
-    uuid: 0fa2f4ff-d1c3-47b2-8b05-8b7e4916c290
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /jash-weh-peft-pseb-lous-jass
-      headers:
-        host: bb.hk1997.pro
-  - &id017
-    name: 🇨🇳_CN_中国_3
-    type: ss
-    server: 36.139.166.252
-    port: 11023
-    password: ll668668@
-    cipher: aes-256-gcm
-  - &id018
-    name: 🇯🇵_JP_日本
-    type: vmess
-    server: oci.donpau.com
-    port: 443
-    cipher: auto
-    uuid: 3C02DC15-56AE-7889-8936-9A2EA8FF8666
-    alterId: 0
+    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+    alterId: 64
     tls: true
     skip-cert-verify: true
+    servername: www.69908657.xyz
     network: ws
     ws-opts:
-      path: /
-      headers:
-        host: oci.donpau.com
-  - &id019
-    name: 🇨🇳_CN_中国_4
+      path: /path/1685877796747
+  - &id010
+    name: 🇺🇸_US_美国_4
     type: vmess
-    server: 112.132.215.189
-    port: 50002
+    server: 137.175.52.26
+    port: 443
+    cipher: auto
+    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+    alterId: 64
+    tls: true
+    skip-cert-verify: true
+    servername: www.77646750.xyz
+    network: ws
+    ws-opts:
+      path: /path/1685935087393
+  - &id011
+    name: 🇺🇸_US_美国_5
+    type: vmess
+    server: 23.225.33.173
+    port: 443
+    cipher: auto
+    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+    alterId: 64
+    tls: true
+    skip-cert-verify: true
+    servername: www.53638055.xyz
+    network: ws
+    ws-opts:
+      path: /path/1685950726372
+  - &id012
+    name: 🇺🇸_US_美国_6
+    type: vmess
+    server: 23.225.33.171
+    port: 56662
     cipher: auto
     uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
     alterId: 64
     tls: false
     skip-cert-verify: true
     network: tcp
+  - &id013
+    name: 🇸🇬_SG_新加坡_1
+    type: ssr
+    server: sg-am3.eqsunshine.com
+    port: 32001
+    password: 3g0dHlKME
+    cipher: aes-256-cfb
+    obfs: tls1.2_ticket_auth
+    protocol: origin
+  - &id014
+    name: 🇯🇵_JP_日本
+    type: ssr
+    server: jp-am48-6.eqnode.net
+    port: 8081
+    password: eAokbaDN6
+    cipher: aes-256-cfb
+    obfs: tls1.2_ticket_auth
+    protocol: origin
+  - &id015
+    name: 🇺🇸_US_美国->🇨🇦_CA_加拿大
+    type: vmess
+    server: 104.25.243.70
+    port: 80
+    cipher: auto
+    uuid: 6884d728-7fb0-4172-c319-e8caeadcd01f
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /tg@herhero6
+      headers:
+        host: us.herofree66.tk
+  - &id016
+    name: 🇩🇪_DE_德国->🇭🇰_HK_香港
+    type: vmess
+    server: hkgkgb.76898102.xyz
+    port: 2082
+    cipher: auto
+    uuid: 285bfc27-2341-3c7a-be0e-360cedd5e209
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /funsdfrh
+      headers:
+        host: hkg.76898102.xyz
+  - &id017
+    name: 🇺🇸_US_美国_7
+    type: vmess
+    server: 104.21.53.35
+    port: 80
+    cipher: auto
+    uuid: 09c1d32d-4458-4ebf-b36d-4dd732bae3aa
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /yxzbp
+      headers:
+        host: dp3.yxjnode.com
+  - &id018
+    name: 🇮🇩_ID_印度尼西亚
+    type: vmess
+    server: id-rysa-put-ra18n19xz.live
+    port: 80
+    cipher: auto
+    uuid: 11255dd6-c36e-4bf9-ad5e-dfb228b09298
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /vmess
+      headers:
+        host: id-rysa-put-ra18n19xz.live
+  - &id019
+    name: 🇮🇱_IL_以色列->🇬🇧_GB_英国
+    type: trojan
+    server: uk1.chuqiangtou.net
+    port: 4003
+    udp: true
+    password: TJCfE7Mx2YcA8kX8zg
+    skip-cert-verify: true
+    network: tcp
   - &id020
-    name: 🇸🇬_SG_新加坡
+    name: 🇨🇳_CN_中国->🇭🇰_HK_香港
+    type: trojan
+    server: assets.flareai.site
+    port: 13543
+    udp: true
+    password: d0d24d5b-54ae-40a0-ab68-889dbd4b8a66
+    skip-cert-verify: true
+    network: tcp
+  - &id021
+    name: 🇮🇱_IL_以色列->🇯🇵_JP_日本
+    type: trojan
+    server: jp3.chuqiangtou.net
+    port: 4003
+    udp: true
+    password: TJCfE7Mx2YcA8kX8zg
+    skip-cert-verify: true
+    network: tcp
+  - &id022
+    name: 🇸🇬_SG_新加坡_2
     type: ss
     server: 103.172.116.79
     port: 9044
     password: KBGjZYcy4SyRShmA
     cipher: aes-256-cfb
-  - &id021
-    name: 🇮🇷_IR_伊朗->🇹🇷_TR_土耳其
-    type: vmess
-    server: turkey.abraak.site
-    port: 2087
-    cipher: auto
-    uuid: 21025839-c140-4c67-8f4c-9a413ca8de3f
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: tcp
-  - &id022
-    name: 🇨🇳_CN_中国_5
+  - &id023
+    name: 🇨🇳_CN_中国
     type: ss
-    server: 36.137.106.115
+    server: 36.139.166.252
     port: 11023
     password: ll668668@
     cipher: aes-256-gcm
+  - &id024
+    name: 🇨🇳_CN_中国->🇹🇼_TW_台湾
+    type: ss
+    server: 14.29.124.168
+    port: 24002
+    password: QazEdcTgb159@$*
+    cipher: aes-128-cfb
 proxy-groups:
   - name: PROXY
     type: select
@@ -279,6 +313,8 @@ proxy-groups:
       - *id020
       - *id021
       - *id022
+      - *id023
+      - *id024
   - name: LOAD-BALANCE
     type: load-balance
     url: http://www.gstatic.com/generate_204
@@ -306,6 +342,8 @@ proxy-groups:
       - *id020
       - *id021
       - *id022
+      - *id023
+      - *id024
   - name: SELECT
     type: select
     proxies:
@@ -331,6 +369,8 @@ proxy-groups:
       - *id020
       - *id021
       - *id022
+      - *id023
+      - *id024
 rules:
   - RULE-SET,applications,DIRECT
   - DOMAIN,clash.razord.top,DIRECT
