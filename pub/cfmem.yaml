@@ -6,303 +6,9 @@ log-level: info
 external-controller: 0.0.0.0:9090
 proxies:
   - &id001
-    name: 🇨🇳_CN_中国->🇭🇰_HK_香港_1
-    type: vmess
-    server: 5m4h0k04.mcfront.xyz
-    port: 31601
-    cipher: auto
-    uuid: b7d59fbf-7be4-49bc-822e-079e06455d67
-    alterId: 0
-    tls: true
-    skip-cert-verify: true
-    servername: hk04.lovemc.xyz
-    network: tcp
-  - &id002
-    name: 🇨🇳_CN_中国->🇨🇦_CA_加拿大
-    type: vmess
-    server: 3d1c4a04.mcfront.xyz
-    port: 31701
-    cipher: auto
-    uuid: b7d59fbf-7be4-49bc-822e-079e06455d67
-    alterId: 0
-    tls: true
-    skip-cert-verify: true
-    servername: ca04.lovemc.xyz
-    network: tcp
-  - &id003
-    name: 🇨🇳_CN_中国->🇦🇺_AU_澳大利亚_1
-    type: vmess
-    server: 4o5a3u04.mcfront.xyz
-    port: 31821
-    cipher: auto
-    uuid: b7d59fbf-7be4-49bc-822e-079e06455d67
-    alterId: 0
-    tls: true
-    skip-cert-verify: true
-    servername: au04.lovemc.xyz
-    network: tcp
-  - &id004
-    name: 🇨🇳_CN_中国->🇦🇷_AR_阿根廷
-    type: vmess
-    server: 7c1a1r04.mcfront.xyz
-    port: 31861
-    cipher: auto
-    uuid: b7d59fbf-7be4-49bc-822e-079e06455d67
-    alterId: 0
-    tls: true
-    skip-cert-verify: true
-    servername: ar04.lovemc.xyz
-    network: tcp
-  - &id005
     name: 🇺🇸_US_美国_1
     type: vmess
-    server: 104.19.145.223
-    port: 8880
-    cipher: auto
-    uuid: 53ae65be-81ee-4766-8a09-da43c44c4d30
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /youlingkaishi
-      headers:
-        host: uyaa.vtcss.top
-  - &id006
-    name: 🇨🇳_CN_中国->🇭🇺_HU_匈牙利
-    type: vmess
-    server: 3c2h4u04.mcfront.xyz
-    port: 31864
-    cipher: auto
-    uuid: b7d59fbf-7be4-49bc-822e-079e06455d67
-    alterId: 0
-    tls: true
-    skip-cert-verify: true
-    servername: hu04.lovemc.xyz
-    network: tcp
-  - &id007
-    name: 🇨🇳_CN_中国->🇸🇬_SG_新加坡_1
-    type: vmess
-    server: 1c7s2g06.mcfront.xyz
-    port: 31211
-    cipher: auto
-    uuid: b7d59fbf-7be4-49bc-822e-079e06455d67
-    alterId: 0
-    tls: true
-    skip-cert-verify: true
-    servername: sg06.lovemc.xyz
-    network: tcp
-  - &id008
-    name: 🇨🇳_CN_中国->🇻🇳_VN_越南
-    type: vmess
-    server: 2w8u2a04.mcfront.xyz
-    port: 31874
-    cipher: auto
-    uuid: b7d59fbf-7be4-49bc-822e-079e06455d67
-    alterId: 0
-    tls: true
-    skip-cert-verify: true
-    servername: vn04.lovemc.xyz
-    network: tcp
-  - &id009
-    name: 🇨🇳_CN_中国->🇦🇺_AU_澳大利亚_2
-    type: vmess
-    server: 2d1t5w06.mcfront.xyz
-    port: 31311
-    cipher: auto
-    uuid: b7d59fbf-7be4-49bc-822e-079e06455d67
-    alterId: 0
-    tls: true
-    skip-cert-verify: true
-    servername: tw06.lovemc.xyz
-    network: tcp
-  - &id010
-    name: 🇨🇳_CN_中国->🇧🇷_BR_巴西
-    type: vmess
-    server: 7c6i2r04.mcfront.xyz
-    port: 31877
-    cipher: auto
-    uuid: b7d59fbf-7be4-49bc-822e-079e06455d67
-    alterId: 0
-    tls: true
-    skip-cert-verify: true
-    servername: br04.lovemc.xyz
-    network: tcp
-  - &id011
-    name: 🇨🇳_CN_中国->🇯🇵_JP_日本
-    type: vmess
-    server: 6w7j3p05.mcfront.xyz
-    port: 31106
-    cipher: auto
-    uuid: b7d59fbf-7be4-49bc-822e-079e06455d67
-    alterId: 0
-    tls: true
-    skip-cert-verify: true
-    servername: jp05.lovemc.xyz
-    network: tcp
-  - &id012
-    name: 🇨🇳_CN_中国->🇭🇰_HK_香港_2
-    type: vmess
-    server: 5m4h0k06.mcfront.xyz
-    port: 31611
-    cipher: auto
-    uuid: b7d59fbf-7be4-49bc-822e-079e06455d67
-    alterId: 0
-    tls: true
-    skip-cert-verify: true
-    servername: hk06.lovemc.xyz
-    network: tcp
-  - &id013
-    name: 🇨🇳_CN_中国->🇹🇷_TR_土耳其
-    type: vmess
-    server: 4t1u6r04.mcfront.xyz
-    port: 31868
-    cipher: auto
-    uuid: b7d59fbf-7be4-49bc-822e-079e06455d67
-    alterId: 0
-    tls: true
-    skip-cert-verify: true
-    servername: tr04.lovemc.xyz
-    network: tcp
-  - &id014
-    name: 🇨🇳_CN_中国->🇸🇬_SG_新加坡_2
-    type: vmess
-    server: 1c7s2g04.mcfront.xyz
-    port: 31201
-    cipher: auto
-    uuid: b7d59fbf-7be4-49bc-822e-079e06455d67
-    alterId: 0
-    tls: true
-    skip-cert-verify: true
-    servername: sg04.lovemc.xyz
-    network: tcp
-  - &id015
-    name: 🇺🇸_US_美国->🇸🇬_SG_新加坡_1
-    type: vmess
-    server: 104.25.97.255
-    port: 2052
-    cipher: auto
-    uuid: 71b93046-9b6b-48d5-c5fb-9997daf0c7f4
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /ylks
-      headers:
-        host: x1.ylks01.eu.org
-  - &id016
-    name: 🇨🇳_CN_中国->🇷🇺_RU_俄罗斯联邦
-    type: vmess
-    server: 4t1r5u04.mcfront.xyz
-    port: 31851
-    cipher: auto
-    uuid: b7d59fbf-7be4-49bc-822e-079e06455d67
-    alterId: 0
-    tls: true
-    skip-cert-verify: true
-    servername: ru04.lovemc.xyz
-    network: tcp
-  - &id017
-    name: 🇺🇸_US_美国_2
-    type: vmess
-    server: 173.245.58.89
-    port: 2095
-    cipher: auto
-    uuid: 43f71098-601d-459b-91f2-7e85a9ac6042
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /blue
-      headers:
-        host: x2.ylks01.eu.org
-  - &id018
-    name: 🇨🇾_CY_塞浦路斯->🇺🇸_US_美国
-    type: vmess
-    server: jpwadnca.114514782.xyz
-    port: 2052
-    cipher: auto
-    uuid: 3f6ad16c-f1ea-38fd-bf1d-a64e77ffaa32
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /miaoshen
-      headers:
-        host: jpwadnca.114514782.xyz
-  - &id019
-    name: 🇨🇳_CN_中国->🇺🇸_US_美国_1
-    type: vmess
-    server: 4a2u0a06.mcfront.xyz
-    port: 31511
-    cipher: auto
-    uuid: b7d59fbf-7be4-49bc-822e-079e06455d67
-    alterId: 0
-    tls: true
-    skip-cert-verify: true
-    servername: us06.lovemc.xyz
-    network: tcp
-  - &id020
-    name: 🇨🇳_CN_中国->🇺🇸_US_美国_2
-    type: vmess
-    server: 4a2u0a05.mcfront.xyz
-    port: 31506
-    cipher: auto
-    uuid: b7d59fbf-7be4-49bc-822e-079e06455d67
-    alterId: 0
-    tls: true
-    skip-cert-verify: true
-    servername: us05.lovemc.xyz
-    network: tcp
-  - &id021
-    name: 🇨🇳_CN_中国->🇮🇳_IN_印度
-    type: vmess
-    server: 6q3i1n04.mcfront.xyz
-    port: 31831
-    cipher: auto
-    uuid: b7d59fbf-7be4-49bc-822e-079e06455d67
-    alterId: 0
-    tls: true
-    skip-cert-verify: true
-    servername: in04.lovemc.xyz
-    network: tcp
-  - &id022
-    name: 🇺🇸_US_美国->🇸🇬_SG_新加坡_2
-    type: vmess
-    server: 104.17.106.135
-    port: 2052
-    cipher: auto
-    uuid: 71b93046-9b6b-48d5-c5fb-9997daf0c7f4
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /ylks
-      headers:
-        host: x1.ylks01.eu.org
-  - &id023
-    name: 🇺🇸_US_美国_3
-    type: vmess
-    server: 162.159.12.77
-    port: 2052
-    cipher: auto
-    uuid: 71b93046-9b6b-48d5-c5fb-9997daf0c7f4
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /ylks
-      headers:
-        host: x1.ylks01.eu.org
-  - &id024
-    name: 🇺🇸_US_美国_4
-    type: vmess
-    server: 104.24.198.75
+    server: 104.20.55.60
     port: 2052
     cipher: auto
     uuid: 3f100fa9-a160-4a1c-c40d-e22070ac9785
@@ -314,79 +20,310 @@ proxies:
       path: /qwer00
       headers:
         host: x2.ylks01.eu.org
+  - &id002
+    name: 🇺🇸_US_美国->🇸🇬_SG_新加坡_1
+    type: vmess
+    server: 104.24.49.199
+    port: 2095
+    cipher: auto
+    uuid: 1d1362f7-073c-4e5c-b470-02b8222c226c
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /ylks
+      headers:
+        host: x1.ylks01.eu.org
+  - &id003
+    name: 🇨🇳_CN_中国->🇹🇷_TR_土耳其
+    type: vmess
+    server: 2t1u04.abzoones.xyz
+    port: 36868
+    cipher: auto
+    uuid: 2c20a8f9-0685-468d-a8ef-0075b463691e
+    alterId: 0
+    tls: true
+    skip-cert-verify: true
+    servername: tr04.abpilot.xyz
+    network: tcp
+  - &id004
+    name: 🇸🇬_SG_新加坡_1
+    type: vmess
+    server: 13.215.205.45
+    port: 443
+    cipher: auto
+    uuid: 9bc3178b-959d-45ea-a487-b66c6098a4a5
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /
+  - &id005
+    name: 🇨🇳_CN_中国->🇬🇧_GB_英国
+    type: vmess
+    server: 2u3k04.abzoones.xyz
+    port: 36811
+    cipher: auto
+    uuid: 2c20a8f9-0685-468d-a8ef-0075b463691e
+    alterId: 0
+    tls: true
+    skip-cert-verify: true
+    servername: uk04.abpilot.xyz
+    network: tcp
+  - &id006
+    name: 🇨🇳_CN_中国->🇺🇸_US_美国
+    type: vmess
+    server: 3u1s06.abzoones.xyz
+    port: 36511
+    cipher: auto
+    uuid: 2c20a8f9-0685-468d-a8ef-0075b463691e
+    alterId: 0
+    tls: true
+    skip-cert-verify: true
+    servername: us06.abpilot.xyz
+    network: tcp
+  - &id007
+    name: 🇨🇳_CN_中国->🇯🇵_JP_日本_1
+    type: vmess
+    server: 1j8p06.abzoones.xyz
+    port: 36111
+    cipher: auto
+    uuid: 2c20a8f9-0685-468d-a8ef-0075b463691e
+    alterId: 0
+    tls: true
+    skip-cert-verify: true
+    servername: jp06.abpilot.xyz
+    network: tcp
+  - &id008
+    name: 🇨🇳_CN_中国->🇷🇺_RU_俄罗斯联邦
+    type: vmess
+    server: 8r5u04.abzoones.xyz
+    port: 36851
+    cipher: auto
+    uuid: 2c20a8f9-0685-468d-a8ef-0075b463691e
+    alterId: 0
+    tls: true
+    skip-cert-verify: true
+    servername: ru04.abpilot.xyz
+    network: tcp
+  - &id009
+    name: 🇨🇳_CN_中国->🇯🇵_JP_日本_2
+    type: vmess
+    server: 1j8p05.abzoones.xyz
+    port: 36106
+    cipher: auto
+    uuid: 2c20a8f9-0685-468d-a8ef-0075b463691e
+    alterId: 0
+    tls: true
+    skip-cert-verify: true
+    servername: jp05.abpilot.xyz
+    network: tcp
+  - &id010
+    name: 🇨🇳_CN_中国->🇧🇷_BR_巴西
+    type: vmess
+    server: 6i2r04.abzoones.xyz
+    port: 36877
+    cipher: auto
+    uuid: 2c20a8f9-0685-468d-a8ef-0075b463691e
+    alterId: 0
+    tls: true
+    skip-cert-verify: true
+    servername: br04.abpilot.xyz
+    network: tcp
+  - &id011
+    name: 🇳🇱_NL_荷兰->🇸🇬_SG_新加坡
+    type: vmess
+    server: 188.114.99.97
+    port: 2095
+    cipher: auto
+    uuid: 1d1362f7-073c-4e5c-b470-02b8222c226c
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /ylks
+      headers:
+        host: x1.ylks01.eu.org
+  - &id012
+    name: 🇨🇳_CN_中国->🇹🇼_TW_台湾_1
+    type: vmess
+    server: 8t6w05.abzoones.xyz
+    port: 36306
+    cipher: auto
+    uuid: 2c20a8f9-0685-468d-a8ef-0075b463691e
+    alterId: 0
+    tls: true
+    skip-cert-verify: true
+    servername: tw05.abpilot.xyz
+    network: tcp
+  - &id013
+    name: 🇨🇳_CN_中国->🇭🇰_HK_香港
+    type: vmess
+    server: 8h2k05.abzoones.xyz
+    port: 36606
+    cipher: auto
+    uuid: 2c20a8f9-0685-468d-a8ef-0075b463691e
+    alterId: 0
+    tls: true
+    skip-cert-verify: true
+    servername: hk05.abpilot.xyz
+    network: tcp
+  - &id014
+    name: 🇨🇳_CN_中国->🇵🇭_PH_菲律宾
+    type: vmess
+    server: 7p3h04.abzoones.xyz
+    port: 36801
+    cipher: auto
+    uuid: 2c20a8f9-0685-468d-a8ef-0075b463691e
+    alterId: 0
+    tls: true
+    skip-cert-verify: true
+    servername: ph04.abpilot.xyz
+    network: tcp
+  - &id015
+    name: 🇨🇳_CN_中国->🇸🇬_SG_新加坡_1
+    type: vmess
+    server: 9s5g05.abzoones.xyz
+    port: 36206
+    cipher: auto
+    uuid: 2c20a8f9-0685-468d-a8ef-0075b463691e
+    alterId: 0
+    tls: true
+    skip-cert-verify: true
+    servername: sg05.abpilot.xyz
+    network: tcp
+  - &id016
+    name: 🇨🇳_CN_中国->🇻🇳_VN_越南
+    type: vmess
+    server: 3v4n04.abzoones.xyz
+    port: 36874
+    cipher: auto
+    uuid: 2c20a8f9-0685-468d-a8ef-0075b463691e
+    alterId: 0
+    tls: true
+    skip-cert-verify: true
+    servername: vn04.abpilot.xyz
+    network: tcp
+  - &id017
+    name: 🇺🇸_US_美国->🇧🇷_BR_巴西
+    type: vmess
+    server: 104.18.23.26
+    port: 8080
+    cipher: auto
+    uuid: dcafb669-fefc-4994-e3a9-5f40ed6aa7cf
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /sshtproject
+      headers:
+        host: v2free.sshtproect.shop
+  - &id018
+    name: 🇨🇳_CN_中国->🇯🇵_JP_日本_3
+    type: vmess
+    server: 1j8p04.abzoones.xyz
+    port: 36116
+    cipher: auto
+    uuid: 2c20a8f9-0685-468d-a8ef-0075b463691e
+    alterId: 0
+    tls: true
+    skip-cert-verify: true
+    servername: jp04.abpilot.xyz
+    network: tcp
+  - &id019
+    name: 🇨🇳_CN_中国->🇰🇷_KR_韩国
+    type: vmess
+    server: 8k2r04.abzoones.xyz
+    port: 36401
+    cipher: auto
+    uuid: 2c20a8f9-0685-468d-a8ef-0075b463691e
+    alterId: 0
+    tls: true
+    skip-cert-verify: true
+    servername: kr04.abpilot.xyz
+    network: tcp
+  - &id020
+    name: 🇨🇳_CN_中国->🇨🇦_CA_加拿大
+    type: vmess
+    server: 5c1a04.abzoones.xyz
+    port: 36701
+    cipher: auto
+    uuid: 2c20a8f9-0685-468d-a8ef-0075b463691e
+    alterId: 0
+    tls: true
+    skip-cert-verify: true
+    servername: ca04.abpilot.xyz
+    network: tcp
+  - &id021
+    name: 🇨🇳_CN_中国->🇸🇬_SG_新加坡_2
+    type: vmess
+    server: 9s5g04.abzoones.xyz
+    port: 36201
+    cipher: auto
+    uuid: 2c20a8f9-0685-468d-a8ef-0075b463691e
+    alterId: 0
+    tls: true
+    skip-cert-verify: true
+    servername: sg04.abpilot.xyz
+    network: tcp
+  - &id022
+    name: 🇨🇳_CN_中国->🇦🇷_AR_阿根廷
+    type: vmess
+    server: 9a8r04.abzoones.xyz
+    port: 36861
+    cipher: auto
+    uuid: 2c20a8f9-0685-468d-a8ef-0075b463691e
+    alterId: 0
+    tls: true
+    skip-cert-verify: true
+    servername: ar04.abpilot.xyz
+    network: tcp
+  - &id023
+    name: 🇨🇳_CN_中国->🇭🇺_HU_匈牙利
+    type: vmess
+    server: 2h4u04.abzoones.xyz
+    port: 36864
+    cipher: auto
+    uuid: 2c20a8f9-0685-468d-a8ef-0075b463691e
+    alterId: 0
+    tls: true
+    skip-cert-verify: true
+    servername: hu04.abpilot.xyz
+    network: tcp
+  - &id024
+    name: 🇺🇸_US_美国_2
+    type: vmess
+    server: 108.162.194.118
+    port: 80
+    cipher: auto
+    uuid: a1d16be7-8aa7-4fd3-ea1b-79117cd9cce6
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /qwer00
+      headers:
+        host: x2.ylks01.eu.org
   - &id025
-    name: 🇫🇷_FR_法国
+    name: 🇸🇬_SG_新加坡_2
     type: vmess
-    server: 173.245.49.24
-    port: 2052
+    server: 13.215.190.191
+    port: 80
     cipher: auto
-    uuid: 71b93046-9b6b-48d5-c5fb-9997daf0c7f4
+    uuid: ca7febc2-bb45-4e6d-810e-ab0af6009c4e
     alterId: 0
     tls: false
     skip-cert-verify: true
     network: ws
     ws-opts:
-      path: /ylks
-      headers:
-        host: x1.ylks01.eu.org
+      path: /aws-china-media/Y699Gjx2rNw.mp4
   - &id026
-    name: 🇨🇷_CR_哥斯达黎加
-    type: vmess
-    server: 190.93.245.248
-    port: 2052
-    cipher: auto
-    uuid: 71b93046-9b6b-48d5-c5fb-9997daf0c7f4
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /ylks
-      headers:
-        host: x1.ylks01.eu.org
-  - &id027
-    name: 🇺🇸_US_美国->🇮🇳_IN_印度
-    type: vmess
-    server: yd1.01dj.sbs
-    port: 443
-    cipher: auto
-    uuid: 08d3c0b5-6515-4187-860f-2e41dac6a94b
-    alterId: 0
-    tls: true
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /sometimesnaive
-      headers:
-        host: yd1.01dj.sbs
-  - &id028
-    name: 🇺🇸_US_美国_5
-    type: vmess
-    server: chanel.vpnshop.top
-    port: 29530
-    cipher: auto
-    uuid: b0298d06-3790-4807-a7b1-ebba8d167cd2
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: http
-  - &id029
-    name: 🇺🇸_US_美国_6
-    type: vmess
-    server: 104.18.1.110
-    port: 443
-    cipher: auto
-    uuid: 1d8488a7-c784-4e66-ae92-1b22da9c9e68
-    alterId: 0
-    tls: true
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /c3lZ7dp02p?ed=2048
-      headers:
-        host: d2.pgypgykmoljklj.xyz
-  - &id030
-    name: 🇨🇦_CA_加拿大->🇰🇷_KR_韩国
+    name: 🇬🇧_GB_英国->🇰🇷_KR_韩国
     type: vmess
     server: krawycaa.76898102.xyz
     port: 2095
@@ -400,53 +337,121 @@ proxies:
       path: /funsdfrh
       headers:
         host: krawyca.76898102.xyz
-  - &id031
-    name: 🇨🇦_CA_加拿大->🇸🇬_SG_新加坡
+  - &id027
+    name: 🇺🇸_US_美国->🇸🇬_SG_新加坡_2
     type: vmess
-    server: 2.cashdawiodxkawjaiocjdawdawdadwrawgfsegsededwadawfgrdrcvsssl.top
+    server: 104.26.13.165
     port: 8080
     cipher: auto
-    uuid: 52672366-6993-4d21-8f1a-d102b2b87744
+    uuid: 516a22c5-54c1-4203-ec0a-bb3b2517a82d
     alterId: 0
     tls: false
     skip-cert-verify: true
     network: ws
     ws-opts:
-      path: /
+      path: /ylks
       headers:
-        host: ccaws.cashdawiodxkawjaiocjdawdawdadwrawgfsegsededwadawfgrdrcvsssl.top
-  - &id032
-    name: 🇻🇬_VG_英属维尔京群岛->🇯🇵_JP_日本
+        host: x1.ylks01.eu.org
+  - &id028
+    name: 🇻🇳_VN_越南
     type: vmess
-    server: 9.cashdawiodxkawjaiocjdawdawdadwrawgfsegsededwadawfgrdrcvsssl.top
-    port: 8880
+    server: 103.190.36.130
+    port: 80
     cipher: auto
-    uuid: 52672366-6993-4d21-8f1a-d102b2b87744
+    uuid: e79dcd87-ea5c-4058-a186-c7e3bc844ab8
     alterId: 0
     tls: false
     skip-cert-verify: true
     network: ws
     ws-opts:
-      path: /
+      path: /gachcraft
       headers:
-        host: jpppp.cashdawiodxkawjaiocjdawdawdadwrawgfsegsededwadawfgrdrcvsssl.top
-  - &id033
-    name: 🇹🇼_TW_台湾
+        host: dl.kgvn.garenanow.com
+  - &id029
+    name: 🇦🇲_AM_亚美尼亚->🇳🇱_NL_荷兰
+    type: vmess
+    server: aduibdfg.114514782.xyz
+    port: 2052
+    cipher: auto
+    uuid: e412e583-ce9b-3cf5-8812-32b9fa47562b
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /flkfhzz
+      headers:
+        host: aduibdfg.114514782.xyz
+  - &id030
+    name: 🇨🇳_CN_中国->🇹🇼_TW_台湾_2
     type: trojan
-    server: hinet2.downloadvip.cfd
-    port: 443
+    server: AZHJ.xifasd.top
+    port: 20769
     udp: true
-    password: d59235c4-44ea-4e2e-bd90-5eed10db3b15
-    sni: download.xn--mes358a9urctx.com
+    password: 78af6d6d-6de7-3a1f-a969-c39077fb47bf
+    sni: ssl.ssl12.xyz
     skip-cert-verify: true
     network: tcp
-  - &id034
-    name: 🇨🇳_CN_中国->🇭🇰_HK_香港_3
+  - &id031
+    name: 🇸🇬_SG_新加坡_3
     type: ss
-    server: 106.75.136.42
-    port: 34085
-    password: 9bc3178b-959d-45ea-a487-b66c6098a4a5
-    cipher: chacha20-ietf-poly1305
+    server: 13.215.46.225
+    port: 443
+    password: amazonskr05
+    cipher: aes-256-cfb
+  - &id032
+    name: 🇨🇳_CN_中国->🇯🇵_JP_日本_4
+    type: trojan
+    server: AZHJ.xifasd.top
+    port: 20804
+    udp: true
+    password: 78af6d6d-6de7-3a1f-a969-c39077fb47bf
+    sni: ssl.ssl12.xyz
+    skip-cert-verify: true
+    network: tcp
+  - &id033
+    name: 🇨🇳_CN_中国->🇹🇼_TW_台湾_3
+    type: ss
+    server: 14.29.124.168
+    port: 24002
+    password: QazEdcTgb159@$*
+    cipher: aes-128-cfb
+  - &id034
+    name: 🇮🇷_IR_伊朗->🇹🇷_TR_土耳其
+    type: vmess
+    server: turkey.abraak.site
+    port: 2087
+    cipher: auto
+    uuid: 21025839-c140-4c67-8f4c-9a413ca8de3f
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: tcp
+  - &id035
+    name: 🇺🇸_US_美国->🇳🇿_NZ_新西兰
+    type: vmess
+    server: 104.16.53.217
+    port: 2052
+    cipher: auto
+    uuid: c36d4223-1804-494a-a453-d4f77f10c830
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /public
+      headers:
+        host: detacenter.01.biqibao.site
+  - &id036
+    name: 🇨🇳_CN_中国
+    type: trojan
+    server: AZHJ.xifasd.top
+    port: 20714
+    udp: true
+    password: 78af6d6d-6de7-3a1f-a969-c39077fb47bf
+    sni: ssl.ssl12.xyz
+    skip-cert-verify: true
+    network: tcp
 proxy-groups:
   - name: PROXY
     type: select
@@ -507,6 +512,8 @@ proxy-groups:
       - *id032
       - *id033
       - *id034
+      - *id035
+      - *id036
   - name: LOAD-BALANCE
     type: load-balance
     url: http://www.gstatic.com/generate_204
@@ -546,6 +553,8 @@ proxy-groups:
       - *id032
       - *id033
       - *id034
+      - *id035
+      - *id036
   - name: SELECT
     type: select
     proxies:
@@ -583,6 +592,8 @@ proxy-groups:
       - *id032
       - *id033
       - *id034
+      - *id035
+      - *id036
 rules:
   - RULE-SET,applications,DIRECT
   - DOMAIN,clash.razord.top,DIRECT
