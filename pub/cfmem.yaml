@@ -6,350 +6,373 @@ log-level: info
 external-controller: 0.0.0.0:9090
 proxies:
   - &id001
-    name: 🇯🇵_JP_日本
-    type: trojan
-    server: azjp1.downloadvip.cfd
+    name: 🇨🇦_CA_加拿大->🇺🇸_US_美国
+    type: vmess
+    server: 23.227.38.99
     port: 443
-    udp: true
-    password: fddd2348-b67b-49aa-aaca-085d32f3f6fb
-    sni: jp1.xn--mes358acgm99l.com
+    cipher: auto
+    uuid: 86d37526-5758-4cec-862f-df404b313086
+    alterId: 0
+    tls: true
     skip-cert-verify: true
-    network: tcp
+    network: ws
+    ws-opts:
+      path: /3G6WPDL7
+      headers:
+        host: 1.freek1.xyz
   - &id002
-    name: 🇩🇪_DE_德国
-    type: trojan
-    server: 217.79.181.82
-    port: 443
-    udp: true
-    password: fddd2348-b67b-49aa-aaca-085d32f3f6fb
-    sni: download.xn--mes358acgm99l.com
+    name: 🇨🇳_CN_中国->🇧🇷_BR_巴西
+    type: vmess
+    server: 7c6i2r04.mcfront.xyz
+    port: 31877
+    cipher: auto
+    uuid: 5d336469-53b0-4036-8f2f-33d9bc317743
+    alterId: 0
+    tls: true
     skip-cert-verify: true
+    servername: br04.lovemc.xyz
     network: tcp
   - &id003
-    name: 🇺🇸_US_美国_1
-    type: vmess
-    server: 140.99.57.19
-    port: 41212
-    cipher: auto
-    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-    alterId: 64
-    tls: false
-    skip-cert-verify: true
-    network: tcp
-  - &id004
-    name: 🇸🇬_SG_新加坡
-    type: trojan
-    server: sg2.downloadvip.cfd
-    port: 443
-    udp: true
-    password: fddd2348-b67b-49aa-aaca-085d32f3f6fb
-    sni: jssg1.xn--mes358acgm99l.com
-    skip-cert-verify: true
-    network: tcp
-  - &id005
-    name: 🇨🇳_CN_中国->🇸🇬_SG_新加坡
-    type: vmess
-    server: 9s5g06.abzoones.xyz
-    port: 36211
-    cipher: auto
-    uuid: c458d5ba-b5dd-46df-ac3b-e986c2e6573c
-    alterId: 0
-    tls: true
-    skip-cert-verify: true
-    servername: sg06.abpilot.xyz
-    network: tcp
-  - &id006
     name: 🇨🇳_CN_中国->🇯🇵_JP_日本_1
     type: vmess
-    server: 1j8p04.abzoones.xyz
-    port: 36116
+    server: 6w7j3p06.mcfront.xyz
+    port: 31111
     cipher: auto
-    uuid: c458d5ba-b5dd-46df-ac3b-e986c2e6573c
+    uuid: 5d336469-53b0-4036-8f2f-33d9bc317743
     alterId: 0
     tls: true
     skip-cert-verify: true
-    servername: jp04.abpilot.xyz
+    servername: jp06.lovemc.xyz
     network: tcp
-  - &id007
-    name: 🇨🇳_CN_中国->🇵🇭_PH_菲律宾
+  - &id004
+    name: 🇨🇳_CN_中国->🇦🇺_AU_澳大利亚_1
     type: vmess
-    server: 7p3h04.abzoones.xyz
-    port: 36801
+    server: 4o5a3u04.mcfront.xyz
+    port: 31821
     cipher: auto
-    uuid: c458d5ba-b5dd-46df-ac3b-e986c2e6573c
+    uuid: 5d336469-53b0-4036-8f2f-33d9bc317743
     alterId: 0
     tls: true
     skip-cert-verify: true
-    servername: ph04.abpilot.xyz
+    servername: au04.lovemc.xyz
     network: tcp
-  - &id008
-    name: 🇨🇳_CN_中国->🇻🇳_VN_越南_1
-    type: vmess
-    server: 3v4n04.abzoones.xyz
-    port: 36874
-    cipher: auto
-    uuid: c458d5ba-b5dd-46df-ac3b-e986c2e6573c
-    alterId: 0
-    tls: true
-    skip-cert-verify: true
-    servername: vn04.abpilot.xyz
-    network: tcp
-  - &id009
-    name: 🇨🇳_CN_中国->🇯🇵_JP_日本_2
-    type: vmess
-    server: 1j8p05.abzoones.xyz
-    port: 36106
-    cipher: auto
-    uuid: c458d5ba-b5dd-46df-ac3b-e986c2e6573c
-    alterId: 0
-    tls: true
-    skip-cert-verify: true
-    servername: jp05.abpilot.xyz
-    network: tcp
-  - &id010
-    name: 🇺🇸_US_美国_2
-    type: vmess
-    server: 104.24.169.82
-    port: 2083
-    cipher: auto
-    uuid: e883ff76-3bb4-4008-c068-6b5b1d960ea7
-    alterId: 0
-    tls: true
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /youlingkaishi
-      headers:
-        host: uyaa.vtcss.top
-  - &id011
-    name: 🇺🇸_US_美国->🇨🇦_CA_加拿大
-    type: vmess
-    server: 104.31.16.28
-    port: 80
-    cipher: auto
-    uuid: 58fe1542-5290-40ad-815a-77707a81afe5
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /IOebhLMhl1CTbFHbL95myfRX2
-      headers:
-        host: ca4.tehme2.fun
-  - &id012
-    name: 🇨🇳_CN_中国->🇦🇺_AU_澳大利亚
-    type: vmess
-    server: 5a4u04.abzoones.xyz
-    port: 36821
-    cipher: auto
-    uuid: c458d5ba-b5dd-46df-ac3b-e986c2e6573c
-    alterId: 0
-    tls: true
-    skip-cert-verify: true
-    servername: au04.abpilot.xyz
-    network: tcp
-  - &id013
-    name: 🇨🇳_CN_中国->🇬🇧_GB_英国
-    type: vmess
-    server: 2u3k04.abzoones.xyz
-    port: 36811
-    cipher: auto
-    uuid: c458d5ba-b5dd-46df-ac3b-e986c2e6573c
-    alterId: 0
-    tls: true
-    skip-cert-verify: true
-    servername: uk04.abpilot.xyz
-    network: tcp
-  - &id014
-    name: 🇺🇸_US_美国_3
-    type: vmess
-    server: cf-lt.sharecentre.online
-    port: 8080
-    cipher: auto
-    uuid: d16c31a2-93a3-4f1a-954c-e383b14a4d26
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /api/v3/download.getFile
-      headers:
-        host: ssrsub.v02.ssrsub.com
-  - &id015
-    name: 🇹🇼_TW_台湾
-    type: trojan
-    server: ip1158944211.mobgslb.tbcache.com
-    port: 443
-    udp: true
-    password: 1381fa76-e460-3a03-a01b-b9ad00e01415
-    sni: ip1158944211.mobgslb.tbcache.com
-    skip-cert-verify: true
-    network: tcp
-  - &id016
-    name: 🇨🇳_CN_中国->🇩🇪_DE_德国
-    type: trojan
-    server: gzdx.jcnode.top
-    port: 27000
-    udp: true
-    password: eee19429-f15e-40b8-9d2e-b15c09c9722c
-    sni: de01.ckcloud.info
-    skip-cert-verify: true
-    network: tcp
-  - &id017
-    name: 🇨🇳_CN_中国->🇭🇰_HK_香港_1
-    type: trojan
-    server: gzdx.jcnode.top
-    port: 20003
-    udp: true
-    password: eee19429-f15e-40b8-9d2e-b15c09c9722c
-    sni: hk02.ckcloud.info
-    skip-cert-verify: true
-    network: tcp
-  - &id018
-    name: 🇨🇳_CN_中国->🇮🇳_IN_印度
-    type: trojan
-    server: gzyd.jcnode.top
-    port: 25001
-    udp: true
-    password: eee19429-f15e-40b8-9d2e-b15c09c9722c
-    sni: id01.ckcloud.info
-    skip-cert-verify: true
-    network: tcp
-  - &id019
-    name: 🇨🇳_CN_中国->🇻🇳_VN_越南_2
-    type: trojan
-    server: gzyd.jcnode.top
-    port: 29200
-    udp: true
-    password: eee19429-f15e-40b8-9d2e-b15c09c9722c
-    sni: vn01.ckcloud.info
-    skip-cert-verify: true
-    network: tcp
-  - &id020
-    name: 🇨🇳_CN_中国->🇭🇰_HK_香港_2
-    type: trojan
-    server: gzyd.jcnode.top
-    port: 20002
-    udp: true
-    password: eee19429-f15e-40b8-9d2e-b15c09c9722c
-    sni: hk01.ckcloud.info
-    skip-cert-verify: true
-    network: tcp
-  - &id021
-    name: 🇨🇳_CN_中国->🇭🇰_HK_香港_3
-    type: trojan
-    server: gzyd.jcnode.top
-    port: 26000
-    udp: true
-    password: eee19429-f15e-40b8-9d2e-b15c09c9722c
-    sni: uk01.ckcloud.info
-    skip-cert-verify: true
-    network: tcp
-  - &id022
-    name: 🇨🇳_CN_中国->🇯🇵_JP_日本_3
-    type: trojan
-    server: gzyd.jcnode.top
-    port: 21001
-    udp: true
-    password: eee19429-f15e-40b8-9d2e-b15c09c9722c
-    sni: jp02.ckcloud.info
-    skip-cert-verify: true
-    network: tcp
-  - &id023
-    name: 🇨🇾_CY_塞浦路斯->🇮🇳_IN_印度
-    type: vmess
-    server: menmaza.76898102.xyz
-    port: 2052
-    cipher: auto
-    uuid: 12d06bb6-d797-3cf3-b368-a903b8702f2c
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /eduifbiefg
-      headers:
-        host: menmaz.76898102.xyz
-  - &id024
-    name: 🇨🇳_CN_中国->🇭🇰_HK_香港_4
-    type: trojan
-    server: gzdx.jcnode.top
-    port: 20001
-    udp: true
-    password: eee19429-f15e-40b8-9d2e-b15c09c9722c
-    sni: hk04.ckcloud.info
-    skip-cert-verify: true
-    network: tcp
-  - &id025
-    name: 🇳🇱_NL_荷兰->🇸🇬_SG_新加坡
-    type: vmess
-    server: hkgkgb.76898102.xyz
-    port: 2082
-    cipher: auto
-    uuid: aed95e45-53e1-45a4-a22c-f606522c4777
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        host: ccaws.cashdawiodxkawjaiocjdawdawdadwrawgfsegsededwadawfgrdrcvsssl.top
-  - &id026
+  - &id005
     name: 🇨🇳_CN_中国->🇺🇸_US_美国_1
     type: vmess
-    server: gzdx.jcnode.top
-    port: 28000
+    server: 4a2u0a05.mcfront.xyz
+    port: 31506
     cipher: auto
-    uuid: eee19429-f15e-40b8-9d2e-b15c09c9722c
+    uuid: 5d336469-53b0-4036-8f2f-33d9bc317743
     alterId: 0
-    tls: false
+    tls: true
     skip-cert-verify: true
-    network: ws
-  - &id027
-    name: 🇺🇸_US_美国->🇫🇮_FI_芬兰
+    servername: us05.lovemc.xyz
+    network: tcp
+  - &id006
+    name: 🇨🇳_CN_中国->🇻🇳_VN_越南
     type: vmess
-    server: 104.31.16.45
-    port: 80
+    server: 2w8u2a04.mcfront.xyz
+    port: 31874
     cipher: auto
-    uuid: 2fcc2939-7dcf-4741-aa03-825bc40e23fd
+    uuid: 5d336469-53b0-4036-8f2f-33d9bc317743
+    alterId: 0
+    tls: true
+    skip-cert-verify: true
+    servername: vn04.lovemc.xyz
+    network: tcp
+  - &id007
+    name: 🇨🇳_CN_中国->🇭🇰_HK_香港_1
+    type: vmess
+    server: 5m4h0k05.mcfront.xyz
+    port: 31606
+    cipher: auto
+    uuid: 5d336469-53b0-4036-8f2f-33d9bc317743
+    alterId: 0
+    tls: true
+    skip-cert-verify: true
+    servername: hk05.lovemc.xyz
+    network: tcp
+  - &id008
+    name: 🇨🇳_CN_中国->🇦🇺_AU_澳大利亚_2
+    type: vmess
+    server: 2d1t5w06.mcfront.xyz
+    port: 31311
+    cipher: auto
+    uuid: 5d336469-53b0-4036-8f2f-33d9bc317743
+    alterId: 0
+    tls: true
+    skip-cert-verify: true
+    servername: tw06.lovemc.xyz
+    network: tcp
+  - &id009
+    name: 🇨🇳_CN_中国->🇸🇬_SG_新加坡_1
+    type: vmess
+    server: 1c7s2g04.mcfront.xyz
+    port: 31201
+    cipher: auto
+    uuid: 5d336469-53b0-4036-8f2f-33d9bc317743
+    alterId: 0
+    tls: true
+    skip-cert-verify: true
+    servername: sg04.lovemc.xyz
+    network: tcp
+  - &id010
+    name: 🇨🇳_CN_中国->🇯🇵_JP_日本_2
+    type: vmess
+    server: 6w7j3p05.mcfront.xyz
+    port: 31106
+    cipher: auto
+    uuid: 5d336469-53b0-4036-8f2f-33d9bc317743
+    alterId: 0
+    tls: true
+    skip-cert-verify: true
+    servername: jp05.lovemc.xyz
+    network: tcp
+  - &id011
+    name: 🇨🇳_CN_中国->🇬🇧_GB_英国
+    type: vmess
+    server: 3a4u0k04.mcfront.xyz
+    port: 31811
+    cipher: auto
+    uuid: 5d336469-53b0-4036-8f2f-33d9bc317743
+    alterId: 0
+    tls: true
+    skip-cert-verify: true
+    servername: uk04.lovemc.xyz
+    network: tcp
+  - &id012
+    name: 🇨🇳_CN_中国->🇦🇷_AR_阿根廷
+    type: vmess
+    server: 7c1a1r04.mcfront.xyz
+    port: 31861
+    cipher: auto
+    uuid: 5d336469-53b0-4036-8f2f-33d9bc317743
+    alterId: 0
+    tls: true
+    skip-cert-verify: true
+    servername: ar04.lovemc.xyz
+    network: tcp
+  - &id013
+    name: 🇨🇳_CN_中国->🇭🇺_HU_匈牙利
+    type: vmess
+    server: 3c2h4u04.mcfront.xyz
+    port: 31864
+    cipher: auto
+    uuid: 5d336469-53b0-4036-8f2f-33d9bc317743
+    alterId: 0
+    tls: true
+    skip-cert-verify: true
+    servername: hu04.lovemc.xyz
+    network: tcp
+  - &id014
+    name: 🇨🇳_CN_中国->🇩🇪_DE_德国
+    type: vmess
+    server: 9t1d5e04.mcfront.xyz
+    port: 31841
+    cipher: auto
+    uuid: 5d336469-53b0-4036-8f2f-33d9bc317743
+    alterId: 0
+    tls: true
+    skip-cert-verify: true
+    servername: de04.lovemc.xyz
+    network: tcp
+  - &id015
+    name: 🇨🇳_CN_中国->🇹🇷_TR_土耳其
+    type: vmess
+    server: 4t1u6r04.mcfront.xyz
+    port: 31868
+    cipher: auto
+    uuid: 5d336469-53b0-4036-8f2f-33d9bc317743
+    alterId: 0
+    tls: true
+    skip-cert-verify: true
+    servername: tr04.lovemc.xyz
+    network: tcp
+  - &id016
+    name: 🇨🇳_CN_中国->🇺🇦_UA_乌克兰
+    type: vmess
+    server: 4w7u4a04.mcfront.xyz
+    port: 31871
+    cipher: auto
+    uuid: 5d336469-53b0-4036-8f2f-33d9bc317743
+    alterId: 0
+    tls: true
+    skip-cert-verify: true
+    servername: ua04.lovemc.xyz
+    network: tcp
+  - &id017
+    name: 🇨🇳_CN_中国->🇭🇰_HK_香港_2
+    type: vmess
+    server: 5m4h0k04.mcfront.xyz
+    port: 31601
+    cipher: auto
+    uuid: 5d336469-53b0-4036-8f2f-33d9bc317743
+    alterId: 0
+    tls: true
+    skip-cert-verify: true
+    servername: hk04.lovemc.xyz
+    network: tcp
+  - &id018
+    name: 🇨🇳_CN_中国->🇵🇭_PH_菲律宾
+    type: vmess
+    server: 1a4p0h04.mcfront.xyz
+    port: 31801
+    cipher: auto
+    uuid: 5d336469-53b0-4036-8f2f-33d9bc317743
+    alterId: 0
+    tls: true
+    skip-cert-verify: true
+    servername: ph04.lovemc.xyz
+    network: tcp
+  - &id019
+    name: 🇨🇳_CN_中国->🇮🇳_IN_印度
+    type: vmess
+    server: 6q3i1n04.mcfront.xyz
+    port: 31831
+    cipher: auto
+    uuid: 5d336469-53b0-4036-8f2f-33d9bc317743
+    alterId: 0
+    tls: true
+    skip-cert-verify: true
+    servername: in04.lovemc.xyz
+    network: tcp
+  - &id020
+    name: 🇨🇳_CN_中国->🇯🇵_JP_日本_3
+    type: vmess
+    server: 6w7j3p04.mcfront.xyz
+    port: 31116
+    cipher: auto
+    uuid: 5d336469-53b0-4036-8f2f-33d9bc317743
+    alterId: 0
+    tls: true
+    skip-cert-verify: true
+    servername: jp04.lovemc.xyz
+    network: tcp
+  - &id021
+    name: 🇨🇳_CN_中国->🇸🇬_SG_新加坡_2
+    type: vmess
+    server: 1c7s2g05.mcfront.xyz
+    port: 31206
+    cipher: auto
+    uuid: 5d336469-53b0-4036-8f2f-33d9bc317743
+    alterId: 0
+    tls: true
+    skip-cert-verify: true
+    servername: sg05.lovemc.xyz
+    network: tcp
+  - &id022
+    name: 🇨🇳_CN_中国->🇹🇼_TW_台湾
+    type: vmess
+    server: 2d1t5w04.mcfront.xyz
+    port: 31301
+    cipher: auto
+    uuid: 5d336469-53b0-4036-8f2f-33d9bc317743
+    alterId: 0
+    tls: true
+    skip-cert-verify: true
+    servername: tw04.lovemc.xyz
+    network: tcp
+  - &id023
+    name: 🇨🇳_CN_中国->🇨🇦_CA_加拿大
+    type: vmess
+    server: 3d1c4a04.mcfront.xyz
+    port: 31701
+    cipher: auto
+    uuid: 5d336469-53b0-4036-8f2f-33d9bc317743
+    alterId: 0
+    tls: true
+    skip-cert-verify: true
+    servername: ca04.lovemc.xyz
+    network: tcp
+  - &id024
+    name: 🇨🇳_CN_中国->🇰🇷_KR_韩国
+    type: vmess
+    server: 8l2k1r04.mcfront.xyz
+    port: 31401
+    cipher: auto
+    uuid: 5d336469-53b0-4036-8f2f-33d9bc317743
+    alterId: 0
+    tls: true
+    skip-cert-verify: true
+    servername: kr04.lovemc.xyz
+    network: tcp
+  - &id025
+    name: 🇨🇳_CN_中国->🇷🇺_RU_俄罗斯联邦
+    type: vmess
+    server: 4t1r5u04.mcfront.xyz
+    port: 31851
+    cipher: auto
+    uuid: 5d336469-53b0-4036-8f2f-33d9bc317743
+    alterId: 0
+    tls: true
+    skip-cert-verify: true
+    servername: ru04.lovemc.xyz
+    network: tcp
+  - &id026
+    name: 🇸🇬_SG_新加坡
+    type: vmess
+    server: a2.zwtg888.com
+    port: 383
+    cipher: auto
+    uuid: 731938de-22c8-3d7e-849b-c4610bce7994
     alterId: 0
     tls: false
     skip-cert-verify: true
     network: ws
     ws-opts:
-      path: /CZfczvtieCZXdOlgWhgDLX
+      path: /v2ray
       headers:
-        host: de3.irteh.fun
-  - &id028
-    name: 🇨🇳_CN_中国->🇰🇷_KR_韩国
-    type: trojan
-    server: gzdx.jcnode.top
-    port: 22000
-    udp: true
-    password: eee19429-f15e-40b8-9d2e-b15c09c9722c
-    sni: sk01.ckcloud.info
+        host: www.minecraft.com
+  - &id027
+    name: 🇨🇳_CN_中国->🇺🇸_US_美国_2
+    type: vmess
+    server: 4a2u0a04.mcfront.xyz
+    port: 31501
+    cipher: auto
+    uuid: 5d336469-53b0-4036-8f2f-33d9bc317743
+    alterId: 0
+    tls: true
     skip-cert-verify: true
+    servername: us04.lovemc.xyz
+    network: tcp
+  - &id028
+    name: 🇨🇳_CN_中国->🇭🇰_HK_香港_3
+    type: vmess
+    server: 5m4h0k06.mcfront.xyz
+    port: 31611
+    cipher: auto
+    uuid: 5d336469-53b0-4036-8f2f-33d9bc317743
+    alterId: 0
+    tls: true
+    skip-cert-verify: true
+    servername: hk06.lovemc.xyz
     network: tcp
   - &id029
-    name: 🇨🇳_CN_中国->🇯🇵_JP_日本_4
-    type: trojan
-    server: gzdx.jcnode.top
-    port: 21000
-    udp: true
-    password: eee19429-f15e-40b8-9d2e-b15c09c9722c
-    sni: jp01.ckcloud.info
+    name: 🇨🇳_CN_中国->🇺🇸_US_美国_3
+    type: vmess
+    server: 4a2u0a06.mcfront.xyz
+    port: 31511
+    cipher: auto
+    uuid: 5d336469-53b0-4036-8f2f-33d9bc317743
+    alterId: 0
+    tls: true
     skip-cert-verify: true
+    servername: us06.lovemc.xyz
     network: tcp
   - &id030
-    name: 🇨🇳_CN_中国->🇹🇼_TW_台湾_1
-    type: ss
-    server: proxy.node7.kk-proxy.pro
-    port: 39850
-    password: 4b34aa48-8602-46c3-8aea-36d6bd7ba3d7
-    cipher: chacha20-ietf-poly1305
+    name: 🇨🇳_CN_中国->🇸🇬_SG_新加坡_3
+    type: vmess
+    server: 1c7s2g06.mcfront.xyz
+    port: 31211
+    cipher: auto
+    uuid: 5d336469-53b0-4036-8f2f-33d9bc317743
+    alterId: 0
+    tls: true
+    skip-cert-verify: true
+    servername: sg06.lovemc.xyz
+    network: tcp
   - &id031
-    name: 🇨🇳_CN_中国->🇺🇸_US_美国_2
+    name: 🇨🇳_CN_中国->🇺🇸_US_美国_4
     type: vmess
     server: a-cm1.jsmmm.cyou
     port: 39611
@@ -360,27 +383,35 @@ proxies:
     skip-cert-verify: true
     network: tcp
   - &id032
-    name: 🇨🇳_CN_中国->🇹🇼_TW_台湾_2
-    type: ss
-    server: proxy.node5.kk-proxy.pro
-    port: 39851
-    password: 3aa9eed4-2439-40dc-9895-c2e6b0999f99
-    cipher: chacha20-ietf-poly1305
-  - &id033
-    name: 🇺🇸_US_美国->🇩🇪_DE_德国
+    name: 🇬🇧_GB_英国->🇺🇸_US_美国
     type: vmess
-    server: ns1.v2-vip.fun
-    port: 80
+    server: speed.76898102.xyz
+    port: 443
     cipher: auto
-    uuid: 8abe9496-5e24-4e49-b566-dcf86116017d
+    uuid: dddd0b29-1576-4003-9990-d7cea34264db
     alterId: 0
-    tls: false
+    tls: true
     skip-cert-verify: true
     network: ws
     ws-opts:
-      path: /i99LgvSaslbsPLLQQ7j6Z
+      path: /835757
       headers:
-        host: de5.irteh.fun
+        host: dedi2.1808.cf
+  - &id033
+    name: 🇫🇷_FR_法国
+    type: vmess
+    server: pl2-vmess.greenssh.xyz
+    port: 443
+    cipher: auto
+    uuid: 2e68015f-a8b2-4893-a7a3-4edb19b178d9
+    alterId: 0
+    tls: true
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: pl2-vmess.greenssh.xyz
 proxy-groups:
   - name: PROXY
     type: select
