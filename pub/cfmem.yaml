@@ -6,331 +6,281 @@ log-level: info
 external-controller: 0.0.0.0:9090
 proxies:
   - &id001
-    name: 🇮🇱_IL_以色列->🇺🇸_US_美国
-    type: trojan
-    server: us1.chuqiangtou.net
-    port: 4003
-    udp: true
-    password: TJCfE7Mx2YcA8kX8zg
+    name: 🇺🇸_US_美国_1
+    type: vmess
+    server: ovhsdza.76898102.xyz
+    port: 2052
+    cipher: auto
+    uuid: 78fd41e5-346a-3bf4-b942-be0fad711979
+    alterId: 0
+    tls: false
     skip-cert-verify: true
-    network: tcp
+    network: ws
+    ws-opts:
+      path: /funsdfrh
+      headers:
+        host: ovhsdz.76898102.xyz
   - &id002
-    name: 🇮🇱_IL_以色列->🇯🇵_JP_日本_1
+    name: 🇮🇱_IL_以色列->🇺🇸_US_美国_1
     type: trojan
-    server: 149.50.71.124
+    server: us3.chuqiangtou.net
     port: 4003
     udp: true
     password: TJCfE7Mx2YcA8kX8zg
     skip-cert-verify: true
     network: tcp
   - &id003
-    name: 🇰🇷_KR_韩国
+    name: 🇮🇱_IL_以色列->🇺🇸_US_美国_2
     type: trojan
-    server: ko1.lianpi.xyz
-    port: 51256
+    server: us2.chuqiangtou.net
+    port: 4003
     udp: true
-    password: ab204b2d-dac8-4cf4-8239-d46d49d9cad5
+    password: TJCfE7Mx2YcA8kX8zg
     skip-cert-verify: true
     network: tcp
   - &id004
-    name: 🇮🇱_IL_以色列->🇯🇵_JP_日本_2
+    name: 🇸🇬_SG_新加坡_1
     type: trojan
-    server: 149.50.71.155
-    port: 4003
+    server: sg003.170203.xyz
+    port: 43643
     udp: true
-    password: TJCfE7Mx2YcA8kX8zg
+    password: 535b9369-31d4-4685-9bb5-7c223d383524
+    sni: sg003.170203.xyz
     skip-cert-verify: true
     network: tcp
   - &id005
-    name: 🇮🇱_IL_以色列->🇳🇱_NL_荷兰_1
+    name: 🇸🇬_SG_新加坡_2
     type: trojan
-    server: 149.50.89.110
-    port: 4003
+    server: sgss01.170203.xyz
+    port: 45632
     udp: true
-    password: TJCfE7Mx2YcA8kX8zg
+    password: 535b9369-31d4-4685-9bb5-7c223d383524
+    sni: sgss01.170203.xyz
     skip-cert-verify: true
     network: tcp
   - &id006
-    name: 🇮🇱_IL_以色列->🇯🇵_JP_日本_3
+    name: 🇸🇬_SG_新加坡_3
     type: trojan
-    server: 149.50.71.164
-    port: 4003
+    server: sgmax01.170203.xyz
+    port: 45356
     udp: true
-    password: TJCfE7Mx2YcA8kX8zg
+    password: 535b9369-31d4-4685-9bb5-7c223d383524
+    sni: sgmax01.170203.xyz
     skip-cert-verify: true
     network: tcp
   - &id007
-    name: 🇮🇱_IL_以色列->🇳🇱_NL_荷兰_2
+    name: 🇹🇼_TW_台湾_1
     type: trojan
-    server: 149.50.75.79
-    port: 4003
+    server: ip1158944211.mobgslb.tbcache.com
+    port: 443
     udp: true
-    password: TJCfE7Mx2YcA8kX8zg
+    password: 1381fa76-e460-3a03-a01b-b9ad00e01415
+    sni: ip1158944211.mobgslb.tbcache.com
     skip-cert-verify: true
     network: tcp
   - &id008
-    name: 🇮🇱_IL_以色列->🇬🇧_GB_英国_1
-    type: trojan
-    server: uk1.chuqiangtou.net
-    port: 4003
-    udp: true
-    password: TJCfE7Mx2YcA8kX8zg
-    sni: magnetadservices.com
-    skip-cert-verify: true
-    network: tcp
-  - &id009
-    name: 🇮🇱_IL_以色列->🇬🇧_GB_英国_2
-    type: trojan
-    server: 149.50.77.129
-    port: 4003
-    udp: true
-    password: TJCfE7Mx2YcA8kX8zg
-    skip-cert-verify: true
-    network: tcp
-  - &id010
-    name: 🇹🇼_TW_台湾->🇺🇸_US_美国
-    type: trojan
-    server: hnm.xiaohouzi.club
-    port: 23330
-    udp: true
-    password: c32c56fb-64d9-33c4-b42a-af81b7a33fe7
-    sni: defapress.ir
-    skip-cert-verify: true
-    network: tcp
-  - &id011
-    name: 🇸🇬_SG_新加坡_1
-    type: ss
-    server: 18.139.163.228
-    port: 443
-    password: amazonskr05
-    cipher: aes-256-cfb
-  - &id012
-    name: 🇸🇬_SG_新加坡_2
-    type: ss
-    server: 3.0.183.226
-    port: 443
-    password: amazonskr05
-    cipher: aes-256-cfb
-  - &id013
-    name: 🇨🇳_CN_中国->🇺🇸_US_美国
+    name: 🇨🇳_CN_中国
     type: vmess
-    server: 202.108.15.135
-    port: 443
-    cipher: aes-128-gcm
-    uuid: dddd0b29-1576-4003-9990-d7cea34264db
-    alterId: 0
-    tls: true
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /835757
-      headers:
-        host: dedi2.1808.cf
-  - &id014
-    name: 🇸🇬_SG_新加坡_3
-    type: ss
-    server: 54.255.237.136
-    port: 2333
-    password: doub.io
-    cipher: aes-256-cfb
-  - &id015
-    name: 🇨🇳_CN_中国->🇹🇼_TW_台湾
-    type: vmess
-    server: cn-guangzhou.applebench.tech
-    port: 56268
-    cipher: auto
-    uuid: 7e319f7a-4c47-4606-8008-ce6c92634dd8
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: tcp
-  - &id016
-    name: 🇯🇵_JP_日本_1
-    type: ss
-    server: jp3.lianpi.xyz
-    port: 34234
-    password: 7e319f7a-4c47-4606-8008-ce6c92634dd8
-    cipher: chacha20-ietf-poly1305
-  - &id017
-    name: 🇭🇰_HK_香港
-    type: trojan
-    server: hk2.lianpi.xyz
-    port: 28069
-    udp: true
-    password: 7e319f7a-4c47-4606-8008-ce6c92634dd8
-    sni: hk2.lianpi.xyz
-    skip-cert-verify: true
-    network: tcp
-  - &id018
-    name: 🇯🇵_JP_日本_2
-    type: trojan
-    server: jp4.lianpi.xyz
-    port: 54234
-    udp: true
-    password: 7e319f7a-4c47-4606-8008-ce6c92634dd8
-    sni: jp4.lianpi.xyz
-    skip-cert-verify: true
-    network: tcp
-  - &id019
-    name: 🇮🇱_IL_以色列->🇬🇧_GB_英国_3
-    type: trojan
-    server: 149.50.77.99
-    port: 4003
-    udp: true
-    password: TJCfE7Mx2YcA8kX8zg
-    sni: telewebion.com
-    skip-cert-verify: true
-    network: tcp
-  - &id020
-    name: 🇺🇸_US_美国_1
-    type: vmess
-    server: 192.74.243.58
-    port: 43246
+    server: 112.132.215.189
+    port: 50002
     cipher: auto
     uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
     alterId: 64
     tls: false
     skip-cert-verify: true
     network: tcp
-  - &id021
+  - &id009
+    name: 🇯🇵_JP_日本_1
+    type: trojan
+    server: jp003.170203.xyz
+    port: 34522
+    udp: true
+    password: 535b9369-31d4-4685-9bb5-7c223d383524
+    skip-cert-verify: true
+    network: tcp
+  - &id010
+    name: 🇯🇵_JP_日本_2
+    type: trojan
+    server: jp03.170203.xyz
+    port: 443
+    udp: true
+    password: 535b9369-31d4-4685-9bb5-7c223d383524
+    skip-cert-verify: true
+    network: tcp
+  - &id011
     name: 🇯🇵_JP_日本_3
+    type: trojan
+    server: jpmax05.170203.xyz
+    port: 56464
+    udp: true
+    password: 535b9369-31d4-4685-9bb5-7c223d383524
+    skip-cert-verify: true
+    network: tcp
+  - &id012
+    name: 🇯🇵_JP_日本_4
+    type: trojan
+    server: jp002.170203.xyz
+    port: 63608
+    udp: true
+    password: 535b9369-31d4-4685-9bb5-7c223d383524
+    skip-cert-verify: true
+    network: tcp
+  - &id013
+    name: 🇯🇵_JP_日本_5
+    type: trojan
+    server: jpmax03.170203.xyz
+    port: 443
+    udp: true
+    password: 535b9369-31d4-4685-9bb5-7c223d383524
+    skip-cert-verify: true
+    network: tcp
+  - &id014
+    name: 🇯🇵_JP_日本_6
+    type: trojan
+    server: jp06.170203.xyz
+    port: 56546
+    udp: true
+    password: 535b9369-31d4-4685-9bb5-7c223d383524
+    skip-cert-verify: true
+    network: tcp
+  - &id015
+    name: 🇸🇬_SG_新加坡_4
+    type: trojan
+    server: sgmax06.170203.xyz
+    port: 443
+    udp: true
+    password: 535b9369-31d4-4685-9bb5-7c223d383524
+    skip-cert-verify: true
+    network: tcp
+  - &id016
+    name: 🇸🇬_SG_新加坡_5
+    type: trojan
+    server: sg001.170203.xyz
+    port: 54643
+    udp: true
+    password: 535b9369-31d4-4685-9bb5-7c223d383524
+    skip-cert-verify: true
+    network: tcp
+  - &id017
+    name: 🇸🇬_SG_新加坡_6
+    type: trojan
+    server: sg02.170203.xyz
+    port: 45636
+    udp: true
+    password: 535b9369-31d4-4685-9bb5-7c223d383524
+    skip-cert-verify: true
+    network: tcp
+  - &id018
+    name: 🇺🇸_US_美国_2
+    type: trojan
+    server: usmax01.170203.xyz
+    port: 443
+    udp: true
+    password: 535b9369-31d4-4685-9bb5-7c223d383524
+    skip-cert-verify: true
+    network: tcp
+  - &id019
+    name: 🇯🇵_JP_日本_7
+    type: ssr
+    server: jp-am48-6.eqnode.net
+    port: 8081
+    password: eAokbaDN6
+    cipher: aes-256-cfb
+    obfs: tls1.2_ticket_auth
+    protocol: origin
+  - &id020
+    name: 🇸🇬_SG_新加坡_7
     type: ss
-    server: 13.230.137.173
+    server: 54.151.179.33
     port: 443
     password: amazonskr05
     cipher: aes-256-cfb
+  - &id021
+    name: 🇸🇬_SG_新加坡_8
+    type: ssr
+    server: sg-am3.eqsunshine.com
+    port: 32001
+    password: 3g0dHlKME
+    cipher: aes-256-cfb
+    obfs: tls1.2_ticket_auth
+    protocol: origin
   - &id022
-    name: 🇺🇸_US_美国_2
-    type: trojan
-    server: 138.197.5.103
+    name: 🇸🇬_SG_新加坡_9
+    type: ss
+    server: 13.215.46.225
     port: 443
-    udp: true
-    password: xxoo
-    sni: dserver.adad.ir
-    skip-cert-verify: true
-    network: tcp
+    password: amazonskr05
+    cipher: aes-256-cfb
   - &id023
-    name: 🇨🇳_CN_中国->🇭🇰_HK_香港
+    name: 🇺🇸_US_美国_3
     type: vmess
-    server: cn-guangzhou.applebench.tech
-    port: 41502
+    server: 23.225.33.170
+    port: 56662
     cipher: auto
-    uuid: 7e319f7a-4c47-4606-8008-ce6c92634dd8
-    alterId: 0
+    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+    alterId: 64
     tls: false
     skip-cert-verify: true
     network: tcp
   - &id024
-    name: 🇸🇬_SG_新加坡_4
-    type: ss
-    server: 13.213.66.163
+    name: 🇨🇳_CN_中国->🇬🇧_GB_英国
+    type: ssr
+    server: en2.vfun.icu
     port: 443
-    password: amazonskr05
+    password: vyunme
     cipher: aes-256-cfb
+    obfs: plain
+    protocol: auth_aes128_sha1
+    obfs-param: ab93117422.jd.hk
+    protocol-param: 17422:TTp0SX
   - &id025
-    name: 🇸🇬_SG_新加坡_5
+    name: 🇱🇻_LV_拉脱维亚
     type: ss
-    server: 13.215.175.189
-    port: 443
-    password: amazonskr05
+    server: 185.135.86.173
+    port: 9003
+    password: JdmRK9gMEqFgs8nP
     cipher: aes-256-cfb
   - &id026
-    name: 🇯🇵_JP_日本_4
-    type: trojan
-    server: fscjp.fscloud123456789.com
-    port: 443
-    udp: true
-    password: 5057f49b-3038-4683-a5d9-8d9657caef3c
-    skip-cert-verify: true
-    network: tcp
-  - &id027
-    name: 🇺🇸_US_美国_3
-    type: vmess
-    server: smt.ircf.space
-    port: 443
-    cipher: auto
-    uuid: 3bcbd5cd-e791-4770-8bc7-7b1d941c9513
-    alterId: 0
-    tls: true
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /S4PSg9xqUClN2kJ4SOPKqC6
-      headers:
-        host: wfi.sahnama.com
-  - &id028
-    name: 🇺🇸_US_美国->🇩🇪_DE_德国
-    type: vmess
-    server: ger.digires.shop
-    port: 443
-    cipher: auto
-    uuid: f988dd2c-0d1a-49d0-cabc-a1288d72d183
-    alterId: 0
-    tls: true
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /14161
-      headers:
-        host: ger.digires.shop
-  - &id029
-    name: 🇺🇸_US_美国_4
-    type: vmess
-    server: sbn.ircf.space
-    port: 443
-    cipher: auto
-    uuid: 3bcbd5cd-e791-4770-8bc7-7b1d941c9513
-    alterId: 0
-    tls: true
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /S4PSg9xqUClN2kJ4SOPKqC6
-      headers:
-        host: wfi.sahnama.com
-  - &id030
-    name: 🇮🇱_IL_以色列->🇩🇪_DE_德国
-    type: trojan
-    server: 149.50.76.85
-    port: 4003
-    udp: true
-    password: PlF471nxneY0YevI
-    sni: de2.nigirocloud.com
-    skip-cert-verify: true
-    network: tcp
-  - &id031
-    name: 🇺🇸_US_美国->🇨🇦_CA_加拿大
-    type: vmess
-    server: 104.31.16.28
-    port: 80
-    cipher: auto
-    uuid: 58fe1542-5290-40ad-815a-77707a81afe5
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /IOebhLMhl1CTbFHbL95myfRX2
-      headers:
-        host: ca4.tehme2.fun
-  - &id032
-    name: 🇺🇸_US_美国_5
-    type: trojan
-    server: us.blazeppn.info
-    port: 443
-    udp: true
-    password: xxoo
-    skip-cert-verify: true
-    network: tcp
-  - &id033
-    name: 🇬🇧_GB_英国
+    name: 🇸🇬_SG_新加坡_10
     type: ss
-    server: 51.132.13.41
-    port: 52484
-    password: G4h2X1AThBilGI1eUrXny6
-    cipher: chacha20-ietf-poly1305
-  - &id034
-    name: 🇹🇼_TW_台湾
+    server: 52.221.180.2
+    port: 443
+    password: amazonskr05
+    cipher: aes-256-cfb
+  - &id027
+    name: 🇰🇷_KR_韩国_1
+    type: ss
+    server: 43.202.52.108
+    port: 443
+    password: amazonskr05
+    cipher: aes-256-cfb
+  - &id028
+    name: 🇰🇷_KR_韩国_2
+    type: ss
+    server: 52.78.217.18
+    port: 443
+    password: amazonskr05
+    cipher: aes-256-cfb
+  - &id029
+    name: 🇯🇵_JP_日本_8
+    type: ss
+    server: 43.207.74.136
+    port: 443
+    password: amazonskr05
+    cipher: aes-256-cfb
+  - &id030
+    name: 🇷🇺_RU_俄罗斯联邦_1
+    type: ssr
+    server: 45.130.146.86
+    port: 443
+    password: vyunme
+    cipher: aes-256-cfb
+    obfs: plain
+    protocol: auth_aes128_sha1
+    obfs-param: ab93117422.jd.hk
+    protocol-param: 17422:TTp0SX
+  - &id031
+    name: 🇹🇼_TW_台湾_2
     type: vmess
     server: hinettw1.applebench.tech
     port: 56568
@@ -339,42 +289,74 @@ proxies:
     alterId: 0
     tls: false
     skip-cert-verify: true
-    network: tcp
-  - &id035
-    name: 🇺🇸_US_美国_6
+  - &id032
+    name: 🇺🇸_US_美国_4
     type: vmess
-    server: 104.18.83.10
-    port: 443
+    server: 198.2.203.34
+    port: 50502
     cipher: auto
-    uuid: dddd0b29-1576-4003-9990-d7cea34264db
-    alterId: 0
-    tls: true
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /835757
-      headers:
-        host: dedi2.1808.cf
-  - &id036
-    name: 🇻🇳_VN_越南
-    type: vmess
-    server: 103.190.36.130
-    port: 80
-    cipher: auto
-    uuid: e79dcd87-ea5c-4058-a186-c7e3bc844ab8
-    alterId: 0
+    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+    alterId: 64
     tls: false
     skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /gachcraft
-  - &id037
-    name: 🇯🇵_JP_日本_5
+  - &id033
+    name: 🇺🇸_US_美国_5
+    type: vmess
+    server: 38.40.219.182
+    port: 53362
+    cipher: auto
+    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+    alterId: 64
+    tls: false
+    skip-cert-verify: true
+  - &id034
+    name: 🇺🇸_US_美国_6
+    type: vmess
+    server: 64.32.21.245
+    port: 44313
+    cipher: auto
+    uuid: 57f93e92-ebb9-4f16-9bdc-8225d2010995
+    alterId: 64
+    tls: false
+    skip-cert-verify: true
+  - &id035
+    name: 🇯🇵_JP_日本_9
     type: trojan
-    server: jp7.lianpi.xyz
-    port: 53638
+    server: jp2.gsjc.cfd
+    port: 443
     udp: true
-    password: 7e319f7a-4c47-4606-8008-ce6c92634dd8
+    password: f5075d6e-c65b-4133-b4fa-301ce5ba1fa9
+    skip-cert-verify: true
+    network: tcp
+  - &id036
+    name: 🇷🇺_RU_俄罗斯联邦_2
+    type: ssr
+    server: 185.22.154.70
+    port: 443
+    password: vyunme
+    cipher: aes-256-cfb
+    obfs: plain
+    protocol: auth_aes128_sha1
+    obfs-param: ab93117422.jd.hk
+    protocol-param: 17422:TTp0SX
+  - &id037
+    name: 🇸🇬_SG_新加坡_11
+    type: trojan
+    server: sg11.170203.xyz
+    port: 43536
+    udp: true
+    password: 535b9369-31d4-4685-9bb5-7c223d383524
+    sni: sg11.170203.xyz
+    skip-cert-verify: true
+    network: tcp
+  - &id038
+    name: 🇸🇬_SG_新加坡_12
+    type: trojan
+    server: sgmax02.170203.xyz
+    port: 45623
+    udp: true
+    password: 535b9369-31d4-4685-9bb5-7c223d383524
+    sni: sgmax02.170203.xyz
     skip-cert-verify: true
     network: tcp
 proxy-groups:
@@ -440,6 +422,7 @@ proxy-groups:
       - *id035
       - *id036
       - *id037
+      - *id038
   - name: LOAD-BALANCE
     type: load-balance
     url: http://www.gstatic.com/generate_204
@@ -482,6 +465,7 @@ proxy-groups:
       - *id035
       - *id036
       - *id037
+      - *id038
   - name: SELECT
     type: select
     proxies:
@@ -522,6 +506,7 @@ proxy-groups:
       - *id035
       - *id036
       - *id037
+      - *id038
 rules:
   - RULE-SET,applications,DIRECT
   - DOMAIN,clash.razord.top,DIRECT
