@@ -6,249 +6,132 @@ log-level: info
 external-controller: 0.0.0.0:9090
 proxies:
   - &id001
-    name: 🇺🇸_US_美国->🇨🇦_CA_加拿大
+    name: 🇯🇵_JP_日本_1
+    type: trojan
+    server: trs19.bolab.net
+    port: 443
+    udp: true
+    password: 7a73f1dc97a70905870c0c0484b12145
+    skip-cert-verify: true
+    network: tcp
+  - &id002
+    name: 🇨🇳_CN_中国->🇭🇰_HK_香港_1
+    type: trojan
+    server: zf.heigouyunzf.xyz
+    port: 38805
+    udp: true
+    password: e958b47d-3510-445a-99cb-dc98d227e29e
+    skip-cert-verify: true
+    network: tcp
+  - &id003
+    name: 🇸🇬_SG_新加坡_1
+    type: ss
+    server: 3.1.203.193
+    port: 443
+    password: amazonskr05
+    cipher: aes-256-cfb
+  - &id004
+    name: 🇺🇸_US_美国->🇩🇪_DE_德国
     type: vmess
-    server: 104.31.16.27
+    server: ns1.v2-vip.fun
     port: 80
     cipher: auto
-    uuid: 58fe1542-5290-40ad-815a-77707a81afe5
+    uuid: 4f859149-2b2f-4b90-9a2c-8c0fe15c8c4c
     alterId: 0
     tls: false
     skip-cert-verify: true
     network: ws
     ws-opts:
-      path: /IOebhLMhl1CTbFHbL95myfRX2
+      path: /ozX9aUPiJVtoLavjTW
       headers:
-        host: ca5.tehme2.fun
-  - &id002
-    name: 🇺🇸_US_美国_1
+        host: de14.irteh.fun
+  - &id005
+    name: 🇳🇱_NL_荷兰
     type: vmess
-    server: 104.18.204.99
-    port: 2096
-    cipher: auto
-    uuid: f8c8962d-ecf1-4155-a6e3-b44bd3a9acea
-    alterId: 0
-    tls: true
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /blue
-      headers:
-        host: xt.ylks01.eu.org
-  - &id003
-    name: 🇺🇸_US_美国->🇬🇧_GB_英国
-    type: vmess
-    server: 104.16.183.101
-    port: 443
-    cipher: auto
-    uuid: 3de4ec27-74b4-43e3-bf23-18e726ac80bc
-    alterId: 0
-    tls: true
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /P6kpn5UKG40MNLK2
-      headers:
-        host: pWghljmnknq.janbaroon.com
-  - &id004
-    name: 🇺🇸_US_美国_2
-    type: vmess
-    server: 142.4.110.25
-    port: 52908
+    server: 154.85.1.3
+    port: 40024
     cipher: auto
     uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
     alterId: 64
     tls: false
     skip-cert-verify: true
     network: tcp
-  - &id005
-    name: 🇨🇳_CN_中国->🇷🇺_RU_俄罗斯联邦
-    type: vmess
-    server: 8r5u04.abzoones.xyz
-    port: 36851
-    cipher: auto
-    uuid: c2e4ad7a-2426-4c95-9c81-f09b950e29f8
-    alterId: 0
-    tls: true
-    skip-cert-verify: true
-    servername: ru04.abpilot.xyz
-    network: tcp
   - &id006
-    name: 🇨🇳_CN_中国->🇬🇧_GB_英国
+    name: 🇰🇷_KR_韩国->🇷🇺_RU_俄罗斯联邦
     type: vmess
-    server: 2u3k04.abzoones.xyz
-    port: 36811
+    server: kr1.quickerlink.xyz
+    port: 3002
     cipher: auto
-    uuid: c2e4ad7a-2426-4c95-9c81-f09b950e29f8
-    alterId: 0
-    tls: true
-    skip-cert-verify: true
-    servername: uk04.abpilot.xyz
-    network: tcp
-  - &id007
-    name: 🇨🇳_CN_中国->🇺🇸_US_美国_1
-    type: vmess
-    server: 3u1s04.abzoones.xyz
-    port: 36501
-    cipher: auto
-    uuid: c2e4ad7a-2426-4c95-9c81-f09b950e29f8
-    alterId: 0
-    tls: true
-    skip-cert-verify: true
-    servername: us04.abpilot.xyz
-    network: tcp
-  - &id008
-    name: 🇨🇳_CN_中国->🇦🇺_AU_澳大利亚_1
-    type: vmess
-    server: 8t6w05.abzoones.xyz
-    port: 36306
-    cipher: auto
-    uuid: c2e4ad7a-2426-4c95-9c81-f09b950e29f8
-    alterId: 0
-    tls: true
-    skip-cert-verify: true
-    servername: tw05.abpilot.xyz
-    network: tcp
-  - &id009
-    name: 🇨🇳_CN_中国->🇯🇵_JP_日本_1
-    type: vmess
-    server: 1j8p04.abzoones.xyz
-    port: 36116
-    cipher: auto
-    uuid: c2e4ad7a-2426-4c95-9c81-f09b950e29f8
-    alterId: 0
-    tls: true
-    skip-cert-verify: true
-    servername: jp04.abpilot.xyz
-    network: tcp
-  - &id010
-    name: 🇨🇳_CN_中国->🇸🇬_SG_新加坡_1
-    type: vmess
-    server: 9s5g06.abzoones.xyz
-    port: 36211
-    cipher: auto
-    uuid: c2e4ad7a-2426-4c95-9c81-f09b950e29f8
-    alterId: 0
-    tls: true
-    skip-cert-verify: true
-    servername: sg06.abpilot.xyz
-    network: tcp
-  - &id011
-    name: 🇨🇳_CN_中国->🇯🇵_JP_日本_2
-    type: vmess
-    server: 1j8p05.abzoones.xyz
-    port: 36106
-    cipher: auto
-    uuid: c2e4ad7a-2426-4c95-9c81-f09b950e29f8
-    alterId: 0
-    tls: true
-    skip-cert-verify: true
-    servername: jp05.abpilot.xyz
-    network: tcp
-  - &id012
-    name: 🇨🇳_CN_中国->🇭🇺_HU_匈牙利
-    type: vmess
-    server: 2h4u04.abzoones.xyz
-    port: 36864
-    cipher: auto
-    uuid: c2e4ad7a-2426-4c95-9c81-f09b950e29f8
-    alterId: 0
-    tls: true
-    skip-cert-verify: true
-    servername: hu04.abpilot.xyz
-    network: tcp
-  - &id013
-    name: 🇨🇳_CN_中国->🇭🇰_HK_香港_1
-    type: vmess
-    server: 8h2k05.abzoones.xyz
-    port: 36606
-    cipher: auto
-    uuid: c2e4ad7a-2426-4c95-9c81-f09b950e29f8
-    alterId: 0
-    tls: true
-    skip-cert-verify: true
-    servername: hk05.abpilot.xyz
-    network: tcp
-  - &id014
-    name: 🇨🇳_CN_中国->🇻🇳_VN_越南
-    type: vmess
-    server: 3v4n04.abzoones.xyz
-    port: 36874
-    cipher: auto
-    uuid: c2e4ad7a-2426-4c95-9c81-f09b950e29f8
-    alterId: 0
-    tls: true
-    skip-cert-verify: true
-    servername: vn04.abpilot.xyz
-    network: tcp
-  - &id015
-    name: 🇺🇸_US_美国->🇸🇬_SG_新加坡
-    type: vmess
-    server: xt.ylks01.eu.org
-    port: 2096
-    cipher: auto
-    uuid: f8c8962d-ecf1-4155-a6e3-b44bd3a9acea
+    uuid: 3853a2ab-6bec-4503-89b9-d3cbcc6b69c9
     alterId: 0
     tls: true
     skip-cert-verify: true
     network: ws
     ws-opts:
-      path: /blue
-  - &id016
-    name: 🇨🇳_CN_中国->🇺🇸_US_美国_2
+      path: /h6jr23x9h3lqiitg
+      headers:
+        host: kr1.quickerlink.xyz
+  - &id007
+    name: 🇯🇵_JP_日本_2
     type: vmess
-    server: 3u1s05.abzoones.xyz
-    port: 36506
+    server: 45.88.43.163
+    port: 51801
     cipher: auto
-    uuid: c2e4ad7a-2426-4c95-9c81-f09b950e29f8
+    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+    alterId: 64
+    tls: false
+    skip-cert-verify: true
+    network: tcp
+  - &id008
+    name: 🇰🇷_KR_韩国_1
+    type: ss
+    server: 43.202.52.108
+    port: 443
+    password: amazonskr05
+    cipher: aes-256-cfb
+  - &id009
+    name: 🇰🇷_KR_韩国_2
+    type: ss
+    server: 43.202.64.174
+    port: 443
+    password: amazonskr05
+    cipher: aes-256-cfb
+  - &id010
+    name: 🇨🇳_CN_中国->🇭🇰_HK_香港_2
+    type: ss
+    server: wqfuinwqffq.dfcloud.xyz
+    port: 50904
+    password: 143aa467-09a0-49fb-aeae-41547c5faf77
+    cipher: chacha20-ietf-poly1305
+  - &id011
+    name: 🇯🇵_JP_日本_3
+    type: ss
+    server: 43.207.74.136
+    port: 443
+    password: amazonskr05
+    cipher: aes-256-cfb
+  - &id012
+    name: 🇺🇸_US_美国_1
+    type: vmess
+    server: bluehost.com
+    port: 443
+    cipher: auto
+    uuid: be74ca03-6a7c-4c88-edc2-c6434ead0cfa
     alterId: 0
     tls: true
     skip-cert-verify: true
-    servername: us05.abpilot.xyz
-    network: tcp
-  - &id017
-    name: 🇨🇳_CN_中国->🇺🇦_UA_乌克兰
+    network: ws
+    ws-opts:
+      path: /16575
+      headers:
+        host: cdnca1.digisport.shop
+  - &id013
+    name: 🇺🇸_US_美国->🇫🇷_FR_法国
     type: vmess
-    server: 8u9a04.abzoones.xyz
-    port: 36871
+    server: dl.v001sssv.pw
+    port: 80
     cipher: auto
-    uuid: c2e4ad7a-2426-4c95-9c81-f09b950e29f8
-    alterId: 0
-    tls: true
-    skip-cert-verify: true
-    servername: ua04.abpilot.xyz
-    network: tcp
-  - &id018
-    name: 🇨🇳_CN_中国->🇺🇸_US_美国_3
-    type: vmess
-    server: 3u1s06.abzoones.xyz
-    port: 36511
-    cipher: auto
-    uuid: c2e4ad7a-2426-4c95-9c81-f09b950e29f8
-    alterId: 0
-    tls: true
-    skip-cert-verify: true
-    servername: us06.abpilot.xyz
-    network: tcp
-  - &id019
-    name: 🇨🇳_CN_中国->🇦🇺_AU_澳大利亚_2
-    type: vmess
-    server: 5a4u04.abzoones.xyz
-    port: 36821
-    cipher: auto
-    uuid: c2e4ad7a-2426-4c95-9c81-f09b950e29f8
-    alterId: 0
-    tls: true
-    skip-cert-verify: true
-    servername: au04.abpilot.xyz
-    network: tcp
-  - &id020
-    name: 🇺🇸_US_美国->🇯🇵_JP_日本
-    type: vmess
-    server: 8.sanfen001.top
-    port: 2095
-    cipher: auto
-    uuid: aed95e45-53e1-45a4-a22c-f606522c4777
+    uuid: a4bb7f93-cee6-43d7-b2dd-fa9c70b88233
     alterId: 0
     tls: false
     skip-cert-verify: true
@@ -256,34 +139,208 @@ proxies:
     ws-opts:
       path: /
       headers:
-        host: jpppp.cashdawiodxkawjaiocjdawdawdadwrawgfsegsededwadawfgrdrcvsssl.top
-  - &id021
-    name: 🇨🇳_CN_中国->🇭🇰_HK_香港_2
+        host: dl.v001sssv.pw
+  - &id014
+    name: 🇨🇦_CA_加拿大
     type: vmess
-    server: 8h2k06.abzoones.xyz
-    port: 36611
+    server: 23.227.38.99
+    port: 443
     cipher: auto
-    uuid: c2e4ad7a-2426-4c95-9c81-f09b950e29f8
+    uuid: 86d37526-5758-4cec-862f-df404b313086
     alterId: 0
     tls: true
     skip-cert-verify: true
-    servername: hk06.abpilot.xyz
-    network: tcp
-  - &id022
-    name: 🇺🇸_US_美国_3
+    network: ws
+    ws-opts:
+      path: /3G6WPDL7
+      headers:
+        host: 1.freek1.xyz
+  - &id015
+    name: 🇺🇸_US_美国_2
     type: vmess
-    server: 192.74.228.187
-    port: 42857
+    server: 107.167.16.90
+    port: 45689
     cipher: auto
-    uuid: 051b844f-efe3-4847-92aa-66b5de0b6d4e
+    uuid: 7640a1e7-9701-428e-a4b2-19b3e7dd6f9f
     alterId: 64
     tls: false
     skip-cert-verify: true
     network: tcp
-  - &id023
+  - &id016
+    name: 🇺🇸_US_美国_3
+    type: vmess
+    server: 23.224.15.181
+    port: 50002
+    cipher: auto
+    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+    alterId: 64
+    tls: false
+    skip-cert-verify: true
+    network: tcp
+  - &id017
+    name: 🇰🇷_KR_韩国_3
+    type: vmess
+    server: kr4.jisuyun.co
+    port: 443
+    cipher: auto
+    uuid: 28f57cb0-f336-46e6-b040-fcc138affb29
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /
+  - &id018
+    name: 🇰🇷_KR_韩国->🇺🇸_US_美国
+    type: vmess
+    server: cn-to-hk-443.db-link.in
+    port: 443
+    cipher: auto
+    uuid: 40cbc750-a182-3fe2-8832-9fa6006354cf
+    alterId: 1
+    tls: true
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /db
+      headers:
+        host: free-to-us-01.db-link.in
+  - &id019
     name: 🇺🇸_US_美国_4
     type: vmess
-    server: 13.sanfen001.top
+    server: 172.64.206.43
+    port: 2095
+    cipher: auto
+    uuid: b710770a-fdaf-41fb-bbe4-68a6c41e2605
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /blue
+      headers:
+        host: xt.ylks01.eu.org
+  - &id020
+    name: 🇹🇼_TW_台湾_1
+    type: trojan
+    server: ip1158944211.mobgslb.tbcache.com
+    port: 443
+    udp: true
+    password: 1381fa76-e460-3a03-a01b-b9ad00e01415
+    sni: ip1158944211.mobgslb.tbcache.com
+    skip-cert-verify: true
+    network: tcp
+  - &id021
+    name: 🇰🇷_KR_韩国_4
+    type: ss
+    server: 13.125.37.44
+    port: 443
+    password: amazonskr05
+    cipher: aes-256-cfb
+  - &id022
+    name: 🇺🇸_US_美国_5
+    type: vmess
+    server: cf-lt.sharecentre.online
+    port: 80
+    cipher: auto
+    uuid: 2d5d8b9c-8ec4-4a37-b610-78e71e13eaef
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /shirker
+      headers:
+        host: lv2.sharecentrepro.org
+  - &id023
+    name: 🇷🇺_RU_俄罗斯联邦->🇸🇬_SG_新加坡
+    type: vmess
+    server: 7.sanfen001.top
+    port: 2095
+    cipher: auto
+    uuid: 82a573e6-6ac2-448a-b36b-f996ccdeda23
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: ccaws.cashdawiodxkawjaiocjdawdawdadwrawgfsegsededwadawfgrdrcvsssl.top
+  - &id024
+    name: 🇺🇸_US_美国_6
+    type: vmess
+    server: 198.2.204.241
+    port: 46902
+    cipher: auto
+    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+    alterId: 64
+    tls: false
+    skip-cert-verify: true
+    network: tcp
+  - &id025
+    name: 🇨🇳_CN_中国->🇦🇺_AU_澳大利亚_1
+    type: vmess
+    server: 120.233.42.27
+    port: 50306
+    cipher: auto
+    uuid: d0a2ccad-ba6f-4c71-a885-666f603248a6
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /
+  - &id026
+    name: 🇨🇳_CN_中国->🇨🇦_CA_加拿大
+    type: vmess
+    server: 120.233.42.27
+    port: 47468
+    cipher: auto
+    uuid: d0a2ccad-ba6f-4c71-a885-666f603248a6
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /
+  - &id027
+    name: 🇸🇬_SG_新加坡_2
+    type: ss
+    server: 18.139.163.228
+    port: 443
+    password: amazonskr05
+    cipher: aes-256-cfb
+  - &id028
+    name: 🇨🇳_CN_中国->🇦🇺_AU_澳大利亚_2
+    type: vmess
+    server: 120.233.42.27
+    port: 51872
+    cipher: auto
+    uuid: d0a2ccad-ba6f-4c71-a885-666f603248a6
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /
+  - &id029
+    name: 🇨🇳_CN_中国->🇮🇳_IN_印度
+    type: vmess
+    server: 120.233.42.27
+    port: 55197
+    cipher: auto
+    uuid: d0a2ccad-ba6f-4c71-a885-666f603248a6
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /
+  - &id030
+    name: 🇺🇸_US_美国->🇭🇰_HK_香港
+    type: vmess
+    server: 20.sanfen001.top
     port: 8080
     cipher: auto
     uuid: 82a573e6-6ac2-448a-b36b-f996ccdeda23
@@ -294,214 +351,50 @@ proxies:
     ws-opts:
       path: /
       headers:
-        host: us.cashdawiodxkawjaiocjdawdawdadwrawgfsegsededwadawfgrdrcvsssl.top
-  - &id024
-    name: 🇨🇳_CN_中国->🇨🇦_CA_加拿大
-    type: vmess
-    server: 5c1a04.abzoones.xyz
-    port: 36701
-    cipher: auto
-    uuid: c2e4ad7a-2426-4c95-9c81-f09b950e29f8
-    alterId: 0
-    tls: true
-    skip-cert-verify: true
-    servername: ca04.abpilot.xyz
-    network: tcp
-  - &id025
-    name: 🇺🇸_US_美国_5
-    type: vmess
-    server: 192.74.228.185
-    port: 42857
-    cipher: auto
-    uuid: 051b844f-efe3-4847-92aa-66b5de0b6d4e
-    alterId: 64
-    tls: false
-    skip-cert-verify: true
-    network: tcp
-  - &id026
-    name: 🇨🇳_CN_中国->🇸🇬_SG_新加坡_2
-    type: vmess
-    server: 9s5g04.abzoones.xyz
-    port: 36201
-    cipher: auto
-    uuid: c2e4ad7a-2426-4c95-9c81-f09b950e29f8
-    alterId: 0
-    tls: true
-    skip-cert-verify: true
-    servername: sg04.abpilot.xyz
-    network: tcp
-  - &id027
-    name: 🇨🇳_CN_中国->🇹🇼_TW_台湾
-    type: vmess
-    server: 8t6w04.abzoones.xyz
-    port: 36301
-    cipher: auto
-    uuid: c2e4ad7a-2426-4c95-9c81-f09b950e29f8
-    alterId: 0
-    tls: true
-    skip-cert-verify: true
-    servername: tw04.abpilot.xyz
-    network: tcp
-  - &id028
-    name: 🇨🇳_CN_中国->🇰🇷_KR_韩国
-    type: vmess
-    server: 8k2r04.abzoones.xyz
-    port: 36401
-    cipher: auto
-    uuid: c2e4ad7a-2426-4c95-9c81-f09b950e29f8
-    alterId: 0
-    tls: true
-    skip-cert-verify: true
-    servername: kr04.abpilot.xyz
-    network: tcp
-  - &id029
-    name: 🇨🇳_CN_中国->🇸🇬_SG_新加坡_3
-    type: vmess
-    server: 9s5g05.abzoones.xyz
-    port: 36206
-    cipher: auto
-    uuid: c2e4ad7a-2426-4c95-9c81-f09b950e29f8
-    alterId: 0
-    tls: true
-    skip-cert-verify: true
-    servername: sg05.abpilot.xyz
-    network: tcp
-  - &id030
-    name: 🇨🇳_CN_中国->🇭🇰_HK_香港_3
-    type: vmess
-    server: 8h2k04.abzoones.xyz
-    port: 36601
-    cipher: auto
-    uuid: c2e4ad7a-2426-4c95-9c81-f09b950e29f8
-    alterId: 0
-    tls: true
-    skip-cert-verify: true
-    servername: hk04.abpilot.xyz
-    network: tcp
+        host: hk.cashdawiodxkawjaiocjdawdawdadwrawgfsegsededwadawfgrdrcvsssl.top
   - &id031
-    name: 🇨🇳_CN_中国->🇧🇷_BR_巴西
+    name: 🇺🇸_US_美国->🇻🇳_VN_越南
     type: vmess
-    server: 6i2r04.abzoones.xyz
-    port: 36877
+    server: 172.67.65.217
+    port: 8080
     cipher: auto
-    uuid: c2e4ad7a-2426-4c95-9c81-f09b950e29f8
-    alterId: 0
-    tls: true
-    skip-cert-verify: true
-    servername: br04.abpilot.xyz
-    network: tcp
-  - &id032
-    name: 🇨🇳_CN_中国->🇵🇭_PH_菲律宾
-    type: vmess
-    server: 7p3h04.abzoones.xyz
-    port: 36801
-    cipher: auto
-    uuid: c2e4ad7a-2426-4c95-9c81-f09b950e29f8
-    alterId: 0
-    tls: true
-    skip-cert-verify: true
-    servername: ph04.abpilot.xyz
-    network: tcp
-  - &id033
-    name: 🇫🇷_FR_法国
-    type: vmess
-    server: 156.249.18.50
-    port: 49123
-    cipher: auto
-    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-    alterId: 64
-    tls: false
-    skip-cert-verify: true
-    network: tcp
-  - &id034
-    name: 🇨🇳_CN_中国->🇹🇷_TR_土耳其
-    type: vmess
-    server: 2t1u04.abzoones.xyz
-    port: 36868
-    cipher: auto
-    uuid: c2e4ad7a-2426-4c95-9c81-f09b950e29f8
-    alterId: 0
-    tls: true
-    skip-cert-verify: true
-    servername: tr04.abpilot.xyz
-    network: tcp
-  - &id035
-    name: 🇨🇳_CN_中国->🇦🇷_AR_阿根廷
-    type: vmess
-    server: 9a8r04.abzoones.xyz
-    port: 36861
-    cipher: auto
-    uuid: c2e4ad7a-2426-4c95-9c81-f09b950e29f8
-    alterId: 0
-    tls: true
-    skip-cert-verify: true
-    servername: ar04.abpilot.xyz
-    network: tcp
-  - &id036
-    name: 🇨🇳_CN_中国->🇩🇪_DE_德国
-    type: vmess
-    server: 3d6e04.abzoones.xyz
-    port: 36841
-    cipher: auto
-    uuid: c2e4ad7a-2426-4c95-9c81-f09b950e29f8
-    alterId: 0
-    tls: true
-    skip-cert-verify: true
-    servername: de04.abpilot.xyz
-    network: tcp
-  - &id037
-    name: 🇨🇳_CN_中国->🇦🇺_AU_澳大利亚_3
-    type: vmess
-    server: 8t6w06.abzoones.xyz
-    port: 36311
-    cipher: auto
-    uuid: c2e4ad7a-2426-4c95-9c81-f09b950e29f8
-    alterId: 0
-    tls: true
-    skip-cert-verify: true
-    servername: tw06.abpilot.xyz
-    network: tcp
-  - &id038
-    name: 🇨🇳_CN_中国->🇯🇵_JP_日本_3
-    type: vmess
-    server: 1j8p06.abzoones.xyz
-    port: 36111
-    cipher: auto
-    uuid: c2e4ad7a-2426-4c95-9c81-f09b950e29f8
-    alterId: 0
-    tls: true
-    skip-cert-verify: true
-    servername: jp06.abpilot.xyz
-    network: tcp
-  - &id039
-    name: 🇨🇳_CN_中国->🇮🇳_IN_印度
-    type: vmess
-    server: 7i4n04.abzoones.xyz
-    port: 36831
-    cipher: auto
-    uuid: c2e4ad7a-2426-4c95-9c81-f09b950e29f8
-    alterId: 0
-    tls: true
-    skip-cert-verify: true
-    servername: in04.abpilot.xyz
-    network: tcp
-  - &id040
-    name: 🇺🇸_US_美国->🇩🇪_DE_德国
-    type: vmess
-    server: dearma.76898102.xyz
-    port: 2052
-    cipher: auto
-    uuid: 1262dace-d355-3868-915f-b7418c2e7390
+    uuid: 5d260357-312a-4a10-82b7-ca4d9da4d780
     alterId: 0
     tls: false
     skip-cert-verify: true
     network: ws
     ws-opts:
-      path: /abuciwyg
+      path: /
       headers:
-        host: dearma.76898102.xyz
-  - &id041
-    name: 🇹🇼_TW_台湾
+        host: vn.cdn.575720.xyz
+  - &id032
+    name: 🇯🇵_JP_日本_4
+    type: vmess
+    server: 155.248.162.137
+    port: 12345
+    cipher: auto
+    uuid: d0a2ccad-ba6f-4c71-a885-666f603248a6
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: tcp
+  - &id033
+    name: 🇰🇿_KZ_哈萨克斯坦->🇬🇧_GB_英国
+    type: vmess
+    server: 17.sanfen001.top
+    port: 8080
+    cipher: auto
+    uuid: 82a573e6-6ac2-448a-b36b-f996ccdeda23
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: lon.cashdawiodxkawjaiocjdawdawdadwrawgfsegsededwadawfgrdrcvsssl.top
+  - &id034
+    name: 🇹🇼_TW_台湾_2
     type: vmess
     server: tw99-hinet.mynodes001.one
     port: 445
@@ -511,65 +404,36 @@ proxies:
     tls: false
     skip-cert-verify: true
     network: tcp
-  - &id042
-    name: 🇬🇧_GB_英国
+  - &id035
+    name: 🇺🇸_US_美国->🇸🇬_SG_新加坡
     type: vmess
-    server: 109.74.201.20
-    port: 443
+    server: 1.sanfen001.top
+    port: 80
     cipher: auto
-    uuid: 927094d3-d678-4763-8591-e240d0bcae87
-    alterId: 0
-    tls: true
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /chat
-  - &id043
-    name: 🇺🇸_US_美国->🇧🇷_BR_巴西
-    type: vmess
-    server: frarmbc.76898102.xyz
-    port: 2052
-    cipher: auto
-    uuid: a031d87d-ea68-3511-bc8a-8ab98ac734e9
+    uuid: 82a573e6-6ac2-448a-b36b-f996ccdeda23
     alterId: 0
     tls: false
-    skip-cert-verify: true
-    servername: frarmbc.76898102.xyz
-    network: ws
-    ws-opts:
-      path: /bxrmiao
-      headers:
-        host: frarmbc.76898102.xyz
-  - &id044
-    name: 🇺🇸_US_美国_6
-    type: vmess
-    server: 104.20.181.183
-    port: 8080
-    cipher: auto
-    uuid: a1bed870-013d-4555-becd-584b00249f3c
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /qwer
-      headers:
-        host: xx.ylks01.eu.org
-  - &id045
-    name: 🇺🇸_US_美国_7
-    type: vmess
-    server: v3.gitvpn.eu.org
-    port: 443
-    cipher: auto
-    uuid: b63e998f-7fc8-48f4-a7d8-35dad9cf5778
-    alterId: 0
-    tls: true
     skip-cert-verify: true
     network: ws
     ws-opts:
       path: /
       headers:
-        host: v3.gitvpn.eu.org
+        host: ccaws.cashdawiodxkawjaiocjdawdawdadwrawgfsegsededwadawfgrdrcvsssl.top
+  - &id036
+    name: 🇺🇸_US_美国->🇬🇧_GB_英国
+    type: vmess
+    server: 16.sanfen001.top
+    port: 8880
+    cipher: auto
+    uuid: 82a573e6-6ac2-448a-b36b-f996ccdeda23
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: lon.cashdawiodxkawjaiocjdawdawdadwrawgfsegsededwadawfgrdrcvsssl.top
 proxy-groups:
   - name: PROXY
     type: select
@@ -632,15 +496,6 @@ proxy-groups:
       - *id034
       - *id035
       - *id036
-      - *id037
-      - *id038
-      - *id039
-      - *id040
-      - *id041
-      - *id042
-      - *id043
-      - *id044
-      - *id045
   - name: LOAD-BALANCE
     type: load-balance
     url: http://www.gstatic.com/generate_204
@@ -682,15 +537,6 @@ proxy-groups:
       - *id034
       - *id035
       - *id036
-      - *id037
-      - *id038
-      - *id039
-      - *id040
-      - *id041
-      - *id042
-      - *id043
-      - *id044
-      - *id045
   - name: SELECT
     type: select
     proxies:
@@ -730,15 +576,6 @@ proxy-groups:
       - *id034
       - *id035
       - *id036
-      - *id037
-      - *id038
-      - *id039
-      - *id040
-      - *id041
-      - *id042
-      - *id043
-      - *id044
-      - *id045
 rules:
   - RULE-SET,applications,DIRECT
   - DOMAIN,clash.razord.top,DIRECT
