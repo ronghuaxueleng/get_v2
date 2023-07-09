@@ -6,315 +6,63 @@ log-level: info
 external-controller: 0.0.0.0:9090
 proxies:
   - &id001
-    name: 🇨🇳_CN_中国->🇺🇸_US_美国
-    type: ss
-    server: gd.v2y.live
-    port: 31616
-    password: 68e97468-88d1-449b-a20a-35da194c283b
-    cipher: chacha20-ietf-poly1305
+    name: 🇫🇷_FR_法国
+    type: vmess
+    server: 4ea490f8-22b2-8aac-9c2e-378f28c9e38e.fltbzss.cn
+    port: 443
+    cipher: auto
+    uuid: 2913d414-bc4b-4246-b83f-122cf652de3e
+    alterId: 0
+    tls: true
+    skip-cert-verify: true
+    servername: globalssh.cn-sh2.ufileos.com
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: globalssh.cn-sh2.ufileos.com
   - &id002
-    name: 🇨🇳_CN_中国->🇸🇬_SG_新加坡
-    type: ss
-    server: hl.v2y.live
-    port: 44649
-    password: 68e97468-88d1-449b-a20a-35da194c283b
-    cipher: chacha20-ietf-poly1305
-  - &id003
     name: 🇺🇸_US_美国_1
     type: vmess
-    server: 104.25.6.23
-    port: 2095
+    server: f483840c-22f8-b627-fc78-094a7cc63875.fltbzss.cn
+    port: 443
     cipher: auto
-    uuid: 38a9c369-a71c-41a1-96da-3fda8d04db27
+    uuid: 2913d414-bc4b-4246-b83f-122cf652de3e
     alterId: 0
-    tls: false
+    tls: true
     skip-cert-verify: true
+    servername: azure.oos.ctyunapi.cn
     network: ws
     ws-opts:
-      path: /qwer
+      path: /
       headers:
-        host: bl.wang66.homes
+        host: azure.oos.ctyunapi.cn
+  - &id003
+    name: 🇸🇬_SG_新加坡_1
+    type: ss
+    server: 3.1.203.193
+    port: 443
+    password: amazonskr05
+    cipher: aes-256-cfb
   - &id004
-    name: 🇺🇸_US_美国_2
-    type: vmess
-    server: 173.245.58.130
-    port: 80
-    cipher: auto
-    uuid: 9572d691-e27a-4f54-ef4d-57600a785b55
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /qwer00
-      headers:
-        host: txx.vtcss.top
-  - &id005
-    name: 🇺🇸_US_美国_3
-    type: vmess
-    server: 103.21.244.236
-    port: 80
-    cipher: auto
-    uuid: 9572d691-e27a-4f54-ef4d-57600a785b55
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /qwer00
-      headers:
-        host: txx.vtcss.top
-  - &id006
-    name: 🇺🇸_US_美国_4
-    type: vmess
-    server: 104.19.129.220
-    port: 80
-    cipher: auto
-    uuid: 9572d691-e27a-4f54-ef4d-57600a785b55
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /qwer00
-      headers:
-        host: txx.vtcss.top
-  - &id007
-    name: 🇺🇸_US_美国_5
-    type: vmess
-    server: 104.27.87.72
-    port: 80
-    cipher: auto
-    uuid: 9572d691-e27a-4f54-ef4d-57600a785b55
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /qwer00
-      headers:
-        host: txx.vtcss.top
-  - &id008
-    name: 🇺🇸_US_美国_6
-    type: vmess
-    server: 172.67.239.85
-    port: 80
-    cipher: auto
-    uuid: 9572d691-e27a-4f54-ef4d-57600a785b55
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /qwer00
-      headers:
-        host: txx.vtcss.top
-  - &id009
-    name: 🇳🇱_NL_荷兰
-    type: vmess
-    server: 188.114.96.227
-    port: 80
-    cipher: auto
-    uuid: 9572d691-e27a-4f54-ef4d-57600a785b55
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /qwer00
-      headers:
-        host: txx.vtcss.top
-  - &id010
-    name: 🇺🇸_US_美国_7
+    name: 🇩🇪_DE_德国
     type: trojan
-    server: 163.123.192.146
+    server: 89.163.224.73
     port: 443
     udp: true
-    password: 6f9d4a83-4682-48d5-a217-7938860b0070
+    password: d51f8335-4f7d-4d3a-acae-d65467b46502
     sni: 4-193-105-141.nhost.00cdn.com
     skip-cert-verify: true
     network: tcp
-  - &id011
-    name: 🇺🇸_US_美国_8
-    type: vmess
-    server: 140.99.57.23
-    port: 41912
-    cipher: auto
-    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-    alterId: 64
-    tls: false
-    skip-cert-verify: true
-    network: tcp
-  - &id012
-    name: 🇺🇸_US_美国_9
-    type: vmess
-    server: 162.159.141.203
-    port: 80
-    cipher: auto
-    uuid: 9572d691-e27a-4f54-ef4d-57600a785b55
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /qwer00
-      headers:
-        host: txx.vtcss.top
-  - &id013
-    name: 🇺🇸_US_美国_10
-    type: vmess
-    server: 104.25.16.175
-    port: 2052
-    cipher: auto
-    uuid: 87959d44-4377-4557-cf36-2f7db9d790f6
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /qwer
-      headers:
-        host: er.vtcss.top
-  - &id014
-    name: 🇺🇸_US_美国_11
-    type: vmess
-    server: 104.16.138.157
-    port: 2095
-    cipher: auto
-    uuid: 49039962-1bcb-4a51-8138-0843aee1ea71
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /qwer00
-      headers:
-        host: txx.vtcss.top
-  - &id015
-    name: 🇺🇸_US_美国_12
-    type: vmess
-    server: 104.17.166.94
-    port: 80
-    cipher: auto
-    uuid: 9572d691-e27a-4f54-ef4d-57600a785b55
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /qwer00
-      headers:
-        host: txx.vtcss.top
-  - &id016
-    name: 🇺🇸_US_美国_13
-    type: vmess
-    server: 198.41.212.130
-    port: 8880
-    cipher: auto
-    uuid: dbb471fd-c7ef-4599-871c-b4ed72cca498
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /qwer01
-      headers:
-        host: txx.vtcss.top
-  - &id017
-    name: 🇺🇸_US_美国_14
-    type: vmess
-    server: 67.21.95.73
-    port: 53314
-    cipher: auto
-    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-    alterId: 64
-    tls: false
-    skip-cert-verify: true
-    network: tcp
-  - &id018
-    name: 🇭🇰_HK_香港
-    type: vmess
-    server: 8.210.154.114
-    port: 40447
-    cipher: auto
-    uuid: da8c9ac2-39de-4bed-ee9f-4e4340ade47d
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: tcp
-  - &id019
-    name: 🇺🇸_US_美国_15
-    type: vmess
-    server: 0kxedm1x8q8lksmj13.xingbayun.buzz
-    port: 443
-    cipher: auto
-    uuid: 9bd3cf22-f244-4ee3-9555-ab232fefaa22
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /zh-cn
-      headers:
-        host: 0kxedm1x8q8lksmj13.xingbayun.buzz
-  - &id020
-    name: 🇺🇸_US_美国_16
-    type: vmess
-    server: 104.25.228.25
-    port: 80
-    cipher: auto
-    uuid: 9572d691-e27a-4f54-ef4d-57600a785b55
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /qwer00
-      headers:
-        host: txx.vtcss.top
-  - &id021
-    name: 🇺🇸_US_美国_17
-    type: vmess
-    server: 104.18.168.73
-    port: 80
-    cipher: auto
-    uuid: 9572d691-e27a-4f54-ef4d-57600a785b55
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /qwer00
-      headers:
-        host: txx.vtcss.top
-  - &id022
-    name: 🇺🇸_US_美国_18
-    type: vmess
-    server: 104.19.23.96
-    port: 2052
-    cipher: auto
-    uuid: 3cd4f859-1048-4fdf-d8d8-4dbfaa9e8a80
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /qwer0
-      headers:
-        host: txx.vtcss.top
-  - &id023
-    name: 🇺🇸_US_美国_19
-    type: vmess
-    server: 64.32.4.45
-    port: 43166
-    cipher: auto
-    uuid: 8653004f-de67-44c2-9cce-e0830933fb03
-    alterId: 64
-    tls: false
-    skip-cert-verify: true
-    network: tcp
-  - &id024
-    name: 🇺🇸_US_美国_20
+  - &id005
+    name: 🇸🇬_SG_新加坡_2
+    type: ss
+    server: 54.255.237.136
+    port: 2333
+    password: doub.io
+    cipher: aes-256-cfb
+  - &id006
+    name: 🇺🇸_US_美国_2
     type: vmess
     server: 162.159.255.197
     port: 80
@@ -328,8 +76,15 @@ proxies:
       path: /qwer00
       headers:
         host: txx.vtcss.top
-  - &id025
-    name: 🇺🇸_US_美国_21
+  - &id007
+    name: 🇸🇬_SG_新加坡_3
+    type: ss
+    server: 3.0.183.226
+    port: 443
+    password: amazonskr05
+    cipher: aes-256-cfb
+  - &id008
+    name: 🇺🇸_US_美国_3
     type: vmess
     server: 103.21.244.28
     port: 80
@@ -343,142 +98,46 @@ proxies:
       path: /qwer00
       headers:
         host: txx.vtcss.top
-  - &id026
-    name: 🇺🇸_US_美国_22
+  - &id009
+    name: 🇸🇬_SG_新加坡_4
+    type: ss
+    server: 54.251.168.143
+    port: 443
+    password: amazonskr05
+    cipher: aes-256-cfb
+  - &id010
+    name: 🇺🇸_US_美国_4
     type: vmess
-    server: 104.25.110.180
-    port: 2095
+    server: 107.167.29.37
+    port: 52303
     cipher: auto
-    uuid: 38a9c369-a71c-41a1-96da-3fda8d04db27
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /qwer
-      headers:
-        host: bl.wang66.homes
-  - &id027
-    name: 🇺🇸_US_美国_23
-    type: vmess
-    server: 107.167.16.217
-    port: 33589
-    cipher: auto
-    uuid: 8c679b81-84fc-43ce-9553-ddca575a6949
+    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
     alterId: 64
     tls: false
     skip-cert-verify: true
     network: tcp
-  - &id028
-    name: 🇺🇸_US_美国_24
+  - &id011
+    name: 🇺🇸_US_美国_5
     type: vmess
-    server: zfc.windowsupdate1.com
-    port: 443
-    cipher: auto
-    uuid: 41bec492-cd79-4b57-9a15-7d2bb00fcfca
-    alterId: 0
-    tls: true
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /pq/usfh3?ed=2048
-      headers:
-        host: usfh3.pqjc.buzz
-  - &id029
-    name: 🇺🇸_US_美国_25
-    type: vmess
-    server: 162.159.248.165
-    port: 8080
-    cipher: auto
-    uuid: 0a69988b-1c81-4c78-b6f2-5b291cb15493
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /qwer
-      headers:
-        host: bl.wang66.homes
-  - &id030
-    name: 🇺🇸_US_美国->🇸🇬_SG_新加坡_1
-    type: vmess
-    server: 104.18.56.230
-    port: 2095
-    cipher: auto
-    uuid: f25a0058-37be-4849-90b7-806d7cc8bf38
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /@hkaa0
-      headers:
-        host: sg.wyhkaa0.tk
-  - &id031
-    name: 🇺🇸_US_美国_26
-    type: vmess
-    server: 104.24.142.6
-    port: 80
-    cipher: auto
-    uuid: 9572d691-e27a-4f54-ef4d-57600a785b55
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /qwer00
-      headers:
-        host: txx.vtcss.top
-  - &id032
-    name: 🇨🇾_CY_塞浦路斯->🇺🇸_US_美国
-    type: vmess
-    server: apkwvctghw.114514782.xyz
+    server: 104.19.98.203
     port: 2052
     cipher: auto
-    uuid: d1969fc7-b361-3c1d-b92d-4ae5c3909e62
+    uuid: 3cd4f859-1048-4fdf-d8d8-4dbfaa9e8a80
     alterId: 0
     tls: false
     skip-cert-verify: true
     network: ws
     ws-opts:
-      path: /miaosafh
+      path: /qwer0
       headers:
-        host: apkwvctghw.114514782.xyz
-  - &id033
-    name: 🇸🇬_SG_新加坡
+        host: txx.vtcss.top
+  - &id012
+    name: 🇺🇸_US_美国_6
     type: vmess
-    server: 168.138.182.121
-    port: 443
-    cipher: auto
-    uuid: a869c557-5c7d-426f-9039-0279c16352bc
-    alterId: 0
-    tls: true
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /vmessws
-  - &id034
-    name: 🇺🇸_US_美国->🇸🇬_SG_新加坡_2
-    type: vmess
-    server: 104.21.8.38
+    server: 162.159.39.71
     port: 2095
     cipher: auto
-    uuid: f25a0058-37be-4849-90b7-806d7cc8bf38
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /@hkaa0
-      headers:
-        host: sg.wyhkaa0.tk
-  - &id035
-    name: 🇺🇸_US_美国_27
-    type: vmess
-    server: 104.21.39.17
-    port: 80
-    cipher: auto
-    uuid: 9572d691-e27a-4f54-ef4d-57600a785b55
+    uuid: 49039962-1bcb-4a51-8138-0843aee1ea71
     alterId: 0
     tls: false
     skip-cert-verify: true
@@ -487,23 +146,8 @@ proxies:
       path: /qwer00
       headers:
         host: txx.vtcss.top
-  - &id036
-    name: 🇺🇸_US_美国_28
-    type: vmess
-    server: 162.159.12.156
-    port: 80
-    cipher: auto
-    uuid: 9572d691-e27a-4f54-ef4d-57600a785b55
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /qwer00
-      headers:
-        host: txx.vtcss.top
-  - &id037
-    name: 🇺🇸_US_美国->🇸🇬_SG_新加坡_3
+  - &id013
+    name: 🇺🇸_US_美国->🇸🇬_SG_新加坡
     type: vmess
     server: 162.159.253.254
     port: 2095
@@ -517,25 +161,140 @@ proxies:
       path: /@hkaa0
       headers:
         host: sg.wyhkaa0.tk
-  - &id038
-    name: 🇺🇸_US_美国_29
+  - &id014
+    name: 🇺🇸_US_美国_7
     type: vmess
-    server: cold-dawn-9246.fly.dev
-    port: 443
+    server: 104.21.0.128
+    port: 80
     cipher: auto
-    uuid: ea4909ef-7ca6-4b46-bf2e-6c07896ef338
+    uuid: 9572d691-e27a-4f54-ef4d-57600a785b55
     alterId: 0
-    tls: true
+    tls: false
     skip-cert-verify: true
     network: ws
     ws-opts:
-      path: /ea4909ef-7ca6-4b46-bf2e-6c07896ef338-vm
+      path: /qwer00
       headers:
-        host: cold-dawn-9246.fly.dev
-  - &id039
-    name: 🇺🇸_US_美国_30
+        host: txx.vtcss.top
+  - &id015
+    name: 🇺🇸_US_美国_8
     type: vmess
-    server: 104.18.151.108
+    server: 104.18.168.73
+    port: 80
+    cipher: auto
+    uuid: 9572d691-e27a-4f54-ef4d-57600a785b55
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /qwer00
+      headers:
+        host: txx.vtcss.top
+  - &id016
+    name: 🇸🇬_SG_新加坡_5
+    type: ss
+    server: 13.213.46.196
+    port: 443
+    password: amazonskr05
+    cipher: aes-256-cfb
+  - &id017
+    name: 🇺🇸_US_美国_9
+    type: ss
+    server: 54.190.212.115
+    port: 443
+    password: amazonskr05
+    cipher: aes-256-cfb
+  - &id018
+    name: 🇺🇸_US_美国_10
+    type: vmess
+    server: 104.19.183.4
+    port: 2095
+    cipher: auto
+    uuid: 49039962-1bcb-4a51-8138-0843aee1ea71
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /qwer00
+      headers:
+        host: txx.vtcss.top
+  - &id019
+    name: 🇨🇷_CR_哥斯达黎加_1
+    type: vmess
+    server: 190.93.245.58
+    port: 2052
+    cipher: auto
+    uuid: 3cd4f859-1048-4fdf-d8d8-4dbfaa9e8a80
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /qwer0
+      headers:
+        host: txx.vtcss.top
+  - &id020
+    name: 🇺🇸_US_美国_11
+    type: vmess
+    server: 172.67.16.230
+    port: 2052
+    cipher: auto
+    uuid: 3cd4f859-1048-4fdf-d8d8-4dbfaa9e8a80
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /qwer0
+      headers:
+        host: txx.vtcss.top
+  - &id021
+    name: 🇳🇱_NL_荷兰
+    type: vmess
+    server: 188.114.96.67
+    port: 80
+    cipher: auto
+    uuid: 9572d691-e27a-4f54-ef4d-57600a785b55
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /qwer00
+      headers:
+        host: txx.vtcss.top
+  - &id022
+    name: 🇯🇵_JP_日本
+    type: vmess
+    server: 45.88.43.232
+    port: 46202
+    cipher: auto
+    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+    alterId: 64
+    tls: false
+    skip-cert-verify: true
+    network: tcp
+  - &id023
+    name: 🇺🇸_US_美国_12
+    type: vmess
+    server: 103.21.244.236
+    port: 80
+    cipher: auto
+    uuid: 9572d691-e27a-4f54-ef4d-57600a785b55
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /qwer00
+      headers:
+        host: txx.vtcss.top
+  - &id024
+    name: 🇺🇸_US_美国_13
+    type: vmess
+    server: 162.159.33.23
     port: 8880
     cipher: auto
     uuid: d18cf3e0-e5fe-4f89-9d36-e4688788983b
@@ -547,8 +306,199 @@ proxies:
       path: /qwer
       headers:
         host: bl.wang66.homes
-  - &id040
-    name: 🇺🇸_US_美国_31
+  - &id025
+    name: 🇺🇸_US_美国->🇳🇱_NL_荷兰
+    type: vmess
+    server: 156.225.67.91
+    port: 48821
+    cipher: auto
+    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+    alterId: 64
+    tls: false
+    skip-cert-verify: true
+    network: tcp
+  - &id026
+    name: 🇺🇸_US_美国_14
+    type: vmess
+    server: 172.64.33.86
+    port: 2052
+    cipher: auto
+    uuid: 3cd4f859-1048-4fdf-d8d8-4dbfaa9e8a80
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /qwer0
+      headers:
+        host: txx.vtcss.top
+  - &id027
+    name: 🇺🇸_US_美国_15
+    type: vmess
+    server: 104.17.62.243
+    port: 2052
+    cipher: auto
+    uuid: 3cd4f859-1048-4fdf-d8d8-4dbfaa9e8a80
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /qwer0
+      headers:
+        host: txx.vtcss.top
+  - &id028
+    name: 🇺🇸_US_美国_16
+    type: vmess
+    server: 104.20.218.44
+    port: 8880
+    cipher: auto
+    uuid: dbb471fd-c7ef-4599-871c-b4ed72cca498
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /qwer01
+      headers:
+        host: txx.vtcss.top
+  - &id029
+    name: 🇺🇸_US_美国_17
+    type: vmess
+    server: 104.19.228.233
+    port: 2095
+    cipher: auto
+    uuid: 49039962-1bcb-4a51-8138-0843aee1ea71
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /qwer00
+      headers:
+        host: txx.vtcss.top
+  - &id030
+    name: 🇺🇸_US_美国_18
+    type: vmess
+    server: 104.24.201.130
+    port: 2052
+    cipher: auto
+    uuid: 3cd4f859-1048-4fdf-d8d8-4dbfaa9e8a80
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /qwer0
+      headers:
+        host: txx.vtcss.top
+  - &id031
+    name: 🇨🇷_CR_哥斯达黎加_2
+    type: vmess
+    server: 190.93.247.63
+    port: 2052
+    cipher: auto
+    uuid: 3cd4f859-1048-4fdf-d8d8-4dbfaa9e8a80
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /qwer0
+      headers:
+        host: txx.vtcss.top
+  - &id032
+    name: 🇺🇸_US_美国_19
+    type: vmess
+    server: 172.67.185.118
+    port: 2052
+    cipher: auto
+    uuid: 3cd4f859-1048-4fdf-d8d8-4dbfaa9e8a80
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /qwer0
+      headers:
+        host: txx.vtcss.top
+  - &id033
+    name: 🇨🇷_CR_哥斯达黎加_3
+    type: vmess
+    server: 190.93.244.117
+    port: 2052
+    cipher: auto
+    uuid: 3cd4f859-1048-4fdf-d8d8-4dbfaa9e8a80
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /qwer0
+      headers:
+        host: txx.vtcss.top
+  - &id034
+    name: 🇺🇸_US_美国_20
+    type: vmess
+    server: 108.162.198.251
+    port: 2052
+    cipher: auto
+    uuid: 3cd4f859-1048-4fdf-d8d8-4dbfaa9e8a80
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /qwer0
+      headers:
+        host: txx.vtcss.top
+  - &id035
+    name: 🇺🇸_US_美国_21
+    type: vmess
+    server: 104.17.166.94
+    port: 80
+    cipher: auto
+    uuid: 9572d691-e27a-4f54-ef4d-57600a785b55
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /qwer00
+      headers:
+        host: txx.vtcss.top
+  - &id036
+    name: 🇺🇸_US_美国_22
+    type: vmess
+    server: 172.67.4.12
+    port: 80
+    cipher: auto
+    uuid: 9572d691-e27a-4f54-ef4d-57600a785b55
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /qwer00
+      headers:
+        host: txx.vtcss.top
+  - &id037
+    name: 🇺🇸_US_美国_23
+    type: vmess
+    server: 173.245.58.5
+    port: 2086
+    cipher: auto
+    uuid: e544862e-c9af-476a-e757-d71aa6f0fb8b
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /qwer
+      headers:
+        host: er.vtcss.top
+  - &id038
+    name: 🇺🇸_US_美国_24
     type: vmess
     server: 162.159.141.110
     port: 80
@@ -562,15 +512,6 @@ proxies:
       path: /qwer00
       headers:
         host: txx.vtcss.top
-  - &id041
-    name: 🇫🇷_FR_法国
-    type: trojan
-    server: 51.91.11.29
-    port: 80
-    udp: true
-    password: e0d44ae7-cb7d-4acc-a8c0-9861a6f5eaad
-    skip-cert-verify: true
-    network: tcp
 proxy-groups:
   - name: PROXY
     type: select
@@ -635,9 +576,6 @@ proxy-groups:
       - *id036
       - *id037
       - *id038
-      - *id039
-      - *id040
-      - *id041
   - name: LOAD-BALANCE
     type: load-balance
     url: http://www.gstatic.com/generate_204
@@ -681,9 +619,6 @@ proxy-groups:
       - *id036
       - *id037
       - *id038
-      - *id039
-      - *id040
-      - *id041
   - name: SELECT
     type: select
     proxies:
@@ -725,9 +660,6 @@ proxy-groups:
       - *id036
       - *id037
       - *id038
-      - *id039
-      - *id040
-      - *id041
 rules:
   - RULE-SET,applications,DIRECT
   - DOMAIN,clash.razord.top,DIRECT
