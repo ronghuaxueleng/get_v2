@@ -6,27 +6,16 @@ log-level: info
 external-controller: 0.0.0.0:9090
 proxies:
   - &id001
-    name: 🇺🇸_US_美国_1
-    type: vmess
-    server: 140.99.149.46
-    port: 53082
-    cipher: auto
-    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-    alterId: 64
-    tls: false
-    skip-cert-verify: true
-    network: tcp
-  - &id002
-    name: 🇰🇷_KR_韩国
+    name: 🇰🇷_KR_韩国_1
     type: ss
-    server: 221.150.109.69
-    port: 2003
-    password: qwerREWQ@@
+    server: 43.200.1.53
+    port: 443
+    password: amazonskr05
     cipher: aes-256-cfb
-  - &id003
-    name: 🇸🇬_SG_新加坡
+  - &id002
+    name: 🇨🇳_CN_中国
     type: vmess
-    server: 27.124.47.64
+    server: 47.104.240.230
     port: 50002
     cipher: auto
     uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
@@ -34,10 +23,51 @@ proxies:
     tls: false
     skip-cert-verify: true
     network: tcp
+  - &id003
+    name: 🇺🇸_US_美国_1
+    type: vmess
+    server: 104.20.18.54
+    port: 2095
+    cipher: auto
+    uuid: 8c4e5e83-8be2-4638-e3f6-a098ee484193
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /@hkaa0
+      headers:
+        host: hk.wyhkaa0.tk
   - &id004
     name: 🇺🇸_US_美国_2
     type: vmess
-    server: 104.25.177.236
+    server: cf1.992688.xyz
+    port: 8080
+    cipher: auto
+    uuid: fda2c765-ed35-4e97-ba13-ed64b1c4c460
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: hax.vpn66.eu.org
+  - &id005
+    name: 🇨🇳_CN_中国->🇺🇸_US_美国_1
+    type: vmess
+    server: 120.233.43.74
+    port: 41273
+    cipher: auto
+    uuid: 770ee730-2450-4e3c-a6c6-3932bd32afbd
+    alterId: 64
+    tls: false
+    skip-cert-verify: true
+    network: tcp
+  - &id006
+    name: 🇺🇸_US_美国_3
+    type: vmess
+    server: 104.24.181.242
     port: 8080
     cipher: auto
     uuid: 20670d72-d0ab-469e-81f4-1564f03955b0
@@ -49,97 +79,34 @@ proxies:
       path: /qwer
       headers:
         host: uxx.vtcss.top
-  - &id005
-    name: 🇫🇷_FR_法国->🇱🇺_LU_卢森堡
-    type: ss
-    server: 135.125.244.103
-    port: 989
-    password: f8f7aCzcPKbsF8p3
-    cipher: aes-256-cfb
-  - &id006
-    name: 🇺🇸_US_美国_3
-    type: vmess
-    server: 104.25.167.88
-    port: 443
-    cipher: auto
-    uuid: a2284cc1-20d8-4c78-a622-3e3cca767a70
-    alterId: 0
-    tls: true
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: a2284cc1
-      headers:
-        host: dedi2.1808.cf
   - &id007
-    name: 🇺🇸_US_美国->🇩🇪_DE_德国_1
+    name: 🇺🇸_US_美国->🇳🇱_NL_荷兰
     type: vmess
-    server: amszxc.66666654.xyz
-    port: 2095
+    server: 45.199.138.121
+    port: 51204
     cipher: auto
-    uuid: 417d27fb-cb93-3bd8-9bf7-71cd91319821
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /hgcefomn
-      headers:
-        host: amszx.66666654.xyz
-  - &id008
-    name: 🇨🇳_CN_中国
-    type: vmess
-    server: 47.104.240.230
-    port: 50002
-    cipher: auto
-    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+    uuid: 9549a2cf-129b-43a1-88db-ef7f648de74a
     alterId: 64
     tls: false
     skip-cert-verify: true
     network: tcp
-  - &id009
-    name: 🇨🇳_CN_中国->🇭🇰_HK_香港
-    type: vmess
-    server: qzcn2-01.dajuzi.cc
-    port: 15596
-    cipher: auto
-    uuid: aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: tcp
-  - &id010
-    name: 🇺🇸_US_美国->🇨🇦_CA_加拿大_1
-    type: vmess
-    server: 104.31.16.46
-    port: 2082
-    cipher: auto
-    uuid: 58fe1542-5290-40ad-815a-77707a81afe5
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /IOebhLMhl1CTbFHbL95myfRX2
-      headers:
-        host: ca5.tehme100.fun
-  - &id011
-    name: 🇺🇸_US_美国->🇨🇦_CA_加拿大_2
-    type: vmess
-    server: 104.31.16.28
-    port: 80
-    cipher: auto
-    uuid: 58fe1542-5290-40ad-815a-77707a81afe5
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /IOebhLMhl1CTbFHbL95myfRX2
-      headers:
-        host: ca4.tehme2.fun
-  - &id012
+  - &id008
     name: 🇺🇸_US_美国_4
+    type: vmess
+    server: 104.25.179.44
+    port: 8080
+    cipher: auto
+    uuid: 20670d72-d0ab-469e-81f4-1564f03955b0
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /qwer
+      headers:
+        host: uxx.vtcss.top
+  - &id009
+    name: 🇺🇸_US_美国_5
     type: vmess
     server: cf.dalazhi.eu.org
     port: 443
@@ -153,52 +120,67 @@ proxies:
       path: /kplxvws
       headers:
         host: us.dalazhi.eu.org
-  - &id013
-    name: 🇺🇸_US_美国_5
+  - &id010
+    name: 🇺🇸_US_美国_6
     type: vmess
-    server: www.codepen.io
+    server: 104.31.16.86
     port: 443
     cipher: auto
-    uuid: 2cd39102-0799-4c61-abb6-2e7a258f0397
+    uuid: a2284cc1-20d8-4c78-a622-3e3cca767a70
     alterId: 0
     tls: true
     skip-cert-verify: true
     network: ws
     ws-opts:
-      path: /vmess
+      path: a2284cc1
       headers:
-        host: us-v.sshmax.xyz
-  - &id014
-    name: 🇺🇸_US_美国->🇩🇪_DE_德国_2
-    type: vmess
-    server: digitalocean.com
-    port: 8080
-    cipher: auto
-    uuid: 5f098028-ea22-42ea-abfd-9222cb298b74
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        host: vceu.vpn66.eu.org
-  - &id015
-    name: 🇷🇺_RU_俄罗斯联邦
-    type: vmess
-    server: 45.144.179.138
+        host: dedi2.1808.cf
+  - &id011
+    name: 🇫🇷_FR_法国->🇸🇪_SE_瑞典
+    type: ss
+    server: 135.125.244.103
+    port: 989
+    password: f8f7aCzcPKbsF8p3
+    cipher: aes-256-cfb
+  - &id012
+    name: 🇫🇷_FR_法国
+    type: ssr
+    server: fr-am1-5.eqsunshine.com
+    port: 8181
+    password: RcfVcDzzB
+    cipher: aes-256-cfb
+    obfs: tls1.2_ticket_auth
+    protocol: origin
+  - &id013
+    name: 🇸🇬_SG_新加坡_1
+    type: ss
+    server: 13.213.53.130
     port: 443
-    cipher: auto
-    uuid: 96cbe4a6-5728-42df-dc7a-ceb9b51a3db5
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: http
+    password: amazonskr05
+    cipher: aes-256-cfb
+  - &id014
+    name: 🇨🇳_CN_中国->🇺🇸_US_美国_2
+    type: ssr
+    server: usa1.vfun.icu
+    port: 443
+    password: vyunme
+    cipher: aes-256-cfb
+    obfs: plain
+    protocol: auth_aes128_sha1
+    obfs-param: ab93117422.jd.hk
+    protocol-param: 17422:TTp0SX
+  - &id015
+    name: 🇫🇷_FR_法国->🇳🇴_NO_挪威
+    type: ss
+    server: 54.36.115.241
+    port: 989
+    password: f8f7aCzcPKbsF8p3
+    cipher: aes-256-cfb
   - &id016
-    name: 🇺🇸_US_美国_6
+    name: 🇺🇸_US_美国_7
     type: vmess
-    server: 107.167.16.34
-    port: 45592
+    server: 198.2.203.59
+    port: 44672
     cipher: auto
     uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
     alterId: 64
@@ -206,68 +188,61 @@ proxies:
     skip-cert-verify: true
     network: tcp
   - &id017
-    name: 🇺🇸_US_美国_7
-    type: vmess
-    server: bluehost.com
-    port: 443
-    cipher: auto
-    uuid: be74ca03-6a7c-4c88-edc2-c6434ead0cfa
-    alterId: 0
-    tls: true
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /16575
-      headers:
-        host: cdnca1.digisport.shop
+    name: 🇸🇬_SG_新加坡_2
+    type: ssr
+    server: sg-am3.eqsunshine.com
+    port: 32001
+    password: 3g0dHlKME
+    cipher: aes-256-cfb
+    obfs: tls1.2_ticket_auth
+    protocol: origin
   - &id018
-    name: 🇺🇸_US_美国->🇯🇵_JP_日本_1
-    type: vmess
-    server: ming2.kiwireich.com
+    name: 🇰🇷_KR_韩国_2
+    type: ss
+    server: 43.201.247.194
     port: 443
-    cipher: auto
-    uuid: 18e5f40f-bda6-4c15-9334-e87cda6047af
-    alterId: 0
-    tls: true
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /ray
-      headers:
-        host: ming2.kiwireich.com
+    password: amazonskr05
+    cipher: aes-256-cfb
   - &id019
-    name: 🇺🇸_US_美国->🇯🇵_JP_日本_2
-    type: vmess
-    server: 172.67.132.15
+    name: 🇯🇵_JP_日本
+    type: ss
+    server: 52.193.8.237
     port: 443
-    cipher: auto
-    uuid: 18e5f40f-bda6-4c15-9334-e87cda6047af
-    alterId: 0
-    tls: true
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /ray
-      headers:
-        host: ming2.kiwireich.com
+    password: amazonskr05
+    cipher: aes-256-cfb
   - &id020
-    name: 🇮🇳_IN_印度
+    name: 🇷🇺_RU_俄罗斯联邦
+    type: ssr
+    server: 185.22.154.70
+    port: 443
+    password: vyunme
+    cipher: aes-256-cfb
+    obfs: plain
+    protocol: auth_aes128_sha1
+    obfs-param: ab93117422.jd.hk
+    protocol-param: 17422:TTp0SX
+  - &id021
+    name: 🇺🇸_US_美国_8
+    type: ssr
+    server: 128.254.207.15
+    port: 443
+    password: vyunme
+    cipher: aes-256-cfb
+    obfs: plain
+    protocol: auth_aes128_sha1
+    obfs-param: t.me/vpnh%�
+    protocol-param: 17422:TTp0SX
+  - &id022
+    name: 🇺🇸_US_美国_9
     type: vmess
-    server: 27.124.20.216
-    port: 44902
+    server: 38.26.135.8
+    port: 44942
     cipher: auto
     uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
     alterId: 64
     tls: false
     skip-cert-verify: true
     network: tcp
-  - &id021
-    name: 🇱🇻_LV_拉脱维亚
-    type: ss
-    server: 185.135.86.173
-    port: 9003
-    password: JdmRK9gMEqFgs8nP
-    cipher: aes-256-cfb
 proxy-groups:
   - name: PROXY
     type: select
@@ -315,6 +290,7 @@ proxy-groups:
       - *id019
       - *id020
       - *id021
+      - *id022
   - name: LOAD-BALANCE
     type: load-balance
     url: http://www.gstatic.com/generate_204
@@ -341,6 +317,7 @@ proxy-groups:
       - *id019
       - *id020
       - *id021
+      - *id022
   - name: SELECT
     type: select
     proxies:
@@ -365,6 +342,7 @@ proxy-groups:
       - *id019
       - *id020
       - *id021
+      - *id022
 rules:
   - RULE-SET,applications,DIRECT
   - DOMAIN,clash.razord.top,DIRECT
