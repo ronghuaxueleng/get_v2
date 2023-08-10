@@ -6,391 +6,7 @@ log-level: info
 external-controller: 0.0.0.0:9090
 proxies:
   - &id001
-    name: 🇨🇳_CN_中国->🇺🇸_US_美国
-    type: vmess
-    server: cdn.node.user-sub.pddns-usersdk.com
-    port: 13003
-    cipher: auto
-    uuid: 5f9f4df4-5398-35d1-9a6a-44a8a575832d
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /ef483582-6269-468c-93af-c511eccb8a69
-      headers:
-        host: cdn.node.user-sub.pddns-usersdk.com
-  - &id002
-    name: 🇨🇦_CA_加拿大
-    type: vmess
-    server: dongtaiwang3.com
-    port: 443
-    cipher: auto
-    uuid: 6deddb7f-e557-42db-bfa0-cf40b36b27e2
-    alterId: 0
-    tls: true
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /dongtaiwang.com
-      headers:
-        host: d.freeh1.xyz
-  - &id003
-    name: 🇨🇳_CN_中国->🇸🇬_SG_新加坡
-    type: trojan
-    server: s-g03.xingyunwu.top
-    port: 50040
-    udp: true
-    password: fad6dff0-9437-4ff1-ab9f-f96c48efc928
-    sni: xingyunwu.top
-    skip-cert-verify: true
-    network: tcp
-  - &id004
     name: 🇺🇸_US_美国->🇧🇷_BR_巴西_1
-    type: vmess
-    server: 172.67.193.109
-    port: 2095
-    cipher: auto
-    uuid: 417d27fb-cb93-3bd8-9bf7-71cd91319821
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /hgcefomn
-      headers:
-        host: amszx.66666654.xyz
-  - &id005
-    name: 🇺🇸_US_美国->🇧🇷_BR_巴西_2
-    type: vmess
-    server: 172.67.211.43
-    port: 2095
-    cipher: auto
-    uuid: 417d27fb-cb93-3bd8-9bf7-71cd91319821
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /hgcefomn
-      headers:
-        host: amszx.66666654.xyz
-  - &id006
-    name: 🇬🇧_GB_英国->🇧🇷_BR_巴西
-    type: vmess
-    server: amszxc.66666654.xyz
-    port: 2095
-    cipher: auto
-    uuid: 417d27fb-cb93-3bd8-9bf7-71cd91319821
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /hgcefomn
-      headers:
-        host: amszx.66666654.xyz
-  - &id007
-    name: 🇨🇦_CA_加拿大->🇺🇸_US_美国
-    type: vmess
-    server: 23.227.39.111
-    port: 443
-    cipher: auto
-    uuid: 25a9f3b9-1e6d-40bd-968b-e0818c1b196f
-    alterId: 0
-    tls: true
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /dongtaiwang.com
-      headers:
-        host: 2.freek1.xyz
-  - &id008
-    name: 🇺🇸_US_美国->🇧🇷_BR_巴西_3
-    type: vmess
-    server: 141.101.115.89
-    port: 2095
-    cipher: auto
-    uuid: 417d27fb-cb93-3bd8-9bf7-71cd91319821
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /hgcefomn
-      headers:
-        host: amszx.66666654.xyz
-  - &id009
-    name: 🇺🇸_US_美国->🇧🇷_BR_巴西_4
-    type: vmess
-    server: 172.67.144.240
-    port: 2095
-    cipher: auto
-    uuid: 417d27fb-cb93-3bd8-9bf7-71cd91319821
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /hgcefomn
-      headers:
-        host: amszx.66666654.xyz
-  - &id010
-    name: 🇺🇸_US_美国->🇧🇷_BR_巴西_5
-    type: vmess
-    server: 172.64.129.7
-    port: 2095
-    cipher: auto
-    uuid: 417d27fb-cb93-3bd8-9bf7-71cd91319821
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /hgcefomn
-      headers:
-        host: amszx.66666654.xyz
-  - &id011
-    name: 🇺🇸_US_美国->🇧🇷_BR_巴西_6
-    type: vmess
-    server: 172.67.115.6
-    port: 2095
-    cipher: auto
-    uuid: 417d27fb-cb93-3bd8-9bf7-71cd91319821
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /hgcefomn
-      headers:
-        host: amszx.66666654.xyz
-  - &id012
-    name: 🇺🇸_US_美国->🇧🇷_BR_巴西_7
-    type: vmess
-    server: 141.101.123.243
-    port: 2095
-    cipher: auto
-    uuid: 417d27fb-cb93-3bd8-9bf7-71cd91319821
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /hgcefomn
-      headers:
-        host: amszx.66666654.xyz
-  - &id013
-    name: 🇺🇸_US_美国->🇧🇷_BR_巴西_8
-    type: vmess
-    server: 172.64.193.102
-    port: 2095
-    cipher: auto
-    uuid: 417d27fb-cb93-3bd8-9bf7-71cd91319821
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /hgcefomn
-      headers:
-        host: amszx.66666654.xyz
-  - &id014
-    name: 🇺🇸_US_美国->🇧🇷_BR_巴西_9
-    type: vmess
-    server: 172.64.172.109
-    port: 2095
-    cipher: auto
-    uuid: 417d27fb-cb93-3bd8-9bf7-71cd91319821
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /hgcefomn
-      headers:
-        host: amszx.66666654.xyz
-  - &id015
-    name: 🇺🇸_US_美国->🇧🇷_BR_巴西_10
-    type: vmess
-    server: 172.64.109.235
-    port: 2095
-    cipher: auto
-    uuid: 417d27fb-cb93-3bd8-9bf7-71cd91319821
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /hgcefomn
-      headers:
-        host: amszx.66666654.xyz
-  - &id016
-    name: 🇺🇸_US_美国->🇳🇱_NL_荷兰_1
-    type: vmess
-    server: 172.67.10.121
-    port: 80
-    cipher: auto
-    uuid: 5f751c6e-50b1-4797-ba8e-6ffe324a0bce
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /shirker
-      headers:
-        host: uk2.scproxy.top
-  - &id017
-    name: 🇺🇸_US_美国->🇨🇦_CA_加拿大
-    type: vmess
-    server: cf-dx-dns.sharecentre.online
-    port: 443
-    cipher: auto
-    uuid: 3238151a-f634-4dcb-be84-7fc096e3674a
-    alterId: 0
-    tls: true
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        host: dallas.starsea.vip
-  - &id018
-    name: 🇺🇸_US_美国->🇬🇧_GB_英国
-    type: vmess
-    server: wi.saintink.eu.org
-    port: 443
-    cipher: auto
-    uuid: 927094d3-d678-4763-8591-e240d0bcae87
-    alterId: 0
-    tls: true
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /vuk2.0bad.com/chat
-      headers:
-        host: sub2.saintink.eu.org
-  - &id019
-    name: 🇺🇸_US_美国_1
-    type: vmess
-    server: cdn.anycast.eu.org
-    port: 443
-    cipher: auto
-    uuid: e3a37909-487c-4748-8ba4-945290267018
-    alterId: 0
-    tls: true
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: e3a37909
-      headers:
-        host: dd2.1808.cf
-  - &id020
-    name: 🇺🇸_US_美国_2
-    type: vmess
-    server: cf3.992688.xyz
-    port: 8080
-    cipher: auto
-    uuid: f467f4da-2226-448d-a30d-463ef10548ac
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        host: vcus2.vpn66.eu.org
-  - &id021
-    name: 🇺🇸_US_美国_3
-    type: vmess
-    server: mci.bamarambash.monster
-    port: 443
-    cipher: auto
-    uuid: 8f74ec8a-971c-11ed-a8fc-0242ac120002
-    alterId: 0
-    tls: true
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /b8767a6a-1c30-11ee-ba76-9ee097a90b8b
-      headers:
-        host: b8767a6a-1c30-11ee-ba76-9ee097a90b8b.bamarambash.monster
-  - &id022
-    name: 🇺🇸_US_美国_4
-    type: vmess
-    server: cfcdn2.sanfencdn.net
-    port: 443
-    cipher: auto
-    uuid: 8216e1fd-7f67-440d-9a63-51d0f6c38b10
-    alterId: 0
-    tls: true
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /zh-cn
-      headers:
-        host: us2.sanfencdn1.com
-  - &id023
-    name: 🇺🇸_US_美国->🇧🇷_BR_巴西_11
-    type: vmess
-    server: 198.41.214.55
-    port: 2095
-    cipher: auto
-    uuid: 417d27fb-cb93-3bd8-9bf7-71cd91319821
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /hgcefomn
-      headers:
-        host: amszx.66666654.xyz
-  - &id024
-    name: 🇺🇸_US_美国->🇳🇱_NL_荷兰_2
-    type: vmess
-    server: 45.199.138.151
-    port: 49232
-    cipher: auto
-    uuid: 418048af-a293-4b99-9b0c-98ca4690dd24
-    alterId: 64
-    tls: false
-    skip-cert-verify: true
-    network: tcp
-  - &id025
-    name: 🇯🇵_JP_日本
-    type: ss
-    server: 54.199.83.239
-    port: 2333
-    password: doub.io
-    cipher: aes-256-cfb
-  - &id026
-    name: 🇭🇰_HK_香港->🇺🇸_US_美国
-    type: vmess
-    server: cdn.chigua.tk
-    port: 80
-    cipher: auto
-    uuid: 7e7f8398-bd39-49d8-9ce6-e48ffef463dd
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /2TokGE9A/
-      headers:
-        host: us6.cachexy.cf
-  - &id027
-    name: 🇺🇸_US_美国_5
-    type: vmess
-    server: 64.32.4.51
-    port: 43136
-    cipher: auto
-    uuid: 8653004f-de67-44c2-9cce-e0830933fb03
-    alterId: 64
-    tls: false
-    skip-cert-verify: true
-    network: tcp
-  - &id028
-    name: 🇺🇸_US_美国->🇧🇷_BR_巴西_12
     type: vmess
     server: 172.67.237.176
     port: 2095
@@ -404,23 +20,347 @@ proxies:
       path: /hgcefomn
       headers:
         host: amszx.66666654.xyz
-  - &id029
-    name: 🇨🇳_CN_中国
+  - &id002
+    name: 🇦🇺_AU_澳大利亚
     type: vmess
-    server: 36.150.27.31
+    server: 139.99.245.164
+    port: 49921
+    cipher: auto
+    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+    alterId: 64
+    tls: false
+    skip-cert-verify: true
+    network: tcp
+  - &id003
+    name: 🇺🇸_US_美国->🇧🇷_BR_巴西_2
+    type: vmess
+    server: 172.64.90.210
+    port: 2095
+    cipher: auto
+    uuid: 417d27fb-cb93-3bd8-9bf7-71cd91319821
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /hgcefomn
+      headers:
+        host: amszx.66666654.xyz
+  - &id004
+    name: 🇺🇸_US_美国->🇧🇷_BR_巴西_3
+    type: vmess
+    server: 172.67.48.155
+    port: 2095
+    cipher: auto
+    uuid: 417d27fb-cb93-3bd8-9bf7-71cd91319821
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /hgcefomn
+      headers:
+        host: amszx.66666654.xyz
+  - &id005
+    name: 🇺🇸_US_美国->🇧🇷_BR_巴西_4
+    type: vmess
+    server: 172.67.237.73
+    port: 2095
+    cipher: auto
+    uuid: 417d27fb-cb93-3bd8-9bf7-71cd91319821
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /hgcefomn
+      headers:
+        host: amszx.66666654.xyz
+  - &id006
+    name: 🇺🇸_US_美国->🇧🇷_BR_巴西_5
+    type: vmess
+    server: 162.159.255.119
+    port: 2095
+    cipher: auto
+    uuid: 417d27fb-cb93-3bd8-9bf7-71cd91319821
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /hgcefomn
+      headers:
+        host: amszx.66666654.xyz
+  - &id007
+    name: 🇺🇸_US_美国->🇧🇷_BR_巴西_6
+    type: vmess
+    server: 162.159.242.155
+    port: 2095
+    cipher: auto
+    uuid: 417d27fb-cb93-3bd8-9bf7-71cd91319821
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /hgcefomn
+      headers:
+        host: amszx.66666654.xyz
+  - &id008
+    name: 🇺🇸_US_美国->🇧🇷_BR_巴西_7
+    type: vmess
+    server: 172.67.212.128
+    port: 2095
+    cipher: auto
+    uuid: 417d27fb-cb93-3bd8-9bf7-71cd91319821
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /hgcefomn
+      headers:
+        host: amszx.66666654.xyz
+  - &id009
+    name: 🇺🇸_US_美国->🇧🇷_BR_巴西_8
+    type: vmess
+    server: 172.64.165.188
+    port: 2095
+    cipher: auto
+    uuid: 417d27fb-cb93-3bd8-9bf7-71cd91319821
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /hgcefomn
+      headers:
+        host: amszx.66666654.xyz
+  - &id010
+    name: 🇺🇸_US_美国_1
+    type: vmess
+    server: 162.159.135.251
+    port: 2095
+    cipher: auto
+    uuid: 417d27fb-cb93-3bd8-9bf7-71cd91319821
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /hgcefomn
+      headers:
+        host: amszx.66666654.xyz
+  - &id011
+    name: 🇺🇸_US_美国->🇧🇷_BR_巴西_9
+    type: vmess
+    server: 162.159.240.102
+    port: 2095
+    cipher: auto
+    uuid: 417d27fb-cb93-3bd8-9bf7-71cd91319821
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /hgcefomn
+      headers:
+        host: amszx.66666654.xyz
+  - &id012
+    name: 🇺🇸_US_美国_2
+    type: vmess
+    server: 172.64.134.52
+    port: 2095
+    cipher: auto
+    uuid: 417d27fb-cb93-3bd8-9bf7-71cd91319821
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /hgcefomn
+      headers:
+        host: amszx.66666654.xyz
+  - &id013
+    name: 🇺🇸_US_美国->🇧🇷_BR_巴西_10
+    type: vmess
+    server: 141.101.123.143
+    port: 2095
+    cipher: auto
+    uuid: 417d27fb-cb93-3bd8-9bf7-71cd91319821
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /hgcefomn
+      headers:
+        host: amszx.66666654.xyz
+  - &id014
+    name: 🇺🇸_US_美国->🇩🇪_DE_德国
+    type: vmess
+    server: ns1.v2-vip.fun
     port: 80
     cipher: auto
-    uuid: db8d12d5-1968-4125-b775-77d50aa65923
+    uuid: 8abe9496-5e24-4e49-b566-dcf86116017d
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /i99LgvSaslbsPLLQQ7j6Z
+      headers:
+        host: de5.irteh.fun
+  - &id015
+    name: 🇺🇸_US_美国->🇧🇷_BR_巴西_11
+    type: vmess
+    server: 172.67.197.57
+    port: 2095
+    cipher: auto
+    uuid: 417d27fb-cb93-3bd8-9bf7-71cd91319821
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /hgcefomn
+      headers:
+        host: amszx.66666654.xyz
+  - &id016
+    name: 🇺🇸_US_美国->🇧🇷_BR_巴西_12
+    type: vmess
+    server: 172.64.92.42
+    port: 2095
+    cipher: auto
+    uuid: 417d27fb-cb93-3bd8-9bf7-71cd91319821
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /hgcefomn
+      headers:
+        host: amszx.66666654.xyz
+  - &id017
+    name: 🇺🇸_US_美国->🇧🇷_BR_巴西_13
+    type: vmess
+    server: 172.67.194.234
+    port: 2095
+    cipher: auto
+    uuid: 417d27fb-cb93-3bd8-9bf7-71cd91319821
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /hgcefomn
+      headers:
+        host: amszx.66666654.xyz
+  - &id018
+    name: 🇮🇷_IR_伊朗->🇺🇸_US_美国
+    type: vmess
+    server: blackvpn4.anghezi.me
+    port: 39759
+    cipher: auto
+    uuid: 9e648fa9-06c9-4f31-9129-4c397797babf
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: tcp
+  - &id019
+    name: 🇯🇵_JP_日本
+    type: vmess
+    server: cdn.chigua.tk
+    port: 80
+    cipher: auto
+    uuid: 7e7f8398-bd39-49d8-9ce6-e48ffef463dd
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /2TokGE9A/
+      headers:
+        host: us6.cachexy.cf
+  - &id020
+    name: 🇺🇸_US_美国_3
+    type: vmess
+    server: arvancloud.ir-Uc.snappfood.SO.ddns001.net
+    port: 443
+    cipher: auto
+    uuid: 8f74ec8a-971c-11ed-a8fc-0242ac120002
+    alterId: 0
+    tls: true
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /1c5854ba-1b44-11ee-a146-8213fd3be4b9
+      headers:
+        host: 1c5854ba-1b44-11ee-a146-8213fd3be4b9.bamarambash.monster
+  - &id021
+    name: 🇯🇵_JP_日本->🇺🇸_US_美国
+    type: vmess
+    server: cdn.anycast.eu.org
+    port: 80
+    cipher: auto
+    uuid: e3a37909-487c-4748-8ba4-945290267018
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: e3a37909
+      headers:
+        host: dd2.1808.cf
+  - &id022
+    name: 🇺🇸_US_美国->🇧🇷_BR_巴西_14
+    type: vmess
+    server: 172.67.115.6
+    port: 2095
+    cipher: auto
+    uuid: 417d27fb-cb93-3bd8-9bf7-71cd91319821
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /hgcefomn
+      headers:
+        host: amszx.66666654.xyz
+  - &id023
+    name: 🇺🇸_US_美国_4
+    type: vmess
+    server: cf2.992688.xyz
+    port: 8080
+    cipher: auto
+    uuid: 0ea60ebb-632d-4226-893a-cccc2053dbf5
     alterId: 0
     tls: false
     skip-cert-verify: true
     network: ws
     ws-opts:
       path: /
-  - &id030
-    name: 🇺🇸_US_美国->🇧🇷_BR_巴西_13
+      headers:
+        host: haxus3.vpn66.eu.org
+  - &id024
+    name: 🇭🇰_HK_香港->🇺🇸_US_美国
     type: vmess
-    server: 162.159.254.44
+    server: cdn.anycast.eu.org
+    port: 443
+    cipher: auto
+    uuid: e3a37909-487c-4748-8ba4-945290267018
+    alterId: 0
+    tls: true
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: e3a37909
+      headers:
+        host: dd2.1808.cf
+  - &id025
+    name: 🇺🇸_US_美国_5
+    type: vmess
+    server: 198.41.214.55
     port: 2095
     cipher: auto
     uuid: 417d27fb-cb93-3bd8-9bf7-71cd91319821
@@ -432,10 +372,10 @@ proxies:
       path: /hgcefomn
       headers:
         host: amszx.66666654.xyz
-  - &id031
-    name: 🇺🇸_US_美国->🇧🇷_BR_巴西_14
+  - &id026
+    name: 🇺🇸_US_美国->🇧🇷_BR_巴西_15
     type: vmess
-    server: 172.64.106.104
+    server: 172.64.166.10
     port: 2095
     cipher: auto
     uuid: 417d27fb-cb93-3bd8-9bf7-71cd91319821
@@ -447,25 +387,36 @@ proxies:
       path: /hgcefomn
       headers:
         host: amszx.66666654.xyz
-  - &id032
-    name: 🇨🇦_CA_加拿大->🇫🇷_FR_法国
+  - &id027
+    name: 🇺🇸_US_美国_6
     type: vmess
-    server: Shopify.com
-    port: 2086
+    server: mci.bamarambash.monster
+    port: 443
     cipher: auto
-    uuid: 250f4331-8c3e-4b87-a86b-5c5fbf9ddba8
+    uuid: 8f74ec8a-971c-11ed-a8fc-0242ac120002
     alterId: 0
-    tls: false
+    tls: true
     skip-cert-verify: true
     network: ws
     ws-opts:
-      path: /aries
+      path: /b8767a6a-1c30-11ee-ba76-9ee097a90b8b
       headers:
-        host: Fr.cloudflare.quest
-  - &id033
-    name: 🇬🇧_GB_英国
+        host: b8767a6a-1c30-11ee-ba76-9ee097a90b8b.bamarambash.monster
+  - &id028
+    name: 🇺🇸_US_美国_7
     type: vmess
-    server: vuk1.0bad.com
+    server: 108.166.203.181
+    port: 44945
+    cipher: auto
+    uuid: 268a491b-764c-44d1-81a4-30de16130867
+    alterId: 64
+    tls: false
+    skip-cert-verify: true
+    network: tcp
+  - &id029
+    name: 🇺🇸_US_美国_8
+    type: vmess
+    server: wi.saintink.eu.org
     port: 443
     cipher: auto
     uuid: 927094d3-d678-4763-8591-e240d0bcae87
@@ -474,9 +425,19 @@ proxies:
     skip-cert-verify: true
     network: ws
     ws-opts:
-      path: /chat
+      path: /vuk2.0bad.com/chat
       headers:
-        host: vuk1.0bad.com
+        host: sub2.saintink.eu.org
+  - &id030
+    name: 🇫🇷_FR_法国
+    type: trojan
+    server: 57.128.173.6
+    port: 443
+    udp: true
+    password: 29f2cf65-f0ee-4a08-83f3-df1beb74d55d
+    sni: www.speedtest.net
+    skip-cert-verify: true
+    network: tcp
 proxy-groups:
   - name: PROXY
     type: select
@@ -533,9 +494,6 @@ proxy-groups:
       - *id028
       - *id029
       - *id030
-      - *id031
-      - *id032
-      - *id033
   - name: LOAD-BALANCE
     type: load-balance
     url: http://www.gstatic.com/generate_204
@@ -571,9 +529,6 @@ proxy-groups:
       - *id028
       - *id029
       - *id030
-      - *id031
-      - *id032
-      - *id033
   - name: SELECT
     type: select
     proxies:
@@ -607,9 +562,6 @@ proxy-groups:
       - *id028
       - *id029
       - *id030
-      - *id031
-      - *id032
-      - *id033
 rules:
   - RULE-SET,applications,DIRECT
   - DOMAIN,clash.razord.top,DIRECT
