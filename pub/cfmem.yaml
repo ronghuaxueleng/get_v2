@@ -6,48 +6,9 @@ log-level: info
 external-controller: 0.0.0.0:9090
 proxies:
   - &id001
-    name: 🇨🇳_CN_中国->🇺🇸_US_美国_1
-    type: ss
-    server: camy3aydjwpettcn.psuddd789.com
-    port: 51131
-    password: 1036e487-9102-4e09-81fd-01b0f832b972
-    cipher: chacha20-ietf-poly1305
-  - &id002
-    name: 🇨🇳_CN_中国->🇯🇵_JP_日本_1
-    type: ss
-    server: camy3aydjwpettcn.psuddd789.com
-    port: 51121
-    password: 1036e487-9102-4e09-81fd-01b0f832b972
-    cipher: chacha20-ietf-poly1305
-  - &id003
-    name: 🇨🇳_CN_中国->🇨🇦_CA_加拿大
-    type: ss
-    server: 183.232.112.102
-    port: 10712
-    password: 27de6fe2-606d-4683-aa22-c1a50a3949cb
-    cipher: chacha20-ietf-poly1305
-  - &id004
-    name: 🇨🇳_CN_中国->🇹🇼_TW_台湾_1
-    type: ss
-    server: apnep2erpyyj4ef86.anrida715.me
-    port: 51051
-    password: 1036e487-9102-4e09-81fd-01b0f832b972
-    cipher: chacha20-ietf-poly1305
-  - &id005
     name: 🇺🇸_US_美国_1
     type: vmess
-    server: 198.200.37.231
-    port: 51209
-    cipher: auto
-    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-    alterId: 64
-    tls: false
-    skip-cert-verify: true
-    network: tcp
-  - &id006
-    name: 🇺🇸_US_美国_2
-    type: vmess
-    server: 172.64.108.179
+    server: 172.67.22.15
     port: 80
     cipher: auto
     uuid: 5f751c6e-50b1-4797-ba8e-6ffe324a0bce
@@ -57,77 +18,202 @@ proxies:
     network: ws
     ws-opts:
       path: /shirker
-  - &id007
-    name: 🇨🇳_CN_中国->🇭🇰_HK_香港_1
-    type: ss
-    server: cm1-go.go001.buzz
-    port: 31101
-    password: '123456'
-    cipher: aes-256-gcm
-  - &id008
-    name: 🇨🇳_CN_中国->🇺🇸_US_美国_2
-    type: ss
-    server: camy3aydjwpettcn.psuddd789.com
-    port: 51132
-    password: 1036e487-9102-4e09-81fd-01b0f832b972
-    cipher: chacha20-ietf-poly1305
-  - &id009
-    name: 🇨🇳_CN_中国->🇹🇼_TW_台湾_2
-    type: ss
-    server: camy3aydjwpettcn.psuddd789.com
-    port: 51152
-    password: 1036e487-9102-4e09-81fd-01b0f832b972
-    cipher: chacha20-ietf-poly1305
-  - &id010
-    name: 🇨🇳_CN_中国->🇩🇪_DE_德国
-    type: ss
-    server: lt.ktmwan.top
-    port: 10714
-    password: 27de6fe2-606d-4683-aa22-c1a50a3949cb
-    cipher: chacha20-ietf-poly1305
-  - &id011
-    name: 🇨🇳_CN_中国->🇺🇸_US_美国_3
+      headers:
+        host: lv2.scproxy.top
+  - &id002
+    name: 🇺🇸_US_美国_2
     type: vmess
-    server: 183.232.249.130
-    port: 59902
+    server: 172.67.95.171
+    port: 80
+    cipher: auto
+    uuid: 5f751c6e-50b1-4797-ba8e-6ffe324a0bce
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /shirker
+      headers:
+        host: dp3.scproxy.top
+  - &id003
+    name: 🇺🇸_US_美国_3
+    type: vmess
+    server: 172.64.153.211
+    port: 443
+    cipher: auto
+    uuid: 6e751712-9569-5187-86ea-8f585ad99105
+    alterId: 0
+    tls: true
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /api01
+      headers:
+        host: schereswed.softwarenews.store
+  - &id004
+    name: 🇺🇸_US_美国->🇸🇬_SG_新加坡
+    type: vmess
+    server: cfyd.starsea.vip
+    port: 80
+    cipher: auto
+    uuid: c6747da4-fb2e-4a2a-bdb7-8614bdd6b0b3
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /sshkit/1736960111/64ee26041efcc/
+      headers:
+        host: sg1-v2ray.sshkit.org
+  - &id005
+    name: 🇺🇸_US_美国->🇧🇷_BR_巴西
+    type: vmess
+    server: 172.67.205.203
+    port: 80
+    cipher: auto
+    uuid: 99c25b0e-db17-494d-bbb4-98397ea8fe4e
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: sbl3.shabijichang.com
+  - &id006
+    name: 🇺🇸_US_美国->🇳🇱_NL_荷兰
+    type: vmess
+    server: 156.225.67.171
+    port: 35977
+    cipher: auto
+    uuid: bd249e37-7359-41ee-84a7-09e49e0ec5c4
+    alterId: 64
+    tls: false
+    skip-cert-verify: true
+    network: tcp
+  - &id007
+    name: 🇺🇸_US_美国->🇻🇳_VN_越南
+    type: vmess
+    server: Tokyo.mfa.ee
+    port: 2052
+    cipher: auto
+    uuid: 992889a7-296e-4a44-98c2-0eb89af4411d
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: vnpt.iiio.wiki
+  - &id008
+    name: 🇨🇳_CN_中国->🇭🇰_HK_香港_1
+    type: vmess
+    server: 120.233.43.62
+    port: 51904
     cipher: auto
     uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
     alterId: 64
     tls: false
     skip-cert-verify: true
     network: tcp
+  - &id009
+    name: 🇺🇸_US_美国_4
+    type: vmess
+    server: 172.67.87.175
+    port: 80
+    cipher: auto
+    uuid: 5f751c6e-50b1-4797-ba8e-6ffe324a0bce
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /shirker
+      headers:
+        host: lv2.scproxy.top
+  - &id010
+    name: 🇺🇸_US_美国_5
+    type: vmess
+    server: 104.31.16.46
+    port: 2082
+    cipher: auto
+    uuid: 58fe1542-5290-40ad-815a-77707a81afe5
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /IOebhLMhl1CTbFHbL95myfRX2
+      headers:
+        host: ca5.tehme100.fun
+  - &id011
+    name: 🇺🇸_US_美国->🇭🇰_HK_香港
+    type: vmess
+    server: s1223.v2line.fr8678825324247b8176d59f83c30bd94d23d2e3ac5cd4a743bkwqeikvdyufr.cyou
+    port: 80
+    cipher: auto
+    uuid: 00a1da14-d55f-5f75-e346-79b985e1a723
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /opt/video/images
+      headers:
+        host: s1223.v2line.fr8678825324247b8176d59f83c30bd94d23d2e3ac5cd4a743bkwqeikvdyufr.cyou
   - &id012
-    name: 🇨🇳_CN_中国->🇰🇷_KR_韩国_1
-    type: ss
-    server: camy3aydjwpettcn.psuddd789.com
-    port: 51162
-    password: 1036e487-9102-4e09-81fd-01b0f832b972
-    cipher: chacha20-ietf-poly1305
+    name: 🇨🇳_CN_中国->🇸🇬_SG_新加坡
+    type: vmess
+    server: in06.my1188.org
+    port: 64012
+    cipher: auto
+    uuid: 886ac452-590a-3dae-bed9-96203e9aacfb
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: tcp
   - &id013
-    name: 🇨🇳_CN_中国
-    type: ss
-    server: 223.95.40.15
-    port: 10719
-    password: 27de6fe2-606d-4683-aa22-c1a50a3949cb
-    cipher: chacha20-ietf-poly1305
+    name: 🇬🇧_GB_英国
+    type: vmess
+    server: amstdhebb.76898102.xyz
+    port: 2095
+    cipher: auto
+    uuid: 0bb55212-6c02-39d5-8189-e6c5a9f825be
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /funsdfrh
+      headers:
+        host: amstdheb.76898102.xyz
   - &id014
-    name: 🇨🇳_CN_中国->🇭🇰_HK_香港_2
+    name: 🇰🇷_KR_韩国
     type: ss
-    server: camy3aydjwpettcn.psuddd789.com
-    port: 51113
-    password: 1036e487-9102-4e09-81fd-01b0f832b972
-    cipher: chacha20-ietf-poly1305
+    server: 54.180.139.224
+    port: 443
+    password: amazonskr05
+    cipher: aes-256-cfb
   - &id015
-    name: 🇨🇳_CN_中国->🇰🇷_KR_韩国_2
-    type: ss
-    server: arlbxldpb5a6rbck.anrida715.me
-    port: 51061
-    password: 1036e487-9102-4e09-81fd-01b0f832b972
-    cipher: chacha20-ietf-poly1305
-  - &id016
     name: 🇭🇰_HK_香港->🇺🇸_US_美国_1
     type: vmess
-    server: 103.160.204.31
+    server: 103.160.204.98
+    port: 80
+    cipher: auto
+    uuid: dd41b5cb-b72e-4a8c-c75a-3ecc928d6eb3
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /blue06
+      headers:
+        host: ecc.vtcss.top
+  - &id016
+    name: 🇭🇰_HK_香港->🇺🇸_US_美国_2
+    type: vmess
+    server: 103.160.204.63
     port: 2052
     cipher: auto
     uuid: 0afb8b2c-149a-49a8-e90f-d77884ac922f
@@ -140,187 +226,163 @@ proxies:
       headers:
         host: ecc.vtcss.top
   - &id017
-    name: 🇨🇳_CN_中国->🇭🇰_HK_香港_3
-    type: ss
-    server: camy3aydjwpettcn.psuddd789.com
-    port: 51141
-    password: 1036e487-9102-4e09-81fd-01b0f832b972
-    cipher: chacha20-ietf-poly1305
-  - &id018
-    name: 🇺🇸_US_美国_3
+    name: 🇺🇸_US_美国->🇨🇱_CL_智利
     type: vmess
-    server: 104.18.236.126
-    port: 8080
-    cipher: auto
-    uuid: 74a890ab-5c4b-4f35-aea4-5fc2459bebd2
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /blue
-      headers:
-        host: ecc.vtcss.top
-  - &id019
-    name: 🇨🇳_CN_中国->🇹🇼_TW_台湾_3
-    type: ss
-    server: camy3aydjwpettcn.psuddd789.com
-    port: 51151
-    password: 1036e487-9102-4e09-81fd-01b0f832b972
-    cipher: chacha20-ietf-poly1305
-  - &id020
-    name: 🇨🇳_CN_中国->🇭🇰_HK_香港_4
-    type: ss
-    server: apnep2erpyyj4ef86.anrida715.me
-    port: 51041
-    password: 1036e487-9102-4e09-81fd-01b0f832b972
-    cipher: chacha20-ietf-poly1305
-  - &id021
-    name: 🇨🇳_CN_中国->🇯🇵_JP_日本_2
-    type: ss
-    server: apsc52dp7cj6bnhd.anrida715.me
-    port: 51022
-    password: 1036e487-9102-4e09-81fd-01b0f832b972
-    cipher: chacha20-ietf-poly1305
-  - &id022
-    name: 🇭🇰_HK_香港->🇺🇸_US_美国_2
-    type: vmess
-    server: 103.160.204.154
+    server: 172.67.149.81
     port: 80
     cipher: auto
-    uuid: dd41b5cb-b72e-4a8c-c75a-3ecc928d6eb3
+    uuid: f31c0b34-977b-4c2b-acfa-becfdfc1f267
     alterId: 0
     tls: false
     skip-cert-verify: true
     network: ws
     ws-opts:
-      path: /blue06
+      path: /
       headers:
-        host: ecc.vtcss.top
-  - &id023
-    name: 🇨🇳_CN_中国->🇯🇵_JP_日本_3
-    type: ss
-    server: apnep2erpyyj4ef86.anrida715.me
-    port: 51021
-    password: 1036e487-9102-4e09-81fd-01b0f832b972
-    cipher: chacha20-ietf-poly1305
-  - &id024
-    name: 🇨🇳_CN_中国->🇬🇧_GB_英国_1
-    type: ss
-    server: dx.ktmwan.top
-    port: 10713
-    password: 27de6fe2-606d-4683-aa22-c1a50a3949cb
-    cipher: chacha20-ietf-poly1305
-  - &id025
-    name: 🇨🇳_CN_中国->🇸🇬_SG_新加坡_1
-    type: ss
-    server: fs.xianyuwangluo.cyou
-    port: 10707
-    password: 27de6fe2-606d-4683-aa22-c1a50a3949cb
-    cipher: chacha20-ietf-poly1305
-  - &id026
-    name: 🇺🇸_US_美国_4
+        host: sdygarm.e5outllok.me
+  - &id018
+    name: 🇨🇳_CN_中国->🇭🇰_HK_香港_2
     type: vmess
-    server: 198.41.204.172
-    port: 8080
+    server: in06.my1188.org
+    port: 64096
     cipher: auto
-    uuid: 74a890ab-5c4b-4f35-aea4-5fc2459bebd2
+    uuid: 886ac452-590a-3dae-bed9-96203e9aacfb
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: tcp
+  - &id019
+    name: 🇺🇸_US_美国_6
+    type: vmess
+    server: 172.67.129.158
+    port: 80
+    cipher: auto
+    uuid: 5f751c6e-50b1-4797-ba8e-6ffe324a0bce
     alterId: 0
     tls: false
     skip-cert-verify: true
     network: ws
     ws-opts:
-      path: /blue
+      path: /shirker
       headers:
-        host: ecc.vtcss.top
+        host: dp3.scproxy.top
+  - &id020
+    name: 🇨🇳_CN_中国->🇦🇺_AU_澳大利亚
+    type: vmess
+    server: in06.my1188.org
+    port: 64003
+    cipher: auto
+    uuid: 886ac452-590a-3dae-bed9-96203e9aacfb
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: tcp
+  - &id021
+    name: 🇺🇸_US_美国_7
+    type: vmess
+    server: 6.wyhkaa0.gq
+    port: 2095
+    cipher: auto
+    uuid: 6bbc9554-07bc-47c6-a088-87aa79fd5ca1
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /TG:@hkaa0
+      headers:
+        host: 6.wyhkaa0.gq
+  - &id022
+    name: 🇺🇸_US_美国_8
+    type: vmess
+    server: 172.64.207.79
+    port: 80
+    cipher: auto
+    uuid: 5f751c6e-50b1-4797-ba8e-6ffe324a0bce
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /shirker
+      headers:
+        host: dp4.ilovescp.com
+  - &id023
+    name: 🇦🇺_AU_澳大利亚
+    type: vmess
+    server: 139.99.245.164
+    port: 49921
+    cipher: auto
+    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+    alterId: 64
+    tls: false
+    skip-cert-verify: true
+    network: tcp
+  - &id024
+    name: 🇺🇸_US_美国->🇱🇺_LU_卢森堡_1
+    type: vmess
+    server: zfc.windowsupdate1.com
+    port: 443
+    cipher: auto
+    uuid: 6abfe33a-1894-4f62-8879-83b71a35e5fd
+    alterId: 0
+    tls: true
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: us-1.acyun.tk
+  - &id025
+    name: 🇨🇳_CN_中国_1
+    type: vmess
+    server: 221.131.165.175
+    port: 19106
+    cipher: auto
+    uuid: 1b35440a-1309-339b-9dd3-ff90ff887d76
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /soda
+  - &id026
+    name: 🇨🇳_CN_中国->🇹🇼_TW_台湾
+    type: vmess
+    server: 221.131.165.186
+    port: 18075
+    cipher: auto
+    uuid: 1b35440a-1309-339b-9dd3-ff90ff887d76
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /soda
   - &id027
-    name: 🇨🇳_CN_中国->🇭🇰_HK_香港_5
-    type: ss
-    server: camy3aydjwpettcn.psuddd789.com
-    port: 51112
-    password: 1036e487-9102-4e09-81fd-01b0f832b972
-    cipher: chacha20-ietf-poly1305
+    name: 🇯🇵_JP_日本_1
+    type: trojan
+    server: jp1.421421.xyz
+    port: 20230
+    udp: true
+    password: 26af88d0-fc72-43b3-8108-521a7b12aa45
+    sni: 421421.xyz
+    skip-cert-verify: true
+    network: tcp
   - &id028
-    name: 🇨🇳_CN_中国->🇯🇵_JP_日本_4
-    type: ss
-    server: camy3aydjwpettcn.psuddd789.com
-    port: 51122
-    password: 1036e487-9102-4e09-81fd-01b0f832b972
-    cipher: chacha20-ietf-poly1305
+    name: 🇸🇬_SG_新加坡
+    type: trojan
+    server: sg1.421421.xyz
+    port: 20230
+    udp: true
+    password: 26af88d0-fc72-43b3-8108-521a7b12aa45
+    sni: 421421.xyz
+    skip-cert-verify: true
+    network: tcp
   - &id029
-    name: 🇨🇳_CN_中国->🇯🇵_JP_日本_5
-    type: ss
-    server: arlbxldpb5a6rbck.anrida715.me
-    port: 51023
-    password: 1036e487-9102-4e09-81fd-01b0f832b972
-    cipher: chacha20-ietf-poly1305
-  - &id030
-    name: 🇨🇳_CN_中国->🇭🇰_HK_香港_6
-    type: ss
-    server: camy3aydjwpettcn.psuddd789.com
-    port: 51142
-    password: 1036e487-9102-4e09-81fd-01b0f832b972
-    cipher: chacha20-ietf-poly1305
-  - &id031
-    name: 🇨🇳_CN_中国->🇬🇧_GB_英国_2
-    type: ss
-    server: yidong.liulangdiqiu.cyou
-    port: 10713
-    password: 27de6fe2-606d-4683-aa22-c1a50a3949cb
-    cipher: chacha20-ietf-poly1305
-  - &id032
-    name: 🇨🇳_CN_中国->🇺🇸_US_美国_4
-    type: ss
-    server: camy3aydjwpettcn.psuddd789.com
-    port: 51133
-    password: 1036e487-9102-4e09-81fd-01b0f832b972
-    cipher: chacha20-ietf-poly1305
-  - &id033
-    name: 🇨🇳_CN_中国->🇸🇬_SG_新加坡_2
-    type: ss
-    server: lt.ktmwan.top
-    port: 10707
-    password: 27de6fe2-606d-4683-aa22-c1a50a3949cb
-    cipher: chacha20-ietf-poly1305
-  - &id034
-    name: 🇨🇳_CN_中国->🇭🇰_HK_香港_7
-    type: ss
-    server: apnep2erpyyj4ef86.anrida715.me
-    port: 51011
-    password: 1036e487-9102-4e09-81fd-01b0f832b972
-    cipher: chacha20-ietf-poly1305
-  - &id035
-    name: 🇨🇳_CN_中国->🇯🇵_JP_日本_6
-    type: ss
-    server: camy3aydjwpettcn.psuddd789.com
-    port: 51123
-    password: 1036e487-9102-4e09-81fd-01b0f832b972
-    cipher: chacha20-ietf-poly1305
-  - &id036
-    name: 🇨🇳_CN_中国->🇭🇰_HK_香港_8
-    type: ss
-    server: camy3aydjwpettcn.psuddd789.com
-    port: 51111
-    password: 1036e487-9102-4e09-81fd-01b0f832b972
-    cipher: chacha20-ietf-poly1305
-  - &id037
-    name: 🇨🇳_CN_中国->🇭🇰_HK_香港_9
-    type: ss
-    server: apsc52dp7cj6bnhd.anrida715.me
-    port: 51013
-    password: 1036e487-9102-4e09-81fd-01b0f832b972
-    cipher: chacha20-ietf-poly1305
-  - &id038
-    name: 🇨🇳_CN_中国->🇬🇧_GB_英国_3
-    type: ss
-    server: 223.95.40.39
-    port: 10713
-    password: 27de6fe2-606d-4683-aa22-c1a50a3949cb
-    cipher: chacha20-ietf-poly1305
-  - &id039
     name: 🇨🇦_CA_加拿大
     type: vmess
-    server: dongtaiwang3.com
+    server: 23.227.38.81
     port: 443
     cipher: auto
     uuid: 6deddb7f-e557-42db-bfa0-cf40b36b27e2
@@ -332,6 +394,95 @@ proxies:
       path: /dongtaiwang.com
       headers:
         host: d.freeh1.xyz
+  - &id030
+    name: 🇯🇵_JP_日本_2
+    type: vmess
+    server: jp6.lianpi.xyz
+    port: 23234
+    cipher: auto
+    uuid: 1f3d67b4-6929-4598-90ca-84a841bf02e4
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: tcp
+  - &id031
+    name: 🇺🇸_US_美国_9
+    type: vmess
+    server: 172.67.27.227
+    port: 80
+    cipher: auto
+    uuid: 5f751c6e-50b1-4797-ba8e-6ffe324a0bce
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /shirker
+      headers:
+        host: dp4.ilovescp.com
+  - &id032
+    name: 🇺🇸_US_美国_10
+    type: vmess
+    server: 171.22.116.22
+    port: 58082
+    cipher: auto
+    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+    alterId: 64
+    tls: false
+    skip-cert-verify: true
+    network: tcp
+  - &id033
+    name: 🇺🇸_US_美国_11
+    type: vmess
+    server: 172.67.188.127
+    port: 80
+    cipher: auto
+    uuid: 00a1da14-d55f-5f75-e346-79b985e1a723
+    alterId: 64
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /opt/video/images
+      headers:
+        host: s1223.v2line.fr8678825324247b8176d59f83c30bd94d23d2e3ac5cd4a743bkwqeikvdyufr.cyou
+  - &id034
+    name: 🇭🇰_HK_香港->🇺🇸_US_美国_3
+    type: vmess
+    server: 103.160.204.21
+    port: 80
+    cipher: auto
+    uuid: dd41b5cb-b72e-4a8c-c75a-3ecc928d6eb3
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /blue06
+      headers:
+        host: ecc.vtcss.top
+  - &id035
+    name: 🇺🇸_US_美国->🇱🇺_LU_卢森堡_2
+    type: vmess
+    server: 104.31.16.196
+    port: 443
+    cipher: auto
+    uuid: 6abfe33a-1894-4f62-8879-83b71a35e5fd
+    alterId: 0
+    tls: true
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: us-1.acyun.tk
+  - &id036
+    name: 🇨🇳_CN_中国_2
+    type: ss
+    server: cm1-go.go001.buzz
+    port: 31101
+    password: '123456'
+    cipher: aes-256-gcm
 proxy-groups:
   - name: PROXY
     type: select
@@ -394,9 +545,6 @@ proxy-groups:
       - *id034
       - *id035
       - *id036
-      - *id037
-      - *id038
-      - *id039
   - name: LOAD-BALANCE
     type: load-balance
     url: http://www.gstatic.com/generate_204
@@ -438,9 +586,6 @@ proxy-groups:
       - *id034
       - *id035
       - *id036
-      - *id037
-      - *id038
-      - *id039
   - name: SELECT
     type: select
     proxies:
@@ -480,9 +625,6 @@ proxy-groups:
       - *id034
       - *id035
       - *id036
-      - *id037
-      - *id038
-      - *id039
 rules:
   - RULE-SET,applications,DIRECT
   - DOMAIN,clash.razord.top,DIRECT
