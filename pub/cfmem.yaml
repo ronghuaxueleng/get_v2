@@ -7,16 +7,61 @@ external-controller: 0.0.0.0:9090
 proxies:
   - &id001
     name: 🇺🇸_US_美国_1
+    type: ss
+    server: usshs2.gophers.gay
+    port: 20800
+    password: f5d95005-be14-40fc-bedc-e4a1133a5701
+    cipher: chacha20-ietf-poly1305
+  - &id002
+    name: 🇺🇸_US_美国_2
+    type: ss
+    server: 216.52.183.243
+    port: 1001
+    password: 83XvX4Vo%*3a
+    cipher: aes-128-gcm
+    plugin: v2ray-plugin
+    plugin-opts:
+      mode: websocket
+      path: /
+      mux: true
+  - &id003
+    name: 🇨🇳_CN_中国->🇬🇧_GB_英国
     type: vmess
-    server: 5.161.58.40
+    server: 09.kccic2pa.xyz
+    port: 50009
+    cipher: auto
+    uuid: 66a5e5f4-4d18-474a-ad2d-3f11e09058e9
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: tcp
+  - &id004
+    name: 🇺🇸_US_美国_3
+    type: vmess
+    server: 5.161.191.195
     port: 2083
     cipher: auto
-    uuid: 47b93627-da5f-4f2a-bcd6-f44ac26b90c4
+    uuid: 1c5cd450-a5cc-4803-d0ef-1ea424cc4ba2
     alterId: 0
     tls: false
     skip-cert-verify: true
     network: http
-  - &id002
+  - &id005
+    name: 🇺🇸_US_美国_4
+    type: vmess
+    server: 162.159.143.72
+    port: 80
+    cipher: auto
+    uuid: fab552f9-3c92-44ed-c086-08d631ee44ee
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: xui2.xuwu996.eu.org
+  - &id006
     name: 🇺🇸_US_美国->🇳🇱_NL_荷兰
     type: vmess
     server: 45.199.138.191
@@ -31,92 +76,47 @@ proxies:
       path: /path/1696251522438
       headers:
         host: www.42077230.xyz
-  - &id003
-    name: 🇺🇸_US_美国_2
-    type: vmess
-    server: 5.161.204.222
-    port: 2083
-    cipher: auto
-    uuid: 47b93627-da5f-4f2a-bcd6-f44ac26b90c4
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: http
-  - &id004
+  - &id007
     name: 🇨🇳_CN_中国->🇺🇸_US_美国_1
     type: vmess
-    server: mf34fx.micloud.buzz
-    port: 46034
+    server: 17.kccic2pa.xyz
+    port: 50017
     cipher: auto
-    uuid: 81fbdd06-6aa2-42f7-b71a-2f71253d8bd3
+    uuid: 66a5e5f4-4d18-474a-ad2d-3f11e09058e9
     alterId: 0
     tls: false
     skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /zh-cn
-      headers:
-        host: mf34fx.micloud.buzz
-  - &id005
+    network: tcp
+  - &id008
     name: 🇨🇳_CN_中国->🇺🇸_US_美国_2
-    type: vmess
-    server: mf33fx.micloud.buzz
-    port: 46033
-    cipher: auto
-    uuid: a824a85c-4bb0-4ab3-9d8a-bf9b02d9b20c
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /zh-cn
-      headers:
-        host: mf33fx.micloud.buzz
-  - &id006
-    name: 🇨🇳_CN_中国->🇮🇳_IN_印度
     type: ss
-    server: hefei.chiguayun.cc
-    port: 27103
-    password: 89805270-c3ab-4d75-9ad5-9448aff5d3c8
+    server: fs.xianyuwangluo.cyou
+    port: 27207
+    password: 5b6b0f61-f1a8-4e63-88ca-f0f6d79a1bc3
     cipher: chacha20-ietf-poly1305
-  - &id007
+  - &id009
     name: 🇨🇳_CN_中国->🇺🇸_US_美国_3
     type: ss
-    server: ydyh.nanbei.info
-    port: 26904
-    password: 7dee6bcb-0d47-4f50-97b7-a1af2566bc96
+    server: foshan.chiguayun.cc
+    port: 27140
+    password: 4cf75408-967d-41c4-bf89-80517807e26f
     cipher: chacha20-ietf-poly1305
-  - &id008
-    name: 🇺🇸_US_美国_3
+  - &id010
+    name: 🇺🇸_US_美国->🇩🇪_DE_德国_1
     type: vmess
-    server: singapore.com
-    port: 80
+    server: 104.20.142.55
+    port: 2052
     cipher: auto
-    uuid: bffa23aa-ae0a-4c02-af77-2a14c8c0b81c
+    uuid: e37c2a6b-db4d-4ce0-8781-284d1c332134
     alterId: 0
     tls: false
     skip-cert-verify: true
     network: ws
     ws-opts:
-      path: /api/v3/download.getFile
+      path: /public?ed=2048
       headers:
-        host: ssrsub.v005.ssrsub.com
-  - &id009
-    name: 🇺🇸_US_美国_4
-    type: vmess
-    server: 45.199.138.222
-    port: 30000
-    cipher: auto
-    uuid: 4ec0ae62-de09-4029-904a-0313d4628ecf
-    alterId: 64
-    tls: true
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /path/1696251693048
-      headers:
-        host: www.19229362.xyz
-  - &id010
+        host: de2.biqibao.site
+  - &id011
     name: 🇺🇸_US_美国_5
     type: vmess
     server: ns1.v2-vip.fun
@@ -131,91 +131,68 @@ proxies:
       path: /api/v3/download.getFile
       headers:
         host: ssrsub.v03.ssrsub.com
-  - &id011
-    name: 🇺🇸_US_美国->🇱🇺_LU_卢森堡_1
-    type: vmess
-    server: 104.16.68.38
-    port: 2052
-    cipher: auto
-    uuid: fe5edf04-c2af-4ac5-84ee-16d43024decb
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        host: lu.wx.alue.link
   - &id012
-    name: 🇺🇸_US_美国->🇱🇺_LU_卢森堡_2
-    type: vmess
-    server: cf.yx.alue.link
-    port: 2052
-    cipher: auto
-    uuid: fe5edf04-c2af-4ac5-84ee-16d43024decb
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        host: lu.wx.alue.link
-  - &id013
     name: 🇺🇸_US_美国_6
     type: vmess
-    server: 5.161.220.124
-    port: 2083
+    server: cf-lt.sharecentre.online
+    port: 80
     cipher: auto
-    uuid: 47b93627-da5f-4f2a-bcd6-f44ac26b90c4
+    uuid: bffa23aa-ae0a-4c02-af77-2a14c8c0b81c
     alterId: 0
     tls: false
     skip-cert-verify: true
-    network: http
-  - &id014
+    network: ws
+    ws-opts:
+      path: /api/v3/download.getFile
+      headers:
+        host: ssrsub.v006.ssrsub.com
+  - &id013
     name: 🇺🇸_US_美国_7
-    type: ss
-    server: 155.248.198.71
-    port: 20788
-    password: f5d95005-be14-40fc-bedc-e4a1133a5701
-    cipher: chacha20-ietf-poly1305
+    type: vmess
+    server: 67.21.90.5
+    port: 443
+    cipher: auto
+    uuid: 28dd6c26-05a5-4bba-8a5d-052b70ac13b2
+    alterId: 64
+    tls: true
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /path/1694429908748
+      headers:
+        host: www.75409854.xyz
+  - &id014
+    name: 🇺🇸_US_美国->🇧🇷_BR_巴西
+    type: vmess
+    server: sbl4.shabijichang.com
+    port: 80
+    cipher: auto
+    uuid: 53701585-591f-48a3-9515-8831ed0524ac
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: sbl4.shabijichang.com
   - &id015
     name: 🇺🇸_US_美国_8
-    type: ss
-    server: usshs2.gophers.gay
-    port: 20788
-    password: f5d95005-be14-40fc-bedc-e4a1133a5701
-    cipher: chacha20-ietf-poly1305
+    type: vmess
+    server: singapore.com
+    port: 80
+    cipher: auto
+    uuid: bffa23aa-ae0a-4c02-af77-2a14c8c0b81c
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /api/v3/download.getFile
+      headers:
+        host: ssrsub.v003.ssrsub.com
   - &id016
-    name: 🇨🇳_CN_中国_1
-    type: ss
-    server: as.al19.cf
-    port: 26007
-    password: 977a1372-18fe-4bae-8616-9a59497b810a
-    cipher: chacha20-ietf-poly1305
-  - &id017
-    name: 🇨🇳_CN_中国->🇷🇺_RU_俄罗斯联邦
-    type: ss
-    server: gz-zz-xx.newbluecloud.top
-    port: 41258
-    password: 977a1372-18fe-4bae-8616-9a59497b810a
-    cipher: chacha20-ietf-poly1305
-  - &id018
-    name: 🇨🇳_CN_中国_2
-    type: ss
-    server: as.al19.cf
-    port: 42018
-    password: 977a1372-18fe-4bae-8616-9a59497b810a
-    cipher: chacha20-ietf-poly1305
-  - &id019
-    name: 🇨🇳_CN_中国->🇺🇸_US_美国_4
-    type: ss
-    server: gz-zz-xx.newbluecloud.top
-    port: 25305
-    password: 977a1372-18fe-4bae-8616-9a59497b810a
-    cipher: chacha20-ietf-poly1305
-  - &id020
-    name: 🇺🇸_US_美国->🇩🇪_DE_德国
+    name: 🇺🇸_US_美国->🇩🇪_DE_德国_2
     type: vmess
     server: yd1.992688.xyz
     port: 8880
@@ -229,13 +206,13 @@ proxies:
       path: /?ed=2048
       headers:
         host: vceu3.vpn66.eu.org
-  - &id021
-    name: 🇺🇸_US_美国_9
+  - &id017
+    name: 🇺🇸_US_美国->🇮🇷_IR_伊朗
     type: vmess
-    server: 162.159.143.72
-    port: 80
+    server: cf.yx.alue.link
+    port: 2052
     cipher: auto
-    uuid: fab552f9-3c92-44ed-c086-08d631ee44ee
+    uuid: fe5edf04-c2af-4ac5-84ee-16d43024decb
     alterId: 0
     tls: false
     skip-cert-verify: true
@@ -243,7 +220,59 @@ proxies:
     ws-opts:
       path: /
       headers:
-        host: xui2.xuwu996.eu.org
+        host: us.wx.alue.link
+  - &id018
+    name: 🇬🇧_GB_英国
+    type: ss
+    server: 198.244.231.25
+    port: 443
+    password: asdKkaskJKfnsa
+    cipher: aes-256-cfb
+  - &id019
+    name: 🇺🇸_US_美国->🇦🇺_AU_澳大利亚
+    type: vmess
+    server: fd.shabijichang.com
+    port: 80
+    cipher: auto
+    uuid: 5e48a497-f4ae-4129-afd6-ba26d75b792a
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: mrb.shabijichang.com
+  - &id020
+    name: 🇺🇸_US_美国_9
+    type: vmess
+    server: 45.199.138.222
+    port: 30000
+    cipher: auto
+    uuid: 4ec0ae62-de09-4029-904a-0313d4628ecf
+    alterId: 64
+    tls: true
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /path/1696251693048
+      headers:
+        host: www.19229362.xyz
+  - &id021
+    name: 🇺🇸_US_美国->🇱🇺_LU_卢森堡
+    type: vmess
+    server: 104.16.68.38
+    port: 2052
+    cipher: auto
+    uuid: fe5edf04-c2af-4ac5-84ee-16d43024decb
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: lu.wx.alue.link
 proxy-groups:
   - name: PROXY
     type: select
