@@ -6,6 +6,18 @@ log-level: info
 external-controller: 0.0.0.0:9090
 proxies:
   - &id001
+    name: 🇺🇸_US_美国_1
+    type: ss
+    server: 216.52.183.243
+    port: 1001
+    password: 83XvX4Vo%*3a
+    cipher: aes-128-gcm
+    plugin: v2ray-plugin
+    plugin-opts:
+      mode: websocket
+      path: /
+      mux: true
+  - &id002
     name: 🇺🇸_US_美国->🇦🇺_AU_澳大利亚
     type: vmess
     server: fd.shabijichang.com
@@ -20,65 +32,8 @@ proxies:
       path: /
       headers:
         host: mrb.shabijichang.com
-  - &id002
-    name: 🇺🇸_US_美国->🇩🇪_DE_德国_1
-    type: vmess
-    server: lt1.992688.xyz
-    port: 8880
-    cipher: auto
-    uuid: 2fc248d5-7c81-471d-c2cf-a14e7f5aed2d
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /?ed=2048
-      headers:
-        host: vceu3.vpn66.eu.org
   - &id003
-    name: 🇺🇸_US_美国->🇩🇪_DE_德国_2
-    type: vmess
-    server: dx1.992688.xyz
-    port: 8880
-    cipher: auto
-    uuid: 2fc248d5-7c81-471d-c2cf-a14e7f5aed2d
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /?ed=2048
-      headers:
-        host: vceu3.vpn66.eu.org
-  - &id004
-    name: 🇺🇸_US_美国_1
-    type: ss
-    server: 216.52.183.243
-    port: 1001
-    password: 83XvX4Vo%*3a
-    cipher: aes-128-gcm
-    plugin: v2ray-plugin
-    plugin-opts:
-      mode: websocket
-      path: /
-      mux: true
-  - &id005
     name: 🇺🇸_US_美国_2
-    type: vmess
-    server: cf.yx.alue.link
-    port: 2052
-    cipher: auto
-    uuid: fe5edf04-c2af-4ac5-84ee-16d43024decb
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        host: us.wx.alue.link
-  - &id006
-    name: 🇺🇸_US_美国->🇩🇪_DE_德国_3
     type: vmess
     server: yd1.992688.xyz
     port: 8880
@@ -92,58 +47,132 @@ proxies:
       path: /?ed=2048
       headers:
         host: vceu3.vpn66.eu.org
-  - &id007
-    name: 🇨🇳_CN_中国->🇮🇳_IN_印度
-    type: ss
-    server: yidong.liulangdiqiu.cyou
-    port: 10706
-    password: 6fc1c0c5-9851-4b06-accd-77d422cf8385
-    cipher: chacha20-ietf-poly1305
-  - &id008
-    name: 🇺🇸_US_美国->🇳🇱_NL_荷兰_1
+  - &id004
+    name: 🇺🇸_US_美国_3
     type: vmess
-    server: 45.199.138.191
-    port: 30000
+    server: 5.161.191.195
+    port: 2083
     cipher: auto
-    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+    uuid: 1c5cd450-a5cc-4803-d0ef-1ea424cc4ba2
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: http
+  - &id005
+    name: 🇺🇸_US_美国_4
+    type: vmess
+    server: 67.21.90.5
+    port: 443
+    cipher: auto
+    uuid: 28dd6c26-05a5-4bba-8a5d-052b70ac13b2
     alterId: 64
     tls: true
     skip-cert-verify: true
     network: ws
     ws-opts:
-      path: /path/1696251522438
-      headers:
-        host: www.42077230.xyz
-  - &id009
-    name: 🇺🇸_US_美国_3
+      path: /path/1694429908748
+  - &id006
+    name: 🇺🇸_US_美国_5
     type: vmess
-    server: cf-lt.sharecentre.online
-    port: 80
+    server: lax.asoul-diana.xyz
+    port: 443
     cipher: auto
-    uuid: bffa23aa-ae0a-4c02-af77-2a14c8c0b81c
+    uuid: 5f726fe3-d82e-4da5-a711-8af0cbb2b682
+    alterId: 0
+    tls: true
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /acetaffy
+      headers:
+        host: lax.asoul-diana.xyz
+  - &id007
+    name: 🇨🇳_CN_中国->🇺🇸_US_美国_1
+    type: trojan
+    server: 14.18.106.137
+    port: 41929
+    udp: true
+    password: 09833a6f-4d46-426e-87fe-7793a5489f84
+    sni: nl01.lovehjq.xyz
+    skip-cert-verify: true
+    network: tcp
+  - &id008
+    name: 🇺🇸_US_美国->🇮🇷_IR_伊朗
+    type: vmess
+    server: cf.yx.alue.link
+    port: 2052
+    cipher: auto
+    uuid: fe5edf04-c2af-4ac5-84ee-16d43024decb
     alterId: 0
     tls: false
     skip-cert-verify: true
     network: ws
     ws-opts:
-      path: /api/v3/download.getFile
+      path: /
       headers:
-        host: ssrsub.v003.ssrsub.com
-  - &id010
-    name: 🇺🇸_US_美国_4
+        host: us.wx.alue.link
+  - &id009
+    name: 🇨🇳_CN_中国->🇺🇸_US_美国_2
     type: vmess
-    server: 45.199.138.222
-    port: 30000
+    server: 112.29.156.248
+    port: 61001
     cipher: auto
-    uuid: 4ec0ae62-de09-4029-904a-0313d4628ecf
-    alterId: 64
-    tls: true
+    uuid: d531ebd3-64d7-3ccb-b49e-e2bfbdf70dfc
+    alterId: 0
+    tls: false
     skip-cert-verify: true
     network: ws
     ws-opts:
-      path: /path/1696251693048
+      path: /dabai.in
+      headers:
+        host: a.cn-db.top
+  - &id010
+    name: 🇺🇸_US_美国->🇱🇺_LU_卢森堡
+    type: vmess
+    server: 104.16.68.38
+    port: 2052
+    cipher: auto
+    uuid: fe5edf04-c2af-4ac5-84ee-16d43024decb
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: lu.wx.alue.link
   - &id011
-    name: 🇺🇸_US_美国_5
+    name: 🇺🇸_US_美国->🇩🇪_DE_德国
+    type: vmess
+    server: lt1.992688.xyz
+    port: 8880
+    cipher: auto
+    uuid: 2fc248d5-7c81-471d-c2cf-a14e7f5aed2d
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2048
+      headers:
+        host: vceu3.vpn66.eu.org
+  - &id012
+    name: 🇨🇳_CN_中国->🇭🇰_HK_香港
+    type: vmess
+    server: 112.29.156.251
+    port: 61004
+    cipher: auto
+    uuid: d531ebd3-64d7-3ccb-b49e-e2bfbdf70dfc
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /dabai.in
+      headers:
+        host: a.db-link.in
+  - &id013
+    name: 🇺🇸_US_美国_6
     type: vmess
     server: www.speedtest.net
     port: 80
@@ -157,8 +186,26 @@ proxies:
       path: /
       headers:
         host: hu1.xv2ray.net
-  - &id012
-    name: 🇺🇸_US_美国_6
+  - &id014
+    name: 🇬🇧_GB_英国
+    type: ss
+    server: 89.185.84.178
+    port: 46135
+    password: iGZdlsmpNxy4QCGu2CJCKw
+    cipher: chacha20-ietf-poly1305
+  - &id015
+    name: 🇨🇿_CZ_捷克
+    type: vmess
+    server: 92.118.149.115
+    port: 25131
+    cipher: auto
+    uuid: ece8262a-141f-42f6-8dcf-e9b7a2028086
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: tcp
+  - &id016
+    name: 🇺🇸_US_美国_7
     type: vmess
     server: 162.159.143.72
     port: 80
@@ -172,8 +219,8 @@ proxies:
       path: /
       headers:
         host: xui2.xuwu996.eu.org
-  - &id013
-    name: 🇺🇸_US_美国_7
+  - &id017
+    name: 🇺🇸_US_美国_8
     type: vmess
     server: singapore.com
     port: 80
@@ -187,43 +234,35 @@ proxies:
       path: /api/v3/download.getFile
       headers:
         host: ssrsub.v002.ssrsub.com
-  - &id014
-    name: 🇺🇸_US_美国_8
-    type: vmess
-    server: sbl3.shabijichang.com
-    port: 80
-    cipher: auto
-    uuid: 53701585-591f-48a3-9515-8831ed0524ac
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        host: sbl3.shabijichang.com
-  - &id015
+  - &id018
     name: 🇺🇸_US_美国_9
+    type: ss
+    server: usshs2.gophers.gay
+    port: 20800
+    password: f5d95005-be14-40fc-bedc-e4a1133a5701
+    cipher: chacha20-ietf-poly1305
+  - &id019
+    name: 🇺🇸_US_美国_10
     type: ss
     server: 155.248.198.71
     port: 20800
     password: f5d95005-be14-40fc-bedc-e4a1133a5701
     cipher: chacha20-ietf-poly1305
-  - &id016
-    name: 🇺🇸_US_美国->🇳🇱_NL_荷兰_2
+  - &id020
+    name: 🇺🇸_US_美国_11
     type: vmess
-    server: 104.17.88.252
-    port: 2082
+    server: 45.199.138.222
+    port: 30000
     cipher: auto
-    uuid: 6388bd92-6cbc-4b72-a9a6-931f071d0ffa
-    alterId: 0
-    tls: false
+    uuid: 4ec0ae62-de09-4029-904a-0313d4628ecf
+    alterId: 64
+    tls: true
     skip-cert-verify: true
     network: ws
     ws-opts:
-      path: /phosphorylative.aurorainiceland.com/nimvws
+      path: /path/1696251693048
       headers:
-        host: erfannewfreenodes.vdmmswyzmzigonvnjk443.workers.dev
+        host: www.19229362.xyz
 proxy-groups:
   - name: PROXY
     type: select
@@ -266,6 +305,10 @@ proxy-groups:
       - *id014
       - *id015
       - *id016
+      - *id017
+      - *id018
+      - *id019
+      - *id020
   - name: LOAD-BALANCE
     type: load-balance
     url: http://www.gstatic.com/generate_204
@@ -287,6 +330,10 @@ proxy-groups:
       - *id014
       - *id015
       - *id016
+      - *id017
+      - *id018
+      - *id019
+      - *id020
   - name: SELECT
     type: select
     proxies:
@@ -306,6 +353,10 @@ proxy-groups:
       - *id014
       - *id015
       - *id016
+      - *id017
+      - *id018
+      - *id019
+      - *id020
 rules:
   - RULE-SET,applications,DIRECT
   - DOMAIN,clash.razord.top,DIRECT
