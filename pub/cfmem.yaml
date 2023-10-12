@@ -6,19 +6,134 @@ log-level: info
 external-controller: 0.0.0.0:9090
 proxies:
   - &id001
-    name: 🇫🇷_FR_法国
+    name: 🇺🇸_US_美国->🇳🇱_NL_荷兰
+    type: vmess
+    server: 162.159.129.71
+    port: 2096
+    cipher: auto
+    uuid: d8d39fca-8b6d-4f76-a505-e7917aa75435
+    alterId: 0
+    tls: true
+    skip-cert-verify: true
+    servername: s5678543.shargh.shop
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: s1.shargh.shop
+  - &id002
+    name: 🇺🇸_US_美国_1
     type: ss
-    server: 162.19.59.168
+    server: 18.236.64.177
+    port: 443
+    password: amazonskr05
+    cipher: aes-256-cfb
+  - &id003
+    name: 🇺🇸_US_美国_2
+    type: ss
+    server: 35.91.118.106
+    port: 443
+    password: amazonskr05
+    cipher: aes-256-cfb
+  - &id004
+    name: 🇺🇸_US_美国_3
+    type: ss
+    server: 216.52.183.243
+    port: 1001
+    password: 83XvX4Vo%*3a
+    cipher: aes-128-gcm
+    plugin: v2ray-plugin
+    plugin-opts:
+      mode: websocket
+      path: /
+      mux: true
+  - &id005
+    name: 🇺🇸_US_美国->🇫🇷_FR_法国
+    type: vmess
+    server: fr-01.cloudlion.me
+    port: 2082
+    cipher: auto
+    uuid: 87646364-c074-4b95-81cf-4bded967ca02
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: fr-01.cloudlion.me
+  - &id006
+    name: 🇬🇧_GB_英国_1
+    type: ss
+    server: 198.244.231.28
     port: 443
     password: asdKkaskJKfnsa
     cipher: aes-256-cfb
-  - &id002
-    name: 🇺🇸_US_美国_1
+  - &id007
+    name: 🇦🇫_AF_阿富汗
+    type: ss
+    server: 121.127.46.147
+    port: 989
+    password: f8f7aCzcPKbsF8p3
+    cipher: aes-256-cfb
+  - &id008
+    name: 🇺🇸_US_美国_4
+    type: ss
+    server: 89.187.181.179
+    port: 443
+    password: asdKkaskJKfnsa
+    cipher: aes-256-cfb
+  - &id009
+    name: 🇬🇧_GB_英国_2
+    type: ss
+    server: 198.244.231.24
+    port: 443
+    password: asdKkaskJKfnsa
+    cipher: aes-256-cfb
+  - &id010
+    name: 🇨🇳_CN_中国_1
     type: vmess
-    server: 80.251.214.235
+    server: 111.67.201.33
+    port: 10052
+    cipher: auto
+    uuid: 3097c8db-70a5-4b3f-a54d-54685a00d086
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /neimenggu001
+      headers:
+        host: tms.dingtalk.com
+  - &id011
+    name: 🇨🇳_CN_中国->🇺🇸_US_美国
+    type: ss
+    server: hefei.chiguayun.cc
+    port: 27124
+    password: d376f270-1807-4522-9f92-b499658a2678
+    cipher: chacha20-ietf-poly1305
+  - &id012
+    name: 🇺🇸_US_美国_5
+    type: vmess
+    server: 156.225.67.104
+    port: 30000
+    cipher: auto
+    uuid: 29a5d48e-24f1-48fd-a5e1-9a46cb31032f
+    alterId: 64
+    tls: true
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /path/1696944806961
+      headers:
+        host: www.41758112.xyz
+  - &id013
+    name: 🇨🇳_CN_中国_2
+    type: vmess
+    server: 1.117.69.235
     port: 80
     cipher: auto
-    uuid: 2048a230-35f8-4940-ea64-02d2375df9cd
+    uuid: ee0a4b54-be8d-4f56-be4d-521bd1ae443d
     alterId: 0
     tls: false
     skip-cert-verify: true
@@ -27,53 +142,23 @@ proxies:
       path: /
       headers:
         host: tms.dingtalk.com
-  - &id003
-    name: 🇮🇪_IE_爱尔兰
-    type: trojan
-    server: 3.254.128.82
-    port: 22222
-    udp: true
-    password: telegram-id-privatevpns
-    sni: trj.rollingnext.co.uk
+  - &id014
+    name: 🇺🇸_US_美国_6
+    type: vmess
+    server: singapore.com
+    port: 8080
+    cipher: auto
+    uuid: d3f830a2-205a-4bba-a7ca-5e87899ac04d
+    alterId: 0
+    tls: false
     skip-cert-verify: true
-    network: tcp
-  - &id004
-    name: 🇨🇳_CN_中国_1
-    type: ss
-    server: foshan.chiguayun.cc
-    port: 27133
-    password: d376f270-1807-4522-9f92-b499658a2678
-    cipher: chacha20-ietf-poly1305
-  - &id005
-    name: 🇨🇳_CN_中国->🇬🇧_GB_英国_1
-    type: ss
-    server: hefei.chiguayun.cc
-    port: 27120
-    password: d376f270-1807-4522-9f92-b499658a2678
-    cipher: chacha20-ietf-poly1305
-  - &id006
-    name: 🇨🇳_CN_中国->🇬🇧_GB_英国_2
-    type: ss
-    server: hefei.chiguayun.cc
-    port: 27123
-    password: d376f270-1807-4522-9f92-b499658a2678
-    cipher: chacha20-ietf-poly1305
-  - &id007
-    name: 🇨🇳_CN_中国_2
-    type: ss
-    server: hefei.chiguayun.cc
-    port: 27133
-    password: d376f270-1807-4522-9f92-b499658a2678
-    cipher: chacha20-ietf-poly1305
-  - &id008
-    name: 🇨🇳_CN_中国->🇦🇷_AR_阿根廷
-    type: ss
-    server: foshan.chiguayun.cc
-    port: 27131
-    password: d376f270-1807-4522-9f92-b499658a2678
-    cipher: chacha20-ietf-poly1305
-  - &id009
-    name: 🇺🇸_US_美国_2
+    network: ws
+    ws-opts:
+      path: /api/v3/download.getFile
+      headers:
+        host: ssrsub.v03.ssrsub.com
+  - &id015
+    name: 🇺🇸_US_美国_7
     type: vmess
     server: 206.168.240.113
     port: 35425
@@ -85,76 +170,25 @@ proxies:
     network: ws
     ws-opts:
       path: /jdbp606
-  - &id010
-    name: 🇨🇳_CN_中国->🇺🇸_US_美国_1
-    type: ss
-    server: foshan.chiguayun.cc
-    port: 27138
-    password: d376f270-1807-4522-9f92-b499658a2678
-    cipher: chacha20-ietf-poly1305
-  - &id011
-    name: 🇨🇳_CN_中国->🇺🇦_UA_乌克兰
-    type: ss
-    server: hefei.chiguayun.cc
-    port: 27121
-    password: d376f270-1807-4522-9f92-b499658a2678
-    cipher: chacha20-ietf-poly1305
-  - &id012
-    name: 🇨🇳_CN_中国->🇺🇸_US_美国_2
-    type: ss
-    server: hefei.chiguayun.cc
-    port: 27124
-    password: d376f270-1807-4522-9f92-b499658a2678
-    cipher: chacha20-ietf-poly1305
-  - &id013
-    name: 🇫🇮_FI_芬兰
-    type: trojan
-    server: fi1.connecton.surf
-    port: 443
-    udp: true
-    password: 44c5578a7c
-    skip-cert-verify: true
-    network: tcp
-  - &id014
-    name: 🇺🇸_US_美国_3
-    type: ss
-    server: 185.199.224.245
-    port: 41111
-    password: dongtaiwang.com
-    cipher: aes-256-gcm
-  - &id015
-    name: 🇨🇳_CN_中国->🇺🇸_US_美国_3
-    type: ss
-    server: hefei.chiguayun.cc
-    port: 27140
-    password: d376f270-1807-4522-9f92-b499658a2678
-    cipher: chacha20-ietf-poly1305
   - &id016
-    name: 🇨🇳_CN_中国_3
-    type: ss
-    server: foshan.chiguayun.cc
-    port: 27121
-    password: d376f270-1807-4522-9f92-b499658a2678
-    cipher: chacha20-ietf-poly1305
-  - &id017
-    name: 🇺🇸_US_美国_4
+    name: 🇺🇸_US_美国_8
     type: vmess
-    server: 45.199.138.186
-    port: 30000
+    server: cf-lt.sharecentre.online
+    port: 8080
     cipher: auto
-    uuid: 4ec0ae62-de09-4029-904a-0313d4628ecf
-    alterId: 64
-    tls: true
+    uuid: d3f830a2-205a-4bba-a7ca-5e87899ac04d
+    alterId: 0
+    tls: false
     skip-cert-verify: true
     network: ws
     ws-opts:
-      path: /path/1696598013851
+      path: /api/v3/download.getFile
       headers:
-        host: www.19229362.xyz
-  - &id018
+        host: ssrsub.v003.ssrsub.com
+  - &id017
     name: 🇺🇸_US_美国->🇱🇺_LU_卢森堡
     type: vmess
-    server: 162.159.152.6
+    server: 104.16.68.38
     port: 2052
     cipher: auto
     uuid: fe5edf04-c2af-4ac5-84ee-16d43024decb
@@ -166,65 +200,32 @@ proxies:
       path: /
       headers:
         host: lu.wx.alue.link
-  - &id019
-    name: 🇨🇳_CN_中国->🇨🇦_CA_加拿大
-    type: ss
-    server: yidong.liulangdiqiu.cyou
-    port: 10712
-    password: 51239bce-01ab-454d-baa5-c0940c9f1751
-    cipher: chacha20-ietf-poly1305
-  - &id020
-    name: 🇺🇸_US_美国_5
-    type: vmess
-    server: ns1.v2-vip.fun
-    port: 8080
-    cipher: auto
-    uuid: d3f830a2-205a-4bba-a7ca-5e87899ac04d
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /api/v3/download.getFile
-      headers:
-        host: ssrsub.v002.ssrsub.com
-  - &id021
-    name: 🇺🇸_US_美国_6
-    type: vmess
-    server: 104.18.35.28
+  - &id018
+    name: 🇫🇮_FI_芬兰_1
+    type: trojan
+    server: fi1.connecton.surf
     port: 443
-    cipher: auto
-    uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
-    alterId: 0
-    tls: true
+    udp: true
+    password: 44c5578a7c
     skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /odelia.autos:443/linkvws
-      headers:
-        host: sub.yifenjichang.top
-  - &id022
-    name: 🇺🇸_US_美国->🇳🇱_NL_荷兰
-    type: vmess
-    server: 45.199.138.191
-    port: 30000
-    cipher: auto
-    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-    alterId: 64
-    tls: true
+    network: tcp
+  - &id019
+    name: 🇫🇮_FI_芬兰_2
+    type: trojan
+    server: 37.143.129.56
+    port: 443
+    udp: true
+    password: 44c5578a7c
+    sni: fi1.connecton.surf
     skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /path/1696251522438
-      headers:
-        host: www.42077230.xyz
-  - &id023
-    name: 🇨🇳_CN_中国->🇧🇬_BG_保加利亚
+    network: tcp
+  - &id020
+    name: 🇫🇷_FR_法国
     type: ss
-    server: foshan.chiguayun.cc
-    port: 27127
-    password: d376f270-1807-4522-9f92-b499658a2678
-    cipher: chacha20-ietf-poly1305
+    server: 51.158.195.96
+    port: 443
+    password: asdKkaskJKfnsa
+    cipher: aes-256-cfb
 proxy-groups:
   - name: PROXY
     type: select
@@ -271,9 +272,6 @@ proxy-groups:
       - *id018
       - *id019
       - *id020
-      - *id021
-      - *id022
-      - *id023
   - name: LOAD-BALANCE
     type: load-balance
     url: http://www.gstatic.com/generate_204
@@ -299,9 +297,6 @@ proxy-groups:
       - *id018
       - *id019
       - *id020
-      - *id021
-      - *id022
-      - *id023
   - name: SELECT
     type: select
     proxies:
@@ -325,9 +320,6 @@ proxy-groups:
       - *id018
       - *id019
       - *id020
-      - *id021
-      - *id022
-      - *id023
 rules:
   - RULE-SET,applications,DIRECT
   - DOMAIN,clash.razord.top,DIRECT
