@@ -1,0 +1,612 @@
+port: 7890
+socks-port: 7891
+allow-lan: true
+mode: Rule
+log-level: info
+external-controller: 0.0.0.0:9090
+proxies:
+  - &id001
+    name: 🇺🇸_US_美国->🇬🇧_GB_英国
+    type: vmess
+    server: mrb2.shabijichang.com
+    port: 80
+    cipher: auto
+    uuid: c458695d-6908-45c3-9512-e0c46418454c
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: mrb2.shabijichang.com
+  - &id002
+    name: 🇨🇳_CN_中国->🇺🇸_US_美国
+    type: trojan
+    server: nl01.lovehjq.xyz
+    port: 41929
+    udp: true
+    password: 09833a6f-4d46-426e-87fe-7793a5489f84
+    skip-cert-verify: true
+    network: tcp
+  - &id003
+    name: 🇺🇸_US_美国->🇮🇳_IN_印度_1
+    type: vmess
+    server: mm2.shabijichang.com
+    port: 80
+    cipher: auto
+    uuid: c458695d-6908-45c3-9512-e0c46418454c
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: mm2.shabijichang.com
+  - &id004
+    name: 🇺🇸_US_美国_1
+    type: vmess
+    server: 156.225.67.104
+    port: 30000
+    cipher: auto
+    uuid: 29a5d48e-24f1-48fd-a5e1-9a46cb31032f
+    alterId: 64
+    tls: true
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /path/1696944806961
+      headers:
+        host: www.41758112.xyz
+  - &id005
+    name: 🇬🇧_GB_英国
+    type: trojan
+    server: 13.43.242.238
+    port: 22222
+    udp: true
+    password: telegram-id-privatevpns
+    sni: trj.rollingnext.co.uk
+    skip-cert-verify: true
+    network: tcp
+  - &id006
+    name: 🇺🇸_US_美国->🇮🇷_IR_伊朗
+    type: vmess
+    server: 162.159.137.9
+    port: 2052
+    cipher: auto
+    uuid: fe5edf04-c2af-4ac5-84ee-16d43024decb
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: us.wx.alue.link
+  - &id007
+    name: 🇺🇸_US_美国->🇩🇪_DE_德国
+    type: vmess
+    server: yd1.992688.xyz
+    port: 2052
+    cipher: auto
+    uuid: 6963920a-8bb3-4f87-b231-56ccb9f9b3a7
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: vceu3.vpn66.eu.org
+  - &id008
+    name: 🇺🇸_US_美国_2
+    type: vmess
+    server: cf-lt.sharecentre.online
+    port: 8080
+    cipher: auto
+    uuid: d3f830a2-205a-4bba-a7ca-5e87899ac04d
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /api/v3/download.getFile
+      headers:
+        host: ssrsub.v006.ssrsub.com
+  - &id009
+    name: 🇺🇸_US_美国_3
+    type: vmess
+    server: 104.31.16.196
+    port: 2053
+    cipher: auto
+    uuid: 72f76c36-3e3c-45b3-a61f-d8f017345958
+    alterId: 0
+    tls: true
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: b5.iraniancp.click
+  - &id010
+    name: 🇷🇺_RU_俄罗斯联邦
+    type: trojan
+    server: v234.jsvpn.xyz
+    port: 443
+    udp: true
+    password: ee5d4ca4-cb15-4201-ba4f-4709b5a833d4
+    skip-cert-verify: true
+    network: tcp
+  - &id011
+    name: 🇫🇷_FR_法国_1
+    type: trojan
+    server: 54.36.173.159
+    port: 443
+    udp: true
+    password: e4f288433b
+    sni: pol1.connecton.surf
+    skip-cert-verify: true
+    network: tcp
+  - &id012
+    name: 🇺🇸_US_美国->🇸🇦_SA_沙特阿拉伯
+    type: vmess
+    server: jd3.shabijichang.com
+    port: 80
+    cipher: auto
+    uuid: c458695d-6908-45c3-9512-e0c46418454c
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: jd3.shabijichang.com
+  - &id013
+    name: 🇺🇸_US_美国->🇮🇳_IN_印度_2
+    type: vmess
+    server: mm3.shabijichang.com
+    port: 80
+    cipher: auto
+    uuid: c458695d-6908-45c3-9512-e0c46418454c
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: mm3.shabijichang.com
+  - &id014
+    name: 🇺🇸_US_美国_4
+    type: vmess
+    server: sbl4.shabijichang.com
+    port: 80
+    cipher: auto
+    uuid: c458695d-6908-45c3-9512-e0c46418454c
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: sbl4.shabijichang.com
+  - &id015
+    name: 🇫🇷_FR_法国_2
+    type: trojan
+    server: 15.188.43.83
+    port: 22222
+    udp: true
+    password: telegram-id-privatevpns
+    sni: trj.rollingnext.co.uk
+    skip-cert-verify: true
+    network: tcp
+  - &id016
+    name: 🇺🇸_US_美国_5
+    type: vmess
+    server: jd2.shabijichang.com
+    port: 80
+    cipher: auto
+    uuid: c458695d-6908-45c3-9512-e0c46418454c
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: jd2.shabijichang.com
+  - &id017
+    name: 🇮🇱_IL_以色列
+    type: vmess
+    server: 83.229.70.215
+    port: 13337
+    cipher: auto
+    uuid: bdd22841-c4d2-4aa8-acf2-95aa9125f159
+    alterId: 0
+    tls: true
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /
+  - &id018
+    name: 🇺🇸_US_美国_6
+    type: vmess
+    server: sbl3.shabijichang.com
+    port: 80
+    cipher: auto
+    uuid: c458695d-6908-45c3-9512-e0c46418454c
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: sbl3.shabijichang.com
+  - &id019
+    name: 🇺🇸_US_美国_7
+    type: vmess
+    server: cfcdn1.sanfencdn9.com
+    port: 2052
+    cipher: auto
+    uuid: 1839d2e3-a29b-4fbc-8cb2-2e52163d385c
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /video/xwjorKTk
+      headers:
+        host: us8cdf74064.pkmkwvxqnn.xyz
+  - &id020
+    name: 🇺🇸_US_美国_8
+    type: vmess
+    server: 168.75.76.226
+    port: 20492
+    cipher: auto
+    uuid: 259e1c70-fa0f-4759-b959-1e5630eac8de
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: tcp
+  - &id021
+    name: 🇺🇸_US_美国->🇮🇳_IN_印度_3
+    type: vmess
+    server: hdlb3.shabijichang.com
+    port: 80
+    cipher: auto
+    uuid: c458695d-6908-45c3-9512-e0c46418454c
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: hdlb3.shabijichang.com
+  - &id022
+    name: 🇩🇪_DE_德国
+    type: trojan
+    server: 52.59.60.194
+    port: 22222
+    udp: true
+    password: telegram-id-privatevpns
+    sni: trj.rollingnext.co.uk
+    skip-cert-verify: true
+    network: tcp
+  - &id023
+    name: 🇺🇸_US_美国_9
+    type: vmess
+    server: singapore.com
+    port: 8080
+    cipher: auto
+    uuid: d3f830a2-205a-4bba-a7ca-5e87899ac04d
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /api/v3/download.getFile
+      headers:
+        host: ssrsub.v03.ssrsub.com
+  - &id024
+    name: 🇺🇸_US_美国_10
+    type: vmess
+    server: sbl2.shabijichang.com
+    port: 80
+    cipher: auto
+    uuid: c458695d-6908-45c3-9512-e0c46418454c
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: sbl2.shabijichang.com
+  - &id025
+    name: 🇺🇸_US_美国_11
+    type: vmess
+    server: 104.17.27.2
+    port: 80
+    cipher: auto
+    uuid: 72d46152-ee0b-4610-efb1-ffb0f786b848
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2048
+      headers:
+        host: my2.gamedaylion.buzz
+  - &id026
+    name: 🇺🇸_US_美国_12
+    type: vmess
+    server: asb2.shabijichang.com
+    port: 80
+    cipher: auto
+    uuid: c458695d-6908-45c3-9512-e0c46418454c
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: asb2.shabijichang.com
+  - &id027
+    name: 🇺🇸_US_美国->🇮🇳_IN_印度_4
+    type: vmess
+    server: hdlb2.shabijichang.com
+    port: 80
+    cipher: auto
+    uuid: c458695d-6908-45c3-9512-e0c46418454c
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: hdlb2.shabijichang.com
+  - &id028
+    name: 🇺🇸_US_美国_13
+    type: vmess
+    server: 129.146.117.162
+    port: 20353
+    cipher: auto
+    uuid: 10c5146f-838f-4598-ac89-7b9472b9ec43
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2048
+      headers:
+        host: microsoft.com
+proxy-groups:
+  - name: PROXY
+    type: select
+    proxies:
+      - URL-TEST
+      - LOAD-BALANCE
+      - SELECT
+      - DIRECT
+  - name: OTHER
+    type: select
+    proxies:
+      - PROXY
+      - DIRECT
+  - name: AD
+    type: select
+    proxies:
+      - REJECT
+      - DIRECT
+      - PROXY
+  - name: URL-TEST
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 600
+    lazy: true
+    tolerance: 100
+    proxies:
+      - *id001
+      - *id002
+      - *id003
+      - *id004
+      - *id005
+      - *id006
+      - *id007
+      - *id008
+      - *id009
+      - *id010
+      - *id011
+      - *id012
+      - *id013
+      - *id014
+      - *id015
+      - *id016
+      - *id017
+      - *id018
+      - *id019
+      - *id020
+      - *id021
+      - *id022
+      - *id023
+      - *id024
+      - *id025
+      - *id026
+      - *id027
+      - *id028
+  - name: LOAD-BALANCE
+    type: load-balance
+    url: http://www.gstatic.com/generate_204
+    interval: 600
+    proxies:
+      - *id001
+      - *id002
+      - *id003
+      - *id004
+      - *id005
+      - *id006
+      - *id007
+      - *id008
+      - *id009
+      - *id010
+      - *id011
+      - *id012
+      - *id013
+      - *id014
+      - *id015
+      - *id016
+      - *id017
+      - *id018
+      - *id019
+      - *id020
+      - *id021
+      - *id022
+      - *id023
+      - *id024
+      - *id025
+      - *id026
+      - *id027
+      - *id028
+  - name: SELECT
+    type: select
+    proxies:
+      - *id001
+      - *id002
+      - *id003
+      - *id004
+      - *id005
+      - *id006
+      - *id007
+      - *id008
+      - *id009
+      - *id010
+      - *id011
+      - *id012
+      - *id013
+      - *id014
+      - *id015
+      - *id016
+      - *id017
+      - *id018
+      - *id019
+      - *id020
+      - *id021
+      - *id022
+      - *id023
+      - *id024
+      - *id025
+      - *id026
+      - *id027
+      - *id028
+rules:
+  - RULE-SET,applications,DIRECT
+  - DOMAIN,clash.razord.top,DIRECT
+  - DOMAIN,yacd.haishan.me,DIRECT
+  - RULE-SET,private,DIRECT
+  - RULE-SET,reject,AD
+  - RULE-SET,icloud,DIRECT
+  - RULE-SET,apple,DIRECT
+  - RULE-SET,google,DIRECT
+  - RULE-SET,tld-not-cn,PROXY
+  - RULE-SET,gfw,PROXY
+  - RULE-SET,greatfire,PROXY
+  - RULE-SET,telegramcidr,PROXY
+  - RULE-SET,lancidr,DIRECT
+  - RULE-SET,cncidr,DIRECT
+  - GEOIP,CN,DIRECT
+  - RULE-SET,direct,DIRECT
+  - RULE-SET,proxy,OTHER
+  - MATCH,OTHER
+rule-providers:
+  reject:
+    type: http
+    behavior: domain
+    url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/reject.txt
+    path: ./ruleset/reject.yaml
+    interval: 86400
+  icloud:
+    type: http
+    behavior: domain
+    url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/icloud.txt
+    path: ./ruleset/icloud.yaml
+    interval: 86400
+  apple:
+    type: http
+    behavior: domain
+    url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/apple.txt
+    path: ./ruleset/apple.yaml
+    interval: 86400
+  google:
+    type: http
+    behavior: domain
+    url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/google.txt
+    path: ./ruleset/google.yaml
+    interval: 86400
+  proxy:
+    type: http
+    behavior: domain
+    url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/proxy.txt
+    path: ./ruleset/proxy.yaml
+    interval: 86400
+  direct:
+    type: http
+    behavior: domain
+    url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/direct.txt
+    path: ./ruleset/direct.yaml
+    interval: 86400
+  private:
+    type: http
+    behavior: domain
+    url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/private.txt
+    path: ./ruleset/private.yaml
+    interval: 86400
+  gfw:
+    type: http
+    behavior: domain
+    url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/gfw.txt
+    path: ./ruleset/gfw.yaml
+    interval: 86400
+  greatfire:
+    type: http
+    behavior: domain
+    url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/greatfire.txt
+    path: ./ruleset/greatfire.yaml
+    interval: 86400
+  tld-not-cn:
+    type: http
+    behavior: domain
+    url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/tld-not-cn.txt
+    path: ./ruleset/tld-not-cn.yaml
+    interval: 86400
+  telegramcidr:
+    type: http
+    behavior: ipcidr
+    url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/telegramcidr.txt
+    path: ./ruleset/telegramcidr.yaml
+    interval: 86400
+  cncidr:
+    type: http
+    behavior: ipcidr
+    url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/cncidr.txt
+    path: ./ruleset/cncidr.yaml
+    interval: 86400
+  lancidr:
+    type: http
+    behavior: ipcidr
+    url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/lancidr.txt
+    path: ./ruleset/lancidr.yaml
+    interval: 86400
+  applications:
+    type: http
+    behavior: classical
+    url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/applications.txt
+    path: ./ruleset/applications.yaml
+    interval: 86400
+mixed-port: 7890
