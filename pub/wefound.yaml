@@ -8,37 +8,7 @@ proxies:
   - &id001
     name: 🇺🇸_US_美国_1
     type: vmess
-    server: 172.67.192.114
-    port: 2052
-    cipher: auto
-    uuid: c94dabd2-f8e8-4021-fd57-402239ed650a
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /TG:@dns68
-      headers:
-        host: uk.putata.tk
-  - &id002
-    name: 🇺🇸_US_美国_2
-    type: vmess
-    server: 104.20.231.210
-    port: 80
-    cipher: auto
-    uuid: 72d46152-ee0b-4610-efb1-ffb0f786b848
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /?ed=2048
-      headers:
-        host: my.designlion.buzz
-  - &id003
-    name: 🇺🇸_US_美国->🇮🇳_IN_印度_1
-    type: vmess
-    server: hdlb3.shabijichang.com
+    server: wnd3.shabijichang.com
     port: 80
     cipher: auto
     uuid: 10ea3b2a-b615-45f1-b1b7-c62bafe8c80c
@@ -49,325 +19,45 @@ proxies:
     ws-opts:
       path: /
       headers:
-        host: hdlb3.shabijichang.com
+        host: wnd3.shabijichang.com
+  - &id002
+    name: 🇺🇸_US_美国->🇫🇷_FR_法国
+    type: vmess
+    server: 104.18.202.232
+    port: 80
+    cipher: auto
+    uuid: 6bf1b342-2bf0-4608-b288-8ee515e2d594
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /@hopev2ray،@hopev2ray
+      headers:
+        host: de1vm.cdn-03.live
+  - &id003
+    name: 🇷🇺_RU_俄罗斯联邦
+    type: vmess
+    server: 5.42.77.221
+    port: 12134
+    cipher: auto
+    uuid: deb8e9ab-c761-4e26-a964-77a60175b6ea
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /
   - &id004
-    name: 🇫🇷_FR_法国_1
+    name: 🇬🇧_GB_英国_1
     type: trojan
-    server: 35.181.192.228
-    port: 22222
+    server: 51.38.65.155
+    port: 443
     udp: true
-    password: telegram-id-privatevpns
-    sni: trj.rollingnext.co.uk
+    password: 9e942c10-6d5f-11ee-8a80-1239d0255272
     skip-cert-verify: true
     network: tcp
   - &id005
-    name: 🇺🇸_US_美国->🇧🇷_BR_巴西_1
-    type: vmess
-    server: sbl4.shabijichang.com
-    port: 80
-    cipher: auto
-    uuid: c458695d-6908-45c3-9512-e0c46418454c
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        host: sbl4.shabijichang.com
-  - &id006
-    name: 🇫🇷_FR_法国_2
-    type: trojan
-    server: 35.181.201.129
-    port: 22222
-    udp: true
-    password: telegram-id-directvpn
-    sni: trj.rollingnext.co.uk
-    skip-cert-verify: true
-    network: tcp
-  - &id007
-    name: 🇺🇸_US_美国_3
-    type: vmess
-    server: sbl2.shabijichang.com
-    port: 80
-    cipher: auto
-    uuid: c458695d-6908-45c3-9512-e0c46418454c
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        host: sbl2.shabijichang.com
-  - &id008
-    name: 🇨🇳_CN_中国->🇫🇷_FR_法国
-    type: vmess
-    server: 41.kccic2pa.xyz
-    port: 50041
-    cipher: auto
-    uuid: 5c3d60c1-ec2b-41f4-bd22-b7336d7e37bb
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: tcp
-  - &id009
-    name: 🇺🇸_US_美国_4
-    type: vmess
-    server: singapore.com
-    port: 8080
-    cipher: auto
-    uuid: d3f830a2-205a-4bba-a7ca-5e87899ac04d
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /api/v3/download.getFile
-      headers:
-        host: ssrsub.v03.ssrsub.com
-  - &id010
-    name: 🇺🇸_US_美国_5
-    type: vmess
-    server: wnd2.shabijichang.com
-    port: 80
-    cipher: auto
-    uuid: c458695d-6908-45c3-9512-e0c46418454c
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        host: wnd2.shabijichang.com
-  - &id011
-    name: 🇺🇸_US_美国_6
-    type: vmess
-    server: 37.1.211.52
-    port: 3000
-    cipher: auto
-    uuid: b97ad283-287e-4e20-a741-f16f7d074590
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: tcp
-  - &id012
-    name: 🇺🇸_US_美国_7
-    type: vmess
-    server: 104.21.93.238
-    port: 443
-    cipher: auto
-    uuid: 64203121-39f5-4f05-b842-a7697ef379a1
-    alterId: 0
-    tls: true
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /okeyvws
-      headers:
-        host: s3.folow-r18.cfd
-  - &id013
-    name: 🇺🇸_US_美国->🇮🇳_IN_印度_2
-    type: vmess
-    server: mm3.shabijichang.com
-    port: 80
-    cipher: auto
-    uuid: c458695d-6908-45c3-9512-e0c46418454c
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        host: mm3.shabijichang.com
-  - &id014
-    name: 🇺🇸_US_美国_8
-    type: vmess
-    server: lt1.992688.xyz
-    port: 2052
-    cipher: auto
-    uuid: fa5fc74f-0f0b-4221-82ba-dc7cd24e24e5
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        host: vcus2.vpn66.eu.org
-  - &id015
-    name: 🇫🇷_FR_法国_3
-    type: trojan
-    server: 57.128.173.6
-    port: 443
-    udp: true
-    password: 0ddff0f8-04d6-4eae-a5a6-5af7746bb30d
-    sni: fifa.com
-    skip-cert-verify: true
-    network: tcp
-  - &id016
-    name: 🇺🇸_US_美国->🇮🇷_IR_伊朗
-    type: vmess
-    server: 162.159.137.86
-    port: 2052
-    cipher: auto
-    uuid: fe5edf04-c2af-4ac5-84ee-16d43024decb
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        host: us.wx.alue.link
-  - &id017
-    name: 🇺🇸_US_美国->🇳🇱_NL_荷兰
-    type: vmess
-    server: 104.25.254.162
-    port: 2096
-    cipher: auto
-    uuid: 12009e57-6fd8-46d6-94af-539514a7e7c7
-    alterId: 0
-    tls: true
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        host: s1.shargh.shop
-  - &id018
-    name: 🇨🇦_CA_加拿大
-    type: vmess
-    server: dongtaiwang3.com
-    port: 8080
-    cipher: auto
-    uuid: 969f1909-c0d3-4c30-813d-3aec5c838b7d
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /1IKYjV0r/
-      headers:
-        host: dongtaiwang8.dtku47.xyz
-  - &id019
-    name: 🇺🇸_US_美国->🇸🇦_SA_沙特阿拉伯
-    type: vmess
-    server: jd3.shabijichang.com
-    port: 80
-    cipher: auto
-    uuid: c458695d-6908-45c3-9512-e0c46418454c
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        host: jd3.shabijichang.com
-  - &id020
-    name: 🇺🇸_US_美国_9
-    type: vmess
-    server: 104.31.16.27
-    port: 80
-    cipher: auto
-    uuid: 58fe1542-5290-40ad-815a-77707a81afe5
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /IOebhLMhl1CTbFHbL95myfRX2
-      headers:
-        host: ca5.tehme2.fun
-  - &id021
-    name: 🇮🇪_IE_爱尔兰_1
-    type: trojan
-    server: 52.215.119.194
-    port: 22222
-    udp: true
-    password: telegram-id-directvpn
-    sni: trj.rollingnext.co.uk
-    skip-cert-verify: true
-    network: tcp
-  - &id022
-    name: 🇺🇸_US_美国_10
-    type: vmess
-    server: fhc2.shabijichang.com
-    port: 80
-    cipher: auto
-    uuid: c458695d-6908-45c3-9512-e0c46418454c
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        host: fhc2.shabijichang.com
-  - &id023
-    name: 🇺🇸_US_美国->🇱🇺_LU_卢森堡_1
-    type: vmess
-    server: 104.31.16.14
-    port: 80
-    cipher: auto
-    uuid: 755840b0-6c4e-11ee-b132-205c6d5f5d78
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /@hopev2ray
-      headers:
-        host: lu.0rd.net
-  - &id024
-    name: 🇺🇸_US_美国_11
-    type: vmess
-    server: 104.17.27.2
-    port: 80
-    cipher: auto
-    uuid: 72d46152-ee0b-4610-efb1-ffb0f786b848
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        host: my2.gamedaylion.buzz
-  - &id025
-    name: 🇺🇸_US_美国_12
-    type: vmess
-    server: 156.225.67.104
-    port: 30000
-    cipher: auto
-    uuid: 29a5d48e-24f1-48fd-a5e1-9a46cb31032f
-    alterId: 64
-    tls: true
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /path/1696944806961
-      headers:
-        host: www.41758112.xyz
-  - &id026
-    name: 🇺🇸_US_美国_13
-    type: vmess
-    server: 45.199.138.186
-    port: 30000
-    cipher: auto
-    uuid: 4ec0ae62-de09-4029-904a-0313d4628ecf
-    alterId: 64
-    tls: true
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /path/1697376782879
-      headers:
-        host: www.19229362.xyz
-  - &id027
     name: 🇺🇸_US_美国->🇦🇪_AE_阿联酋
     type: vmess
     server: db5.shabijichang.com
@@ -382,10 +72,50 @@ proxies:
       path: /
       headers:
         host: db5.shabijichang.com
-  - &id028
-    name: 🇺🇸_US_美国->🇧🇷_BR_巴西_2
+  - &id006
+    name: 🇺🇸_US_美国->🇮🇳_IN_印度_1
     type: vmess
-    server: 104.21.75.246
+    server: 104.17.18.26
+    port: 80
+    cipher: auto
+    uuid: 5180444a-4756-43b4-960b-49eb9052e4e8
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: a.109420.xyz
+  - &id007
+    name: 🇨🇳_CN_中国->🇺🇸_US_美国_1
+    type: trojan
+    server: other.kunlun-ppg.com
+    port: 10837
+    udp: true
+    password: 48bad1cc-4ba4-48bd-9e5f-b73999b40ced
+    sni: alibaba-node.cn
+    skip-cert-verify: true
+    network: tcp
+  - &id008
+    name: 🇺🇸_US_美国_2
+    type: vmess
+    server: 45.199.138.186
+    port: 30000
+    cipher: auto
+    uuid: 4ec0ae62-de09-4029-904a-0313d4628ecf
+    alterId: 64
+    tls: true
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /path/1697376782879
+      headers:
+        host: www.19229362.xyz
+  - &id009
+    name: 🇺🇸_US_美国_3
+    type: vmess
+    server: fhc2.shabijichang.com
     port: 80
     cipher: auto
     uuid: c458695d-6908-45c3-9512-e0c46418454c
@@ -396,49 +126,119 @@ proxies:
     ws-opts:
       path: /
       headers:
-        host: sbl4.shabijichang.com
-  - &id029
-    name: 🇫🇷_FR_法国_4
+        host: fhc2.shabijichang.com
+  - &id010
+    name: 🇺🇸_US_美国->🇮🇳_IN_印度_2
+    type: vmess
+    server: hdlb3.shabijichang.com
+    port: 80
+    cipher: auto
+    uuid: 10ea3b2a-b615-45f1-b1b7-c62bafe8c80c
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: hdlb3.shabijichang.com
+  - &id011
+    name: 🇺🇸_US_美国_4
+    type: vmess
+    server: 104.21.93.238
+    port: 443
+    cipher: auto
+    uuid: 64203121-39f5-4f05-b842-a7697ef379a1
+    alterId: 0
+    tls: true
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /okeyvws
+      headers:
+        host: s3.folow-r18.cfd
+  - &id012
+    name: 🇨🇦_CA_加拿大
     type: trojan
-    server: 52.47.48.116
+    server: 51.222.15.68
+    port: 443
+    udp: true
+    password: e869fbd0-6d5f-11ee-90fd-1239d0255272
+    skip-cert-verify: true
+    network: tcp
+  - &id013
+    name: 🇺🇸_US_美国_5
+    type: vmess
+    server: 104.17.27.2
+    port: 80
+    cipher: auto
+    uuid: 72d46152-ee0b-4610-efb1-ffb0f786b848
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: my2.gamedaylion.buzz
+  - &id014
+    name: 🇳🇱_NL_荷兰
+    type: vmess
+    server: 154.85.1.244
+    port: 30000
+    cipher: auto
+    uuid: 1d474f0b-e78d-4af9-bc4a-a467467bc7a7
+    alterId: 64
+    tls: true
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /path/1696944806961
+      headers:
+        host: www.28115361.xyz
+  - &id015
+    name: 🇨🇳_CN_中国->🇺🇸_US_美国_2
+    type: trojan
+    server: us.kunlun-ppg.com
+    port: 10821
+    udp: true
+    password: 48bad1cc-4ba4-48bd-9e5f-b73999b40ced
+    sni: alibaba-node.cn
+    skip-cert-verify: true
+    network: tcp
+  - &id016
+    name: 🇷🇺_RU_俄罗斯联邦->🇳🇱_NL_荷兰
+    type: vmess
+    server: 5.42.77.221
+    port: 11715
+    cipher: auto
+    uuid: fa5c55a5-e50a-427d-b57e-aab199f4cb84
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: tcp
+  - &id017
+    name: 🇨🇳_CN_中国
+    type: trojan
+    server: us.kunlun-ppg.com
+    port: 10826
+    udp: true
+    password: 48bad1cc-4ba4-48bd-9e5f-b73999b40ced
+    sni: alibaba-node.cn
+    skip-cert-verify: true
+    network: tcp
+  - &id018
+    name: 🇫🇷_FR_法国_1
+    type: trojan
+    server: 15.236.116.176
     port: 22222
     udp: true
-    password: telegram-id-directvpn
+    password: telegram-id-privatevpns
     sni: trj.rollingnext.co.uk
     skip-cert-verify: true
     network: tcp
-  - &id030
-    name: 🇺🇸_US_美国->🇬🇧_GB_英国_1
-    type: vmess
-    server: ld2.shabijichang.com
-    port: 80
-    cipher: auto
-    uuid: c458695d-6908-45c3-9512-e0c46418454c
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        host: ld2.shabijichang.com
-  - &id031
-    name: 🇺🇸_US_美国_14
-    type: vmess
-    server: asb2.shabijichang.com
-    port: 80
-    cipher: auto
-    uuid: c458695d-6908-45c3-9512-e0c46418454c
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        host: asb2.shabijichang.com
-  - &id032
-    name: 🇺🇸_US_美国->🇬🇧_GB_英国_2
+  - &id019
+    name: 🇺🇸_US_美国->🇬🇧_GB_英国
     type: vmess
     server: mrb2.shabijichang.com
     port: 80
@@ -452,23 +252,55 @@ proxies:
       path: /
       headers:
         host: mrb2.shabijichang.com
-  - &id033
-    name: 🇺🇸_US_美国_15
+  - &id020
+    name: 🇰🇷_KR_韩国->🇦🇺_AU_澳大利亚_1
+    type: trojan
+    server: hk2-reality.fp3kemyh-cm4s-2hak-2gb9-w3534umy2sq5.9d8f269f96b25232-759cbb36d6548597.kaufen
+    port: 50414
+    udp: true
+    password: 75110959-c7dd-4ee5-8a51-cd0e21c3111d
+    sni: 13-231-155-134.nhost.00cdn.com
+    skip-cert-verify: true
+    network: tcp
+  - &id021
+    name: 🇨🇳_CN_中国->🇺🇸_US_美国_3
+    type: trojan
+    server: other.kunlun-ppg.com
+    port: 10850
+    udp: true
+    password: 48bad1cc-4ba4-48bd-9e5f-b73999b40ced
+    sni: alibaba-node.cn
+    skip-cert-verify: true
+    network: tcp
+  - &id022
+    name: 🇬🇧_GB_英国_2
+    type: trojan
+    server: 18.169.29.140
+    port: 22222
+    udp: true
+    password: telegram-id-directvpn
+    sni: trj.rollingnext.co.uk
+    skip-cert-verify: true
+    network: tcp
+  - &id023
+    name: 🇨🇳_CN_中国->🇺🇸_US_美国_4
     type: vmess
-    server: us2.jiedian.stream
-    port: 80
+    server: attwa10008.cdn.node.a.tddns-ounk.com
+    port: 30887
     cipher: auto
-    uuid: 36abb4f9-7753-4f6a-8787-495c6ea9c155
+    uuid: deb8cc7a-32d0-3234-8851-bf9ac01c66f0
     alterId: 0
     tls: false
     skip-cert-verify: true
     network: ws
     ws-opts:
-      path: /
-  - &id034
-    name: 🇺🇸_US_美国_16
+      path: /009c250b-54f5-43a8-8b18-dccbb5d8c66a.y.live01.m3u8
+      headers:
+        host: attwa10008.cdn.node.a.tddns-ounk.com
+  - &id024
+    name: 🇺🇸_US_美国->🇮🇳_IN_印度_3
     type: vmess
-    server: sbl3.shabijichang.com
+    server: mm3.shabijichang.com
     port: 80
     cipher: auto
     uuid: c458695d-6908-45c3-9512-e0c46418454c
@@ -479,27 +311,14 @@ proxies:
     ws-opts:
       path: /
       headers:
-        host: sbl3.shabijichang.com
-  - &id035
-    name: 🇺🇸_US_美国_17
+        host: mm3.shabijichang.com
+  - &id025
+    name: 🇺🇸_US_美国_6
     type: vmess
-    server: us1.jiedian.stream
+    server: 172.67.184.13
     port: 80
     cipher: auto
-    uuid: 36abb4f9-7753-4f6a-8787-495c6ea9c155
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /
-  - &id036
-    name: 🇺🇸_US_美国_18
-    type: vmess
-    server: jd2.shabijichang.com
-    port: 80
-    cipher: auto
-    uuid: 56278a1a-c7cc-459f-b00c-3037e4f99590
+    uuid: c458695d-6908-45c3-9512-e0c46418454c
     alterId: 0
     tls: false
     skip-cert-verify: true
@@ -507,62 +326,167 @@ proxies:
     ws-opts:
       path: /
       headers:
-        host: jd2.shabijichang.com
-  - &id037
-    name: 🇺🇸_US_美国->🇩🇪_DE_德国
-    type: vmess
-    server: yd1.992688.xyz
-    port: 2052
-    cipher: auto
-    uuid: 6963920a-8bb3-4f87-b231-56ccb9f9b3a7
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        host: vceu3.vpn66.eu.org
-  - &id038
-    name: 🇺🇸_US_美国_19
-    type: vmess
-    server: ns1.v2-vip.fun
-    port: 8080
-    cipher: auto
-    uuid: d3f830a2-205a-4bba-a7ca-5e87899ac04d
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /api/v3/download.getFile
-      headers:
-        host: ssrsub.v005.ssrsub.com
-  - &id039
-    name: 🇮🇪_IE_爱尔兰_2
+        host: sbl2.shabijichang.com
+  - &id026
+    name: 🇰🇷_KR_韩国->🇦🇺_AU_澳大利亚_2
     type: trojan
-    server: 18.203.118.190
+    server: 146.56.42.211
+    port: 50414
+    udp: true
+    password: 75110959-c7dd-4ee5-8a51-cd0e21c3111d
+    sni: 13-231-155-134.nhost.00cdn.com
+    skip-cert-verify: true
+    network: tcp
+  - &id027
+    name: 🇫🇷_FR_法国_2
+    type: trojan
+    server: 15.237.104.194
     port: 22222
     udp: true
     password: telegram-id-directvpn
     sni: trj.rollingnext.co.uk
     skip-cert-verify: true
     network: tcp
-  - &id040
-    name: 🇺🇸_US_美国->🇱🇺_LU_卢森堡_2
+  - &id028
+    name: 🇺🇸_US_美国_7
     type: vmess
-    server: 104.31.16.61
+    server: 104.20.231.210
+    port: 80
+    cipher: auto
+    uuid: 72d46152-ee0b-4610-efb1-ffb0f786b848
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2048
+      headers:
+        host: my.designlion.buzz
+  - &id029
+    name: 🇮🇪_IE_爱尔兰
+    type: trojan
+    server: 108.129.3.227
+    port: 22222
+    udp: true
+    password: telegram-id-privatevpns
+    sni: trj.rollingnext.co.uk
+    skip-cert-verify: true
+    network: tcp
+  - &id030
+    name: 🇨🇳_CN_中国->🇿🇦_ZA_南非
+    type: trojan
+    server: other.kunlun-ppg.com
+    port: 10843
+    udp: true
+    password: 48bad1cc-4ba4-48bd-9e5f-b73999b40ced
+    sni: alibaba-node.cn
+    skip-cert-verify: true
+    network: tcp
+  - &id031
+    name: 🇫🇷_FR_法国_3
+    type: vmess
+    server: de1-vmess.greenssh.xyz
+    port: 80
+    cipher: auto
+    uuid: 12612b4e-e426-4b7c-84bd-4a02850abb1e
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /vmess
+      headers:
+        host: de1-vmess.greenssh.xyz
+  - &id032
+    name: 🇨🇳_CN_中国->🇺🇸_US_美国_5
+    type: trojan
+    server: us.kunlun-ppg.com
+    port: 10819
+    udp: true
+    password: 48bad1cc-4ba4-48bd-9e5f-b73999b40ced
+    sni: alibaba-node.cn
+    skip-cert-verify: true
+    network: tcp
+  - &id033
+    name: 🇨🇳_CN_中国->🇺🇸_US_美国_6
+    type: trojan
+    server: us.kunlun-ppg.com
+    port: 10823
+    udp: true
+    password: 48bad1cc-4ba4-48bd-9e5f-b73999b40ced
+    sni: alibaba-node.cn
+    skip-cert-verify: true
+    network: tcp
+  - &id034
+    name: 🇺🇸_US_美国->🇮🇳_IN_印度_4
+    type: vmess
+    server: hdlb2.shabijichang.com
+    port: 80
+    cipher: auto
+    uuid: c458695d-6908-45c3-9512-e0c46418454c
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: hdlb2.shabijichang.com
+  - &id035
+    name: 🇰🇷_KR_韩国
+    type: vmess
+    server: f03.bzshare.com
     port: 443
     cipher: auto
-    uuid: 755840b0-6c4e-11ee-b132-205c6d5f5d78
+    uuid: 3f75130e-f74a-4c97-8d52-68a81cd18387
     alterId: 0
     tls: true
     skip-cert-verify: true
     network: ws
     ws-opts:
-      path: /@hopev2ray
+      path: /D26xvdqUdCpvvPTz4R
       headers:
-        host: lu.0rd.net
+        host: h19-fr.wypay.org
+  - &id036
+    name: 🇨🇳_CN_中国->🇺🇸_US_美国_7
+    type: trojan
+    server: us.kunlun-ppg.com
+    port: 10820
+    udp: true
+    password: 48bad1cc-4ba4-48bd-9e5f-b73999b40ced
+    sni: alibaba-node.cn
+    skip-cert-verify: true
+    network: tcp
+  - &id037
+    name: 🇺🇸_US_美国->🇮🇳_IN_印度_5
+    type: vmess
+    server: mm2.shabijichang.com
+    port: 80
+    cipher: auto
+    uuid: c458695d-6908-45c3-9512-e0c46418454c
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: mm2.shabijichang.com
+  - &id038
+    name: 🇺🇸_US_美国_8
+    type: vmess
+    server: lt1.992688.xyz
+    port: 2052
+    cipher: auto
+    uuid: fa5fc74f-0f0b-4221-82ba-dc7cd24e24e5
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: vcus2.vpn66.eu.org
 proxy-groups:
   - name: PROXY
     type: select
@@ -627,8 +551,6 @@ proxy-groups:
       - *id036
       - *id037
       - *id038
-      - *id039
-      - *id040
   - name: LOAD-BALANCE
     type: load-balance
     url: http://www.gstatic.com/generate_204
@@ -672,8 +594,6 @@ proxy-groups:
       - *id036
       - *id037
       - *id038
-      - *id039
-      - *id040
   - name: SELECT
     type: select
     proxies:
@@ -715,8 +635,6 @@ proxy-groups:
       - *id036
       - *id037
       - *id038
-      - *id039
-      - *id040
 rules:
   - RULE-SET,applications,DIRECT
   - DOMAIN,clash.razord.top,DIRECT
