@@ -1,3 +1,4 @@
+import hashlib
 import json
 import os
 import urllib
@@ -81,7 +82,8 @@ def save_image_url():
 
 
 def request_image(url, image_name, PROXIES=None):
-    print(("正在下载 %s" % image_name))
+    print(f"正在下载 {image_name}")
+    print(f"image url is {url}")
     try:
         os.makedirs("images", exist_ok=True)
         req = urllib.request.Request(url)
@@ -120,10 +122,12 @@ def download_image(proxy=None):
         print("cup数量：{}".format(cpu_counts))
         pool = Pool(processes=cpu_counts)
         for img in images:
-            request_image(img.image_url, img.id + ".png", PROXIES=proxy)
+            encode_image_url = img.image_url.encode()
+            md5_image_url = hashlib.md5(encode_image_url)
+            request_image(img.image_url,f"{md5_image_url.hexdigest()}.png", PROXIES=proxy)
         pool.close()
         pool.join()  # 运行完所有子进程才能顺序运行后续程序
 
 
 if __name__ == '__main__':
-    save_image_url()
+    download_image()
