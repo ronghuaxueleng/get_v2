@@ -23,6 +23,7 @@ class Info(Model):
 
 class Image(Model):
     _id = PrimaryKeyField
+    root_url = CharField()
     image_url = CharField()
     createdTime = DateTimeField(default=datetime.datetime.now)
     grabState = IntegerField(default=0, null=False)  # 抓取状态
@@ -38,7 +39,7 @@ def delete_prompt():
 
 def init_table():
     db.connect()
-    db.create_tables([Info])
+    db.create_tables([Info, Image])
 
 
 if __name__ == '__main__':
