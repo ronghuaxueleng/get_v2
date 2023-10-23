@@ -81,11 +81,10 @@ def save_image_url():
                 print(e)
 
 
-def request_image(url, image_name, PROXIES=None):
+def request_image(url, dir, image_name, PROXIES=None):
     print(f"正在下载 {image_name}")
     print(f"image url is {url}")
     try:
-        os.makedirs("images", exist_ok=True)
         req = urllib.request.Request(url)
         req.add_header('User-Agent', headers['user-agent'])
         req.add_header('Cache-Control', 'no-cache')
@@ -100,7 +99,7 @@ def request_image(url, image_name, PROXIES=None):
         resp = urllib.request.urlopen(req)
 
         respHtml = resp.read()
-        path = 'images/%s' % image_name
+        path = f'{dir}/{image_name}'
 
         binfile = open(path, "wb")
         binfile.write(respHtml)
@@ -122,9 +121,11 @@ def download_image(proxy=None):
         print("cup数量：{}".format(cpu_counts))
         pool = Pool(processes=cpu_counts)
         for img in images:
+            dir = f"images/{hashlib.md5(img.postId.encode()).hexdigest()}"
+            os.makedirs(dir, exist_ok=True)
             encode_image_url = img.image_url.encode()
             md5_image_url = hashlib.md5(encode_image_url)
-            request_image(img.image_url,f"{md5_image_url.hexdigest()}.png", PROXIES=proxy)
+            request_image(img.image_url,dir, f"{md5_image_url.hexdigest()}.png", PROXIES=proxy)
         pool.close()
         pool.join()  # 运行完所有子进程才能顺序运行后续程序
 
