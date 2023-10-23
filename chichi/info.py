@@ -14,7 +14,18 @@ class Info(Model):
     imagesCount = IntegerField(null=True)
     state = CharField(default=0)
     createdTime = DateTimeField(default=datetime.datetime.now)
-    grabState = IntegerField(default=0, null=False)# 抓取状态
+    grabState = IntegerField(default=0, null=False)  # 抓取状态
+    timestamp = DateTimeField(null=True, default=datetime.datetime.now)
+
+    class Meta:
+        database = db  # This model uses the "people.db" database.
+
+
+class Image(Model):
+    _id = PrimaryKeyField
+    image_url = CharField()
+    createdTime = DateTimeField(default=datetime.datetime.now)
+    grabState = IntegerField(default=0, null=False)  # 抓取状态
     timestamp = DateTimeField(null=True, default=datetime.datetime.now)
 
     class Meta:
@@ -32,4 +43,4 @@ def init_table():
 
 if __name__ == '__main__':
     db.connect()
-    db.create_tables([Info])
+    db.create_tables([Info, Image])

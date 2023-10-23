@@ -1,6 +1,8 @@
 import json
+import re
 
 import requests
+from bs4 import BeautifulSoup
 
 from chichi.info import Info
 
@@ -51,4 +53,10 @@ def get_url(url):
 
 
 if __name__ == '__main__':
-    get_url(root_url)
+    url = "https://www.chichi-pui.com/posts/d77f138d-0902-409d-9061-d8be06b331c5/"
+    response = requests.request("GET", url, headers=headers, data=payload)
+    text = response.text
+    soup = BeautifulSoup(text, "lxml")
+    section_container = soup.select('.js-main-image-link')
+    print(len(section_container))
+    print(section_container)
