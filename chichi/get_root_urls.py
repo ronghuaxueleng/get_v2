@@ -4,7 +4,7 @@ import re
 import requests
 from bs4 import BeautifulSoup
 
-from chichi.info import Info
+from chichi.info import Info, Image
 
 root_url = "https://www.chichi-pui.com/api/posts/following/?age_limit=ALL"
 
@@ -57,6 +57,13 @@ if __name__ == '__main__':
     response = requests.request("GET", url, headers=headers, data=payload)
     text = response.text
     soup = BeautifulSoup(text, "lxml")
-    section_container = soup.select('.js-main-image-link')
-    print(len(section_container))
-    print(section_container)
+    image_link_container = soup.select('.js-main-image-link')
+    print(len(image_link_container))
+    for image_link in image_link_container:
+        try:
+            image_data = {}
+            image_data['root_url'] = image_link.get("url")
+            image_data['image_url'] = image_link.get("href")
+            Image.insert(image_data).execute()
+        except Exception as e:
+            print(e)
