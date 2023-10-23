@@ -19,7 +19,7 @@ headers = {
     'sec-fetch-site': 'same-origin',
     'sec-fetch-mode': 'cors',
     'sec-fetch-dest': 'empty',
-    'referer': 'https://www.chichi-pui.com/posts/following/?age_limit=ALL&p=3',
+    'referer': 'https://www.chichi-pui.com',
     'accept-language': 'zh-CN,zh;q=0.9',
     'cookie': 'GMORW_UID=121740c4b3a2541727fcd68a910298dcdc; GMOSSP_USER=RhF8gLmB8VlhSwhE; _ga=GA1.1.266257206.1689174092; cto_bundle=Q_1sc190TDVrR2ZaOTdQbDBSJTJCaFdlUVM2N1R4VG4yNyUyQllSZjdudFdzZWJuJTJCJTJGVGxBUUJvMTN2d3BtN0RPV0twd1FvOG5Ic1ZybVIzUnFTaXY0WWNSRE5vSG45RDR4ZTFCdW1SNXhOOVMyJTJCVEI2RiUyRmFZWkh2eFFSRlp4S2VBNGJETFBNd1ExV0lFYUxaRWFwS2ZHZSUyRjJ2QTA2USUzRCUzRA; _ga_4WN5YTWQFK=GS1.1.1689254106.2.1.1689256076.0.0.0; csrftoken=aM1r7YVBR7W8H8vNwGdhEfhD9MnO0r0U; csrf_cookie=n2XvDIiH4lWWFh9K1OJZLqSA34fCxnvp; session_cookie=9i6e6tm3o25mc9qozng7r37vhak5apdi'
 }
