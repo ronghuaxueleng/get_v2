@@ -8,7 +8,7 @@ db = SqliteDatabase('infos.db')
 
 class Info(Model):
     _id = PrimaryKeyField
-    postId = CharField()
+    postId = CharField(unique=True)
     userName = CharField()
     url = CharField(null=True)
     imagesCount = IntegerField(null=True)

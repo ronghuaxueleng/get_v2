@@ -26,6 +26,7 @@ headers = {
 
 
 def get_url(url):
+    print('url is :' + url)
     response = requests.request("GET", url, headers=headers, data=payload)
     html = response.text
     res_json = json.loads(html)
@@ -43,8 +44,10 @@ def get_url(url):
             except Exception as e:
                 print(e)
                 pass
-    if next_url is not None:
+    try:
         get_url(next_url)
+    except Exception as e:
+        print(e)
 
 
 if __name__ == '__main__':
