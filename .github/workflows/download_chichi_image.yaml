@@ -1,0 +1,34 @@
+name: 从chichi-pui下载图片
+on:
+  workflow_dispatch:
+    watch:
+      types: started
+    repository_dispatch:
+      types: get_v2ray
+permissions:
+  contents: write
+jobs:
+  get_v2ray:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 检出代码
+        uses: actions/checkout@v2
+      - name: '安装python环境'
+        uses: actions/setup-python@v1
+        with:
+          python-version: 3.7
+      - name: '安装依赖'
+        run: |
+          pip install -r requirements.txt
+      - name: 下载图片
+        run: |
+        working-directory: ./chichi
+          cd chichi
+          python3 get_root_urls.py
+      - name: 压缩图片目录
+        run: zip -r chichi.zip ./images
+      - name: 上传构建工件
+        uses: actions/upload-artifact@v2
+        with:
+          name: chichi-picture
+          path: chichi.zip
