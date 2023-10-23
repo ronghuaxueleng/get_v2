@@ -7,7 +7,7 @@ from multiprocessing import cpu_count, Pool
 import requests
 from bs4 import BeautifulSoup
 
-from chichi.info import Info, Image
+from info import Info, Image
 
 domain = "https://www.chichi-pui.com"
 root_url = f"{domain}/api/posts/following/?age_limit=ALL"
