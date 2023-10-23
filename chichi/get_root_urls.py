@@ -70,7 +70,7 @@ def save_image_url():
                 for image_link in image_link_container:
                     try:
                         image_data = {}
-                        image_data['root_url'] = url
+                        image_data['postId'] = post.postId
                         image_data['image_url'] = image_link.get("href")
                         Image.insert(image_data).execute()
                     except Exception as e:

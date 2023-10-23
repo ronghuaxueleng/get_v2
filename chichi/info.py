@@ -23,7 +23,7 @@ class Info(Model):
 
 class Image(Model):
     _id = PrimaryKeyField
-    root_url = CharField()
+    postId = CharField()
     image_url = CharField(unique=True)
     createdTime = DateTimeField(default=datetime.datetime.now)
     grabState = IntegerField(default=0, null=False)  # 抓取状态
