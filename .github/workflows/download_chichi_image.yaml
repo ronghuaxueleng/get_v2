@@ -9,8 +9,6 @@ permissions:
   contents: write
 jobs:
   get_v2ray:
-    env:
-      PYTHONPATH: chichi
     runs-on: ubuntu-latest
     steps:
       - name: 检出代码
@@ -21,6 +19,7 @@ jobs:
           python-version: 3.7
       - name: '安装依赖'
         run: |
+          cd chichi
           pip install -r requirements.txt
       - name: 下载图片
         run: |
