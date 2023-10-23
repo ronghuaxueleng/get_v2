@@ -19,10 +19,10 @@ jobs:
           python-version: 3.7
       - name: '安装依赖'
         run: |
-          cd chichi
           pip install -r requirements.txt
       - name: 下载图片
         run: |
+          cd chichi
           python3 get_root_urls.py
       - name: 压缩图片目录
         run: zip -r chichi.zip ./images
