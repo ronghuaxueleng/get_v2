@@ -23,7 +23,6 @@ jobs:
       - name: 下载图片
         run: |
         working-directory: ./chichi
-          cd chichi
           python3 get_root_urls.py
       - name: 压缩图片目录
         run: zip -r chichi.zip ./images
