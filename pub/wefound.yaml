@@ -8,21 +8,35 @@ proxies:
   - &id001
     name: 🇺🇸_US_美国_1
     type: vmess
-    server: fhc2.shabijichang.com
-    port: 80
+    server: 206.168.190.219
+    port: 2082
     cipher: auto
-    uuid: c458695d-6908-45c3-9512-e0c46418454c
+    uuid: e31ca750-71f7-11ee-b920-1239d0255272
     alterId: 0
     tls: false
     skip-cert-verify: true
     network: ws
     ws-opts:
-      headers:
-        host: fhc2.shabijichang.com
+      path: /vmws
   - &id002
-    name: 🇺🇸_US_美国->🇬🇧_GB_英国
+    name: 🇺🇸_US_美国->🇩🇪_DE_德国
     type: vmess
-    server: ld2.shabijichang.com
+    server: 192.203.230.229
+    port: 2052
+    cipher: auto
+    uuid: a4c481f0-1cf1-47b2-bf66-ab563daa29ba
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /public?ed=2048
+      headers:
+        host: de3.biqibao.site
+  - &id003
+    name: 🇺🇸_US_美国_2
+    type: vmess
+    server: 104.21.75.246
     port: 80
     cipher: auto
     uuid: c458695d-6908-45c3-9512-e0c46418454c
@@ -33,9 +47,9 @@ proxies:
     ws-opts:
       path: /
       headers:
-        host: ld2.shabijichang.com
-  - &id003
-    name: 🇺🇸_US_美国_2
+        host: sbl2.shabijichang.com
+  - &id004
+    name: 🇺🇸_US_美国_3
     type: vmess
     server: 107.167.16.85
     port: 443
@@ -49,35 +63,36 @@ proxies:
       path: /path/080822272914
       headers:
         host: www.51109057.xyz
-  - &id004
-    name: 🇺🇸_US_美国_3
-    type: vmess
-    server: br.gy.youxuan-1.66688888.xyz
-    port: 80
-    cipher: auto
-    uuid: efcb7d7c-c582-46f5-eeff-0e553342528d
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /tg@hkaa0
-      headers:
-        host: br.gy.youxuan-1.66688888.xyz
   - &id005
-    name: 🇬🇧_GB_英国
+    name: 🇵🇰_PK_巴基斯坦
     type: trojan
-    server: 13.41.180.122
-    port: 22222
+    server: 
+      hk1-reality.fp3kemyh-cm4s-2hak-2gb9-w3534umy2sq5.9d8f269f96b25232-759cbb36d6548597.kaufen
+    port: 443
     udp: true
-    password: telegram-id-privatevpns
-    sni: trj.rollingnext.co.uk
+    password: 7e23957d-535a-4dc6-9482-e6f44518da87
+    sni: 13-231-155-134.nhost.00cdn.com
     skip-cert-verify: true
     network: tcp
   - &id006
-    name: 🇺🇸_US_美国_4
+    name: 🇺🇸_US_美国->🇳🇱_NL_荷兰
     type: vmess
-    server: sbl2.shabijichang.com
+    server: 156.225.67.234
+    port: 30000
+    cipher: auto
+    uuid: 93503dd5-245a-4eb1-ae2a-57ab9f2b3c29
+    alterId: 64
+    tls: true
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /path/1698239888914
+      headers:
+        host: www.47734647.xyz
+  - &id007
+    name: 🇺🇸_US_美国->🇮🇳_IN_印度_1
+    type: vmess
+    server: hdlb2.shabijichang.com
     port: 80
     cipher: auto
     uuid: c458695d-6908-45c3-9512-e0c46418454c
@@ -88,8 +103,38 @@ proxies:
     ws-opts:
       path: /
       headers:
-        host: sbl2.shabijichang.com
-  - &id007
+        host: hdlb2.shabijichang.com
+  - &id008
+    name: 🇺🇸_US_美国->🇮🇳_IN_印度_2
+    type: vmess
+    server: 104.26.8.44
+    port: 80
+    cipher: auto
+    uuid: 5180444a-4756-43b4-960b-49eb9052e4e8
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: a.109420.xyz
+  - &id009
+    name: 🇺🇸_US_美国_4
+    type: vmess
+    server: cfcdn1.sanfencdn9.com
+    port: 2052
+    cipher: auto
+    uuid: ece26ec7-bcfe-4845-8cf1-3d93abc19ce1
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /video/nYAwpBbW
+      headers:
+        host: us5a3a71b5c.pkmkwvxqnn.xyz
+  - &id010
     name: 🇺🇸_US_美国_5
     type: vmess
     server: jd2.shabijichang.com
@@ -104,48 +149,25 @@ proxies:
       path: /
       headers:
         host: jd2.shabijichang.com
-  - &id008
-    name: 🇩🇪_DE_德国
-    type: trojan
-    server: 18.153.119.231
-    port: 22222
-    udp: true
-    password: telegram-id-directvpn
-    sni: trj.rollingnext.co.uk
-    skip-cert-verify: true
-    network: tcp
-  - &id009
-    name: 🇺🇸_US_美国_6
+  - &id011
+    name: 🇺🇸_US_美国->🇮🇳_IN_印度_3
     type: vmess
-    server: 45.199.138.186
-    port: 30000
+    server: 104.17.18.26
+    port: 80
     cipher: auto
-    uuid: 4ec0ae62-de09-4029-904a-0313d4628ecf
-    alterId: 64
-    tls: true
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /path/1696682720138
-      headers:
-        host: www.19229362.xyz
-  - &id010
-    name: 🇨🇦_CA_加拿大
-    type: vmess
-    server: cadld2.gophers.gay
-    port: 21106
-    cipher: auto
-    uuid: 6713cd03-2cd4-49e9-9d8a-b768ee0a72fb
+    uuid: 5180444a-4756-43b4-960b-49eb9052e4e8
     alterId: 0
     tls: false
     skip-cert-verify: true
     network: ws
     ws-opts:
       path: /
-  - &id011
-    name: 🇺🇸_US_美国->🇩🇪_DE_德国
+      headers:
+        host: a.109420.xyz
+  - &id012
+    name: 🇺🇸_US_美国->🇮🇳_IN_印度_4
     type: vmess
-    server: flkf2.shabijichang.com
+    server: mm2.shabijichang.com
     port: 80
     cipher: auto
     uuid: c458695d-6908-45c3-9512-e0c46418454c
@@ -156,8 +178,48 @@ proxies:
     ws-opts:
       path: /
       headers:
-        host: flkf2.shabijichang.com
-  - &id012
+        host: mm2.shabijichang.com
+  - &id013
+    name: 🇺🇸_US_美国->🇸🇦_SA_沙特阿拉伯
+    type: vmess
+    server: jd3.shabijichang.com
+    port: 80
+    cipher: auto
+    uuid: c458695d-6908-45c3-9512-e0c46418454c
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: jd3.shabijichang.com
+  - &id014
+    name: 🇩🇪_DE_德国
+    type: trojan
+    server: 3.120.63.163
+    port: 22222
+    udp: true
+    password: telegram-id-directvpn
+    sni: trj.rollingnext.co.uk
+    skip-cert-verify: true
+    network: tcp
+  - &id015
+    name: 🇺🇸_US_美国_6
+    type: vmess
+    server: wnd3.shabijichang.com
+    port: 80
+    cipher: auto
+    uuid: c458695d-6908-45c3-9512-e0c46418454c
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: wnd3.shabijichang.com
+  - &id016
     name: 🇺🇸_US_美国_7
     type: vmess
     server: wnd2.shabijichang.com
@@ -172,39 +234,28 @@ proxies:
       path: /
       headers:
         host: wnd2.shabijichang.com
-  - &id013
-    name: 🇺🇸_US_美国->🇮🇳_IN_印度
-    type: vmess
-    server: mm3.shabijichang.com
-    port: 80
-    cipher: auto
-    uuid: c458695d-6908-45c3-9512-e0c46418454c
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        host: mm3.shabijichang.com
-  - &id014
+  - &id017
     name: 🇺🇸_US_美国_8
     type: vmess
-    server: 195.123.240.170
-    port: 41916
+    server: 156.225.67.104
+    port: 30000
     cipher: auto
-    uuid: 12772df9-485f-413c-edbf-3f562d61de4e
-    alterId: 0
-    tls: false
+    uuid: 29a5d48e-24f1-48fd-a5e1-9a46cb31032f
+    alterId: 64
+    tls: true
     skip-cert-verify: true
-    network: tcp
-  - &id015
-    name: 🇺🇸_US_美国_9
+    network: ws
+    ws-opts:
+      path: /path/1698239888914
+      headers:
+        host: www.41758112.xyz
+  - &id018
+    name: 🇨🇳_CN_中国
     type: vmess
-    server: 104.21.75.246
+    server: 124.220.57.75
     port: 80
     cipher: auto
-    uuid: c458695d-6908-45c3-9512-e0c46418454c
+    uuid: 1b3dd95b-f6dc-4f20-97aa-3b365358419c
     alterId: 0
     tls: false
     skip-cert-verify: true
@@ -212,7 +263,7 @@ proxies:
     ws-opts:
       path: /
       headers:
-        host: sbl2.shabijichang.com
+        host: 124.220.57.75
 proxy-groups:
   - name: PROXY
     type: select
@@ -254,6 +305,9 @@ proxy-groups:
       - *id013
       - *id014
       - *id015
+      - *id016
+      - *id017
+      - *id018
   - name: LOAD-BALANCE
     type: load-balance
     url: http://www.gstatic.com/generate_204
@@ -274,6 +328,9 @@ proxy-groups:
       - *id013
       - *id014
       - *id015
+      - *id016
+      - *id017
+      - *id018
   - name: SELECT
     type: select
     proxies:
@@ -292,6 +349,9 @@ proxy-groups:
       - *id013
       - *id014
       - *id015
+      - *id016
+      - *id017
+      - *id018
 rules:
   - RULE-SET,applications,DIRECT
   - DOMAIN,clash.razord.top,DIRECT
