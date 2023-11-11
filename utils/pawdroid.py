@@ -13,7 +13,7 @@ def get_content():
 
     pawdroid = os.path.join("pawdroid")
     yamlUtils = YamlUtils(pawdroid)
-    yamlUtils.clone_repo("https://ghproxy.com/https://github.com/Pawdroid/Free-servers.git")
+    yamlUtils.clone_repo("https://github.com/Pawdroid/Free-servers.git")
     with open(os.path.join(pawdroid, "README.md"), "r", encoding='utf-8') as f:
         content = f.read()
         urls = re.findall(r"https://shadowshare.v2cross.com/publicserver/servers/temp/\w+", content)
