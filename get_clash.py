@@ -1,8 +1,10 @@
 import os
 import time
 import shutil
+
 from utils.yamlUtils import YamlUtils
 from utils.jiang import get_content as jiang_content
+from utils.qilin2 import get_content as qilin_content
 from utils.cfmem import get_content as cfmem_content
 from utils.wefound import get_content as wefound_content
 from utils.pawdroid import get_content as pawdroid_content
@@ -42,6 +44,7 @@ cfmem_content()
 wefound_content()
 pawdroid_content()
 mattkaydiary_content()
+qilin_content()
 
 
 pub = os.path.join("pub")
