@@ -4,40 +4,152 @@ allow-lan: true
 mode: Rule
 log-level: info
 external-controller: 0.0.0.0:9090
-proxies: []
+proxies:
+  - name: 🇺🇸_US_美国->🇮🇳_IN_印度
+    type: vmess
+    server: mm3.shabijichang.com
+    port: 80
+    cipher: auto
+    uuid: c458695d-6908-45c3-9512-e0c46418454c
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: mm3.shabijichang.com
+  - name: 🇧🇪_BE_比利时
+    type: vmess
+    server: 37.120.236.251
+    port: 443
+    cipher: auto
+    uuid: ed162daa-ee20-44ed-830f-b522c501387a
+    alterId: 64
+    tls: true
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /path/143013092425
+      headers:
+        host: www.42088326.xyz
+  - name: 🇺🇸_US_美国->🇬🇧_GB_英国
+    type: vmess
+    server: ld2.shabijichang.com
+    port: 80
+    cipher: auto
+    uuid: c458695d-6908-45c3-9512-e0c46418454c
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: ld2.shabijichang.com
+  - name: 🇨🇳_CN_中国->🇬🇧_GB_英国
+    type: vmess
+    server: 112.29.94.23
+    port: 49223
+    cipher: auto
+    uuid: 21a9bff2-72de-4e62-93ff-8b159f66d875
+    alterId: 64
+    tls: false
+    skip-cert-verify: true
+    network: tcp
 proxy-groups:
-  - name: PROXY
+  - name: 🚀 节点选择
     type: select
     proxies:
-      - URL-TEST
-      - LOAD-BALANCE
-      - SELECT
-      - DIRECT
-  - name: OTHER
-    type: select
-    proxies:
-      - PROXY
-      - DIRECT
-  - name: AD
-    type: select
-    proxies:
-      - REJECT
-      - DIRECT
-      - PROXY
-  - name: URL-TEST
+      - 🇺🇸_US_美国->🇮🇳_IN_印度
+      - 🇧🇪_BE_比利时
+      - 🇺🇸_US_美国->🇬🇧_GB_英国
+      - 🇨🇳_CN_中国->🇬🇧_GB_英国
+  - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
-    interval: 600
-    lazy: true
-    tolerance: 100
-    proxies: []
-  - name: LOAD-BALANCE
-    type: load-balance
-    url: http://www.gstatic.com/generate_204
-    interval: 600
-    proxies: []
-  - name: SELECT
+    interval: 300
+    tolerance: 50
+    proxies:
+      - 🇺🇸_US_美国->🇮🇳_IN_印度
+      - 🇧🇪_BE_比利时
+      - 🇺🇸_US_美国->🇬🇧_GB_英国
+      - 🇨🇳_CN_中国->🇬🇧_GB_英国
+  - name: 🌍 国外媒体
     type: select
-    proxies: []
-rules: []
+    proxies:
+      - 🇺🇸_US_美国->🇮🇳_IN_印度
+      - 🇧🇪_BE_比利时
+      - 🇺🇸_US_美国->🇬🇧_GB_英国
+      - 🇨🇳_CN_中国->🇬🇧_GB_英国
+  - name: 📲 电报信息
+    type: select
+    proxies:
+      - 🇺🇸_US_美国->🇮🇳_IN_印度
+      - 🇧🇪_BE_比利时
+      - 🇺🇸_US_美国->🇬🇧_GB_英国
+      - 🇨🇳_CN_中国->🇬🇧_GB_英国
+  - name: Ⓜ️ 微软服务
+    type: select
+    proxies:
+      - 🇺🇸_US_美国->🇮🇳_IN_印度
+      - 🇧🇪_BE_比利时
+      - 🇺🇸_US_美国->🇬🇧_GB_英国
+      - 🇨🇳_CN_中国->🇬🇧_GB_英国
+  - name: 🍎 苹果服务
+    type: select
+    proxies:
+      - 🇺🇸_US_美国->🇮🇳_IN_印度
+      - 🇧🇪_BE_比利时
+      - 🇺🇸_US_美国->🇬🇧_GB_英国
+      - 🇨🇳_CN_中国->🇬🇧_GB_英国
+  - name: 🎯 全球直连
+    type: select
+    proxies:
+      - DIRECT
+      - REJECT
+  - name: 🛑 全球拦截
+    type: select
+    proxies:
+      - DIRECT
+      - REJECT
+  - name: 🍃 应用净化
+    type: select
+    proxies:
+      - DIRECT
+      - REJECT
+  - name: 🆎 AdBlock
+    type: select
+    proxies:
+      - DIRECT
+      - REJECT
+  - name: 🐟 漏网之鱼
+    type: select
+    proxies:
+      - 🇺🇸_US_美国->🇮🇳_IN_印度
+      - 🇧🇪_BE_比利时
+      - 🇺🇸_US_美国->🇬🇧_GB_英国
+      - 🇨🇳_CN_中国->🇬🇧_GB_英国
+rules:
+  - DOMAIN-SUFFIX,cff.pw,🚀 节点选择
+  - GEOIP,CN,🎯 全球直连
+  - RULE-SET,ChinaDomain,🎯 全球直连
+  - RULE-SET,BanAD,🛑 全球拦截
+  - DOMAIN-SUFFIX,v2rayse.com,🚀 节点选择
+  - RULE-SET,ChinaCompanyIp,🎯 全球直连
+  - RULE-SET,ProxyLite,🚀 节点选择
+  - RULE-SET,Apple,🍎 苹果服务
+  - RULE-SET,BanEasyListChina,🆎 AdBlock
+  - DOMAIN-SUFFIX,cfmem.com,🚀 节点选择
+  - RULE-SET,GoogleCN,🎯 全球直连
+  - RULE-SET,BanEasyList,🆎 AdBlock
+  - RULE-SET,SteamCN,🎯 全球直连
+  - MATCH,🐟 漏网之鱼把Clash配置文件粘贴在这里点「提取模版」可以把配置文件变成模版文件
+  - RULE-SET,Microsoft,Ⓜ️ 微软服务
+  - RULE-SET,LocalAreaNetwork,🎯 全球直连
+  - RULE-SET,BanProgramAD,🍃 应用净化
+  - RULE-SET,Telegram,📲 电报信息
+  - DOMAIN-SUFFIX,vpnse.org,🚀 节点选择
+  - RULE-SET,BanEasyPrivacy,🆎 AdBlock
+  - RULE-SET,ProxyMedia,🌍 国外媒体
 mixed-port: 7890
