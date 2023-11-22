@@ -6,308 +6,408 @@ log-level: info
 external-controller: 0.0.0.0:9090
 proxies:
   - &id001
-    name: 🇺🇸_US_美国->🇧🇷_BR_巴西
-    type: vmess
-    server: sbl4.shabijichang.com
-    port: 80
-    cipher: auto
-    uuid: c458695d-6908-45c3-9512-e0c46418454c
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        host: sbl4.shabijichang.com
-  - &id002
     name: 🇫🇷_FR_法国_1
     type: ss
-    server: 162.19.59.165
+    server: 51.159.210.173
+    port: 443
+    password: asdKkaskJKfnsa
+    cipher: aes-256-cfb
+  - &id002
+    name: 🇬🇧_GB_英国_1
+    type: ss
+    server: 198.244.228.191
     port: 443
     password: asdKkaskJKfnsa
     cipher: aes-256-cfb
   - &id003
-    name: 🇫🇷_FR_法国_2
+    name: 🇬🇧_GB_英国_2
     type: ss
-    server: 162.19.59.162
+    server: 198.244.231.24
     port: 443
     password: asdKkaskJKfnsa
     cipher: aes-256-cfb
   - &id004
-    name: 🇫🇷_FR_法国_3
-    type: ss
-    server: 162.19.204.83
+    name: 🇯🇵_JP_日本->🇺🇸_US_美国_1
+    type: vmess
+    server: aa9.wuxianliulianng.xyz
     port: 443
-    password: asdKkaskJKfnsa
-    cipher: aes-256-cfb
+    cipher: auto
+    uuid: b0e43362-72b7-49ac-8eb6-fff69e07cfae
+    alterId: 0
+    tls: true
+    skip-cert-verify: true
+    servername: golinkwuxian.top
+    network: ws
+    ws-opts:
+      path: /apple
+      headers:
+        host: 555.golinkwuxian.top
   - &id005
-    name: 🇫🇷_FR_法国_4
-    type: ss
-    server: 37.59.21.132
+    name: 🇯🇵_JP_日本->🇺🇸_US_美国_2
+    type: vmess
+    server: aa1.wuxianliulianng.xyz
     port: 443
-    password: asdKkaskJKfnsa
-    cipher: aes-256-cfb
+    cipher: auto
+    uuid: b0e43362-72b7-49ac-8eb6-fff69e07cfae
+    alterId: 0
+    tls: true
+    skip-cert-verify: true
+    servername: golinkwuxian.top
+    network: ws
+    ws-opts:
+      path: /apple
+      headers:
+        host: 111.golinkwuxian.top
   - &id006
-    name: 🇫🇷_FR_法国_5
-    type: ss
-    server: 162.19.204.81
+    name: 🇺🇸_US_美国_1
+    type: vmess
+    server: c1.wuxianliulianng.xyz
     port: 443
-    password: asdKkaskJKfnsa
-    cipher: aes-256-cfb
+    cipher: auto
+    uuid: b0e43362-72b7-49ac-8eb6-fff69e07cfae
+    alterId: 0
+    tls: true
+    skip-cert-verify: true
+    servername: golinkwuxian.top
+    network: ws
+    ws-opts:
+      path: /apple
+      headers:
+        host: 111.golinkwuxian.top
   - &id007
-    name: 🇷🇺_RU_俄罗斯联邦
-    type: ss
-    server: 5.35.34.107
-    port: 55990
-    password: tOwOyvlXiY5ATJAUOpXNPN
-    cipher: chacha20-ietf-poly1305
+    name: 🇺🇸_US_美国->🇳🇱_NL_荷兰
+    type: vmess
+    server: 156.225.67.96
+    port: 443
+    cipher: auto
+    uuid: 5a4d69ad-20a9-4941-b223-87bbd09f5f52
+    alterId: 64
+    tls: true
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /path/1696251693048
   - &id008
-    name: 🇫🇷_FR_法国_6
-    type: ss
-    server: 57.129.1.20
+    name: 🇬🇧_GB_英国->🇺🇸_US_美国
+    type: vmess
+    server: aa2.wuxianliulianng.xyz
     port: 443
-    password: asdKkaskJKfnsa
-    cipher: aes-256-cfb
+    cipher: auto
+    uuid: b0e43362-72b7-49ac-8eb6-fff69e07cfae
+    alterId: 0
+    tls: true
+    skip-cert-verify: true
+    servername: golinkwuxian.top
+    network: ws
+    ws-opts:
+      path: /apple
+      headers:
+        host: 111.golinkwuxian.top
   - &id009
-    name: 🇫🇷_FR_法国_7
-    type: ss
-    server: 51.158.200.160
-    port: 443
-    password: asdKkaskJKfnsa
-    cipher: aes-256-cfb
+    name: 🇺🇸_US_美国_2
+    type: vmess
+    server: sbl2.shabijichang.com
+    port: 80
+    cipher: auto
+    uuid: c458695d-6908-45c3-9512-e0c46418454c
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: sbl2.shabijichang.com
   - &id010
-    name: 🇫🇷_FR_法国_8
+    name: 🇺🇸_US_美国_3
     type: ss
-    server: 146.59.110.240
-    port: 443
-    password: asdKkaskJKfnsa
+    server: 74.121.191.98
+    port: 989
+    password: f8f7aCzcPKbsF8p3
     cipher: aes-256-cfb
   - &id011
-    name: 🇫🇷_FR_法国_9
+    name: 🇦🇺_AU_澳大利亚
     type: ss
-    server: 51.159.222.35
-    port: 443
-    password: asdKkaskJKfnsa
-    cipher: aes-256-cfb
+    server: au.doushimeng.com
+    port: 24652
+    password: a6e1ab27-ca7c-4836-b0ba-991b04958c9a
+    cipher: chacha20-ietf-poly1305
   - &id012
-    name: 🇫🇷_FR_法国_10
+    name: 🇺🇸_US_美国_4
     type: ss
-    server: 51.158.202.187
-    port: 443
-    password: asdKkaskJKfnsa
-    cipher: aes-256-cfb
+    server: us.doushimeng.com
+    port: 22853
+    password: a6e1ab27-ca7c-4836-b0ba-991b04958c9a
+    cipher: chacha20-ietf-poly1305
   - &id013
-    name: 🇫🇷_FR_法国_11
+    name: 🇫🇷_FR_法国_2
     type: ss
-    server: 51.158.203.4
+    server: 51.158.195.96
     port: 443
     password: asdKkaskJKfnsa
     cipher: aes-256-cfb
   - &id014
-    name: 🇫🇷_FR_法国_12
+    name: 🇫🇷_FR_法国_3
     type: ss
-    server: 51.158.204.70
-    port: 443
+    server: 51.158.195.96
+    port: 110
     password: asdKkaskJKfnsa
     cipher: aes-256-cfb
   - &id015
-    name: 🇫🇷_FR_法国_13
+    name: 🇫🇷_FR_法国_4
     type: ss
-    server: 57.129.1.21
-    port: 443
+    server: 51.158.195.96
+    port: 80
     password: asdKkaskJKfnsa
     cipher: aes-256-cfb
   - &id016
-    name: 🇫🇷_FR_法国_14
+    name: 🇷🇺_RU_俄罗斯联邦
     type: ss
-    server: 51.158.200.49
-    port: 443
-    password: asdKkaskJKfnsa
-    cipher: aes-256-cfb
+    server: 62.113.114.116
+    port: 42320
+    password: dhXDSrO3HnkhOZWxNOrvII
+    cipher: chacha20-ietf-poly1305
   - &id017
-    name: 🇫🇷_FR_法国_15
-    type: ss
-    server: 146.59.110.168
-    port: 443
-    password: asdKkaskJKfnsa
-    cipher: aes-256-cfb
+    name: 🇨🇳_CN_中国->🇺🇸_US_美国_1
+    type: ssr
+    server: 112.16.244.101
+    port: 5501
+    password: renzhecloud
+    cipher: chacha20-ietf
+    obfs: plain
+    protocol: auth_aes128_sha1
+    obfs-param: TG@wangcai_1
+    protocol-param: 277272:LzSb2q
   - &id018
-    name: 🇫🇷_FR_法国_16
-    type: ss
-    server: 51.158.200.45
-    port: 443
-    password: asdKkaskJKfnsa
-    cipher: aes-256-cfb
+    name: 🇨🇳_CN_中国->🇺🇸_US_美国_2
+    type: ssr
+    server: 112.16.244.101
+    port: 5500
+    password: renzhecloud
+    cipher: chacha20-ietf
+    obfs: plain
+    protocol: auth_aes128_sha1
+    obfs-param: TG@wangcai_1
+    protocol-param: 277272:LzSb2q
   - &id019
-    name: 🇫🇷_FR_法国_17
-    type: ss
-    server: 51.158.200.50
-    port: 443
-    password: asdKkaskJKfnsa
-    cipher: aes-256-cfb
+    name: 🇨🇳_CN_中国->🇺🇸_US_美国_3
+    type: ssr
+    server: 112.16.244.108
+    port: 5503
+    password: renzhecloud
+    cipher: chacha20-ietf
+    obfs: plain
+    protocol: auth_aes128_sha1
+    obfs-param: TG@wangcai_1
+    protocol-param: 277272:LzSb2q
   - &id020
-    name: 🇫🇷_FR_法国_18
-    type: ss
-    server: 51.158.202.188
-    port: 443
-    password: asdKkaskJKfnsa
-    cipher: aes-256-cfb
+    name: 🇨🇳_CN_中国->🇺🇸_US_美国_4
+    type: ssr
+    server: cm01.newcome.xyz
+    port: 7709
+    password: jFa4F1
+    cipher: chacha20-ietf
+    obfs: plain
+    protocol: auth_aes128_sha1
+    obfs-param: TG@wangcai_1
+    protocol-param: 84263:3gj7aB
   - &id021
-    name: 🇫🇷_FR_法国_19
-    type: ss
-    server: 141.95.126.100
-    port: 443
-    password: asdKkaskJKfnsa
-    cipher: aes-256-cfb
+    name: 🇨🇳_CN_中国->🇺🇸_US_美国_5
+    type: ssr
+    server: cm01.newcome.xyz
+    port: 7701
+    password: jFa4F1
+    cipher: chacha20-ietf
+    obfs: plain
+    protocol: auth_aes128_sha1
+    obfs-param: TG@wangcai_1
+    protocol-param: 84263:3gj7aB
   - &id022
-    name: 🇫🇷_FR_法国_20
-    type: ss
-    server: 51.158.203.2
-    port: 443
-    password: asdKkaskJKfnsa
-    cipher: aes-256-cfb
+    name: 🇨🇳_CN_中国->🇺🇸_US_美国_6
+    type: ssr
+    server: cm01.newcome.xyz
+    port: 7708
+    password: jFa4F1
+    cipher: chacha20-ietf
+    obfs: plain
+    protocol: auth_aes128_sha1
+    obfs-param: TG@wangcai_1
+    protocol-param: 84263:3gj7aB
   - &id023
-    name: 🇫🇷_FR_法国_21
-    type: ss
-    server: 51.158.200.161
-    port: 443
-    password: asdKkaskJKfnsa
-    cipher: aes-256-cfb
+    name: 🇨🇳_CN_中国->🇺🇸_US_美国_7
+    type: ssr
+    server: cm01.newcome.xyz
+    port: 7704
+    password: jFa4F1
+    cipher: chacha20-ietf
+    obfs: plain
+    protocol: auth_aes128_sha1
+    obfs-param: TG@wangcai_1
+    protocol-param: 84263:3gj7aB
   - &id024
-    name: 🇩🇪_DE_德国_1
-    type: vmess
-    server: 5.78.70.196
-    port: 3389
-    cipher: auto
-    uuid: 9c050a86-d612-48f1-ec32-e573df08a1b7
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: http
+    name: 🇨🇳_CN_中国->🇺🇸_US_美国_8
+    type: ssr
+    server: cm01.newcome.xyz
+    port: 7700
+    password: jFa4F1
+    cipher: chacha20-ietf
+    obfs: plain
+    protocol: auth_aes128_sha1
+    obfs-param: TG@wangcai_1
+    protocol-param: 84263:3gj7aB
   - &id025
-    name: 🇩🇪_DE_德国_2
-    type: vmess
-    server: poshtibani.chixixchi.com
-    port: 53298
-    cipher: auto
-    uuid: 166bdbd6-098f-4372-fec4-686e8c8d1ce8
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: http
+    name: 🇨🇳_CN_中国->🇺🇸_US_美国_9
+    type: ssr
+    server: cm01.newcome.xyz
+    port: 7703
+    password: jFa4F1
+    cipher: chacha20-ietf
+    obfs: plain
+    protocol: auth_aes128_sha1
+    obfs-param: TG@wangcai_1
+    protocol-param: 84263:3gj7aB
   - &id026
-    name: 🇺🇸_US_美国_1
-    type: vmess
-    server: 5.161.87.31
-    port: 3389
-    cipher: auto
-    uuid: 9c050a86-d612-48f1-ec32-e573df08a1b7
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: http
+    name: 🇨🇳_CN_中国->🇺🇸_US_美国_10
+    type: ssr
+    server: 120.240.88.111
+    port: 7707
+    password: jFa4F1
+    cipher: chacha20-ietf
+    obfs: plain
+    protocol: auth_aes128_sha1
+    obfs-param: TG@wangcai_1
+    protocol-param: 84263:3gj7aB
   - &id027
-    name: 🇺🇸_US_美国_2
-    type: vmess
-    server: 5.161.106.178
-    port: 3389
-    cipher: auto
-    uuid: 9c050a86-d612-48f1-ec32-e573df08a1b7
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: http
+    name: 🇨🇳_CN_中国->🇺🇸_US_美国_11
+    type: ssr
+    server: 120.240.88.111
+    port: 7701
+    password: jFa4F1
+    cipher: chacha20-ietf
+    obfs: plain
+    protocol: auth_aes128_sha1
+    obfs-param: TG@wangcai_1
+    protocol-param: 84263:3gj7aB
   - &id028
-    name: 🇺🇸_US_美国_3
-    type: vmess
-    server: 5.161.86.165
-    port: 3389
-    cipher: auto
-    uuid: 9c050a86-d612-48f1-ec32-e573df08a1b7
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: http
+    name: 🇨🇳_CN_中国->🇺🇸_US_美国_12
+    type: ssr
+    server: 120.240.88.111
+    port: 7706
+    password: jFa4F1
+    cipher: chacha20-ietf
+    obfs: plain
+    protocol: auth_aes128_sha1
+    obfs-param: TG@wangcai_1
+    protocol-param: 84263:3gj7aB
   - &id029
-    name: 🇧🇷_BR_巴西
+    name: 🇨🇳_CN_中国->🇺🇸_US_美国_13
+    type: ssr
+    server: 120.240.88.111
+    port: 7709
+    password: jFa4F1
+    cipher: chacha20-ietf
+    obfs: plain
+    protocol: auth_aes128_sha1
+    obfs-param: TG@wangcai_1
+    protocol-param: 84263:3gj7aB
+  - &id030
+    name: 🇨🇳_CN_中国->🇺🇸_US_美国_14
+    type: ssr
+    server: pr3.jymzffbquawl.com
+    port: 5501
+    password: renzhecloud
+    cipher: chacha20-ietf
+    obfs: plain
+    protocol: auth_aes128_sha1
+    obfs-param: TG@wangcai_1
+    protocol-param: 277272:LzSb2q
+  - &id031
+    name: 🇨🇳_CN_中国->🇺🇸_US_美国_15
+    type: ssr
+    server: bs4.jymzffbquawl.com
+    port: 5502
+    password: renzhecloud
+    cipher: chacha20-ietf
+    obfs: plain
+    protocol: auth_aes128_sha1
+    obfs-param: TG@wangcai_1
+    protocol-param: 277272:LzSb2q
+  - &id032
+    name: 🇨🇳_CN_中国->🇺🇸_US_美国_16
+    type: ssr
+    server: bs3.jymzffbquawl.com
+    port: 5502
+    password: renzhecloud
+    cipher: chacha20-ietf
+    obfs: plain
+    protocol: auth_aes128_sha1
+    obfs-param: TG@wangcai_1
+    protocol-param: 277272:LzSb2q
+  - &id033
+    name: 🇨🇳_CN_中国->🇺🇸_US_美国_17
+    type: ssr
+    server: bs4.jymzffbquawl.com
+    port: 5503
+    password: renzhecloud
+    cipher: chacha20-ietf
+    obfs: plain
+    protocol: auth_aes128_sha1
+    obfs-param: TG@wangcai_1
+    protocol-param: 277272:LzSb2q
+  - &id034
+    name: 🇩🇪_DE_德国
     type: vmess
-    server: 186.233.119.107
-    port: 41815
+    server: 45.155.249.17
+    port: 80
     cipher: auto
-    uuid: f49a5dfc-2644-4b4e-e1f0-f2aa31e52dcb
+    uuid: 9fd713f3-0896-4d67-8a97-038b388ee017
     alterId: 0
     tls: false
     skip-cert-verify: true
-    network: http
-  - &id030
-    name: 🇬🇧_GB_英国
+    network: ws
+    ws-opts:
+      path: /
+  - &id035
+    name: 🇺🇸_US_美国_5
     type: trojan
-    server: 18.169.150.213
-    port: 22222
+    server: ssrsub.t18.trojan.tel
+    port: 80
     udp: true
-    password: telegram-id-directvpn
-    sni: trj.rollingnext.co.uk
+    password: c78452f0-8489-43d8-87c6-68e55e3ce245
+    sni: ssrsub.t18.trojan.tel
     skip-cert-verify: true
     network: tcp
-  - &id031
-    name: 🇺🇸_US_美国_4
-    type: vmess
-    server: 14.vmessprotocol.telegram-vmessprotocol-channel.space
-    port: 2086
-    cipher: auto
-    uuid: 58fe1542-5290-40ad-815a-77707a81afe5
-    alterId: 0
-    tls: false
+  - &id036
+    name: 🇸🇬_SG_新加坡->🇺🇸_US_美国
+    type: trojan
+    server: usa.liangyuandiancloud.com
+    port: 443
+    udp: true
+    password: 45a99be4-8cb4-4df2-b7a4-42f1a8dea5c1
     skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /IOebhLMhl1CTbFHbL95myfRX2
-      headers:
-        host: ca6.tehme100.fun
-  - &id032
-    name: 🇺🇸_US_美国->🇬🇧_GB_英国
+    network: tcp
+  - &id037
+    name: 🇫🇷_FR_法国_5
+    type: ss
+    server: 162.19.59.169
+    port: 443
+    password: asdKkaskJKfnsa
+    cipher: aes-256-cfb
+  - &id038
+    name: 🇳🇱_NL_荷兰
     type: vmess
-    server: ld2.shabijichang.com
-    port: 80
-    cipher: auto
-    uuid: c458695d-6908-45c3-9512-e0c46418454c
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        host: ld2.shabijichang.com
-  - &id033
-    name: 🇺🇸_US_美国_5
-    type: vmess
-    server: mm3.shabijichang.com
-    port: 80
-    cipher: auto
-    uuid: c458695d-6908-45c3-9512-e0c46418454c
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        host: mm3.shabijichang.com
-  - &id034
-    name: 🇺🇸_US_美国_6
-    type: vmess
-    server: 80.92.205.112
+    server: 188.114.98.0
     port: 443
     cipher: auto
-    uuid: 4c90ba75-230b-4f8b-bbff-8efa0eb0415f
+    uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
     alterId: 0
-    tls: false
+    tls: true
     skip-cert-verify: true
     network: ws
     ws-opts:
-      path: /
+      path: linkvws
+      headers:
+        host: odelia.autos
 proxy-groups:
   - name: PROXY
     type: select
@@ -368,6 +468,10 @@ proxy-groups:
       - *id032
       - *id033
       - *id034
+      - *id035
+      - *id036
+      - *id037
+      - *id038
   - name: LOAD-BALANCE
     type: load-balance
     url: http://www.gstatic.com/generate_204
@@ -407,6 +511,10 @@ proxy-groups:
       - *id032
       - *id033
       - *id034
+      - *id035
+      - *id036
+      - *id037
+      - *id038
   - name: SELECT
     type: select
     proxies:
@@ -444,6 +552,10 @@ proxy-groups:
       - *id032
       - *id033
       - *id034
+      - *id035
+      - *id036
+      - *id037
+      - *id038
 rules:
   - RULE-SET,applications,DIRECT
   - DOMAIN,clash.razord.top,DIRECT
