@@ -1,2 +1,874 @@
-null
-...
+port: 7890
+socks-port: 7891
+allow-lan: true
+mode: Rule
+log-level: info
+external-controller: 0.0.0.0:9090
+proxies:
+  - &id001
+    name: 🇭🇰 [ 联通 ] 香港 · F1 · 01 · 线路1
+    server: ns01.gutingting.com
+    port: 30015
+    type: vmess
+    uuid: 2567bed8-e47a-4a8b-a336-244fdd203e9b
+    alterId: 0
+    cipher: auto
+    tls: false
+    network: ws
+    ws-opts:
+      path: /aceamedv
+      headers:
+        Host: gz.fastcloud.club
+  - &id002
+    name: 🇭🇰 [ 联通 ] 香港 · F1 · 02 · 线路1
+    server: ns01.gutingting.com
+    port: 30023
+    type: vmess
+    uuid: 2567bed8-e47a-4a8b-a336-244fdd203e9b
+    alterId: 0
+    cipher: auto
+    tls: false
+    network: ws
+    ws-opts:
+      path: /aceamedv
+      headers:
+        Host: gz.fastcloud.club
+  - &id003
+    name: 🇭🇰 [ 联通 ] 香港 · F1 · 03 · 线路2
+    server: v02.gutingting.com
+    port: 30024
+    type: vmess
+    uuid: 2567bed8-e47a-4a8b-a336-244fdd203e9b
+    alterId: 0
+    cipher: auto
+    tls: false
+    network: ws
+    ws-opts:
+      path: /aceamedv
+      headers:
+        Host: gz.fastcloud.club
+  - &id004
+    name: 🇭🇰 香港原生 · hkt · 01 · 线路1
+    server: v01.gutingting.com
+    port: 30017
+    type: trojan
+    password: 2567bed8-e47a-4a8b-a336-244fdd203e9b
+    sni: v2hgc01.fuqiangren.com
+    skip-cert-verify: true
+  - &id005
+    name: 🇭🇰 香港原生 · hkt  · 02 · 线路2
+    server: v02.gutingting.com
+    port: 30005
+    type: trojan
+    password: 2567bed8-e47a-4a8b-a336-244fdd203e9b
+    sni: v2hgc01.fuqiangren.com
+    skip-cert-verify: true
+  - &id006
+    name: 🇭🇰 [ v1 ] 香港原生 · 01 · 线路1
+    server: v01.gutingting.com
+    port: 30007
+    type: vmess
+    uuid: 2567bed8-e47a-4a8b-a336-244fdd203e9b
+    alterId: 0
+    cipher: auto
+    tls: false
+    network: ws
+    ws-opts:
+      path: /aceamedv
+      headers:
+        Host: sh02.fastcloud.club
+  - &id007
+    name: 🇭🇰 [ v1 ] 香港原生 · 02 · 线路2
+    server: v02.gutingting.com
+    port: 30008
+    type: vmess
+    uuid: 2567bed8-e47a-4a8b-a336-244fdd203e9b
+    alterId: 0
+    cipher: auto
+    tls: false
+    network: ws
+    ws-opts:
+      path: /aceamedv
+      headers:
+        Host: sh02.fastcloud.club
+  - &id008
+    name: 🇭🇰 [ 移动 ] 香港 · E1 · 03 · 线路2
+    server: v02.gutingting.com
+    port: 30006
+    type: trojan
+    password: 2567bed8-e47a-4a8b-a336-244fdd203e9b
+    sni: v2hgc02.fuqiangren.com
+    skip-cert-verify: true
+  - &id009
+    name: 🇭🇰 [ 移动 ] 香港 · E1 · 04 · 线路2
+    server: v02.gutingting.com
+    port: 30038
+    type: trojan
+    password: 2567bed8-e47a-4a8b-a336-244fdd203e9b
+    sni: v2hgc02.fuqiangren.com
+    skip-cert-verify: true
+  - &id010
+    name: 🇯🇵 [ 联通 ] 日本 · F1 · 01 · 线路1
+    server: v01.gutingting.com
+    port: 30009
+    type: vmess
+    uuid: 2567bed8-e47a-4a8b-a336-244fdd203e9b
+    alterId: 0
+    cipher: auto
+    tls: false
+    network: ws
+    ws-opts:
+      path: /aceamedv
+      headers:
+        Host: sh01.fastcloud.club
+  - &id011
+    name: 🇯🇵 [ 联通 ] 日本 · F1 · 02 · 线路1
+    server: v01.gutingting.com
+    port: 30044
+    type: vmess
+    uuid: 2567bed8-e47a-4a8b-a336-244fdd203e9b
+    alterId: 0
+    cipher: auto
+    tls: false
+    network: ws
+    ws-opts:
+      path: /aceamedv
+      headers:
+        Host: sh01.fastcloud.club
+  - &id012
+    name: 🇯🇵 [ 联通 ] 日本 · F1 · 03 · 线路2
+    server: v02.gutingting.com
+    port: 30021
+    type: vmess
+    uuid: 2567bed8-e47a-4a8b-a336-244fdd203e9b
+    alterId: 0
+    cipher: auto
+    tls: false
+    network: ws
+    ws-opts:
+      path: /aceamedv
+      headers:
+        Host: sh01.fastcloud.club
+  - &id013
+    name: 🇯🇵 [ 联通 ] 日本 · F1 · 04 · 线路2
+    server: v02.gutingting.com
+    port: 30045
+    type: vmess
+    uuid: 2567bed8-e47a-4a8b-a336-244fdd203e9b
+    alterId: 0
+    cipher: auto
+    tls: false
+    network: ws
+    ws-opts:
+      path: /aceamedv
+      headers:
+        Host: sh02.fastcloud.club
+  - &id014
+    name: 🇯🇵 [ v1 ] 日本 · 05 · 线路2
+    server: v01.gutingting.com
+    port: 30054
+    type: trojan
+    password: 2567bed8-e47a-4a8b-a336-244fdd203e9b
+    sni: v1jp01.fuqiangren.com
+    skip-cert-verify: true
+  - &id015
+    name: 🇯🇵 [ v1 ] 日本 · 06 · 线路2
+    server: v01.gutingting.com
+    port: 30055
+    type: trojan
+    password: 2567bed8-e47a-4a8b-a336-244fdd203e9b
+    sni: v1jp02.fuqiangren.com
+    skip-cert-verify: true
+  - &id016
+    name: 🇯🇵 [ v1 ] 日本 · 07 · 线路1
+    server: v01.gutingting.com
+    port: 30066
+    type: trojan
+    password: 2567bed8-e47a-4a8b-a336-244fdd203e9b
+    sni: v1jp03.fuqiangren.com
+    skip-cert-verify: true
+  - &id017
+    name: 🇯🇵 [ v1 ] 日本 · 08 · 线路2
+    server: v02.gutingting.com
+    port: 30067
+    type: trojan
+    password: 2567bed8-e47a-4a8b-a336-244fdd203e9b
+    sni: v1jp03.fuqiangren.com
+    skip-cert-verify: true
+  - &id018
+    name: 🇨🇳 台湾混合· 01 · 线路1
+    server: v02.gutingting.com
+    port: 30058
+    type: vmess
+    uuid: 2567bed8-e47a-4a8b-a336-244fdd203e9b
+    alterId: 0
+    cipher: auto
+    tls: false
+    network: ws
+    ws-opts:
+      path: /aceamedv
+      headers:
+        Host: sh01.fastcloud.club
+  - &id019
+    name: 🇨🇳 台湾混合· 02 · 线路2
+    server: v01.gutingting.com
+    port: 30063
+    type: vmess
+    uuid: 2567bed8-e47a-4a8b-a336-244fdd203e9b
+    alterId: 0
+    cipher: auto
+    tls: false
+    network: ws
+    ws-opts:
+      path: /aceamedv
+      headers:
+        Host: sh01.fastcloud.club
+  - &id020
+    name: 🇨🇳 台湾Hinet· 01 · 线路1
+    server: v01.gutingting.com
+    port: 30064
+    type: vmess
+    uuid: 2567bed8-e47a-4a8b-a336-244fdd203e9b
+    alterId: 0
+    cipher: auto
+    tls: false
+    network: ws
+    ws-opts:
+      path: /aceamedv
+      headers:
+        Host: sh01.fastcloud.club
+  - &id021
+    name: 🇨🇳 台湾Hinet· 02 · 线路2
+    server: v02.gutingting.com
+    port: 30065
+    type: vmess
+    uuid: 2567bed8-e47a-4a8b-a336-244fdd203e9b
+    alterId: 0
+    cipher: auto
+    tls: false
+    network: ws
+    ws-opts:
+      path: /aceamedv
+      headers:
+        Host: sh01.fastcloud.club
+  - &id022
+    name: 🇨🇳 [ v1 ] 台湾原生 · 01 · 线路1
+    server: v01.gutingting.com
+    port: 30002
+    type: trojan
+    password: 2567bed8-e47a-4a8b-a336-244fdd203e9b
+    sni: v2tw01.fuqiangren.com
+    skip-cert-verify: true
+  - &id023
+    name: 🇨🇳 [ v1 ] 台湾原生 · 02 · 线路2
+    server: v02.gutingting.com
+    port: 30003
+    type: trojan
+    password: 2567bed8-e47a-4a8b-a336-244fdd203e9b
+    sni: v2tw01.fuqiangren.com
+    skip-cert-verify: true
+  - &id024
+    name: 🇰🇷 [ 联通 ] 韩国 · E1 · 01 · 线路1
+    server: v01.gutingting.com
+    port: 30056
+    type: trojan
+    password: 2567bed8-e47a-4a8b-a336-244fdd203e9b
+    sni: v1kr01.fuqiangren.com
+    skip-cert-verify: true
+  - &id025
+    name: 🇰🇷 [ 联通 ] 韩国 · E1 · 02 · 线路2
+    server: v02.gutingting.com
+    port: 30057
+    type: trojan
+    password: 2567bed8-e47a-4a8b-a336-244fdd203e9b
+    sni: v1kr02.fuqiangren.com
+    skip-cert-verify: true
+  - &id026
+    name: 🇸🇬 [ v1 ] 新加坡 · 01 · 线路1
+    server: v01.gutingting.com
+    port: 30035
+    type: vmess
+    uuid: 2567bed8-e47a-4a8b-a336-244fdd203e9b
+    alterId: 0
+    cipher: auto
+    tls: false
+    network: ws
+    ws-opts:
+      path: /aceamedv
+      headers:
+        Host: v01.gutingting.com
+  - &id027
+    name: 🇸🇬 [ T1 ] 新加坡 · 01 · 线路1
+    server: v01.gutingting.com
+    port: 20222
+    type: trojan
+    password: 2567bed8-e47a-4a8b-a336-244fdd203e9b
+    sni: v2sg01.fuqiangren.com
+    skip-cert-verify: true
+  - &id028
+    name: 🇸🇬 [ v1 ] 新加坡 · 02 · 线路1
+    server: v01.gutingting.com
+    port: 30050
+    type: trojan
+    password: 2567bed8-e47a-4a8b-a336-244fdd203e9b
+    sni: v2sg02.fuqiangren.com
+    skip-cert-verify: true
+  - &id029
+    name: 🇸🇬 [ v1 ] 新加坡 · 03 · 线路2
+    server: v02.gutingting.com
+    port: 30049
+    type: trojan
+    password: 2567bed8-e47a-4a8b-a336-244fdd203e9b
+    sni: v2sg02.fuqiangren.com
+    skip-cert-verify: true
+  - &id030
+    name: 🇸🇬 [ T1 ] 新加坡 · 04 · 线路2
+    server: v02.gutingting.com
+    port: 20223
+    type: trojan
+    password: 2567bed8-e47a-4a8b-a336-244fdd203e9b
+    sni: v2sg01.fuqiangren.com
+    skip-cert-verify: true
+  - &id031
+    name: 🇺🇸 [ T1 ] 美国 · 01 · 线路1
+    server: v01.gutingting.com
+    port: 20224
+    type: trojan
+    password: 2567bed8-e47a-4a8b-a336-244fdd203e9b
+    sni: v2usa01.fuqiangren.com
+    skip-cert-verify: true
+  - &id032
+    name: 🇺🇸 [ T1 ] 美国 · 02 · 线路2
+    server: v02.gutingting.com
+    port: 20225
+    type: trojan
+    password: 2567bed8-e47a-4a8b-a336-244fdd203e9b
+    sni: v2usa01.fuqiangren.com
+    skip-cert-verify: true
+  - &id033
+    name: 🇺🇸 [ v1 ] 美国 · 02 · 线路1
+    server: v01.gutingting.com
+    port: 30048
+    type: vmess
+    uuid: 2567bed8-e47a-4a8b-a336-244fdd203e9b
+    alterId: 0
+    cipher: auto
+    tls: false
+    network: ws
+    ws-opts:
+      path: /aceamedv
+      headers:
+        Host: sh02.fastcloud.club
+  - &id034
+    name: 🇺🇸 [ v1 ] 美国 · 03 · 线路2
+    server: v02.gutingting.com
+    port: 30000
+    type: vmess
+    uuid: 2567bed8-e47a-4a8b-a336-244fdd203e9b
+    alterId: 0
+    cipher: auto
+    tls: false
+    network: ws
+    ws-opts:
+      path: /aceamedv
+      headers:
+        Host: gz.fastcloud.club
+  - &id035
+    name: 🇬🇧 [ T1 ] 英国 · 01 · 线路1
+    server: v01.gutingting.com
+    port: 20226
+    type: trojan
+    password: 2567bed8-e47a-4a8b-a336-244fdd203e9b
+    sni: v2uk01.fuqiangren.com
+    skip-cert-verify: false
+  - &id036
+    name: 🇬🇧 [ v1 ] 英国 · 01 · 线路1
+    server: v01.gutingting.com
+    port: 30016
+    type: vmess
+    uuid: 2567bed8-e47a-4a8b-a336-244fdd203e9b
+    alterId: 0
+    cipher: auto
+    tls: false
+    network: ws
+    ws-opts:
+      path: /aceamedv
+      headers:
+        Host: sh01.fastcloud.club
+  - &id037
+    name: 🇬🇧 [ T1 ] 英国 · 02 · 线路2
+    server: v02.gutingting.com
+    port: 20227
+    type: trojan
+    password: 2567bed8-e47a-4a8b-a336-244fdd203e9b
+    sni: v2uk01.fuqiangren.com
+    skip-cert-verify: true
+  - &id038
+    name: 🇬🇧 [ v1 ] 英国 · 02 · 线路2
+    server: v02.gutingting.com
+    port: 30025
+    type: vmess
+    uuid: 2567bed8-e47a-4a8b-a336-244fdd203e9b
+    alterId: 0
+    cipher: auto
+    tls: false
+    network: ws
+    ws-opts:
+      path: /aceamedv
+      headers:
+        Host: sh01.fastcloud.club
+  - &id039
+    name: 🇬🇧 [ v1 ] 英国原生 · 01 · 线路1
+    server: v01.gutingting.com
+    port: 30040
+    type: vmess
+    uuid: 2567bed8-e47a-4a8b-a336-244fdd203e9b
+    alterId: 0
+    cipher: auto
+    tls: false
+    network: ws
+    ws-opts:
+      path: /aceamedv
+      headers:
+        Host: sh01.fastcloud.club
+  - &id040
+    name: 🇬🇧 [ v1 ] 英国原生 · 02 · 线路2
+    server: v02.gutingting.com
+    port: 30041
+    type: vmess
+    uuid: 2567bed8-e47a-4a8b-a336-244fdd203e9b
+    alterId: 0
+    cipher: auto
+    tls: false
+    network: ws
+    ws-opts:
+      path: /aceamedv
+      headers:
+        Host: sh01.fastcloud.club
+  - &id041
+    name: 🇮🇳 [ v1 ] 印度 · 01 · 线路1
+    server: v01.gutingting.com
+    port: 30027
+    type: vmess
+    uuid: 2567bed8-e47a-4a8b-a336-244fdd203e9b
+    alterId: 0
+    cipher: auto
+    tls: false
+    network: ws
+    ws-opts:
+      path: /aceamedv
+      headers:
+        Host: sh01.fastcloud.club
+  - &id042
+    name: 🇮🇳 [ v1 ] 印度 · 02 · 线路2
+    server: v02.gutingting.com
+    port: 30028
+    type: vmess
+    uuid: 2567bed8-e47a-4a8b-a336-244fdd203e9b
+    alterId: 0
+    cipher: auto
+    tls: false
+    network: ws
+    ws-opts:
+      path: /aceamedv
+      headers:
+        Host: sh01.fastcloud.club
+  - &id043
+    name: ChatGPT解锁 · 01
+    server: v02.gutingting.com
+    port: 30060
+    type: vmess
+    uuid: 2567bed8-e47a-4a8b-a336-244fdd203e9b
+    alterId: 0
+    cipher: auto
+    tls: false
+    network: ws
+    ws-opts:
+      path: /aceamedv
+      headers:
+        Host: sh01.fastcloud.club
+  - &id044
+    name: ChatGPT解锁 · 02
+    server: v01.gutingting.com
+    port: 30061
+    type: vmess
+    uuid: 2567bed8-e47a-4a8b-a336-244fdd203e9b
+    alterId: 0
+    cipher: auto
+    tls: false
+    network: ws
+    ws-opts:
+      path: /aceamedv
+      headers:
+        Host: sh01.fastcloud.club
+  - &id045
+    name: ChatGPT解锁 · 03
+    server: v01.gutingting.com
+    port: 30059
+    type: vmess
+    uuid: 2567bed8-e47a-4a8b-a336-244fdd203e9b
+    alterId: 0
+    cipher: auto
+    tls: false
+    network: ws
+    ws-opts:
+      path: /aceamedv
+      headers:
+        Host: sh01.fastcloud.club
+  - &id046
+    name: ChatGPT解锁 · 04
+    server: v02.gutingting.com
+    port: 30062
+    type: vmess
+    uuid: 2567bed8-e47a-4a8b-a336-244fdd203e9b
+    alterId: 0
+    cipher: auto
+    tls: false
+    network: ws
+    ws-opts:
+      path: /aceamedv
+      headers:
+        Host: sh01.fastcloud.club
+  - &id047
+    name: 🇻🇳 [ v1 ] 越南 · 01 · 线路2
+    server: v02.gutingting.com
+    port: 30051
+    type: trojan
+    password: 2567bed8-e47a-4a8b-a336-244fdd203e9b
+    sni: v2vn01.fuqiangren.com
+    skip-cert-verify: true
+  - &id048
+    name: 🇵🇭 [ v1 ] 菲律宾 · 01 · 线路2
+    server: v02.gutingting.com
+    port: 30053
+    type: trojan
+    password: 2567bed8-e47a-4a8b-a336-244fdd203e9b
+    sni: v2phl01.fuqiangren.com
+    skip-cert-verify: true
+  - &id049
+    name: 🇹🇭 [ v1 ] 泰国 · 01 · 线路2
+    server: v02.gutingting.com
+    port: 30052
+    type: trojan
+    password: 2567bed8-e47a-4a8b-a336-244fdd203e9b
+    sni: v2th01.fuqiangren.com
+    skip-cert-verify: true
+  - &id050
+    name: 🇯🇵 [ 直连不保证国内 ] 日本 · U1 | 01
+    server: zzjp01.gutingting.com
+    port: 20220
+    type: trojan
+    password: 2567bed8-e47a-4a8b-a336-244fdd203e9b
+    sni: zzjp01.gutingting.com
+    skip-cert-verify: true
+  - &id051
+    name: 🇯🇵 [ 直连不保证国内 ] 日本 · U1 | 02
+    server: zzjp01.gutingting.com
+    port: 20221
+    type: trojan
+    password: 2567bed8-e47a-4a8b-a336-244fdd203e9b
+    sni: zzjp01.gutingting.com
+    skip-cert-verify: true
+  - &id052
+    name: 🇺🇸 [ 直连不保证国内 ] 美国 · U1 | 01
+    server: zzus01.gutingting.com
+    port: 20220
+    type: trojan
+    password: 2567bed8-e47a-4a8b-a336-244fdd203e9b
+    sni: zzus01.gutingting.com
+    skip-cert-verify: true
+proxy-groups:
+  - name: PROXY
+    type: select
+    proxies:
+      - URL-TEST
+      - LOAD-BALANCE
+      - SELECT
+      - DIRECT
+  - name: OTHER
+    type: select
+    proxies:
+      - PROXY
+      - DIRECT
+  - name: AD
+    type: select
+    proxies:
+      - REJECT
+      - DIRECT
+      - PROXY
+  - name: URL-TEST
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 600
+    lazy: true
+    tolerance: 100
+    proxies:
+      - *id001
+      - *id002
+      - *id003
+      - *id004
+      - *id005
+      - *id006
+      - *id007
+      - *id008
+      - *id009
+      - *id010
+      - *id011
+      - *id012
+      - *id013
+      - *id014
+      - *id015
+      - *id016
+      - *id017
+      - *id018
+      - *id019
+      - *id020
+      - *id021
+      - *id022
+      - *id023
+      - *id024
+      - *id025
+      - *id026
+      - *id027
+      - *id028
+      - *id029
+      - *id030
+      - *id031
+      - *id032
+      - *id033
+      - *id034
+      - *id035
+      - *id036
+      - *id037
+      - *id038
+      - *id039
+      - *id040
+      - *id041
+      - *id042
+      - *id043
+      - *id044
+      - *id045
+      - *id046
+      - *id047
+      - *id048
+      - *id049
+      - *id050
+      - *id051
+      - *id052
+  - name: LOAD-BALANCE
+    type: load-balance
+    url: http://www.gstatic.com/generate_204
+    interval: 600
+    proxies:
+      - *id001
+      - *id002
+      - *id003
+      - *id004
+      - *id005
+      - *id006
+      - *id007
+      - *id008
+      - *id009
+      - *id010
+      - *id011
+      - *id012
+      - *id013
+      - *id014
+      - *id015
+      - *id016
+      - *id017
+      - *id018
+      - *id019
+      - *id020
+      - *id021
+      - *id022
+      - *id023
+      - *id024
+      - *id025
+      - *id026
+      - *id027
+      - *id028
+      - *id029
+      - *id030
+      - *id031
+      - *id032
+      - *id033
+      - *id034
+      - *id035
+      - *id036
+      - *id037
+      - *id038
+      - *id039
+      - *id040
+      - *id041
+      - *id042
+      - *id043
+      - *id044
+      - *id045
+      - *id046
+      - *id047
+      - *id048
+      - *id049
+      - *id050
+      - *id051
+      - *id052
+  - name: SELECT
+    type: select
+    proxies:
+      - *id001
+      - *id002
+      - *id003
+      - *id004
+      - *id005
+      - *id006
+      - *id007
+      - *id008
+      - *id009
+      - *id010
+      - *id011
+      - *id012
+      - *id013
+      - *id014
+      - *id015
+      - *id016
+      - *id017
+      - *id018
+      - *id019
+      - *id020
+      - *id021
+      - *id022
+      - *id023
+      - *id024
+      - *id025
+      - *id026
+      - *id027
+      - *id028
+      - *id029
+      - *id030
+      - *id031
+      - *id032
+      - *id033
+      - *id034
+      - *id035
+      - *id036
+      - *id037
+      - *id038
+      - *id039
+      - *id040
+      - *id041
+      - *id042
+      - *id043
+      - *id044
+      - *id045
+      - *id046
+      - *id047
+      - *id048
+      - *id049
+      - *id050
+      - *id051
+      - *id052
+rules:
+  - RULE-SET,applications,DIRECT
+  - DOMAIN,clash.razord.top,DIRECT
+  - DOMAIN,yacd.haishan.me,DIRECT
+  - RULE-SET,private,DIRECT
+  - RULE-SET,reject,AD
+  - RULE-SET,icloud,DIRECT
+  - RULE-SET,apple,DIRECT
+  - RULE-SET,google,DIRECT
+  - RULE-SET,tld-not-cn,PROXY
+  - RULE-SET,gfw,PROXY
+  - RULE-SET,greatfire,PROXY
+  - RULE-SET,telegramcidr,PROXY
+  - RULE-SET,lancidr,DIRECT
+  - RULE-SET,cncidr,DIRECT
+  - GEOIP,CN,DIRECT
+  - RULE-SET,direct,DIRECT
+  - RULE-SET,proxy,OTHER
+  - MATCH,OTHER
+rule-providers:
+  reject:
+    type: http
+    behavior: domain
+    url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/reject.txt
+    path: ./ruleset/reject.yaml
+    interval: 86400
+  icloud:
+    type: http
+    behavior: domain
+    url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/icloud.txt
+    path: ./ruleset/icloud.yaml
+    interval: 86400
+  apple:
+    type: http
+    behavior: domain
+    url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/apple.txt
+    path: ./ruleset/apple.yaml
+    interval: 86400
+  google:
+    type: http
+    behavior: domain
+    url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/google.txt
+    path: ./ruleset/google.yaml
+    interval: 86400
+  proxy:
+    type: http
+    behavior: domain
+    url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/proxy.txt
+    path: ./ruleset/proxy.yaml
+    interval: 86400
+  direct:
+    type: http
+    behavior: domain
+    url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/direct.txt
+    path: ./ruleset/direct.yaml
+    interval: 86400
+  private:
+    type: http
+    behavior: domain
+    url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/private.txt
+    path: ./ruleset/private.yaml
+    interval: 86400
+  gfw:
+    type: http
+    behavior: domain
+    url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/gfw.txt
+    path: ./ruleset/gfw.yaml
+    interval: 86400
+  greatfire:
+    type: http
+    behavior: domain
+    url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/greatfire.txt
+    path: ./ruleset/greatfire.yaml
+    interval: 86400
+  tld-not-cn:
+    type: http
+    behavior: domain
+    url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/tld-not-cn.txt
+    path: ./ruleset/tld-not-cn.yaml
+    interval: 86400
+  telegramcidr:
+    type: http
+    behavior: ipcidr
+    url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/telegramcidr.txt
+    path: ./ruleset/telegramcidr.yaml
+    interval: 86400
+  cncidr:
+    type: http
+    behavior: ipcidr
+    url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/cncidr.txt
+    path: ./ruleset/cncidr.yaml
+    interval: 86400
+  lancidr:
+    type: http
+    behavior: ipcidr
+    url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/lancidr.txt
+    path: ./ruleset/lancidr.yaml
+    interval: 86400
+  applications:
+    type: http
+    behavior: classical
+    url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/applications.txt
+    path: ./ruleset/applications.yaml
+    interval: 86400
+mixed-port: 7890
