@@ -8,90 +8,35 @@ proxies:
   - &id001
     name: 🇺🇸_US_美国_1
     type: vmess
-    server: us-fsl.jikuai.xyz
-    port: 8443
+    server: cf-lt.sharecentre.online
+    port: 8880
     cipher: auto
-    uuid: 70666776-4e9f-4350-b3f0-afaff6a70db0
+    uuid: 2a683a54-f098-4d98-92fc-762b85d907b9
     alterId: 0
-    tls: true
+    tls: false
     skip-cert-verify: true
     network: ws
     ws-opts:
-      path: /user
+      path: /api/v3/download.getFile
+      headers:
+        host: ssrsub.v002.ssrsub.com
   - &id002
     name: 🇺🇸_US_美国_2
     type: vmess
-    server: cdn.yifenjichang.top
-    port: 2087
+    server: ns1.v2-vip.fun
+    port: 80
     cipher: auto
-    uuid: 622dc2d0-b3ca-41d3-8e16-c2ce10d2f5c8
+    uuid: 2a683a54-f098-4d98-92fc-762b85d907b9
     alterId: 0
-    tls: true
+    tls: false
     skip-cert-verify: true
     network: ws
     ws-opts:
-      path: 622dc2d0-b3ca-41d3-8e16-c2ce10d2f5c8-vm
+      path: /api/v3/download.getFile
       headers:
-        host: catalyst-lee-bears-spears.trycloudflare.com
+        host: ssrsub.v03.ssrsub.com
   - &id003
     name: 🇺🇸_US_美国_3
-    type: vmess
-    server: fr-v2ray.freevmess.com
-    port: 8442
-    cipher: auto
-    uuid: 6773a666-5593-4c9f-aacd-52300b6a02d4
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: http
-  - &id004
-    name: 🇺🇸_US_美国_4
-    type: vmess
-    server: 5.161.115.156
-    port: 3389
-    cipher: auto
-    uuid: 9c050a86-d612-48f1-ec32-e573df08a1b7
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: http
-  - &id005
-    name: 🇺🇸_US_美国->🇮🇷_IR_伊朗
-    type: vmess
-    server: indec.qkhbyf.tech
-    port: 443
-    cipher: auto
-    uuid: 6da3e574-52f1-4690-a53b-2847ce756456
-    alterId: 0
-    tls: true
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /lonan
-      headers:
-        host: uswu.1145114.me
-  - &id006
-    name: 🇷🇺_RU_俄罗斯联邦
-    type: trojan
-    server: 89.221.224.94
-    port: 80
-    udp: true
-    password: 28c79056-ccfd-4cc1-93d4-c337cc782e65
-    sni: is2-t.sshmax.xyz
-    skip-cert-verify: true
-    network: tcp
-  - &id007
-    name: 🇨🇳_CN_中国->🇺🇸_US_美国_1
-    type: trojan
-    server: other.kunlun-ppg.com
-    port: 10837
-    udp: true
-    password: 3a285ed3-ebdf-485b-9e71-9528b313c69d
-    sni: alibaba-node.cn
-    skip-cert-verify: true
-    network: tcp
-  - &id008
-    name: 🇺🇸_US_美国_5
     type: vmess
     server: 104.21.75.246
     port: 80
@@ -105,120 +50,8 @@ proxies:
       path: /
       headers:
         host: sbl2.shabijichang.com
-  - &id009
-    name: 🇨🇳_CN_中国->🇺🇸_US_美国_2
-    type: trojan
-    server: other.kunlun-ppg.com
-    port: 10850
-    udp: true
-    password: 3a285ed3-ebdf-485b-9e71-9528b313c69d
-    sni: alibaba-node.cn
-    skip-cert-verify: true
-    network: tcp
-  - &id010
-    name: 🇨🇳_CN_中国->🇺🇦_UA_乌克兰
-    type: trojan
-    server: other.kunlun-ppg.com
-    port: 10845
-    udp: true
-    password: 3a285ed3-ebdf-485b-9e71-9528b313c69d
-    sni: alibaba-node.cn
-    skip-cert-verify: true
-    network: tcp
-  - &id011
-    name: 🇨🇦_CA_加拿大
-    type: vmess
-    server: 193.203.203.88
-    port: 2082
-    cipher: auto
-    uuid: 5f2d026e-1dbd-4bb0-aa61-b1bcc544ab2c
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: http
-  - &id012
-    name: 🇺🇸_US_美国->🇫🇷_FR_法国
-    type: vmess
-    server: fr-01.jikuai.xyz
-    port: 2082
-    cipher: auto
-    uuid: 70666776-4e9f-4350-b3f0-afaff6a70db0
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        host: fr-01.jikuai.xyz
-  - &id013
-    name: 🇨🇳_CN_中国->🇬🇧_GB_英国
-    type: vmess
-    server: 112.29.94.23
-    port: 43526
-    cipher: auto
-    uuid: 21a9bff2-72de-4e62-93ff-8b159f66d875
-    alterId: 64
-    tls: false
-    skip-cert-verify: true
-    network: tcp
-  - &id014
-    name: 🇺🇸_US_美国_6
-    type: vmess
-    server: usd.yj2022.gq
-    port: 8880
-    cipher: auto
-    uuid: 4b5e4565-322f-4223-a891-78a84f189726
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /XSjeg73o6ZdsheahCb5JG
-      headers:
-        host: usd.yj2022.gq
-  - &id015
-    name: 🇨🇳_CN_中国->🇺🇸_US_美国_3
-    type: trojan
-    server: other.kunlun-ppg.com
-    port: 10838
-    udp: true
-    password: 3a285ed3-ebdf-485b-9e71-9528b313c69d
-    sni: alibaba-node.cn
-    skip-cert-verify: true
-    network: tcp
-  - &id016
-    name: 🇸🇨_SC_塞舌尔->🇫🇷_FR_法国
-    type: vmess
-    server: 45.133.247.249
-    port: 2086
-    cipher: auto
-    uuid: 617c9bc4-4116-41c6-99e0-ace49a38fcdb
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /Jnv8ViZOUVgijjOh0p5uGjHnXIiY
-      headers:
-        host: fr1.tehme100.fun
-  - &id017
-    name: 🇺🇸_US_美国_7
-    type: vmess
-    server: 104.22.75.105
-    port: 8880
-    cipher: auto
-    uuid: 617c9bc4-4116-41c6-99e0-ace49a38fcdb
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /Jnv8ViZOUVgijjOh0p5uGjHnXIiY
-      headers:
-        host: fr7.tehme100.fun
-  - &id018
-    name: 🇺🇸_US_美国->🇮🇳_IN_印度
+  - &id004
+    name: 🇺🇸_US_美国->🇮🇳_IN_印度_1
     type: vmess
     server: mm2.shabijichang.com
     port: 80
@@ -232,13 +65,89 @@ proxies:
       path: /
       headers:
         host: mm2.shabijichang.com
-  - &id019
-    name: 🇺🇸_US_美国->🇦🇺_AU_澳大利亚
+  - &id005
+    name: 🇨🇦_CA_加拿大
     type: vmess
-    server: au-01.jikuai.xyz
+    server: 193.203.203.88
     port: 2082
     cipher: auto
-    uuid: 70666776-4e9f-4350-b3f0-afaff6a70db0
+    uuid: 5f2d026e-1dbd-4bb0-aa61-b1bcc544ab2c
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: http
+  - &id006
+    name: 🇺🇸_US_美国_4
+    type: vmess
+    server: 64.32.8.215
+    port: 443
+    cipher: auto
+    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+    alterId: 64
+    tls: true
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /path/1701091133409
+      headers:
+        host: www.58116899.xyz
+  - &id007
+    name: 🇺🇸_US_美国_5
+    type: vmess
+    server: fr-v2ray.freevmess.com
+    port: 8442
+    cipher: auto
+    uuid: 6773a666-5593-4c9f-aacd-52300b6a02d4
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: http
+  - &id008
+    name: 🇨🇳_CN_中国->🇬🇧_GB_英国
+    type: vmess
+    server: 112.29.94.23
+    port: 43526
+    cipher: auto
+    uuid: 21a9bff2-72de-4e62-93ff-8b159f66d875
+    alterId: 64
+    tls: false
+    skip-cert-verify: true
+    network: tcp
+  - &id009
+    name: 🇺🇸_US_美国_6
+    type: vmess
+    server: a7.wxlljc520.com
+    port: 443
+    cipher: auto
+    uuid: 4d7732ee-986a-4c25-8443-d6fefa8d2190
+    alterId: 0
+    tls: true
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /apple
+      headers:
+        host: 777.golinkwuxian.top
+  - &id010
+    name: 🇺🇸_US_美国_7
+    type: vmess
+    server: tttt.ssfree.ru
+    port: 443
+    cipher: auto
+    uuid: 2fe62184-8e07-11ee-ae94-00163e49219e
+    alterId: 0
+    tls: true
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /search
+  - &id011
+    name: 🇺🇸_US_美国->🇮🇳_IN_印度_2
+    type: vmess
+    server: mm3.shabijichang.com
+    port: 80
+    cipher: auto
+    uuid: c458695d-6908-45c3-9512-e0c46418454c
     alterId: 0
     tls: false
     skip-cert-verify: true
@@ -246,8 +155,38 @@ proxies:
     ws-opts:
       path: /
       headers:
-        host: au-01.jikuai.xyz
-  - &id020
+        host: mm3.shabijichang.com
+  - &id012
+    name: 🇺🇸_US_美国_8
+    type: vmess
+    server: b4.wxlljc520.com
+    port: 443
+    cipher: auto
+    uuid: 4d7732ee-986a-4c25-8443-d6fefa8d2190
+    alterId: 0
+    tls: true
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /apple
+      headers:
+        host: 777.golinkwuxian.top
+  - &id013
+    name: 🇺🇸_US_美国_9
+    type: vmess
+    server: singapore.com
+    port: 80
+    cipher: auto
+    uuid: 2a683a54-f098-4d98-92fc-762b85d907b9
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /api/v3/download.getFile
+      headers:
+        host: ssrsub.v005.ssrsub.com
+  - &id014
     name: 🇺🇸_US_美国->🇬🇧_GB_英国
     type: vmess
     server: ld2.shabijichang.com
@@ -262,21 +201,102 @@ proxies:
       path: /
       headers:
         host: ld2.shabijichang.com
-  - &id021
-    name: 🇺🇸_US_美国_8
+  - &id015
+    name: 🇯🇵_JP_日本
     type: vmess
-    server: a8.wxlljc520.com
+    server: 103.13.208.159
     port: 443
     cipher: auto
-    uuid: 4d7732ee-986a-4c25-8443-d6fefa8d2190
+    uuid: 0c42fcf1-3850-45e2-94b7-556440a0060d
     alterId: 0
     tls: true
     skip-cert-verify: true
     network: ws
     ws-opts:
-      path: /apple
+      path: /DI5aPORpOasXtsDDSw7kNJ4NXtP
+  - &id016
+    name: 🇺🇸_US_美国_10
+    type: vmess
+    server: cf-lt.sharecentre.online
+    port: 80
+    cipher: auto
+    uuid: 2a683a54-f098-4d98-92fc-762b85d907b9
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /api/v3/download.getFile
       headers:
-        host: 777.golinkwuxian.top
+        host: ssrsub.v006.ssrsub.com
+  - &id017
+    name: 🇺🇸_US_美国->🇫🇷_FR_法国
+    type: vmess
+    server: fr-01.jikuai.xyz
+    port: 2082
+    cipher: auto
+    uuid: 70666776-4e9f-4350-b3f0-afaff6a70db0
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: fr-01.jikuai.xyz
+  - &id018
+    name: 🇬🇧_GB_英国
+    type: vmess
+    server: 172.99.190.109
+    port: 443
+    cipher: auto
+    uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
+    alterId: 0
+    tls: true
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: linkvws
+  - &id019
+    name: 🇷🇺_RU_俄罗斯联邦
+    type: trojan
+    server: 89.221.224.94
+    port: 80
+    udp: true
+    password: 28c79056-ccfd-4cc1-93d4-c337cc782e65
+    sni: is2-t.sshmax.xyz
+    skip-cert-verify: true
+    network: tcp
+  - &id020
+    name: 🇺🇸_US_美国_11
+    type: vmess
+    server: usd.yj2022.gq
+    port: 8880
+    cipher: auto
+    uuid: 4b5e4565-322f-4223-a891-78a84f189726
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /XSjeg73o6ZdsheahCb5JG
+      headers:
+        host: usd.yj2022.gq
+  - &id021
+    name: 🇺🇸_US_美国_12
+    type: vmess
+    server: us-fsl.jikuai.xyz
+    port: 8443
+    cipher: auto
+    uuid: 70666776-4e9f-4350-b3f0-afaff6a70db0
+    alterId: 0
+    tls: true
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /user
+      headers:
+        host: us-fsl.jikuai.xyz
 proxy-groups:
   - name: PROXY
     type: select
