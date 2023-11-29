@@ -6,6 +6,20 @@ log-level: info
 external-controller: 0.0.0.0:9090
 proxies:
   - &id001
+    name: 距离下次重置剩余：29 天
+    server: v02.gutingting.com
+    port: 30024
+    type: vmess
+    uuid: 2567bed8-e47a-4a8b-a336-244fdd203e9b
+    alterId: 0
+    cipher: auto
+    tls: false
+    network: ws
+    ws-opts:
+      path: /aceamedv
+      headers:
+        Host: gz.fastcloud.club
+  - &id002
     name: 🇭🇰 [ 联通 ] 香港 · F1 · 01 · 线路1
     server: ns01.gutingting.com
     port: 30015
@@ -19,24 +33,10 @@ proxies:
       path: /aceamedv
       headers:
         Host: gz.fastcloud.club
-  - &id002
+  - &id003
     name: 🇭🇰 [ 联通 ] 香港 · F1 · 02 · 线路1
     server: ns01.gutingting.com
     port: 30023
-    type: vmess
-    uuid: 2567bed8-e47a-4a8b-a336-244fdd203e9b
-    alterId: 0
-    cipher: auto
-    tls: false
-    network: ws
-    ws-opts:
-      path: /aceamedv
-      headers:
-        Host: gz.fastcloud.club
-  - &id003
-    name: 🇭🇰 [ 联通 ] 香港 · F1 · 03 · 线路2
-    server: v02.gutingting.com
-    port: 30024
     type: vmess
     uuid: 2567bed8-e47a-4a8b-a336-244fdd203e9b
     alterId: 0
