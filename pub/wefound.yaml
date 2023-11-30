@@ -6,36 +6,97 @@ log-level: info
 external-controller: 0.0.0.0:9090
 proxies:
   - &id001
-    name: 🇺🇸_US_美国_1
-    type: vmess
-    server: cf-lt.sharecentre.online
-    port: 8880
-    cipher: auto
-    uuid: 2a683a54-f098-4d98-92fc-762b85d907b9
-    alterId: 0
-    tls: false
+    name: 🇨🇳_CN_中国->🇺🇸_US_美国_1
+    type: trojan
+    server: other.kunlun-ppg.com
+    port: 10838
+    udp: true
+    password: 5b263211-7c16-4e24-84a0-57ce29a3c234
+    sni: alibaba-node.cn
     skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /api/v3/download.getFile
-      headers:
-        host: ssrsub.v002.ssrsub.com
+    network: tcp
   - &id002
-    name: 🇺🇸_US_美国_2
+    name: 🇺🇸_US_美国->🇮🇳_IN_印度_1
     type: vmess
-    server: ns1.v2-vip.fun
+    server: mm3.shabijichang.com
     port: 80
     cipher: auto
-    uuid: 2a683a54-f098-4d98-92fc-762b85d907b9
+    uuid: c458695d-6908-45c3-9512-e0c46418454c
     alterId: 0
     tls: false
     skip-cert-verify: true
     network: ws
     ws-opts:
-      path: /api/v3/download.getFile
+      path: /
       headers:
-        host: ssrsub.v03.ssrsub.com
+        host: mm3.shabijichang.com
   - &id003
+    name: 🇺🇸_US_美国->🇩🇪_DE_德国_1
+    type: vmess
+    server: xyz18.forwardv2raytelegramchannel.fun
+    port: 2052
+    cipher: auto
+    uuid: d62e72b0-14a2-439a-9912-c133bf89237b
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /FORWARDV2RAY
+      headers:
+        host: xyz18.forwardv2raytelegramchannel.fun
+  - &id004
+    name: 🇺🇸_US_美国_1
+    type: vmess
+    server: xyz29.forwardv2raytelegramchannel.fun
+    port: 2096
+    cipher: auto
+    uuid: 819f16dc-5632-42dd-8427-09a702867016
+    alterId: 0
+    tls: true
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /FORWARDV2RAY
+  - &id005
+    name: 🇺🇸_US_美国_2
+    type: vmess
+    server: tttt.ssfree.ru
+    port: 443
+    cipher: auto
+    uuid: 5a6d4a80-8ed0-11ee-89d0-00163e49219e
+    alterId: 0
+    tls: true
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /search
+  - &id006
+    name: 🇺🇸_US_美国->🇬🇧_GB_英国_1
+    type: vmess
+    server: ld2.shabijichang.com
+    port: 80
+    cipher: auto
+    uuid: c458695d-6908-45c3-9512-e0c46418454c
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: ld2.shabijichang.com
+  - &id007
+    name: 🇨🇳_CN_中国->🇺🇦_UA_乌克兰
+    type: trojan
+    server: other.kunlun-ppg.com
+    port: 10845
+    udp: true
+    password: 5b263211-7c16-4e24-84a0-57ce29a3c234
+    sni: alibaba-node.cn
+    skip-cert-verify: true
+    network: tcp
+  - &id008
     name: 🇺🇸_US_美国_3
     type: vmess
     server: 104.21.75.246
@@ -50,8 +111,33 @@ proxies:
       path: /
       headers:
         host: sbl2.shabijichang.com
-  - &id004
-    name: 🇺🇸_US_美国->🇮🇳_IN_印度_1
+  - &id009
+    name: 🇨🇳_CN_中国->🇺🇸_US_美国_2
+    type: trojan
+    server: other.kunlun-ppg.com
+    port: 10837
+    udp: true
+    password: 5b263211-7c16-4e24-84a0-57ce29a3c234
+    sni: alibaba-node.cn
+    skip-cert-verify: true
+    network: tcp
+  - &id010
+    name: 🇺🇸_US_美国->🇩🇪_DE_德国_2
+    type: vmess
+    server: xyz26.forwardv2raytelegramchannel.fun
+    port: 8080
+    cipher: auto
+    uuid: d2a28a5c-3e3d-4fa0-be5b-e6a8136d2039
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /FORWARDV2RAY
+      headers:
+        host: xyz26.forwardv2raytelegramchannel.fun
+  - &id011
+    name: 🇺🇸_US_美国->🇮🇳_IN_印度_2
     type: vmess
     server: mm2.shabijichang.com
     port: 80
@@ -65,114 +151,8 @@ proxies:
       path: /
       headers:
         host: mm2.shabijichang.com
-  - &id005
-    name: 🇨🇦_CA_加拿大
-    type: vmess
-    server: 193.203.203.88
-    port: 2082
-    cipher: auto
-    uuid: 5f2d026e-1dbd-4bb0-aa61-b1bcc544ab2c
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: http
-  - &id006
-    name: 🇺🇸_US_美国_4
-    type: vmess
-    server: 64.32.8.215
-    port: 443
-    cipher: auto
-    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-    alterId: 64
-    tls: true
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /path/1701091133409
-      headers:
-        host: www.58116899.xyz
-  - &id007
-    name: 🇺🇸_US_美国_5
-    type: vmess
-    server: fr-v2ray.freevmess.com
-    port: 8442
-    cipher: auto
-    uuid: 6773a666-5593-4c9f-aacd-52300b6a02d4
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: http
-  - &id008
-    name: 🇨🇳_CN_中国->🇬🇧_GB_英国
-    type: vmess
-    server: 112.29.94.23
-    port: 43526
-    cipher: auto
-    uuid: 21a9bff2-72de-4e62-93ff-8b159f66d875
-    alterId: 64
-    tls: false
-    skip-cert-verify: true
-    network: tcp
-  - &id009
-    name: 🇺🇸_US_美国_6
-    type: vmess
-    server: a7.wxlljc520.com
-    port: 443
-    cipher: auto
-    uuid: 4d7732ee-986a-4c25-8443-d6fefa8d2190
-    alterId: 0
-    tls: true
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /apple
-      headers:
-        host: 777.golinkwuxian.top
-  - &id010
-    name: 🇺🇸_US_美国_7
-    type: vmess
-    server: tttt.ssfree.ru
-    port: 443
-    cipher: auto
-    uuid: 2fe62184-8e07-11ee-ae94-00163e49219e
-    alterId: 0
-    tls: true
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /search
-  - &id011
-    name: 🇺🇸_US_美国->🇮🇳_IN_印度_2
-    type: vmess
-    server: mm3.shabijichang.com
-    port: 80
-    cipher: auto
-    uuid: c458695d-6908-45c3-9512-e0c46418454c
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        host: mm3.shabijichang.com
   - &id012
-    name: 🇺🇸_US_美国_8
-    type: vmess
-    server: b4.wxlljc520.com
-    port: 443
-    cipher: auto
-    uuid: 4d7732ee-986a-4c25-8443-d6fefa8d2190
-    alterId: 0
-    tls: true
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /apple
-      headers:
-        host: 777.golinkwuxian.top
-  - &id013
-    name: 🇺🇸_US_美国_9
+    name: 🇺🇸_US_美国_4
     type: vmess
     server: singapore.com
     port: 80
@@ -186,36 +166,41 @@ proxies:
       path: /api/v3/download.getFile
       headers:
         host: ssrsub.v005.ssrsub.com
+  - &id013
+    name: 🇩🇪_DE_德国
+    type: trojan
+    server: 5.104.108.120
+    port: 443
+    udp: true
+    password: e86e242e-b5d5-46ae-a410-3684f7d70ac2
+    skip-cert-verify: true
+    network: tcp
   - &id014
-    name: 🇺🇸_US_美国->🇬🇧_GB_英国
+    name: 🇺🇸_US_美国_5
     type: vmess
-    server: ld2.shabijichang.com
-    port: 80
+    server: 5.161.127.110
+    port: 3389
     cipher: auto
-    uuid: c458695d-6908-45c3-9512-e0c46418454c
+    uuid: 9c050a86-d612-48f1-ec32-e573df08a1b7
     alterId: 0
     tls: false
     skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        host: ld2.shabijichang.com
+    network: http
   - &id015
-    name: 🇯🇵_JP_日本
+    name: 🇺🇸_US_美国->🇩🇪_DE_德国_3
     type: vmess
-    server: 103.13.208.159
-    port: 443
+    server: xyz28.forwardv2raytelegramchannel.fun
+    port: 2096
     cipher: auto
-    uuid: 0c42fcf1-3850-45e2-94b7-556440a0060d
+    uuid: 819f16dc-5632-42dd-8427-09a702867016
     alterId: 0
     tls: true
     skip-cert-verify: true
     network: ws
     ws-opts:
-      path: /DI5aPORpOasXtsDDSw7kNJ4NXtP
+      path: /FORWARDV2RAY
   - &id016
-    name: 🇺🇸_US_美国_10
+    name: 🇺🇸_US_美国_6
     type: vmess
     server: cf-lt.sharecentre.online
     port: 80
@@ -230,45 +215,62 @@ proxies:
       headers:
         host: ssrsub.v006.ssrsub.com
   - &id017
-    name: 🇺🇸_US_美国->🇫🇷_FR_法国
+    name: 🇨🇳_CN_中国->🇷🇺_RU_俄罗斯联邦
     type: vmess
-    server: fr-01.jikuai.xyz
-    port: 2082
+    server: 183.232.238.77
+    port: 10010
     cipher: auto
-    uuid: 70666776-4e9f-4350-b3f0-afaff6a70db0
+    uuid: ab537195-b74c-3df5-a3a1-d504345e80bb
     alterId: 0
     tls: false
     skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        host: fr-01.jikuai.xyz
+    network: tcp
   - &id018
-    name: 🇬🇧_GB_英国
+    name: 🇮🇷_IR_伊朗
     type: vmess
-    server: 172.99.190.109
+    server: 91.107.145.222
     port: 443
     cipher: auto
-    uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
+    uuid: d20e38ef-1a4d-4009-a00d-2f0d44e3c65a
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: http
+  - &id019
+    name: 🇨🇳_CN_中国->🇺🇸_US_美国_3
+    type: trojan
+    server: other.kunlun-ppg.com
+    port: 10850
+    udp: true
+    password: 5b263211-7c16-4e24-84a0-57ce29a3c234
+    sni: alibaba-node.cn
+    skip-cert-verify: true
+    network: tcp
+  - &id020
+    name: 🇨🇳_CN_中国->🇹🇷_TR_土耳其
+    type: trojan
+    server: lbsh.bnnodeservice.com
+    port: 34014
+    udp: true
+    password: c82b2e40-8a24-4a4a-85c7-e123ee0ff3d0
+    sni: cert.bitbyte.one
+    skip-cert-verify: true
+    network: tcp
+  - &id021
+    name: 🇺🇸_US_美国->🇩🇪_DE_德国_4
+    type: vmess
+    server: xyz23.forwardv2raytelegramchannel.fun
+    port: 2096
+    cipher: auto
+    uuid: 819f16dc-5632-42dd-8427-09a702867016
     alterId: 0
     tls: true
     skip-cert-verify: true
     network: ws
     ws-opts:
-      path: linkvws
-  - &id019
-    name: 🇷🇺_RU_俄罗斯联邦
-    type: trojan
-    server: 89.221.224.94
-    port: 80
-    udp: true
-    password: 28c79056-ccfd-4cc1-93d4-c337cc782e65
-    sni: is2-t.sshmax.xyz
-    skip-cert-verify: true
-    network: tcp
-  - &id020
-    name: 🇺🇸_US_美国_11
+      path: /FORWARDV2RAY
+  - &id022
+    name: 🇺🇸_US_美国_7
     type: vmess
     server: usd.yj2022.gq
     port: 8880
@@ -282,21 +284,88 @@ proxies:
       path: /XSjeg73o6ZdsheahCb5JG
       headers:
         host: usd.yj2022.gq
-  - &id021
-    name: 🇺🇸_US_美国_12
+  - &id023
+    name: 🇨🇦_CA_加拿大
     type: vmess
-    server: us-fsl.jikuai.xyz
-    port: 8443
+    server: 193.203.203.88
+    port: 2082
     cipher: auto
-    uuid: 70666776-4e9f-4350-b3f0-afaff6a70db0
+    uuid: 5f2d026e-1dbd-4bb0-aa61-b1bcc544ab2c
     alterId: 0
-    tls: true
+    tls: false
+    skip-cert-verify: true
+    network: http
+  - &id024
+    name: 🇺🇸_US_美国->🇬🇧_GB_英国_2
+    type: vmess
+    server: mrb2.shabijichang.com
+    port: 80
+    cipher: auto
+    uuid: c458695d-6908-45c3-9512-e0c46418454c
+    alterId: 0
+    tls: false
     skip-cert-verify: true
     network: ws
     ws-opts:
-      path: /user
+      path: /
       headers:
-        host: us-fsl.jikuai.xyz
+        host: mrb2.shabijichang.com
+  - &id025
+    name: 🇺🇸_US_美国_8
+    type: vmess
+    server: 172.64.88.169
+    port: 80
+    cipher: auto
+    uuid: ffbfc19a-6495-4d14-c95c-06a09d013309
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /ffbfc19a-6495-4d14-c95c-06a09d013309
+      headers:
+        host: tgdns68.9669.link
+  - &id026
+    name: 🇺🇸_US_美国->🇦🇺_AU_澳大利亚
+    type: vmess
+    server: au-01.jikuai.xyz
+    port: 2082
+    cipher: auto
+    uuid: 70666776-4e9f-4350-b3f0-afaff6a70db0
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: au-01.jikuai.xyz
+  - &id027
+    name: 🇺🇸_US_美国->🇩🇪_DE_德国_5
+    type: vmess
+    server: a1.forwardv2raytelegramchannel.fun
+    port: 2095
+    cipher: auto
+    uuid: 19529d4e-8c0e-47d0-93de-bd9a31b476d2
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /FORWARDV2RAY
+      headers:
+        host: a1.forwardv2raytelegramchannel.fun
+  - &id028
+    name: 🇨🇳_CN_中国->🇬🇧_GB_英国
+    type: vmess
+    server: 112.29.94.23
+    port: 43526
+    cipher: auto
+    uuid: 21a9bff2-72de-4e62-93ff-8b159f66d875
+    alterId: 64
+    tls: false
+    skip-cert-verify: true
+    network: tcp
 proxy-groups:
   - name: PROXY
     type: select
@@ -344,6 +413,13 @@ proxy-groups:
       - *id019
       - *id020
       - *id021
+      - *id022
+      - *id023
+      - *id024
+      - *id025
+      - *id026
+      - *id027
+      - *id028
   - name: LOAD-BALANCE
     type: load-balance
     url: http://www.gstatic.com/generate_204
@@ -370,6 +446,13 @@ proxy-groups:
       - *id019
       - *id020
       - *id021
+      - *id022
+      - *id023
+      - *id024
+      - *id025
+      - *id026
+      - *id027
+      - *id028
   - name: SELECT
     type: select
     proxies:
@@ -394,6 +477,13 @@ proxy-groups:
       - *id019
       - *id020
       - *id021
+      - *id022
+      - *id023
+      - *id024
+      - *id025
+      - *id026
+      - *id027
+      - *id028
 rules:
   - RULE-SET,applications,DIRECT
   - DOMAIN,clash.razord.top,DIRECT
