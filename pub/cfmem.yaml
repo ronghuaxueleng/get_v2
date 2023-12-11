@@ -6,61 +6,31 @@ log-level: info
 external-controller: 0.0.0.0:9090
 proxies:
   - &id001
-    name: 🇷🇺_RU_俄罗斯联邦_1
+    name: 🇨🇦_CA_加拿大
     type: vmess
-    server: 46.29.166.237
-    port: 47555
+    server: 193.203.203.88
+    port: 2082
     cipher: auto
-    uuid: 0c49cd19-2758-4d38-e6a8-11f2d6635860
+    uuid: 2ec862af-bd1c-46f5-97af-bffbe61e3164
     alterId: 0
     tls: false
     skip-cert-verify: true
-    network: tcp
+    network: http
   - &id002
-    name: 🇰🇷_KR_韩国->🇺🇸_US_美国
-    type: trojan
-    server: 146.56.179.67
-    port: 40007
-    udp: true
-    password: cc05b267-2e17-4e73-92f0-2cf603aa5997
-    skip-cert-verify: true
-    network: tcp
+    name: 🇬🇧_GB_英国_1
+    type: ss
+    server: 198.244.228.191
+    port: 443
+    password: asdKkaskJKfnsa
+    cipher: aes-256-cfb
   - &id003
-    name: 🇺🇸_US_美国->🇱🇹_LT_立陶宛
-    type: vmess
-    server: moon.chanell.mci.v-x4ssd.space
-    port: 8080
-    cipher: auto
-    uuid: 6ad7afd7-6958-478e-9fff-88f16f9a2008
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        host: moon.chanell.mci.v-x4ssd.space
-  - &id004
     name: 🇺🇸_US_美国_1
     type: ss
-    server: tg_mfbpn_aus2.52vpn.eu.org
-    port: 443
-    password: amazonskr05
-    cipher: aes-256-cfb
-  - &id005
-    name: 🇮🇷_IR_伊朗
-    type: vmess
-    server: 37.152.186.109
-    port: 31341
-    cipher: auto
-    uuid: 9d379161-cbeb-4ef6-f023-ca174175ea62
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /
-  - &id006
+    server: 94.131.115.129
+    port: 38108
+    password: bNUe0jR9rzsvLEzfPmI4Of
+    cipher: chacha20-ietf-poly1305
+  - &id004
     name: 🇺🇸_US_美国_2
     type: vmess
     server: cf-lt.sharecentre.online
@@ -75,93 +45,67 @@ proxies:
       path: /api/v3/download.getFile
       headers:
         host: ssrsub.v005.ssrsub.com
-  - &id007
+  - &id005
+    name: 🇧🇬_BG_保加利亚->🇳🇱_NL_荷兰
+    type: vmess
+    server: 5.101.219.6
+    port: 443
+    cipher: auto
+    uuid: 15eaa579-cf84-4792-8612-3f76fb1b6315
+    alterId: 0
+    tls: true
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /@FORWARDV2RAY
+      headers:
+        host: software.myftp.biz
+  - &id006
     name: 🇺🇸_US_美国_3
-    type: ss
-    server: 64.31.55.5
-    port: 11223
-    password: dongtaiwang.com
-    cipher: aes-256-gcm
+    type: vmess
+    server: 104.18.62.248
+    port: 2052
+    cipher: auto
+    uuid: 5081e895-00ec-4ef5-9005-e63dc56a02f6
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /public?ed=2048
+      headers:
+        host: uk1.vvv123.store
+  - &id007
+    name: 🇮🇹_IT_意大利->🇳🇱_NL_荷兰
+    type: vmess
+    server: 45.82.101.6
+    port: 443
+    cipher: auto
+    uuid: 15eaa579-cf84-4792-8612-3f76fb1b6315
+    alterId: 0
+    tls: true
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /@FORWARDV2RAY
+      headers:
+        host: software.myftp.biz
   - &id008
-    name: 🇫🇷_FR_法国_1
-    type: ss
-    server: 54.36.174.181
-    port: 8091
-    password: PCnnH6SQSnfoS27
-    cipher: aes-256-gcm
-  - &id009
-    name: 🇷🇺_RU_俄罗斯联邦_2
-    type: vmess
-    server: 46.29.166.124
-    port: 47412
-    cipher: auto
-    uuid: 291a5c6a-447e-4fc7-b3d7-28ebec5cbcd7
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: tcp
-  - &id010
-    name: 🇨🇦_CA_加拿大_1
-    type: vmess
-    server: 193.203.203.88
-    port: 2082
-    cipher: auto
-    uuid: 2ec862af-bd1c-46f5-97af-bffbe61e3164
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: http
-  - &id011
     name: 🇺🇸_US_美国_4
     type: ss
     server: 89.187.181.179
     port: 443
     password: asdKkaskJKfnsa
     cipher: aes-256-cfb
-  - &id012
-    name: 🇺🇸_US_美国_5
-    type: ss
-    server: 45.56.72.68
-    port: 443
-    password: a123456
-    cipher: aes-256-gcm
-  - &id013
-    name: 🇬🇧_GB_英国_1
+  - &id009
+    name: 🇬🇧_GB_英国_2
     type: ss
     server: 198.244.231.34
     port: 443
     password: asdKkaskJKfnsa
     cipher: aes-256-cfb
-  - &id014
-    name: 🇫🇷_FR_法国_2
-    type: ss
-    server: 54.36.174.181
-    port: 4444
-    password: pKEW8JPByTVTLtM
-    cipher: aes-256-gcm
-  - &id015
-    name: 🇨🇦_CA_加拿大_2
-    type: ss
-    server: 66.103.199.2
-    port: 56271
-    password: kKKLUkNaMA
-    cipher: aes-256-gcm
-  - &id016
-    name: 🇫🇷_FR_法国_3
-    type: ss
-    server: 54.36.174.181
-    port: 3306
-    password: Y6R9pAtvxxzmGC
-    cipher: aes-256-gcm
-  - &id017
-    name: 🇫🇷_FR_法国_4
-    type: ss
-    server: 54.36.174.181
-    port: 8090
-    password: PCnnH6SQSnfoS27
-    cipher: aes-256-gcm
-  - &id018
-    name: 🇺🇸_US_美国_6
+  - &id010
+    name: 🇺🇸_US_美国_5
     type: vmess
     server: singapore.com
     port: 80
@@ -175,7 +119,230 @@ proxies:
       path: /api/v3/download.getFile
       headers:
         host: ssrsub.v005.ssrsub.com
+  - &id011
+    name: 🇫🇷_FR_法国_1
+    type: ss
+    server: 
+      ak1732.www.outline.network.fr8678825324247b8176d59f83c30bd94d23d2e3ac5cd4a743bkwqeikvdyufr.cyou
+    port: 8119
+    password: cdBIDV42DCwnfIN
+    cipher: aes-256-gcm
+  - &id012
+    name: 🇺🇸_US_美国_6
+    type: ss
+    server: 95.164.87.138
+    port: 63830
+    password: dPW6SKhVfqDevBfdrt5eJg
+    cipher: chacha20-ietf-poly1305
+  - &id013
+    name: 🇷🇺_RU_俄罗斯联邦_1
+    type: ss
+    server: 45.144.30.202
+    port: 28490
+    password: yZdRgske85Hou96z2dRdtH
+    cipher: chacha20-ietf-poly1305
+  - &id014
+    name: 🇺🇸_US_美国_7
+    type: trojan
+    server: hk1.lvwf8n-hh8e-2300-nmoo-d2e9naobeacn.9d8f269f96b25232-759cbb36d6548597.kaufen
+    port: 443
+    udp: true
+    password: 7b01f853-1c72-47db-8f57-151d491b3bf9
+    sni: 13-231-155-134.nhost.00cdn.com
+    skip-cert-verify: true
+    network: tcp
+  - &id015
+    name: 🇺🇸_US_美国_8
+    type: trojan
+    server: jp2.lvwf8n-hh8e-2300-nmoo-d2e9naobeacn.9d8f269f96b25232-759cbb36d6548597.kaufen
+    port: 443
+    udp: true
+    password: d56cb8dc-e932-4d57-bd90-1381a1245f90
+    sni: 13-231-155-134.nhost.00cdn.com
+    skip-cert-verify: true
+    network: tcp
+  - &id016
+    name: 🇺🇸_US_美国_9
+    type: trojan
+    server: us2.lvwf8n-hh8e-2300-nmoo-d2e9naobeacn.9d8f269f96b25232-759cbb36d6548597.kaufen
+    port: 443
+    udp: true
+    password: d56cb8dc-e932-4d57-bd90-1381a1245f90
+    sni: 206.237.5.220
+    skip-cert-verify: true
+    network: tcp
+  - &id017
+    name: 🇺🇸_US_美国_10
+    type: trojan
+    server: hk3.lvwf8n-hh8e-2300-nmoo-d2e9naobeacn.9d8f269f96b25232-759cbb36d6548597.kaufen
+    port: 443
+    udp: true
+    password: 7b01f853-1c72-47db-8f57-151d491b3bf9
+    sni: 13-231-155-134.nhost.00cdn.com
+    skip-cert-verify: true
+    network: tcp
+  - &id018
+    name: 🇷🇺_RU_俄罗斯联邦_2
+    type: ss
+    server: 91.194.161.7
+    port: 8388
+    password: OWJlYjYy
+    cipher: chacha20-ietf-poly1305
   - &id019
+    name: 🇫🇷_FR_法国_2
+    type: ss
+    server: 54.36.174.181
+    port: 5601
+    password: Y6R9pAtvxxzmGC
+    cipher: aes-256-gcm
+  - &id020
+    name: 🇫🇷_FR_法国_3
+    type: ss
+    server: 54.36.174.181
+    port: 8888
+    password: Y6R9pAtvxxzmGC
+    cipher: aes-256-gcm
+  - &id021
+    name: 🇫🇷_FR_法国_4
+    type: ss
+    server: 54.36.174.181
+    port: 9101
+    password: e4FCWrgpkji3QY
+    cipher: aes-256-gcm
+  - &id022
+    name: 🇩🇪_DE_德国->🇳🇱_NL_荷兰_1
+    type: vmess
+    server: 92.223.124.29
+    port: 443
+    cipher: auto
+    uuid: 15eaa579-cf84-4792-8612-3f76fb1b6315
+    alterId: 0
+    tls: true
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /@FORWARDV2RAY
+      headers:
+        host: software.myftp.biz
+  - &id023
+    name: 🇫🇷_FR_法国_5
+    type: ss
+    server: 
+      ak1751.www.outline.network.fr8678825324247b8176d59f83c30bd94d23d2e3ac5cd4a743bkwqeikvdyufr.cyou
+    port: 5600
+    password: Y6R9pAtvxxzmGC
+    cipher: aes-256-gcm
+  - &id024
+    name: 🇫🇷_FR_法国_6
+    type: ss
+    server: 54.36.174.181
+    port: 5004
+    password: g5MeD6Ft3CWlJId
+    cipher: aes-256-gcm
+  - &id025
+    name: 🇫🇷_FR_法国_7
+    type: ss
+    server: 54.36.174.181
+    port: 5001
+    password: Y6R9pAtvxxzmGC
+    cipher: aes-256-gcm
+  - &id026
+    name: 🇫🇷_FR_法国_8
+    type: ss
+    server: 54.36.174.181
+    port: 2375
+    password: faBAoD54k87UJG7
+    cipher: aes-256-gcm
+  - &id027
+    name: 🇫🇷_FR_法国_9
+    type: ss
+    server: 54.36.174.181
+    port: 3306
+    password: Y6R9pAtvxxzmGC
+    cipher: aes-256-gcm
+  - &id028
+    name: 🇺🇸_US_美国->🇳🇱_NL_荷兰_1
+    type: vmess
+    server: 92.38.170.8
+    port: 443
+    cipher: auto
+    uuid: 15eaa579-cf84-4792-8612-3f76fb1b6315
+    alterId: 0
+    tls: true
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /@FORWARDV2RAY
+      headers:
+        host: software.myftp.biz
+  - &id029
+    name: 🇩🇪_DE_德国->🇳🇱_NL_荷兰_2
+    type: vmess
+    server: 92.223.124.22
+    port: 443
+    cipher: auto
+    uuid: d6d76607-603b-450f-b156-b3367f1b4558
+    alterId: 0
+    tls: true
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /@FORWARDV2RAY
+      headers:
+        host: teletv.onthewifi.com
+  - &id030
+    name: 🇺🇦_UA_乌克兰->🇳🇱_NL_荷兰
+    type: vmess
+    server: 79.133.108.9
+    port: 443
+    cipher: auto
+    uuid: 15eaa579-cf84-4792-8612-3f76fb1b6315
+    alterId: 0
+    tls: true
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /@FORWARDV2RAY
+      headers:
+        host: software.myftp.biz
+  - &id031
+    name: 🇺🇸_US_美国->🇳🇱_NL_荷兰_2
+    type: vmess
+    server: 92.38.168.7
+    port: 443
+    cipher: auto
+    uuid: 15eaa579-cf84-4792-8612-3f76fb1b6315
+    alterId: 0
+    tls: true
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /@FORWARDV2RAY
+      headers:
+        host: software.myftp.biz
+  - &id032
+    name: 🇺🇸_US_美国_11
+    type: vmess
+    server: 104.18.202.232
+    port: 80
+    cipher: auto
+    uuid: 239d61bb-fd16-4b53-85a5-f4c12c0d3d94
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /vmess
+      headers:
+        host: us8vm.cdn-03.live
+  - &id033
+    name: 🇫🇷_FR_法国_10
+    type: ss
+    server: 135.125.172.153
+    port: 443
+    password: asdKkaskJKfnsa
+    cipher: aes-256-cfb
+  - &id034
     name: 🇺🇸_US_美国->🇬🇧_GB_英国
     type: vmess
     server: ld2.shabijichang.com
@@ -190,160 +357,36 @@ proxies:
       path: /
       headers:
         host: ld2.shabijichang.com
-  - &id020
-    name: 🇺🇸_US_美国_7
-    type: vmess
-    server: 198.41.223.34
-    port: 2052
-    cipher: auto
-    uuid: 07ccc3b8-c9ed-4030-b6ae-0939467ee1b2
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        host: yuyumeiguo.tgyujcchannel.site
-  - &id021
-    name: 🇺🇸_US_美国_8
-    type: vmess
-    server: 2.58.85.44
-    port: 444
-    cipher: auto
-    uuid: aa606a23-5454-4b3b-fee6-e4ab981df030
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: http
-  - &id022
-    name: 🇫🇷_FR_法国_5
-    type: ss
-    server: 54.36.174.181
-    port: 5601
-    password: Y6R9pAtvxxzmGC
-    cipher: aes-256-gcm
-  - &id023
-    name: 🇬🇧_GB_英国_2
-    type: ss
-    server: 198.244.228.191
-    port: 443
-    password: asdKkaskJKfnsa
-    cipher: aes-256-cfb
-  - &id024
-    name: 🇺🇸_US_美国_9
-    type: vmess
-    server: 147.189.161.106
-    port: 30823
-    cipher: auto
-    uuid: d992809a-ce81-482b-c39d-7cfb60ef2b99
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: tcp
-  - &id025
-    name: 🇫🇷_FR_法国_6
-    type: ss
-    server: 54.36.174.181
-    port: 6679
-    password: TEzjfAYq2IjtuoS
-    cipher: aes-256-gcm
-  - &id026
-    name: 🇫🇷_FR_法国_7
-    type: ss
-    server: 54.36.174.181
-    port: 7001
-    password: RexnBgU7EV5ADxG
-    cipher: aes-256-gcm
-  - &id027
-    name: 🇫🇷_FR_法国_8
-    type: ss
-    server: 54.36.174.181
-    port: 8888
-    password: Y6R9pAtvxxzmGC
-    cipher: aes-256-gcm
-  - &id028
-    name: 🇫🇷_FR_法国_9
-    type: trojan
-    server: 15.188.70.236
-    port: 22222
-    udp: true
-    password: telegram-id-directvpn
-    sni: trj.rollingnext.co.uk
-    skip-cert-verify: true
-    network: tcp
-    alpn:
-      - http/1.1
-  - &id029
-    name: 🇫🇷_FR_法国_10
-    type: ss
-    server: 
-      ak1732.www.outline.network.fr8678825324247b8176d59f83c30bd94d23d2e3ac5cd4a743bkwqeikvdyufr.cyou
-    port: 8119
-    password: cdBIDV42DCwnfIN
-    cipher: aes-256-gcm
-  - &id030
-    name: 🇺🇸_US_美国_10
-    type: vmess
-    server: cfzl2.freeapp.buzz
-    port: 8080
-    cipher: auto
-    uuid: 3ce4d20b-4374-42a2-a75e-24626b141ea2
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        host: icu2.mac2win.top
-  - &id031
-    name: 🇺🇸_US_美国_11
-    type: vmess
-    server: 45.91.81.15
-    port: 59665
-    cipher: auto
-    uuid: 2197b938-a904-42d1-cf22-e68d5ca23726
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: tcp
-  - &id032
+  - &id035
     name: 🇺🇸_US_美国_12
     type: vmess
-    server: 43.159.145.188
-    port: 8002
+    server: 104.21.75.246
+    port: 80
     cipher: auto
-    uuid: 4c09daf4-a60d-4858-973e-bc200cbbb7a2
+    uuid: c458695d-6908-45c3-9512-e0c46418454c
     alterId: 0
     tls: false
     skip-cert-verify: true
-    network: tcp
-  - &id033
-    name: 🇫🇷_FR_法国_11
-    type: ss
-    server: 135.125.172.153
-    port: 443
-    password: asdKkaskJKfnsa
-    cipher: aes-256-cfb
-  - &id034
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: sbl2.shabijichang.com
+  - &id036
     name: 🇺🇸_US_美国_13
-    type: ss
-    server: 95.164.87.138
-    port: 63830
-    password: dPW6SKhVfqDevBfdrt5eJg
-    cipher: chacha20-ietf-poly1305
-  - &id035
-    name: 🇺🇸_US_美国_14
     type: vmess
-    server: 157.254.231.45
-    port: 38461
+    server: us-02.jikuai.xyz
+    port: 2082
     cipher: auto
-    uuid: 8f53d96b-cb13-4197-cd44-37db95809de5
+    uuid: 70666776-4e9f-4350-b3f0-afaff6a70db0
     alterId: 0
     tls: false
     skip-cert-verify: true
-    network: tcp
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: us-02.jikuai.xyz
 proxy-groups:
   - name: PROXY
     type: select
@@ -405,6 +448,7 @@ proxy-groups:
       - *id033
       - *id034
       - *id035
+      - *id036
   - name: LOAD-BALANCE
     type: load-balance
     url: http://www.gstatic.com/generate_204
@@ -445,6 +489,7 @@ proxy-groups:
       - *id033
       - *id034
       - *id035
+      - *id036
   - name: SELECT
     type: select
     proxies:
@@ -483,6 +528,7 @@ proxy-groups:
       - *id033
       - *id034
       - *id035
+      - *id036
 rules:
   - RULE-SET,applications,DIRECT
   - DOMAIN,clash.razord.top,DIRECT
