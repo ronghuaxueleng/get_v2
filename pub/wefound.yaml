@@ -6,12 +6,12 @@ log-level: info
 external-controller: 0.0.0.0:9090
 proxies:
   - &id001
-    name: 🇺🇸_US_美国->🇱🇹_LT_立陶宛
+    name: 🇨🇳_CN_中国->🇨🇦_CA_加拿大_1
     type: vmess
-    server: cloud.dragonrzm.sbs
-    port: 8080
+    server: yes.cnmjcn.net
+    port: 16648
     cipher: auto
-    uuid: ce0d5151-7734-4189-b6ae-eb58e9af5603
+    uuid: c2c76420-257f-492a-b20f-6560f3bfa78d
     alterId: 0
     tls: false
     skip-cert-verify: true
@@ -19,67 +19,54 @@ proxies:
     ws-opts:
       path: /
       headers:
-        host: cloud.dragonrzm.sbs
+        host: d4d028243c73047d9171bacb9b0439e8.mobgslb.tbcache.com
   - &id002
-    name: 🇺🇸_US_美国_1
+    name: 🇨🇳_CN_中国->🇨🇦_CA_加拿大_2
     type: vmess
-    server: ns1.v2-vip.fun
-    port: 80
+    server: m.cnmjcn.com
+    port: 16648
     cipher: auto
-    uuid: b1e30339-a603-47d1-b31c-1d0ceb59952e
+    uuid: c2c76420-257f-492a-b20f-6560f3bfa78d
     alterId: 0
     tls: false
     skip-cert-verify: true
     network: ws
     ws-opts:
-      path: /api/v3/download.getFile
+      path: /
       headers:
-        host: ssrsub.v03.ssrsub.com
+        host: d4d028243c73047d9171bacb9b0439e8.mobgslb.tbcache.com
   - &id003
-    name: 🇨🇳_CN_中国->🇺🇸_US_美国_1
-    type: trojan
-    server: other.kunlun-ppg.com
-    port: 10850
-    udp: true
-    password: 4de2e68e-3ffa-46a6-82f1-002ef5baab68
-    sni: alibaba-node.cn
-    skip-cert-verify: true
-    network: tcp
-  - &id004
-    name: 🇺🇸_US_美国_2
-    type: trojan
-    server: 167.68.5.183
-    port: 443
-    udp: true
-    password: d2698cf9-c47e-455c-8384-12e642cbba15
-    sni: 6us3.pqjc.buzz
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /pq/us3
-  - &id005
-    name: 🇩🇪_DE_德国
+    name: 🇨🇳_CN_中国->🇨🇦_CA_加拿大_3
     type: vmess
-    server: 80.71.157.199
-    port: 443
+    server: t.cnmjcn.cyou
+    port: 16648
     cipher: auto
-    uuid: a88ba483-d935-4cb8-a425-a8a9a468409b
+    uuid: c2c76420-257f-492a-b20f-6560f3bfa78d
     alterId: 0
     tls: false
     skip-cert-verify: true
-    network: http
-  - &id006
-    name: 🇨🇳_CN_中国->🇦🇹_AT_奥地利
-    type: trojan
-    server: other.kunlun-ppg.com
-    port: 10848
-    udp: true
-    password: 4de2e68e-3ffa-46a6-82f1-002ef5baab68
-    sni: alibaba-node.cn
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: d4d028243c73047d9171bacb9b0439e8.mobgslb.tbcache.com
+  - &id004
+    name: 🇺🇸_US_美国->🇩🇪_DE_德国_1
+    type: vmess
+    server: 104.19.154.92
+    port: 2087
+    cipher: auto
+    uuid: 8fada9c0-c348-4465-aade-ff0311454178
+    alterId: 0
+    tls: true
     skip-cert-verify: true
-    network: tcp
-  - &id007
-    name: 🇺🇸_US_美国_3
+    network: ws
+    ws-opts:
+      path: /kqlqqv
+      headers:
+        host: pAnel159.moOkomeILz.homes
+  - &id005
+    name: 🇺🇸_US_美国
     type: trojan
     server: 
       8Ka1hu4r3g@cf.network383.online:8443?type=grpc&sni=ams-trojan-grpc.carfin.tech&allowInsecure=1&serviceName=@apt_mahdi
@@ -92,57 +79,20 @@ proxies:
     network: grpc
     grpc-opts:
       grpc-service-name: '@apt_mahdi'
-  - &id008
-    name: 🇨🇦_CA_加拿大->🇺🇸_US_美国
+  - &id006
+    name: 🇺🇸_US_美国->🇩🇪_DE_德国_2
     type: trojan
-    server: frontend.kuangbiaoyun.com
-    port: 40007
+    server: amini2.ddns.net
+    port: 2096
     udp: true
-    password: 57edfecf-5694-4a34-8072-54a4f0636a62
-    skip-cert-verify: true
-    network: tcp
-  - &id009
-    name: 🇨🇳_CN_中国->🇺🇸_US_美国_2
-    type: trojan
-    server: other.kunlun-ppg.com
-    port: 10838
-    udp: true
-    password: 4de2e68e-3ffa-46a6-82f1-002ef5baab68
-    sni: alibaba-node.cn
-    skip-cert-verify: true
-    network: tcp
-  - &id010
-    name: 🇪🇸_ES_西班牙
-    type: trojan
-    server: 65.20.102.54
-    port: 443
-    udp: true
-    password: 4fc77152e665415b9986d5b9b8f43601
-    sni: www.gpt123.one
-    skip-cert-verify: true
-    network: tcp
-  - &id011
-    name: 🇨🇳_CN_中国->🇺🇦_UA_乌克兰
-    type: trojan
-    server: other.kunlun-ppg.com
-    port: 10845
-    udp: true
-    password: 4de2e68e-3ffa-46a6-82f1-002ef5baab68
-    sni: alibaba-node.cn
-    skip-cert-verify: true
-    network: tcp
-  - &id012
-    name: 🇺🇸_US_美国_4
-    type: trojan
-    server: 89.116.180.179
-    port: 443
-    udp: true
-    password: d2698cf9-c47e-455c-8384-12e642cbba15
-    sni: p6us4.pqjc.buzz
+    password: biwe49r2Tv
+    sni: Qoakq.mookomeilz.homes
     skip-cert-verify: true
     network: ws
     ws-opts:
-      path: /pq/us4
+      path: /mskqq
+      headers:
+        host: pANeL159.moOkoMEilz.homeshttp/1.1
 proxy-groups:
   - name: PROXY
     type: select
@@ -175,12 +125,6 @@ proxy-groups:
       - *id004
       - *id005
       - *id006
-      - *id007
-      - *id008
-      - *id009
-      - *id010
-      - *id011
-      - *id012
   - name: LOAD-BALANCE
     type: load-balance
     url: http://www.gstatic.com/generate_204
@@ -192,12 +136,6 @@ proxy-groups:
       - *id004
       - *id005
       - *id006
-      - *id007
-      - *id008
-      - *id009
-      - *id010
-      - *id011
-      - *id012
   - name: SELECT
     type: select
     proxies:
@@ -207,12 +145,6 @@ proxy-groups:
       - *id004
       - *id005
       - *id006
-      - *id007
-      - *id008
-      - *id009
-      - *id010
-      - *id011
-      - *id012
 rules:
   - RULE-SET,applications,DIRECT
   - DOMAIN,clash.razord.top,DIRECT
