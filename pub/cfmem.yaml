@@ -6,154 +6,42 @@ log-level: info
 external-controller: 0.0.0.0:9090
 proxies:
   - &id001
+    name: 🇺🇸_US_美国_1
+    type: trojan
+    server: 89.116.180.158
+    port: 443
+    udp: true
+    password: 097f6b5f-bcf9-4a24-9f0d-d1feaa638d86
+    sni: 3us2.pqjc.buzz
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /pq/us2
+      headers:
+        host: 3us2.pqjc.buzz
+  - &id002
+    name: 🇺🇸_US_美国_2
+    type: trojan
+    server: 167.68.5.183
+    port: 443
+    udp: true
+    password: 097f6b5f-bcf9-4a24-9f0d-d1feaa638d86
+    sni: 6us3.pqjc.buzz
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /pq/us3
+      headers:
+        host: 6us3.pqjc.buzz
+  - &id003
     name: 🇫🇷_FR_法国_1
     type: ss
-    server: 51.159.221.227
-    port: 443
-    password: asdKkaskJKfnsa
-    cipher: aes-256-cfb
-  - &id002
-    name: 🇫🇷_FR_法国_2
-    type: ss
-    server: 51.158.203.4
-    port: 443
-    password: asdKkaskJKfnsa
-    cipher: aes-256-cfb
-  - &id003
-    name: 🇫🇷_FR_法国_3
-    type: ss
-    server: 51.158.204.70
-    port: 443
+    server: 51.158.195.96
+    port: 80
     password: asdKkaskJKfnsa
     cipher: aes-256-cfb
   - &id004
-    name: 🇺🇸_US_美国_1
-    type: ss
-    server: 89.187.181.179
-    port: 443
-    password: asdKkaskJKfnsa
-    cipher: aes-256-cfb
-  - &id005
-    name: 🇫🇷_FR_法国_4
-    type: ss
-    server: 37.59.21.132
-    port: 443
-    password: asdKkaskJKfnsa
-    cipher: aes-256-cfb
-  - &id006
-    name: 🇺🇸_US_美国_2
-    type: ss
-    server: 38.75.136.135
-    port: 8090
-    password: PCnnH6SQSnfoS27
-    cipher: aes-256-gcm
-  - &id007
     name: 🇺🇸_US_美国_3
-    type: ss
-    server: 38.75.136.135
-    port: 7001
-    password: RexnBgU7EV5ADxG
-    cipher: aes-256-gcm
-  - &id008
-    name: 🇺🇸_US_美国_4
-    type: ss
-    server: 38.75.136.135
-    port: 2376
-    password: faBAoD54k87UJG7
-    cipher: aes-256-gcm
-  - &id009
-    name: 🇺🇸_US_美国_5
-    type: ss
-    server: 38.75.136.135
-    port: 5003
-    password: g5MeD6Ft3CWlJId
-    cipher: aes-256-gcm
-  - &id010
-    name: 🇺🇸_US_美国_6
-    type: ss
-    server: 38.75.136.135
-    port: 8882
-    password: kDWvXYZoTBcGkC4
-    cipher: aes-256-gcm
-  - &id011
-    name: 🇺🇸_US_美国_7
-    type: ss
-    server: 38.75.136.135
-    port: 8000
-    password: KixLvKzwjekG00rm
-    cipher: aes-256-gcm
-  - &id012
-    name: 🇺🇸_US_美国_8
-    type: ss
-    server: 38.75.136.135
-    port: 6697
-    password: TEzjfAYq2IjtuoS
-    cipher: aes-256-gcm
-  - &id013
-    name: 🇺🇸_US_美国_9
-    type: ss
-    server: 38.75.136.135
-    port: 5601
-    password: Y6R9pAtvxxzmGC
-    cipher: aes-256-gcm
-  - &id014
-    name: 🇺🇸_US_美国_10
-    type: ss
-    server: 38.75.136.135
-    port: 5001
-    password: Y6R9pAtvxxzmGC
-    cipher: aes-256-gcm
-  - &id015
-    name: 🇺🇸_US_美国_11
-    type: ss
-    server: 38.75.136.135
-    port: 8881
-    password: kDWvXYZoTBcGkC4
-    cipher: aes-256-gcm
-  - &id016
-    name: 🇺🇸_US_美国_12
-    type: ss
-    server: 38.75.136.135
-    port: 9102
-    password: e4FCWrgpkji3QY
-    cipher: aes-256-gcm
-  - &id017
-    name: 🇺🇸_US_美国_13
-    type: ss
-    server: 38.75.136.135
-    port: 8091
-    password: PCnnH6SQSnfoS27
-    cipher: aes-256-gcm
-  - &id018
-    name: 🇺🇸_US_美国_14
-    type: ss
-    server: 38.75.136.135
-    port: 443
-    password: pKEW8JPByTVTLtM
-    cipher: aes-256-gcm
-  - &id019
-    name: 🇺🇸_US_美国_15
-    type: ss
-    server: 38.75.136.135
-    port: 6379
-    password: zDNVedRFPQexG9v
-    cipher: aes-256-gcm
-  - &id020
-    name: 🇬🇧_GB_英国_1
-    type: ss
-    server: 198.244.231.24
-    port: 443
-    password: asdKkaskJKfnsa
-    cipher: aes-256-cfb
-  - &id021
-    name: 🇫🇷_FR_法国_5
-    type: ss
-    server: 37.59.21.131
-    port: 443
-    password: asdKkaskJKfnsa
-    cipher: aes-256-cfb
-  - &id022
-    name: 🇺🇸_US_美国_16
     type: trojan
     server: 
       8Ka1hu4r3g@cf.network383.online:8443?type=grpc&sni=ams-trojan-grpc.carfin.tech&allowInsecure=1&serviceName=@apt_mahdi
@@ -166,159 +54,175 @@ proxies:
     network: grpc
     grpc-opts:
       grpc-service-name: '@apt_mahdi'
-  - &id023
-    name: 🇺🇸_US_美国_17
+  - &id005
+    name: 🇺🇸_US_美国_4
     type: vmess
-    server: cf-point2.handboy.top
-    port: 2086
+    server: 3.129.250.63
+    port: 56333
     cipher: auto
-    uuid: 22425357-dc2f-4001-afe2-7f56a7210fca
+    uuid: 610fcb1f-ffa6-4819-d313-cd530be44a3c
     alterId: 0
     tls: false
     skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /asda
-      headers:
-        host: cf-us1.handboy.top
-  - &id024
-    name: 🇺🇸_US_美国_18
-    type: vmess
-    server: cf-lt.sharecentre.online
-    port: 80
-    cipher: auto
-    uuid: b1e30339-a603-47d1-b31c-1d0ceb59952e
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /api/v3/download.getFile
-      headers:
-        host: ssrsub.v005.ssrsub.com
-  - &id025
-    name: 🇫🇷_FR_法国_6
+    network: http
+  - &id006
+    name: 🇫🇷_FR_法国_2
     type: ss
-    server: 162.19.204.83
+    server: 51.158.195.96
     port: 443
     password: asdKkaskJKfnsa
     cipher: aes-256-cfb
-  - &id026
-    name: 🇫🇷_FR_法国_7
+  - &id007
+    name: 🇫🇷_FR_法国_3
     type: ss
-    server: 162.19.19.210
+    server: 51.158.195.96
+    port: 110
+    password: asdKkaskJKfnsa
+    cipher: aes-256-cfb
+  - &id008
+    name: 🇬🇧_GB_英国_1
+    type: ss
+    server: 198.244.231.34
     port: 443
     password: asdKkaskJKfnsa
     cipher: aes-256-cfb
-  - &id027
-    name: 🇫🇷_FR_法国_8
+  - &id009
+    name: 🇺🇸_US_美国_5
     type: ss
-    server: 162.19.204.80
+    server: 35.87.39.181
+    port: 443
+    password: amazonskr05
+    cipher: aes-256-cfb
+  - &id010
+    name: 🇺🇸_US_美国_6
+    type: ss
+    server: 89.187.181.179
     port: 443
     password: asdKkaskJKfnsa
     cipher: aes-256-cfb
-  - &id028
-    name: 🇫🇷_FR_法国_9
+  - &id011
+    name: 🇫🇷_FR_法国_4
     type: ss
-    server: 135.125.172.153
+    server: 51.158.204.70
     port: 443
     password: asdKkaskJKfnsa
     cipher: aes-256-cfb
-  - &id029
-    name: 🇫🇷_FR_法国_10
-    type: ss
-    server: 146.59.111.212
-    port: 443
-    password: asdKkaskJKfnsa
-    cipher: aes-256-cfb
-  - &id030
-    name: 🇫🇷_FR_法国_11
-    type: ss
-    server: 162.19.59.164
-    port: 443
-    password: asdKkaskJKfnsa
-    cipher: aes-256-cfb
-  - &id031
-    name: 🇫🇷_FR_法国_12
-    type: ss
-    server: 146.59.81.124
-    port: 443
-    password: asdKkaskJKfnsa
-    cipher: aes-256-cfb
-  - &id032
-    name: 🇫🇷_FR_法国_13
-    type: ss
-    server: 146.59.111.186
-    port: 443
-    password: asdKkaskJKfnsa
-    cipher: aes-256-cfb
-  - &id033
-    name: 🇫🇷_FR_法国_14
-    type: ss
-    server: 162.19.204.77
-    port: 443
-    password: asdKkaskJKfnsa
-    cipher: aes-256-cfb
-  - &id034
-    name: 🇺🇸_US_美国_19
-    type: ss
-    server: 89.187.179.192
-    port: 443
-    password: asdKkaskJKfnsa
-    cipher: aes-256-cfb
-  - &id035
+  - &id012
     name: 🇬🇧_GB_英国_2
     type: ss
     server: 198.244.231.74
     port: 443
     password: asdKkaskJKfnsa
     cipher: aes-256-cfb
-  - &id036
-    name: 🇫🇷_FR_法国_15
+  - &id013
+    name: 🇫🇷_FR_法国_5
     type: ss
-    server: 62.210.88.168
+    server: 37.59.21.132
     port: 443
     password: asdKkaskJKfnsa
     cipher: aes-256-cfb
-  - &id037
-    name: 🇺🇸_US_美国_20
-    type: ss
-    server: 35.87.39.181
-    port: 443
-    password: amazonskr05
-    cipher: aes-256-cfb
-  - &id038
-    name: 🇫🇷_FR_法国_16
-    type: ss
-    server: 146.59.110.169
-    port: 443
-    password: asdKkaskJKfnsa
-    cipher: aes-256-cfb
-  - &id039
-    name: 🇺🇸_US_美国->🇩🇪_DE_德国
-    type: trojan
-    server: amini2.ddns.net
-    port: 2096
-    udp: true
-    password: biwe49r2Tv
-    sni: Qoakq.mookomeilz.homes
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /mskqq
-      headers:
-        host: pANeL159.moOkoMEilz.homes
-    alpn:
-      - http/1.1
-  - &id040
-    name: 🇫🇷_FR_法国_17
+  - &id014
+    name: 🇫🇷_FR_法国->🇨🇳_CN_中国
     type: ss
     server: 57.129.1.20
     port: 443
     password: asdKkaskJKfnsa
     cipher: aes-256-cfb
-  - &id041
-    name: 🇺🇸_US_美国_21
+  - &id015
+    name: 🇨🇦_CA_加拿大->🇺🇸_US_美国
+    type: trojan
+    server: frontend.kuangbiaoyun.com
+    port: 40007
+    udp: true
+    password: 57edfecf-5694-4a34-8072-54a4f0636a62
+    sni: frontend.kuangbiaoyun.com
+    skip-cert-verify: true
+    network: tcp
+  - &id016
+    name: 🇺🇸_US_美国_7
+    type: ss
+    server: 142.202.48.43
+    port: 2375
+    password: faBAoD54k87UJG7
+    cipher: aes-256-gcm
+  - &id017
+    name: 🇺🇸_US_美国_8
+    type: trojan
+    server: 89.116.161.133
+    port: 443
+    udp: true
+    password: 097f6b5f-bcf9-4a24-9f0d-d1feaa638d86
+    sni: p1us1.pqjc.buzz
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /pq/us1
+      headers:
+        host: p1us1.pqjc.buzz
+  - &id018
+    name: 🇩🇪_DE_德国_1
+    type: trojan
+    server: 5.104.108.109
+    port: 443
+    udp: true
+    password: 097f6b5f-bcf9-4a24-9f0d-d1feaa638d86
+    sni: 20-24-33-134.nhost.00cdn.com
+    skip-cert-verify: true
+    network: tcp
+  - &id019
+    name: 🇺🇸_US_美国_9
+    type: ss
+    server: 52.33.95.19
+    port: 443
+    password: amazonskr05
+    cipher: aes-256-cfb
+  - &id020
+    name: 🇩🇪_DE_德国_2
+    type: trojan
+    server: 5.104.108.120
+    port: 443
+    udp: true
+    password: 097f6b5f-bcf9-4a24-9f0d-d1feaa638d86
+    sni: 20-24-33-134.nhost.00cdn.com
+    skip-cert-verify: true
+    network: tcp
+  - &id021
+    name: 🇫🇷_FR_法国_6
+    type: ss
+    server: 162.19.59.164
+    port: 443
+    password: asdKkaskJKfnsa
+    cipher: aes-256-cfb
+  - &id022
+    name: 🇫🇷_FR_法国_7
+    type: ss
+    server: 135.125.172.153
+    port: 443
+    password: asdKkaskJKfnsa
+    cipher: aes-256-cfb
+  - &id023
+    name: 🇺🇸_US_美国_10
+    type: trojan
+    server: 89.116.180.179
+    port: 443
+    udp: true
+    password: 097f6b5f-bcf9-4a24-9f0d-d1feaa638d86
+    sni: p6us4.pqjc.buzz
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /pq/us4
+      headers:
+        host: p6us4.pqjc.buzz
+  - &id024
+    name: 🇫🇷_FR_法国_8
+    type: ss
+    server: 135.125.172.139
+    port: 443
+    password: asdKkaskJKfnsa
+    cipher: aes-256-cfb
+  - &id025
+    name: 🇺🇸_US_美国_11
     type: vmess
     server: ns1.v2-vip.fun
     port: 80
@@ -332,15 +236,8 @@ proxies:
       path: /api/v3/download.getFile
       headers:
         host: ssrsub.v03.ssrsub.com
-  - &id042
-    name: 🇫🇷_FR_法国_18
-    type: ss
-    server: 141.95.99.192
-    port: 443
-    password: asdKkaskJKfnsa
-    cipher: aes-256-cfb
-  - &id043
-    name: 🇺🇸_US_美国_22
+  - &id026
+    name: 🇺🇸_US_美国_12
     type: vmess
     server: 104.21.75.246
     port: 80
@@ -406,23 +303,6 @@ proxy-groups:
       - *id024
       - *id025
       - *id026
-      - *id027
-      - *id028
-      - *id029
-      - *id030
-      - *id031
-      - *id032
-      - *id033
-      - *id034
-      - *id035
-      - *id036
-      - *id037
-      - *id038
-      - *id039
-      - *id040
-      - *id041
-      - *id042
-      - *id043
   - name: LOAD-BALANCE
     type: load-balance
     url: http://www.gstatic.com/generate_204
@@ -454,23 +334,6 @@ proxy-groups:
       - *id024
       - *id025
       - *id026
-      - *id027
-      - *id028
-      - *id029
-      - *id030
-      - *id031
-      - *id032
-      - *id033
-      - *id034
-      - *id035
-      - *id036
-      - *id037
-      - *id038
-      - *id039
-      - *id040
-      - *id041
-      - *id042
-      - *id043
   - name: SELECT
     type: select
     proxies:
@@ -500,23 +363,6 @@ proxy-groups:
       - *id024
       - *id025
       - *id026
-      - *id027
-      - *id028
-      - *id029
-      - *id030
-      - *id031
-      - *id032
-      - *id033
-      - *id034
-      - *id035
-      - *id036
-      - *id037
-      - *id038
-      - *id039
-      - *id040
-      - *id041
-      - *id042
-      - *id043
 rules:
   - RULE-SET,applications,DIRECT
   - DOMAIN,clash.razord.top,DIRECT
