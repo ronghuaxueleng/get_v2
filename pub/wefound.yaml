@@ -6,20 +6,125 @@ log-level: info
 external-controller: 0.0.0.0:9090
 proxies:
   - &id001
-    name: 🇨🇦_CA_加拿大_1
+    name: 🇩🇪_DE_德国_1
     type: vmess
-    server: 142.171.136.39
-    port: 26006
+    server: arshatheroad8pippahotelsinestra.irandarkpro.gq
+    port: 2082
     cipher: auto
-    uuid: d8c4b4ce-be77-4e66-cb05-cffeffa634a3
+    uuid: 37eb0303-8420-4691-a773-54ae4a009d36
     alterId: 0
     tls: false
     skip-cert-verify: true
+    network: http
+  - &id002
+    name: 🇩🇪_DE_德国_2
+    type: trojan
+    server: 5.104.108.120
+    port: 443
+    udp: true
+    password: 81cd0143-601c-44dc-b479-6f28b3b71c64
+    sni: 20-24-33-134.nhost.00cdn.com
+    skip-cert-verify: true
+    network: tcp
+  - &id003
+    name: 🇺🇸_US_美国_1
+    type: vmess
+    server: 162.159.192.244
+    port: 443
+    cipher: auto
+    uuid: 673ba378-840f-4928-81f2-203148d07350
+    alterId: 0
+    tls: true
+    skip-cert-verify: true
     network: ws
     ws-opts:
-      path: /d8c4b4ce
-  - &id002
-    name: 🇺🇸_US_美国_1
+      path: /673ba378-840f-4928-81f2-203148d07350
+      headers:
+        host: cowochtmtrkers.turbo021.link
+  - &id004
+    name: 🇺🇸_US_美国_2
+    type: trojan
+    server: us1.lvwf8n-hh8e-2300-nmoo-d2e9naobeacn.9d8f269f96b25232-759cbb36d6548597.kaufen
+    port: 443
+    udp: true
+    password: ff981c01-9f9a-4b27-bb09-0d98b7a4b7fa
+    sni: 206.237.5.220
+    skip-cert-verify: true
+    network: tcp
+  - &id005
+    name: 🇺🇸_US_美国_3
+    type: trojan
+    server: sg1.lvwf8n-hh8e-2300-nmoo-d2e9naobeacn.9d8f269f96b25232-759cbb36d6548597.kaufen
+    port: 443
+    udp: true
+    password: ff981c01-9f9a-4b27-bb09-0d98b7a4b7fa
+    sni: 206.237.5.220
+    skip-cert-verify: true
+    network: tcp
+  - &id006
+    name: 🇺🇸_US_美国_4
+    type: trojan
+    server: 89.116.180.158
+    port: 443
+    udp: true
+    password: 81cd0143-601c-44dc-b479-6f28b3b71c64
+    sni: 3us2.pqjc.buzz
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /pq/us2
+      headers:
+        host: 3us2.pqjc.buzz
+  - &id007
+    name: 🇺🇸_US_美国_5
+    type: trojan
+    server: 89.116.180.179
+    port: 443
+    udp: true
+    password: 81cd0143-601c-44dc-b479-6f28b3b71c64
+    sni: p6us4.pqjc.buzz
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /pq/us4
+      headers:
+        host: p6us4.pqjc.buzz
+  - &id008
+    name: 🇺🇸_US_美国_6
+    type: trojan
+    server: jp1.lvwf8n-hh8e-2300-nmoo-d2e9naobeacn.9d8f269f96b25232-759cbb36d6548597.kaufen
+    port: 443
+    udp: true
+    password: ff981c01-9f9a-4b27-bb09-0d98b7a4b7fa
+    sni: 13-231-155-134.nhost.00cdn.com
+    skip-cert-verify: true
+    network: tcp
+  - &id009
+    name: 🇩🇪_DE_德国_3
+    type: trojan
+    server: 5.104.108.109
+    port: 443
+    udp: true
+    password: 81cd0143-601c-44dc-b479-6f28b3b71c64
+    sni: 20-24-33-134.nhost.00cdn.com
+    skip-cert-verify: true
+    network: tcp
+  - &id010
+    name: 🇺🇸_US_美国_7
+    type: trojan
+    server: 167.68.5.183
+    port: 443
+    udp: true
+    password: 81cd0143-601c-44dc-b479-6f28b3b71c64
+    sni: 6us3.pqjc.buzz
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /pq/us3
+      headers:
+        host: 6us3.pqjc.buzz
+  - &id011
+    name: 🇺🇸_US_美国_8
     type: trojan
     server: 
       8Ka1hu4r3g@cf.network383.online:8443?type=grpc&sni=ams-trojan-grpc.carfin.tech&allowInsecure=1&serviceName=@apt_mahdi
@@ -32,166 +137,6 @@ proxies:
     network: grpc
     grpc-opts:
       grpc-service-name: '@apt_mahdi'
-  - &id003
-    name: 🇺🇸_US_美国_2
-    type: trojan
-    server: 89.116.180.158
-    port: 443
-    udp: true
-    password: 097f6b5f-bcf9-4a24-9f0d-d1feaa638d86
-    sni: 3us2.pqjc.buzz
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /pq/us2
-      headers:
-        host: 3us2.pqjc.buzz
-  - &id004
-    name: 🇺🇸_US_美国->🇩🇪_DE_德国
-    type: vmess
-    server: 104.19.154.92
-    port: 2087
-    cipher: auto
-    uuid: 8fada9c0-c348-4465-aade-ff0311454178
-    alterId: 0
-    tls: true
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /kqlqqv
-      headers:
-        host: pAnel159.moOkomeILz.homes
-  - &id005
-    name: 🇺🇸_US_美国_3
-    type: vmess
-    server: ns1.v2-vip.fun
-    port: 80
-    cipher: auto
-    uuid: b1e30339-a603-47d1-b31c-1d0ceb59952e
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /api/v3/download.getFile
-      headers:
-        host: ssrsub.v03.ssrsub.com
-  - &id006
-    name: 🇺🇸_US_美国_4
-    type: trojan
-    server: 89.116.161.133
-    port: 443
-    udp: true
-    password: 097f6b5f-bcf9-4a24-9f0d-d1feaa638d86
-    sni: p1us1.pqjc.buzz
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /pq/us1
-      headers:
-        host: p1us1.pqjc.buzz
-  - &id007
-    name: 🇩🇪_DE_德国_1
-    type: trojan
-    server: 5.104.108.120
-    port: 443
-    udp: true
-    password: 097f6b5f-bcf9-4a24-9f0d-d1feaa638d86
-    sni: 20-24-33-134.nhost.00cdn.com
-    skip-cert-verify: true
-    network: tcp
-  - &id008
-    name: 🇺🇸_US_美国_5
-    type: vmess
-    server: 104.21.75.246
-    port: 80
-    cipher: auto
-    uuid: c458695d-6908-45c3-9512-e0c46418454c
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        host: sbl2.shabijichang.com
-  - &id009
-    name: 🇨🇦_CA_加拿大_2
-    type: vmess
-    server: 23.227.39.84
-    port: 8080
-    cipher: auto
-    uuid: 969f1909-c0d3-4c30-813d-3aec5c838b7d
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /1IKYjV0r/
-      headers:
-        host: dongtaiwang13.dtku47.xyz
-  - &id010
-    name: 🇺🇸_US_美国_6
-    type: vmess
-    server: 23.166.24.63
-    port: 51904
-    cipher: auto
-    uuid: ee25f36d-8501-4f94-d3f6-07baae27cc13
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /ee25f36d
-  - &id011
-    name: 🇺🇸_US_美国_7
-    type: vmess
-    server: 3.129.250.63
-    port: 56333
-    cipher: auto
-    uuid: 610fcb1f-ffa6-4819-d313-cd530be44a3c
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: http
-  - &id012
-    name: 🇺🇸_US_美国_8
-    type: trojan
-    server: 89.116.180.179
-    port: 443
-    udp: true
-    password: 097f6b5f-bcf9-4a24-9f0d-d1feaa638d86
-    sni: p6us4.pqjc.buzz
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /pq/us4
-      headers:
-        host: p6us4.pqjc.buzz
-  - &id013
-    name: 🇺🇸_US_美国_9
-    type: trojan
-    server: 167.68.5.183
-    port: 443
-    udp: true
-    password: 097f6b5f-bcf9-4a24-9f0d-d1feaa638d86
-    sni: 6us3.pqjc.buzz
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /pq/us3
-      headers:
-        host: 6us3.pqjc.buzz
-  - &id014
-    name: 🇩🇪_DE_德国_2
-    type: trojan
-    server: 5.104.108.109
-    port: 443
-    udp: true
-    password: 097f6b5f-bcf9-4a24-9f0d-d1feaa638d86
-    sni: 20-24-33-134.nhost.00cdn.com
-    skip-cert-verify: true
-    network: tcp
 proxy-groups:
   - name: PROXY
     type: select
@@ -229,9 +174,6 @@ proxy-groups:
       - *id009
       - *id010
       - *id011
-      - *id012
-      - *id013
-      - *id014
   - name: LOAD-BALANCE
     type: load-balance
     url: http://www.gstatic.com/generate_204
@@ -248,9 +190,6 @@ proxy-groups:
       - *id009
       - *id010
       - *id011
-      - *id012
-      - *id013
-      - *id014
   - name: SELECT
     type: select
     proxies:
@@ -265,9 +204,6 @@ proxy-groups:
       - *id009
       - *id010
       - *id011
-      - *id012
-      - *id013
-      - *id014
 rules:
   - RULE-SET,applications,DIRECT
   - DOMAIN,clash.razord.top,DIRECT
