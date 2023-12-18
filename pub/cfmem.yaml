@@ -6,16 +6,6 @@ log-level: info
 external-controller: 0.0.0.0:9090
 proxies:
   - &id001
-    name: 🇩🇪_DE_德国_1
-    type: trojan
-    server: 5.104.108.120
-    port: 443
-    udp: true
-    password: 81cd0143-601c-44dc-b479-6f28b3b71c64
-    sni: 20-24-33-134.nhost.00cdn.com
-    skip-cert-verify: true
-    network: tcp
-  - &id002
     name: 🇺🇸_US_美国_1
     type: trojan
     server: 
@@ -29,82 +19,8 @@ proxies:
     network: grpc
     grpc-opts:
       grpc-service-name: '@apt_mahdi'
-  - &id003
-    name: 🇺🇸_US_美国_2
-    type: ss
-    server: 35.87.39.181
-    port: 443
-    password: amazonskr05
-    cipher: aes-256-cfb
-  - &id004
-    name: 🇺🇸_US_美国_3
-    type: ss
-    server: 52.33.95.19
-    port: 443
-    password: amazonskr05
-    cipher: aes-256-cfb
-  - &id005
-    name: 🇫🇷_FR_法国_1
-    type: ss
-    server: 51.158.195.96
-    port: 443
-    password: asdKkaskJKfnsa
-    cipher: aes-256-cfb
-  - &id006
-    name: 🇫🇷_FR_法国_2
-    type: ss
-    server: 51.158.195.96
-    port: 110
-    password: asdKkaskJKfnsa
-    cipher: aes-256-cfb
-  - &id007
-    name: 🇫🇷_FR_法国_3
-    type: ss
-    server: 51.158.195.96
-    port: 80
-    password: asdKkaskJKfnsa
-    cipher: aes-256-cfb
-  - &id008
-    name: 🇺🇸_US_美国_4
-    type: ss
-    server: 89.187.181.179
-    port: 443
-    password: asdKkaskJKfnsa
-    cipher: aes-256-cfb
-  - &id009
-    name: 🇫🇷_FR_法国_4
-    type: ss
-    server: 57.129.1.20
-    port: 443
-    password: asdKkaskJKfnsa
-    cipher: aes-256-cfb
-  - &id010
-    name: 🇬🇧_GB_英国
-    type: ss
-    server: 198.244.231.74
-    port: 443
-    password: asdKkaskJKfnsa
-    cipher: aes-256-cfb
-  - &id011
-    name: 🇺🇸_US_美国_5
-    type: ss
-    server: 35.90.10.174
-    port: 443
-    password: amazonskr05
-    cipher: aes-256-cfb
-  - &id012
-    name: 🇩🇪_DE_德国_2
-    type: vmess
-    server: arshatheroad8pippahotelsinestra.irandarkpro.gq
-    port: 2082
-    cipher: auto
-    uuid: 37eb0303-8420-4691-a773-54ae4a009d36
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: http
-  - &id013
-    name: 🇺🇸_US_美国_6
+  - &id002
+    name: 🇺🇸_US_美国->🇫🇮_FI_芬兰
     type: vmess
     server: 162.159.192.244
     port: 443
@@ -119,98 +35,205 @@ proxies:
       path: /673ba378-840f-4928-81f2-203148d07350
       headers:
         host: cowochtmtrkers.turbo021.link
-  - &id014
-    name: 🇺🇸_US_美国_7
-    type: trojan
-    server: us1.lvwf8n-hh8e-2300-nmoo-d2e9naobeacn.9d8f269f96b25232-759cbb36d6548597.kaufen
-    port: 443
-    udp: true
-    password: ff981c01-9f9a-4b27-bb09-0d98b7a4b7fa
-    sni: 206.237.5.220
+  - &id003
+    name: 🇺🇸_US_美国->🇩🇪_DE_德国
+    type: vmess
+    server: 104.21.30.195
+    port: 2096
+    cipher: auto
+    uuid: c7ccf81e-2f35-4170-aeb8-f84fb2ec2b29
+    alterId: 0
+    tls: true
     skip-cert-verify: true
-    network: tcp
-  - &id015
-    name: 🇺🇸_US_美国_8
-    type: trojan
-    server: jp1.lvwf8n-hh8e-2300-nmoo-d2e9naobeacn.9d8f269f96b25232-759cbb36d6548597.kaufen
-    port: 443
-    udp: true
-    password: ff981c01-9f9a-4b27-bb09-0d98b7a4b7fa
-    sni: 13-231-155-134.nhost.00cdn.com
-    skip-cert-verify: true
-    network: tcp
-  - &id016
-    name: 🇺🇸_US_美国_9
-    type: trojan
-    server: sg1.lvwf8n-hh8e-2300-nmoo-d2e9naobeacn.9d8f269f96b25232-759cbb36d6548597.kaufen
-    port: 443
-    udp: true
-    password: ff981c01-9f9a-4b27-bb09-0d98b7a4b7fa
-    sni: 206.237.5.220
-    skip-cert-verify: true
-    network: tcp
-  - &id017
-    name: 🇺🇸_US_美国_10
-    type: trojan
-    server: us2.lvwf8n-hh8e-2300-nmoo-d2e9naobeacn.9d8f269f96b25232-759cbb36d6548597.kaufen
-    port: 443
-    udp: true
-    password: ff981c01-9f9a-4b27-bb09-0d98b7a4b7fa
-    sni: 206.237.5.220
-    skip-cert-verify: true
-    network: tcp
-  - &id018
-    name: 🇫🇷_FR_法国_5
-    type: ss
-    server: 135.125.172.139
-    port: 443
-    password: asdKkaskJKfnsa
-    cipher: aes-256-cfb
-  - &id019
-    name: 🇺🇸_US_美国_11
-    type: trojan
-    server: 89.116.161.133
-    port: 443
-    udp: true
-    password: 81cd0143-601c-44dc-b479-6f28b3b71c64
-    sni: p1us1.pqjc.buzz
-    skip-cert-verify: true
+    servername: SkamAmmLLLmawm.mookomeIlz.Homes
     network: ws
     ws-opts:
-      path: /pq/us1
+      path: /@FreeVPNHomes@FreeVPNHomes
       headers:
-        host: p1us1.pqjc.buzz
-  - &id020
-    name: 🇫🇷_FR_法国_6
-    type: ss
-    server: 141.95.125.11
-    port: 443
-    password: asdKkaskJKfnsa
-    cipher: aes-256-cfb
-  - &id021
-    name: 🇺🇸_US_美国_12
+        host: PAnEl128.MookomeIlz.Homes
+  - &id004
+    name: 🇨🇦_CA_加拿大->🇺🇸_US_美国
+    type: trojan
+    server: frontend.kuangbiaoyun.com
+    port: 40007
+    udp: true
+    password: 9737c85e-ad5c-48f5-93f6-9bdb0361d04c
+    skip-cert-verify: true
+    network: tcp
+  - &id005
+    name: 🇺🇸_US_美国->🇨🇦_CA_加拿大
     type: vmess
-    server: 104.21.75.246
+    server: free.domain.photos
     port: 80
     cipher: auto
-    uuid: c458695d-6908-45c3-9512-e0c46418454c
+    uuid: 44ed6043-a70e-44ce-c1f9-649f69efce7c
     alterId: 0
     tls: false
     skip-cert-verify: true
     network: ws
     ws-opts:
-      path: /
+      path: /free
       headers:
-        host: sbl2.shabijichang.com
-  - &id022
-    name: 🇫🇷_FR_法国_7
+        host: free.domain.photos
+  - &id006
+    name: 🇺🇸_US_美国_2
+    type: vmess
+    server: Telegram-Channel.hkaa0_MT.66688888.xyz
+    port: 2092
+    cipher: auto
+    uuid: 9504f6d1-160e-495e-e32d-7c0b8b1f704b
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /telegram:@hkaa0
+      headers:
+        host: Telegram-Channel.hkaa0_MT.66688888.xyz
+  - &id007
+    name: 🇺🇸_US_美国_3
     type: ss
-    server: 135.125.172.153
+    server: 35.90.10.174
     port: 443
-    password: asdKkaskJKfnsa
+    password: amazonskr05
     cipher: aes-256-cfb
-  - &id023
-    name: 🇺🇸_US_美国_13
+  - &id008
+    name: 🇭🇰_HK_香港->🇺🇸_US_美国
+    type: vmess
+    server: 154.194.2.177
+    port: 80
+    cipher: auto
+    uuid: de2b04f9-0374-4a93-8295-a9c4352efa94
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /de2b04f9
+      headers:
+        host: v.nagisa.cyou
+  - &id009
+    name: 🇺🇸_US_美国_4
+    type: ss
+    server: 35.87.39.181
+    port: 443
+    password: amazonskr05
+    cipher: aes-256-cfb
+  - &id010
+    name: 🇨🇳_CN_中国->🇺🇦_UA_乌克兰
+    type: trojan
+    server: other.kunlun-ppg.com
+    port: 10845
+    udp: true
+    password: b6825e95-39b1-4e99-98c2-7b344f0f698a
+    sni: alibaba-node.cn
+    skip-cert-verify: true
+    network: tcp
+  - &id011
+    name: 🇨🇳_CN_中国->🇦🇹_AT_奥地利
+    type: trojan
+    server: other.kunlun-ppg.com
+    port: 10848
+    udp: true
+    password: b6825e95-39b1-4e99-98c2-7b344f0f698a
+    sni: alibaba-node.cn
+    skip-cert-verify: true
+    network: tcp
+  - &id012
+    name: 🇨🇳_CN_中国->🇺🇸_US_美国_1
+    type: trojan
+    server: other.kunlun-ppg.com
+    port: 10838
+    udp: true
+    password: b6825e95-39b1-4e99-98c2-7b344f0f698a
+    sni: alibaba-node.cn
+    skip-cert-verify: true
+    network: tcp
+  - &id013
+    name: 🇨🇳_CN_中国->🇺🇸_US_美国_2
+    type: trojan
+    server: other.kunlun-ppg.com
+    port: 10850
+    udp: true
+    password: b6825e95-39b1-4e99-98c2-7b344f0f698a
+    sni: alibaba-node.cn
+    skip-cert-verify: true
+    network: tcp
+  - &id014
+    name: 🇺🇸_US_美国_5
+    type: ss
+    server: 52.33.95.19
+    port: 443
+    password: amazonskr05
+    cipher: aes-256-cfb
+  - &id015
+    name: 🇺🇸_US_美国_6
+    type: vmess
+    server: 94.131.10.135
+    port: 8080
+    cipher: auto
+    uuid: e2021c91-6e29-49d6-9641-14a8f2600e05
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /vmess
+      headers:
+        host: internet.life.com.by
+  - &id016
+    name: 🇫🇷_FR_法国
+    type: ss
+    server: 185.231.205.80
+    port: 1443
+    password: MGQwNTgw
+    cipher: chacha20-ietf-poly1305
+  - &id017
+    name: 🇨🇦_CA_加拿大
+    type: vmess
+    server: 193.203.203.88
+    port: 8443
+    cipher: auto
+    uuid: 012a4853-55fe-4eef-b8c2-e87f8fd178e5
+    alterId: 0
+    tls: true
+    skip-cert-verify: true
+    network: tcp
+  - &id018
+    name: 🇺🇦_UA_乌克兰
+    type: vmess
+    server: 193.238.153.14
+    port: 8443
+    cipher: auto
+    uuid: 159693e0-5146-482d-9e46-8c4f2fc865b1
+    alterId: 0
+    tls: true
+    skip-cert-verify: true
+    network: tcp
+  - &id019
+    name: 🇹🇷_TR_土耳其
+    type: vmess
+    server: 193.46.56.210
+    port: 8443
+    cipher: auto
+    uuid: 56354ec0-cadc-49e1-8144-8a1b20571b4f
+    alterId: 0
+    tls: true
+    skip-cert-verify: true
+    network: tcp
+  - &id020
+    name: 🇮🇳_IN_印度
+    type: vmess
+    server: 103.113.68.57
+    port: 8443
+    cipher: auto
+    uuid: 01fd0618-8ac2-48e4-b008-3b2bc2653b60
+    alterId: 0
+    tls: true
+    skip-cert-verify: true
+    network: tcp
+  - &id021
+    name: 🇺🇸_US_美国_7
     type: vmess
     server: sbl2.shabijichang.com
     port: 80
@@ -224,16 +247,36 @@ proxies:
       path: /
       headers:
         host: sbl2.shabijichang.com
-  - &id024
-    name: 🇫🇷_FR_法国_8
-    type: trojan
-    server: 13.36.43.202
-    port: 22222
-    udp: true
-    password: telegram-id-privatevpns
-    sni: trj.rollingnext.co.uk
+  - &id022
+    name: 🇺🇸_US_美国_8
+    type: vmess
+    server: singapore.com
+    port: 80
+    cipher: auto
+    uuid: b1e30339-a603-47d1-b31c-1d0ceb59952e
+    alterId: 0
+    tls: false
     skip-cert-verify: true
-    network: tcp
+    network: ws
+    ws-opts:
+      path: /api/v3/download.getFile
+      headers:
+        host: ssrsub.v004.ssrsub.com
+  - &id023
+    name: 🇺🇸_US_美国_9
+    type: vmess
+    server: ns1.v2-vip.fun
+    port: 80
+    cipher: auto
+    uuid: b1e30339-a603-47d1-b31c-1d0ceb59952e
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /api/v3/download.getFile
+      headers:
+        host: ssrsub.v004.ssrsub.com
 proxy-groups:
   - name: PROXY
     type: select
@@ -283,7 +326,6 @@ proxy-groups:
       - *id021
       - *id022
       - *id023
-      - *id024
   - name: LOAD-BALANCE
     type: load-balance
     url: http://www.gstatic.com/generate_204
@@ -312,7 +354,6 @@ proxy-groups:
       - *id021
       - *id022
       - *id023
-      - *id024
   - name: SELECT
     type: select
     proxies:
@@ -339,7 +380,6 @@ proxy-groups:
       - *id021
       - *id022
       - *id023
-      - *id024
 rules:
   - RULE-SET,applications,DIRECT
   - DOMAIN,clash.razord.top,DIRECT
