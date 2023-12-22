@@ -6,14 +6,14 @@ log-level: info
 external-controller: 0.0.0.0:9090
 proxies:
   - &id001
-    name: 🇬🇧_GB_英国_1
+    name: 🇨🇦_CA_加拿大->🇺🇸_US_美国
     type: trojan
-    server: 13.42.77.152
-    port: 22222
+    server: frontend.kuangbiaoyun.com
+    port: 40007
     udp: true
-    password: telegram-id-directvpn
-    sni: trj.rollingnext.co.uk
-    skip-cert-verify: false
+    password: 57edfecf-5694-4a34-8072-54a4f0636a62
+    sni: frontend.kuangbiaoyun.com
+    skip-cert-verify: true
     network: tcp
   - &id002
     name: 🇨🇳_CN_中国->🇺🇸_US_美国_1
@@ -28,15 +28,36 @@ proxies:
     network: ws
     ws-opts:
       path: /
-      headers:
-        host: us2.awslcn.info
   - &id003
-    name: 🇨🇳_CN_中国->🇮🇳_IN_印度
+    name: 🇨🇦_CA_加拿大_1
     type: vmess
-    server: yes.cnmjcn.net
-    port: 16626
+    server: 142.171.202.130
+    port: 443
     cipher: auto
-    uuid: c2c76420-257f-492a-b20f-6560f3bfa78d
+    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+    alterId: 64
+    tls: true
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /path/1702650992491
+  - &id004
+    name: 🇯🇵_JP_日本->🇷🇺_RU_俄罗斯联邦
+    type: trojan
+    server: ru01.trojanyyds.xyz
+    port: 443
+    udp: true
+    password: 93ec7261-1c92-4149-848a-26b6fb9fc4ce
+    sni: ru01.trojanyyds.xyz
+    skip-cert-verify: true
+    network: tcp
+  - &id005
+    name: 🇺🇸_US_美国_1
+    type: vmess
+    server: 104.21.75.246
+    port: 80
+    cipher: auto
+    uuid: c458695d-6908-45c3-9512-e0c46418454c
     alterId: 0
     tls: false
     skip-cert-verify: true
@@ -44,8 +65,82 @@ proxies:
     ws-opts:
       path: /
       headers:
-        host: d4d028243c73047d9171bacb9b0439e8.mobgslb.tbcache.com
-  - &id004
+        host: sbl2.shabijichang.com
+  - &id006
+    name: 🇺🇸_US_美国_2
+    type: vmess
+    server: 104.21.13.125
+    port: 80
+    cipher: auto
+    uuid: 7e67dfca-3f0d-4ba1-a7e8-b272bcfc156f
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /vmess
+      headers:
+        host: is2-vmess.sshmax.xyz
+  - &id007
+    name: 🇩🇪_DE_德国
+    type: vmess
+    server: 217.160.45.31
+    port: 8880
+    cipher: auto
+    uuid: 4e186678-fcca-4325-e4bc-b2916bdf6708
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /
+  - &id008
+    name: 🇨🇳_CN_中国->🇲🇽_MX_墨西哥
+    type: vmess
+    server: cu.awslcn.info
+    port: 25284
+    cipher: auto
+    uuid: 93ec7261-1c92-4149-848a-26b6fb9fc4ce
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /
+  - &id009
+    name: 🇺🇸_US_美国_3
+    type: vmess
+    server: 45.58.153.25
+    port: 30000
+    cipher: auto
+    uuid: 4242f9e0-6b7e-4257-9e93-7ad38015c46a
+    alterId: 64
+    tls: true
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /path/1702961716738
+  - &id010
+    name: 🇨🇦_CA_加拿大_2
+    type: trojan
+    server: 68.233.121.121
+    port: 40020
+    udp: true
+    password: 57edfecf-5694-4a34-8072-54a4f0636a62
+    sni: frontend.kuangbiaoyun.com
+    skip-cert-verify: true
+    network: tcp
+  - &id011
+    name: 🇺🇸_US_美国_4
+    type: trojan
+    server: us01.trojanyyds.xyz
+    port: 443
+    udp: true
+    password: 93ec7261-1c92-4149-848a-26b6fb9fc4ce
+    sni: us01.trojanyyds.xyz
+    skip-cert-verify: true
+    network: tcp
+  - &id012
     name: 🇨🇳_CN_中国->🇺🇸_US_美国_2
     type: vmess
     server: us1.awslcn.info
@@ -58,109 +153,39 @@ proxies:
     network: ws
     ws-opts:
       path: /
-  - &id005
-    name: 🇸🇬_SG_新加坡
-    type: trojan
-    server: 185.230.245.213
-    port: 3306
-    udp: true
-    password: d07a02a06191c99f
-    sni: n2.gladns.com
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /gateway/connect
-  - &id006
-    name: 🇺🇸_US_美国->🇮🇷_IR_伊朗
-    type: vmess
-    server: tl.iranray.online
-    port: 8080
-    cipher: auto
-    uuid: b3c20911-126d-4c30-bd32-10152bf0b593
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /
       headers:
-        host: tl.iranray.online
-  - &id007
-    name: 🇨🇳_CN_中国->🇬🇧_GB_英国
-    type: trojan
-    server: gbs.pptv-tv.store
-    port: 17728
-    udp: true
-    password: 299a6171-b4ce-403a-8157-c3dad55ef3a2
-    skip-cert-verify: true
-    network: tcp
-  - &id008
+        host: us1.awslcn.info
+  - &id013
     name: 🇺🇸_US_美国->🇩🇪_DE_德国
     type: vmess
-    server: 104.21.91.52
-    port: 80
+    server: heleneski.ravenxer.top
+    port: 2096
     cipher: auto
-    uuid: cf9277a9-7661-4b06-865d-b7c239deb26b
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /vmess
-      headers:
-        host: ee2.xv2ray.net
-  - &id009
-    name: 🇭🇰_HK_香港->🇷🇺_RU_俄罗斯联邦
-    type: trojan
-    server: ru01.trojanyyds.xyz
-    port: 443
-    udp: true
-    password: 93ec7261-1c92-4149-848a-26b6fb9fc4ce
-    skip-cert-verify: true
-    network: tcp
-  - &id010
-    name: 🇺🇸_US_美国->🇫🇮_FI_芬兰
-    type: vmess
-    server: rf.rafalion.ir
-    port: 8443
-    cipher: auto
-    uuid: 0198fa0c-221c-427c-8ab0-3a4829e73078
+    uuid: c99de061-8231-4e3c-abe2-13b5560fc39c
     alterId: 0
     tls: true
     skip-cert-verify: true
     network: ws
     ws-opts:
       path: /
-  - &id011
-    name: 🇺🇸_US_美国_1
-    type: trojan
-    server: 
-      ZjzcW3LXeJ@cf.network383.online:2096?type=ws&sni=amsb.network383.online&allowInsecure=1&path=/@apt_mahdi&host=amsb.network383.online
-    port: 2096
-    udp: true
-    password: 
-      ZjzcW3LXeJ@cf.network383.online:2096?type=ws&sni=amsb.network383.online&allowInsecure=1&path=/
-    sni: amsb.network383.online
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /@apt_mahdi
       headers:
-        host: amsb.network383.online
-  - &id012
-    name: 🇨🇦_CA_加拿大
+        host: heleneski.ravenxer.top
+  - &id014
+    name: 🇨🇳_CN_中国->🇷🇺_RU_俄罗斯联邦
     type: vmess
-    server: 142.171.202.130
-    port: 443
+    server: cm1.awslcn.info
+    port: 25230
     cipher: auto
-    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-    alterId: 64
-    tls: true
+    uuid: 93ec7261-1c92-4149-848a-26b6fb9fc4ce
+    alterId: 0
+    tls: false
     skip-cert-verify: true
     network: ws
     ws-opts:
-      path: /path/1702650992491
-  - &id013
+      path: /
+      headers:
+        host: cm1.awslcn.info
+  - &id015
     name: 🇨🇳_CN_中国->🇺🇸_US_美国_3
     type: vmess
     server: hexsen.com
@@ -175,91 +200,6 @@ proxies:
       path: /argo-vmess?ed=2048
       headers:
         host: us.king361.cf
-  - &id014
-    name: 🇺🇸_US_美国_2
-    type: vmess
-    server: ns1.v2-vip.fun
-    port: 80
-    cipher: auto
-    uuid: b1e30339-a603-47d1-b31c-1d0ceb59952e
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /api/v3/download.getFile
-      headers:
-        host: ssrsub.v03.ssrsub.com
-  - &id015
-    name: 🇨🇦_CA_加拿大->🇺🇸_US_美国
-    type: trojan
-    server: frontend.kuangbiaoyun.com
-    port: 40007
-    udp: true
-    password: 57edfecf-5694-4a34-8072-54a4f0636a62
-    sni: frontend.kuangbiaoyun.com
-    skip-cert-verify: true
-    network: tcp
-  - &id016
-    name: 🇬🇧_GB_英国_2
-    type: vmess
-    server: 172.99.190.109
-    port: 443
-    cipher: auto
-    uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
-    alterId: 0
-    tls: true
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: linkvws
-  - &id017
-    name: 🇨🇳_CN_中国->🇲🇽_MX_墨西哥
-    type: vmess
-    server: cu.awslcn.info
-    port: 25284
-    cipher: auto
-    uuid: 93ec7261-1c92-4149-848a-26b6fb9fc4ce
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /
-  - &id018
-    name: 🇳🇱_NL_荷兰
-    type: vmess
-    server: 46.182.107.15
-    port: 30000
-    cipher: auto
-    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-    alterId: 64
-    tls: true
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /path/1702215223320
-  - &id019
-    name: 🇯🇵_JP_日本->🇺🇸_US_美国
-    type: trojan
-    server: us01.trojanyyds.xyz
-    port: 443
-    udp: true
-    password: 93ec7261-1c92-4149-848a-26b6fb9fc4ce
-    sni: us01.trojanyyds.xyz
-    skip-cert-verify: true
-    network: tcp
-  - &id020
-    name: 🇺🇦_UA_乌克兰
-    type: vmess
-    server: 193.238.153.14
-    port: 8443
-    cipher: auto
-    uuid: 159693e0-5146-482d-9e46-8c4f2fc865b1
-    alterId: 0
-    tls: true
-    skip-cert-verify: true
-    network: tcp
 proxy-groups:
   - name: PROXY
     type: select
@@ -301,11 +241,6 @@ proxy-groups:
       - *id013
       - *id014
       - *id015
-      - *id016
-      - *id017
-      - *id018
-      - *id019
-      - *id020
   - name: LOAD-BALANCE
     type: load-balance
     url: http://www.gstatic.com/generate_204
@@ -326,11 +261,6 @@ proxy-groups:
       - *id013
       - *id014
       - *id015
-      - *id016
-      - *id017
-      - *id018
-      - *id019
-      - *id020
   - name: SELECT
     type: select
     proxies:
@@ -349,11 +279,6 @@ proxy-groups:
       - *id013
       - *id014
       - *id015
-      - *id016
-      - *id017
-      - *id018
-      - *id019
-      - *id020
 rules:
   - RULE-SET,applications,DIRECT
   - DOMAIN,clash.razord.top,DIRECT
