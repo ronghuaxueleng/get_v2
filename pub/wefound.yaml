@@ -6,34 +6,9 @@ log-level: info
 external-controller: 0.0.0.0:9090
 proxies:
   - &id001
-    name: 🇩🇪_DE_德国_1
-    type: trojan
-    server: 5.104.108.109
-    port: 443
-    udp: true
-    password: 45a8d20d-9a78-4be4-a74a-ab3b9e84e34e
-    sni: 20-24-33-134.nhost.00cdn.com
-    skip-cert-verify: true
-    network: tcp
-  - &id002
-    name: 🇨🇳_CN_中国->🇷🇺_RU_俄罗斯联邦
-    type: vmess
-    server: cm1.awslcn.info
-    port: 25230
-    cipher: auto
-    uuid: 93ec7261-1c92-4149-848a-26b6fb9fc4ce
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        host: cm1.awslcn.info
-  - &id003
     name: 🇺🇸_US_美国_1
     type: vmess
-    server: cf-lt.sharecentre.online
+    server: singapore.com
     port: 80
     cipher: auto
     uuid: b1e30339-a603-47d1-b31c-1d0ceb59952e
@@ -44,15 +19,40 @@ proxies:
     ws-opts:
       path: /api/v3/download.getFile
       headers:
-        host: ssrsub.v004.ssrsub.com
-  - &id004
-    name: 🇩🇪_DE_德国_2
+        host: ssrsub.v03.ssrsub.com
+  - &id002
+    name: 🇺🇦_UA_乌克兰
+    type: vmess
+    server: 193.238.153.14
+    port: 8443
+    cipher: auto
+    uuid: 159693e0-5146-482d-9e46-8c4f2fc865b1
+    alterId: 0
+    tls: true
+    skip-cert-verify: true
+    network: tcp
+  - &id003
+    name: 🇺🇸_US_美国->🇩🇪_DE_德国
     type: trojan
-    server: 5.104.108.120
+    server: skk.moe
+    port: 8443
+    udp: true
+    password: 41aa073b-68fa-40c0-9b1c-9dc42c0b312c
+    sni: vps.restia.love
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: 41aa073b-68fa-40c0-9b1c-9dc42c0b312c-trojan
+      headers:
+        host: tj.restia.love
+  - &id004
+    name: 🇺🇸_US_美国_2
+    type: trojan
+    server: jp2.lvwf8n-hh8e-2300-nmoo-d2e9naobeacn.9d8f269f96b25232-759cbb36d6548597.kaufen
     port: 443
     udp: true
-    password: 45a8d20d-9a78-4be4-a74a-ab3b9e84e34e
-    sni: 20-24-33-134.nhost.00cdn.com
+    password: 682ac5bf-c171-4c8b-a896-a9a6ac327a53
+    sni: 13-231-155-134.nhost.00cdn.com
     skip-cert-verify: true
     network: tcp
   - &id005
@@ -71,20 +71,6 @@ proxies:
       headers:
         host: d4d028243c73047d9171bacb9b0439e8.mobgslb.tbcache.com
   - &id006
-    name: 🇺🇸_US_美国->🇩🇪_DE_德国
-    type: trojan
-    server: skk.moe
-    port: 8443
-    udp: true
-    password: 41aa073b-68fa-40c0-9b1c-9dc42c0b312c
-    sni: vps.restia.love
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: 41aa073b-68fa-40c0-9b1c-9dc42c0b312c-trojan
-      headers:
-        host: tj.restia.love
-  - &id007
     name: 🇸🇬_SG_新加坡
     type: trojan
     server: 185.230.245.213
@@ -96,57 +82,33 @@ proxies:
     network: ws
     ws-opts:
       path: /gateway/connect
-      headers:
-        host: n2.gladns.com
-  - &id008
-    name: 🇨🇳_CN_中国->🇺🇸_US_美国_1
+  - &id007
+    name: 🇺🇸_US_美国_3
     type: vmess
-    server: us1.awslcn.info
-    port: 25256
+    server: cf-lt.sharecentre.online
+    port: 80
     cipher: auto
-    uuid: 93ec7261-1c92-4149-848a-26b6fb9fc4ce
+    uuid: b1e30339-a603-47d1-b31c-1d0ceb59952e
     alterId: 0
     tls: false
     skip-cert-verify: true
     network: ws
     ws-opts:
-      path: /
+      path: /api/v3/download.getFile
       headers:
-        host: us1.awslcn.info
-  - &id009
-    name: 🇺🇸_US_美国_2
+        host: ssrsub.v004.ssrsub.com
+  - &id008
+    name: 🇨🇳_CN_中国
     type: vmess
-    server: 45.58.153.25
-    port: 30000
+    server: 159.75.178.50
+    port: 47551
     cipher: auto
-    uuid: 4242f9e0-6b7e-4257-9e93-7ad38015c46a
-    alterId: 64
-    tls: true
+    uuid: 2500a228-8c00-4934-81e0-22281c015a33
+    alterId: 0
+    tls: false
     skip-cert-verify: true
     network: ws
-    ws-opts:
-      path: /path/1702961716738
-  - &id010
-    name: 🇨🇦_CA_加拿大->🇺🇸_US_美国
-    type: trojan
-    server: frontend.kuangbiaoyun.com
-    port: 40007
-    udp: true
-    password: 57edfecf-5694-4a34-8072-54a4f0636a62
-    sni: frontend.kuangbiaoyun.com
-    skip-cert-verify: true
-    network: tcp
-  - &id011
-    name: 🇭🇰_HK_香港->🇺🇸_US_美国
-    type: trojan
-    server: us01.trojanyyds.xyz
-    port: 443
-    udp: true
-    password: 93ec7261-1c92-4149-848a-26b6fb9fc4ce
-    sni: us01.trojanyyds.xyz
-    skip-cert-verify: true
-    network: tcp
-  - &id012
+  - &id009
     name: 🇨🇳_CN_中国->🇨🇦_CA_加拿大_2
     type: vmess
     server: m.cnmjcn.com
@@ -161,23 +123,18 @@ proxies:
       path: /
       headers:
         host: d4d028243c73047d9171bacb9b0439e8.mobgslb.tbcache.com
-  - &id013
-    name: 🇺🇸_US_美国_3
-    type: vmess
-    server: singapore.com
-    port: 80
-    cipher: auto
-    uuid: b1e30339-a603-47d1-b31c-1d0ceb59952e
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /api/v3/download.getFile
-      headers:
-        host: ssrsub.v03.ssrsub.com
-  - &id014
+  - &id010
     name: 🇺🇸_US_美国_4
+    type: trojan
+    server: hk1.lvwf8n-hh8e-2300-nmoo-d2e9naobeacn.9d8f269f96b25232-759cbb36d6548597.kaufen
+    port: 443
+    udp: true
+    password: cc287f24-c5a5-4ebc-a77a-bb95ff902445
+    sni: 13-231-155-134.nhost.00cdn.com
+    skip-cert-verify: true
+    network: tcp
+  - &id011
+    name: 🇺🇸_US_美国_5
     type: vmess
     server: 104.21.75.246
     port: 80
@@ -191,100 +148,26 @@ proxies:
       path: /
       headers:
         host: sbl2.shabijichang.com
-  - &id015
-    name: 🇬🇧_GB_英国
+  - &id012
+    name: 🇺🇸_US_美国_6
     type: vmess
-    server: 172.99.190.109
-    port: 443
+    server: 45.58.153.25
+    port: 30000
     cipher: auto
-    uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
-    alterId: 0
+    uuid: 4242f9e0-6b7e-4257-9e93-7ad38015c46a
+    alterId: 64
     tls: true
     skip-cert-verify: true
     network: ws
     ws-opts:
-      path: linkvws
-  - &id016
-    name: 🇨🇳_CN_中国
-    type: vmess
-    server: 159.75.178.50
-    port: 47551
-    cipher: auto
-    uuid: 2500a228-8c00-4934-81e0-22281c015a33
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-  - &id017
-    name: 🇨🇳_CN_中国->🇺🇸_US_美国_2
-    type: vmess
-    server: us1.awslcn.info
-    port: 25239
-    cipher: auto
-    uuid: 93ec7261-1c92-4149-848a-26b6fb9fc4ce
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        host: us1.awslcn.info
-  - &id018
-    name: 🇭🇰_HK_香港->🇷🇺_RU_俄罗斯联邦
-    type: trojan
-    server: ru01.trojanyyds.xyz
-    port: 443
-    udp: true
-    password: 93ec7261-1c92-4149-848a-26b6fb9fc4ce
-    sni: ru01.trojanyyds.xyz
-    skip-cert-verify: true
-    network: tcp
-  - &id019
-    name: 🇨🇳_CN_中国->🇸🇰_SK_斯洛伐克
+      path: /path/1702961716738
+  - &id013
+    name: 🇨🇳_CN_中国->🇬🇧_GB_英国
     type: trojan
     server: gbs.pptv-tv.store
     port: 17728
     udp: true
     password: 299a6171-b4ce-403a-8157-c3dad55ef3a2
-    skip-cert-verify: true
-    network: tcp
-  - &id020
-    name: 🇨🇳_CN_中国->🇲🇽_MX_墨西哥
-    type: vmess
-    server: cu.awslcn.info
-    port: 25284
-    cipher: auto
-    uuid: 93ec7261-1c92-4149-848a-26b6fb9fc4ce
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /
-  - &id021
-    name: 🇨🇳_CN_中国->🇺🇸_US_美国_3
-    type: vmess
-    server: us2.awslcn.info
-    port: 25257
-    cipher: auto
-    uuid: 93ec7261-1c92-4149-848a-26b6fb9fc4ce
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        host: us2.awslcn.info
-  - &id022
-    name: 🇨🇦_CA_加拿大
-    type: trojan
-    server: 68.233.121.121
-    port: 40020
-    udp: true
-    password: 57edfecf-5694-4a34-8072-54a4f0636a62
-    sni: frontend.kuangbiaoyun.com
     skip-cert-verify: true
     network: tcp
 proxy-groups:
@@ -326,15 +209,6 @@ proxy-groups:
       - *id011
       - *id012
       - *id013
-      - *id014
-      - *id015
-      - *id016
-      - *id017
-      - *id018
-      - *id019
-      - *id020
-      - *id021
-      - *id022
   - name: LOAD-BALANCE
     type: load-balance
     url: http://www.gstatic.com/generate_204
@@ -353,15 +227,6 @@ proxy-groups:
       - *id011
       - *id012
       - *id013
-      - *id014
-      - *id015
-      - *id016
-      - *id017
-      - *id018
-      - *id019
-      - *id020
-      - *id021
-      - *id022
   - name: SELECT
     type: select
     proxies:
@@ -378,15 +243,6 @@ proxy-groups:
       - *id011
       - *id012
       - *id013
-      - *id014
-      - *id015
-      - *id016
-      - *id017
-      - *id018
-      - *id019
-      - *id020
-      - *id021
-      - *id022
 rules:
   - RULE-SET,applications,DIRECT
   - DOMAIN,clash.razord.top,DIRECT
