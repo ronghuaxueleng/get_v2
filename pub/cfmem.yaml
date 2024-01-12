@@ -6,36 +6,7 @@ log-level: info
 external-controller: 0.0.0.0:9090
 proxies:
   - &id001
-    name: 🇪🇸_ES_西班牙
-    type: ss
-    server: 92.38.171.89
-    port: 989
-    password: f8f7aCzcPKbsF8p3
-    cipher: aes-256-cfb
-  - &id002
     name: 🇺🇸_US_美国_1
-    type: vmess
-    server: a3.bcbot.in
-    port: 8880
-    cipher: auto
-    uuid: ce9aadc8-8c6e-4867-d247-9a84b469ac27
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        host: a3.bcbot.in
-  - &id003
-    name: 🇺🇸_US_美国_2
-    type: ss
-    server: 212.102.47.198
-    port: 443
-    password: shadowsocks
-    cipher: aes-128-cfb
-  - &id004
-    name: 🇺🇸_US_美国_3
     type: vmess
     server: 104.21.32.215
     port: 8880
@@ -49,58 +20,27 @@ proxies:
       path: /
       headers:
         host: a3.bcbot.in
-  - &id005
-    name: 🇺🇸_US_美国->🇺🇦_UA_乌克兰_1
+  - &id002
+    name: 🇪🇸_ES_西班牙
+    type: ss
+    server: 92.38.171.89
+    port: 989
+    password: f8f7aCzcPKbsF8p3
+    cipher: aes-256-cfb
+  - &id003
+    name: 🇺🇸_US_美国_2
+    type: ss
+    server: 212.102.47.198
+    port: 443
+    password: shadowsocks
+    cipher: aes-128-cfb
+  - &id004
+    name: 🇺🇸_US_美国_3
     type: vmess
-    server: 104.17.2.183
-    port: 80
-    cipher: auto
-    uuid: f256a3ae-0f85-4a1d-d0cd-2d0b4b73f4f1
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        host: v3ra3do.wakeuptimerap.shop
-  - &id006
-    name: 🇺🇸_US_美国->🇺🇦_UA_乌克兰_2
-    type: vmess
-    server: glasco.fx-trader.shop
-    port: 80
-    cipher: auto
-    uuid: f256a3ae-0f85-4a1d-d0cd-2d0b4b73f4f1
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        host: v3ra3do.wakeuptimerap.shop
-  - &id007
-    name: 🇺🇸_US_美国_4
-    type: vmess
-    server: yhnsb3.shabijichang.com
-    port: 80
-    cipher: auto
-    uuid: c458695d-6908-45c3-9512-e0c46418454c
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        host: yhnsb3.shabijichang.com
-  - &id008
-    name: 🇺🇸_US_美国_5
-    type: vmess
-    server: www.visa.com.tw
+    server: a3.bcbot.in
     port: 8880
     cipher: auto
-    uuid: bf3d038a-93a2-4e24-886c-6bc64e3c3a90
+    uuid: ce9aadc8-8c6e-4867-d247-9a84b469ac27
     alterId: 0
     tls: false
     skip-cert-verify: true
@@ -108,9 +48,52 @@ proxies:
     ws-opts:
       path: /
       headers:
-        host: mgthree_cdn.yunjisuan.cf
+        host: a3.bcbot.in
+  - &id005
+    name: 🇨🇳_CN_中国
+    type: ss
+    server: 12.xn--wbr85ozt0asys8qt.net
+    port: 20062
+    password: a3dfbdd6-7e01-4735-9973-e3dd056c129e
+    cipher: chacha20-ietf-poly1305
+  - &id006
+    name: 🇦🇺_AU_澳大利亚
+    type: vmess
+    server: 202.139.228.198
+    port: 8080
+    cipher: auto
+    uuid: a3dfbdd6-7e01-4735-9973-e3dd056c129e
+    alterId: 0
+    tls: true
+    skip-cert-verify: true
+    servername: xn.changding.tech
+    network: ws
+    ws-opts:
+      path: /vm-tls1-tls1?ed=2048
+      headers:
+        host: xn.changding.tech
+  - &id007
+    name: 🇬🇧_GB_英国
+    type: vmess
+    server: 172.99.190.109
+    port: 443
+    cipher: auto
+    uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
+    alterId: 0
+    tls: true
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: linkvws
+  - &id008
+    name: 🇳🇱_NL_荷兰
+    type: ss
+    server: 51.15.27.48
+    port: 989
+    password: f8f7aCzcPKbsF8p3
+    cipher: aes-256-cfb
   - &id009
-    name: 🇺🇸_US_美国_6
+    name: 🇺🇸_US_美国_4
     type: vmess
     server: 95.164.84.131
     port: 80
@@ -119,46 +102,48 @@ proxies:
     alterId: 0
     tls: false
     skip-cert-verify: true
-    servername: 95.164.84.131
     network: ws
     ws-opts:
       path: /vmess
   - &id010
-    name: 🇺🇸_US_美国_7
+    name: 🇺🇸_US_美国->🇫🇷_FR_法国
     type: vmess
-    server: 104.17.184.241
+    server: hexsen.com
+    port: 443
+    cipher: auto
+    uuid: de04add9-5c68-8bab-950c-08cd5320df18
+    alterId: 0
+    tls: true
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /argo-vmess?ed=2048
+      headers:
+        host: sources-routines-switching-palmer.trycloudflare.com
+  - &id011
+    name: 🇨🇭_CH_瑞士
+    type: vmess
+    server: 94.131.99.8
+    port: 47182
+    cipher: auto
+    uuid: 81b2b630-8b6a-404f-b996-b12f13db5786
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: tcp
+  - &id012
+    name: 🇺🇸_US_美国_5
+    type: vmess
+    server: 94.131.10.135
     port: 80
     cipher: auto
-    uuid: bf3d038a-93a2-4e24-886c-6bc64e3c3a90
+    uuid: 099b5b7a-9d71-43cd-80e3-b8fbe1cc2695
     alterId: 0
     tls: false
     skip-cert-verify: true
     network: ws
     ws-opts:
-      path: /
-      headers:
-        host: mg_cdn.yunjisuan.cf
-  - &id011
-    name: 🇬🇧_GB_英国
-    type: ss
-    server: 5.181.27.97
-    port: 15100
-    password: GeZbX4Enoc
-    cipher: aes-256-gcm
-  - &id012
-    name: 🇦🇹_AT_奥地利
-    type: ss
-    server: 185.180.12.81
-    port: 989
-    password: f8f7aCzcPKbsF8p3
-    cipher: aes-256-cfb
-  - &id013
-    name: 🇲🇰_MK_前南马其顿
-    type: ss
-    server: 46.183.185.15
-    port: 989
-    password: f8f7aCzcPKbsF8p3
-    cipher: aes-256-cfb
+      path: /vmess
 proxy-groups:
   - name: PROXY
     type: select
@@ -197,7 +182,6 @@ proxy-groups:
       - *id010
       - *id011
       - *id012
-      - *id013
   - name: LOAD-BALANCE
     type: load-balance
     url: http://www.gstatic.com/generate_204
@@ -215,7 +199,6 @@ proxy-groups:
       - *id010
       - *id011
       - *id012
-      - *id013
   - name: SELECT
     type: select
     proxies:
@@ -231,7 +214,6 @@ proxy-groups:
       - *id010
       - *id011
       - *id012
-      - *id013
 rules:
   - RULE-SET,applications,DIRECT
   - DOMAIN,clash.razord.top,DIRECT
