@@ -6,122 +6,7 @@ log-level: info
 external-controller: 0.0.0.0:9090
 proxies:
   - &id001
-    name: 🇩🇪_DE_德国
-    type: trojan
-    server: 5.104.108.120
-    port: 443
-    udp: true
-    password: e86e242e-b5d5-46ae-a410-3684f7d70ac2
-    skip-cert-verify: true
-    network: tcp
-  - &id002
-    name: 🇺🇸_US_美国->🇩🇪_DE_德国_1
-    type: vmess
-    server: 104.19.154.92
-    port: 2083
-    cipher: auto
-    uuid: 9e9b80f1-5555-4f7d-a209-d23b9d9dc047
-    alterId: 0
-    tls: true
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /snsk
-      headers:
-        host: PAneljadid.mookoMEilz.homes
-  - &id003
-    name: 🇫🇷_FR_法国
-    type: trojan
-    server: 13.39.1.177
-    port: 22222
-    udp: true
-    password: telegram-id-privatevpns
-    sni: trj.rollingnext.co.uk
-    skip-cert-verify: true
-    network: tcp
-  - &id004
-    name: 🇳🇿_NZ_新西兰
-    type: vmess
-    server: 141.11.123.205
-    port: 30870
-    cipher: auto
-    uuid: f8e7c07a-4c32-4fc7-9169-073669416331
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /
-  - &id005
     name: 🇺🇸_US_美国_1
-    type: vmess
-    server: 104.17.171.34
-    port: 80
-    cipher: auto
-    uuid: 60be5ddb-c9f1-48ec-b0ee-f6bd4364b3ce
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        host: ccs.hostmjj.com
-  - &id006
-    name: 🇮🇪_IE_爱尔兰
-    type: trojan
-    server: 18.200.62.178
-    port: 22222
-    udp: true
-    password: telegram-id-privatevpns
-    sni: trj.rollingnext.co.uk
-    skip-cert-verify: true
-    network: tcp
-  - &id007
-    name: 🇨🇳_CN_中国->🇺🇸_US_美国
-    type: vmess
-    server: us.he.07.nekocloud.cn
-    port: 10002
-    cipher: auto
-    uuid: 9c2b64eb-03d8-3cc7-9ba6-2e25002f59b5
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /catnet
-  - &id008
-    name: 🇺🇸_US_美国_2
-    type: vmess
-    server: 104.17.184.241
-    port: 80
-    cipher: auto
-    uuid: bf3d038a-93a2-4e24-886c-6bc64e3c3a90
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        host: mg_cdn.yunjisuan.cf
-  - &id009
-    name: 🇺🇸_US_美国_3
-    type: vmess
-    server: 104.18.154.42
-    port: 80
-    cipher: auto
-    uuid: a2f27205-5b59-4a1d-e9ed-c78f7ab4b633
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        host: Quran14.eSmAIlkORea.sHop
-  - &id010
-    name: 🇺🇸_US_美国_4
     type: vmess
     server: a3.bcbot.in
     port: 8880
@@ -135,26 +20,13 @@ proxies:
       path: /
       headers:
         host: a3.bcbot.in
-  - &id011
-    name: 🇨🇳_CN_中国->🇨🇦_CA_加拿大
+  - &id002
+    name: 🇺🇸_US_美国->🇨🇦_CA_加拿大_1
     type: vmess
-    server: us.he.01.nekocloud.cn
-    port: 19043
-    cipher: auto
-    uuid: 9c2b64eb-03d8-3cc7-9ba6-2e25002f59b5
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /catnet
-  - &id012
-    name: 🇺🇸_US_美国->🇮🇷_IR_伊朗
-    type: vmess
-    server: web.parspack.com
+    server: 162.159.200.3
     port: 80
     cipher: auto
-    uuid: 5f797b91-c7ec-4178-d19e-9b069b70b446
+    uuid: b2d821b2-f727-4e67-898d-1a29bf41ee0d
     alterId: 0
     tls: false
     skip-cert-verify: true
@@ -162,67 +34,59 @@ proxies:
     ws-opts:
       path: /
       headers:
-        host: zUlA9.eSmAIlkORea.sHop
-  - &id013
-    name: 🇷🇺_RU_俄罗斯联邦
-    type: trojan
-    server: els_trojanone.yunjisuan.cf
-    port: 14866
-    udp: true
-    password: bf3d038a-93a2-4e24-886c-6bc64e3c3a90
-    sni: els_trojanone.yunjisuan.cf
-    skip-cert-verify: true
-    network: tcp
-  - &id014
-    name: 🇺🇸_US_美国->🇩🇪_DE_德国_2
+        host: ca3.889611.com
+  - &id003
+    name: 🇺🇸_US_美国_2
     type: vmess
-    server: 2bbiozh7wbc.servecounterstrike.com
-    port: 2083
+    server: 104.18.15.147
+    port: 80
     cipher: auto
-    uuid: 9e9b80f1-5555-4f7d-a209-d23b9d9dc047
+    uuid: b2d821b2-f727-4e67-898d-1a29bf41ee0d
     alterId: 0
-    tls: true
+    tls: false
     skip-cert-verify: true
     network: ws
     ws-opts:
-      path: /snsk
+      path: /
       headers:
-        host: PAneljadid.mookoMEilz.homes
-  - &id015
+        host: er3.889611.com
+  - &id004
+    name: 🇺🇸_US_美国_3
+    type: vmess
+    server: 104.18.15.150
+    port: 80
+    cipher: auto
+    uuid: b2d821b2-f727-4e67-898d-1a29bf41ee0d
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: er3.889611.com
+  - &id005
+    name: 🇺🇸_US_美国_4
+    type: vmess
+    server: 104.18.15.149
+    port: 80
+    cipher: auto
+    uuid: b2d821b2-f727-4e67-898d-1a29bf41ee0d
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: er3.889611.com
+  - &id006
     name: 🇺🇸_US_美国_5
     type: vmess
-    server: 132.145.132.227
-    port: 37121
-    cipher: auto
-    uuid: 93845b50-26f6-4203-f5ad-4d231d4e8f45
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /
-  - &id016
-    name: 🇺🇸_US_美国_6
-    type: vmess
-    server: 45.58.153.24
-    port: 30000
-    cipher: auto
-    uuid: 4242f9e0-6b7e-4257-9e93-7ad38015c46a
-    alterId: 64
-    tls: true
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /path/1702392255355
-      headers:
-        host: www.77935707.xyz
-  - &id017
-    name: 🇺🇸_US_美国_7
-    type: vmess
-    server: 162.159.38.136
+    server: 162.159.200.7
     port: 80
     cipher: auto
-    uuid: 60be5ddb-c9f1-48ec-b0ee-f6bd4364b3ce
+    uuid: b2d821b2-f727-4e67-898d-1a29bf41ee0d
     alterId: 0
     tls: false
     skip-cert-verify: true
@@ -230,35 +94,185 @@ proxies:
     ws-opts:
       path: /
       headers:
-        host: ccs.hostmjj.com
-  - &id018
-    name: 🇺🇸_US_美国_8
+        host: er3.visaapp.top
+  - &id007
+    name: 🇺🇸_US_美国->🇩🇪_DE_德国
+    type: trojan
+    server: 104.17.186.227
+    port: 443
+    udp: true
+    password: Mahanvpn
+    sni: mahanvip.mahantu.top
+    skip-cert-verify: false
+    network: grpc
+    grpc-opts:
+      grpc-service-name: mahanvip.mahantu.top
+  - &id008
+    name: 🇺🇸_US_美国_6
     type: vmess
-    server: 45.58.153.25
-    port: 30000
+    server: 104.18.154.42
+    port: 80
     cipher: auto
-    uuid: 4242f9e0-6b7e-4257-9e93-7ad38015c46a
-    alterId: 64
-    tls: true
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /path/1702961716738
-  - &id019
-    name: 🇺🇸_US_美国_9
-    type: vmess
-    server: 94.131.14.177
-    port: 2082
-    cipher: auto
-    uuid: 2c5fee13-f08b-4ba8-86db-27dd51cb9781
+    uuid: b2d821b2-f727-4e67-898d-1a29bf41ee0d
     alterId: 0
     tls: false
     skip-cert-verify: true
     network: ws
     ws-opts:
-      path: /vmess
+      path: /
       headers:
-        host: 94.131.14.177
+        host: us3.889611.com
+  - &id009
+    name: 🇺🇸_US_美国_7
+    type: vmess
+    server: 162.159.200.6
+    port: 80
+    cipher: auto
+    uuid: b2d821b2-f727-4e67-898d-1a29bf41ee0d
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: er3.889611.com
+  - &id010
+    name: 🇺🇸_US_美国_8
+    type: vmess
+    server: cfcdn1.sanfencdn9.com
+    port: 8880
+    cipher: auto
+    uuid: ae16d5a4-9a22-4177-8884-77aa3b309d30
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /video/bYdJ7Vc2We
+      headers:
+        host: us6gzxQRrE4.fzbqfrse.xyz
+  - &id011
+    name: 🇰🇿_KZ_哈萨克斯坦
+    type: vmess
+    server: kz-v2ray.ipracevpn.com
+    port: 8443
+    cipher: auto
+    uuid: 48b10b02-2c60-4323-bc65-a11b15144745
+    alterId: 0
+    tls: true
+    skip-cert-verify: true
+    network: tcp
+  - &id012
+    name: 🇺🇸_US_美国->🇺🇦_UA_乌克兰
+    type: vmess
+    server: 104.17.2.183
+    port: 80
+    cipher: auto
+    uuid: f256a3ae-0f85-4a1d-d0cd-2d0b4b73f4f1
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: v3ra3do.wakeuptimerap.shop
+  - &id013
+    name: 🇺🇸_US_美国_9
+    type: vmess
+    server: 104.18.15.148
+    port: 80
+    cipher: auto
+    uuid: b2d821b2-f727-4e67-898d-1a29bf41ee0d
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: er3.889611.com
+  - &id014
+    name: 🇩🇪_DE_德国
+    type: trojan
+    server: 213.202.216.14
+    port: 443
+    udp: true
+    password: 94fe4445-fc3f-4dd4-9bac-438b54f994c9
+    sni: downloadde.xn--mes358acgm99l.com
+    skip-cert-verify: true
+    network: tcp
+  - &id015
+    name: 🇳🇿_NZ_新西兰
+    type: trojan
+    server: 216.73.156.230
+    port: 443
+    udp: true
+    password: 11e247e5-136d-45f1-844a-a7f054d36bab
+    sni: 216.73.156.230
+    skip-cert-verify: true
+    network: tcp
+  - &id016
+    name: 🇷🇺_RU_俄罗斯联邦
+    type: vmess
+    server: 45.144.2.113
+    port: 80
+    cipher: auto
+    uuid: b2d821b2-f727-4e67-898d-1a29bf41ee0d
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: www.apple.com
+  - &id017
+    name: 🇱🇾_LY_利比亚->🇹🇷_TR_土耳其
+    type: vmess
+    server: 197.215.140.234
+    port: 80
+    cipher: auto
+    uuid: b82493e3-07b4-4cf2-b585-965575cfeb32
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /@forwardv2ray
+      headers:
+        host: softiri.serveirc.com
+  - &id018
+    name: 🇺🇸_US_美国->🇨🇦_CA_加拿大_2
+    type: vmess
+    server: 162.159.200.4
+    port: 80
+    cipher: auto
+    uuid: b2d821b2-f727-4e67-898d-1a29bf41ee0d
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: ca3.889611.com
+  - &id019
+    name: 🇺🇸_US_美国_10
+    type: vmess
+    server: 104.21.32.215
+    port: 8880
+    cipher: auto
+    uuid: ce9aadc8-8c6e-4867-d247-9a84b469ac27
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: a3.bcbot.in
 proxy-groups:
   - name: PROXY
     type: select
