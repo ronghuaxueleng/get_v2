@@ -6,66 +6,72 @@ log-level: info
 external-controller: 0.0.0.0:9090
 proxies:
   - &id001
-    name: 🇺🇸_US_美国_1
+    name: 🇨🇦_CA_加拿大
     type: vmess
-    server: a3.bcbot.in
-    port: 8880
+    server: 142.171.237.214
+    port: 443
     cipher: auto
-    uuid: ce9aadc8-8c6e-4867-d247-9a84b469ac27
-    alterId: 0
-    tls: false
+    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+    alterId: 64
+    tls: true
     skip-cert-verify: true
     network: ws
     ws-opts:
-      path: /
+      path: /path/221312281009
       headers:
-        host: a3.bcbot.in
+        host: www.23168499.xyz
   - &id002
-    name: 🇺🇸_US_美国_2
+    name: 🇺🇸_US_美国->🇩🇪_DE_德国
+    type: vmess
+    server: tgju.org
+    port: 443
+    cipher: auto
+    uuid: 562ae412-d7b5-4f1e-dd0d-82e073193b21
+    alterId: 0
+    tls: true
+    skip-cert-verify: true
+    servername: pokerad.fun
+    network: ws
+    ws-opts:
+      path: /fa
+      headers:
+        host: cdn.pokerad.fun
+  - &id003
+    name: 🇸🇨_SC_塞舌尔->🇭🇰_HK_香港
+    type: vmess
+    server: 156.251.226.142
+    port: 56120
+    cipher: auto
+    uuid: a3dfbdd6-7e01-4735-9973-e3dd056c129e
+    alterId: 0
+    tls: true
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /changding-tls1?ed=2048
+      headers:
+        host: hk-300.changding.tech
+  - &id004
+    name: 🇺🇸_US_美国_1
     type: ss
     server: 212.102.47.198
     port: 443
     password: shadowsocks
     cipher: aes-128-cfb
-  - &id003
+  - &id005
     name: 🇪🇸_ES_西班牙
     type: ss
     server: 92.38.171.89
     port: 989
     password: f8f7aCzcPKbsF8p3
     cipher: aes-256-cfb
-  - &id004
-    name: 🇺🇸_US_美国_3
-    type: vmess
-    server: cfcdn1.sanfencdn9.com
-    port: 8880
-    cipher: auto
-    uuid: ae16d5a4-9a22-4177-8884-77aa3b309d30
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /video/bYdJ7Vc2We
-      headers:
-        host: us6gzxQRrE4.fzbqfrse.xyz
-  - &id005
-    name: 🇩🇪_DE_德国
-    type: trojan
-    server: 213.202.216.14
-    port: 443
-    udp: true
-    password: 94fe4445-fc3f-4dd4-9bac-438b54f994c9
-    sni: downloadde.xn--mes358acgm99l.com
-    skip-cert-verify: true
-    network: tcp
   - &id006
-    name: 🇺🇸_US_美国_4
+    name: 🇺🇸_US_美国_2
     type: vmess
-    server: www.visa.com.tw
-    port: 8880
+    server: glaSco.fx-trAder.shop
+    port: 80
     cipher: auto
-    uuid: bf3d038a-93a2-4e24-886c-6bc64e3c3a90
+    uuid: cdbb0899-7113-4d4e-f868-31339c75ad3c
     alterId: 0
     tls: false
     skip-cert-verify: true
@@ -73,21 +79,18 @@ proxies:
     ws-opts:
       path: /
       headers:
-        host: mgthree_cdn.yunjisuan.cf
+        host: vvv2vayo2.everythingisreve.shop
   - &id007
-    name: 🇺🇸_US_美国->🇩🇪_DE_德国
-    type: trojan
-    server: 104.17.186.227
-    port: 443
-    udp: true
-    password: Mahanvpn
-    sni: mahanvip.mahantu.top
+    name: 🇮🇷_IR_伊朗
+    type: vmess
+    server: 79.143.84.117
+    port: 25477
+    cipher: auto
+    uuid: 9b788fa7-9e35-4ed5-e0e9-7d788b26ec07
+    alterId: 0
+    tls: false
     skip-cert-verify: true
-    network: grpc
-    grpc-opts:
-      grpc-service-name: mahanvip.mahantu.top
-    alpn:
-      - h2
+    network: tcp
   - &id008
     name: 🇰🇿_KZ_哈萨克斯坦
     type: vmess
@@ -100,257 +103,22 @@ proxies:
     skip-cert-verify: true
     network: tcp
   - &id009
-    name: 🇺🇸_US_美国_5
+    name: 🇮🇶_IQ_伊拉克->🇹🇷_TR_土耳其
     type: vmess
-    server: 104.21.32.215
-    port: 8880
-    cipher: auto
-    uuid: ce9aadc8-8c6e-4867-d247-9a84b469ac27
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        host: a3.bcbot.in
-  - &id010
-    name: 🇨🇭_CH_瑞士
-    type: vmess
-    server: 94.131.99.8
-    port: 47182
-    cipher: auto
-    uuid: 81b2b630-8b6a-404f-b996-b12f13db5786
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: tcp
-  - &id011
-    name: 🇺🇸_US_美国_6
-    type: vmess
-    server: 104.18.15.149
-    port: 80
-    cipher: auto
-    uuid: b2d821b2-f727-4e67-898d-1a29bf41ee0d
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        host: er3.889611.com
-  - &id012
-    name: 🇺🇸_US_美国->🇨🇦_CA_加拿大_1
-    type: vmess
-    server: 162.159.200.4
-    port: 80
-    cipher: auto
-    uuid: b2d821b2-f727-4e67-898d-1a29bf41ee0d
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        host: ca3.889611.com
-  - &id013
-    name: 🇺🇸_US_美国_7
-    type: vmess
-    server: 162.159.200.6
-    port: 80
-    cipher: auto
-    uuid: b2d821b2-f727-4e67-898d-1a29bf41ee0d
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        host: er3.889611.com
-  - &id014
-    name: 🇺🇸_US_美国_8
-    type: vmess
-    server: 104.18.15.148
-    port: 80
-    cipher: auto
-    uuid: b2d821b2-f727-4e67-898d-1a29bf41ee0d
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        host: er3.889611.com
-  - &id015
-    name: 🇺🇸_US_美国_9
-    type: vmess
-    server: 104.18.15.150
-    port: 80
-    cipher: auto
-    uuid: b2d821b2-f727-4e67-898d-1a29bf41ee0d
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        host: er3.889611.com
-  - &id016
-    name: 🇺🇸_US_美国->🇨🇦_CA_加拿大_2
-    type: vmess
-    server: 162.159.200.3
-    port: 80
-    cipher: auto
-    uuid: b2d821b2-f727-4e67-898d-1a29bf41ee0d
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        host: ca3.889611.com
-  - &id017
-    name: 🇺🇸_US_美国_10
-    type: vmess
-    server: 104.18.15.147
-    port: 80
-    cipher: auto
-    uuid: b2d821b2-f727-4e67-898d-1a29bf41ee0d
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        host: er3.889611.com
-  - &id018
-    name: 🇷🇺_RU_俄罗斯联邦
-    type: vmess
-    server: 45.144.2.113
-    port: 80
-    cipher: auto
-    uuid: b2d821b2-f727-4e67-898d-1a29bf41ee0d
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        host: www.apple.com
-  - &id019
-    name: 🇺🇸_US_美国_11
-    type: vmess
-    server: 162.159.200.7
-    port: 80
-    cipher: auto
-    uuid: b2d821b2-f727-4e67-898d-1a29bf41ee0d
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        host: er3.visaapp.top
-  - &id020
-    name: 🇺🇸_US_美国->🇺🇦_UA_乌克兰
-    type: vmess
-    server: 104.17.2.183
-    port: 80
-    cipher: auto
-    uuid: f256a3ae-0f85-4a1d-d0cd-2d0b4b73f4f1
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        host: v3ra3do.wakeuptimerap.shop
-  - &id021
-    name: 🇮🇷_IR_伊朗
-    type: vmess
-    server: 79.143.84.117
-    port: 25477
-    cipher: auto
-    uuid: 9b788fa7-9e35-4ed5-e0e9-7d788b26ec07
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: tcp
-  - &id022
-    name: 🇳🇿_NZ_新西兰
-    type: trojan
-    server: 216.73.156.230
+    server: 130.193.166.2
     port: 443
-    udp: true
-    password: 11e247e5-136d-45f1-844a-a7f054d36bab
-    sni: 216.73.156.230
-    skip-cert-verify: true
-    network: tcp
-  - &id023
-    name: 🇺🇸_US_美国_12
-    type: vmess
-    server: 94.131.10.135
-    port: 80
     cipher: auto
-    uuid: 099b5b7a-9d71-43cd-80e3-b8fbe1cc2695
+    uuid: 7682b778-b64b-408b-8fb2-61d7c7fc43e5
     alterId: 0
-    tls: false
+    tls: true
     skip-cert-verify: true
     network: ws
     ws-opts:
-      path: /vmess
-  - &id024
-    name: 🇺🇸_US_美国_13
-    type: vmess
-    server: 172.67.217.144
-    port: 80
-    cipher: auto
-    uuid: 85674552-ce41-44d9-bb2a-50f76450b3d8
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /
+      path: /@forwardv2ray
       headers:
-        host: lv1.xv2ray.net
-  - &id025
-    name: 🇸🇪_SE_瑞典->🇳🇱_NL_荷兰
-    type: vmess
-    server: 185.146.173.27
-    port: 8880
-    cipher: auto
-    uuid: 8ec29f7f-edee-4065-bec5-b31d10c2d7e4
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /main
-      headers:
-        host: telegram.shadowbrowse.online
-  - &id026
-    name: 🇫🇷_FR_法国
-    type: trojan
-    server: 15.188.180.124
-    port: 22222
-    udp: true
-    password: telegram-id-privatevpns
-    sni: trj.rollingnext.co.uk
-    skip-cert-verify: true
-    network: tcp
-  - &id027
-    name: 🇱🇾_LY_利比亚->🇹🇷_TR_土耳其
+        host: soft8989.redirectme.net
+  - &id010
+    name: 🇱🇾_LY_利比亚
     type: vmess
     server: 197.215.140.234
     port: 80
@@ -364,21 +132,17 @@ proxies:
       path: /@forwardv2ray
       headers:
         host: softiri.serveirc.com
-  - &id028
-    name: 🇺🇸_US_美国_14
+  - &id011
+    name: 🇨🇭_CH_瑞士
     type: vmess
-    server: 104.18.154.42
-    port: 80
+    server: 94.131.99.8
+    port: 47182
     cipher: auto
-    uuid: b2d821b2-f727-4e67-898d-1a29bf41ee0d
+    uuid: 81b2b630-8b6a-404f-b996-b12f13db5786
     alterId: 0
     tls: false
     skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        host: us3.889611.com
+    network: tcp
 proxy-groups:
   - name: PROXY
     type: select
@@ -416,23 +180,6 @@ proxy-groups:
       - *id009
       - *id010
       - *id011
-      - *id012
-      - *id013
-      - *id014
-      - *id015
-      - *id016
-      - *id017
-      - *id018
-      - *id019
-      - *id020
-      - *id021
-      - *id022
-      - *id023
-      - *id024
-      - *id025
-      - *id026
-      - *id027
-      - *id028
   - name: LOAD-BALANCE
     type: load-balance
     url: http://www.gstatic.com/generate_204
@@ -449,23 +196,6 @@ proxy-groups:
       - *id009
       - *id010
       - *id011
-      - *id012
-      - *id013
-      - *id014
-      - *id015
-      - *id016
-      - *id017
-      - *id018
-      - *id019
-      - *id020
-      - *id021
-      - *id022
-      - *id023
-      - *id024
-      - *id025
-      - *id026
-      - *id027
-      - *id028
   - name: SELECT
     type: select
     proxies:
@@ -480,23 +210,6 @@ proxy-groups:
       - *id009
       - *id010
       - *id011
-      - *id012
-      - *id013
-      - *id014
-      - *id015
-      - *id016
-      - *id017
-      - *id018
-      - *id019
-      - *id020
-      - *id021
-      - *id022
-      - *id023
-      - *id024
-      - *id025
-      - *id026
-      - *id027
-      - *id028
 rules:
   - RULE-SET,applications,DIRECT
   - DOMAIN,clash.razord.top,DIRECT
