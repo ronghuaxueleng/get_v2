@@ -6,42 +6,34 @@ log-level: info
 external-controller: 0.0.0.0:9090
 proxies:
   - &id001
-    name: 🇺🇸_US_美国->🇩🇪_DE_德国
-    type: vmess
-    server: tgju.org
+    name: 🇨🇦_CA_加拿大_1
+    type: vless
+    server: 23.227.39.23
     port: 443
-    cipher: auto
-    uuid: 562ae412-d7b5-4f1e-dd0d-82e073193b21
-    alterId: 0
+    uuid: 0773256c-d020-436d-afea-6eee7cb6c872
     tls: true
-    skip-cert-verify: true
+    servername: xray1.freegradely.xyz
     network: ws
     ws-opts:
-      path: /fa
-      headers:
-        host: cdn.pokerad.fun
+      path: /bodhws
   - &id002
-    name: 🇱🇾_LY_利比亚
-    type: vmess
-    server: 197.215.140.234
-    port: 80
-    cipher: auto
-    uuid: b82493e3-07b4-4cf2-b585-965575cfeb32
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
+    name: 🇺🇸_US_美国->🇩🇪_DE_德国_1
+    type: vless
+    server: 104.25.70.52
+    port: 443
+    uuid: a0cdf51b-e97d-4e87-9976-ed272b617c09
+    tls: true
+    servername: dl165.vipiroshd.shop
     network: ws
     ws-opts:
-      path: /@forwardv2ray
-      headers:
-        host: softiri.serveirc.com
+      path: /apiapp
   - &id003
-    name: 🇺🇸_US_美国
+    name: 🇺🇸_US_美国->🇺🇦_UA_乌克兰
     type: vmess
-    server: glaSco.fx-trAder.shop
+    server: glasco.fx-trader.shop
     port: 80
     cipher: auto
-    uuid: cdbb0899-7113-4d4e-f868-31339c75ad3c
+    uuid: f256a3ae-0f85-4a1d-d0cd-2d0b4b73f4f1
     alterId: 0
     tls: false
     skip-cert-verify: true
@@ -49,59 +41,316 @@ proxies:
     ws-opts:
       path: /
       headers:
-        host: vvv2vayo2.everythingisreve.shop
+        host: v3ra3do.wakeuptimerap.shop
   - &id004
-    name: 🇸🇨_SC_塞舌尔->🇭🇰_HK_香港
-    type: vmess
-    server: 156.251.226.142
-    port: 56120
-    cipher: auto
-    uuid: a3dfbdd6-7e01-4735-9973-e3dd056c129e
-    alterId: 0
-    tls: true
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /changding-tls1?ed=2048
-      headers:
-        host: hk-300.changding.tech
-  - &id005
-    name: 🇨🇦_CA_加拿大
-    type: vmess
-    server: 142.171.237.214
+    name: 🇺🇸_US_美国->🇩🇪_DE_德国_2
+    type: vless
+    server: 104.25.70.69
     port: 443
-    cipher: auto
-    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-    alterId: 64
+    uuid: a0cdf51b-e97d-4e87-9976-ed272b617c09
     tls: true
+    servername: dl165.vipiroshd.shop
+    network: ws
+    ws-opts:
+      path: /apiapp
+  - &id005
+    name: 🇪🇸_ES_西班牙
+    type: ss
+    server: 92.38.171.89
+    port: 989
+    password: f8f7aCzcPKbsF8p3
+    cipher: aes-256-cfb
+  - &id006
+    name: 🇺🇸_US_美国->🇨🇦_CA_加拿大_1
+    type: vless
+    server: 198.41.216.16
+    port: 443
+    uuid: 0773256c-d020-436d-afea-6eee7cb6c872
+    tls: true
+    servername: xray1.freegradely.xyz
+    network: ws
+    ws-opts:
+      path: /bodhws
+  - &id007
+    name: 🇺🇸_US_美国->🇨🇦_CA_加拿大_2
+    type: vless
+    server: 198.41.216.9
+    port: 443
+    uuid: 0773256c-d020-436d-afea-6eee7cb6c872
+    tls: true
+    servername: xray1.freegradely.xyz
+    network: ws
+    ws-opts:
+      path: /bodhws
+  - &id008
+    name: 🇺🇸_US_美国->🇷🇺_RU_俄罗斯联邦
+    type: trojan
+    server: cdn-16.cdn2cdn.com
+    port: 2083
+    udp: true
+    password: gviRoLVUKA5kBX2M0gJSvg
+    sni: cdn16.cdn2cdn.com
     skip-cert-verify: true
     network: ws
     ws-opts:
-      path: /path/221312281009
+      path: /
+  - &id009
+    name: 🇺🇸_US_美国->🇩🇪_DE_德国_3
+    type: vless
+    server: 104.21.16.131
+    port: 443
+    uuid: 89a3e5dc-2a6b-4759-80cb-2cf8630ec8a2
+    tls: true
+    servername: cdn5.gsmvp.com
+    network: ws
+    ws-opts:
+      path: /bylews
+  - &id010
+    name: 🇺🇸_US_美国->🇨🇦_CA_加拿大_3
+    type: vless
+    server: 104.19.212.163
+    port: 443
+    uuid: 0773256c-d020-436d-afea-6eee7cb6c872
+    tls: true
+    servername: xray1.freegradely.xyz
+    network: ws
+    ws-opts:
+      path: /bodhws
+  - &id011
+    name: 🇺🇸_US_美国->🇩🇪_DE_德国_4
+    type: vless
+    server: 104.25.70.61
+    port: 443
+    uuid: a0cdf51b-e97d-4e87-9976-ed272b617c09
+    tls: true
+    servername: dl165.vipiroshd.shop
+    network: ws
+    ws-opts:
+      path: /apiapp
+  - &id012
+    name: 🇺🇸_US_美国->🇨🇦_CA_加拿大_4
+    type: vless
+    server: 162.159.3.4
+    port: 443
+    uuid: 0773256c-d020-436d-afea-6eee7cb6c872
+    tls: true
+    servername: xray1.freegradely.xyz
+    network: ws
+    ws-opts:
+      path: /bodhws
+  - &id013
+    name: 🇺🇸_US_美国->🇩🇪_DE_德国_5
+    type: vless
+    server: 104.25.70.58
+    port: 443
+    uuid: a0cdf51b-e97d-4e87-9976-ed272b617c09
+    tls: true
+    servername: dl165.vipiroshd.shop
+    network: ws
+    ws-opts:
+      path: /apiapp
+  - &id014
+    name: 🇺🇸_US_美国->🇨🇦_CA_加拿大_5
+    type: vless
+    server: 104.20.18.93
+    port: 443
+    uuid: 0773256c-d020-436d-afea-6eee7cb6c872
+    tls: true
+    servername: xray1.freegradely.xyz
+    network: ws
+    ws-opts:
+      path: /bodhws
+  - &id015
+    name: 🇳🇱_NL_荷兰->🇮🇷_IR_伊朗
+    type: vless
+    server: 45.131.4.88
+    port: 443
+    uuid: 376b9861-2fc6-4647-959c-18185cd9c95a
+    tls: true
+    servername: lmn37.sbs
+    network: ws
+    ws-opts:
+      path: /fflsws
+  - &id016
+    name: 🇨🇦_CA_加拿大_2
+    type: vless
+    server: 23.227.38.24
+    port: 443
+    uuid: 0773256c-d020-436d-afea-6eee7cb6c872
+    tls: true
+    servername: xray1.freegradely.xyz
+    network: ws
+    ws-opts:
+      path: /bodhws
+  - &id017
+    name: 🇺🇸_US_美国->🇩🇪_DE_德国_6
+    type: vless
+    server: 104.25.70.62
+    port: 443
+    uuid: 9016f911-e576-4c5e-d85c-f3144633021e
+    tls: true
+    servername: 4ash.vipjnamasha.store
+    network: ws
+    ws-opts:
+      path: /apiapp
+  - &id018
+    name: 🇺🇸_US_美国
+    type: ss
+    server: 212.102.47.198
+    port: 443
+    password: shadowsocks
+    cipher: aes-128-cfb
+  - &id019
+    name: 🇨🇦_CA_加拿大_3
+    type: vless
+    server: 23.227.38.22
+    port: 443
+    uuid: ffb15cd2-0521-49de-b8aa-fb15d58c8075
+    tls: true
+    servername: v2ray3.freegradely.xyz
+    network: ws
+    ws-opts:
+      path: /bqbows
+  - &id020
+    name: 🇰🇿_KZ_哈萨克斯坦
+    type: vmess
+    server: kz-v2ray.ipracevpn.com
+    port: 8443
+    cipher: auto
+    uuid: 48b10b02-2c60-4323-bc65-a11b15144745
+    alterId: 0
+    tls: true
+    skip-cert-verify: true
+    network: tcp
+  - &id021
+    name: 🇺🇸_US_美国->🇳🇱_NL_荷兰_1
+    type: vmess
+    server: 104.21.79.143
+    port: 80
+    cipher: auto
+    uuid: 8b745f74-c322-48c0-b27c-cb6a1d871e86
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: ae8e857abf1d?ed=2048
       headers:
-        host: www.23168499.xyz
-  - &id006
-    name: 🇮🇷_IR_伊朗
+        host: periodically-microwave-firms-abc.trycloudflare.com
+  - &id022
+    name: 🇨🇦_CA_加拿大_4
+    type: vless
+    server: 23.227.38.23
+    port: 443
+    uuid: 0773256c-d020-436d-afea-6eee7cb6c872
+    tls: true
+    servername: xray1.freegradely.xyz
+    network: ws
+    ws-opts:
+      path: /bodhws
+  - &id023
+    name: 🇺🇸_US_美国->🇨🇦_CA_加拿大_6
+    type: vless
+    server: 198.41.216.129
+    port: 443
+    uuid: 0773256c-d020-436d-afea-6eee7cb6c872
+    tls: true
+    servername: xray1.freegradely.xyz
+    network: ws
+    ws-opts:
+      path: /bodhws
+  - &id024
+    name: 🇺🇸_US_美国->🇩🇪_DE_德国_7
+    type: vless
+    server: 104.25.70.67
+    port: 443
+    uuid: 9016f911-e576-4c5e-d85c-f3144633021e
+    tls: true
+    servername: 4ash.vipjnamasha.store
+    network: ws
+    ws-opts:
+      path: /apiapp
+  - &id025
+    name: 🇺🇸_US_美国->🇳🇱_NL_荷兰_2
     type: vmess
-    server: 79.143.84.117
-    port: 25477
+    server: 172.67.146.69
+    port: 80
     cipher: auto
-    uuid: 9b788fa7-9e35-4ed5-e0e9-7d788b26ec07
+    uuid: 8b745f74-c322-48c0-b27c-cb6a1d871e86
     alterId: 0
     tls: false
     skip-cert-verify: true
-    network: tcp
-  - &id007
-    name: 🇨🇭_CH_瑞士
-    type: vmess
-    server: 94.131.99.8
-    port: 47182
-    cipher: auto
-    uuid: 81b2b630-8b6a-404f-b996-b12f13db5786
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: tcp
+    network: ws
+    ws-opts:
+      path: ae8e857abf1d?ed=2048
+      headers:
+        host: periodically-microwave-firms-abc.trycloudflare.com
+  - &id026
+    name: 🇺🇸_US_美国->🇮🇷_IR_伊朗
+    type: vless
+    server: 104.17.88.212
+    port: 443
+    uuid: 376b9861-2fc6-4647-959c-18185cd9c95a
+    tls: true
+    servername: lmn37.sbs
+    network: ws
+    ws-opts:
+      path: /fflsws
+  - &id027
+    name: 🇺🇸_US_美国->🇩🇪_DE_德国_8
+    type: vless
+    server: 172.67.206.201
+    port: 443
+    uuid: 1d86846c-5a27-43c8-8981-57bb75c82195
+    tls: true
+    servername: qvnic.gsolli.sbs
+    network: ws
+    ws-opts:
+      path: /paradise
+  - &id028
+    name: 🇺🇸_US_美国->🇨🇦_CA_加拿大_7
+    type: vless
+    server: 172.67.79.156
+    port: 443
+    uuid: 0773256c-d020-436d-afea-6eee7cb6c872
+    tls: true
+    servername: xray1.freegradely.xyz
+    network: ws
+    ws-opts:
+      path: /bodhws
+  - &id029
+    name: 🇨🇦_CA_加拿大_5
+    type: vless
+    server: 23.227.39.24
+    port: 443
+    uuid: 0773256c-d020-436d-afea-6eee7cb6c872
+    tls: true
+    servername: xray1.freegradely.xyz
+    network: ws
+    ws-opts:
+      path: /bodhws
+  - &id030
+    name: 🇺🇸_US_美国->🇩🇪_DE_德国_9
+    type: vless
+    server: 104.25.70.63
+    port: 443
+    uuid: a0cdf51b-e97d-4e87-9976-ed272b617c09
+    tls: true
+    servername: dl165.vipiroshd.shop
+    network: ws
+    ws-opts:
+      path: /apiapp
+  - &id031
+    name: 🇺🇸_US_美国->🇩🇪_DE_德国_10
+    type: vless
+    server: 104.25.70.68
+    port: 443
+    uuid: 9016f911-e576-4c5e-d85c-f3144633021e
+    tls: true
+    servername: 4ash.vipjnamasha.store
+    network: ws
+    ws-opts:
+      path: /apiapp
 proxy-groups:
   - name: PROXY
     type: select
@@ -135,6 +384,30 @@ proxy-groups:
       - *id005
       - *id006
       - *id007
+      - *id008
+      - *id009
+      - *id010
+      - *id011
+      - *id012
+      - *id013
+      - *id014
+      - *id015
+      - *id016
+      - *id017
+      - *id018
+      - *id019
+      - *id020
+      - *id021
+      - *id022
+      - *id023
+      - *id024
+      - *id025
+      - *id026
+      - *id027
+      - *id028
+      - *id029
+      - *id030
+      - *id031
   - name: LOAD-BALANCE
     type: load-balance
     url: http://www.gstatic.com/generate_204
@@ -147,6 +420,30 @@ proxy-groups:
       - *id005
       - *id006
       - *id007
+      - *id008
+      - *id009
+      - *id010
+      - *id011
+      - *id012
+      - *id013
+      - *id014
+      - *id015
+      - *id016
+      - *id017
+      - *id018
+      - *id019
+      - *id020
+      - *id021
+      - *id022
+      - *id023
+      - *id024
+      - *id025
+      - *id026
+      - *id027
+      - *id028
+      - *id029
+      - *id030
+      - *id031
   - name: SELECT
     type: select
     proxies:
@@ -157,6 +454,30 @@ proxy-groups:
       - *id005
       - *id006
       - *id007
+      - *id008
+      - *id009
+      - *id010
+      - *id011
+      - *id012
+      - *id013
+      - *id014
+      - *id015
+      - *id016
+      - *id017
+      - *id018
+      - *id019
+      - *id020
+      - *id021
+      - *id022
+      - *id023
+      - *id024
+      - *id025
+      - *id026
+      - *id027
+      - *id028
+      - *id029
+      - *id030
+      - *id031
 rules:
   - RULE-SET,applications,DIRECT
   - DOMAIN,clash.razord.top,DIRECT
