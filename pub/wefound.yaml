@@ -6,9 +6,19 @@ log-level: info
 external-controller: 0.0.0.0:9090
 proxies:
   - &id001
-    name: 🇨🇦_CA_加拿大_1
+    name: 🇨🇳_CN_中国->🇺🇦_UA_乌克兰
+    type: trojan
+    server: xibaozi.19890604.day
+    port: 10845
+    udp: true
+    password: a34db467-5757-4a39-bfed-d89a6501973e
+    sni: cloudflare.node-ssl.cdn-alibaba.com
+    skip-cert-verify: true
+    network: tcp
+  - &id002
+    name: 🇺🇸_US_美国->🇨🇦_CA_加拿大_1
     type: vless
-    server: 23.227.39.23
+    server: 172.67.79.156
     port: 443
     uuid: 0773256c-d020-436d-afea-6eee7cb6c872
     tls: true
@@ -16,10 +26,10 @@ proxies:
     network: ws
     ws-opts:
       path: /bodhws
-  - &id002
+  - &id003
     name: 🇺🇸_US_美国->🇩🇪_DE_德国_1
     type: vless
-    server: 104.25.70.52
+    server: 104.25.70.63
     port: 443
     uuid: a0cdf51b-e97d-4e87-9976-ed272b617c09
     tls: true
@@ -27,23 +37,30 @@ proxies:
     network: ws
     ws-opts:
       path: /apiapp
-  - &id003
-    name: 🇺🇸_US_美国->🇺🇦_UA_乌克兰
-    type: vmess
-    server: glasco.fx-trader.shop
-    port: 80
-    cipher: auto
-    uuid: f256a3ae-0f85-4a1d-d0cd-2d0b4b73f4f1
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        host: v3ra3do.wakeuptimerap.shop
   - &id004
     name: 🇺🇸_US_美国->🇩🇪_DE_德国_2
+    type: vless
+    server: 104.25.70.68
+    port: 443
+    uuid: 9016f911-e576-4c5e-d85c-f3144633021e
+    tls: true
+    servername: 4ash.vipjnamasha.store
+    network: ws
+    ws-opts:
+      path: /apiapp
+  - &id005
+    name: 🇺🇸_US_美国->🇩🇪_DE_德国_3
+    type: vless
+    server: 104.25.70.62
+    port: 443
+    uuid: 9016f911-e576-4c5e-d85c-f3144633021e
+    tls: true
+    servername: 4ash.vipjnamasha.store
+    network: ws
+    ws-opts:
+      path: /apiapp
+  - &id006
+    name: 🇺🇸_US_美国->🇩🇪_DE_德国_4
     type: vless
     server: 104.25.70.69
     port: 443
@@ -53,28 +70,77 @@ proxies:
     network: ws
     ws-opts:
       path: /apiapp
-  - &id005
-    name: 🇪🇸_ES_西班牙
-    type: ss
-    server: 92.38.171.89
-    port: 989
-    password: f8f7aCzcPKbsF8p3
-    cipher: aes-256-cfb
-  - &id006
-    name: 🇺🇸_US_美国->🇨🇦_CA_加拿大_1
+  - &id007
+    name: 🇺🇸_US_美国->🇮🇷_IR_伊朗
     type: vless
-    server: 198.41.216.16
+    server: 104.17.88.212
     port: 443
-    uuid: 0773256c-d020-436d-afea-6eee7cb6c872
+    uuid: 376b9861-2fc6-4647-959c-18185cd9c95a
     tls: true
-    servername: xray1.freegradely.xyz
+    servername: lmn37.sbs
     network: ws
     ws-opts:
-      path: /bodhws
-  - &id007
+      path: /fflsws
+  - &id008
+    name: 🇺🇸_US_美国->🇩🇪_DE_德国_5
+    type: trojan
+    server: 104.19.67.53
+    port: 443
+    udp: true
+    password: Mahanvpn-insta-mahan_vpn
+    sni: mahanvip.mahantu.top
+    skip-cert-verify: false
+    network: grpc
+    grpc-opts:
+      grpc-service-name: mahanvip.mahantu.top
+  - &id009
+    name: 🇳🇱_NL_荷兰->🇮🇷_IR_伊朗
+    type: vless
+    server: 45.131.4.88
+    port: 443
+    uuid: 376b9861-2fc6-4647-959c-18185cd9c95a
+    tls: true
+    servername: lmn37.sbs
+    network: ws
+    ws-opts:
+      path: /fflsws
+  - &id010
+    name: 🇺🇸_US_美国->🇩🇪_DE_德国_6
+    type: vless
+    server: 172.67.206.201
+    port: 443
+    uuid: 1d86846c-5a27-43c8-8981-57bb75c82195
+    tls: true
+    servername: qvnic.gsolli.sbs
+    network: ws
+    ws-opts:
+      path: /paradise
+  - &id011
+    name: 🇺🇸_US_美国->🇩🇪_DE_德国_7
+    type: vless
+    server: 104.18.202.232
+    port: 2096
+    uuid: 6807c545-8ae7-4e0a-860c-56fc9ca527f1
+    tls: true
+    servername: test.saeedgalaxy.xyz
+    network: ws
+    ws-opts:
+      path: /ws
+  - &id012
+    name: 🇺🇸_US_美国->🇩🇪_DE_德国_8
+    type: vless
+    server: 104.25.70.52
+    port: 443
+    uuid: a0cdf51b-e97d-4e87-9976-ed272b617c09
+    tls: true
+    servername: dl165.vipiroshd.shop
+    network: ws
+    ws-opts:
+      path: /apiapp
+  - &id013
     name: 🇺🇸_US_美国->🇨🇦_CA_加拿大_2
     type: vless
-    server: 198.41.216.9
+    server: 198.41.216.129
     port: 443
     uuid: 0773256c-d020-436d-afea-6eee7cb6c872
     tls: true
@@ -82,7 +148,7 @@ proxies:
     network: ws
     ws-opts:
       path: /bodhws
-  - &id008
+  - &id014
     name: 🇺🇸_US_美国->🇷🇺_RU_俄罗斯联邦
     type: trojan
     server: cdn-16.cdn2cdn.com
@@ -94,18 +160,14 @@ proxies:
     network: ws
     ws-opts:
       path: /
-  - &id009
-    name: 🇺🇸_US_美国->🇩🇪_DE_德国_3
-    type: vless
-    server: 104.21.16.131
-    port: 443
-    uuid: 89a3e5dc-2a6b-4759-80cb-2cf8630ec8a2
-    tls: true
-    servername: cdn5.gsmvp.com
-    network: ws
-    ws-opts:
-      path: /bylews
-  - &id010
+  - &id015
+    name: 🇳🇱_NL_荷兰
+    type: ss
+    server: 109.107.177.244
+    port: 1165
+    password: ENi-aO7DAppEy5q1Oqpucg
+    cipher: chacha20-ietf-poly1305
+  - &id016
     name: 🇺🇸_US_美国->🇨🇦_CA_加拿大_3
     type: vless
     server: 104.19.212.163
@@ -116,18 +178,7 @@ proxies:
     network: ws
     ws-opts:
       path: /bodhws
-  - &id011
-    name: 🇺🇸_US_美国->🇩🇪_DE_德国_4
-    type: vless
-    server: 104.25.70.61
-    port: 443
-    uuid: a0cdf51b-e97d-4e87-9976-ed272b617c09
-    tls: true
-    servername: dl165.vipiroshd.shop
-    network: ws
-    ws-opts:
-      path: /apiapp
-  - &id012
+  - &id017
     name: 🇺🇸_US_美国->🇨🇦_CA_加拿大_4
     type: vless
     server: 162.159.3.4
@@ -138,8 +189,8 @@ proxies:
     network: ws
     ws-opts:
       path: /bodhws
-  - &id013
-    name: 🇺🇸_US_美国->🇩🇪_DE_德国_5
+  - &id018
+    name: 🇺🇸_US_美国->🇩🇪_DE_德国_9
     type: vless
     server: 104.25.70.58
     port: 443
@@ -149,96 +200,19 @@ proxies:
     network: ws
     ws-opts:
       path: /apiapp
-  - &id014
-    name: 🇺🇸_US_美国->🇨🇦_CA_加拿大_5
+  - &id019
+    name: 🇺🇸_US_美国->🇩🇪_DE_德国_10
     type: vless
-    server: 104.20.18.93
+    server: 104.25.70.61
     port: 443
-    uuid: 0773256c-d020-436d-afea-6eee7cb6c872
+    uuid: a0cdf51b-e97d-4e87-9976-ed272b617c09
     tls: true
-    servername: xray1.freegradely.xyz
-    network: ws
-    ws-opts:
-      path: /bodhws
-  - &id015
-    name: 🇳🇱_NL_荷兰->🇮🇷_IR_伊朗
-    type: vless
-    server: 45.131.4.88
-    port: 443
-    uuid: 376b9861-2fc6-4647-959c-18185cd9c95a
-    tls: true
-    servername: lmn37.sbs
-    network: ws
-    ws-opts:
-      path: /fflsws
-  - &id016
-    name: 🇨🇦_CA_加拿大_2
-    type: vless
-    server: 23.227.38.24
-    port: 443
-    uuid: 0773256c-d020-436d-afea-6eee7cb6c872
-    tls: true
-    servername: xray1.freegradely.xyz
-    network: ws
-    ws-opts:
-      path: /bodhws
-  - &id017
-    name: 🇺🇸_US_美国->🇩🇪_DE_德国_6
-    type: vless
-    server: 104.25.70.62
-    port: 443
-    uuid: 9016f911-e576-4c5e-d85c-f3144633021e
-    tls: true
-    servername: 4ash.vipjnamasha.store
+    servername: dl165.vipiroshd.shop
     network: ws
     ws-opts:
       path: /apiapp
-  - &id018
-    name: 🇺🇸_US_美国
-    type: ss
-    server: 212.102.47.198
-    port: 443
-    password: shadowsocks
-    cipher: aes-128-cfb
-  - &id019
-    name: 🇨🇦_CA_加拿大_3
-    type: vless
-    server: 23.227.38.22
-    port: 443
-    uuid: ffb15cd2-0521-49de-b8aa-fb15d58c8075
-    tls: true
-    servername: v2ray3.freegradely.xyz
-    network: ws
-    ws-opts:
-      path: /bqbows
   - &id020
-    name: 🇰🇿_KZ_哈萨克斯坦
-    type: vmess
-    server: kz-v2ray.ipracevpn.com
-    port: 8443
-    cipher: auto
-    uuid: 48b10b02-2c60-4323-bc65-a11b15144745
-    alterId: 0
-    tls: true
-    skip-cert-verify: true
-    network: tcp
-  - &id021
-    name: 🇺🇸_US_美国->🇳🇱_NL_荷兰_1
-    type: vmess
-    server: 104.21.79.143
-    port: 80
-    cipher: auto
-    uuid: 8b745f74-c322-48c0-b27c-cb6a1d871e86
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: ae8e857abf1d?ed=2048
-      headers:
-        host: periodically-microwave-firms-abc.trycloudflare.com
-  - &id022
-    name: 🇨🇦_CA_加拿大_4
+    name: 🇨🇦_CA_加拿大_1
     type: vless
     server: 23.227.38.23
     port: 443
@@ -248,10 +222,76 @@ proxies:
     network: ws
     ws-opts:
       path: /bodhws
+  - &id021
+    name: 🇺🇸_US_美国->🇩🇪_DE_德国_11
+    type: vmess
+    server: hamrahaval.asan3a.shop
+    port: 8080
+    cipher: auto
+    uuid: d72227c8-3ce1-4f24-a9fb-36fcd918f96f
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: asan3.azad2.tech
+  - &id022
+    name: 🇨🇳_CN_中国->🇺🇸_US_美国_1
+    type: trojan
+    server: xibaozi.19890604.day
+    port: 10837
+    udp: true
+    password: a34db467-5757-4a39-bfed-d89a6501973e
+    sni: cloudflare.node-ssl.cdn-alibaba.com
+    skip-cert-verify: true
+    network: tcp
   - &id023
-    name: 🇺🇸_US_美国->🇨🇦_CA_加拿大_6
+    name: 🇦🇷_AR_阿根廷
+    type: ss
+    server: 190.103.176.29
+    port: 989
+    password: f8f7aCzcPKbsF8p3
+    cipher: aes-256-cfb
+  - &id024
+    name: 🇨🇱_CL_智利
+    type: ss
+    server: 190.120.230.9
+    port: 989
+    password: f8f7aCzcPKbsF8p3
+    cipher: aes-256-cfb
+  - &id025
+    name: 🇺🇸_US_美国_1
+    type: ss
+    server: 167.88.62.104
+    port: 2376
+    password: faBAoD54k87UJG7
+    cipher: aes-256-gcm
+  - &id026
+    name: 🇨🇳_CN_中国->🇺🇸_US_美国_2
+    type: trojan
+    server: xibaozi.19890604.day
+    port: 10850
+    udp: true
+    password: a34db467-5757-4a39-bfed-d89a6501973e
+    sni: cloudflare.node-ssl.cdn-alibaba.com
+    skip-cert-verify: true
+    network: tcp
+  - &id027
+    name: 🇨🇳_CN_中国->🇨🇿_CZ_捷克
+    type: trojan
+    server: xibaozi.19890604.day
+    port: 10846
+    udp: true
+    password: a34db467-5757-4a39-bfed-d89a6501973e
+    sni: cloudflare.node-ssl.cdn-alibaba.com
+    skip-cert-verify: true
+    network: tcp
+  - &id028
+    name: 🇺🇸_US_美国->🇨🇦_CA_加拿大_5
     type: vless
-    server: 198.41.216.129
+    server: 198.41.216.16
     port: 443
     uuid: 0773256c-d020-436d-afea-6eee7cb6c872
     tls: true
@@ -259,8 +299,32 @@ proxies:
     network: ws
     ws-opts:
       path: /bodhws
-  - &id024
-    name: 🇺🇸_US_美国->🇩🇪_DE_德国_7
+  - &id029
+    name: 🇬🇧_GB_英国_1
+    type: vmess
+    server: 172.99.190.109
+    port: 443
+    cipher: auto
+    uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
+    alterId: 0
+    tls: true
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: linkvws
+  - &id030
+    name: 🇺🇸_US_美国->🇨🇦_CA_加拿大_6
+    type: vless
+    server: 198.41.216.9
+    port: 443
+    uuid: 0773256c-d020-436d-afea-6eee7cb6c872
+    tls: true
+    servername: xray1.freegradely.xyz
+    network: ws
+    ws-opts:
+      path: /bodhws
+  - &id031
+    name: 🇺🇸_US_美国->🇩🇪_DE_德国_12
     type: vless
     server: 104.25.70.67
     port: 443
@@ -270,56 +334,8 @@ proxies:
     network: ws
     ws-opts:
       path: /apiapp
-  - &id025
-    name: 🇺🇸_US_美国->🇳🇱_NL_荷兰_2
-    type: vmess
-    server: 172.67.146.69
-    port: 80
-    cipher: auto
-    uuid: 8b745f74-c322-48c0-b27c-cb6a1d871e86
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: ae8e857abf1d?ed=2048
-      headers:
-        host: periodically-microwave-firms-abc.trycloudflare.com
-  - &id026
-    name: 🇺🇸_US_美国->🇮🇷_IR_伊朗
-    type: vless
-    server: 104.17.88.212
-    port: 443
-    uuid: 376b9861-2fc6-4647-959c-18185cd9c95a
-    tls: true
-    servername: lmn37.sbs
-    network: ws
-    ws-opts:
-      path: /fflsws
-  - &id027
-    name: 🇺🇸_US_美国->🇩🇪_DE_德国_8
-    type: vless
-    server: 172.67.206.201
-    port: 443
-    uuid: 1d86846c-5a27-43c8-8981-57bb75c82195
-    tls: true
-    servername: qvnic.gsolli.sbs
-    network: ws
-    ws-opts:
-      path: /paradise
-  - &id028
-    name: 🇺🇸_US_美国->🇨🇦_CA_加拿大_7
-    type: vless
-    server: 172.67.79.156
-    port: 443
-    uuid: 0773256c-d020-436d-afea-6eee7cb6c872
-    tls: true
-    servername: xray1.freegradely.xyz
-    network: ws
-    ws-opts:
-      path: /bodhws
-  - &id029
-    name: 🇨🇦_CA_加拿大_5
+  - &id032
+    name: 🇨🇦_CA_加拿大_2
     type: vless
     server: 23.227.39.24
     port: 443
@@ -329,28 +345,127 @@ proxies:
     network: ws
     ws-opts:
       path: /bodhws
-  - &id030
-    name: 🇺🇸_US_美国->🇩🇪_DE_德国_9
-    type: vless
-    server: 104.25.70.63
+  - &id033
+    name: 🇺🇸_US_美国->🇩🇪_DE_德国_13
+    type: trojan
+    server: 104.21.69.44
     port: 443
-    uuid: a0cdf51b-e97d-4e87-9976-ed272b617c09
+    udp: true
+    password: Nu5EqwcJ2OCuvKAcSQeGdg
+    sni: cdn-22.gsmxreality.com
+    skip-cert-verify: false
+    network: grpc
+    grpc-opts:
+      grpc-service-name: 443trojan
+  - &id034
+    name: 🇨🇳_CN_中国->🇺🇸_US_美国_3
+    type: trojan
+    server: xibaozi.19890604.day
+    port: 10838
+    udp: true
+    password: a34db467-5757-4a39-bfed-d89a6501973e
+    sni: cloudflare.node-ssl.cdn-alibaba.com
+    skip-cert-verify: true
+    network: tcp
+  - &id035
+    name: 🇬🇧_GB_英国_2
+    type: ss
+    server: 77.72.5.150
+    port: 989
+    password: f8f7aCzcPKbsF8p3
+    cipher: aes-256-cfb
+  - &id036
+    name: 🇨🇳_CN_中国->🇺🇸_US_美国_4
+    type: trojan
+    server: xibaozi.19890604.day
+    port: 10847
+    udp: true
+    password: a34db467-5757-4a39-bfed-d89a6501973e
+    sni: cloudflare.node-ssl.cdn-alibaba.com
+    skip-cert-verify: true
+    network: tcp
+  - &id037
+    name: 🇨🇦_CA_加拿大_3
+    type: vless
+    server: 23.227.39.23
+    port: 443
+    uuid: 0773256c-d020-436d-afea-6eee7cb6c872
     tls: true
-    servername: dl165.vipiroshd.shop
+    servername: xray1.freegradely.xyz
     network: ws
     ws-opts:
-      path: /apiapp
-  - &id031
-    name: 🇺🇸_US_美国->🇩🇪_DE_德国_10
-    type: vless
-    server: 104.25.70.68
+      path: /bodhws
+  - &id038
+    name: 🇺🇸_US_美国_2
+    type: ss
+    server: 212.102.47.198
     port: 443
-    uuid: 9016f911-e576-4c5e-d85c-f3144633021e
+    password: shadowsocks
+    cipher: aes-128-cfb
+  - &id039
+    name: 🇨🇦_CA_加拿大_4
+    type: vless
+    server: 23.227.38.24
+    port: 443
+    uuid: 0773256c-d020-436d-afea-6eee7cb6c872
     tls: true
-    servername: 4ash.vipjnamasha.store
+    servername: xray1.freegradely.xyz
     network: ws
     ws-opts:
-      path: /apiapp
+      path: /bodhws
+  - &id040
+    name: 🇨🇦_CA_加拿大_5
+    type: vless
+    server: 23.227.38.22
+    port: 443
+    uuid: ffb15cd2-0521-49de-b8aa-fb15d58c8075
+    tls: true
+    servername: v2ray3.freegradely.xyz
+    network: ws
+    ws-opts:
+      path: /bqbows
+  - &id041
+    name: 🇨🇳_CN_中国->🇦🇹_AT_奥地利
+    type: trojan
+    server: xibaozi.19890604.day
+    port: 10848
+    udp: true
+    password: a34db467-5757-4a39-bfed-d89a6501973e
+    sni: cloudflare.node-ssl.cdn-alibaba.com
+    skip-cert-verify: true
+    network: tcp
+  - &id042
+    name: 🇪🇸_ES_西班牙
+    type: ss
+    server: 92.38.171.89
+    port: 989
+    password: f8f7aCzcPKbsF8p3
+    cipher: aes-256-cfb
+  - &id043
+    name: 🇦🇺_AU_澳大利亚->🇺🇸_US_美国
+    type: trojan
+    server: 192.65.217.247
+    port: 443
+    udp: true
+    password: b59ee60f-9fa4-4770-b6a7-288620147f60
+    sni: k5us2.yfjc.sbs
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /yfjc/kus2
+      headers:
+        host: k5us2.yfjc.sbs
+  - &id044
+    name: 🇺🇸_US_美国->🇨🇦_CA_加拿大_7
+    type: vless
+    server: 104.20.18.93
+    port: 443
+    uuid: 0773256c-d020-436d-afea-6eee7cb6c872
+    tls: true
+    servername: xray1.freegradely.xyz
+    network: ws
+    ws-opts:
+      path: /bodhws
 proxy-groups:
   - name: PROXY
     type: select
@@ -408,6 +523,19 @@ proxy-groups:
       - *id029
       - *id030
       - *id031
+      - *id032
+      - *id033
+      - *id034
+      - *id035
+      - *id036
+      - *id037
+      - *id038
+      - *id039
+      - *id040
+      - *id041
+      - *id042
+      - *id043
+      - *id044
   - name: LOAD-BALANCE
     type: load-balance
     url: http://www.gstatic.com/generate_204
@@ -444,6 +572,19 @@ proxy-groups:
       - *id029
       - *id030
       - *id031
+      - *id032
+      - *id033
+      - *id034
+      - *id035
+      - *id036
+      - *id037
+      - *id038
+      - *id039
+      - *id040
+      - *id041
+      - *id042
+      - *id043
+      - *id044
   - name: SELECT
     type: select
     proxies:
@@ -478,6 +619,19 @@ proxy-groups:
       - *id029
       - *id030
       - *id031
+      - *id032
+      - *id033
+      - *id034
+      - *id035
+      - *id036
+      - *id037
+      - *id038
+      - *id039
+      - *id040
+      - *id041
+      - *id042
+      - *id043
+      - *id044
 rules:
   - RULE-SET,applications,DIRECT
   - DOMAIN,clash.razord.top,DIRECT
