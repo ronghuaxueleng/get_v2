@@ -6,77 +6,6 @@ log-level: info
 external-controller: 0.0.0.0:9090
 proxies:
   - &id001
-    name: 🇨🇦_CA_加拿大_1
-    type: vless
-    server: 23.227.38.23
-    port: 443
-    uuid: 0773256c-d020-436d-afea-6eee7cb6c872
-    tls: true
-    servername: xray1.freegradely.xyz
-    network: ws
-    ws-opts:
-      path: /bodhws
-  - &id002
-    name: 🇭🇰_HK_香港
-    type: vmess
-    server: 199.15.76.35
-    port: 443
-    cipher: auto
-    uuid: 64424354-f4ff-42a0-8884-8f52f2bb7235
-    alterId: 0
-    tls: true
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /changding-tls1?ed=2048
-      headers:
-        host: hk-300.changding.tech
-  - &id003
-    name: 🇨🇦_CA_加拿大_2
-    type: vless
-    server: 23.227.39.24
-    port: 443
-    uuid: 0773256c-d020-436d-afea-6eee7cb6c872
-    tls: true
-    servername: xray1.freegradely.xyz
-    network: ws
-    ws-opts:
-      path: /bodhws
-  - &id004
-    name: 🇧🇦_BA_波黑
-    type: ss
-    server: 185.164.35.9
-    port: 989
-    password: f8f7aCzcPKbsF8p3
-    cipher: aes-256-cfb
-  - &id005
-    name: 🇦🇺_AU_澳大利亚->🇺🇸_US_美国_1
-    type: trojan
-    server: 192.65.217.247
-    port: 443
-    udp: true
-    password: b59ee60f-9fa4-4770-b6a7-288620147f60
-    sni: k5us2.yfjc.sbs
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /yfjc/kus2
-  - &id006
-    name: 🇺🇸_US_美国->🇺🇦_UA_乌克兰
-    type: vmess
-    server: glasco.fx-trader.shop
-    port: 80
-    cipher: auto
-    uuid: f256a3ae-0f85-4a1d-d0cd-2d0b4b73f4f1
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        host: v3ra3do.wakeuptimerap.shop
-  - &id007
     name: 🇺🇸_US_美国->🇨🇦_CA_加拿大_1
     type: vless
     server: 162.159.3.4
@@ -87,48 +16,10 @@ proxies:
     network: ws
     ws-opts:
       path: /bodhws
-  - &id008
-    name: 🇵🇦_PA_巴拿马
-    type: ss
-    server: 138.186.142.4
-    port: 989
-    password: f8f7aCzcPKbsF8p3
-    cipher: aes-256-cfb
-  - &id009
-    name: 🇫🇷_FR_法国_1
-    type: ss
-    server: 195.154.185.174
-    port: 989
-    password: f8f7aCzcPKbsF8p3
-    cipher: aes-256-cfb
-  - &id010
-    name: 🇦🇺_AU_澳大利亚->🇺🇸_US_美国_2
-    type: trojan
-    server: 192.65.217.200
-    port: 443
-    udp: true
-    password: b59ee60f-9fa4-4770-b6a7-288620147f60
-    sni: k6us1.yfjc.sbs
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /yfjc/kus1
-      headers:
-        host: k6us1.yfjc.sbs
-  - &id011
-    name: 🇺🇸_US_美国_1
-    type: trojan
-    server: 54.213.46.0
-    port: 22222
-    udp: true
-    password: telegram-id-directvpn
-    sni: trj.rollingnext.co.uk
-    skip-cert-verify: true
-    network: tcp
-  - &id012
-    name: 🇺🇸_US_美国->🇨🇦_CA_加拿大_2
+  - &id002
+    name: 🇨🇦_CA_加拿大_1
     type: vless
-    server: 172.67.79.156
+    server: 23.227.39.24
     port: 443
     uuid: 0773256c-d020-436d-afea-6eee7cb6c872
     tls: true
@@ -136,7 +27,44 @@ proxies:
     network: ws
     ws-opts:
       path: /bodhws
-  - &id013
+  - &id003
+    name: 🇺🇸_US_美国->🇬🇧_GB_英国
+    type: vmess
+    server: 08dfde51-8c5d-4160-8732-0745507cfd5b.cloudflare-gateway.com
+    port: 443
+    cipher: auto
+    uuid: 76221bfb-e92f-4e80-81c5-6fe48f50ac0b
+    alterId: 0
+    tls: true
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /glweidf.sbs/linkws
+      headers:
+        host: mikasa.erenyeager.cloudns.biz
+  - &id004
+    name: 🇺🇸_US_美国->🇨🇦_CA_加拿大_2
+    type: vless
+    server: 104.19.212.163
+    port: 443
+    uuid: 0773256c-d020-436d-afea-6eee7cb6c872
+    tls: true
+    servername: xray1.freegradely.xyz
+    network: ws
+    ws-opts:
+      path: /bodhws
+  - &id005
+    name: 🇨🇦_CA_加拿大_2
+    type: vless
+    server: 23.227.38.23
+    port: 443
+    uuid: 0773256c-d020-436d-afea-6eee7cb6c872
+    tls: true
+    servername: xray1.freegradely.xyz
+    network: ws
+    ws-opts:
+      path: /bodhws
+  - &id006
     name: 🇺🇸_US_美国->🇨🇦_CA_加拿大_3
     type: vless
     server: 198.41.216.129
@@ -147,152 +75,8 @@ proxies:
     network: ws
     ws-opts:
       path: /bodhws
-  - &id014
+  - &id007
     name: 🇺🇸_US_美国->🇨🇦_CA_加拿大_4
-    type: vless
-    server: 104.20.18.93
-    port: 443
-    uuid: 0773256c-d020-436d-afea-6eee7cb6c872
-    tls: true
-    servername: xray1.freegradely.xyz
-    network: ws
-    ws-opts:
-      path: /bodhws
-  - &id015
-    name: 🇸🇨_SC_塞舌尔->🇭🇰_HK_香港
-    type: vmess
-    server: 156.251.226.106
-    port: 1111
-    cipher: auto
-    uuid: 64424354-f4ff-42a0-8884-8f52f2bb7235
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /changding-tls0?ed=2048
-      headers:
-        host: hk-300.changding.tech
-  - &id016
-    name: 🇳🇱_NL_荷兰->🇮🇷_IR_伊朗
-    type: vless
-    server: 45.131.4.88
-    port: 443
-    uuid: 376b9861-2fc6-4647-959c-18185cd9c95a
-    tls: true
-    servername: lmn37.sbs
-    network: ws
-    ws-opts:
-      path: /fflsws
-  - &id017
-    name: 🇨🇦_CA_加拿大_3
-    type: vless
-    server: 23.227.38.22
-    port: 443
-    uuid: ffb15cd2-0521-49de-b8aa-fb15d58c8075
-    tls: true
-    servername: v2ray3.freegradely.xyz
-    network: ws
-    ws-opts:
-      path: /bqbows
-  - &id018
-    name: 🇨🇦_CA_加拿大_4
-    type: vless
-    server: 23.227.38.24
-    port: 443
-    uuid: 0773256c-d020-436d-afea-6eee7cb6c872
-    tls: true
-    servername: xray1.freegradely.xyz
-    network: ws
-    ws-opts:
-      path: /bodhws
-  - &id019
-    name: 🇨🇦_CA_加拿大_5
-    type: vless
-    server: 23.227.39.23
-    port: 443
-    uuid: 0773256c-d020-436d-afea-6eee7cb6c872
-    tls: true
-    servername: xray1.freegradely.xyz
-    network: ws
-    ws-opts:
-      path: /bodhws
-  - &id020
-    name: 🇺🇸_US_美国->🇷🇺_RU_俄罗斯联邦
-    type: trojan
-    server: cdn-16.cdn2cdn.com
-    port: 2083
-    udp: true
-    password: gviRoLVUKA5kBX2M0gJSvg
-    sni: cdn16.cdn2cdn.com
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /
-  - &id021
-    name: 🇺🇸_US_美国->🇨🇦_CA_加拿大_5
-    type: vless
-    server: 104.19.212.163
-    port: 443
-    uuid: 0773256c-d020-436d-afea-6eee7cb6c872
-    tls: true
-    servername: xray1.freegradely.xyz
-    network: ws
-    ws-opts:
-      path: /bodhws
-  - &id022
-    name: 🇺🇸_US_美国->🇩🇪_DE_德国_1
-    type: trojan
-    server: 104.21.69.44
-    port: 443
-    udp: true
-    password: Nu5EqwcJ2OCuvKAcSQeGdg
-    sni: cdn-22.gsmxreality.com
-    skip-cert-verify: false
-    network: grpc
-    grpc-opts:
-      grpc-service-name: 443trojan
-  - &id023
-    name: 🇵🇸_PS_巴勒斯坦->🇹🇷_TR_土耳其
-    type: vmess
-    server: 82.213.5.50
-    port: 80
-    cipher: auto
-    uuid: f21bcdb6-5dc6-4c4b-9a34-3b185f6747c4
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /@forwardv2ray
-      headers:
-        host: tabyan205.serveftp.com
-  - &id024
-    name: 🇺🇸_US_美国_2
-    type: vmess
-    server: 158.101.7.8
-    port: 80
-    cipher: auto
-    uuid: 95b45c49-f5c0-4959-bb64-2b8fbc4a869c
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /
-  - &id025
-    name: 🇺🇸_US_美国->🇩🇪_DE_德国_2
-    type: vless
-    server: 172.67.206.201
-    port: 443
-    uuid: 1d86846c-5a27-43c8-8981-57bb75c82195
-    tls: true
-    servername: qvnic.gsolli.sbs
-    network: ws
-    ws-opts:
-      path: /paradise
-  - &id026
-    name: 🇺🇸_US_美国->🇨🇦_CA_加拿大_6
     type: vless
     server: 198.41.216.9
     port: 443
@@ -302,51 +86,10 @@ proxies:
     network: ws
     ws-opts:
       path: /bodhws
-  - &id027
-    name: 🇺🇸_US_美国_3
-    type: ss
-    server: 38.54.108.110
-    port: 6679
-    password: TEzjfAYq2IjtuoS
-    cipher: aes-256-gcm
-  - &id028
-    name: 🇺🇸_US_美国->🇩🇪_DE_德国_3
-    type: trojan
-    server: 172.67.204.84
-    port: 443
-    udp: true
-    password: Nu5EqwcJ2OCuvKAcSQeGdg
-    sni: cdn-22.gsmxreality.com
-    skip-cert-verify: false
-    network: grpc
-    grpc-opts:
-      grpc-service-name: 443trojan
-  - &id029
-    name: 🇺🇸_US_美国_4
-    type: ss
-    server: 212.102.47.198
-    port: 443
-    password: shadowsocks
-    cipher: aes-128-cfb
-  - &id030
-    name: 🇱🇺_LU_卢森堡
-    type: vmess
-    server: 202.78.162.6
-    port: 80
-    cipher: auto
-    uuid: 66fef53b-1b57-466d-89a4-bd99b90f6473
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /@forwardv2ray
-      headers:
-        host: irisoft.servecounterstrike.com
-  - &id031
-    name: 🇺🇸_US_美国->🇨🇦_CA_加拿大_7
+  - &id008
+    name: 🇨🇦_CA_加拿大_3
     type: vless
-    server: 198.41.216.16
+    server: 23.227.38.24
     port: 443
     uuid: 0773256c-d020-436d-afea-6eee7cb6c872
     tls: true
@@ -354,32 +97,43 @@ proxies:
     network: ws
     ws-opts:
       path: /bodhws
-  - &id032
-    name: 🇺🇸_US_美国->🇩🇪_DE_德国_4
+  - &id009
+    name: 🇨🇦_CA_加拿大_4
     type: vless
-    server: 104.21.16.131
+    server: 23.227.39.23
     port: 443
-    uuid: 89a3e5dc-2a6b-4759-80cb-2cf8630ec8a2
+    uuid: 0773256c-d020-436d-afea-6eee7cb6c872
     tls: true
-    servername: cdn5.gsmvp.com
+    servername: xray1.freegradely.xyz
     network: ws
     ws-opts:
-      path: /bylews
-  - &id033
-    name: 🇫🇷_FR_法国_2
-    type: ss
-    server: 51.159.111.208
-    port: 989
-    password: f8f7aCzcPKbsF8p3
-    cipher: aes-256-cfb
-  - &id034
-    name: 🇺🇸_US_美国_5
-    type: ss
-    server: 38.91.101.42
-    port: 5498
-    password: lGqs95QkFHo2NV
-    cipher: aes-256-gcm
-  - &id035
+      path: /bodhws
+  - &id010
+    name: 🇬🇮_GI_直布罗陀
+    type: vmess
+    server: 95.164.69.27
+    port: 80
+    cipher: auto
+    uuid: cd4a6d0d-4b26-4ee1-8a42-c2878b5c3b2a
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /vmess
+      headers:
+        host: internet.life.com.by
+  - &id011
+    name: 🇰🇷_KR_韩国
+    type: trojan
+    server: 103.214.68.57
+    port: 10003
+    udp: true
+    password: 6x8HcghsjS
+    sni: yes998.chickenkiller.com
+    skip-cert-verify: true
+    network: tcp
+  - &id012
     name: 🇺🇸_US_美国->🇮🇷_IR_伊朗
     type: vless
     server: 104.17.88.212
@@ -390,6 +144,61 @@ proxies:
     network: ws
     ws-opts:
       path: /fflsws
+  - &id013
+    name: 🇺🇸_US_美国->🇨🇦_CA_加拿大_5
+    type: vless
+    server: 172.67.79.156
+    port: 443
+    uuid: 0773256c-d020-436d-afea-6eee7cb6c872
+    tls: true
+    servername: xray1.freegradely.xyz
+    network: ws
+    ws-opts:
+      path: /bodhws
+  - &id014
+    name: 🇳🇱_NL_荷兰->🇮🇷_IR_伊朗
+    type: vless
+    server: 45.131.4.88
+    port: 443
+    uuid: 376b9861-2fc6-4647-959c-18185cd9c95a
+    tls: true
+    servername: lmn37.sbs
+    network: ws
+    ws-opts:
+      path: /fflsws
+  - &id015
+    name: 🇺🇸_US_美国->🇨🇦_CA_加拿大_6
+    type: vless
+    server: 198.41.216.16
+    port: 443
+    uuid: 0773256c-d020-436d-afea-6eee7cb6c872
+    tls: true
+    servername: xray1.freegradely.xyz
+    network: ws
+    ws-opts:
+      path: /bodhws
+  - &id016
+    name: 🇺🇸_US_美国->🇩🇪_DE_德国
+    type: vless
+    server: 104.21.16.131
+    port: 443
+    uuid: 89a3e5dc-2a6b-4759-80cb-2cf8630ec8a2
+    tls: true
+    servername: cdn5.gsmvp.com
+    network: ws
+    ws-opts:
+      path: /bylews
+  - &id017
+    name: 🇨🇦_CA_加拿大_5
+    type: vless
+    server: 23.227.38.22
+    port: 443
+    uuid: ffb15cd2-0521-49de-b8aa-fb15d58c8075
+    tls: true
+    servername: v2ray3.freegradely.xyz
+    network: ws
+    ws-opts:
+      path: /bqbows
 proxy-groups:
   - name: PROXY
     type: select
@@ -433,24 +242,6 @@ proxy-groups:
       - *id015
       - *id016
       - *id017
-      - *id018
-      - *id019
-      - *id020
-      - *id021
-      - *id022
-      - *id023
-      - *id024
-      - *id025
-      - *id026
-      - *id027
-      - *id028
-      - *id029
-      - *id030
-      - *id031
-      - *id032
-      - *id033
-      - *id034
-      - *id035
   - name: LOAD-BALANCE
     type: load-balance
     url: http://www.gstatic.com/generate_204
@@ -473,24 +264,6 @@ proxy-groups:
       - *id015
       - *id016
       - *id017
-      - *id018
-      - *id019
-      - *id020
-      - *id021
-      - *id022
-      - *id023
-      - *id024
-      - *id025
-      - *id026
-      - *id027
-      - *id028
-      - *id029
-      - *id030
-      - *id031
-      - *id032
-      - *id033
-      - *id034
-      - *id035
   - name: SELECT
     type: select
     proxies:
@@ -511,24 +284,6 @@ proxy-groups:
       - *id015
       - *id016
       - *id017
-      - *id018
-      - *id019
-      - *id020
-      - *id021
-      - *id022
-      - *id023
-      - *id024
-      - *id025
-      - *id026
-      - *id027
-      - *id028
-      - *id029
-      - *id030
-      - *id031
-      - *id032
-      - *id033
-      - *id034
-      - *id035
 rules:
   - RULE-SET,applications,DIRECT
   - DOMAIN,clash.razord.top,DIRECT
