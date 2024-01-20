@@ -6,61 +6,63 @@ log-level: info
 external-controller: 0.0.0.0:9090
 proxies:
   - &id001
-    name: 🇺🇸_US_美国->🇬🇧_GB_英国
+    name: 🇬🇧_GB_英国
     type: vmess
-    server: 08dfde51-8c5d-4160-8732-0745507cfd5b.cloudflare-gateway.com
+    server: 172.99.190.109
     port: 443
     cipher: auto
-    uuid: 76221bfb-e92f-4e80-81c5-6fe48f50ac0b
+    uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
     alterId: 0
     tls: true
     skip-cert-verify: true
-    servername: m23ikahjvdrdcvhMMMsa.erenyeager.cloudns.biz
     network: ws
     ws-opts:
-      path: /glweidf.sbs/linkws
-      headers:
-        host: mikasa.erenyeager.cloudns.biz
+      path: linkvws
   - &id002
-    name: 🇬🇮_GI_直布罗陀
+    name: 🇺🇸_US_美国_1
     type: vmess
-    server: 95.164.69.27
-    port: 80
+    server: cfcdn1.sanfencdn9.com
+    port: 2082
     cipher: auto
-    uuid: cd4a6d0d-4b26-4ee1-8a42-c2878b5c3b2a
+    uuid: 27c7e182-88bf-4fc6-bbdd-83453061f47f
     alterId: 0
     tls: false
     skip-cert-verify: true
     network: ws
     ws-opts:
-      path: /vmess
+      path: /video/CuTy87zAzV/
       headers:
-        host: internet.life.com.by
+        host: us4Bb5oSgJA.fzbqfrse.xyz
   - &id003
-    name: 🇺🇸_US_美国
+    name: 🇺🇸_US_美国_2
     type: vmess
-    server: cold-dawn-9246.fly.dev
-    port: 443
+    server: 104.21.229.78
+    port: 2082
     cipher: auto
-    uuid: ea4909ef-7ca6-4b46-bf2e-6c07896ef338
+    uuid: 27c7e182-88bf-4fc6-bbdd-83453061f47f
     alterId: 0
-    tls: true
+    tls: false
     skip-cert-verify: true
     network: ws
     ws-opts:
-      path: /ea4909ef-7ca6-4b46-bf2e-6c07896ef338-vm
+      path: /video/CuTy87zAzV/
       headers:
-        host: cold-dawn-9246.fly.dev
+        host: us4Bb5oSgJA.fzbqfrse.xyz
   - &id004
-    name: 🇰🇷_KR_韩国
-    type: trojan
-    server: 103.214.68.57
-    port: 10003
-    udp: true
-    password: 6x8HcghsjS
-    sni: yes998.chickenkiller.com
+    name: 🇺🇸_US_美国_3
+    type: vmess
+    server: glaSco.fx-trAder.shop
+    port: 80
+    cipher: aes-128-gcm
+    uuid: cdbb0899-7113-4d4e-f868-31339c75ad3c
+    alterId: 0
+    tls: false
     skip-cert-verify: true
-    network: tcp
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: vvv2vayo2.everythingisreve.shop
 proxy-groups:
   - name: PROXY
     type: select
