@@ -6,26 +6,12 @@ log-level: info
 external-controller: 0.0.0.0:9090
 proxies:
   - &id001
-    name: 🇱🇺_LU_卢森堡
-    type: trojan
-    server: 188.42.145.73
-    port: 443
-    udp: true
-    password: 933e3c9c-701e-45df-978b-ca8f42fb8871
-    sni: k6nl1.yfjc.sbs
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /yfjc/knl1
-      headers:
-        host: k6nl1.yfjc.sbs
-  - &id002
     name: 🇺🇸_US_美国_1
     type: vmess
-    server: 172.67.217.144
-    port: 80
+    server: www.blueberrywindow.online
+    port: 8080
     cipher: auto
-    uuid: 85674552-ce41-44d9-bb2a-50f76450b3d8
+    uuid: 22826b44-5c1a-4b4b-dbaa-83a2e8bd95f0
     alterId: 0
     tls: false
     skip-cert-verify: true
@@ -33,8 +19,48 @@ proxies:
     ws-opts:
       path: /
       headers:
-        host: lv1.xv2ray.net
+        host: www.blueberrywindow.online
+  - &id002
+    name: 🇧🇭_BH_巴林->🇳🇱_NL_荷兰
+    type: vmess
+    server: 151.248.104.91
+    port: 80
+    cipher: auto
+    uuid: 75916879-adcf-45b3-98d8-54a2412470b5
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /@forwardv2ray
+      headers:
+        host: sahar55.serveirc.com
   - &id003
+    name: 🇩🇪_DE_德国_1
+    type: trojan
+    server: 3.70.75.70
+    port: 22222
+    udp: true
+    password: telegram-id-directvpn
+    sni: trojan.miwan.co.uk
+    skip-cert-verify: true
+    network: tcp
+  - &id004
+    name: 🇺🇸_US_美国_2
+    type: vmess
+    server: www.coldstone.club
+    port: 8080
+    cipher: auto
+    uuid: 22826b44-5c1a-4b4b-dbaa-83a2e8bd95f0
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: www.coldstone.club
+  - &id005
     name: 🇺🇸_US_美国->🇮🇷_IR_伊朗_1
     type: vmess
     server: www.crispyrainbow.biz
@@ -49,121 +75,33 @@ proxies:
       path: /
       headers:
         host: www.crispyrainbow.biz
-  - &id004
-    name: 🇦🇺_AU_澳大利亚->🇺🇸_US_美国_1
-    type: trojan
-    server: 192.65.217.200
-    port: 443
-    udp: true
-    password: 933e3c9c-701e-45df-978b-ca8f42fb8871
-    sni: k6us1.yfjc.sbs
+  - &id006
+    name: 🇱🇾_LY_利比亚->🇹🇷_TR_土耳其_1
+    type: vmess
+    server: 197.215.140.234
+    port: 80
+    cipher: auto
+    uuid: f0028153-2a2d-45fe-b44e-a1a6dbd0c65e
+    alterId: 0
+    tls: false
     skip-cert-verify: true
     network: ws
     ws-opts:
-      path: /yfjc/kus1
+      path: /@forwardv2ray
       headers:
-        host: k6us1.yfjc.sbs
-  - &id005
-    name: 🇨🇳_CN_中国->🇦🇹_AT_奥地利
-    type: trojan
-    server: xibaozi.19890604.day
-    port: 10848
-    udp: true
-    password: 329d1d2a-c4f5-471d-abd3-3f6f234947bb
-    sni: cloudflare.node-ssl.cdn-alibaba.com
-    skip-cert-verify: true
-    network: tcp
-  - &id006
-    name: 🇨🇳_CN_中国->🇺🇸_US_美国_1
-    type: trojan
-    server: xibaozi.19890604.day
-    port: 10838
-    udp: true
-    password: 329d1d2a-c4f5-471d-abd3-3f6f234947bb
-    sni: cloudflare.node-ssl.cdn-alibaba.com
-    skip-cert-verify: true
-    network: tcp
+        host: saman8888.servecounterstrike.com
   - &id007
-    name: 🇨🇳_CN_中国->🇺🇦_UA_乌克兰
+    name: 🇨🇳_CN_中国->🇨🇿_CZ_捷克
     type: trojan
     server: xibaozi.19890604.day
-    port: 10845
+    port: 10846
     udp: true
-    password: 329d1d2a-c4f5-471d-abd3-3f6f234947bb
+    password: 17e82f43-a0c6-4518-9d1f-3ac454429c3d
     sni: cloudflare.node-ssl.cdn-alibaba.com
     skip-cert-verify: true
     network: tcp
   - &id008
-    name: 🇨🇳_CN_中国->🇺🇸_US_美国_2
-    type: trojan
-    server: xibaozi.19890604.day
-    port: 10837
-    udp: true
-    password: 329d1d2a-c4f5-471d-abd3-3f6f234947bb
-    sni: cloudflare.node-ssl.cdn-alibaba.com
-    skip-cert-verify: true
-    network: tcp
-  - &id009
-    name: 🇺🇸_US_美国->🇮🇷_IR_伊朗_2
-    type: vmess
-    server: www.coldstone.club
-    port: 8080
-    cipher: auto
-    uuid: 22826b44-5c1a-4b4b-dbaa-83a2e8bd95f0
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        host: www.coldstone.club
-  - &id010
-    name: 🇺🇸_US_美国->🇮🇷_IR_伊朗_3
-    type: vmess
-    server: www.darkroom.lol
-    port: 8080
-    cipher: auto
-    uuid: 22826b44-5c1a-4b4b-dbaa-83a2e8bd95f0
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        host: www.darkroom.lol
-  - &id011
-    name: 🇦🇲_AM_亚美尼亚->🇳🇱_NL_荷兰
-    type: trojan
-    server: 185.162.231.208
-    port: 443
-    udp: true
-    password: 933e3c9c-701e-45df-978b-ca8f42fb8871
-    sni: k8nl2.yfjc.sbs
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /yfjc/knl2
-      headers:
-        host: k8nl2.yfjc.sbs
-  - &id012
-    name: 🇺🇸_US_美国->🇩🇪_DE_德国_1
-    type: vmess
-    server: hamrahaval.asan3a.shop
-    port: 8080
-    cipher: auto
-    uuid: 3a6752b4-8353-4172-85b1-32202116714d
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        host: asan3.azad1.tech
-  - &id013
-    name: 🇺🇸_US_美国_2
+    name: 🇺🇸_US_美国_3
     type: vmess
     server: www.crispyrainbow.online
     port: 8080
@@ -177,28 +115,43 @@ proxies:
       path: /
       headers:
         host: www.crispyrainbow.online
-  - &id014
-    name: 🇨🇳_CN_中国->🇺🇸_US_美国_3
+  - &id009
+    name: 🇺🇿_UZ_乌兹别克斯坦->🇹🇷_TR_土耳其
+    type: vmess
+    server: 37.110.209.228
+    port: 80
+    cipher: auto
+    uuid: f0028153-2a2d-45fe-b44e-a1a6dbd0c65e
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /@forwardv2ray
+      headers:
+        host: saman8888.servecounterstrike.com
+  - &id010
+    name: 🇨🇳_CN_中国->🇦🇹_AT_奥地利
     type: trojan
     server: xibaozi.19890604.day
-    port: 10850
+    port: 10848
     udp: true
-    password: 329d1d2a-c4f5-471d-abd3-3f6f234947bb
+    password: 17e82f43-a0c6-4518-9d1f-3ac454429c3d
     sni: cloudflare.node-ssl.cdn-alibaba.com
     skip-cert-verify: true
     network: tcp
-  - &id015
-    name: 🇨🇳_CN_中国->🇨🇿_CZ_捷克
+  - &id011
+    name: 🇨🇳_CN_中国->🇺🇸_US_美国_1
     type: trojan
     server: xibaozi.19890604.day
-    port: 10846
+    port: 10837
     udp: true
-    password: 329d1d2a-c4f5-471d-abd3-3f6f234947bb
+    password: 17e82f43-a0c6-4518-9d1f-3ac454429c3d
     sni: cloudflare.node-ssl.cdn-alibaba.com
     skip-cert-verify: true
     network: tcp
-  - &id016
-    name: 🇺🇸_US_美国_3
+  - &id012
+    name: 🇺🇸_US_美国_4
     type: vmess
     server: be1-vmess.sshmax.xyz
     port: 80
@@ -210,10 +163,21 @@ proxies:
     network: ws
     ws-opts:
       path: /vmess
-  - &id017
-    name: 🇺🇸_US_美国_4
+  - &id013
+    name: 🇺🇸_US_美国_5
     type: vmess
-    server: www.blueberrywindow.online
+    server: 23.137.248.47
+    port: 8080
+    cipher: auto
+    uuid: c65dd227-86bb-5854-bdf7-54c9c16acdb2
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: tcp
+  - &id014
+    name: 🇺🇸_US_美国->🇮🇷_IR_伊朗_2
+    type: vmess
+    server: www.darkroom.lol
     port: 8080
     cipher: auto
     uuid: 22826b44-5c1a-4b4b-dbaa-83a2e8bd95f0
@@ -224,14 +188,64 @@ proxies:
     ws-opts:
       path: /
       headers:
-        host: www.blueberrywindow.online
-  - &id018
-    name: 🇺🇸_US_美国->🇩🇪_DE_德国_2
+        host: www.darkroom.lol
+  - &id015
+    name: 🇺🇸_US_美国_6
     type: vmess
-    server: 104.31.16.104
+    server: cdn.yifenjichang.top
+    port: 2086
+    cipher: auto
+    uuid: 900ceafc-30b8-4581-a305-31854f563e4f
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: 900ceafc-30b8-4581-a305-31854f563e4f-vm
+      headers:
+        host: gc-sql-blast-law.trycloudflare.com
+  - &id016
+    name: 🇨🇳_CN_中国->🇺🇸_US_美国_2
+    type: trojan
+    server: xibaozi.19890604.day
+    port: 10850
+    udp: true
+    password: 17e82f43-a0c6-4518-9d1f-3ac454429c3d
+    sni: cloudflare.node-ssl.cdn-alibaba.com
+    skip-cert-verify: true
+    network: tcp
+  - &id017
+    name: 🇩🇪_DE_德国_2
+    type: trojan
+    server: 5.104.108.109
+    port: 443
+    udp: true
+    password: 877347fb-3c6e-4d44-b2c8-5c63e97c0521
+    sni: 20-24-33-134.nhost.00cdn.com
+    skip-cert-verify: true
+    network: tcp
+  - &id018
+    name: 🇮🇱_IL_以色列->🇳🇱_NL_荷兰
+    type: vmess
+    server: 5.188.94.5
+    port: 80
+    cipher: auto
+    uuid: 75916879-adcf-45b3-98d8-54a2412470b5
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /@forwardv2ray
+      headers:
+        host: sahar55.serveirc.com
+  - &id019
+    name: 🇺🇸_US_美国_7
+    type: vmess
+    server: 104.21.23.176
     port: 8080
     cipher: auto
-    uuid: 3a6752b4-8353-4172-85b1-32202116714d
+    uuid: 22826b44-5c1a-4b4b-dbaa-83a2e8bd95f0
     alterId: 0
     tls: false
     skip-cert-verify: true
@@ -239,65 +253,91 @@ proxies:
     ws-opts:
       path: /
       headers:
-        host: asan3.azad1.tech
-  - &id019
-    name: 🇨🇳_CN_中国->🇺🇸_US_美国_4
+        host: www.crispyrainbow.biz
+  - &id020
+    name: 🇩🇪_DE_德国_3
     type: vmess
-    server: 05.kccic2pa.xyz
-    port: 50005
+    server: 167.235.65.233
+    port: 34310
     cipher: auto
-    uuid: 1d8963ab-0cd8-4091-93ca-4c6a7dbcd1f2
+    uuid: b067a70b-5579-4b61-bc34-4c3266909d19
     alterId: 0
     tls: false
     skip-cert-verify: true
+    network: http
+  - &id021
+    name: 🇨🇳_CN_中国->🇺🇸_US_美国_3
+    type: trojan
+    server: xibaozi.19890604.day
+    port: 10838
+    udp: true
+    password: 17e82f43-a0c6-4518-9d1f-3ac454429c3d
+    sni: cloudflare.node-ssl.cdn-alibaba.com
+    skip-cert-verify: true
     network: tcp
-  - &id020
-    name: 🇮🇶_IQ_伊拉克->🇹🇷_TR_土耳其
+  - &id022
+    name: 🇺🇸_US_美国_8
     type: vmess
-    server: 130.193.166.2
+    server: 172.67.166.190
+    port: 8080
+    cipher: auto
+    uuid: 22826b44-5c1a-4b4b-dbaa-83a2e8bd95f0
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: www.crispyrainbow.online
+  - &id023
+    name: 🇺🇸_US_美国_9
+    type: vmess
+    server: 104.21.20.16
     port: 443
     cipher: auto
-    uuid: 7682b778-b64b-408b-8fb2-61d7c7fc43e5
+    uuid: 802c1068-ee2b-4c87-b49d-e7f3043e75d2
     alterId: 0
     tls: true
     skip-cert-verify: true
     network: ws
     ws-opts:
+      path: /vmess
+      headers:
+        host: se2-vmess.sshmax.xyz
+  - &id024
+    name: 🇱🇾_LY_利比亚->🇹🇷_TR_土耳其_2
+    type: vmess
+    server: 197.215.140.235
+    port: 80
+    cipher: auto
+    uuid: c220f88c-8883-44aa-b66f-f4776a4053d7
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
       path: /@forwardv2ray
       headers:
-        host: soft8989.redirectme.net
-  - &id021
-    name: 🇨🇳_CN_中国->🇺🇸_US_美国_5
+        host: xyz33.servecounterstrike.com
+  - &id025
+    name: 🇨🇳_CN_中国->🇺🇦_UA_乌克兰
+    type: trojan
+    server: xibaozi.19890604.day
+    port: 10845
+    udp: true
+    password: 17e82f43-a0c6-4518-9d1f-3ac454429c3d
+    sni: cloudflare.node-ssl.cdn-alibaba.com
+    skip-cert-verify: true
+    network: tcp
+  - &id026
+    name: 🇨🇳_CN_中国->🇺🇸_US_美国_4
     type: trojan
     server: xibaozi.19890604.day
     port: 10847
     udp: true
-    password: 329d1d2a-c4f5-471d-abd3-3f6f234947bb
+    password: 17e82f43-a0c6-4518-9d1f-3ac454429c3d
     sni: cloudflare.node-ssl.cdn-alibaba.com
-    skip-cert-verify: true
-    network: tcp
-  - &id022
-    name: 🇦🇺_AU_澳大利亚->🇺🇸_US_美国_2
-    type: trojan
-    server: 192.65.217.247
-    port: 443
-    udp: true
-    password: 933e3c9c-701e-45df-978b-ca8f42fb8871
-    sni: k5us2.yfjc.sbs
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /yfjc/kus2
-      headers:
-        host: k5us2.yfjc.sbs
-  - &id023
-    name: 🇺🇸_US_美国_5
-    type: trojan
-    server: 44.226.30.52
-    port: 22222
-    udp: true
-    password: telegram-id-directvpn
-    sni: trj.rollingnext.co.uk
     skip-cert-verify: true
     network: tcp
 proxy-groups:
@@ -349,6 +389,9 @@ proxy-groups:
       - *id021
       - *id022
       - *id023
+      - *id024
+      - *id025
+      - *id026
   - name: LOAD-BALANCE
     type: load-balance
     url: http://www.gstatic.com/generate_204
@@ -377,6 +420,9 @@ proxy-groups:
       - *id021
       - *id022
       - *id023
+      - *id024
+      - *id025
+      - *id026
   - name: SELECT
     type: select
     proxies:
@@ -403,6 +449,9 @@ proxy-groups:
       - *id021
       - *id022
       - *id023
+      - *id024
+      - *id025
+      - *id026
 rules:
   - RULE-SET,applications,DIRECT
   - DOMAIN,clash.razord.top,DIRECT
