@@ -7,76 +7,16 @@ external-controller: 0.0.0.0:9090
 proxies:
   - &id001
     name: 🇺🇸_US_美国_1
-    type: vmess
-    server: server32.beheshtbaneh.com
-    port: 8880
-    cipher: auto
-    uuid: 044ba8ed-7285-472a-bc14-fb91dc6be4c9
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        host: server32.beheshtbaneh.com
-  - &id002
-    name: 🇺🇸_US_美国_2
-    type: vmess
-    server: 104.22.51.162
-    port: 80
-    cipher: auto
-    uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        host: my1.tooters.ir
-  - &id003
-    name: 🇨🇳_CN_中国->🇺🇸_US_美国_1
     type: trojan
-    server: xibaozi.19890604.day
-    port: 10850
+    server: 104.160.18.251
+    port: 443
     udp: true
-    password: e8977c57-c5c2-478f-a67a-5af7ba873eac
-    sni: cloudflare.node-ssl.cdn-alibaba.com
+    password: 7522e2c27233459aab8d0f1d715828d0
+    sni: www.gpt123.one
     skip-cert-verify: true
     network: tcp
-  - &id004
-    name: 🇺🇸_US_美国_3
-    type: vmess
-    server: 104.24.208.37
-    port: 80
-    cipher: auto
-    uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        host: my1.tooters.ir
-  - &id005
-    name: 🇺🇸_US_美国_4
-    type: vmess
-    server: www.crispyrainbow.online
-    port: 8080
-    cipher: auto
-    uuid: 22826b44-5c1a-4b4b-dbaa-83a2e8bd95f0
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        host: www.crispyrainbow.online
-  - &id006
-    name: 🇺🇸_US_美国_5
+  - &id002
+    name: 🇺🇸_US_美国_2
     type: vmess
     server: 172.67.166.190
     port: 8080
@@ -90,23 +30,13 @@ proxies:
       path: /
       headers:
         host: www.crispyrainbow.online
-  - &id007
-    name: 🇨🇳_CN_中国->🇨🇿_CZ_捷克
-    type: trojan
-    server: xibaozi.19890604.day
-    port: 10846
-    udp: true
-    password: e8977c57-c5c2-478f-a67a-5af7ba873eac
-    sni: cloudflare.node-ssl.cdn-alibaba.com
-    skip-cert-verify: true
-    network: tcp
-  - &id008
-    name: 🇺🇸_US_美国_6
+  - &id003
+    name: 🇺🇸_US_美国->🇳🇱_NL_荷兰
     type: vmess
-    server: 104.21.94.99
-    port: 8080
+    server: 172.67.185.208
+    port: 2095
     cipher: auto
-    uuid: 22826b44-5c1a-4b4b-dbaa-83a2e8bd95f0
+    uuid: 3c1cca21-1373-4707-a575-195e9da0fb71
     alterId: 0
     tls: false
     skip-cert-verify: true
@@ -114,29 +44,14 @@ proxies:
     ws-opts:
       path: /
       headers:
-        host: www.blueberrywindow.online
-  - &id009
-    name: 🇺🇸_US_美国->🇮🇷_IR_伊朗_1
+        host: ebiii.fozool76.lol
+  - &id004
+    name: 🇺🇸_US_美国_3
     type: vmess
-    server: www.crispyrainbow.biz
-    port: 8080
-    cipher: auto
-    uuid: 22826b44-5c1a-4b4b-dbaa-83a2e8bd95f0
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        host: www.crispyrainbow.biz
-  - &id010
-    name: 🇺🇸_US_美国_7
-    type: vmess
-    server: server31.beheshtbaneh.com
+    server: server32.beheshtbaneh.com
     port: 8880
     cipher: auto
-    uuid: 4154143c-bbba-47a4-9f79-c2ed087cbcc9
+    uuid: 044ba8ed-7285-472a-bc14-fb91dc6be4c9
     alterId: 0
     tls: false
     skip-cert-verify: true
@@ -144,11 +59,11 @@ proxies:
     ws-opts:
       path: /
       headers:
-        host: server31.beheshtbaneh.com
-  - &id011
-    name: 🇺🇸_US_美国_8
+        host: server32.beheshtbaneh.com
+  - &id005
+    name: 🇺🇸_US_美国_4
     type: vmess
-    server: 172.67.212.114
+    server: 104.21.23.176
     port: 8080
     cipher: auto
     uuid: 22826b44-5c1a-4b4b-dbaa-83a2e8bd95f0
@@ -160,48 +75,113 @@ proxies:
       path: /
       headers:
         host: www.crispyrainbow.biz
-  - &id012
+  - &id006
+    name: 🇺🇸_US_美国_5
+    type: vmess
+    server: server26.beheshtbaneh.com
+    port: 8880
+    cipher: auto
+    uuid: 5a7021e0-26b4-45d6-b175-fe551601ca97
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: server26.beheshtbaneh.com
+  - &id007
+    name: 🇺🇸_US_美国_6
+    type: vmess
+    server: server13.beheshtbaneh.com
+    port: 8880
+    cipher: auto
+    uuid: 0c0db4fe-6133-4837-9f57-0ce75fb59692
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: server13.beheshtbaneh.com
+  - &id008
+    name: 🇺🇸_US_美国_7
+    type: vmess
+    server: www.speedtest.net
+    port: 80
+    cipher: auto
+    uuid: b2c3b2d3-c21c-4a33-b55c-db589d485487
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: worker-falling-leaf-df34.dtdacxjh.workers.dev
+  - &id009
+    name: 🇺🇸_US_美国_8
+    type: vmess
+    server: server20.beheshtbaneh.com
+    port: 8880
+    cipher: auto
+    uuid: 7ee41eb4-0594-4e2d-92a7-5dd3ee513692
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: server20.beheshtbaneh.com
+  - &id010
     name: 🇺🇸_US_美国_9
     type: vmess
-    server: 104.19.87.19
-    port: 2052
+    server: www.crispyrainbow.online
+    port: 8080
     cipher: auto
-    uuid: e393dd86-fddc-4bce-8abe-d902cf831670
+    uuid: 22826b44-5c1a-4b4b-dbaa-83a2e8bd95f0
     alterId: 0
     tls: false
     skip-cert-verify: true
     network: ws
     ws-opts:
-      path: /video/DDC4btA8wc/
+      path: /
       headers:
-        host: us2jdgv5GC7.fzbqfrse.xyz
-  - &id013
-    name: 🇨🇳_CN_中国->🇺🇸_US_美国_2
-    type: trojan
-    server: xibaozi.19890604.day
-    port: 10837
-    udp: true
-    password: e8977c57-c5c2-478f-a67a-5af7ba873eac
-    sni: cloudflare.node-ssl.cdn-alibaba.com
-    skip-cert-verify: true
-    network: tcp
-  - &id014
+        host: www.crispyrainbow.online
+  - &id011
     name: 🇺🇸_US_美国_10
     type: vmess
-    server: cfcdn1.sanfencdn9.com
-    port: 2052
+    server: server3.beheshtbaneh.com
+    port: 8880
     cipher: auto
-    uuid: e393dd86-fddc-4bce-8abe-d902cf831670
+    uuid: e305fc57-6153-4650-8c52-9a36865a199d
     alterId: 0
     tls: false
     skip-cert-verify: true
     network: ws
     ws-opts:
-      path: /video/DDC4btA8wc/
+      path: /
       headers:
-        host: us2jdgv5GC7.fzbqfrse.xyz
-  - &id015
+        host: server3.beheshtbaneh.com
+  - &id012
     name: 🇺🇸_US_美国_11
+    type: vmess
+    server: server4.beheshtbaneh.com
+    port: 8880
+    cipher: auto
+    uuid: b7e04f2a-2a6a-4b74-a11e-06f658c36391
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: server4.beheshtbaneh.com
+  - &id013
+    name: 🇺🇸_US_美国_12
     type: vmess
     server: www.blueberrywindow.online
     port: 8080
@@ -215,33 +195,22 @@ proxies:
       path: /
       headers:
         host: www.blueberrywindow.online
-  - &id016
-    name: 🇺🇸_US_美国_12
+  - &id014
+    name: 🇺🇸_US_美国_13
     type: vmess
-    server: 104.17.19.122
-    port: 2052
+    server: www.darkroom.lol
+    port: 8080
     cipher: auto
-    uuid: e393dd86-fddc-4bce-8abe-d902cf831670
+    uuid: 22826b44-5c1a-4b4b-dbaa-83a2e8bd95f0
     alterId: 0
     tls: false
     skip-cert-verify: true
     network: ws
     ws-opts:
-      path: /video/DDC4btA8wc/
+      path: /
       headers:
-        host: us2jdgv5GC7.fzbqfrse.xyz
-  - &id017
-    name: 🇺🇸_US_美国_13
-    type: vmess
-    server: 45.32.192.94
-    port: 12079
-    cipher: auto
-    uuid: e63f477b-59d7-485e-9385-c38888b60cbf
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: http
-  - &id018
+        host: www.darkroom.lol
+  - &id015
     name: 🇺🇸_US_美国_14
     type: vmess
     server: 104.21.82.183
@@ -256,105 +225,10 @@ proxies:
       path: /
       headers:
         host: server6.beheshtbaneh.com
-  - &id019
-    name: 🇨🇳_CN_中国->🇺🇸_US_美国_3
-    type: trojan
-    server: xibaozi.19890604.day
-    port: 10847
-    udp: true
-    password: e8977c57-c5c2-478f-a67a-5af7ba873eac
-    sni: cloudflare.node-ssl.cdn-alibaba.com
-    skip-cert-verify: true
-    network: tcp
-  - &id020
+  - &id016
     name: 🇺🇸_US_美国_15
     type: vmess
-    server: server4.beheshtbaneh.com
-    port: 8880
-    cipher: auto
-    uuid: b7e04f2a-2a6a-4b74-a11e-06f658c36391
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        host: server4.beheshtbaneh.com
-  - &id021
-    name: 🇬🇧_GB_英国
-    type: trojan
-    server: 18.134.176.184
-    port: 22222
-    udp: true
-    password: telegram-id-directvpn
-    sni: trj.rollingnext.co.uk
-    skip-cert-verify: false
-    network: tcp
-  - &id022
-    name: 🇨🇳_CN_中国->🇺🇸_US_美国_4
-    type: trojan
-    server: xibaozi.19890604.day
-    port: 10838
-    udp: true
-    password: e8977c57-c5c2-478f-a67a-5af7ba873eac
-    sni: cloudflare.node-ssl.cdn-alibaba.com
-    skip-cert-verify: true
-    network: tcp
-  - &id023
-    name: 🇺🇸_US_美国->🇮🇷_IR_伊朗_2
-    type: vmess
-    server: www.darkroom.lol
-    port: 8080
-    cipher: auto
-    uuid: 22826b44-5c1a-4b4b-dbaa-83a2e8bd95f0
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        host: www.darkroom.lol
-  - &id024
-    name: 🇨🇳_CN_中国->🇦🇹_AT_奥地利
-    type: trojan
-    server: xibaozi.19890604.day
-    port: 10848
-    udp: true
-    password: e8977c57-c5c2-478f-a67a-5af7ba873eac
-    sni: cloudflare.node-ssl.cdn-alibaba.com
-    skip-cert-verify: true
-    network: tcp
-  - &id025
-    name: 🇨🇳_CN_中国->🇺🇦_UA_乌克兰
-    type: trojan
-    server: xibaozi.19890604.day
-    port: 10845
-    udp: true
-    password: e8977c57-c5c2-478f-a67a-5af7ba873eac
-    sni: cloudflare.node-ssl.cdn-alibaba.com
-    skip-cert-verify: true
-    network: tcp
-  - &id026
-    name: 🇺🇸_US_美国_16
-    type: vmess
-    server: server3.beheshtbaneh.com
-    port: 8880
-    cipher: auto
-    uuid: e305fc57-6153-4650-8c52-9a36865a199d
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        host: server3.beheshtbaneh.com
-  - &id027
-    name: 🇺🇸_US_美国_17
-    type: vmess
-    server: 104.21.23.176
+    server: www.crispyrainbow.biz
     port: 8080
     cipher: auto
     uuid: 22826b44-5c1a-4b4b-dbaa-83a2e8bd95f0
@@ -366,43 +240,58 @@ proxies:
       path: /
       headers:
         host: www.crispyrainbow.biz
-  - &id028
+  - &id017
+    name: 🇺🇸_US_美国_16
+    type: vmess
+    server: 104.21.94.99
+    port: 8080
+    cipher: auto
+    uuid: 22826b44-5c1a-4b4b-dbaa-83a2e8bd95f0
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: www.blueberrywindow.online
+  - &id018
+    name: 🇪🇸_ES_西班牙->🇭🇰_HK_香港
+    type: vmess
+    server: 185.214.103.249
+    port: 8002
+    cipher: auto
+    uuid: e096b14e-b746-3dda-bc95-a435b4b2aceb
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /db00
+      headers:
+        host: cache-hk-1.cn-db.top
+  - &id019
+    name: 🇺🇸_US_美国_17
+    type: vmess
+    server: 172.67.212.114
+    port: 8080
+    cipher: auto
+    uuid: 22826b44-5c1a-4b4b-dbaa-83a2e8bd95f0
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: www.crispyrainbow.biz
+  - &id020
     name: 🇺🇸_US_美国_18
     type: vmess
-    server: 104.20.231.30
-    port: 80
-    cipher: auto
-    uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        host: my1.tooters.ir
-  - &id029
-    name: 🇺🇸_US_美国->🇷🇴_RO_罗马尼亚
-    type: vmess
-    server: 104.17.25.1
-    port: 80
-    cipher: auto
-    uuid: 4e23bd4f-cc11-4ade-fbc1-fcaf245662bf
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        host: lmnyvpn.catnipballs.gay
-  - &id030
-    name: 🇺🇸_US_美国_19
-    type: vmess
-    server: server10.beheshtbaneh.com
+    server: server9.beheshtbaneh.com
     port: 8880
     cipher: auto
-    uuid: 66d4af1c-fcc3-479b-847c-3260253e1faa
+    uuid: 62575747-37b4-4bf8-9ac5-95d214003be1
     alterId: 0
     tls: false
     skip-cert-verify: true
@@ -410,7 +299,52 @@ proxies:
     ws-opts:
       path: /
       headers:
-        host: server10.beheshtbaneh.com
+        host: server9.beheshtbaneh.com
+  - &id021
+    name: 🇷🇺_RU_俄罗斯联邦
+    type: vmess
+    server: 45.144.2.113
+    port: 80
+    cipher: auto
+    uuid: 1cb996c8-e5bf-40d2-9a3c-149b3b721c5f
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: 45.144.2.113
+  - &id022
+    name: 🇺🇸_US_美国_19
+    type: vmess
+    server: server5.beheshtbaneh.com
+    port: 8880
+    cipher: auto
+    uuid: 352ecc6f-21f1-4dc8-8177-4ebd52c55b12
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: server5.beheshtbaneh.com
+  - &id023
+    name: 🇺🇸_US_美国->🇷🇺_RU_俄罗斯联邦
+    type: vmess
+    server: 104.18.202.232
+    port: 2083
+    cipher: auto
+    uuid: 0d3f0cf6-e010-4138-8133-140c07e5eafb
+    alterId: 0
+    tls: true
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /@golestan_vpn
+      headers:
+        host: joooin.golestan-vpn.link
 proxy-groups:
   - name: PROXY
     type: select
@@ -460,13 +394,6 @@ proxy-groups:
       - *id021
       - *id022
       - *id023
-      - *id024
-      - *id025
-      - *id026
-      - *id027
-      - *id028
-      - *id029
-      - *id030
   - name: LOAD-BALANCE
     type: load-balance
     url: http://www.gstatic.com/generate_204
@@ -495,13 +422,6 @@ proxy-groups:
       - *id021
       - *id022
       - *id023
-      - *id024
-      - *id025
-      - *id026
-      - *id027
-      - *id028
-      - *id029
-      - *id030
   - name: SELECT
     type: select
     proxies:
@@ -528,13 +448,6 @@ proxy-groups:
       - *id021
       - *id022
       - *id023
-      - *id024
-      - *id025
-      - *id026
-      - *id027
-      - *id028
-      - *id029
-      - *id030
 rules:
   - RULE-SET,applications,DIRECT
   - DOMAIN,clash.razord.top,DIRECT
