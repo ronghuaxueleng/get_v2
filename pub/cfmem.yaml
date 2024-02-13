@@ -6,100 +6,9 @@ log-level: info
 external-controller: 0.0.0.0:9090
 proxies:
   - &id001
-    name: 🇦🇺_AU_澳大利亚_1
-    type: vmess
-    server: 20.213.159.7
-    port: 24864
-    cipher: auto
-    uuid: 33963e49-0df5-419a-95b9-e8d7581c1a59
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        host: www.qq.com
-  - &id002
     name: 🇺🇸_US_美国_1
     type: vmess
-    server: 5.161.220.92
-    port: 3389
-    cipher: auto
-    uuid: 9c050a86-d612-48f1-ec32-e573df08a1b7
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: http
-  - &id003
-    name: 🇨🇳_CN_中国->🇫🇷_FR_法国
-    type: trojan
-    server: 183.232.230.230
-    port: 8443
-    udp: true
-    password: 7b4066ae-accc-11eb-a8bf-f23c91cfbbc9
-    sni: 083ab9ab-s8usg0-0-zzkl.s5.p5pv.com
-    skip-cert-verify: true
-    network: tcp
-  - &id004
-    name: 🇨🇳_CN_中国->🇺🇸_US_美国_1
-    type: trojan
-    server: xibaozi.19890604.day
-    port: 10838
-    udp: true
-    password: 45ef6416-21dc-40b5-af3c-9962aa85b3ff
-    sni: cloudflare.node-ssl.cdn-alibaba.com
-    skip-cert-verify: true
-    network: tcp
-  - &id005
-    name: 🇨🇳_CN_中国->🇺🇸_US_美国_2
-    type: trojan
-    server: xibaozi.19890604.day
-    port: 10850
-    udp: true
-    password: 45ef6416-21dc-40b5-af3c-9962aa85b3ff
-    sni: cloudflare.node-ssl.cdn-alibaba.com
-    skip-cert-verify: true
-    network: tcp
-  - &id006
-    name: 🇨🇳_CN_中国->🇺🇸_US_美国_3
-    type: trojan
-    server: xibaozi.19890604.day
-    port: 10837
-    udp: true
-    password: 45ef6416-21dc-40b5-af3c-9962aa85b3ff
-    sni: cloudflare.node-ssl.cdn-alibaba.com
-    skip-cert-verify: true
-    network: tcp
-  - &id007
-    name: 🇨🇳_CN_中国->🇺🇸_US_美国_4
-    type: trojan
-    server: xibaozi.19890604.day
-    port: 10847
-    udp: true
-    password: 45ef6416-21dc-40b5-af3c-9962aa85b3ff
-    sni: cloudflare.node-ssl.cdn-alibaba.com
-    skip-cert-verify: true
-    network: tcp
-  - &id008
-    name: 🇺🇸_US_美国_2
-    type: vmess
-    server: 104.21.31.244
-    port: 8080
-    cipher: auto
-    uuid: 22826b44-5c1a-4b4b-dbaa-83a2e8bd95f0
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        host: www.nahck.site
-  - &id009
-    name: 🇺🇸_US_美国_3
-    type: vmess
-    server: server28.beheshtbaneh.com
+    server: zula.ir
     port: 8880
     cipher: auto
     uuid: 2a346c57-5ff4-4e4b-a4d1-f3d008cbe09e
@@ -111,7 +20,133 @@ proxies:
       path: /
       headers:
         host: server28.beheshtbaneh.com
+  - &id002
+    name: 🇺🇸_US_美国_2
+    type: vmess
+    server: 172.67.204.84
+    port: 8880
+    cipher: auto
+    uuid: 2a346c57-5ff4-4e4b-a4d1-f3d008cbe09e
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: server28.beheshtbaneh.com
+  - &id003
+    name: 🇺🇸_US_美国_3
+    type: ss
+    server: 38.114.120.181
+    port: 443
+    password: MyUsMh/QAZ26D+1N6Ku6d40xjUWjR+IKHzhL/qzIQpI=
+    cipher: 2022-blake3-chacha20-poly1305
+  - &id004
+    name: 🇺🇸_US_美国_4
+    type: vmess
+    server: 162.159.252.29
+    port: 8880
+    cipher: auto
+    uuid: 4154143c-bbba-47a4-9f79-c2ed087cbcc9
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: server31.beheshtbaneh.com
+  - &id005
+    name: 🇺🇸_US_美国_5
+    type: vmess
+    server: 104.19.157.106
+    port: 8880
+    cipher: auto
+    uuid: 4154143c-bbba-47a4-9f79-c2ed087cbcc9
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: server31.beheshtbaneh.com
+  - &id006
+    name: 🇺🇸_US_美国_6
+    type: vmess
+    server: 108.162.195.32
+    port: 8880
+    cipher: auto
+    uuid: 4154143c-bbba-47a4-9f79-c2ed087cbcc9
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: server31.beheshtbaneh.com
+  - &id007
+    name: 🇺🇸_US_美国_7
+    type: vmess
+    server: 198.41.220.132
+    port: 8880
+    cipher: auto
+    uuid: 4154143c-bbba-47a4-9f79-c2ed087cbcc9
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: server31.beheshtbaneh.com
+  - &id008
+    name: 🇺🇸_US_美国_8
+    type: vmess
+    server: 141.101.114.181
+    port: 8880
+    cipher: auto
+    uuid: 4154143c-bbba-47a4-9f79-c2ed087cbcc9
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: server31.beheshtbaneh.com
+  - &id009
+    name: 🇺🇸_US_美国->🇨🇦_CA_加拿大
+    type: trojan
+    server: 104.19.159.144
+    port: 443
+    udp: true
+    password: 4aec4e7f8cf8454ea4613659822e1a61
+    sni: avianrecruit.com
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: 6b777a91
+      headers:
+        host: avianrecruit.com
   - &id010
+    name: 🇺🇸_US_美国_9
+    type: vmess
+    server: 104.21.82.183
+    port: 8880
+    cipher: auto
+    uuid: 5a7021e0-26b4-45d6-b175-fe551601ca97
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: server26.beheshtbaneh.com
+  - &id011
     name: 🇩🇪_DE_德国_1
     type: vmess
     server: 116.203.116.244
@@ -122,43 +157,24 @@ proxies:
     tls: false
     skip-cert-verify: true
     network: http
-  - &id011
-    name: 🇨🇦_CA_加拿大
-    type: vmess
-    server: 20.220.192.220
-    port: 45627
-    cipher: auto
-    uuid: 33609fe4-5965-46cc-9fbc-01b84d4b8dbb
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        host: www.alipay.com
   - &id012
-    name: 🇺🇸_US_美国_4
+    name: 🇩🇪_DE_德国_2
     type: vmess
-    server: 172.67.217.144
-    port: 80
+    server: 5.75.190.50
+    port: 3389
     cipher: auto
-    uuid: 85674552-ce41-44d9-bb2a-50f76450b3d8
+    uuid: 9c050a86-d612-48f1-ec32-e573df08a1b7
     alterId: 0
     tls: false
     skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        host: lv1.xv2ray.net
+    network: http
   - &id013
-    name: 🇺🇸_US_美国->🇨🇦_CA_加拿大_1
+    name: 🇺🇸_US_美国_10
     type: vmess
-    server: 162.159.200.3
-    port: 80
+    server: 104.25.123.189
+    port: 8880
     cipher: auto
-    uuid: b5a75d3a-cd95-4b04-9cd6-b1ef4d9b763c
+    uuid: 4154143c-bbba-47a4-9f79-c2ed087cbcc9
     alterId: 0
     tls: false
     skip-cert-verify: true
@@ -166,9 +182,9 @@ proxies:
     ws-opts:
       path: /
       headers:
-        host: ca3.visaapp.top
+        host: server31.beheshtbaneh.com
   - &id014
-    name: 🇺🇸_US_美国_5
+    name: 🇺🇸_US_美国_11
     type: vmess
     server: server26.beheshtbaneh.com
     port: 8880
@@ -183,175 +199,19 @@ proxies:
       headers:
         host: server26.beheshtbaneh.com
   - &id015
-    name: 🇨🇳_CN_中国->🇮🇳_IN_印度
-    type: ss
-    server: service.ouluyun9803.com
-    port: 21003
-    password: d6105bbd-be0d-45b2-82ad-31fd1071c1d2
-    cipher: chacha20-ietf-poly1305
-  - &id016
-    name: 🇺🇸_US_美国_6
-    type: vmess
-    server: 104.21.82.183
-    port: 8880
-    cipher: auto
-    uuid: 5a7021e0-26b4-45d6-b175-fe551601ca97
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        host: server26.beheshtbaneh.com
-  - &id017
-    name: 🇩🇪_DE_德国_2
-    type: vmess
-    server: 5.75.190.50
-    port: 3389
-    cipher: auto
-    uuid: 9c050a86-d612-48f1-ec32-e573df08a1b7
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: http
-  - &id018
-    name: 🇦🇱_AL_阿尔巴尼亚
-    type: vmess
-    server: 109.104.152.144
-    port: 12300
-    cipher: auto
-    uuid: 4be33771-099d-4d65-9426-09bed47eb41f
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: tcp
-  - &id019
-    name: 🇺🇸_US_美国->🇨🇦_CA_加拿大_2
-    type: vmess
-    server: 172.111.57.66
-    port: 443
-    cipher: auto
-    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-    alterId: 64
-    tls: true
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /path/271624282113
-      headers:
-        host: www.75116565.xyz
-  - &id020
-    name: 🇭🇰_HK_香港->🇳🇱_NL_荷兰
-    type: vmess
-    server: 156.245.8.185
-    port: 41000
-    cipher: auto
-    uuid: d7735058-1dac-4618-99ff-0aa0441ec2d7
-    alterId: 64
-    tls: true
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /path/271624282113
-      headers:
-        host: www.20163322.xyz
-  - &id021
-    name: 🇺🇸_US_美国_7
-    type: vmess
-    server: zula.ir
-    port: 8880
-    cipher: auto
-    uuid: 2a346c57-5ff4-4e4b-a4d1-f3d008cbe09e
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        host: server28.beheshtbaneh.com
-  - &id022
-    name: 🇬🇧_GB_英国
-    type: vmess
-    server: 89.213.182.230
-    port: 12345
-    cipher: auto
-    uuid: 51c1bc49-35c6-411c-8355-21ee5c6075da
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /免费节点分享TG@WSBVPN美国🇺🇸三网4837
-  - &id023
-    name: 🇺🇸_US_美国_8
-    type: vmess
-    server: 172.67.166.190
-    port: 8080
-    cipher: auto
-    uuid: 22826b44-5c1a-4b4b-dbaa-83a2e8bd95f0
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        host: www.crispyrainbow.online
-  - &id024
-    name: 🇩🇪_DE_德国_3
-    type: ss
-    server: 80.92.204.106
-    port: 9094
-    password: rpgbNnU9rDDU4aWZ
-    cipher: aes-256-cfb
-  - &id025
-    name: 🇺🇸_US_美国_9
-    type: vmess
-    server: 104.21.23.176
-    port: 8080
-    cipher: auto
-    uuid: 22826b44-5c1a-4b4b-dbaa-83a2e8bd95f0
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        host: www.crispyrainbow.biz
-  - &id026
-    name: 🇺🇸_US_美国_10
-    type: vmess
-    server: 172.67.212.114
-    port: 8080
-    cipher: auto
-    uuid: 22826b44-5c1a-4b4b-dbaa-83a2e8bd95f0
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        host: www.crispyrainbow.biz
-  - &id027
-    name: 🇺🇸_US_美国->🇷🇺_RU_俄罗斯联邦
+    name: 🇦🇺_AU_澳大利亚
     type: trojan
-    server: 172.67.204.84
+    server: 170.64.157.68
     port: 443
     udp: true
-    password: qj1Dz1CJmFQRhWr1SP80aA
-    sni: cdn-21.gsmxreality.com
+    password: YX0SJWs3DU
+    sni: Imo.im
     skip-cert-verify: true
-    network: grpc
-    grpc-opts:
-      grpc-service-name: 443trojan
-  - &id028
-    name: 🇳🇱_NL_荷兰->🇩🇪_DE_德国
+    network: tcp
+  - &id016
+    name: 🇺🇸_US_美国->🇩🇪_DE_德国_1
     type: vmess
-    server: mci--join.outline-vpn.cloud
+    server: 104.22.51.162
     port: 80
     cipher: auto
     uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e
@@ -360,25 +220,20 @@ proxies:
     skip-cert-verify: true
     network: ws
     ws-opts:
-      path: /?ed=2048
-      headers:
-        host: a.prapt5.ir
-  - &id029
-    name: 🇺🇸_US_美国_11
-    type: vmess
-    server: server31.beheshtbaneh.com
-    port: 8880
-    cipher: auto
-    uuid: 4154143c-bbba-47a4-9f79-c2ed087cbcc9
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
       path: /
       headers:
-        host: server31.beheshtbaneh.com
-  - &id030
+        host: my1.tooters.ir
+  - &id017
+    name: 🇨🇳_CN_中国->🇫🇷_FR_法国
+    type: trojan
+    server: 183.232.230.230
+    port: 8443
+    udp: true
+    password: 7b4066ae-accc-11eb-a8bf-f23c91cfbbc9
+    sni: 083ab9ab-s8usg0-0-zzkl.s5.p5pv.com
+    skip-cert-verify: true
+    network: tcp
+  - &id018
     name: 🇺🇸_US_美国_12
     type: vmess
     server: server32.beheshtbaneh.com
@@ -393,24 +248,38 @@ proxies:
       path: /
       headers:
         host: server32.beheshtbaneh.com
-  - &id031
-    name: 🇺🇸_US_美国->🇿🇦_ZA_南非
+  - &id019
+    name: 🇺🇸_US_美国_13
     type: vmess
-    server: yhnsb3.shabijichang.com
+    server: 172.67.217.144
     port: 80
     cipher: auto
-    uuid: c458695d-6908-45c3-9512-e0c46418454c
+    uuid: 85674552-ce41-44d9-bb2a-50f76450b3d8
     alterId: 0
     tls: false
     skip-cert-verify: true
-    servername: yhnsb3.shabijichang.com
     network: ws
     ws-opts:
       path: /
       headers:
-        host: yhnsb3.shabijichang.com
-  - &id032
-    name: 🇦🇺_AU_澳大利亚_2
+        host: lv1.xv2ray.net
+  - &id020
+    name: 🇳🇱_NL_荷兰->🇩🇪_DE_德国_1
+    type: vmess
+    server: mci--join.outline-vpn.cloud
+    port: 80
+    cipher: auto
+    uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2048
+      headers:
+        host: a.prapt5.ir
+  - &id021
+    name: 🇬🇧_GB_英国
     type: vmess
     server: au-melbourne-oracle-abfdf2.ip1.shop
     port: 63503
@@ -422,30 +291,76 @@ proxies:
     network: ws
     ws-opts:
       path: /
+  - &id022
+    name: 🇺🇸_US_美国_14
+    type: vmess
+    server: 5.161.220.92
+    port: 3389
+    cipher: auto
+    uuid: 9c050a86-d612-48f1-ec32-e573df08a1b7
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: http
+  - &id023
+    name: 🇺🇸_US_美国_15
+    type: vmess
+    server: 104.21.31.244
+    port: 8080
+    cipher: auto
+    uuid: 22826b44-5c1a-4b4b-dbaa-83a2e8bd95f0
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /
       headers:
-        host: au-melbourne-oracle-abfdf2.ip1.shop
-  - &id033
-    name: 🇨🇳_CN_中国->🇺🇦_UA_乌克兰
-    type: trojan
-    server: xibaozi.19890604.day
-    port: 10845
-    udp: true
-    password: 45ef6416-21dc-40b5-af3c-9962aa85b3ff
-    sni: cloudflare.node-ssl.cdn-alibaba.com
+        host: www.nahck.site
+  - &id024
+    name: 🇺🇸_US_美国_16
+    type: vmess
+    server: server28.beheshtbaneh.com
+    port: 8880
+    cipher: auto
+    uuid: 2a346c57-5ff4-4e4b-a4d1-f3d008cbe09e
+    alterId: 0
+    tls: false
     skip-cert-verify: true
-    network: tcp
-  - &id034
-    name: 🇨🇳_CN_中国->🇦🇹_AT_奥地利
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: server28.beheshtbaneh.com
+  - &id025
+    name: 🇺🇸_US_美国->🇷🇺_RU_俄罗斯联邦
     type: trojan
-    server: xibaozi.19890604.day
-    port: 10848
+    server: 172.67.204.84
+    port: 443
     udp: true
-    password: 45ef6416-21dc-40b5-af3c-9962aa85b3ff
-    sni: cloudflare.node-ssl.cdn-alibaba.com
+    password: qj1Dz1CJmFQRhWr1SP80aA
+    sni: cdn-21.gsmxreality.com
     skip-cert-verify: true
-    network: tcp
-  - &id035
-    name: 🇺🇸_US_美国->🇩🇪_DE_德国
+    network: grpc
+    grpc-opts:
+      grpc-service-name: 443trojan
+  - &id026
+    name: 🇺🇸_US_美国->🇿🇦_ZA_南非
+    type: vmess
+    server: yhnsb3.shabijichang.com
+    port: 80
+    cipher: auto
+    uuid: c458695d-6908-45c3-9512-e0c46418454c
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: yhnsb3.shabijichang.com
+  - &id027
+    name: 🇺🇸_US_美国->🇩🇪_DE_德国_2
     type: trojan
     server: 104.19.154.92
     port: 443
@@ -456,6 +371,123 @@ proxies:
     network: ws
     ws-opts:
       path: /u5ht27KSp8j3Z2QIPbkyFm3I
+  - &id028
+    name: 🇺🇸_US_美国_17
+    type: vmess
+    server: 104.21.27.184
+    port: 8080
+    cipher: auto
+    uuid: 70666776-4e9f-4350-b3f0-afaff6a70db0
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: us-01.cloudlion.me
+  - &id029
+    name: 🇳🇱_NL_荷兰->🇩🇪_DE_德国_2
+    type: vmess
+    server: 188.114.96.113
+    port: 80
+    cipher: auto
+    uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2048
+      headers:
+        host: a.prapt5.ir
+  - &id030
+    name: 🇺🇸_US_美国->🇩🇪_DE_德国_3
+    type: vmess
+    server: 104.21.69.44
+    port: 80
+    cipher: auto
+    uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2048
+      headers:
+        host: a.prapt4.ir
+  - &id031
+    name: 🇳🇱_NL_荷兰->🇩🇪_DE_德国_3
+    type: vmess
+    server: 188.114.96.11
+    port: 80
+    cipher: auto
+    uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2048
+      headers:
+        host: a.prapt5.ir
+  - &id032
+    name: 🇨🇦_CA_加拿大
+    type: trojan
+    server: 3.98.63.128
+    port: 22222
+    udp: true
+    password: telegram-id-directvpn
+    sni: trojan.miwan.co.uk
+    skip-cert-verify: true
+    network: tcp
+    alpn:
+      - http/1.1
+  - &id033
+    name: 🇺🇸_US_美国_18
+    type: vmess
+    server: 172.67.180.248
+    port: 8080
+    cipher: auto
+    uuid: 22826b44-5c1a-4b4b-dbaa-83a2e8bd95f0
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: www.nahck.site
+  - &id034
+    name: 🇺🇸_US_美国_19
+    type: vmess
+    server: www.nahck.site
+    port: 8080
+    cipher: auto
+    uuid: 22826b44-5c1a-4b4b-dbaa-83a2e8bd95f0
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: www.nahck.site
+  - &id035
+    name: 🇺🇸_US_美国_20
+    type: vmess
+    server: server29.beheshtbaneh.com
+    port: 8880
+    cipher: auto
+    uuid: b5620334-4cab-4928-956f-27fddbffc80c
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: server29.beheshtbaneh.com
 proxy-groups:
   - name: PROXY
     type: select
