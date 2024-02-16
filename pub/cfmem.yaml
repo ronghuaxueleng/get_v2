@@ -6,33 +6,6 @@ log-level: info
 external-controller: 0.0.0.0:9090
 proxies:
   - &id001
-    name: 🇺🇸_US_美国_1
-    type: vmess
-    server: 104.21.31.244
-    port: 8080
-    cipher: auto
-    uuid: 22826b44-5c1a-4b4b-dbaa-83a2e8bd95f0
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        host: www.nahck.site
-  - &id002
-    name: 🇺🇸_US_美国->🇷🇺_RU_俄罗斯联邦_1
-    type: trojan
-    server: 172.67.204.84
-    port: 443
-    udp: true
-    password: qj1Dz1CJmFQRhWr1SP80aA
-    sni: cdn-21.gsmxreality.com
-    skip-cert-verify: true
-    network: grpc
-    grpc-opts:
-      grpc-service-name: 443trojan
-  - &id003
     name: 🇳🇱_NL_荷兰->🇩🇪_DE_德国_1
     type: vmess
     server: 188.114.96.11
@@ -47,23 +20,67 @@ proxies:
       path: /?ed=2048
       headers:
         host: a.prapt5.ir
-  - &id004
-    name: 🇺🇸_US_美国_2
+  - &id002
+    name: 🇺🇸_US_美国->🇨🇦_CA_加拿大_1
+    type: trojan
+    server: 104.19.159.144
+    port: 443
+    udp: true
+    password: 4aec4e7f8cf8454ea4613659822e1a61
+    sni: avianrecruit.com
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: 6b777a91
+      headers:
+        host: avianrecruit.com
+  - &id003
+    name: 🇺🇸_US_美国->🇩🇪_DE_德国_1
     type: vmess
-    server: 104.18.15.147
+    server: 104.21.69.44
     port: 80
     cipher: auto
-    uuid: 384648b3-bcc5-401e-b145-dc91f57ee5e6
+    uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e
     alterId: 0
     tls: false
     skip-cert-verify: true
     network: ws
     ws-opts:
-      path: /
+      path: /?ed=2048
       headers:
-        host: us3.889611.com
+        host: a.prapt4.ir
+  - &id004
+    name: 🇳🇱_NL_荷兰->🇩🇪_DE_德国_2
+    type: vmess
+    server: 188.114.96.113
+    port: 80
+    cipher: auto
+    uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2048
+      headers:
+        host: a.prapt5.ir
   - &id005
-    name: 🇺🇸_US_美国_3
+    name: 🇳🇱_NL_荷兰->🇩🇪_DE_德国_3
+    type: vmess
+    server: mci--join.outline-vpn.cloud
+    port: 80
+    cipher: auto
+    uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2048
+      headers:
+        host: a.prapt5.ir
+  - &id006
+    name: 🇺🇸_US_美国_1
     type: vmess
     server: 172.67.180.248
     port: 8080
@@ -77,23 +94,45 @@ proxies:
       path: /
       headers:
         host: www.nahck.site
-  - &id006
-    name: 🇺🇸_US_美国_4
-    type: vmess
-    server: 104.17.123.55
-    port: 8080
-    cipher: auto
-    uuid: 1d47288a-699d-45ca-b4f0-4e5b36940e6f
-    alterId: 0
-    tls: false
+  - &id007
+    name: 🇺🇸_US_美国->🇨🇦_CA_加拿大_2
+    type: trojan
+    server: 198.41.220.20
+    port: 443
+    udp: true
+    password: e8105dfd24414268b6c7652c63731097
+    sni: avianrecruit.com
     skip-cert-verify: true
     network: ws
     ws-opts:
-      path: /qZTtpya?ed=2048
+      path: 6b777a91
+  - &id008
+    name: 🇺🇸_US_美国_2
+    type: trojan
+    server: 104.19.171.3
+    port: 443
+    udp: true
+    password: f0eb8c92ce8946aaba856569cff1a16b
+    sni: sherasheba.com
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: 6b777a91
       headers:
-        host: pq.kmoljklj.top
-  - &id007
-    name: 🇺🇸_US_美国_5
+        host: sherasheba.com
+  - &id009
+    name: 🇺🇸_US_美国_3
+    type: vmess
+    server: 5.161.220.92
+    port: 3389
+    cipher: auto
+    uuid: 9c050a86-d612-48f1-ec32-e573df08a1b7
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: http
+  - &id010
+    name: 🇺🇸_US_美国_4
     type: vmess
     server: www.nahck.site
     port: 8080
@@ -107,55 +146,10 @@ proxies:
       path: /
       headers:
         host: www.nahck.site
-  - &id008
-    name: 🇺🇸_US_美国->🇩🇪_DE_德国
-    type: trojan
-    server: 104.19.154.92
-    port: 443
-    udp: true
-    password: 8d0de334-c1a0-44ab-9362-e7916c0d268d
-    sni: sshhiddifyc1.cpionline.cc
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /u5ht27KSp8j3Z2QIPbkyFm3I
-      headers:
-        host: sshhiddifyc1.cpionline.cc
-    alpn:
-      - http/1.1
-  - &id009
-    name: 🇺🇸_US_美国->🇷🇺_RU_俄罗斯联邦_2
-    type: vmess
-    server: 162.159.200.6
-    port: 80
-    cipher: auto
-    uuid: 384648b3-bcc5-401e-b145-dc91f57ee5e6
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        host: er3.889611.com
-  - &id010
-    name: 🇺🇸_US_美国_6
-    type: vmess
-    server: cold-dawn-9246.fly.dev
-    port: 443
-    cipher: auto
-    uuid: ea4909ef-7ca6-4b46-bf2e-6c07896ef338
-    alterId: 0
-    tls: true
-    skip-cert-verify: true
-    servername: cold-dawn-9246.fly.dev
-    network: ws
-    ws-opts:
-      path: /ea4909ef-7ca6-4b46-bf2e-6c07896ef338-vm
   - &id011
     name: 🇯🇵_JP_日本->🇩🇪_DE_德国_1
     type: vmess
-    server: 47.245.40.161
+    server: 131.186.63.127
     port: 80
     cipher: auto
     uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e
@@ -170,7 +164,7 @@ proxies:
   - &id012
     name: 🇯🇵_JP_日本->🇩🇪_DE_德国_2
     type: vmess
-    server: 47.91.31.231
+    server: 138.2.6.15
     port: 80
     cipher: auto
     uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e
@@ -185,7 +179,7 @@ proxies:
   - &id013
     name: 🇯🇵_JP_日本->🇩🇪_DE_德国_3
     type: vmess
-    server: 155.248.186.182
+    server: 141.147.181.148
     port: 80
     cipher: auto
     uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e
@@ -198,12 +192,12 @@ proxies:
       headers:
         host: my1.tooters.ir
   - &id014
-    name: 🇺🇸_US_美国->🇨🇦_CA_加拿大_1
+    name: 🇯🇵_JP_日本->🇩🇪_DE_德国_4
     type: vmess
-    server: 162.159.200.3
+    server: 47.245.40.161
     port: 80
     cipher: auto
-    uuid: 384648b3-bcc5-401e-b145-dc91f57ee5e6
+    uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e
     alterId: 0
     tls: false
     skip-cert-verify: true
@@ -211,11 +205,11 @@ proxies:
     ws-opts:
       path: /
       headers:
-        host: ca3.visaapp.top
+        host: my1.tooters.ir
   - &id015
-    name: 🇯🇵_JP_日本->🇩🇪_DE_德国_4
+    name: 🇯🇵_JP_日本->🇩🇪_DE_德国_5
     type: vmess
-    server: 47.245.26.167
+    server: 150.230.197.156
     port: 80
     cipher: auto
     uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e
@@ -228,24 +222,54 @@ proxies:
       headers:
         host: my1.tooters.ir
   - &id016
-    name: 🇯🇵_JP_日本->🇩🇪_DE_德国_5
+    name: 🇺🇸_US_美国_5
     type: vmess
-    server: 47.74.40.13
+    server: 104.21.28.62
+    port: 443
+    cipher: auto
+    uuid: 0d9776dd-e12e-4a5e-9bf2-8cceb1b502f1
+    alterId: 0
+    tls: true
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /vmess
+      headers:
+        host: pt1-vmess.sshmax.xyz
+  - &id017
+    name: 🇺🇸_US_美国_6
+    type: vmess
+    server: 144.126.145.219
     port: 80
     cipher: auto
-    uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e
+    uuid: 2a8a10fb-9ca3-367e-a234-cf09f841be4f
     alterId: 0
     tls: false
     skip-cert-verify: true
     network: ws
     ws-opts:
-      path: /
+      path: /v118-fccxmxm35
       headers:
-        host: my1.tooters.ir
-  - &id017
+        host: internet.life.com.by
+  - &id018
+    name: 🇺🇸_US_美国_7
+    type: vmess
+    server: channel.hopev2ray.link
+    port: 443
+    cipher: auto
+    uuid: e2e25aa2-aab9-486c-9ab4-495bcbcea4d8
+    alterId: 0
+    tls: true
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /vmess
+      headers:
+        host: se2-vmess.sshmax.xyz
+  - &id019
     name: 🇯🇵_JP_日本->🇩🇪_DE_德国_6
     type: vmess
-    server: 47.245.7.212
+    server: 47.91.31.231
     port: 80
     cipher: auto
     uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e
@@ -257,7 +281,7 @@ proxies:
       path: /
       headers:
         host: my1.tooters.ir
-  - &id018
+  - &id020
     name: 🇯🇵_JP_日本->🇩🇪_DE_德国_7
     type: vmess
     server: 43.153.181.217
@@ -272,158 +296,83 @@ proxies:
       path: /
       headers:
         host: my1.tooters.ir
-  - &id019
-    name: 🇺🇸_US_美国_7
-    type: vmess
-    server: 104.18.15.149
-    port: 80
-    cipher: auto
-    uuid: 384648b3-bcc5-401e-b145-dc91f57ee5e6
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        host: tr3.889611.com
-  - &id020
-    name: 🇯🇵_JP_日本->🇩🇪_DE_德国_8
-    type: vmess
-    server: 150.230.201.63
-    port: 80
-    cipher: auto
-    uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        host: my1.tooters.ir
   - &id021
-    name: 🇯🇵_JP_日本->🇩🇪_DE_德国_9
+    name: 🇺🇸_US_美国_8
     type: vmess
-    server: 141.147.181.148
-    port: 80
+    server: 104.21.1.28
+    port: 8880
     cipher: auto
-    uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e
+    uuid: 4b5e4565-322f-4223-a891-78a84f189726
     alterId: 0
     tls: false
     skip-cert-verify: true
     network: ws
     ws-opts:
-      path: /
+      path: /XSjeg73o6ZdsheahCb5JG
       headers:
-        host: my1.tooters.ir
+        host: us-ccs.yuji2022.eu.org
   - &id022
-    name: 🇯🇵_JP_日本->🇩🇪_DE_德国_10
+    name: 🇺🇸_US_美国->🇯🇵_JP_日本
     type: vmess
-    server: 47.74.11.219
-    port: 80
+    server: 104.17.123.55
+    port: 8080
     cipher: auto
-    uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e
+    uuid: 1d47288a-699d-45ca-b4f0-4e5b36940e6f
     alterId: 0
     tls: false
     skip-cert-verify: true
     network: ws
     ws-opts:
-      path: /
+      path: /qZTtpya?ed=2048
       headers:
-        host: my1.tooters.ir
+        host: pq.kmoljklj.top
   - &id023
-    name: 🇯🇵_JP_日本->🇩🇪_DE_德国_11
-    type: vmess
-    server: 150.230.197.156
-    port: 80
-    cipher: auto
-    uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        host: my1.tooters.ir
+    name: 🇬🇧_GB_英国
+    type: ss
+    server: 89.185.84.30
+    port: 20228
+    password: eaFTlcgpEUZbK0U1GI6Q6l
+    cipher: chacha20-ietf-poly1305
   - &id024
-    name: 🇯🇵_JP_日本->🇩🇪_DE_德国_12
-    type: vmess
-    server: 8.209.242.25
-    port: 80
-    cipher: auto
-    uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e
-    alterId: 0
-    tls: false
+    name: 🇺🇸_US_美国->🇩🇪_DE_德国_2
+    type: trojan
+    server: 104.19.154.92
+    port: 443
+    udp: true
+    password: 8d0de334-c1a0-44ab-9362-e7916c0d268d
+    sni: sshhiddifyc1.cpionline.cc
     skip-cert-verify: true
     network: ws
     ws-opts:
-      path: /
-      headers:
-        host: my1.tooters.ir
+      path: /u5ht27KSp8j3Z2QIPbkyFm3I
   - &id025
-    name: 🇯🇵_JP_日本->🇩🇪_DE_德国_13
-    type: vmess
-    server: 47.245.58.250
-    port: 80
-    cipher: auto
-    uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e
-    alterId: 0
-    tls: false
+    name: 🇺🇸_US_美国->🇷🇺_RU_俄罗斯联邦
+    type: trojan
+    server: 172.67.204.84
+    port: 443
+    udp: true
+    password: qj1Dz1CJmFQRhWr1SP80aA
+    sni: cdn-21.gsmxreality.com
     skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        host: my1.tooters.ir
+    network: grpc
+    grpc-opts:
+      grpc-service-name: 443trojan
   - &id026
-    name: 🇯🇵_JP_日本->🇩🇪_DE_德国_14
+    name: 🇩🇪_DE_德国
     type: vmess
-    server: 131.186.63.127
+    server: 5.181.23.58
     port: 80
     cipher: auto
-    uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e
+    uuid: 6eff4314-ad4c-4ebc-b1d0-d3b79656f43d
     alterId: 0
     tls: false
     skip-cert-verify: true
+    servername: internet.life.com.by
     network: ws
     ws-opts:
-      path: /
-      headers:
-        host: my1.tooters.ir
+      path: /vmess
   - &id027
-    name: 🇯🇵_JP_日本->🇩🇪_DE_德国_15
-    type: vmess
-    server: 47.245.54.58
-    port: 80
-    cipher: auto
-    uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        host: my1.tooters.ir
-  - &id028
-    name: 🇯🇵_JP_日本->🇩🇪_DE_德国_16
-    type: vmess
-    server: 138.2.6.15
-    port: 80
-    cipher: auto
-    uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        host: my1.tooters.ir
-  - &id029
-    name: 🇯🇵_JP_日本->🇩🇪_DE_德国_17
+    name: 🇯🇵_JP_日本->🇩🇪_DE_德国_8
     type: vmess
     server: 150.230.205.56
     port: 80
@@ -437,146 +386,82 @@ proxies:
       path: /
       headers:
         host: my1.tooters.ir
-  - &id030
-    name: 🇯🇵_JP_日本->🇩🇪_DE_德国_18
+  - &id028
+    name: 🇨🇦_CA_加拿大_1
     type: vmess
-    server: 47.91.19.249
+    server: tg-dns68.shift.cloudns.org
     port: 80
     cipher: auto
-    uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e
+    uuid: 54133fe6-4578-48bc-ffb0-183ad760bd85
     alterId: 0
     tls: false
     skip-cert-verify: true
     network: ws
     ws-opts:
-      path: /
+      path: /TG@dns68
       headers:
-        host: my1.tooters.ir
-  - &id031
-    name: 🇩🇪_DE_德国
-    type: vmess
-    server: 116.203.116.244
-    port: 3389
-    cipher: auto
-    uuid: 9c050a86-d612-48f1-ec32-e573df08a1b7
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: http
-  - &id032
-    name: 🇺🇸_US_美国->🇷🇺_RU_俄罗斯联邦_3
-    type: vmess
-    server: 162.159.200.7
-    port: 80
-    cipher: auto
-    uuid: 384648b3-bcc5-401e-b145-dc91f57ee5e6
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        host: er3.visaapp.top
-  - &id033
-    name: 🇺🇸_US_美国->🇷🇺_RU_俄罗斯联邦_4
-    type: vmess
-    server: 104.18.15.150
-    port: 80
-    cipher: auto
-    uuid: 384648b3-bcc5-401e-b145-dc91f57ee5e6
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        host: er3.889611.com
-  - &id034
-    name: 🇦🇺_AU_澳大利亚
-    type: vmess
-    server: au-melbourne-oracle-abfdf2.ip1.shop
-    port: 63503
-    cipher: auto
-    uuid: ed4d8827-4d5a-4c05-a577-c66d6a2fc1e6
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        host: au-melbourne-oracle-abfdf2.ip1.shop
-  - &id035
-    name: 🇺🇸_US_美国->🇨🇦_CA_加拿大_2
+        host: tg-dns68.shift.cloudns.org
+  - &id029
+    name: 🇺🇸_US_美国_9
     type: trojan
-    server: 198.41.220.20
+    server: 172.66.192.18
     port: 443
     udp: true
-    password: e8105dfd24414268b6c7652c63731097
-    sni: avianrecruit.com
+    password: mainssh-Juhygtr
+    sni: frtws.mainssh.xyz
     skip-cert-verify: true
     network: ws
     ws-opts:
-      path: 6b777a91
-  - &id036
-    name: 🇳🇱_NL_荷兰->🇩🇪_DE_德国_2
+      path: /trojan
+      headers:
+        host: frtws.mainssh.xyz
+  - &id030
+    name: 🇨🇳_CN_中国->🇭🇰_HK_香港
     type: vmess
-    server: mci--join.outline-vpn.cloud
-    port: 80
+    server: 101.89.154.94
+    port: 19979
     cipher: auto
-    uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e
+    uuid: 941f470e-34e8-3bb0-9b1e-b2c0b4fdb212
     alterId: 0
     tls: false
     skip-cert-verify: true
     network: ws
     ws-opts:
-      path: /?ed=2048
+      path: /db00
       headers:
-        host: a.prapt5.ir
-  - &id037
-    name: 🇨🇦_CA_加拿大
+        host: cache-hk-2.cn-db.top
+  - &id031
+    name: 🇺🇸_US_美国->🇩🇪_DE_德国_3
     type: trojan
-    server: 15.223.142.94
+    server: 172.67.143.221
+    port: 443
+    udp: true
+    password: 5528de7e9efc37a45714fe24d7c2d7a5d19dc55a1ad162a7372d7595a14e998f
+    sni: m1.ifixripper.link
+    skip-cert-verify: true
+    network: grpc
+    grpc-opts:
+      grpc-service-name: a47af5e1-0ae6-4e98-85b5-0e3c32dda445___bf4e49304c8193d16c7551b1f84aee3a
+  - &id032
+    name: 🇨🇦_CA_加拿大_2
+    type: trojan
+    server: 15.157.8.36
     port: 22222
     udp: true
     password: telegram-id-directvpn
     sni: trojan.miwan.co.uk
     skip-cert-verify: true
     network: tcp
-  - &id038
-    name: 🇳🇱_NL_荷兰->🇩🇪_DE_德国_3
-    type: vmess
-    server: 188.114.96.113
-    port: 80
-    cipher: auto
-    uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /?ed=2048
-      headers:
-        host: a.prapt5.ir
-  - &id039
-    name: 🇬🇧_GB_英国
+  - &id033
+    name: 🇫🇷_FR_法国
     type: trojan
-    server: 13.43.210.187
+    server: 13.37.114.10
     port: 22222
     udp: true
     password: telegram-id-privatevpns
     sni: trojan.miwan.co.uk
     skip-cert-verify: true
     network: tcp
-  - &id040
-    name: 🇷🇺_RU_俄罗斯联邦
-    type: ss
-    server: 193.228.128.143
-    port: 27981
-    password: lDJnoMBGEcIhtYp5d8kFIh
-    cipher: chacha20-ietf-poly1305
 proxy-groups:
   - name: PROXY
     type: select
@@ -636,13 +521,6 @@ proxy-groups:
       - *id031
       - *id032
       - *id033
-      - *id034
-      - *id035
-      - *id036
-      - *id037
-      - *id038
-      - *id039
-      - *id040
   - name: LOAD-BALANCE
     type: load-balance
     url: http://www.gstatic.com/generate_204
@@ -681,13 +559,6 @@ proxy-groups:
       - *id031
       - *id032
       - *id033
-      - *id034
-      - *id035
-      - *id036
-      - *id037
-      - *id038
-      - *id039
-      - *id040
   - name: SELECT
     type: select
     proxies:
@@ -724,13 +595,6 @@ proxy-groups:
       - *id031
       - *id032
       - *id033
-      - *id034
-      - *id035
-      - *id036
-      - *id037
-      - *id038
-      - *id039
-      - *id040
 rules:
   - RULE-SET,applications,DIRECT
   - DOMAIN,clash.razord.top,DIRECT
