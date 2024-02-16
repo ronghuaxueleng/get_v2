@@ -6,48 +6,59 @@ log-level: info
 external-controller: 0.0.0.0:9090
 proxies:
   - &id001
-    name: 🇨🇳_CN_中国->🇮🇳_IN_印度
-    type: vmess
-    server: 183.232.170.22
-    port: 30128
-    cipher: auto
-    uuid: 9f41898b-e80d-418d-9ea8-5c51a914722a
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: tcp
-  - &id002
     name: 🇺🇸_US_美国_1
-    type: vmess
-    server: 104.21.31.244
-    port: 8080
-    cipher: auto
-    uuid: 22826b44-5c1a-4b4b-dbaa-83a2e8bd95f0
-    alterId: 0
-    tls: false
+    type: trojan
+    server: 89.116.180.179
+    port: 443
+    udp: true
+    password: d2698cf9-c47e-455c-8384-12e642cbba15
+    sni: p6us4.pqjc.buzz
     skip-cert-verify: true
     network: ws
     ws-opts:
-      path: /
-      headers:
-        host: www.nahck.site
-  - &id003
-    name: 🇳🇱_NL_荷兰->🇩🇪_DE_德国_1
-    type: vmess
-    server: mci--join.outline-vpn.cloud
-    port: 80
-    cipher: auto
-    uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /?ed=2048
-      headers:
-        host: a.prapt5.ir
-  - &id004
+      path: /pq/us4
+  - &id002
     name: 🇺🇸_US_美国_2
+    type: vmess
+    server: 104.21.1.28
+    port: 8880
+    cipher: auto
+    uuid: 4b5e4565-322f-4223-a891-78a84f189726
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /XSjeg73o6ZdsheahCb5JG
+      headers:
+        host: us-ccs.yuji2022.eu.org
+  - &id003
+    name: 🇺🇸_US_美国_3
+    type: vmess
+    server: 5.161.220.92
+    port: 3389
+    cipher: auto
+    uuid: 9c050a86-d612-48f1-ec32-e573df08a1b7
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: http
+  - &id004
+    name: 🇺🇸_US_美国_4
+    type: trojan
+    server: 104.19.171.3
+    port: 443
+    udp: true
+    password: f0eb8c92ce8946aaba856569cff1a16b
+    sni: sherasheba.com
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: 6b777a91
+      headers:
+        host: sherasheba.com
+  - &id005
+    name: 🇺🇸_US_美国_5
     type: vmess
     server: www.nahck.site
     port: 8080
@@ -61,103 +72,25 @@ proxies:
       path: /
       headers:
         host: www.nahck.site
-  - &id005
-    name: 🇺🇸_US_美国_3
-    type: vmess
-    server: 104.21.23.176
-    port: 8080
-    cipher: auto
-    uuid: 22826b44-5c1a-4b4b-dbaa-83a2e8bd95f0
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        host: www.crispyrainbow.biz
   - &id006
-    name: 🇮🇪_IE_爱尔兰_1
-    type: trojan
-    server: 34.243.78.208
-    port: 22222
-    udp: true
-    password: telegram-id-privatevpns
-    sni: trojan.miwan.co.uk
+    name: 🇨🇦_CA_加拿大_1
+    type: vmess
+    server: tg-dns68.shift.cloudns.org
+    port: 80
+    cipher: auto
+    uuid: 54133fe6-4578-48bc-ffb0-183ad760bd85
+    alterId: 0
+    tls: false
     skip-cert-verify: true
-    network: tcp
+    network: ws
+    ws-opts:
+      path: /TG@dns68
+      headers:
+        host: tg-dns68.shift.cloudns.org
   - &id007
-    name: 🇺🇸_US_美国_4
-    type: trojan
-    server: 89.116.180.179
-    port: 443
-    udp: true
-    password: d2698cf9-c47e-455c-8384-12e642cbba15
-    sni: p6us4.pqjc.buzz
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /pq/us4
-  - &id008
-    name: 🇺🇸_US_美国_5
+    name: 🇳🇱_NL_荷兰->🇩🇪_DE_德国_1
     type: vmess
-    server: cfcdn1.sanfencdn9.com
-    port: 2086
-    cipher: auto
-    uuid: 851278d6-8c0b-4147-8939-89cface46627
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /video/Z7qdcrAGRw
-      headers:
-        host: us77SmSk86j.fzbqfrse.xyz
-  - &id009
-    name: 🇩🇪_DE_德国_1
-    type: vmess
-    server: 5.75.190.50
-    port: 3389
-    cipher: auto
-    uuid: 9c050a86-d612-48f1-ec32-e573df08a1b7
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: http
-  - &id010
-    name: 🇺🇸_US_美国_6
-    type: vmess
-    server: 172.67.212.114
-    port: 8080
-    cipher: auto
-    uuid: 22826b44-5c1a-4b4b-dbaa-83a2e8bd95f0
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        host: www.crispyrainbow.biz
-  - &id011
-    name: 🇺🇸_US_美国_7
-    type: vmess
-    server: 172.67.166.190
-    port: 8080
-    cipher: auto
-    uuid: 22826b44-5c1a-4b4b-dbaa-83a2e8bd95f0
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        host: www.crispyrainbow.online
-  - &id012
-    name: 🇺🇸_US_美国_8
-    type: vmess
-    server: 104.20.231.30
+    server: 188.114.96.11
     port: 80
     cipher: auto
     uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e
@@ -166,40 +99,20 @@ proxies:
     skip-cert-verify: true
     network: ws
     ws-opts:
-      path: /
+      path: /?ed=2048
       headers:
-        host: my1.tooters.ir
-  - &id013
-    name: 🇺🇸_US_美国_9
-    type: vmess
-    server: server32.beheshtbaneh.com
-    port: 8880
-    cipher: auto
-    uuid: 044ba8ed-7285-472a-bc14-fb91dc6be4c9
-    alterId: 0
-    tls: false
+        host: a.prapt5.ir
+  - &id008
+    name: 🇫🇷_FR_法国
+    type: trojan
+    server: 13.37.114.10
+    port: 22222
+    udp: true
+    password: telegram-id-privatevpns
+    sni: trojan.miwan.co.uk
     skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        host: server32.beheshtbaneh.com
-  - &id014
-    name: 🇺🇸_US_美国_10
-    type: vmess
-    server: 104.21.89.252
-    port: 8080
-    cipher: auto
-    uuid: 22826b44-5c1a-4b4b-dbaa-83a2e8bd95f0
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        host: www.crispyrainbow.online
-  - &id015
+    network: tcp
+  - &id009
     name: 🇺🇸_US_美国->🇩🇪_DE_德国_1
     type: vmess
     server: 104.22.51.162
@@ -214,10 +127,77 @@ proxies:
       path: /
       headers:
         host: my1.tooters.ir
-  - &id016
-    name: 🇺🇸_US_美国_11
+  - &id010
+    name: 🇺🇸_US_美国->🇷🇺_RU_俄罗斯联邦
+    type: trojan
+    server: 172.67.204.84
+    port: 443
+    udp: true
+    password: qj1Dz1CJmFQRhWr1SP80aA
+    sni: cdn-21.gsmxreality.com
+    skip-cert-verify: true
+    network: grpc
+    grpc-opts:
+      grpc-service-name: 443trojan
+  - &id011
+    name: 🇨🇦_CA_加拿大_2
+    type: trojan
+    server: 15.157.8.36
+    port: 22222
+    udp: true
+    password: telegram-id-directvpn
+    sni: trojan.miwan.co.uk
+    skip-cert-verify: true
+    network: tcp
+  - &id012
+    name: 🇯🇵_JP_日本->🇩🇪_DE_德国_1
     type: vmess
-    server: www.crispyrainbow.biz
+    server: 138.2.6.15
+    port: 80
+    cipher: auto
+    uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: my1.tooters.ir
+  - &id013
+    name: 🇳🇱_NL_荷兰->🇩🇪_DE_德国_2
+    type: vmess
+    server: mci--join.outline-vpn.cloud
+    port: 80
+    cipher: auto
+    uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2048
+      headers:
+        host: a.prapt5.ir
+  - &id014
+    name: 🇯🇵_JP_日本->🇩🇪_DE_德国_2
+    type: vmess
+    server: 131.186.63.127
+    port: 80
+    cipher: auto
+    uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: my1.tooters.ir
+  - &id015
+    name: 🇺🇸_US_美国_6
+    type: vmess
+    server: 104.21.31.244
     port: 8080
     cipher: auto
     uuid: 22826b44-5c1a-4b4b-dbaa-83a2e8bd95f0
@@ -228,82 +208,94 @@ proxies:
     ws-opts:
       path: /
       headers:
-        host: www.crispyrainbow.biz
-  - &id017
-    name: 🇩🇪_DE_德国_2
-    type: vmess
-    server: 116.203.116.244
-    port: 3389
-    cipher: auto
-    uuid: 9c050a86-d612-48f1-ec32-e573df08a1b7
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: http
-  - &id018
-    name: 🇺🇸_US_美国_12
-    type: vmess
-    server: server28.beheshtbaneh.com
-    port: 8880
-    cipher: auto
-    uuid: 2a346c57-5ff4-4e4b-a4d1-f3d008cbe09e
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        host: server28.beheshtbaneh.com
-  - &id019
-    name: 🇺🇸_US_美国_13
-    type: vmess
-    server: server33.beheshtbaneh.com
-    port: 8880
-    cipher: auto
-    uuid: 0873fffc-414f-4140-a155-672129fd9a1d
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        host: server33.beheshtbaneh.com
-  - &id020
-    name: 🇨🇳_CN_中国->🇺🇸_US_美国
-    type: vmess
-    server: rl1.269999.xyz
-    port: 27102
-    cipher: auto
-    uuid: 460d53e3-3fa4-456a-83d1-d75d17d87c65
-    alterId: 0
-    tls: true
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        host: rl1.269999.xyz
-  - &id021
-    name: 🇺🇸_US_美国_14
-    type: vmess
-    server: 104.16.57.82
-    port: 2086
-    cipher: auto
-    uuid: 851278d6-8c0b-4147-8939-89cface46627
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /video/Z7qdcrAGRw
-      headers:
-        host: us77SmSk86j.fzbqfrse.xyz
-  - &id022
+        host: www.nahck.site
+  - &id016
     name: 🇺🇸_US_美国->🇩🇪_DE_德国_2
+    type: trojan
+    server: 104.19.154.92
+    port: 443
+    udp: true
+    password: 8d0de334-c1a0-44ab-9362-e7916c0d268d
+    sni: sshhiddifyc1.cpionline.cc
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /u5ht27KSp8j3Z2QIPbkyFm3I
+  - &id017
+    name: 🇺🇸_US_美国->🇩🇪_DE_德国_3
     type: vmess
-    server: www.greendam.site
+    server: 198.41.202.5
+    port: 80
+    cipher: auto
+    uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2048
+      headers:
+        host: a.prapt5.ir
+  - &id018
+    name: 🇯🇵_JP_日本->🇩🇪_DE_德国_3
+    type: vmess
+    server: 141.147.181.148
+    port: 80
+    cipher: auto
+    uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: my1.tooters.ir
+  - &id019
+    name: 🇺🇸_US_美国->🇩🇪_DE_德国_4
+    type: vmess
+    server: 104.20.231.30
+    port: 80
+    cipher: auto
+    uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: my1.tooters.ir
+  - &id020
+    name: 🇺🇸_US_美国->🇨🇦_CA_加拿大_1
+    type: trojan
+    server: 104.19.159.144
+    port: 443
+    udp: true
+    password: 4aec4e7f8cf8454ea4613659822e1a61
+    sni: avianrecruit.com
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: 6b777a91
+      headers:
+        host: avianrecruit.com
+  - &id021
+    name: 🇺🇸_US_美国->🇩🇪_DE_德国_5
+    type: trojan
+    server: 172.67.143.221
+    port: 443
+    udp: true
+    password: 5528de7e9efc37a45714fe24d7c2d7a5d19dc55a1ad162a7372d7595a14e998f
+    sni: m1.ifixripper.link
+    skip-cert-verify: true
+    network: grpc
+    grpc-opts:
+      grpc-service-name: a47af5e1-0ae6-4e98-85b5-0e3c32dda445___bf4e49304c8193d16c7551b1f84aee3a
+  - &id022
+    name: 🇯🇵_JP_日本->🇩🇪_DE_德国_4
+    type: vmess
+    server: 47.245.40.161
     port: 80
     cipher: auto
     uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e
@@ -316,34 +308,22 @@ proxies:
       headers:
         host: my1.tooters.ir
   - &id023
-    name: 🇮🇪_IE_爱尔兰_2
-    type: trojan
-    server: 52.215.172.18
-    port: 22222
-    udp: true
-    password: telegram-id-privatevpns
-    sni: trojan.miwan.co.uk
-    skip-cert-verify: true
-    network: tcp
-  - &id024
-    name: 🇺🇸_US_美国_15
+    name: 🇩🇪_DE_德国
     type: vmess
-    server: www.crispyrainbow.online
-    port: 8080
+    server: 5.181.23.58
+    port: 80
     cipher: auto
-    uuid: 22826b44-5c1a-4b4b-dbaa-83a2e8bd95f0
+    uuid: 6eff4314-ad4c-4ebc-b1d0-d3b79656f43d
     alterId: 0
     tls: false
     skip-cert-verify: true
     network: ws
     ws-opts:
-      path: /
-      headers:
-        host: www.crispyrainbow.online
-  - &id025
-    name: 🇳🇱_NL_荷兰->🇩🇪_DE_德国_2
+      path: /vmess
+  - &id024
+    name: 🇺🇸_US_美国->🇩🇪_DE_德国_6
     type: vmess
-    server: 188.114.96.11
+    server: 104.24.208.37
     port: 80
     cipher: auto
     uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e
@@ -352,55 +332,56 @@ proxies:
     skip-cert-verify: true
     network: ws
     ws-opts:
-      path: /?ed=2048
+      path: /
       headers:
-        host: a.prapt5.ir
+        host: my1.tooters.ir
+  - &id025
+    name: 🇯🇵_JP_日本->🇩🇪_DE_德国_5
+    type: vmess
+    server: 150.230.205.56
+    port: 80
+    cipher: auto
+    uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: my1.tooters.ir
   - &id026
-    name: 🇺🇸_US_美国->🇩🇪_DE_德国_3
-    type: trojan
-    server: 104.19.154.92
-    port: 443
-    udp: true
-    password: 8d0de334-c1a0-44ab-9362-e7916c0d268d
-    sni: sshhiddifyc1.cpionline.cc
+    name: 🇯🇵_JP_日本->🇩🇪_DE_德国_6
+    type: vmess
+    server: 150.230.197.156
+    port: 80
+    cipher: auto
+    uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e
+    alterId: 0
+    tls: false
     skip-cert-verify: true
     network: ws
     ws-opts:
-      path: /u5ht27KSp8j3Z2QIPbkyFm3I
+      path: /
       headers:
-        host: sshhiddifyc1.cpionline.cchttp/1.1
+        host: my1.tooters.ir
   - &id027
-    name: 🇺🇸_US_美国_16
+    name: 🇨🇳_CN_中国->🇭🇰_HK_香港
     type: vmess
-    server: 172.67.180.248
-    port: 8080
+    server: 101.89.154.94
+    port: 19979
     cipher: auto
-    uuid: 22826b44-5c1a-4b4b-dbaa-83a2e8bd95f0
+    uuid: 941f470e-34e8-3bb0-9b1e-b2c0b4fdb212
     alterId: 0
     tls: false
     skip-cert-verify: true
     network: ws
     ws-opts:
-      path: /
+      path: /db00
       headers:
-        host: www.nahck.site
+        host: cache-hk-2.cn-db.top
   - &id028
-    name: 🇺🇸_US_美国_17
-    type: vmess
-    server: server31.beheshtbaneh.com
-    port: 8880
-    cipher: auto
-    uuid: 4154143c-bbba-47a4-9f79-c2ed087cbcc9
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        host: server31.beheshtbaneh.com
-  - &id029
-    name: 🇺🇸_US_美国->🇩🇪_DE_德国_4
+    name: 🇺🇸_US_美国->🇩🇪_DE_德国_7
     type: vmess
     server: for-irancell.outline-vpn.cloud
     port: 80
@@ -414,35 +395,84 @@ proxies:
       path: /
       headers:
         host: my1.tooters.ir
+  - &id029
+    name: 🇺🇸_US_美国->🇩🇪_DE_德国_8
+    type: vmess
+    server: 104.21.69.44
+    port: 80
+    cipher: auto
+    uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2048
+      headers:
+        host: a.prapt4.ir
   - &id030
-    name: 🇺🇸_US_美国->🇷🇺_RU_俄罗斯联邦
+    name: 🇺🇸_US_美国_7
     type: trojan
-    server: 172.67.204.84
+    server: 172.66.192.18
     port: 443
     udp: true
-    password: qj1Dz1CJmFQRhWr1SP80aA
-    sni: cdn-21.gsmxreality.com
+    password: mainssh-Juhygtr
+    sni: frtws.mainssh.xyz
     skip-cert-verify: true
-    network: grpc
-    grpc-opts:
-      grpc-service-name: 443trojan
+    network: ws
+    ws-opts:
+      path: /trojan
+      headers:
+        host: frtws.mainssh.xyz
   - &id031
-    name: 🇨🇳_CN_中国->🇫🇷_FR_法国
+    name: 🇺🇸_US_美国->🇨🇦_CA_加拿大_2
     type: trojan
-    server: 183.232.230.230
-    port: 8443
+    server: 198.41.220.20
+    port: 443
     udp: true
-    password: 7b4066ae-accc-11eb-a8bf-f23c91cfbbc9
-    sni: 083ab9ab-s8usg0-0-zzkl.s5.p5pv.com
+    password: e8105dfd24414268b6c7652c63731097
+    sni: avianrecruit.com
     skip-cert-verify: true
-    network: tcp
+    network: ws
+    ws-opts:
+      path: 6b777a91
   - &id032
-    name: 🇺🇸_US_美国_18
+    name: 🇳🇱_NL_荷兰->🇩🇪_DE_德国_3
     type: vmess
-    server: 104.21.82.183
-    port: 8880
+    server: 188.114.96.113
+    port: 80
     cipher: auto
-    uuid: 5a7021e0-26b4-45d6-b175-fe551601ca97
+    uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2048
+      headers:
+        host: a.prapt5.ir
+  - &id033
+    name: 🇺🇸_US_美国->🇩🇪_DE_德国_9
+    type: vmess
+    server: 104.16.77.74
+    port: 80
+    cipher: auto
+    uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2048
+      headers:
+        host: my1.tooters.ir
+  - &id034
+    name: 🇺🇸_US_美国_8
+    type: vmess
+    server: 172.67.180.248
+    port: 8080
+    cipher: auto
+    uuid: 22826b44-5c1a-4b4b-dbaa-83a2e8bd95f0
     alterId: 0
     tls: false
     skip-cert-verify: true
@@ -450,11 +480,11 @@ proxies:
     ws-opts:
       path: /
       headers:
-        host: server26.beheshtbaneh.com
-  - &id033
-    name: 🇺🇸_US_美国->🇩🇪_DE_德国_5
+        host: www.nahck.site
+  - &id035
+    name: 🇯🇵_JP_日本->🇩🇪_DE_德国_7
     type: vmess
-    server: 104.24.208.37
+    server: 43.153.181.217
     port: 80
     cipher: auto
     uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e
@@ -525,6 +555,8 @@ proxy-groups:
       - *id031
       - *id032
       - *id033
+      - *id034
+      - *id035
   - name: LOAD-BALANCE
     type: load-balance
     url: http://www.gstatic.com/generate_204
@@ -563,6 +595,8 @@ proxy-groups:
       - *id031
       - *id032
       - *id033
+      - *id034
+      - *id035
   - name: SELECT
     type: select
     proxies:
@@ -599,6 +633,8 @@ proxy-groups:
       - *id031
       - *id032
       - *id033
+      - *id034
+      - *id035
 rules:
   - RULE-SET,applications,DIRECT
   - DOMAIN,clash.razord.top,DIRECT
