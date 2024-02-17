@@ -6,9 +6,9 @@ log-level: info
 external-controller: 0.0.0.0:9090
 proxies:
   - &id001
-    name: 🇳🇱_NL_荷兰->🇩🇪_DE_德国_1
+    name: 🇺🇸_US_美国->🇩🇪_DE_德国_1
     type: vmess
-    server: 188.114.96.11
+    server: 104.21.235.75
     port: 80
     cipher: auto
     uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e
@@ -21,23 +21,24 @@ proxies:
       headers:
         host: a.prapt5.ir
   - &id002
-    name: 🇺🇸_US_美国->🇨🇦_CA_加拿大_1
-    type: trojan
-    server: 104.19.159.144
-    port: 443
-    udp: true
-    password: 4aec4e7f8cf8454ea4613659822e1a61
-    sni: avianrecruit.com
+    name: 🇺🇸_US_美国_1
+    type: vmess
+    server: 209.141.37.89
+    port: 80
+    cipher: auto
+    uuid: c37f5fe6-5621-412f-8b78-1d6197ade017
+    alterId: 0
+    tls: false
     skip-cert-verify: true
     network: ws
     ws-opts:
-      path: 6b777a91
+      path: /
       headers:
-        host: avianrecruit.com
+        host: apps.apple.com
   - &id003
-    name: 🇺🇸_US_美国->🇩🇪_DE_德国_1
+    name: 🇺🇸_US_美国->🇩🇪_DE_德国_2
     type: vmess
-    server: 104.21.69.44
+    server: 104.21.226.10
     port: 80
     cipher: auto
     uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e
@@ -48,11 +49,11 @@ proxies:
     ws-opts:
       path: /?ed=2048
       headers:
-        host: a.prapt4.ir
+        host: a.prapt5.ir
   - &id004
-    name: 🇳🇱_NL_荷兰->🇩🇪_DE_德国_2
+    name: 🇺🇸_US_美国->🇩🇪_DE_德国_3
     type: vmess
-    server: 188.114.96.113
+    server: 104.21.229.29
     port: 80
     cipher: auto
     uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e
@@ -65,9 +66,9 @@ proxies:
       headers:
         host: a.prapt5.ir
   - &id005
-    name: 🇳🇱_NL_荷兰->🇩🇪_DE_德国_3
+    name: 🇺🇸_US_美国->🇩🇪_DE_德国_4
     type: vmess
-    server: mci--join.outline-vpn.cloud
+    server: 104.21.235.76
     port: 80
     cipher: auto
     uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e
@@ -80,261 +81,440 @@ proxies:
       headers:
         host: a.prapt5.ir
   - &id006
-    name: 🇺🇸_US_美国_1
+    name: 🇺🇸_US_美国->🇩🇪_DE_德国_5
     type: vmess
-    server: 172.67.180.248
-    port: 8080
+    server: 104.21.232.63
+    port: 80
     cipher: auto
-    uuid: 22826b44-5c1a-4b4b-dbaa-83a2e8bd95f0
+    uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e
     alterId: 0
     tls: false
     skip-cert-verify: true
     network: ws
     ws-opts:
-      path: /
+      path: /?ed=2048
       headers:
-        host: www.nahck.site
+        host: a.prapt5.ir
   - &id007
-    name: 🇺🇸_US_美国->🇨🇦_CA_加拿大_2
-    type: trojan
-    server: 198.41.220.20
-    port: 443
-    udp: true
-    password: e8105dfd24414268b6c7652c63731097
-    sni: avianrecruit.com
+    name: 🇺🇸_US_美国->🇩🇪_DE_德国_6
+    type: vmess
+    server: 104.21.229.45
+    port: 80
+    cipher: auto
+    uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e
+    alterId: 0
+    tls: false
     skip-cert-verify: true
     network: ws
     ws-opts:
-      path: 6b777a91
+      path: /?ed=2048
+      headers:
+        host: a.prapt5.ir
   - &id008
+    name: 🇺🇸_US_美国->🇩🇪_DE_德国_7
+    type: vmess
+    server: 104.21.224.2
+    port: 80
+    cipher: auto
+    uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2048
+      headers:
+        host: a.prapt5.ir
+  - &id009
     name: 🇺🇸_US_美国_2
+    type: vmess
+    server: 104.18.15.147
+    port: 80
+    cipher: auto
+    uuid: c37f5fe6-5621-412f-8b78-1d6197ade017
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: us3.889611.com
+  - &id010
+    name: 🇺🇸_US_美国->🇩🇪_DE_德国_8
+    type: vmess
+    server: 104.21.232.44
+    port: 80
+    cipher: auto
+    uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2048
+      headers:
+        host: a.prapt5.ir
+  - &id011
+    name: 🇺🇸_US_美国->🇩🇪_DE_德国_9
+    type: vmess
+    server: 104.21.231.58
+    port: 80
+    cipher: auto
+    uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2048
+      headers:
+        host: a.prapt5.ir
+  - &id012
+    name: 🇺🇸_US_美国->🇩🇪_DE_德国_10
+    type: vmess
+    server: 104.21.238.71
+    port: 80
+    cipher: auto
+    uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2048
+      headers:
+        host: a.prapt5.ir
+  - &id013
+    name: 🇺🇸_US_美国->🇩🇪_DE_德国_11
+    type: vmess
+    server: 104.21.235.55
+    port: 80
+    cipher: auto
+    uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2048
+      headers:
+        host: a.prapt5.ir
+  - &id014
+    name: 🇺🇸_US_美国->🇩🇪_DE_德国_12
+    type: vmess
+    server: 104.21.239.98
+    port: 80
+    cipher: auto
+    uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2048
+      headers:
+        host: a.prapt5.ir
+  - &id015
+    name: 🇺🇸_US_美国->🇩🇪_DE_德国_13
+    type: vmess
+    server: 104.21.228.40
+    port: 80
+    cipher: auto
+    uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2048
+      headers:
+        host: a.prapt5.ir
+  - &id016
+    name: 🇺🇸_US_美国->🇩🇪_DE_德国_14
+    type: vmess
+    server: 104.21.237.86
+    port: 80
+    cipher: auto
+    uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2048
+      headers:
+        host: a.prapt5.ir
+  - &id017
+    name: 🇺🇸_US_美国->🇩🇪_DE_德国_15
+    type: vmess
+    server: 104.21.227.16
+    port: 80
+    cipher: auto
+    uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2048
+      headers:
+        host: a.prapt5.ir
+  - &id018
+    name: 🇺🇸_US_美国->🇩🇪_DE_德国_16
+    type: vmess
+    server: 104.21.236.61
+    port: 80
+    cipher: auto
+    uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2048
+      headers:
+        host: a.prapt5.ir
+  - &id019
+    name: 🇺🇸_US_美国->🇩🇪_DE_德国_17
+    type: vmess
+    server: 104.21.235.57
+    port: 80
+    cipher: auto
+    uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2048
+      headers:
+        host: a.prapt5.ir
+  - &id020
+    name: 🇺🇸_US_美国->🇩🇪_DE_德国_18
+    type: vmess
+    server: 104.21.230.34
+    port: 80
+    cipher: auto
+    uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2048
+      headers:
+        host: a.prapt5.ir
+  - &id021
+    name: 🇺🇸_US_美国->🇩🇪_DE_德国_19
+    type: vmess
+    server: 104.21.229.25
+    port: 80
+    cipher: auto
+    uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2048
+      headers:
+        host: a.prapt5.ir
+  - &id022
+    name: 🇺🇸_US_美国->🇩🇪_DE_德国_20
+    type: vmess
+    server: 104.21.228.43
+    port: 80
+    cipher: auto
+    uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2048
+      headers:
+        host: a.prapt5.ir
+  - &id023
+    name: 🇺🇸_US_美国->🇩🇪_DE_德国_21
+    type: vmess
+    server: 104.21.231.56
+    port: 80
+    cipher: auto
+    uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2048
+      headers:
+        host: a.prapt5.ir
+  - &id024
+    name: 🇺🇸_US_美国->🇩🇪_DE_德国_22
+    type: vmess
+    server: 104.21.235.79
+    port: 80
+    cipher: auto
+    uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2048
+      headers:
+        host: a.prapt5.ir
+  - &id025
+    name: 🇺🇸_US_美国->🇩🇪_DE_德国_23
+    type: vmess
+    server: 104.21.232.40
+    port: 80
+    cipher: auto
+    uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2048
+      headers:
+        host: a.prapt5.ir
+  - &id026
+    name: 🇺🇸_US_美国->🇩🇪_DE_德国_24
+    type: vmess
+    server: 104.21.224.3
+    port: 80
+    cipher: auto
+    uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2048
+      headers:
+        host: a.prapt5.ir
+  - &id027
+    name: 🇷🇺_RU_俄罗斯联邦
+    type: vmess
+    server: 45.144.2.113
+    port: 80
+    cipher: auto
+    uuid: c37f5fe6-5621-412f-8b78-1d6197ade017
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: www.apple.com
+  - &id028
+    name: 🇺🇸_US_美国->🇨🇦_CA_加拿大
+    type: vmess
+    server: 162.159.200.4
+    port: 80
+    cipher: auto
+    uuid: c37f5fe6-5621-412f-8b78-1d6197ade017
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: ca3.889611.com
+  - &id029
+    name: 🇺🇸_US_美国->🇩🇪_DE_德国_25
+    type: vmess
+    server: 104.21.231.57
+    port: 80
+    cipher: auto
+    uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2048
+      headers:
+        host: a.prapt5.ir
+  - &id030
+    name: 🇺🇸_US_美国->🇩🇪_DE_德国_26
+    type: vmess
+    server: 104.21.236.64
+    port: 80
+    cipher: auto
+    uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2048
+      headers:
+        host: a.prapt5.ir
+  - &id031
+    name: 🇺🇸_US_美国->🇩🇪_DE_德国_27
+    type: vmess
+    server: 104.21.238.73
+    port: 80
+    cipher: auto
+    uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2048
+      headers:
+        host: a.prapt5.ir
+  - &id032
+    name: 🇨🇳_CN_中国->🇺🇸_US_美国
+    type: vmess
+    server: 221.131.165.179
+    port: 18098
+    cipher: auto
+    uuid: 796f2257-58f6-320b-9022-2655c256703e
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /soda
+      headers:
+        host: cn.bing.com
+  - &id033
+    name: 🇺🇸_US_美国->🇩🇪_DE_德国_28
     type: trojan
-    server: 104.19.171.3
+    server: 104.21.14.95
     port: 443
     udp: true
-    password: f0eb8c92ce8946aaba856569cff1a16b
-    sni: sherasheba.com
+    password: 01a7ed92-3ff7-4872-84a8-fcb4757783c7
+    sni: rsfndc1.cpionline.us
     skip-cert-verify: true
     network: ws
     ws-opts:
-      path: 6b777a91
+      path: /3D8U0cLhe2MGwH9c1eh1994
       headers:
-        host: sherasheba.com
-  - &id009
-    name: 🇺🇸_US_美国_3
-    type: vmess
-    server: 5.161.220.92
-    port: 3389
-    cipher: auto
-    uuid: 9c050a86-d612-48f1-ec32-e573df08a1b7
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: http
-  - &id010
-    name: 🇺🇸_US_美国_4
-    type: vmess
-    server: www.nahck.site
-    port: 8080
-    cipher: auto
-    uuid: 22826b44-5c1a-4b4b-dbaa-83a2e8bd95f0
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        host: www.nahck.site
-  - &id011
-    name: 🇯🇵_JP_日本->🇩🇪_DE_德国_1
-    type: vmess
-    server: 131.186.63.127
-    port: 80
-    cipher: auto
-    uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        host: my1.tooters.ir
-  - &id012
-    name: 🇯🇵_JP_日本->🇩🇪_DE_德国_2
-    type: vmess
-    server: 138.2.6.15
-    port: 80
-    cipher: auto
-    uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        host: my1.tooters.ir
-  - &id013
-    name: 🇯🇵_JP_日本->🇩🇪_DE_德国_3
-    type: vmess
-    server: 141.147.181.148
-    port: 80
-    cipher: auto
-    uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        host: my1.tooters.ir
-  - &id014
-    name: 🇯🇵_JP_日本->🇩🇪_DE_德国_4
-    type: vmess
-    server: 47.245.40.161
-    port: 80
-    cipher: auto
-    uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        host: my1.tooters.ir
-  - &id015
-    name: 🇯🇵_JP_日本->🇩🇪_DE_德国_5
-    type: vmess
-    server: 150.230.197.156
-    port: 80
-    cipher: auto
-    uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        host: my1.tooters.ir
-  - &id016
-    name: 🇺🇸_US_美国_5
-    type: vmess
-    server: 104.21.28.62
+        host: rsfndc1.cpionline.us
+    alpn:
+      - http/1.1
+  - &id034
+    name: 🇺🇸_US_美国->🇬🇧_GB_英国
+    type: trojan
+    server: 104.18.0.226
     port: 443
-    cipher: auto
-    uuid: 0d9776dd-e12e-4a5e-9bf2-8cceb1b502f1
-    alterId: 0
-    tls: true
+    udp: true
+    password: mainssh-Lpkomlj
+    sni: uktws.mainssh.xyz
     skip-cert-verify: true
     network: ws
     ws-opts:
-      path: /vmess
-      headers:
-        host: pt1-vmess.sshmax.xyz
-  - &id017
-    name: 🇺🇸_US_美国_6
-    type: vmess
-    server: 144.126.145.219
-    port: 80
-    cipher: auto
-    uuid: 2a8a10fb-9ca3-367e-a234-cf09f841be4f
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /v118-fccxmxm35
-      headers:
-        host: internet.life.com.by
-  - &id018
-    name: 🇺🇸_US_美国_7
-    type: vmess
-    server: channel.hopev2ray.link
-    port: 443
-    cipher: auto
-    uuid: e2e25aa2-aab9-486c-9ab4-495bcbcea4d8
-    alterId: 0
-    tls: true
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /vmess
-      headers:
-        host: se2-vmess.sshmax.xyz
-  - &id019
-    name: 🇯🇵_JP_日本->🇩🇪_DE_德国_6
-    type: vmess
-    server: 47.91.31.231
-    port: 80
-    cipher: auto
-    uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        host: my1.tooters.ir
-  - &id020
-    name: 🇯🇵_JP_日本->🇩🇪_DE_德国_7
-    type: vmess
-    server: 43.153.181.217
-    port: 80
-    cipher: auto
-    uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        host: my1.tooters.ir
-  - &id021
-    name: 🇺🇸_US_美国_8
-    type: vmess
-    server: 104.21.1.28
-    port: 8880
-    cipher: auto
-    uuid: 4b5e4565-322f-4223-a891-78a84f189726
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /XSjeg73o6ZdsheahCb5JG
-      headers:
-        host: us-ccs.yuji2022.eu.org
-  - &id022
-    name: 🇺🇸_US_美国->🇯🇵_JP_日本
-    type: vmess
-    server: 104.17.123.55
-    port: 8080
-    cipher: auto
-    uuid: 1d47288a-699d-45ca-b4f0-4e5b36940e6f
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /qZTtpya?ed=2048
-      headers:
-        host: pq.kmoljklj.top
-  - &id023
-    name: 🇬🇧_GB_英国
-    type: ss
-    server: 89.185.84.30
-    port: 20228
-    password: eaFTlcgpEUZbK0U1GI6Q6l
-    cipher: chacha20-ietf-poly1305
-  - &id024
-    name: 🇺🇸_US_美国->🇩🇪_DE_德国_2
+      path: /trojan
+  - &id035
+    name: 🇺🇸_US_美国->🇩🇪_DE_德国_29
     type: trojan
     server: 104.19.154.92
     port: 443
@@ -345,36 +525,69 @@ proxies:
     network: ws
     ws-opts:
       path: /u5ht27KSp8j3Z2QIPbkyFm3I
-  - &id025
-    name: 🇺🇸_US_美国->🇷🇺_RU_俄罗斯联邦
+  - &id036
+    name: 🇨🇦_CA_加拿大_1
     type: trojan
-    server: 172.67.204.84
-    port: 443
+    server: 99.79.131.31
+    port: 22222
     udp: true
-    password: qj1Dz1CJmFQRhWr1SP80aA
-    sni: cdn-21.gsmxreality.com
+    password: telegram-id-directvpn
+    sni: trojan.miwan.co.uk
     skip-cert-verify: true
-    network: grpc
-    grpc-opts:
-      grpc-service-name: 443trojan
-  - &id026
-    name: 🇩🇪_DE_德国
+    network: tcp
+  - &id037
+    name: 🇫🇷_FR_法国
+    type: ss
+    server: 13.38.232.50
+    port: 2095
+    password: TurbooServer=
+    cipher: chacha20-ietf-poly1305
+  - &id038
+    name: 🇮🇪_IE_爱尔兰
+    type: trojan
+    server: 108.128.197.210
+    port: 22222
+    udp: true
+    password: telegram-id-privatevpns
+    sni: trojan.miwan.co.uk
+    skip-cert-verify: true
+    network: tcp
+  - &id039
+    name: 🇨🇦_CA_加拿大_2
+    type: trojan
+    server: 52.60.255.203
+    port: 22222
+    udp: true
+    password: telegram-id-directvpn
+    sni: trojan.miwan.co.uk
+    skip-cert-verify: true
+    network: tcp
+  - &id040
+    name: 🇹🇼_TW_台湾_1
     type: vmess
-    server: 5.181.23.58
-    port: 80
+    server: b23.ntbq.dynu.net
+    port: 2024
     cipher: auto
-    uuid: 6eff4314-ad4c-4ebc-b1d0-d3b79656f43d
+    uuid: 60ab817e-0566-44cb-becd-6b51698d5672
     alterId: 0
     tls: false
     skip-cert-verify: true
-    servername: internet.life.com.by
-    network: ws
-    ws-opts:
-      path: /vmess
-  - &id027
-    name: 🇯🇵_JP_日本->🇩🇪_DE_德国_8
+    network: tcp
+  - &id041
+    name: 🇹🇼_TW_台湾_2
     type: vmess
-    server: 150.230.205.56
+    server: nb22.ntbq.dynu.net
+    port: 12002
+    cipher: auto
+    uuid: 4e488e23-d1e5-40ee-8ffb-22bd95e80d0a
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: tcp
+  - &id042
+    name: 🇺🇸_US_美国->🇩🇪_DE_德国_30
+    type: vmess
+    server: 104.21.233.69
     port: 80
     cipher: auto
     uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e
@@ -383,85 +596,84 @@ proxies:
     skip-cert-verify: true
     network: ws
     ws-opts:
-      path: /
+      path: /?ed=2048
       headers:
-        host: my1.tooters.ir
-  - &id028
-    name: 🇨🇦_CA_加拿大_1
+        host: a.prapt5.ir
+  - &id043
+    name: 🇺🇸_US_美国->🇩🇪_DE_德国_31
     type: vmess
-    server: tg-dns68.shift.cloudns.org
+    server: 104.21.237.66
     port: 80
     cipher: auto
-    uuid: 54133fe6-4578-48bc-ffb0-183ad760bd85
+    uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e
     alterId: 0
     tls: false
     skip-cert-verify: true
     network: ws
     ws-opts:
-      path: /TG@dns68
+      path: /?ed=2048
       headers:
-        host: tg-dns68.shift.cloudns.org
-  - &id029
-    name: 🇺🇸_US_美国_9
-    type: trojan
-    server: 172.66.192.18
-    port: 443
-    udp: true
-    password: mainssh-Juhygtr
-    sni: frtws.mainssh.xyz
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /trojan
-      headers:
-        host: frtws.mainssh.xyz
-  - &id030
-    name: 🇨🇳_CN_中国->🇭🇰_HK_香港
+        host: a.prapt5.ir
+  - &id044
+    name: 🇺🇸_US_美国->🇩🇪_DE_德国_32
     type: vmess
-    server: 101.89.154.94
-    port: 19979
+    server: 104.21.225.7
+    port: 80
     cipher: auto
-    uuid: 941f470e-34e8-3bb0-9b1e-b2c0b4fdb212
+    uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e
     alterId: 0
     tls: false
     skip-cert-verify: true
     network: ws
     ws-opts:
-      path: /db00
+      path: /?ed=2048
       headers:
-        host: cache-hk-2.cn-db.top
-  - &id031
-    name: 🇺🇸_US_美国->🇩🇪_DE_德国_3
-    type: trojan
-    server: 172.67.143.221
-    port: 443
-    udp: true
-    password: 5528de7e9efc37a45714fe24d7c2d7a5d19dc55a1ad162a7372d7595a14e998f
-    sni: m1.ifixripper.link
+        host: a.prapt5.ir
+  - &id045
+    name: 🇺🇸_US_美国->🇩🇪_DE_德国_33
+    type: vmess
+    server: 104.21.231.39
+    port: 80
+    cipher: auto
+    uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e
+    alterId: 0
+    tls: false
     skip-cert-verify: true
-    network: grpc
-    grpc-opts:
-      grpc-service-name: a47af5e1-0ae6-4e98-85b5-0e3c32dda445___bf4e49304c8193d16c7551b1f84aee3a
-  - &id032
-    name: 🇨🇦_CA_加拿大_2
-    type: trojan
-    server: 15.157.8.36
-    port: 22222
-    udp: true
-    password: telegram-id-directvpn
-    sni: trojan.miwan.co.uk
+    network: ws
+    ws-opts:
+      path: /?ed=2048
+      headers:
+        host: a.prapt5.ir
+  - &id046
+    name: 🇺🇸_US_美国->🇩🇪_DE_德国_34
+    type: vmess
+    server: 104.21.231.35
+    port: 80
+    cipher: auto
+    uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e
+    alterId: 0
+    tls: false
     skip-cert-verify: true
-    network: tcp
-  - &id033
-    name: 🇫🇷_FR_法国
-    type: trojan
-    server: 13.37.114.10
-    port: 22222
-    udp: true
-    password: telegram-id-privatevpns
-    sni: trojan.miwan.co.uk
+    network: ws
+    ws-opts:
+      path: /?ed=2048
+      headers:
+        host: a.prapt5.ir
+  - &id047
+    name: 🇺🇸_US_美国_3
+    type: vmess
+    server: 104.21.73.14
+    port: 8880
+    cipher: auto
+    uuid: 45f63e92-f782-4cac-84b8-e61cb5a5bfd0
+    alterId: 0
+    tls: false
     skip-cert-verify: true
-    network: tcp
+    network: ws
+    ws-opts:
+      path: /adenc35.fixedlfoat.top/linkws
+      headers:
+        host: yaghoob55freenodes.repaco69437403.workers.dev
 proxy-groups:
   - name: PROXY
     type: select
@@ -521,6 +733,20 @@ proxy-groups:
       - *id031
       - *id032
       - *id033
+      - *id034
+      - *id035
+      - *id036
+      - *id037
+      - *id038
+      - *id039
+      - *id040
+      - *id041
+      - *id042
+      - *id043
+      - *id044
+      - *id045
+      - *id046
+      - *id047
   - name: LOAD-BALANCE
     type: load-balance
     url: http://www.gstatic.com/generate_204
@@ -559,6 +785,20 @@ proxy-groups:
       - *id031
       - *id032
       - *id033
+      - *id034
+      - *id035
+      - *id036
+      - *id037
+      - *id038
+      - *id039
+      - *id040
+      - *id041
+      - *id042
+      - *id043
+      - *id044
+      - *id045
+      - *id046
+      - *id047
   - name: SELECT
     type: select
     proxies:
@@ -595,6 +835,20 @@ proxy-groups:
       - *id031
       - *id032
       - *id033
+      - *id034
+      - *id035
+      - *id036
+      - *id037
+      - *id038
+      - *id039
+      - *id040
+      - *id041
+      - *id042
+      - *id043
+      - *id044
+      - *id045
+      - *id046
+      - *id047
 rules:
   - RULE-SET,applications,DIRECT
   - DOMAIN,clash.razord.top,DIRECT
