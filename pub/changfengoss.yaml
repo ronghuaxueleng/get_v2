@@ -6,38 +6,33 @@ log-level: info
 external-controller: 0.0.0.0:9090
 proxies: []
 proxy-groups:
-  - name: PROXY
-    type: select
-    proxies:
-      - URL-TEST
-      - LOAD-BALANCE
-      - SELECT
-      - DIRECT
-  - name: OTHER
-    type: select
-    proxies:
-      - PROXY
-      - DIRECT
-  - name: AD
-    type: select
-    proxies:
-      - REJECT
-      - DIRECT
-      - PROXY
-  - name: URL-TEST
-    type: url-test
-    url: http://www.gstatic.com/generate_204
-    interval: 600
-    lazy: true
-    tolerance: 100
-    proxies: []
-  - name: LOAD-BALANCE
+  - name: 负载均衡
     type: load-balance
-    url: http://www.gstatic.com/generate_204
-    interval: 600
-    proxies: []
-  - name: SELECT
+    url: https://cp.cloudflare.com/generate_204
+    interval: 300
+    proxies:
+      - DIRECT
+      - REJECT
+    strategy: round-robin
+  - name: ♻️ 自动选择
+    type: url-test
+    url: https://cp.cloudflare.com/generate_204
+    interval: 300
+    tolerance: 50
+    proxies:
+      - DIRECT
+      - REJECT
+  - name: 🌍选择代理节点
     type: select
-    proxies: []
-rules: []
+    proxies:
+      - DIRECT
+      - REJECT
+rules:
+  - DOMAIN-SUFFIX,vpnse.org,🌍选择代理节点
+  - GEOIP,LAN,DIRECT
+  - DOMAIN-SUFFIX,v2rayse.com,🌍选择代理节点
+  - MATCH,🌍选择代理节点
+  - DOMAIN-SUFFIX,cff.pw,🌍选择代理节点
+  - DOMAIN-SUFFIX,cfmem.com,🌍选择代理节点
+  - GEOIP,CN,DIRECT
 mixed-port: 7890
