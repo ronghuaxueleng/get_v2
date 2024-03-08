@@ -21,63 +21,22 @@ proxies:
       headers:
         host: food.zhaal.ir
   - &id002
-    name: 🇨🇳_CN_中国->🇺🇸_US_美国_1
-    type: ss
-    server: ahcm.dyqufx.com
-    port: 44507
-    password: 86e3471b-0b08-40b5-a297-2a54632757b9
-    cipher: chacha20-ietf-poly1305
-  - &id003
-    name: 🇨🇦_CA_加拿大->🇺🇸_US_美国
-    type: trojan
-    server: 23.227.38.11
-    port: 443
-    udp: true
-    password: b17fa17d-13a0-4e8a-a398-8e549ea8b208
-    sni: syndication-statutes-wanted-logo.trycloudflare.com
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /argox-tr
-  - &id004
-    name: 🇨🇳_CN_中国->🇺🇸_US_美国_2
-    type: ss
-    server: 10thzcm.xn--wbr85ozt0asys8qt.net
-    port: 36697
-    password: 86e3471b-0b08-40b5-a297-2a54632757b9
-    cipher: chacha20-ietf-poly1305
-  - &id005
     name: 🇺🇸_US_美国->🇨🇦_CA_加拿大
     type: vmess
     server: fbi.gov
     port: 8080
     cipher: auto
-    uuid: 0a5903c5-0ff3-4d79-9420-2a966873f787
+    uuid: b1e5c55d-e59b-42c4-aeb9-393e18525cca
     alterId: 0
     tls: false
     skip-cert-verify: true
     network: ws
     ws-opts:
-      path: 0a5903c5-0ff3-4d79-9420-2a966873f787-vm
+      path: b1e5c55d-e59b-42c4-aeb9-393e18525cca-vm
       headers:
-        host: pcs-referenced-camera-concerns.trycloudflare.com
-  - &id006
-    name: 🇷🇺_RU_俄罗斯联邦
-    type: vmess
-    server: 176.120.74.142
-    port: 443
-    cipher: auto
-    uuid: 75695f5a-b6af-44f4-9983-ae250b53ff9c
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        host: internet.life.com.by
-  - &id007
-    name: 🇺🇸_US_美国_1
+        host: nest-emily-healing-h.trycloudflare.com
+  - &id003
+    name: 🇺🇸_US_美国->🇫🇷_FR_法国
     type: vmess
     server: 172.67.130.140
     port: 2082
@@ -91,36 +50,18 @@ proxies:
       path: /
       headers:
         host: s1c.v2.v001sss.xyz
-  - &id008
-    name: 🇺🇸_US_美国_2
-    type: vmess
-    server: cloudflare.cfgo.cc
-    port: 80
-    cipher: auto
-    uuid: 22a13aa2-4854-44cb-e090-ec71ab84b1ff
-    alterId: 0
-    tls: false
+  - &id004
+    name: 🇨🇦_CA_加拿大->🇺🇸_US_美国
+    type: trojan
+    server: 23.227.38.11
+    port: 443
+    udp: true
+    password: b17fa17d-13a0-4e8a-a398-8e549ea8b208
+    sni: syndication-statutes-wanted-logo.trycloudflare.com
     skip-cert-verify: true
     network: ws
     ws-opts:
-      path: /
-      headers:
-        host: wap.hostmjj.com
-  - &id009
-    name: 🇨🇦_CA_加拿大
-    type: vmess
-    server: 23.227.38.22
-    port: 8080
-    cipher: auto
-    uuid: e9d23b60-6e44-45a2-b24f-c8521c04c310
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: e9d23b60-6e44-45a2-b24f-c8521c04c310-vm
-      headers:
-        host: per-essex-patterns-bowling.trycloudflare.com
+      path: /argox-tr
 proxy-groups:
   - name: PROXY
     type: select
@@ -151,11 +92,6 @@ proxy-groups:
       - *id002
       - *id003
       - *id004
-      - *id005
-      - *id006
-      - *id007
-      - *id008
-      - *id009
   - name: LOAD-BALANCE
     type: load-balance
     url: http://www.gstatic.com/generate_204
@@ -165,11 +101,6 @@ proxy-groups:
       - *id002
       - *id003
       - *id004
-      - *id005
-      - *id006
-      - *id007
-      - *id008
-      - *id009
   - name: SELECT
     type: select
     proxies:
@@ -177,11 +108,6 @@ proxy-groups:
       - *id002
       - *id003
       - *id004
-      - *id005
-      - *id006
-      - *id007
-      - *id008
-      - *id009
 rules:
   - RULE-SET,applications,DIRECT
   - DOMAIN,clash.razord.top,DIRECT
