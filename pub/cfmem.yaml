@@ -6,7 +6,7 @@ log-level: info
 external-controller: 0.0.0.0:9090
 proxies:
   - &id001
-    name: 🇦🇪_AE_阿联酋->🇫🇷_FR_法国
+    name: 🇦🇪_AE_阿联酋->🇬🇧_GB_英国
     type: vmess
     server: 94.140.0.110
     port: 8880
@@ -21,27 +21,12 @@ proxies:
       headers:
         host: food.zhaal.ir
   - &id002
-    name: 🇺🇸_US_美国->🇨🇦_CA_加拿大
+    name: 🇺🇸_US_美国_1
     type: vmess
-    server: fbi.gov
+    server: www.velvetmountain.shop
     port: 8080
     cipher: auto
-    uuid: b1e5c55d-e59b-42c4-aeb9-393e18525cca
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: b1e5c55d-e59b-42c4-aeb9-393e18525cca-vm
-      headers:
-        host: nest-emily-healing-h.trycloudflare.com
-  - &id003
-    name: 🇺🇸_US_美国->🇫🇷_FR_法国
-    type: vmess
-    server: 172.67.130.140
-    port: 2082
-    cipher: auto
-    uuid: 112ac36f-3f53-4e26-8371-d25c028e1b9a
+    uuid: 22826b44-5c1a-4b4b-dbaa-83a2e8bd95f0
     alterId: 0
     tls: false
     skip-cert-verify: true
@@ -49,19 +34,134 @@ proxies:
     ws-opts:
       path: /
       headers:
-        host: s1c.v2.v001sss.xyz
-  - &id004
-    name: 🇨🇦_CA_加拿大->🇺🇸_US_美国
-    type: trojan
-    server: 23.227.38.11
-    port: 443
-    udp: true
-    password: b17fa17d-13a0-4e8a-a398-8e549ea8b208
-    sni: syndication-statutes-wanted-logo.trycloudflare.com
+        host: www.velvetmountain.shop
+  - &id003
+    name: 🇺🇸_US_美国->🇮🇹_IT_意大利
+    type: vmess
+    server: frcc.digicert.pp.ua
+    port: 2052
+    cipher: auto
+    uuid: 5cc3a871-6eeb-4b87-b4e4-4f2611eb5441
+    alterId: 0
+    tls: false
     skip-cert-verify: true
     network: ws
     ws-opts:
-      path: /argox-tr
+      path: /apopsdsssaop
+      headers:
+        host: asdfas.qkhbyf.tech
+  - &id004
+    name: 🇮🇪_IE_爱尔兰
+    type: trojan
+    server: 34.243.1.59
+    port: 22222
+    udp: true
+    password: telegram-id-directvpn
+    sni: trojan.miwan.co.uk
+    skip-cert-verify: true
+    network: tcp
+    alpn:
+      - http/1.1
+  - &id005
+    name: 🇦🇷_AR_阿根廷
+    type: ss
+    server: 190.103.176.29
+    port: 989
+    password: f8f7aCzcPKbsF8p3
+    cipher: aes-256-cfb
+  - &id006
+    name: 🇺🇸_US_美国->🇮🇳_IN_印度_1
+    type: vmess
+    server: www.visa.co.jp
+    port: 8080
+    cipher: auto
+    uuid: e184e964-518c-4ddf-ab05-f0a2ecff2f42
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: ydmmamd1.mac2win.top
+  - &id007
+    name: 🇺🇸_US_美国->🇮🇳_IN_印度_2
+    type: vmess
+    server: www.visa.com.hk
+    port: 80
+    cipher: auto
+    uuid: e184e964-518c-4ddf-ab05-f0a2ecff2f42
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: ydmmamd2.mac2win.top
+  - &id008
+    name: 🇺🇸_US_美国_2
+    type: vmess
+    server: 104.21.54.252
+    port: 8080
+    cipher: auto
+    uuid: 22826b44-5c1a-4b4b-dbaa-83a2e8bd95f0
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: www.velvetmountain.shop
+  - &id009
+    name: 🇺🇸_US_美国_3
+    type: ss
+    server: 138.124.184.209
+    port: 32955
+    password: s2S9dyaGAPRY0N3LYz838G
+    cipher: chacha20-ietf-poly1305
+  - &id010
+    name: 🇺🇸_US_美国_4
+    type: vmess
+    server: 172.67.143.192
+    port: 8080
+    cipher: auto
+    uuid: 22826b44-5c1a-4b4b-dbaa-83a2e8bd95f0
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: www.velvetmountain.shop
+  - &id011
+    name: 🇺🇸_US_美国->🇷🇺_RU_俄罗斯联邦
+    type: trojan
+    server: 172.67.132.6
+    port: 2096
+    udp: true
+    password: 7b06d62b-25ed-45ed-ac0d-bc28a4779ef9
+    sni: channel.v2bamdad.tech
+    skip-cert-verify: true
+    network: grpc
+    grpc-opts:
+      grpc-service-name: lK1wclmJRbMxj4FxIzvwxUDoX
+    alpn:
+      - h2
+  - &id012
+    name: 🇨🇦_CA_加拿大
+    type: trojan
+    server: 15.157.113.141
+    port: 22222
+    udp: true
+    password: telegram-id-directvpn
+    sni: trojan.miwan.co.uk
+    skip-cert-verify: true
+    network: tcp
+    alpn:
+      - http/1.1
 proxy-groups:
   - name: PROXY
     type: select
@@ -92,6 +192,14 @@ proxy-groups:
       - *id002
       - *id003
       - *id004
+      - *id005
+      - *id006
+      - *id007
+      - *id008
+      - *id009
+      - *id010
+      - *id011
+      - *id012
   - name: LOAD-BALANCE
     type: load-balance
     url: http://www.gstatic.com/generate_204
@@ -101,6 +209,14 @@ proxy-groups:
       - *id002
       - *id003
       - *id004
+      - *id005
+      - *id006
+      - *id007
+      - *id008
+      - *id009
+      - *id010
+      - *id011
+      - *id012
   - name: SELECT
     type: select
     proxies:
@@ -108,6 +224,14 @@ proxy-groups:
       - *id002
       - *id003
       - *id004
+      - *id005
+      - *id006
+      - *id007
+      - *id008
+      - *id009
+      - *id010
+      - *id011
+      - *id012
 rules:
   - RULE-SET,applications,DIRECT
   - DOMAIN,clash.razord.top,DIRECT
