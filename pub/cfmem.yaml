@@ -6,17 +6,6 @@ log-level: info
 external-controller: 0.0.0.0:9090
 proxies:
   - &id001
-    name: 🇨🇳_CN_中国->🇺🇸_US_美国
-    type: vmess
-    server: 50003.baidu-cdn.top
-    port: 50003
-    cipher: auto
-    uuid: e80442e2-4577-4b33-8d9b-798d816974bd
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: tcp
-  - &id002
     name: 🇺🇸_US_美国->🇷🇺_RU_俄罗斯联邦
     type: trojan
     server: 172.67.204.84
@@ -28,52 +17,122 @@ proxies:
     network: grpc
     grpc-opts:
       grpc-service-name: 443trojan
-  - &id003
-    name: 🇺🇸_US_美国->🇨🇦_CA_加拿大_1
-    type: vmess
-    server: yh3.freeh1.xyz
-    port: 8080
-    cipher: auto
-    uuid: 028c8131-9e3e-4836-94ac-ea7f24d4d05a
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: 028c8131-9e3e-4836-94ac-ea7f24d4d05a-vm
-      headers:
-        host: nest-emily-healing-h.trycloudflare.com
-  - &id004
+  - &id002
     name: 🇺🇸_US_美国_1
     type: vmess
-    server: yh1.freeh1.xyz
+    server: www.velvetmountain.shop
     port: 8080
     cipher: auto
-    uuid: 82cb93a3-65a9-4dac-a2a7-d997b6c26d6a
+    uuid: 22826b44-5c1a-4b4b-dbaa-83a2e8bd95f0
     alterId: 0
     tls: false
     skip-cert-verify: true
     network: ws
     ws-opts:
-      path: 82cb93a3-65a9-4dac-a2a7-d997b6c26d6a-vm
+      path: /
       headers:
-        host: larger-marketing-amounts-skin.trycloudflare.com
-  - &id005
-    name: 🇺🇸_US_美国->🇨🇦_CA_加拿大_2
+        host: www.velvetmountain.shop
+  - &id003
+    name: 🇺🇸_US_美国_2
     type: vmess
-    server: yh2.freeh1.xyz
+    server: 172.67.143.192
     port: 8080
     cipher: auto
-    uuid: 028c8131-9e3e-4836-94ac-ea7f24d4d05a
+    uuid: 22826b44-5c1a-4b4b-dbaa-83a2e8bd95f0
     alterId: 0
     tls: false
     skip-cert-verify: true
     network: ws
     ws-opts:
-      path: 028c8131-9e3e-4836-94ac-ea7f24d4d05a-vm
+      path: /
       headers:
-        host: nest-emily-healing-h.trycloudflare.com
+        host: www.velvetmountain.shop
+  - &id004
+    name: 🇺🇸_US_美国_3
+    type: vmess
+    server: russia.com
+    port: 2095
+    cipher: auto
+    uuid: 6658a3a6-225a-4d33-a5d2-82cfde565b4e
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /api/v3/download.getFile
+      headers:
+        host: ssrsub.v03.ssrsub.com
+  - &id005
+    name: 🇨🇦_CA_加拿大
+    type: vmess
+    server: 134.122.41.160
+    port: 3389
+    cipher: auto
+    uuid: 9c050a86-d612-48f1-ec32-e573df08a1b7
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: http
   - &id006
+    name: 🇺🇸_US_美国_4
+    type: vmess
+    server: 104.21.54.252
+    port: 8080
+    cipher: auto
+    uuid: 22826b44-5c1a-4b4b-dbaa-83a2e8bd95f0
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: www.velvetmountain.shop
+  - &id007
+    name: 🇨🇳_CN_中国
+    type: ss
+    server: yd1.qianggewangluo.buzz
+    port: 10818
+    password: 7a28d32b-a693-4451-8ee2-1f1def6bf89f
+    cipher: chacha20-ietf-poly1305
+  - &id008
+    name: 🇨🇳_CN_中国->🇫🇷_FR_法国
+    type: ss
+    server: yd1.qianggewangluo.buzz
+    port: 10815
+    password: 7a28d32b-a693-4451-8ee2-1f1def6bf89f
+    cipher: chacha20-ietf-poly1305
+  - &id009
+    name: 🇺🇸_US_美国_5
+    type: vmess
+    server: fbi.gov
+    port: 8080
+    cipher: auto
+    uuid: ef8c954e-014f-4b36-8273-9b5086afab34
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: ef8c954e-014f-4b36-8273-9b5086afab34-vm
+      headers:
+        host: bibliographic-sword-sequence-advertisers.trycloudflare.com
+  - &id010
+    name: 🇺🇸_US_美国->🇫🇷_FR_法国_1
+    type: vmess
+    server: s1c.v2.v001sss.xyz
+    port: 2082
+    cipher: auto
+    uuid: 112ac36f-3f53-4e26-8371-d25c028e1b9a
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: s1c.v2.v001sss.xyz
+  - &id011
     name: 🇦🇪_AE_阿联酋->🇬🇧_GB_英国
     type: vmess
     server: 94.140.0.110
@@ -88,184 +147,7 @@ proxies:
       path: /
       headers:
         host: food.zhaal.ir
-  - &id007
-    name: 🇺🇸_US_美国->🇨🇦_CA_加拿大_3
-    type: vmess
-    server: fbi.gov
-    port: 8080
-    cipher: auto
-    uuid: ef8c954e-014f-4b36-8273-9b5086afab34
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: ef8c954e-014f-4b36-8273-9b5086afab34-vm
-      headers:
-        host: bibliographic-sword-sequence-advertisers.trycloudflare.com
-  - &id008
-    name: 🇺🇸_US_美国_2
-    type: vmess
-    server: yh2.dtku41.xyz
-    port: 8080
-    cipher: auto
-    uuid: 9258153a-dc97-4e39-9037-009abfc4fed0
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: 9258153a-dc97-4e39-9037-009abfc4fed0-vm
-      headers:
-        host: per-essex-patterns-bowling.trycloudflare.com
-  - &id009
-    name: 🇺🇸_US_美国_3
-    type: vmess
-    server: 172.67.130.140
-    port: 2082
-    cipher: auto
-    uuid: 112ac36f-3f53-4e26-8371-d25c028e1b9a
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        host: s1c.v2.v001sss.xyz
-  - &id010
-    name: 🇺🇸_US_美国_4
-    type: vmess
-    server: 162.159.130.208
-    port: 8080
-    cipher: auto
-    uuid: 55021a7c-bd6c-418e-be95-ceac8ba27b45
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: 55021a7c-bd6c-418e-be95-ceac8ba27b45-vm
-      headers:
-        host: widescreen-instruction-breakdown-postage.trycloudflare.com
-  - &id011
-    name: 🇨🇦_CA_加拿大->🇺🇸_US_美国_1
-    type: vmess
-    server: 23.227.38.22
-    port: 8080
-    cipher: auto
-    uuid: 9258153a-dc97-4e39-9037-009abfc4fed0
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: 9258153a-dc97-4e39-9037-009abfc4fed0-vm
-      headers:
-        host: per-essex-patterns-bowling.trycloudflare.com
   - &id012
-    name: 🇺🇸_US_美国_5
-    type: vmess
-    server: yh1.dtku41.xyz
-    port: 8080
-    cipher: auto
-    uuid: 9258153a-dc97-4e39-9037-009abfc4fed0
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: 9258153a-dc97-4e39-9037-009abfc4fed0-vm
-      headers:
-        host: per-essex-patterns-bowling.trycloudflare.com
-  - &id013
-    name: 🇨🇦_CA_加拿大->🇺🇸_US_美国_2
-    type: vmess
-    server: 23.227.38.23
-    port: 8080
-    cipher: auto
-    uuid: 34c0bb5e-c120-432d-9c58-bd7d82c7397b
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: 34c0bb5e-c120-432d-9c58-bd7d82c7397b-vm
-      headers:
-        host: uh-lawyers-instruments-kernel.trycloudflare.com
-  - &id014
-    name: 🇺🇸_US_美国->🇨🇦_CA_加拿大_4
-    type: vmess
-    server: 162.159.1.33
-    port: 8080
-    cipher: auto
-    uuid: d9c5ec6a-a8d8-4732-8447-56fbd2f93e96
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: d9c5ec6a-a8d8-4732-8447-56fbd2f93e96-vm
-      headers:
-        host: pcs-referenced-camera-concerns.trycloudflare.com
-  - &id015
-    name: 🇨🇦_CA_加拿大->🇺🇸_US_美国_3
-    type: trojan
-    server: 23.227.38.11
-    port: 443
-    udp: true
-    password: b17fa17d-13a0-4e8a-a398-8e549ea8b208
-    sni: syndication-statutes-wanted-logo.trycloudflare.com
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /argox-tr
-  - &id016
-    name: 🇺🇸_US_美国_6
-    type: vmess
-    server: russia.com
-    port: 8880
-    cipher: auto
-    uuid: 6658a3a6-225a-4d33-a5d2-82cfde565b4e
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /api/v3/download.getFile
-      headers:
-        host: ssrsub.v03.ssrsub.com
-  - &id017
-    name: 🇺🇸_US_美国->🇫🇷_FR_法国
-    type: vmess
-    server: s1c.v2.v001sss.xyz
-    port: 2082
-    cipher: auto
-    uuid: 112ac36f-3f53-4e26-8371-d25c028e1b9a
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        host: s1c.v2.v001sss.xyz
-  - &id018
-    name: 🇺🇸_US_美国_7
-    type: vmess
-    server: russia.com
-    port: 2095
-    cipher: auto
-    uuid: 6658a3a6-225a-4d33-a5d2-82cfde565b4e
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /api/v3/download.getFile
-      headers:
-        host: ssrsub.v03.ssrsub.com
-  - &id019
     name: 🇺🇸_US_美国->🇿🇦_ZA_南非
     type: vmess
     server: yhnsb3.shabijichang.com
@@ -280,66 +162,289 @@ proxies:
       path: /
       headers:
         host: yhnsb3.shabijichang.com
+  - &id013
+    name: 🇱🇹_LT_立陶宛
+    type: vmess
+    server: yh3.freeh1.xyz
+    port: 8080
+    cipher: auto
+    uuid: 82cb93a3-65a9-4dac-a2a7-d997b6c26d6a
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: 82cb93a3-65a9-4dac-a2a7-d997b6c26d6a-vm
+      headers:
+        host: larger-marketing-amounts-skin.trycloudflare.com
+  - &id014
+    name: 🇨🇦_CA_加拿大->🇺🇸_US_美国_1
+    type: trojan
+    server: 23.227.38.11
+    port: 443
+    udp: true
+    password: b17fa17d-13a0-4e8a-a398-8e549ea8b208
+    sni: syndication-statutes-wanted-logo.trycloudflare.com
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /argox-tr
+  - &id015
+    name: 🇺🇸_US_美国_6
+    type: vmess
+    server: yh2.freeh1.xyz
+    port: 8080
+    cipher: auto
+    uuid: ef8c954e-014f-4b36-8273-9b5086afab34
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: ef8c954e-014f-4b36-8273-9b5086afab34-vm
+      headers:
+        host: bibliographic-sword-sequence-advertisers.trycloudflare.com
+  - &id016
+    name: 🇺🇸_US_美国->🇫🇷_FR_法国_2
+    type: vmess
+    server: 172.67.130.140
+    port: 2082
+    cipher: auto
+    uuid: 112ac36f-3f53-4e26-8371-d25c028e1b9a
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: s1c.v2.v001sss.xyz
+  - &id017
+    name: 🇺🇸_US_美国_7
+    type: vmess
+    server: russia.com
+    port: 8880
+    cipher: auto
+    uuid: 6658a3a6-225a-4d33-a5d2-82cfde565b4e
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /api/v3/download.getFile
+      headers:
+        host: ssrsub.v03.ssrsub.com
+  - &id018
+    name: 🇨🇳_CN_中国->🇺🇸_US_美国_1
+    type: vmess
+    server: 183.232.159.163
+    port: 50003
+    cipher: auto
+    uuid: e80442e2-4577-4b33-8d9b-798d816974bd
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: tcp
+  - &id019
+    name: 🇨🇳_CN_中国->🇺🇸_US_美国_2
+    type: vmess
+    server: 50003.baidu-cdn.top
+    port: 50003
+    cipher: auto
+    uuid: e80442e2-4577-4b33-8d9b-798d816974bd
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: tcp
   - &id020
     name: 🇺🇸_US_美国_8
     type: vmess
-    server: www.velvetmountain.shop
+    server: 162.159.130.208
     port: 8080
     cipher: auto
-    uuid: 22826b44-5c1a-4b4b-dbaa-83a2e8bd95f0
+    uuid: 55021a7c-bd6c-418e-be95-ceac8ba27b45
     alterId: 0
     tls: false
     skip-cert-verify: true
     network: ws
     ws-opts:
-      path: /
+      path: 55021a7c-bd6c-418e-be95-ceac8ba27b45-vm
       headers:
-        host: www.velvetmountain.shop
+        host: widescreen-instruction-breakdown-postage.trycloudflare.com
   - &id021
+    name: 🇨🇦_CA_加拿大->🇺🇸_US_美国_2
+    type: vmess
+    server: 23.227.38.23
+    port: 8080
+    cipher: auto
+    uuid: 34c0bb5e-c120-432d-9c58-bd7d82c7397b
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: 34c0bb5e-c120-432d-9c58-bd7d82c7397b-vm
+      headers:
+        host: uh-lawyers-instruments-kernel.trycloudflare.com
+  - &id022
+    name: 🇨🇦_CA_加拿大->🇺🇸_US_美国_3
+    type: vmess
+    server: 23.227.38.22
+    port: 8080
+    cipher: auto
+    uuid: 9258153a-dc97-4e39-9037-009abfc4fed0
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: 9258153a-dc97-4e39-9037-009abfc4fed0-vm
+      headers:
+        host: per-essex-patterns-bowling.trycloudflare.com
+  - &id023
     name: 🇺🇸_US_美国_9
     type: vmess
-    server: 172.67.143.192
+    server: yh1.dtku41.xyz
     port: 8080
     cipher: auto
-    uuid: 22826b44-5c1a-4b4b-dbaa-83a2e8bd95f0
+    uuid: 9258153a-dc97-4e39-9037-009abfc4fed0
     alterId: 0
     tls: false
     skip-cert-verify: true
     network: ws
     ws-opts:
-      path: /
+      path: 9258153a-dc97-4e39-9037-009abfc4fed0-vm
       headers:
-        host: www.velvetmountain.shop
-  - &id022
+        host: per-essex-patterns-bowling.trycloudflare.com
+  - &id024
     name: 🇺🇸_US_美国_10
     type: vmess
-    server: cdn.yifenjichang.top
-    port: 2086
-    cipher: none
-    uuid: 900ceafc-30b8-4581-a305-31854f563e4f
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: 900ceafc-30b8-4581-a305-31854f563e4f
-      headers:
-        host: context-sing-pennsylvania-photography.trycloudflare.com
-  - &id023
-    name: 🇺🇸_US_美国_11
-    type: vmess
-    server: 162.159.134.23
+    server: yh2.dtku41.xyz
     port: 8080
     cipher: auto
-    uuid: 9b196b50-37f2-4f4b-b175-06273adc6207
+    uuid: 9258153a-dc97-4e39-9037-009abfc4fed0
     alterId: 0
     tls: false
     skip-cert-verify: true
     network: ws
     ws-opts:
-      path: 9b196b50-37f2-4f4b-b175-06273adc6207-vm
+      path: 9258153a-dc97-4e39-9037-009abfc4fed0-vm
       headers:
-        host: championship-bidding-oxygen-brochure.trycloudflare.com
+        host: per-essex-patterns-bowling.trycloudflare.com
+  - &id025
+    name: 🇱🇺_LU_卢森堡_1
+    type: vmess
+    server: 78.111.102.232
+    port: 3389
+    cipher: auto
+    uuid: 9c050a86-d612-48f1-ec32-e573df08a1b7
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: http
+  - &id026
+    name: 🇺🇸_US_美国_11
+    type: vmess
+    server: 104.26.4.57
+    port: 2095
+    cipher: auto
+    uuid: 6658a3a6-225a-4d33-a5d2-82cfde565b4e
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /api/v3/download.getFile
+      headers:
+        host: ssrsub.v03.ssrsub.com
+  - &id027
+    name: 🇺🇸_US_美国->🇨🇦_CA_加拿大_1
+    type: vmess
+    server: 162.159.1.33
+    port: 8080
+    cipher: auto
+    uuid: d9c5ec6a-a8d8-4732-8447-56fbd2f93e96
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: d9c5ec6a-a8d8-4732-8447-56fbd2f93e96-vm
+      headers:
+        host: pcs-referenced-camera-concerns.trycloudflare.com
+  - &id028
+    name: 🇦🇷_AR_阿根廷
+    type: ss
+    server: 190.103.176.29
+    port: 989
+    password: f8f7aCzcPKbsF8p3
+    cipher: aes-256-cfb
+  - &id029
+    name: 🇱🇺_LU_卢森堡_2
+    type: vmess
+    server: 45.82.31.164
+    port: 3389
+    cipher: auto
+    uuid: 9c050a86-d612-48f1-ec32-e573df08a1b7
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: http
+  - &id030
+    name: 🇺🇸_US_美国_12
+    type: vmess
+    server: zula.ir
+    port: 443
+    cipher: auto
+    uuid: 36ae64b0-2fe1-4915-a50e-9108fcf6d84c
+    alterId: 0
+    tls: true
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /vmess
+      headers:
+        host: be3-vmess.sshmax.xyz
+  - &id031
+    name: 🇺🇸_US_美国_13
+    type: vmess
+    server: 129.146.31.240
+    port: 25314
+    cipher: auto
+    uuid: bffbeb1e-b2ec-4b87-bd19-11f609fc4ec4
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /victorias
+  - &id032
+    name: 🇩🇪_DE_德国
+    type: trojan
+    server: 3.77.70.24
+    port: 22222
+    udp: true
+    password: telegram-id-privatevpns
+    sni: trojan.miwan.co.uk
+    skip-cert-verify: true
+    network: tcp
+    alpn:
+      - http/1.1
+  - &id033
+    name: 🇺🇸_US_美国->🇨🇦_CA_加拿大_2
+    type: vmess
+    server: yh1.freeh1.xyz
+    port: 8080
+    cipher: auto
+    uuid: ef8c954e-014f-4b36-8273-9b5086afab34
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: ef8c954e-014f-4b36-8273-9b5086afab34-vm
+      headers:
+        host: bibliographic-sword-sequence-advertisers.trycloudflare.com
 proxy-groups:
   - name: PROXY
     type: select
@@ -389,6 +494,16 @@ proxy-groups:
       - *id021
       - *id022
       - *id023
+      - *id024
+      - *id025
+      - *id026
+      - *id027
+      - *id028
+      - *id029
+      - *id030
+      - *id031
+      - *id032
+      - *id033
   - name: LOAD-BALANCE
     type: load-balance
     url: http://www.gstatic.com/generate_204
@@ -417,6 +532,16 @@ proxy-groups:
       - *id021
       - *id022
       - *id023
+      - *id024
+      - *id025
+      - *id026
+      - *id027
+      - *id028
+      - *id029
+      - *id030
+      - *id031
+      - *id032
+      - *id033
   - name: SELECT
     type: select
     proxies:
@@ -443,6 +568,16 @@ proxy-groups:
       - *id021
       - *id022
       - *id023
+      - *id024
+      - *id025
+      - *id026
+      - *id027
+      - *id028
+      - *id029
+      - *id030
+      - *id031
+      - *id032
+      - *id033
 rules:
   - RULE-SET,applications,DIRECT
   - DOMAIN,clash.razord.top,DIRECT
