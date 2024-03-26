@@ -6,54 +6,6 @@ log-level: info
 external-controller: 0.0.0.0:9090
 proxies:
   - &id001
-    name: 🇨🇦_CA_加拿大->🇺🇸_US_美国
-    type: vmess
-    server: 23.227.38.23
-    port: 8080
-    cipher: auto
-    uuid: 34c0bb5e-c120-432d-9c58-bd7d82c7397b
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: 34c0bb5e-c120-432d-9c58-bd7d82c7397b-vm
-      headers:
-        host: uh-lawyers-instruments-kernel.trycloudflare.com
-  - &id002
-    name: 🇱🇺_LU_卢森堡
-    type: vmess
-    server: 45.82.31.164
-    port: 3389
-    cipher: auto
-    uuid: 9c050a86-d612-48f1-ec32-e573df08a1b7
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: http
-  - &id003
-    name: 🇺🇸_US_美国->🇫🇷_FR_法国_1
-    type: vmess
-    server: 104.21.8.157
-    port: 2082
-    cipher: auto
-    uuid: 112ac36f-3f53-4e26-8371-d25c028e1b9a
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        host: s1c.v2.v001sss.xyz
-  - &id004
-    name: 🇺🇸_US_美国_1
-    type: ss
-    server: 35.91.125.206
-    port: 443
-    password: amazonskr05
-    cipher: aes-256-cfb
-  - &id005
     name: 🇺🇸_US_美国->🇬🇧_GB_英国
     type: vmess
     server: mizban.arzonhost.ir
@@ -68,22 +20,7 @@ proxies:
       path: /
       headers:
         host: mizban.arzonhost.ir
-  - &id006
-    name: 🇺🇸_US_美国_2
-    type: vmess
-    server: 104.21.236.54
-    port: 80
-    cipher: auto
-    uuid: 1973e770-e615-11ee-b238-205c6d5f5d78
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /?ed=2048
-      headers:
-        host: VKJi7.cnbete.life
-  - &id007
+  - &id002
     name: 🇺🇸_US_美国->🇨🇦_CA_加拿大_1
     type: vmess
     server: 104.21.235.229
@@ -98,130 +35,57 @@ proxies:
       path: /?ed=2048
       headers:
         host: m4p9q.cnbete.life
-  - &id008
-    name: 🇺🇸_US_美国_3
-    type: vmess
-    server: 172.67.116.48
-    port: 80
-    cipher: auto
-    uuid: 22a13aa2-4854-44cb-e090-ec71ab84b1ff
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        host: wap.hostmjj.com
-  - &id009
-    name: 🇺🇸_US_美国_4
-    type: ss
-    server: 52.12.160.73
-    port: 443
-    password: amazonskr05
-    cipher: aes-256-cfb
-  - &id010
-    name: 🇺🇸_US_美国->🇫🇷_FR_法国_2
-    type: vmess
-    server: 172.67.130.140
-    port: 2082
-    cipher: auto
-    uuid: 112ac36f-3f53-4e26-8371-d25c028e1b9a
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        host: s1c.v2.v001sss.xyz
-  - &id011
-    name: 🇫🇷_FR_法国
-    type: ss
-    server: 51.178.206.74
-    port: 42905
-    password: Q3j8V3jIENkzs8ZE
-    cipher: aes-256-gcm
-  - &id012
-    name: 🇺🇸_US_美国_5
-    type: vmess
-    server: 172.67.49.214
-    port: 80
-    cipher: auto
-    uuid: 22a13aa2-4854-44cb-e090-ec71ab84b1ff
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        host: wap.hostmjj.com
-  - &id013
-    name: 🇺🇸_US_美国_6
+  - &id003
+    name: 🇺🇸_US_美国_1
     type: ss
     server: 35.87.36.143
     port: 443
     password: amazonskr05
     cipher: aes-256-cfb
-  - &id014
-    name: 🇩🇪_DE_德国
-    type: ss
-    server: 80.92.204.106
-    port: 9094
-    password: rpgbNnU9rDDU4aWZ
-    cipher: aes-256-cfb
-  - &id015
-    name: 🇺🇸_US_美国_7
-    type: ss
-    server: 45.59.184.71
-    port: 16899
-    password: Yc2CtrIz8L
-    cipher: aes-128-gcm
-  - &id016
-    name: 🇺🇸_US_美国_8
+  - &id004
+    name: 🇺🇸_US_美国_2
     type: ss
     server: 18.246.209.149
     port: 443
     password: amazonskr05
     cipher: aes-256-cfb
-  - &id017
-    name: 🇺🇸_US_美国_9
+  - &id005
+    name: 🇺🇸_US_美国_3
     type: ss
     server: 18.246.240.239
     port: 443
     password: amazonskr05
     cipher: aes-256-cfb
-  - &id018
-    name: 🇺🇸_US_美国_10
+  - &id006
+    name: 🇺🇸_US_美国_4
     type: ss
     server: 52.33.243.193
     port: 443
     password: amazonskr05
     cipher: aes-256-cfb
-  - &id019
-    name: 🇺🇸_US_美国_11
+  - &id007
+    name: 🇺🇸_US_美国_5
     type: ss
     server: 18.236.72.6
     port: 443
     password: amazonskr05
     cipher: aes-256-cfb
-  - &id020
-    name: 🇺🇸_US_美国_12
+  - &id008
+    name: 🇺🇸_US_美国_6
     type: ss
     server: 54.218.30.121
     port: 443
     password: amazonskr05
     cipher: aes-256-cfb
-  - &id021
-    name: 🇺🇸_US_美国_13
+  - &id009
+    name: 🇺🇸_US_美国_7
     type: ss
     server: 34.219.76.253
     port: 443
     password: amazonskr05
     cipher: aes-256-cfb
-  - &id022
-    name: 🇺🇸_US_美国_14
+  - &id010
+    name: 🇺🇸_US_美国_8
     type: vmess
     server: 104.21.238.130
     port: 80
@@ -235,8 +99,8 @@ proxies:
       path: /?ed=2048
       headers:
         host: PVR7r.cnbete.life
-  - &id023
-    name: 🇺🇸_US_美国_15
+  - &id011
+    name: 🇺🇸_US_美国_9
     type: vmess
     server: 104.21.238.2
     port: 80
@@ -250,35 +114,7 @@ proxies:
       path: /?ed=2048
       headers:
         host: PVR7r.cnbete.life
-  - &id024
-    name: 🇺🇸_US_美国->🇪🇸_ES_西班牙
-    type: vmess
-    server: us2.laobideng.xyz
-    port: 8080
-    cipher: auto
-    uuid: f9c92e9c-5f92-4ff7-99a1-91a973b6ec57
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        host: us2.laobideng.xyz
-  - &id025
-    name: 🇱🇹_LT_立陶宛
-    type: vmess
-    server: 89.117.12.88
-    port: 45979
-    cipher: auto
-    uuid: 23bdf6df-c482-46d0-c0f4-5a98d534ea11
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /test
-  - &id026
+  - &id012
     name: 🇺🇸_US_美国->🇨🇦_CA_加拿大_2
     type: vmess
     server: 104.21.235.6
@@ -293,8 +129,8 @@ proxies:
       path: /?ed=2048
       headers:
         host: m4p9q.cnbete.life
-  - &id027
-    name: 🇺🇸_US_美国_16
+  - &id013
+    name: 🇺🇸_US_美国_10
     type: vmess
     server: 104.21.238.159
     port: 80
@@ -308,23 +144,8 @@ proxies:
       path: /?ed=2048
       headers:
         host: PVR7r.cnbete.life
-  - &id028
-    name: 🇺🇸_US_美国_17
-    type: vmess
-    server: 104.21.238.66
-    port: 80
-    cipher: auto
-    uuid: c6b76370-e614-11ee-b531-205c6d5f5d78
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /?ed=2048
-      headers:
-        host: PVR7r.cnbete.life
-  - &id029
-    name: 🇺🇸_US_美国_18
+  - &id014
+    name: 🇺🇸_US_美国_11
     type: vmess
     server: 104.21.238.151
     port: 80
@@ -338,8 +159,291 @@ proxies:
       path: /?ed=2048
       headers:
         host: PVR7r.cnbete.life
-  - &id030
+  - &id015
+    name: 🇺🇸_US_美国_12
+    type: ss
+    server: 35.91.125.206
+    port: 443
+    password: amazonskr05
+    cipher: aes-256-cfb
+  - &id016
+    name: 🇺🇸_US_美国_13
+    type: ss
+    server: 34.222.20.208
+    port: 443
+    password: amazonskr05
+    cipher: aes-256-cfb
+  - &id017
+    name: 🇺🇸_US_美国_14
+    type: vmess
+    server: 45.32.75.248
+    port: 37523
+    cipher: auto
+    uuid: 0e7becc2-e807-4b44-c97d-806d094064c0
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: tcp
+  - &id018
+    name: 🇺🇸_US_美国_15
+    type: vmess
+    server: 174.136.207.168
+    port: 12842
+    cipher: auto
+    uuid: d7e439a8-9cb4-4c62-9a6a-d36824689a04
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: tcp
+  - &id019
+    name: 🇺🇸_US_美国->🇫🇷_FR_法国_1
+    type: vmess
+    server: 172.67.130.140
+    port: 2082
+    cipher: auto
+    uuid: 112ac36f-3f53-4e26-8371-d25c028e1b9a
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: s1c.v2.v001sss.xyz
+  - &id020
+    name: 🇺🇸_US_美国_16
+    type: vmess
+    server: yh2.dtku41.xyz
+    port: 8080
+    cipher: auto
+    uuid: 9258153a-dc97-4e39-9037-009abfc4fed0
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: 9258153a-dc97-4e39-9037-009abfc4fed0-vm
+      headers:
+        host: per-essex-patterns-bowling.trycloudflare.com
+  - &id021
+    name: 🇺🇸_US_美国_17
+    type: vmess
+    server: 104.21.237.189
+    port: 80
+    cipher: auto
+    uuid: d31c39e0-e614-11ee-b333-205c6d5f5d78
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2048
+      headers:
+        host: hDIgP.cnbete.life
+  - &id022
+    name: 🇺🇸_US_美国_18
+    type: vmess
+    server: 104.21.238.66
+    port: 80
+    cipher: auto
+    uuid: c6b76370-e614-11ee-b531-205c6d5f5d78
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2048
+      headers:
+        host: PVR7r.cnbete.life
+  - &id023
+    name: 🇺🇸_US_美国->🇫🇷_FR_法国_2
+    type: vmess
+    server: 104.21.8.157
+    port: 2082
+    cipher: auto
+    uuid: 112ac36f-3f53-4e26-8371-d25c028e1b9a
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: s1c.v2.v001sss.xyz
+  - &id024
+    name: 🇺🇸_US_美国->🇨🇦_CA_加拿大_3
+    type: vmess
+    server: 23.142.200.149
+    port: 11129
+    cipher: auto
+    uuid: 2c69c823-4dad-4dc1-89df-6eeab1dc5fe5
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: tcp
+  - &id025
     name: 🇺🇸_US_美国_19
+    type: vmess
+    server: 104.21.237.26
+    port: 80
+    cipher: auto
+    uuid: d31c39e0-e614-11ee-b333-205c6d5f5d78
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2048
+      headers:
+        host: hDIgP.cnbete.life
+  - &id026
+    name: 🇺🇸_US_美国_20
+    type: vmess
+    server: 104.21.237.134
+    port: 80
+    cipher: auto
+    uuid: d31c39e0-e614-11ee-b333-205c6d5f5d78
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2048
+      headers:
+        host: hDIgP.cnbete.life
+  - &id027
+    name: 🇺🇸_US_美国_21
+    type: vmess
+    server: 104.21.237.184
+    port: 80
+    cipher: auto
+    uuid: d31c39e0-e614-11ee-b333-205c6d5f5d78
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2048
+      headers:
+        host: hDIgP.cnbete.life
+  - &id028
+    name: 🇺🇸_US_美国_22
+    type: vmess
+    server: 104.21.238.200
+    port: 80
+    cipher: auto
+    uuid: c6b76370-e614-11ee-b531-205c6d5f5d78
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2048
+      headers:
+        host: PVR7r.cnbete.life
+  - &id029
+    name: 🇺🇸_US_美国_23
+    type: vmess
+    server: 104.21.237.160
+    port: 80
+    cipher: auto
+    uuid: d31c39e0-e614-11ee-b333-205c6d5f5d78
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2048
+      headers:
+        host: hDIgP.cnbete.life
+  - &id030
+    name: 🇺🇸_US_美国_24
+    type: vmess
+    server: 104.21.237.191
+    port: 80
+    cipher: auto
+    uuid: d31c39e0-e614-11ee-b333-205c6d5f5d78
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2048
+      headers:
+        host: hDIgP.cnbete.life
+  - &id031
+    name: 🇺🇸_US_美国_25
+    type: vmess
+    server: 104.21.237.124
+    port: 80
+    cipher: auto
+    uuid: d31c39e0-e614-11ee-b333-205c6d5f5d78
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2048
+      headers:
+        host: hDIgP.cnbete.life
+  - &id032
+    name: 🇺🇸_US_美国_26
+    type: vmess
+    server: en.laobideng.xyz
+    port: 8080
+    cipher: auto
+    uuid: f9c92e9c-5f92-4ff7-99a1-91a973b6ec57
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: en.laobideng.xyz
+  - &id033
+    name: 🇨🇳_CN_中国->🇺🇸_US_美国
+    type: vmess
+    server: 14.18.91.151
+    port: 50004
+    cipher: auto
+    uuid: 1d8963ab-0cd8-4091-93ca-4c6a7dbcd1f2
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: tcp
+  - &id034
+    name: 🇺🇸_US_美国_27
+    type: vmess
+    server: 104.21.84.38
+    port: 8880
+    cipher: auto
+    uuid: f9c92e9c-5f92-4ff7-99a1-91a973b6ec57
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: us1.laobideng.xyz
+  - &id035
+    name: 🇺🇸_US_美国->🇫🇷_FR_法国_3
+    type: vmess
+    server: s1c.v2.v001sss.xyz
+    port: 2082
+    cipher: auto
+    uuid: 112ac36f-3f53-4e26-8371-d25c028e1b9a
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: s1c.v2.v001sss.xyz
+  - &id036
+    name: 🇺🇸_US_美国->🇿🇦_ZA_南非
     type: vmess
     server: yhnsb3.shabijichang.com
     port: 80
@@ -353,36 +457,36 @@ proxies:
       path: /
       headers:
         host: yhnsb3.shabijichang.com
-  - &id031
-    name: 🇺🇸_US_美国_20
+  - &id037
+    name: 🇺🇸_US_美国->🇪🇸_ES_西班牙
     type: vmess
-    server: www.who.int
+    server: us2.laobideng.xyz
     port: 8080
     cipher: auto
-    uuid: bd8c41a8-7598-4c28-9965-522545e14892
+    uuid: f9c92e9c-5f92-4ff7-99a1-91a973b6ec57
     alterId: 0
     tls: false
     skip-cert-verify: true
     network: ws
     ws-opts:
-      path: /api/v3/download.getFile
+      path: /
       headers:
-        host: ssrsub.v03.ssrsub.com
-  - &id032
-    name: 🇺🇸_US_美国_21
+        host: us2.laobideng.xyz
+  - &id038
+    name: 🇺🇸_US_美国_28
     type: vmess
-    server: 162.159.137.249
-    port: 8080
+    server: us1.laobideng.xyz
+    port: 8880
     cipher: auto
-    uuid: 028c8131-9e3e-4836-94ac-ea7f24d4d05a
+    uuid: f9c92e9c-5f92-4ff7-99a1-91a973b6ec57
     alterId: 0
     tls: false
     skip-cert-verify: true
     network: ws
     ws-opts:
-      path: 028c8131-9e3e-4836-94ac-ea7f24d4d05a-vm
+      path: /
       headers:
-        host: nest-emily-healing-h.trycloudflare.com
+        host: us1.laobideng.xyz
 proxy-groups:
   - name: PROXY
     type: select
@@ -441,6 +545,12 @@ proxy-groups:
       - *id030
       - *id031
       - *id032
+      - *id033
+      - *id034
+      - *id035
+      - *id036
+      - *id037
+      - *id038
   - name: LOAD-BALANCE
     type: load-balance
     url: http://www.gstatic.com/generate_204
@@ -478,6 +588,12 @@ proxy-groups:
       - *id030
       - *id031
       - *id032
+      - *id033
+      - *id034
+      - *id035
+      - *id036
+      - *id037
+      - *id038
   - name: SELECT
     type: select
     proxies:
@@ -513,6 +629,12 @@ proxy-groups:
       - *id030
       - *id031
       - *id032
+      - *id033
+      - *id034
+      - *id035
+      - *id036
+      - *id037
+      - *id038
 rules:
   - RULE-SET,applications,DIRECT
   - DOMAIN,clash.razord.top,DIRECT
