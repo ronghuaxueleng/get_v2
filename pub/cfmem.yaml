@@ -6,12 +6,19 @@ log-level: info
 external-controller: 0.0.0.0:9090
 proxies:
   - &id001
-    name: 🇺🇸_US_美国->🇫🇷_FR_法国_1
+    name: 🇺🇸_US_美国_1
+    type: ss
+    server: 34.221.93.113
+    port: 443
+    password: amazonskr05
+    cipher: aes-256-cfb
+  - &id002
+    name: 🇺🇸_US_美国->🇬🇧_GB_英国
     type: vmess
-    server: 104.21.4.14
+    server: mizban.arzonhost.ir
     port: 2086
     cipher: auto
-    uuid: 7d93e992-48cf-42d4-84f8-75768e815a4c
+    uuid: e690ff9e-1676-4be3-d136-dcae586cb1e7
     alterId: 0
     tls: false
     skip-cert-verify: true
@@ -19,9 +26,16 @@ proxies:
     ws-opts:
       path: /
       headers:
-        host: admin.arzonhost.ir
-  - &id002
-    name: 🇺🇸_US_美国->🇫🇷_FR_法国_2
+        host: mizban.arzonhost.ir
+  - &id003
+    name: 🇷🇺_RU_俄罗斯联邦_1
+    type: ss
+    server: 46.226.162.112
+    port: 32913
+    password: KTwIQM1cQJwtkrjfld6Usn
+    cipher: chacha20-ietf-poly1305
+  - &id004
+    name: 🇺🇸_US_美国->🇫🇷_FR_法国_1
     type: vmess
     server: admin.arzonhost.ir
     port: 2086
@@ -35,7 +49,31 @@ proxies:
       path: /
       headers:
         host: admin.arzonhost.ir
-  - &id003
+  - &id005
+    name: 🇺🇸_US_美国_2
+    type: trojan
+    server: 23.142.200.175
+    port: 443
+    udp: true
+    password: 27876_t7d7f4e3f
+    skip-cert-verify: true
+    network: tcp
+  - &id006
+    name: 🇺🇸_US_美国->🇫🇷_FR_法国_2
+    type: vmess
+    server: 104.21.4.14
+    port: 2086
+    cipher: auto
+    uuid: 7d93e992-48cf-42d4-84f8-75768e815a4c
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: admin.arzonhost.ir
+  - &id007
     name: 🇺🇸_US_美国->🇫🇷_FR_法国_3
     type: vmess
     server: 172.67.223.242
@@ -50,72 +88,24 @@ proxies:
       path: /
       headers:
         host: admin.arzonhost.ir
-  - &id004
-    name: 🇺🇸_US_美国_1
-    type: vmess
-    server: qin15.rong1104.uk
-    port: 2053
-    cipher: auto
-    uuid: 869caccc-12af-4276-f458-366fa256f8a0
-    alterId: 0
-    tls: true
-    skip-cert-verify: true
-    servername: qin15.rong1104.uk
-    network: ws
-    ws-opts:
-      path: /qin15
-  - &id005
-    name: 🇺🇸_US_美国->🇬🇧_GB_英国_1
-    type: vmess
-    server: mizban.arzonhost.ir
-    port: 2086
-    cipher: auto
-    uuid: e690ff9e-1676-4be3-d136-dcae586cb1e7
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        host: mizban.arzonhost.ir
-  - &id006
-    name: 🇺🇸_US_美国_2
-    type: vmess
-    server: yh3.freeh1.xyz
-    port: 8080
-    cipher: auto
-    uuid: 82cb93a3-65a9-4dac-a2a7-d997b6c26d6a
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: 82cb93a3-65a9-4dac-a2a7-d997b6c26d6a-vm
-      headers:
-        host: larger-marketing-amounts-skin.trycloudflare.com
-  - &id007
-    name: 🇺🇸_US_美国->🇬🇧_GB_英国_2
-    type: vmess
-    server: cdn.vds-server.ir
-    port: 8880
-    cipher: auto
-    uuid: 0d1bf26a-ce97-4707-a270-7f4d2ae37334
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        host: cdn.vds-server.ir
   - &id008
-    name: 🇺🇸_US_美国->🇫🇷_FR_法国_4
+    name: 🇱🇺_LU_卢森堡
     type: vmess
-    server: s1c.v2.v001sss.xyz
-    port: 2082
+    server: 78.111.102.232
+    port: 3389
     cipher: auto
-    uuid: 112ac36f-3f53-4e26-8371-d25c028e1b9a
+    uuid: 9c050a86-d612-48f1-ec32-e573df08a1b7
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: http
+  - &id009
+    name: 🇺🇸_US_美国->🇹🇷_TR_土耳其
+    type: vmess
+    server: tu.mahilu.site
+    port: 2095
+    cipher: auto
+    uuid: 7a737f41-b792-4260-94ff-3d864da67b80
     alterId: 0
     tls: false
     skip-cert-verify: true
@@ -123,17 +113,7 @@ proxies:
     ws-opts:
       path: /
       headers:
-        host: s1c.v2.v001sss.xyz
-  - &id009
-    name: 🇷🇺_RU_俄罗斯联邦
-    type: trojan
-    server: 185.236.233.111
-    port: 2053
-    udp: true
-    password: ba74833c-8c0f-4dcd-8cbc-13e3c32d3765
-    sni: ftp.debian.org
-    skip-cert-verify: true
-    network: tcp
+        host: tu.mahilu.site
   - &id010
     name: 🇦🇪_AE_阿联酋->🇬🇧_GB_英国
     type: vmess
@@ -151,29 +131,59 @@ proxies:
         host: food.zhaal.ir
   - &id011
     name: 🇺🇸_US_美国_3
-    type: trojan
-    server: 172.67.204.84
-    port: 443
-    udp: true
-    password: qj1Dz1CJmFQRhWr1SP80aA
-    sni: cdn-21.gsmxreality.com
-    skip-cert-verify: true
-    network: grpc
-    grpc-opts:
-      grpc-service-name: 443trojan
-  - &id012
-    name: 🇱🇺_LU_卢森堡
     type: vmess
-    server: 78.111.102.232
-    port: 3389
+    server: 64.64.229.96
+    port: 80
     cipher: auto
-    uuid: 9c050a86-d612-48f1-ec32-e573df08a1b7
+    uuid: 88816e0c-db97-486c-9029-9693d14e4c34
     alterId: 0
     tls: false
     skip-cert-verify: true
-    network: http
+    network: ws
+    ws-opts:
+      path: /
+  - &id012
+    name: 🇷🇺_RU_俄罗斯联邦_2
+    type: trojan
+    server: 185.236.233.111
+    port: 2053
+    udp: true
+    password: ba74833c-8c0f-4dcd-8cbc-13e3c32d3765
+    sni: ftp.debian.org
+    skip-cert-verify: true
+    network: tcp
   - &id013
     name: 🇺🇸_US_美国_4
+    type: vmess
+    server: yh1.freeh1.xyz
+    port: 8080
+    cipher: auto
+    uuid: ef8c954e-014f-4b36-8273-9b5086afab34
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: ef8c954e-014f-4b36-8273-9b5086afab34-vm
+      headers:
+        host: bibliographic-sword-sequence-advertisers.trycloudflare.com
+  - &id014
+    name: 🇺🇸_US_美国->🇫🇷_FR_法国_4
+    type: vmess
+    server: 172.67.130.140
+    port: 2082
+    cipher: auto
+    uuid: 112ac36f-3f53-4e26-8371-d25c028e1b9a
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: s1c.v2.v001sss.xyz
+  - &id015
+    name: 🇺🇸_US_美国_5
     type: vmess
     server: 172.67.116.48
     port: 80
@@ -187,96 +197,33 @@ proxies:
       path: /
       headers:
         host: wap.hostmjj.com
-  - &id014
-    name: 🇺🇸_US_美国->🇹🇷_TR_土耳其
-    type: vmess
-    server: tu.mahilu.site
-    port: 2095
-    cipher: auto
-    uuid: 7a737f41-b792-4260-94ff-3d864da67b80
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        host: tu.mahilu.site
-  - &id015
-    name: 🇺🇸_US_美国->🇷🇺_RU_俄罗斯联邦
-    type: vmess
-    server: 172.64.141.219
-    port: 80
-    cipher: auto
-    uuid: 1cfaad16-d2ba-4c49-af07-d7b9f11f43d0
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /xn--mes53ddysu0o3gl
-      headers:
-        host: ru327.xn--mes53ddysu0o3gl.top
   - &id016
     name: 🇺🇸_US_美国->🇨🇦_CA_加拿大
     type: vmess
-    server: yh2.freeh1.xyz
+    server: yh3.freeh1.xyz
     port: 8080
     cipher: auto
-    uuid: d9c5ec6a-a8d8-4732-8447-56fbd2f93e96
+    uuid: 82cb93a3-65a9-4dac-a2a7-d997b6c26d6a
     alterId: 0
     tls: false
     skip-cert-verify: true
     network: ws
     ws-opts:
-      path: d9c5ec6a-a8d8-4732-8447-56fbd2f93e96-vm
+      path: 82cb93a3-65a9-4dac-a2a7-d997b6c26d6a-vm
       headers:
-        host: pcs-referenced-camera-concerns.trycloudflare.com
+        host: larger-marketing-amounts-skin.trycloudflare.com
   - &id017
-    name: 🇺🇸_US_美国->🇫🇷_FR_法国_5
-    type: vmess
-    server: 104.21.8.157
-    port: 2082
-    cipher: auto
-    uuid: 112ac36f-3f53-4e26-8371-d25c028e1b9a
-    alterId: 0
-    tls: false
+    name: 🇺🇸_US_美国->🇷🇺_RU_俄罗斯联邦
+    type: trojan
+    server: 172.67.204.84
+    port: 443
+    udp: true
+    password: qj1Dz1CJmFQRhWr1SP80aA
+    sni: cdn-21.gsmxreality.com
     skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        host: s1c.v2.v001sss.xyz
-  - &id018
-    name: 🇨🇦_CA_加拿大
-    type: vmess
-    server: 23.227.38.23
-    port: 8080
-    cipher: auto
-    uuid: 34c0bb5e-c120-432d-9c58-bd7d82c7397b
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: 34c0bb5e-c120-432d-9c58-bd7d82c7397b-vm
-      headers:
-        host: uh-lawyers-instruments-kernel.trycloudflare.com
-  - &id019
-    name: 🇺🇸_US_美国_5
-    type: vmess
-    server: 162.159.137.249
-    port: 8080
-    cipher: auto
-    uuid: 028c8131-9e3e-4836-94ac-ea7f24d4d05a
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: 028c8131-9e3e-4836-94ac-ea7f24d4d05a-vm
-      headers:
-        host: nest-emily-healing-h.trycloudflare.com
+    network: grpc
+    grpc-opts:
+      grpc-service-name: 443trojan
 proxy-groups:
   - name: PROXY
     type: select
@@ -320,8 +267,6 @@ proxy-groups:
       - *id015
       - *id016
       - *id017
-      - *id018
-      - *id019
   - name: LOAD-BALANCE
     type: load-balance
     url: http://www.gstatic.com/generate_204
@@ -344,8 +289,6 @@ proxy-groups:
       - *id015
       - *id016
       - *id017
-      - *id018
-      - *id019
   - name: SELECT
     type: select
     proxies:
@@ -366,8 +309,6 @@ proxy-groups:
       - *id015
       - *id016
       - *id017
-      - *id018
-      - *id019
 rules:
   - RULE-SET,applications,DIRECT
   - DOMAIN,clash.razord.top,DIRECT
