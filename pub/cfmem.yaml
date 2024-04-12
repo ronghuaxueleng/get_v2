@@ -7,18 +7,16 @@ external-controller: 0.0.0.0:9090
 proxies:
   - &id001
     name: 🇺🇸_US_美国_1
-    type: vmess
-    server: api.cdn-tgju.org
-    port: 2087
-    cipher: auto
-    uuid: 13fc87d3-43c6-4cc1-9ab9-523d9707a113
-    alterId: 0
-    tls: true
+    type: trojan
+    server: 172.67.204.84
+    port: 443
+    udp: true
+    password: qj1Dz1CJmFQRhWr1SP80aA
+    sni: cdn-21.gsmxreality.com
     skip-cert-verify: true
-    servername: api.cdn-tgju.org
-    network: ws
-    ws-opts:
-      path: /ows
+    network: grpc
+    grpc-opts:
+      grpc-service-name: 443trojan
   - &id002
     name: 🇺🇸_US_美国->🇫🇷_FR_法国_1
     type: vmess
@@ -37,7 +35,7 @@ proxies:
   - &id003
     name: 🇺🇸_US_美国->🇫🇷_FR_法国_2
     type: vmess
-    server: 104.21.4.14
+    server: admin.arzonhost.ir
     port: 2086
     cipher: auto
     uuid: 7d93e992-48cf-42d4-84f8-75768e815a4c
@@ -50,12 +48,12 @@ proxies:
       headers:
         host: admin.arzonhost.ir
   - &id004
-    name: 🇦🇪_AE_阿联酋->🇬🇧_GB_英国
+    name: 🇺🇸_US_美国->🇬🇧_GB_英国_1
     type: vmess
-    server: 94.140.0.110
-    port: 8880
+    server: mizban.arzonhost.ir
+    port: 2086
     cipher: auto
-    uuid: 0d1bf26a-ce97-4707-a270-7f4d2ae37334
+    uuid: e690ff9e-1676-4be3-d136-dcae586cb1e7
     alterId: 0
     tls: false
     skip-cert-verify: true
@@ -63,22 +61,22 @@ proxies:
     ws-opts:
       path: /
       headers:
-        host: food.zhaal.ir
+        host: mizban.arzonhost.ir
   - &id005
-    name: 🇺🇸_US_美国_2
+    name: 🇺🇸_US_美国->🇫🇷_FR_法国_3
     type: vmess
-    server: cfcdn1.sanfencdn9.com
-    port: 2095
+    server: 104.21.4.14
+    port: 2086
     cipher: auto
-    uuid: 474413f9-3c15-493f-88b2-50e0c4702dde
+    uuid: 7d93e992-48cf-42d4-84f8-75768e815a4c
     alterId: 0
     tls: false
     skip-cert-verify: true
     network: ws
     ws-opts:
-      path: /video/qYZue4zaWS
+      path: /
       headers:
-        host: us82pRzxDMb.fzbqfrse.xyz
+        host: admin.arzonhost.ir
   - &id006
     name: 🇪🇸_ES_西班牙->🇺🇸_US_美国
     type: vmess
@@ -95,12 +93,12 @@ proxies:
       headers:
         host: cache-2.cn-db.top
   - &id007
-    name: 🇺🇸_US_美国->🇫🇷_FR_法国_3
+    name: 🇺🇸_US_美国->🇹🇷_TR_土耳其
     type: vmess
-    server: admin.arzonhost.ir
-    port: 2086
+    server: tu.mahilu.site
+    port: 2095
     cipher: auto
-    uuid: 7d93e992-48cf-42d4-84f8-75768e815a4c
+    uuid: 7a737f41-b792-4260-94ff-3d864da67b80
     alterId: 0
     tls: false
     skip-cert-verify: true
@@ -108,9 +106,9 @@ proxies:
     ws-opts:
       path: /
       headers:
-        host: admin.arzonhost.ir
+        host: tu.mahilu.site
   - &id008
-    name: 🇺🇸_US_美国->🇬🇧_GB_英国_1
+    name: 🇺🇸_US_美国->🇬🇧_GB_英国_2
     type: vmess
     server: cdn.vds-server.ir
     port: 8880
@@ -125,12 +123,12 @@ proxies:
       headers:
         host: cdn.vds-server.ir
   - &id009
-    name: 🇺🇸_US_美国->🇫🇷_FR_法国_4
+    name: 🇺🇸_US_美国_2
     type: vmess
-    server: s1c.v2.v001sss.xyz
-    port: 2082
+    server: onea.flha.ru
+    port: 2095
     cipher: auto
-    uuid: 112ac36f-3f53-4e26-8371-d25c028e1b9a
+    uuid: 7a737f41-b792-4260-94ff-3d864da67b80
     alterId: 0
     tls: false
     skip-cert-verify: true
@@ -138,23 +136,8 @@ proxies:
     ws-opts:
       path: /
       headers:
-        host: s1c.v2.v001sss.xyz
+        host: onea.flha.ru
   - &id010
-    name: 🇺🇸_US_美国->🇫🇷_FR_法国_5
-    type: vmess
-    server: 172.67.130.140
-    port: 2082
-    cipher: auto
-    uuid: 112ac36f-3f53-4e26-8371-d25c028e1b9a
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        host: s1c.v2.v001sss.xyz
-  - &id011
     name: 🇱🇺_LU_卢森堡
     type: vmess
     server: 78.111.102.232
@@ -165,77 +148,28 @@ proxies:
     tls: false
     skip-cert-verify: true
     network: http
+  - &id011
+    name: 🇦🇪_AE_阿联酋->🇬🇧_GB_英国
+    type: vmess
+    server: 94.140.0.110
+    port: 8880
+    cipher: auto
+    uuid: 0d1bf26a-ce97-4707-a270-7f4d2ae37334
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: food.zhaal.ir
   - &id012
-    name: 🇺🇸_US_美国->🇫🇷_FR_法国_6
-    type: vmess
-    server: 104.21.8.157
-    port: 2082
-    cipher: auto
-    uuid: 112ac36f-3f53-4e26-8371-d25c028e1b9a
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        host: s1c.v2.v001sss.xyz
-  - &id013
-    name: 🇺🇸_US_美国->🇬🇧_GB_英国_2
-    type: vmess
-    server: mizban.arzonhost.ir
-    port: 2086
-    cipher: auto
-    uuid: e690ff9e-1676-4be3-d136-dcae586cb1e7
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        host: mizban.arzonhost.ir
-  - &id014
-    name: 🇺🇸_US_美国->🇷🇺_RU_俄罗斯联邦
-    type: trojan
-    server: 172.67.204.84
-    port: 443
-    udp: true
-    password: qj1Dz1CJmFQRhWr1SP80aA
-    sni: cdn-21.gsmxreality.com
-    skip-cert-verify: true
-    network: grpc
-    grpc-opts:
-      grpc-service-name: 443trojan
-  - &id015
-    name: 🇩🇪_DE_德国
-    type: ss
-    server: 80.92.204.106
-    port: 9094
-    password: rpgbNnU9rDDU4aWZ
-    cipher: aes-256-cfb
-  - &id016
     name: 🇳🇱_NL_荷兰
     type: ss
     server: 88.210.6.98
     port: 60869
     password: lPT3Mi25IXYP3iWzPJaryQ
     cipher: chacha20-ietf-poly1305
-  - &id017
-    name: 🇺🇸_US_美国_3
-    type: vmess
-    server: 104.18.135.91
-    port: 2095
-    cipher: auto
-    uuid: 474413f9-3c15-493f-88b2-50e0c4702dde
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /video/qYZue4zaWS
-      headers:
-        host: us82pRzxDMb.fzbqfrse.xyz
 proxy-groups:
   - name: PROXY
     type: select
@@ -274,11 +208,6 @@ proxy-groups:
       - *id010
       - *id011
       - *id012
-      - *id013
-      - *id014
-      - *id015
-      - *id016
-      - *id017
   - name: LOAD-BALANCE
     type: load-balance
     url: http://www.gstatic.com/generate_204
@@ -296,11 +225,6 @@ proxy-groups:
       - *id010
       - *id011
       - *id012
-      - *id013
-      - *id014
-      - *id015
-      - *id016
-      - *id017
   - name: SELECT
     type: select
     proxies:
@@ -316,11 +240,6 @@ proxy-groups:
       - *id010
       - *id011
       - *id012
-      - *id013
-      - *id014
-      - *id015
-      - *id016
-      - *id017
 rules:
   - RULE-SET,applications,DIRECT
   - DOMAIN,clash.razord.top,DIRECT
