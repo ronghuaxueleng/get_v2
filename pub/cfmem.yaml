@@ -6,28 +6,6 @@ log-level: info
 external-controller: 0.0.0.0:9090
 proxies:
   - &id001
-    name: 🇨🇳_CN_中国->🇬🇧_GB_英国_1
-    type: vmess
-    server: 7569erzy.of08zo0-et55lpt-uk01.my777999.top
-    port: 41999
-    cipher: auto
-    uuid: 22212159-1be2-4c81-afbb-6203b6a51739
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: tcp
-  - &id002
-    name: 🇨🇳_CN_中国->🇬🇧_GB_英国_2
-    type: vmess
-    server: 112.16.228.112
-    port: 41999
-    cipher: auto
-    uuid: 22212159-1be2-4c81-afbb-6203b6a51739
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: tcp
-  - &id003
     name: 🇺🇸_US_美国->🇫🇷_FR_法国_1
     type: vmess
     server: 172.67.223.242
@@ -42,38 +20,8 @@ proxies:
       path: /
       headers:
         host: admin.arzonhost.ir
-  - &id004
+  - &id002
     name: 🇺🇸_US_美国->🇫🇷_FR_法国_2
-    type: vmess
-    server: admin.arzonhost.ir
-    port: 2086
-    cipher: auto
-    uuid: 7d93e992-48cf-42d4-84f8-75768e815a4c
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        host: admin.arzonhost.ir
-  - &id005
-    name: 🇺🇸_US_美国->🇹🇷_TR_土耳其
-    type: vmess
-    server: tu.mahilu.site
-    port: 2095
-    cipher: auto
-    uuid: 7a737f41-b792-4260-94ff-3d864da67b80
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        host: tu.mahilu.site
-  - &id006
-    name: 🇺🇸_US_美国->🇫🇷_FR_法国_3
     type: vmess
     server: 104.21.4.14
     port: 2086
@@ -87,7 +35,50 @@ proxies:
       path: /
       headers:
         host: admin.arzonhost.ir
-  - &id007
+  - &id003
+    name: 🇺🇸_US_美国_1
+    type: vmess
+    server: mizban.arzonhost.ir
+    port: 2086
+    cipher: auto
+    uuid: e690ff9e-1676-4be3-d136-dcae586cb1e7
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: mizban.arzonhost.ir
+  - &id004
+    name: 🇨🇦_CA_加拿大
+    type: vmess
+    server: 158.51.123.111
+    port: 443
+    cipher: auto
+    uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
+    alterId: 0
+    tls: true
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /linkvws
+  - &id005
+    name: 🇺🇸_US_美国->🇫🇷_FR_法国_3
+    type: vmess
+    server: admin.arzonhost.ir
+    port: 2086
+    cipher: auto
+    uuid: 7d93e992-48cf-42d4-84f8-75768e815a4c
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: admin.arzonhost.ir
+  - &id006
     name: 🇦🇪_AE_阿联酋->🇬🇧_GB_英国
     type: vmess
     server: 94.140.0.110
@@ -102,8 +93,8 @@ proxies:
       path: /
       headers:
         host: food.zhaal.ir
-  - &id008
-    name: 🇺🇸_US_美国->🇬🇧_GB_英国_1
+  - &id007
+    name: 🇺🇸_US_美国->🇫🇷_FR_法国_4
     type: vmess
     server: cdn.vds-server.ir
     port: 8880
@@ -117,13 +108,20 @@ proxies:
       path: /
       headers:
         host: cdn.vds-server.ir
+  - &id008
+    name: 🇺🇸_US_美国_2
+    type: ss
+    server: 75.102.51.45
+    port: 16899
+    password: Yc2CtrIz8L
+    cipher: aes-128-gcm
   - &id009
-    name: 🇺🇸_US_美国->🇬🇧_GB_英国_2
+    name: 🇺🇸_US_美国->🇹🇷_TR_土耳其
     type: vmess
-    server: mizban.arzonhost.ir
-    port: 2086
+    server: tu.mahilu.site
+    port: 2095
     cipher: auto
-    uuid: e690ff9e-1676-4be3-d136-dcae586cb1e7
+    uuid: 7a737f41-b792-4260-94ff-3d864da67b80
     alterId: 0
     tls: false
     skip-cert-verify: true
@@ -131,9 +129,9 @@ proxies:
     ws-opts:
       path: /
       headers:
-        host: mizban.arzonhost.ir
+        host: tu.mahilu.site
   - &id010
-    name: 🇺🇸_US_美国
+    name: 🇺🇸_US_美国_3
     type: vmess
     server: us219.netfilx.live
     port: 80
@@ -148,20 +146,7 @@ proxies:
       headers:
         host: us219.netfilx.live
   - &id011
-    name: 🇨🇦_CA_加拿大_1
-    type: vmess
-    server: 108.181.23.161
-    port: 8080
-    cipher: auto
-    uuid: 969f1909-c0d3-4c30-813d-3aec5c838b7d
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /1IKYjV0r/
-  - &id012
-    name: 🇺🇸_US_美国->🇷🇺_RU_俄罗斯联邦
+    name: 🇺🇸_US_美国->🇷🇺_RU_俄罗斯联邦_1
     type: trojan
     server: 172.67.204.84
     port: 443
@@ -172,23 +157,67 @@ proxies:
     network: grpc
     grpc-opts:
       grpc-service-name: 443trojan
-  - &id013
-    name: 🇨🇦_CA_加拿大_2
+  - &id012
+    name: 🇺🇸_US_美国->🇷🇺_RU_俄罗斯联邦_2
     type: trojan
-    server: 15.156.10.77
-    port: 22222
+    server: 104.21.69.44
+    port: 443
     udp: true
-    password: telegram-id-directvpn
-    sni: trojan.burgerip.co.uk
+    password: qj1Dz1CJmFQRhWr1SP80aA
+    sni: cdn-21.gsmxreality.com
+    skip-cert-verify: true
+    network: grpc
+    grpc-opts:
+      grpc-service-name: 443trojan
+  - &id013
+    name: 🇺🇸_US_美国_4
+    type: trojan
+    server: 23.142.200.175
+    port: 443
+    udp: true
+    password: 27876_t7d7f4e3f
     skip-cert-verify: true
     network: tcp
   - &id014
-    name: 🇫🇮_FI_芬兰
-    type: ss
-    server: 95.217.181.48
+    name: 🇺🇸_US_美国_5
+    type: trojan
+    server: 95.164.33.62
     port: 443
-    password: Telegram-AlfredConfig-13
-    cipher: chacha20-ietf-poly1305
+    udp: true
+    password: 0b1371aa-649d-41dc-9126-338c87936500
+    sni: sourceforge.net
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /websocket
+      headers:
+        host: se1.trojanvpn.de
+  - &id015
+    name: 🇺🇸_US_美国_6
+    type: vmess
+    server: channel.hopev2ray.link
+    port: 443
+    cipher: auto
+    uuid: 9aaceca0-bc5b-49e6-a83f-088e14d94434
+    alterId: 0
+    tls: true
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /vmess
+      headers:
+        host: no1-vmess.sshmax.xyz
+  - &id016
+    name: 🇨🇳_CN_中国->🇹🇼_TW_台湾
+    type: vmess
+    server: 183.240.179.207
+    port: 30112
+    cipher: auto
+    uuid: e456d54e-fb49-42c2-ace7-0dd141fee5a6
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: tcp
 proxy-groups:
   - name: PROXY
     type: select
@@ -229,6 +258,8 @@ proxy-groups:
       - *id012
       - *id013
       - *id014
+      - *id015
+      - *id016
   - name: LOAD-BALANCE
     type: load-balance
     url: http://www.gstatic.com/generate_204
@@ -248,6 +279,8 @@ proxy-groups:
       - *id012
       - *id013
       - *id014
+      - *id015
+      - *id016
   - name: SELECT
     type: select
     proxies:
@@ -265,6 +298,8 @@ proxy-groups:
       - *id012
       - *id013
       - *id014
+      - *id015
+      - *id016
 rules:
   - RULE-SET,applications,DIRECT
   - DOMAIN,clash.razord.top,DIRECT
