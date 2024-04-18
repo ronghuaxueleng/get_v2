@@ -36,9 +36,9 @@ proxies:
       headers:
         host: admin.arzonhost.ir
   - &id003
-    name: 🇺🇸_US_美国->🇫🇷_FR_法国_3
+    name: 🇳🇱_NL_荷兰->🇫🇷_FR_法国
     type: vmess
-    server: admin.arzonhost.ir
+    server: 188.114.98.0
     port: 2086
     cipher: auto
     uuid: 7d93e992-48cf-42d4-84f8-75768e815a4c
@@ -51,125 +51,23 @@ proxies:
       headers:
         host: admin.arzonhost.ir
   - &id004
-    name: 🇺🇸_US_美国_1
+    name: 🇷🇺_RU_俄罗斯联邦
     type: trojan
-    server: 104.21.69.44
-    port: 443
+    server: ru01.freeflyingcloud.xyz
+    port: 30002
     udp: true
-    password: qj1Dz1CJmFQRhWr1SP80aA
-    sni: cdn-21.gsmxreality.com
+    password: faa0fd1b-ecf9-42ae-a5f3-0a96274b64cb
+    sni: ru01.freeflyingcloud.xyz
     skip-cert-verify: true
-    network: grpc
-    grpc-opts:
-      grpc-service-name: 443trojan
+    network: tcp
   - &id005
-    name: 🇺🇸_US_美国->🇷🇺_RU_俄罗斯联邦
-    type: trojan
-    server: 172.67.204.84
+    name: 🇺🇸_US_美国_1
+    type: ss
+    server: 35.91.225.232
     port: 443
-    udp: true
-    password: qj1Dz1CJmFQRhWr1SP80aA
-    sni: cdn-21.gsmxreality.com
-    skip-cert-verify: true
-    network: grpc
-    grpc-opts:
-      grpc-service-name: 443trojan
+    password: amazonskr05
+    cipher: aes-256-cfb
   - &id006
-    name: 🇺🇸_US_美国->🇨🇦_CA_加拿大_1
-    type: vmess
-    server: 104.19.58.60
-    port: 8080
-    cipher: auto
-    uuid: d9c5ec6a-a8d8-4732-8447-56fbd2f93e96
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    servername: concentrations-taxi-about-recognised.trycloudflare.com
-    network: ws
-    ws-opts:
-      path: d9c5ec6a-a8d8-4732-8447-56fbd2f93e96-vm
-      headers:
-        host: concentrations-taxi-about-recognised.trycloudflare.com
-  - &id007
-    name: 🇺🇸_US_美国->🇨🇦_CA_加拿大_2
-    type: vmess
-    server: 104.20.26.40
-    port: 8080
-    cipher: auto
-    uuid: 82cb93a3-65a9-4dac-a2a7-d997b6c26d6a
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    servername: fantastic-doe-bids-ended.trycloudflare.com
-    network: ws
-    ws-opts:
-      path: 82cb93a3-65a9-4dac-a2a7-d997b6c26d6a-vm
-      headers:
-        host: fantastic-doe-bids-ended.trycloudflare.com
-  - &id008
-    name: 🇺🇸_US_美国->🇨🇦_CA_加拿大_3
-    type: vmess
-    server: yh7.dtku41.xyz
-    port: 8080
-    cipher: auto
-    uuid: 028c8131-9e3e-4836-94ac-ea7f24d4d05a
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    servername: booty-pensions-scheduling-blogging.trycloudflare.com
-    network: ws
-    ws-opts:
-      path: 028c8131-9e3e-4836-94ac-ea7f24d4d05a-vm
-      headers:
-        host: booty-pensions-scheduling-blogging.trycloudflare.com
-  - &id009
-    name: 🇺🇸_US_美国->🇨🇦_CA_加拿大_4
-    type: vmess
-    server: yh5.dtku41.xyz
-    port: 8080
-    cipher: auto
-    uuid: 82cb93a3-65a9-4dac-a2a7-d997b6c26d6a
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    servername: fantastic-doe-bids-ended.trycloudflare.com
-    network: ws
-    ws-opts:
-      path: 82cb93a3-65a9-4dac-a2a7-d997b6c26d6a-vm
-      headers:
-        host: fantastic-doe-bids-ended.trycloudflare.com
-  - &id010
-    name: 🇺🇸_US_美国->🇨🇦_CA_加拿大_5
-    type: vmess
-    server: yh4.dtku41.xyz
-    port: 8080
-    cipher: auto
-    uuid: 028c8131-9e3e-4836-94ac-ea7f24d4d05a
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    servername: booty-pensions-scheduling-blogging.trycloudflare.com
-    network: ws
-    ws-opts:
-      path: 028c8131-9e3e-4836-94ac-ea7f24d4d05a-vm
-      headers:
-        host: booty-pensions-scheduling-blogging.trycloudflare.com
-  - &id011
-    name: 🇺🇸_US_美国->🇬🇧_GB_英国_1
-    type: vmess
-    server: mizban.arzonhost.ir
-    port: 2086
-    cipher: auto
-    uuid: e690ff9e-1676-4be3-d136-dcae586cb1e7
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        host: mizban.arzonhost.ir
-  - &id012
     name: 🇺🇸_US_美国->🇹🇷_TR_土耳其
     type: vmess
     server: tu.mahilu.site
@@ -184,35 +82,8 @@ proxies:
       path: /
       headers:
         host: tu.mahilu.site
-  - &id013
-    name: 🇺🇸_US_美国_2
-    type: trojan
-    server: 95.164.33.62
-    port: 443
-    udp: true
-    password: 0b1371aa-649d-41dc-9126-338c87936500
-    sni: sourceforge.net
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /websocket
-  - &id014
-    name: 🇺🇸_US_美国_3
-    type: vmess
-    server: cdn.vds-server.ir
-    port: 8880
-    cipher: auto
-    uuid: 0d1bf26a-ce97-4707-a270-7f4d2ae37334
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        host: cdn.vds-server.ir
-  - &id015
-    name: 🇦🇪_AE_阿联酋->🇬🇧_GB_英国
+  - &id007
+    name: 🇦🇪_AE_阿联酋
     type: vmess
     server: 94.140.0.110
     port: 8880
@@ -226,22 +97,109 @@ proxies:
       path: /
       headers:
         host: food.zhaal.ir
+  - &id008
+    name: 🇺🇸_US_美国->🇬🇧_GB_英国_1
+    type: vmess
+    server: mizban.arzonhost.ir
+    port: 2086
+    cipher: auto
+    uuid: e690ff9e-1676-4be3-d136-dcae586cb1e7
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: mizban.arzonhost.ir
+  - &id009
+    name: 🇮🇹_IT_意大利
+    type: trojan
+    server: it01.freeflyingcloud.xyz
+    port: 48102
+    udp: true
+    password: 6d257b63-0632-4dd6-b021-3085f8dc28b2
+    sni: it01.freeflyingcloud.xyz
+    skip-cert-verify: true
+    network: tcp
+  - &id010
+    name: 🇺🇸_US_美国->🇬🇧_GB_英国_2
+    type: vmess
+    server: cdn.vds-server.ir
+    port: 8880
+    cipher: auto
+    uuid: 0d1bf26a-ce97-4707-a270-7f4d2ae37334
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: cdn.vds-server.ir
+  - &id011
+    name: 🇺🇸_US_美国->🇨🇦_CA_加拿大_1
+    type: vmess
+    server: 104.19.58.60
+    port: 8080
+    cipher: auto
+    uuid: d9c5ec6a-a8d8-4732-8447-56fbd2f93e96
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: d9c5ec6a-a8d8-4732-8447-56fbd2f93e96-vm
+      headers:
+        host: concentrations-taxi-about-recognised.trycloudflare.com
+  - &id012
+    name: 🇺🇸_US_美国->🇫🇷_FR_法国_3
+    type: vmess
+    server: admin.arzonhost.ir
+    port: 2086
+    cipher: auto
+    uuid: 7d93e992-48cf-42d4-84f8-75768e815a4c
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: admin.arzonhost.ir
+  - &id013
+    name: 🇺🇸_US_美国_2
+    type: trojan
+    server: 95.164.33.62
+    port: 443
+    udp: true
+    password: 0b1371aa-649d-41dc-9126-338c87936500
+    sni: sourceforge.net
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /websocket
+      headers:
+        host: se1.trojanvpn.de
+  - &id014
+    name: 🇫🇷_FR_法国
+    type: trojan
+    server: fr01.freeflyingcloud.xyz
+    port: 30502
+    udp: true
+    password: 184833a5-9dff-4e2b-bc03-c0b8f9ec157f
+    sni: fr01.freeflyingcloud.xyz
+    skip-cert-verify: true
+    network: tcp
+  - &id015
+    name: 🇺🇸_US_美国_3
+    type: ss
+    server: 54.71.116.112
+    port: 443
+    password: amazonskr05
+    cipher: aes-256-cfb
   - &id016
-    name: 🇺🇸_US_美国_4
-    type: ss
-    server: 38.68.134.9
-    port: 8008
-    password: XKFKl2rULjIp74
-    cipher: aes-256-gcm
-  - &id017
-    name: 🇺🇸_US_美国_5
-    type: ss
-    server: 38.68.134.9
-    port: 5003
-    password: g5MeD6Ft3CWlJId
-    cipher: aes-256-gcm
-  - &id018
-    name: 🇺🇸_US_美国_6
+    name: 🇺🇸_US_美国->🇨🇦_CA_加拿大_2
     type: vmess
     server: 104.17.17.103
     port: 8080
@@ -255,8 +213,68 @@ proxies:
       path: 028c8131-9e3e-4836-94ac-ea7f24d4d05a-vm
       headers:
         host: booty-pensions-scheduling-blogging.trycloudflare.com
+  - &id017
+    name: 🇺🇸_US_美国_4
+    type: vmess
+    server: 104.20.26.40
+    port: 8080
+    cipher: auto
+    uuid: 82cb93a3-65a9-4dac-a2a7-d997b6c26d6a
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: 82cb93a3-65a9-4dac-a2a7-d997b6c26d6a-vm
+      headers:
+        host: fantastic-doe-bids-ended.trycloudflare.com
+  - &id018
+    name: 🇺🇸_US_美国->🇨🇦_CA_加拿大_3
+    type: vmess
+    server: yh7.dtku41.xyz
+    port: 8080
+    cipher: auto
+    uuid: 028c8131-9e3e-4836-94ac-ea7f24d4d05a
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: 028c8131-9e3e-4836-94ac-ea7f24d4d05a-vm
+      headers:
+        host: booty-pensions-scheduling-blogging.trycloudflare.com
   - &id019
-    name: 🇺🇸_US_美国->🇬🇧_GB_英国_2
+    name: 🇺🇸_US_美国->🇨🇦_CA_加拿大_4
+    type: vmess
+    server: yh4.dtku41.xyz
+    port: 8080
+    cipher: auto
+    uuid: 028c8131-9e3e-4836-94ac-ea7f24d4d05a
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: 028c8131-9e3e-4836-94ac-ea7f24d4d05a-vm
+      headers:
+        host: booty-pensions-scheduling-blogging.trycloudflare.com
+  - &id020
+    name: 🇺🇸_US_美国->🇨🇦_CA_加拿大_5
+    type: vmess
+    server: yh5.dtku41.xyz
+    port: 8080
+    cipher: auto
+    uuid: 82cb93a3-65a9-4dac-a2a7-d997b6c26d6a
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: 82cb93a3-65a9-4dac-a2a7-d997b6c26d6a-vm
+      headers:
+        host: fantastic-doe-bids-ended.trycloudflare.com
+  - &id021
+    name: 🇺🇸_US_美国->🇬🇧_GB_英国_3
     type: vmess
     server: 104.21.19.202
     port: 8880
@@ -270,20 +288,8 @@ proxies:
       path: /
       headers:
         host: cdn.vds-server.ir
-  - &id020
-    name: 🇨🇦_CA_加拿大
-    type: trojan
-    server: 3.98.195.197
-    port: 22222
-    udp: true
-    password: telegram-id-directvpn
-    sni: trojan.burgerip.co.uk
-    skip-cert-verify: true
-    network: tcp
-    alpn:
-      - http/1.1
-  - &id021
-    name: 🇺🇸_US_美国_7
+  - &id022
+    name: 🇺🇸_US_美国_5
     type: vmess
     server: us219.netfilx.live
     port: 80
@@ -297,36 +303,43 @@ proxies:
       path: /
       headers:
         host: us219.netfilx.live
-  - &id022
-    name: 🇺🇸_US_美国_8
-    type: vmess
-    server: 104.19.40.48
-    port: 8880
-    cipher: auto
-    uuid: 57e0cb4d-eae5-48ec-8091-149dc2b309e0
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /d/65dd503.TG.WangCai2.WangCai_8:107690
-      headers:
-        host: uk.moss.network
   - &id023
-    name: 🇺🇸_US_美国->🇬🇧_GB_英国_3
+    name: 🇺🇸_US_美国->🇷🇺_RU_俄罗斯联邦
+    type: trojan
+    server: 172.67.204.84
+    port: 443
+    udp: true
+    password: qj1Dz1CJmFQRhWr1SP80aA
+    sni: cdn-21.gsmxreality.com
+    skip-cert-verify: true
+    network: grpc
+    grpc-opts:
+      grpc-service-name: 443trojan
+  - &id024
+    name: 🇩🇪_DE_德国
+    type: trojan
+    server: 18.153.252.91
+    port: 22222
+    udp: true
+    password: telegram-id-privatevpns
+    sni: trojan.burgerip.co.uk
+    skip-cert-verify: true
+    network: tcp
+  - &id025
+    name: 🇨🇳_CN_中国
     type: vmess
-    server: 104.19.40.99
-    port: 8880
+    server: data-us-v1.shwjfkw.cn
+    port: 20401
     cipher: auto
-    uuid: 57e0cb4d-eae5-48ec-8091-149dc2b309e0
+    uuid: b1478e24-4916-3abe-8f17-15931012ecbe
     alterId: 0
     tls: false
     skip-cert-verify: true
     network: ws
     ws-opts:
-      path: /d/65dd503.TG.WangCai2.WangCai_8:107690
+      path: /debian
       headers:
-        host: uk.moss.network
+        host: data-us-v1.shwjfkw.cn
 proxy-groups:
   - name: PROXY
     type: select
@@ -376,6 +389,8 @@ proxy-groups:
       - *id021
       - *id022
       - *id023
+      - *id024
+      - *id025
   - name: LOAD-BALANCE
     type: load-balance
     url: http://www.gstatic.com/generate_204
@@ -404,6 +419,8 @@ proxy-groups:
       - *id021
       - *id022
       - *id023
+      - *id024
+      - *id025
   - name: SELECT
     type: select
     proxies:
@@ -430,6 +447,8 @@ proxy-groups:
       - *id021
       - *id022
       - *id023
+      - *id024
+      - *id025
 rules:
   - RULE-SET,applications,DIRECT
   - DOMAIN,clash.razord.top,DIRECT
