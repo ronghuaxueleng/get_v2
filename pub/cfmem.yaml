@@ -6,12 +6,12 @@ log-level: info
 external-controller: 0.0.0.0:9090
 proxies:
   - &id001
-    name: 🇺🇸_US_美国->🇩🇪_DE_德国_1
+    name: 🇺🇸_US_美国->🇨🇦_CA_加拿大_1
     type: vmess
-    server: cfcdn1.sanfencdn9.com
-    port: 2052
+    server: 172.67.214.33
+    port: 2095
     cipher: auto
-    uuid: aec82fa6-ab70-4d0a-e7fb-422ef729d961
+    uuid: 7a737f41-b792-4260-94ff-3d864da67b80
     alterId: 0
     tls: false
     skip-cert-verify: true
@@ -19,38 +19,8 @@ proxies:
     ws-opts:
       path: /
       headers:
-        host: helanv6cf.inekokkk.top
+        host: fcdn.flha.ru
   - &id002
-    name: 🇺🇸_US_美国->🇩🇪_DE_德国_2
-    type: vmess
-    server: 104.18.19.191
-    port: 2052
-    cipher: auto
-    uuid: aec82fa6-ab70-4d0a-e7fb-422ef729d961
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        host: helanv6cf.inekokkk.top
-  - &id003
-    name: 🇺🇸_US_美国->🇩🇪_DE_德国_3
-    type: vmess
-    server: 104.18.36.119
-    port: 2052
-    cipher: auto
-    uuid: aec82fa6-ab70-4d0a-e7fb-422ef729d961
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        host: helanv6cf.inekokkk.top
-  - &id004
     name: 🇺🇸_US_美国_1
     type: vmess
     server: fcdn.flha.ru
@@ -65,82 +35,7 @@ proxies:
       path: /
       headers:
         host: fcdn.flha.ru
-  - &id005
-    name: 🇺🇸_US_美国->🇹🇷_TR_土耳其_1
-    type: vmess
-    server: 104.21.82.39
-    port: 2095
-    cipher: auto
-    uuid: 7a737f41-b792-4260-94ff-3d864da67b80
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        host: tu.mahilu.site
-  - &id006
-    name: 🇺🇸_US_美国->🇩🇪_DE_德国_4
-    type: vmess
-    server: 104.19.250.15
-    port: 2052
-    cipher: auto
-    uuid: aec82fa6-ab70-4d0a-e7fb-422ef729d961
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        host: helanv6cf.inekokkk.top
-  - &id007
-    name: 🇺🇸_US_美国_2
-    type: vmess
-    server: 104.21.23.231
-    port: 2095
-    cipher: auto
-    uuid: 7a737f41-b792-4260-94ff-3d864da67b80
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        host: fcdn.flha.ru
-  - &id008
-    name: 🇺🇸_US_美国_3
-    type: vmess
-    server: 172.67.214.33
-    port: 2095
-    cipher: auto
-    uuid: 7a737f41-b792-4260-94ff-3d864da67b80
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        host: fcdn.flha.ru
-  - &id009
-    name: 🇺🇸_US_美国->🇹🇷_TR_土耳其_2
-    type: vmess
-    server: tu.mahilu.site
-    port: 2095
-    cipher: auto
-    uuid: 7a737f41-b792-4260-94ff-3d864da67b80
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        host: tu.mahilu.site
-  - &id010
+  - &id003
     name: 🇺🇸_US_美国->🇫🇷_FR_法国
     type: vmess
     server: 104.21.8.157
@@ -155,44 +50,7 @@ proxies:
       path: /
       headers:
         host: s1c.v2.v001sss.xyz
-  - &id011
-    name: 🇺🇸_US_美国->🇨🇦_CA_加拿大_1
-    type: vmess
-    server: 104.20.26.40
-    port: 8080
-    cipher: auto
-    uuid: 82cb93a3-65a9-4dac-a2a7-d997b6c26d6a
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: 82cb93a3-65a9-4dac-a2a7-d997b6c26d6a-vm
-      headers:
-        host: fantastic-doe-bids-ended.trycloudflare.com
-  - &id012
-    name: 🇺🇸_US_美国_4
-    type: ss
-    server: 205.134.180.145
-    port: 443
-    password: hgLCgfLRgB6d
-    cipher: chacha20-ietf-poly1305
-  - &id013
-    name: 🇺🇸_US_美国->🇷🇺_RU_俄罗斯联邦
-    type: vmess
-    server: 162.159.58.74
-    port: 80
-    cipher: auto
-    uuid: 1a363dc9-698c-49d2-e00d-c43005f64c40
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /TG@dns68免费节点
-      headers:
-        host: tg.dns68.9669.link
-  - &id014
+  - &id004
     name: 🇱🇺_LU_卢森堡
     type: vmess
     server: 45.82.31.164
@@ -203,20 +61,91 @@ proxies:
     tls: false
     skip-cert-verify: true
     network: http
-  - &id015
-    name: 🇩🇪_DE_德意志联邦共和国
+  - &id005
+    name: 🇺🇸_US_美国_2
     type: vmess
-    server: 23.158.56.229
-    port: 443
+    server: cfcdn1.sanfencdn9.com
+    port: 2052
     cipher: auto
-    uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
+    uuid: aec82fa6-ab70-4d0a-e7fb-422ef729d961
     alterId: 0
-    tls: true
+    tls: false
     skip-cert-verify: true
     network: ws
     ws-opts:
-      path: /linkvws
-  - &id016
+      path: /
+      headers:
+        host: helanv6cf.inekokkk.top
+  - &id006
+    name: 🇺🇸_US_美国_3
+    type: vmess
+    server: 104.18.19.191
+    port: 2052
+    cipher: auto
+    uuid: aec82fa6-ab70-4d0a-e7fb-422ef729d961
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: helanv6cf.inekokkk.top
+  - &id007
+    name: 🇺🇸_US_美国_4
+    type: vmess
+    server: 104.18.36.119
+    port: 2052
+    cipher: auto
+    uuid: aec82fa6-ab70-4d0a-e7fb-422ef729d961
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: helanv6cf.inekokkk.top
+  - &id008
+    name: 🇺🇸_US_美国_5
+    type: vmess
+    server: 104.19.250.15
+    port: 2052
+    cipher: auto
+    uuid: aec82fa6-ab70-4d0a-e7fb-422ef729d961
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: helanv6cf.inekokkk.top
+  - &id009
+    name: 🇺🇸_US_美国_6
+    type: vmess
+    server: 104.21.23.231
+    port: 2095
+    cipher: auto
+    uuid: 7a737f41-b792-4260-94ff-3d864da67b80
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: fcdn.flha.ru
+  - &id010
+    name: 🇺🇸_US_美国_7
+    type: trojan
+    server: 23.142.200.175
+    port: 443
+    udp: true
+    password: 27876_t7d7f4e3f
+    skip-cert-verify: true
+    network: tcp
+  - &id011
     name: 🇨🇦_CA_加拿大
     type: vmess
     server: 158.51.123.111
@@ -229,44 +158,13 @@ proxies:
     network: ws
     ws-opts:
       path: /linkvws
-  - &id017
-    name: 🇺🇸_US_美国->🇨🇦_CA_加拿大_2
+  - &id012
+    name: 🇺🇸_US_美国_8
     type: vmess
-    server: 141.101.122.250
-    port: 8080
+    server: 172.67.130.140
+    port: 2082
     cipher: auto
-    uuid: 82cb93a3-65a9-4dac-a2a7-d997b6c26d6a
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: 82cb93a3-65a9-4dac-a2a7-d997b6c26d6a-vm
-      headers:
-        host: fantastic-doe-bids-ended.trycloudflare.com
-  - &id018
-    name: 🇺🇸_US_美国_5
-    type: trojan
-    server: 23.142.200.175
-    port: 443
-    udp: true
-    password: 27876_t7d7f4e3f
-    skip-cert-verify: true
-    network: tcp
-  - &id019
-    name: 🇺🇸_US_美国_6
-    type: ss
-    server: 156.146.38.163
-    port: 443
-    password: shadowsocks
-    cipher: aes-128-cfb
-  - &id020
-    name: 🇺🇸_US_美国->🇹🇷_TR_土耳其_3
-    type: vmess
-    server: 172.67.152.170
-    port: 2095
-    cipher: auto
-    uuid: 7a737f41-b792-4260-94ff-3d864da67b80
+    uuid: 112ac36f-3f53-4e26-8371-d25c028e1b9a
     alterId: 0
     tls: false
     skip-cert-verify: true
@@ -274,7 +172,57 @@ proxies:
     ws-opts:
       path: /
       headers:
-        host: tu.mahilu.site
+        host: s1c.v2.v001sss.xyz
+  - &id013
+    name: 🇺🇸_US_美国->🇨🇦_CA_加拿大_2
+    type: vmess
+    server: yh7.dtku41.xyz
+    port: 8080
+    cipher: auto
+    uuid: 028c8131-9e3e-4836-94ac-ea7f24d4d05a
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: 028c8131-9e3e-4836-94ac-ea7f24d4d05a-vm
+      headers:
+        host: booty-pensions-scheduling-blogging.trycloudflare.com
+  - &id014
+    name: 🇺🇸_US_美国->🇨🇦_CA_加拿大_3
+    type: vmess
+    server: yh4.dtku41.xyz
+    port: 8080
+    cipher: auto
+    uuid: 028c8131-9e3e-4836-94ac-ea7f24d4d05a
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: 028c8131-9e3e-4836-94ac-ea7f24d4d05a-vm
+      headers:
+        host: booty-pensions-scheduling-blogging.trycloudflare.com
+  - &id015
+    name: 🇺🇸_US_美国_9
+    type: ss
+    server: 156.146.38.163
+    port: 443
+    password: shadowsocks
+    cipher: aes-128-cfb
+  - &id016
+    name: 🇺🇸_US_美国_10
+    type: vmess
+    server: cold-dawn-9246.fly.dev
+    port: 443
+    cipher: auto
+    uuid: ea4909ef-7ca6-4b46-bf2e-6c07896ef338
+    alterId: 0
+    tls: true
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /ea4909ef-7ca6-4b46-bf2e-6c07896ef338-vm
 proxy-groups:
   - name: PROXY
     type: select
@@ -317,10 +265,6 @@ proxy-groups:
       - *id014
       - *id015
       - *id016
-      - *id017
-      - *id018
-      - *id019
-      - *id020
   - name: LOAD-BALANCE
     type: load-balance
     url: http://www.gstatic.com/generate_204
@@ -342,10 +286,6 @@ proxy-groups:
       - *id014
       - *id015
       - *id016
-      - *id017
-      - *id018
-      - *id019
-      - *id020
   - name: SELECT
     type: select
     proxies:
@@ -365,10 +305,6 @@ proxy-groups:
       - *id014
       - *id015
       - *id016
-      - *id017
-      - *id018
-      - *id019
-      - *id020
 rules:
   - RULE-SET,applications,DIRECT
   - DOMAIN,clash.razord.top,DIRECT
