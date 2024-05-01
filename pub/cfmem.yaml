@@ -21,31 +21,7 @@ proxies:
       headers:
         host: tw1bQiWSE4x.fzbqfrse.xyz
   - &id002
-    name: 🇺🇸_US_美国_2
-    type: trojan
-    server: 23.142.200.175
-    port: 443
-    udp: true
-    password: 27876_t7d7f4e3f
-    skip-cert-verify: true
-    network: tcp
-  - &id003
     name: 🇺🇸_US_美国->🇩🇪_DE_德国_1
-    type: vmess
-    server: 104.18.19.191
-    port: 2052
-    cipher: auto
-    uuid: aec82fa6-ab70-4d0a-e7fb-422ef729d961
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        host: helanv6cf.inekokkk.top
-  - &id004
-    name: 🇺🇸_US_美国->🇩🇪_DE_德国_2
     type: vmess
     server: 104.19.250.15
     port: 2052
@@ -59,8 +35,8 @@ proxies:
       path: /
       headers:
         host: helanv6cf.inekokkk.top
-  - &id005
-    name: 🇺🇸_US_美国->🇩🇪_DE_德国_3
+  - &id003
+    name: 🇺🇸_US_美国->🇩🇪_DE_德国_2
     type: vmess
     server: 104.18.36.119
     port: 2052
@@ -74,74 +50,112 @@ proxies:
       path: /
       headers:
         host: helanv6cf.inekokkk.top
-  - &id006
-    name: 🇨🇦_CA_加拿大
+  - &id004
+    name: 🇺🇸_US_美国->🇩🇪_DE_德国_3
     type: vmess
-    server: 158.51.123.111
+    server: 104.18.19.191
+    port: 2052
+    cipher: auto
+    uuid: aec82fa6-ab70-4d0a-e7fb-422ef729d961
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: helanv6cf.inekokkk.top
+  - &id005
+    name: 🇺🇸_US_美国_2
+    type: ss
+    server: 156.146.38.163
+    port: 443
+    password: shadowsocks
+    cipher: aes-128-cfb
+  - &id006
+    name: 🇺🇸_US_美国->🇫🇷_FR_法国_1
+    type: vmess
+    server: 172.67.130.140
+    port: 2082
+    cipher: auto
+    uuid: 112ac36f-3f53-4e26-8371-d25c028e1b9a
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: s1c.v2.v001sss.xyz
+  - &id007
+    name: 🇱🇺_LU_卢森堡
+    type: vmess
+    server: 45.82.31.164
+    port: 3389
+    cipher: auto
+    uuid: 9c050a86-d612-48f1-ec32-e573df08a1b7
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: http
+  - &id008
+    name: 🇺🇸_US_美国_3
+    type: trojan
+    server: 95.164.33.62
+    port: 443
+    udp: true
+    password: 0b1371aa-649d-41dc-9126-338c87936500
+    sni: sourceforge.net
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /websocket
+      headers:
+        host: se1.trojanvpn.de
+  - &id009
+    name: 🇺🇸_US_美国_4
+    type: ss
+    server: 38.68.135.18
+    port: 4444
+    password: pKEW8JPByTVTLtM
+    cipher: aes-256-gcm
+  - &id010
+    name: 🇺🇸_US_美国->🇫🇷_FR_法国_2
+    type: vmess
+    server: 104.21.8.157
+    port: 2082
+    cipher: auto
+    uuid: 112ac36f-3f53-4e26-8371-d25c028e1b9a
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: s1c.v2.v001sss.xyz
+  - &id011
+    name: 🇺🇸_US_美国_5
+    type: ss
+    server: 212.102.47.198
+    port: 443
+    password: shadowsocks
+    cipher: aes-128-cfb
+  - &id012
+    name: 🇺🇸_US_美国_6
+    type: vmess
+    server: channel.hopev2ray.link
     port: 443
     cipher: auto
-    uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
+    uuid: 9aaceca0-bc5b-49e6-a83f-088e14d94434
     alterId: 0
     tls: true
     skip-cert-verify: true
     network: ws
     ws-opts:
-      path: /linkvws
-  - &id007
-    name: 🇺🇸_US_美国->🇪🇸_ES_西班牙
-    type: trojan
-    server: fuck6.mmmmmmmmmm.cfd
-    port: 48057
-    udp: true
-    password: 2062a5ca-a34e-47bf-9810-db91185f07fc
-    sni: apple.com
-    skip-cert-verify: true
-    network: tcp
-  - &id008
-    name: 🇨🇾_CY_塞浦路斯->🇨🇦_CA_加拿大
-    type: vmess
-    server: yh9.dtku41.xyz
-    port: 8080
-    cipher: auto
-    uuid: ef8c954e-014f-4b36-8273-9b5086afab34
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: ef8c954e-014f-4b36-8273-9b5086afab34-vm
+      path: /vmess
       headers:
-        host: hang-broke-john-neither.trycloudflare.com
-  - &id009
-    name: 🇺🇸_US_美国->🇬🇧_GB_英国
-    type: vmess
-    server: 104.19.40.84
-    port: 8880
-    cipher: auto
-    uuid: 57e0cb4d-eae5-48ec-8091-149dc2b309e0
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /d/65dd503.TG.WangCai2.WangCai_8:107690
-      headers:
-        host: uk.moss.network
-  - &id010
-    name: 🇺🇸_US_美国_3
-    type: vmess
-    server: 104.17.17.103
-    port: 8080
-    cipher: auto
-    uuid: 028c8131-9e3e-4836-94ac-ea7f24d4d05a
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: 028c8131-9e3e-4836-94ac-ea7f24d4d05a-vm
-      headers:
-        host: booty-pensions-scheduling-blogging.trycloudflare.com
+        host: no1-vmess.sshmax.xyz
 proxy-groups:
   - name: PROXY
     type: select
@@ -178,6 +192,8 @@ proxy-groups:
       - *id008
       - *id009
       - *id010
+      - *id011
+      - *id012
   - name: LOAD-BALANCE
     type: load-balance
     url: http://www.gstatic.com/generate_204
@@ -193,6 +209,8 @@ proxy-groups:
       - *id008
       - *id009
       - *id010
+      - *id011
+      - *id012
   - name: SELECT
     type: select
     proxies:
@@ -206,6 +224,8 @@ proxy-groups:
       - *id008
       - *id009
       - *id010
+      - *id011
+      - *id012
 rules:
   - RULE-SET,applications,DIRECT
   - DOMAIN,clash.razord.top,DIRECT
