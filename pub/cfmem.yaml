@@ -6,20 +6,16 @@ log-level: info
 external-controller: 0.0.0.0:9090
 proxies:
   - &id001
-    name: 🇺🇸_US_美国_1
+    name: 🇱🇺_LU_卢森堡
     type: vmess
-    server: cfcdn1.sanfencdn9.com
-    port: 2052
+    server: 45.82.31.164
+    port: 3389
     cipher: auto
-    uuid: 8c7b39d2-eb80-48d4-9471-76bddc5273c8
+    uuid: 9c050a86-d612-48f1-ec32-e573df08a1b7
     alterId: 0
     tls: false
     skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /video/GQ2qE5Us9g
-      headers:
-        host: tw1bQiWSE4x.fzbqfrse.xyz
+    network: http
   - &id002
     name: 🇺🇸_US_美国->🇩🇪_DE_德国_1
     type: vmess
@@ -66,66 +62,19 @@ proxies:
       headers:
         host: helanv6cf.inekokkk.top
   - &id005
-    name: 🇺🇸_US_美国_2
+    name: 🇺🇸_US_美国
     type: ss
-    server: 156.146.38.163
-    port: 443
-    password: shadowsocks
-    cipher: aes-128-cfb
-  - &id006
-    name: 🇺🇸_US_美国->🇫🇷_FR_法国_1
-    type: vmess
-    server: 172.67.130.140
-    port: 2082
-    cipher: auto
-    uuid: 112ac36f-3f53-4e26-8371-d25c028e1b9a
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        host: s1c.v2.v001sss.xyz
-  - &id007
-    name: 🇱🇺_LU_卢森堡
-    type: vmess
-    server: 45.82.31.164
-    port: 3389
-    cipher: auto
-    uuid: 9c050a86-d612-48f1-ec32-e573df08a1b7
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: http
-  - &id008
-    name: 🇺🇸_US_美国_3
-    type: trojan
-    server: 95.164.33.62
-    port: 443
-    udp: true
-    password: 0b1371aa-649d-41dc-9126-338c87936500
-    sni: sourceforge.net
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /websocket
-      headers:
-        host: se1.trojanvpn.de
-  - &id009
-    name: 🇺🇸_US_美国_4
-    type: ss
-    server: 38.68.135.18
-    port: 4444
-    password: pKEW8JPByTVTLtM
+    server: 129.146.102.22
+    port: 34017
+    password: N0k6tSWblI
     cipher: aes-256-gcm
-  - &id010
-    name: 🇺🇸_US_美国->🇫🇷_FR_法国_2
+  - &id006
+    name: 🇺🇸_US_美国->🇩🇪_DE_德国_4
     type: vmess
-    server: 104.21.8.157
-    port: 2082
+    server: cfcdn1.sanfencdn9.com
+    port: 2052
     cipher: auto
-    uuid: 112ac36f-3f53-4e26-8371-d25c028e1b9a
+    uuid: aec82fa6-ab70-4d0a-e7fb-422ef729d961
     alterId: 0
     tls: false
     skip-cert-verify: true
@@ -133,29 +82,22 @@ proxies:
     ws-opts:
       path: /
       headers:
-        host: s1c.v2.v001sss.xyz
-  - &id011
-    name: 🇺🇸_US_美国_5
-    type: ss
-    server: 212.102.47.198
-    port: 443
-    password: shadowsocks
-    cipher: aes-128-cfb
-  - &id012
-    name: 🇺🇸_US_美国_6
+        host: helanv6cf.inekokkk.top
+  - &id007
+    name: 🇺🇸_US_美国->🇬🇧_GB_英国
     type: vmess
-    server: channel.hopev2ray.link
-    port: 443
+    server: 104.19.40.222
+    port: 8880
     cipher: auto
-    uuid: 9aaceca0-bc5b-49e6-a83f-088e14d94434
+    uuid: 57e0cb4d-eae5-48ec-8091-149dc2b309e0
     alterId: 0
-    tls: true
+    tls: false
     skip-cert-verify: true
     network: ws
     ws-opts:
-      path: /vmess
+      path: /d/65dd503.TG.WangCai2.WangCai_8:107690
       headers:
-        host: no1-vmess.sshmax.xyz
+        host: uk.moss.network
 proxy-groups:
   - name: PROXY
     type: select
@@ -189,11 +131,6 @@ proxy-groups:
       - *id005
       - *id006
       - *id007
-      - *id008
-      - *id009
-      - *id010
-      - *id011
-      - *id012
   - name: LOAD-BALANCE
     type: load-balance
     url: http://www.gstatic.com/generate_204
@@ -206,11 +143,6 @@ proxy-groups:
       - *id005
       - *id006
       - *id007
-      - *id008
-      - *id009
-      - *id010
-      - *id011
-      - *id012
   - name: SELECT
     type: select
     proxies:
@@ -221,11 +153,6 @@ proxy-groups:
       - *id005
       - *id006
       - *id007
-      - *id008
-      - *id009
-      - *id010
-      - *id011
-      - *id012
 rules:
   - RULE-SET,applications,DIRECT
   - DOMAIN,clash.razord.top,DIRECT
