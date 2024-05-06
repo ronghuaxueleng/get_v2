@@ -6,22 +6,22 @@ log-level: info
 external-controller: 0.0.0.0:9090
 proxies:
   - &id001
-    name: 🇺🇸_US_美国->🇩🇪_DE_德国_1
+    name: 🇺🇸_US_美国_1
     type: vmess
-    server: 104.18.19.191
-    port: 2052
+    server: cfcdn1.sanfencdn9.com
+    port: 2082
     cipher: auto
-    uuid: aec82fa6-ab70-4d0a-e7fb-422ef729d961
+    uuid: 7f40abd1-6397-4706-8510-bc5d08df8ad5
     alterId: 0
     tls: false
     skip-cert-verify: true
     network: ws
     ws-opts:
-      path: /
+      path: /video/CuTy87zAzV/
       headers:
-        host: helanv6cf.inekokkk.top
+        host: us4Bb5oSgJA.fzbqfrse.xyz
   - &id002
-    name: 🇺🇸_US_美国->🇩🇪_DE_德国_2
+    name: 🇺🇸_US_美国_2
     type: vmess
     server: 104.19.250.15
     port: 2052
@@ -36,7 +36,18 @@ proxies:
       headers:
         host: helanv6cf.inekokkk.top
   - &id003
-    name: 🇺🇸_US_美国->🇩🇪_DE_德国_3
+    name: 🇱🇺_LU_卢森堡
+    type: vmess
+    server: 45.82.31.164
+    port: 3389
+    cipher: auto
+    uuid: 9c050a86-d612-48f1-ec32-e573df08a1b7
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: http
+  - &id004
+    name: 🇺🇸_US_美国->🇩🇪_DE_德国_1
     type: vmess
     server: 104.18.36.119
     port: 2052
@@ -50,13 +61,13 @@ proxies:
       path: /
       headers:
         host: helanv6cf.inekokkk.top
-  - &id004
-    name: 🇺🇸_US_美国->🇮🇳_IN_印度
+  - &id005
+    name: 🇺🇸_US_美国->🇩🇪_DE_德国_2
     type: vmess
-    server: hk.wish.ml
+    server: 104.18.19.191
     port: 2052
     cipher: auto
-    uuid: 543f15f1-96a8-4205-b4a2-1a1ae6766c12
+    uuid: aec82fa6-ab70-4d0a-e7fb-422ef729d961
     alterId: 0
     tls: false
     skip-cert-verify: true
@@ -64,23 +75,31 @@ proxies:
     ws-opts:
       path: /
       headers:
-        host: in3.wish.ml
-  - &id005
-    name: 🇺🇸_US_美国_1
-    type: ss
-    server: 169.197.142.216
-    port: 6679
-    password: TEzjfAYq2IjtuoS
-    cipher: aes-256-gcm
+        host: helanv6cf.inekokkk.top
   - &id006
-    name: 🇺🇸_US_美国_2
+    name: 🇺🇸_US_美国_3
     type: ss
-    server: 169.197.142.216
-    port: 7002
-    password: RexnBgU7EV5ADxG
-    cipher: aes-256-gcm
+    server: 212.102.47.198
+    port: 443
+    password: shadowsocks
+    cipher: aes-128-cfb
   - &id007
-    name: 🇺🇸_US_美国->🇩🇪_DE_德国_4
+    name: 🇺🇸_US_美国->🇫🇷_FR_法国_1
+    type: vmess
+    server: 104.21.8.157
+    port: 2082
+    cipher: auto
+    uuid: 112ac36f-3f53-4e26-8371-d25c028e1b9a
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: s1c.v2.v001sss.xyz
+  - &id008
+    name: 🇺🇸_US_美国->🇩🇪_DE_德国_3
     type: vmess
     server: cfcdn1.sanfencdn9.com
     port: 2052
@@ -94,21 +113,19 @@ proxies:
       path: /
       headers:
         host: helanv6cf.inekokkk.top
-  - &id008
-    name: 🇱🇺_LU_卢森堡
-    type: vmess
-    server: 45.82.31.164
-    port: 3389
-    cipher: auto
-    uuid: 9c050a86-d612-48f1-ec32-e573df08a1b7
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: http
   - &id009
-    name: 🇨🇦_CA_加拿大
+    name: 🇨🇳_CN_中国->🇩🇪_DE_德国
+    type: trojan
+    server: 36.138.99.56
+    port: 40316
+    udp: true
+    password: MyYoZhfX
+    skip-cert-verify: true
+    network: tcp
+  - &id010
+    name: 🇩🇪_DE_德意志联邦共和国
     type: vmess
-    server: 23.162.200.227
+    server: 23.158.56.50
     port: 443
     cipher: auto
     uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
@@ -118,64 +135,125 @@ proxies:
     network: ws
     ws-opts:
       path: /linkvws
-  - &id010
-    name: 🇺🇸_US_美国->🇨🇦_CA_加拿大
+  - &id011
+    name: 🇺🇸_US_美国->🇫🇷_FR_法国_2
     type: vmess
-    server: yh4.dtku41.xyz
-    port: 8080
+    server: 172.67.130.140
+    port: 2082
     cipher: auto
-    uuid: ef8c954e-014f-4b36-8273-9b5086afab34
+    uuid: 112ac36f-3f53-4e26-8371-d25c028e1b9a
     alterId: 0
     tls: false
     skip-cert-verify: true
     network: ws
     ws-opts:
-      path: ef8c954e-014f-4b36-8273-9b5086afab34-vm
+      path: /
       headers:
-        host: dual-nothing-prep-exit.trycloudflare.com
-  - &id011
-    name: 🇳🇱_NL_荷兰
+        host: s1c.v2.v001sss.xyz
+  - &id012
+    name: 🇺🇸_US_美国_4
+    type: trojan
+    server: 18.189.91.107
+    port: 22222
+    udp: true
+    password: telegram-id-directvpn
+    sni: trojan.burgerip.co.uk
+    skip-cert-verify: true
+    network: tcp
+    alpn:
+      - http/1.1
+  - &id013
+    name: 🇨🇦_CA_加拿大_1
+    type: ss
+    server: 23.162.200.181
+    port: 8080
+    password: KixLvKzwjekG00rm
+    cipher: aes-256-gcm
+  - &id014
+    name: 🇨🇦_CA_加拿大_2
+    type: ss
+    server: 23.162.200.181
+    port: 8000
+    password: KixLvKzwjekG00rm
+    cipher: aes-256-gcm
+  - &id015
+    name: 🇺🇸_US_美国_5
     type: vmess
-    server: nl2-full.privateip.net
-    port: 443
+    server: 104.19.173.68
+    port: 80
     cipher: auto
-    uuid: b7a0cf39-99fa-47a4-8d9f-5263806e8cce
+    uuid: bdeaba4b-bdac-426f-94f2-16a63d91352f
     alterId: 0
-    tls: true
+    tls: false
     skip-cert-verify: true
     network: ws
     ws-opts:
-      path: /RACEVPN
+      path: /
       headers:
-        host: nl2-full.privateip.net
-  - &id012
-    name: 🇺🇸_US_美国_3
+        host: ustoucjjnid18sj6us.lovebaipiao.com
+  - &id016
+    name: 🇨🇦_CA_加拿大_3
+    type: ss
+    server: 23.162.200.181
+    port: 8118
+    password: cdBIDV42DCwnfIN
+    cipher: aes-256-gcm
+  - &id017
+    name: 🇨🇦_CA_加拿大_4
+    type: ss
+    server: 23.162.200.181
+    port: 2376
+    password: faBAoD54k87UJG7
+    cipher: aes-256-gcm
+  - &id018
+    name: 🇨🇦_CA_加拿大_5
+    type: ss
+    server: 23.162.200.181
+    port: 7001
+    password: RexnBgU7EV5ADxG
+    cipher: aes-256-gcm
+  - &id019
+    name: 🇨🇦_CA_加拿大_6
     type: trojan
-    server: de2-full.privateip.net
-    port: 443
+    server: 3.97.29.230
+    port: 22222
     udp: true
-    password: dcf0fcec-3800-4f42-9b78-1323f6a4a004
+    password: telegram-id-directvpn
+    sni: trojan.burgerip.co.uk
     skip-cert-verify: true
     network: tcp
-  - &id013
-    name: 🇺🇸_US_美国_4
+  - &id020
+    name: 🇬🇧_GB_英国
     type: trojan
-    server: 95.164.117.128
-    port: 443
+    server: 18.134.191.135
+    port: 22222
     udp: true
-    password: dcf0fcec-3800-4f42-9b78-1323f6a4a004
-    sni: de2-full.privateip.net
+    password: telegram-id-privatevpns
+    sni: trojan.burgerip.co.uk
     skip-cert-verify: true
     network: tcp
-  - &id014
-    name: 🇨🇳_CN_中国->🇩🇪_DE_德国
-    type: trojan
-    server: 36.138.99.56
-    port: 40316
-    udp: true
-    password: MyYoZhfX
+  - &id021
+    name: 🇰🇷_KR_韩国->🇷🇺_RU_俄罗斯联邦
+    type: vmess
+    server: 210.87.195.254
+    port: 60999
+    cipher: auto
+    uuid: e8c6eb94-0c48-49de-c3eb-e305a26d1074
+    alterId: 0
+    tls: false
     skip-cert-verify: true
-    network: tcp
+    network: ws
+    ws-opts:
+      path: /TG@dns68维护
+      headers:
+        host: tg.dns68.9669.link
+  - &id022
+    name: 🇧🇩_BD_孟加拉国
+    type: ss
+    server: 103.106.2.90
+    port: 8881
+    password: oxp4Xr64OKpXV127Zwtzl14P8L8PovqbFGPHbnbhRf7CxCSW1E
+    cipher: chacha20-ietf-poly1305
 proxy-groups:
   - name: PROXY
     type: select
@@ -216,6 +294,14 @@ proxy-groups:
       - *id012
       - *id013
       - *id014
+      - *id015
+      - *id016
+      - *id017
+      - *id018
+      - *id019
+      - *id020
+      - *id021
+      - *id022
   - name: LOAD-BALANCE
     type: load-balance
     url: http://www.gstatic.com/generate_204
@@ -235,6 +321,14 @@ proxy-groups:
       - *id012
       - *id013
       - *id014
+      - *id015
+      - *id016
+      - *id017
+      - *id018
+      - *id019
+      - *id020
+      - *id021
+      - *id022
   - name: SELECT
     type: select
     proxies:
@@ -252,6 +346,14 @@ proxy-groups:
       - *id012
       - *id013
       - *id014
+      - *id015
+      - *id016
+      - *id017
+      - *id018
+      - *id019
+      - *id020
+      - *id021
+      - *id022
 rules:
   - RULE-SET,applications,DIRECT
   - DOMAIN,clash.razord.top,DIRECT
