@@ -6,32 +6,21 @@ log-level: info
 external-controller: 0.0.0.0:9090
 proxies:
   - &id001
-    name: 🇱🇺_LU_卢森堡
+    name: 🇺🇸_US_美国_1
     type: vmess
-    server: 45.82.31.164
-    port: 3389
+    server: cfcdn1.sanfencdn9.com
+    port: 2052
     cipher: auto
-    uuid: 9c050a86-d612-48f1-ec32-e573df08a1b7
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: http
-  - &id002
-    name: 🇺🇸_US_美国->🇫🇷_FR_法国_1
-    type: vmess
-    server: 104.21.8.157
-    port: 2082
-    cipher: auto
-    uuid: 112ac36f-3f53-4e26-8371-d25c028e1b9a
+    uuid: 2eec45db-dfcd-43d6-8514-b141aff651be
     alterId: 0
     tls: false
     skip-cert-verify: true
     network: ws
     ws-opts:
-      path: /
+      path: /video/GQ2qE5Us9g
       headers:
-        host: s1c.v2.v001sss.xyz
-  - &id003
+        host: tw1bQiWSE4x.fzbqfrse.xyz
+  - &id002
     name: 🇺🇸_US_美国->🇩🇪_DE_德国_1
     type: vmess
     server: 104.19.250.15
@@ -46,22 +35,7 @@ proxies:
       path: /
       headers:
         host: helanv6cf.inekokkk.top
-  - &id004
-    name: 🇺🇸_US_美国_1
-    type: vmess
-    server: 172.67.130.140
-    port: 2082
-    cipher: auto
-    uuid: 112ac36f-3f53-4e26-8371-d25c028e1b9a
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        host: s1c.v2.v001sss.xyz
-  - &id005
+  - &id003
     name: 🇺🇸_US_美国->🇩🇪_DE_德国_2
     type: vmess
     server: 104.18.19.191
@@ -76,7 +50,7 @@ proxies:
       path: /
       headers:
         host: helanv6cf.inekokkk.top
-  - &id006
+  - &id004
     name: 🇺🇸_US_美国->🇩🇪_DE_德国_3
     type: vmess
     server: 104.18.36.119
@@ -91,47 +65,76 @@ proxies:
       path: /
       headers:
         host: helanv6cf.inekokkk.top
-  - &id007
-    name: 🇺🇸_US_美国->🇩🇪_DE_德国_4
+  - &id005
+    name: 🇨🇳_CN_中国->🇮🇳_IN_印度
     type: vmess
-    server: cfcdn1.sanfencdn9.com
+    server: 183.240.255.91
+    port: 44001
+    cipher: auto
+    uuid: aaaaaaaa-aaaa-aaaa-aaaa-daaaaaaaaaad
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: tcp
+  - &id006
+    name: 🇱🇺_LU_卢森堡
+    type: vmess
+    server: 45.82.31.164
+    port: 3389
+    cipher: auto
+    uuid: 9c050a86-d612-48f1-ec32-e573df08a1b7
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: http
+  - &id007
+    name: 🇺🇸_US_美国_2
+    type: vmess
+    server: 104.18.242.177
     port: 2052
     cipher: auto
-    uuid: aec82fa6-ab70-4d0a-e7fb-422ef729d961
+    uuid: 2eec45db-dfcd-43d6-8514-b141aff651be
     alterId: 0
     tls: false
     skip-cert-verify: true
     network: ws
     ws-opts:
-      path: /
+      path: /video/GQ2qE5Us9g
       headers:
-        host: helanv6cf.inekokkk.top
+        host: tw1bQiWSE4x.fzbqfrse.xyz
   - &id008
-    name: 🇺🇸_US_美国_2
+    name: 🇩🇪_DE_德国
     type: ss
-    server: 18.237.252.9
+    server: 5.78.92.197
     port: 443
-    password: amazonskr05
-    cipher: aes-256-cfb
+    password: b4JbN1PzQa3eyV1UWcAInY
+    cipher: chacha20-ietf-poly1305
   - &id009
-    name: 🇺🇸_US_美国->🇫🇷_FR_法国_2
-    type: vmess
-    server: s1c.v2.v001sss.xyz
-    port: 2082
-    cipher: auto
-    uuid: 112ac36f-3f53-4e26-8371-d25c028e1b9a
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        host: s1c.v2.v001sss.xyz
-  - &id010
     name: 🇺🇸_US_美国_3
     type: ss
     server: 212.102.47.198
+    port: 443
+    password: shadowsocks
+    cipher: aes-128-cfb
+  - &id010
+    name: 🇺🇸_US_美国_4
+    type: vmess
+    server: cfcdn1.sanfencdn9.com
+    port: 8880
+    cipher: auto
+    uuid: 2eec45db-dfcd-43d6-8514-b141aff651be
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /video/bYdJ7Vc2We
+      headers:
+        host: us6gzxQRrE4.fzbqfrse.xyz
+  - &id011
+    name: 🇺🇸_US_美国_5
+    type: ss
+    server: 156.146.38.163
     port: 443
     password: shadowsocks
     cipher: aes-128-cfb
@@ -171,6 +174,7 @@ proxy-groups:
       - *id008
       - *id009
       - *id010
+      - *id011
   - name: LOAD-BALANCE
     type: load-balance
     url: http://www.gstatic.com/generate_204
@@ -186,6 +190,7 @@ proxy-groups:
       - *id008
       - *id009
       - *id010
+      - *id011
   - name: SELECT
     type: select
     proxies:
@@ -199,6 +204,7 @@ proxy-groups:
       - *id008
       - *id009
       - *id010
+      - *id011
 rules:
   - RULE-SET,applications,DIRECT
   - DOMAIN,clash.razord.top,DIRECT
