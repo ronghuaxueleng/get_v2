@@ -6,36 +6,19 @@ log-level: info
 external-controller: 0.0.0.0:9090
 proxies:
   - &id001
-    name: 🇺🇸_US_美国->🇩🇪_DE_德国_1
+    name: 🇷🇺_RU_俄罗斯联邦
     type: vmess
-    server: 104.18.19.191
-    port: 2052
+    server: 45.136.245.240
+    port: 12910
     cipher: auto
-    uuid: aec82fa6-ab70-4d0a-e7fb-422ef729d961
+    uuid: 8259cb1c-dd6c-4739-9c88-af550d977525
     alterId: 0
-    tls: false
+    tls: true
     skip-cert-verify: true
     network: ws
     ws-opts:
       path: /
-      headers:
-        host: helanv6cf.inekokkk.top
   - &id002
-    name: 🇺🇸_US_美国->🇩🇪_DE_德国_2
-    type: vmess
-    server: 104.18.36.119
-    port: 2052
-    cipher: auto
-    uuid: aec82fa6-ab70-4d0a-e7fb-422ef729d961
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        host: helanv6cf.inekokkk.top
-  - &id003
     name: 🇺🇸_US_美国_1
     type: vmess
     server: russia.com
@@ -50,7 +33,37 @@ proxies:
       path: /api/v3/download.getFile
       headers:
         host: sssub.v2.001.ssrsub.com
+  - &id003
+    name: 🇺🇸_US_美国->🇩🇪_DE_德国_1
+    type: vmess
+    server: 104.18.19.191
+    port: 2052
+    cipher: auto
+    uuid: aec82fa6-ab70-4d0a-e7fb-422ef729d961
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: helanv6cf.inekokkk.top
   - &id004
+    name: 🇺🇸_US_美国->🇩🇪_DE_德国_2
+    type: vmess
+    server: 104.18.36.119
+    port: 2052
+    cipher: auto
+    uuid: aec82fa6-ab70-4d0a-e7fb-422ef729d961
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: helanv6cf.inekokkk.top
+  - &id005
     name: 🇺🇸_US_美国->🇩🇪_DE_德国_3
     type: vmess
     server: 104.19.250.15
@@ -65,31 +78,8 @@ proxies:
       path: /
       headers:
         host: helanv6cf.inekokkk.top
-  - &id005
-    name: 🇺🇸_US_美国_2
-    type: ss
-    server: 212.102.47.198
-    port: 443
-    password: shadowsocks
-    cipher: aes-128-cfb
   - &id006
-    name: 🇺🇸_US_美国_3
-    type: ss
-    server: 156.146.38.163
-    port: 443
-    password: shadowsocks
-    cipher: aes-128-cfb
-  - &id007
-    name: 🇨🇳_CN_中国->🇺🇸_US_美国_1
-    type: trojan
-    server: 36.151.195.48
-    port: 34057
-    udp: true
-    password: TNDSJfNv
-    skip-cert-verify: true
-    network: tcp
-  - &id008
-    name: 🇨🇳_CN_中国->🇺🇸_US_美国_2
+    name: 🇨🇳_CN_中国->🇺🇸_US_美国
     type: trojan
     server: 36.151.195.48
     port: 20344
@@ -97,6 +87,42 @@ proxies:
     password: TNDSJfNv
     skip-cert-verify: true
     network: tcp
+  - &id007
+    name: 🇺🇸_US_美国_2
+    type: ss
+    server: 54.212.53.164
+    port: 443
+    password: amazonskr05
+    cipher: aes-256-cfb
+  - &id008
+    name: 🇺🇸_US_美国_3
+    type: vmess
+    server: russia.com
+    port: 2095
+    cipher: auto
+    uuid: 64a57b5f-45e0-40c3-8316-97d0ff53fd96
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /api/v3/download.getFile
+      headers:
+        host: sssub.v2.001.ssrsub.com
+  - &id009
+    name: 🇺🇸_US_美国_4
+    type: ss
+    server: 212.102.47.198
+    port: 443
+    password: shadowsocks
+    cipher: aes-128-cfb
+  - &id010
+    name: 🇺🇸_US_美国_5
+    type: ss
+    server: 156.146.38.163
+    port: 443
+    password: shadowsocks
+    cipher: aes-128-cfb
 proxy-groups:
   - name: PROXY
     type: select
@@ -131,6 +157,8 @@ proxy-groups:
       - *id006
       - *id007
       - *id008
+      - *id009
+      - *id010
   - name: LOAD-BALANCE
     type: load-balance
     url: http://www.gstatic.com/generate_204
@@ -144,6 +172,8 @@ proxy-groups:
       - *id006
       - *id007
       - *id008
+      - *id009
+      - *id010
   - name: SELECT
     type: select
     proxies:
@@ -155,6 +185,8 @@ proxy-groups:
       - *id006
       - *id007
       - *id008
+      - *id009
+      - *id010
 rules:
   - RULE-SET,applications,DIRECT
   - DOMAIN,clash.razord.top,DIRECT
