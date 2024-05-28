@@ -21,46 +21,6 @@ proxies:
       headers:
         host: in4.wish.ml
   - &id002
-    name: 🇷🇺_RU_俄罗斯联邦_1
-    type: vmess
-    server: 45.147.200.170
-    port: 42034
-    cipher: auto
-    uuid: 921e23ec-ee0e-43e0-a18b-77dbf15f20d8
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: tcp
-  - &id003
-    name: 🇺🇸_US_美国->🇫🇷_FR_法国_1
-    type: vmess
-    server: s1c.v2.v001sss.xyz
-    port: 2082
-    cipher: auto
-    uuid: 112ac36f-3f53-4e26-8371-d25c028e1b9a
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        host: s1c.v2.v001sss.xyz
-  - &id004
-    name: 🇨🇳_CN_中国->🇺🇸_US_美国_1
-    type: ss
-    server: gd.jindoucloud.xyz
-    port: 55460
-    password: 587ef2a8-c487-4b12-b1ca-aba4c4dd4036
-    cipher: chacha20-ietf-poly1305
-  - &id005
-    name: 🇨🇳_CN_中国->🇺🇸_US_美国_2
-    type: ss
-    server: gdvo.lyunsub.win
-    port: 19375
-    password: 587ef2a8-c487-4b12-b1ca-aba4c4dd4036
-    cipher: chacha20-ietf-poly1305
-  - &id006
     name: 🇺🇸_US_美国->🇮🇳_IN_印度_2
     type: vmess
     server: 172.67.164.78
@@ -75,106 +35,40 @@ proxies:
       path: /
       headers:
         host: in3.wish.ml
-  - &id007
-    name: 🇨🇳_CN_中国->🇺🇸_US_美国_3
-    type: vmess
-    server: 183.240.179.207
-    port: 30013
-    cipher: auto
-    uuid: 5bd5899a-4b78-4d75-8570-4d21b43422c4
-    alterId: 0
-    tls: false
+  - &id003
+    name: 🇦🇱_AL_阿尔巴尼亚
+    type: ss
+    server: 109.104.152.126
+    port: 51122
+    password: dongtaiwang.com
+    cipher: aes-256-gcm
+  - &id004
+    name: 🇺🇸_US_美国_1
+    type: trojan
+    server: 23.142.200.175
+    port: 443
+    udp: true
+    password: 27876_t7d7f4e3f
     skip-cert-verify: true
     network: tcp
-  - &id008
-    name: 🇺🇸_US_美国->🇫🇷_FR_法国_2
-    type: vmess
-    server: 104.21.8.157
-    port: 2082
-    cipher: auto
-    uuid: 112ac36f-3f53-4e26-8371-d25c028e1b9a
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        host: s1c.v2.v001sss.xyz
-  - &id009
-    name: 🇺🇸_US_美国_1
-    type: vmess
-    server: 23.154.136.2
-    port: 443
-    cipher: auto
-    uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
-    alterId: 0
-    tls: true
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /linkvws
-  - &id010
-    name: 🇺🇸_US_美国->🇫🇷_FR_法国_3
-    type: vmess
-    server: 172.67.130.140
-    port: 2082
-    cipher: auto
-    uuid: 112ac36f-3f53-4e26-8371-d25c028e1b9a
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        host: s1c.v2.v001sss.xyz
-  - &id011
+  - &id005
     name: 🇺🇸_US_美国_2
-    type: vmess
-    server: 66.241.124.229
+    type: ss
+    server: 205.134.180.139
     port: 443
-    cipher: auto
-    uuid: ea4909ef-7ca6-4b46-bf2e-6c07896ef338
-    alterId: 0
-    tls: true
+    password: lWaGPVFjmnag
+    cipher: chacha20-ietf-poly1305
+  - &id006
+    name: 🇨🇳_CN_中国->🇺🇸_US_美国
+    type: trojan
+    server: 36.151.195.48
+    port: 20344
+    udp: true
+    password: TNDSJfNv
     skip-cert-verify: true
-    servername: cold-dawn-9246.fly.dev
-    network: ws
-    ws-opts:
-      path: /ea4909ef-7ca6-4b46-bf2e-6c07896ef338-vm
-      headers:
-        host: cold-dawn-9246.fly.dev
-  - &id012
+    network: tcp
+  - &id007
     name: 🇺🇸_US_美国_3
-    type: vmess
-    server: russia.com
-    port: 2095
-    cipher: auto
-    uuid: 64a57b5f-45e0-40c3-8316-97d0ff53fd96
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /api/v3/download.getFile
-      headers:
-        host: sssub.v2.001.ssrsub.com
-  - &id013
-    name: 🇷🇺_RU_俄罗斯联邦_2
-    type: vmess
-    server: 45.136.245.240
-    port: 12910
-    cipher: auto
-    uuid: 8259cb1c-dd6c-4739-9c88-af550d977525
-    alterId: 0
-    tls: true
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /
-  - &id014
-    name: 🇺🇸_US_美国_4
     type: vmess
     server: russia.com
     port: 8880
@@ -188,28 +82,189 @@ proxies:
       path: /api/v3/download.getFile
       headers:
         host: sssub.v2.001.ssrsub.com
-  - &id015
-    name: 🇺🇸_US_美国_5
-    type: ss
-    server: 212.102.47.198
-    port: 443
-    password: shadowsocks
-    cipher: aes-128-cfb
-  - &id016
-    name: 🇨🇳_CN_中国->🇺🇸_US_美国_4
+  - &id008
+    name: 🇺🇸_US_美国->🇮🇳_IN_印度_3
     type: vmess
-    server: data-us-v1.shwjfkw.cn
-    port: 20401
+    server: 104.17.156.224
+    port: 2052
     cipher: auto
-    uuid: b1478e24-4916-3abe-8f17-15931012ecbe
+    uuid: c286daa2-59de-455c-8de8-ec032b6ce2e8
     alterId: 0
     tls: false
     skip-cert-verify: true
     network: ws
     ws-opts:
-      path: /debian
+      path: /
       headers:
-        host: data-us-v1.shwjfkw.cn
+        host: in4.wish.ml
+  - &id009
+    name: 🇬🇧_GB_英国_1
+    type: ss
+    server: 212.102.53.196
+    port: 443
+    password: shadowsocks
+    cipher: aes-128-gcm
+  - &id010
+    name: 🇬🇧_GB_英国_2
+    type: ss
+    server: 212.102.53.80
+    port: 443
+    password: shadowsocks
+    cipher: aes-128-gcm
+  - &id011
+    name: 🇵🇱_PL_波兰_1
+    type: ss
+    server: 51.77.53.200
+    port: 6697
+    password: TEzjfAYq2IjtuoS
+    cipher: aes-256-gcm
+  - &id012
+    name: 🇵🇱_PL_波兰_2
+    type: ss
+    server: 51.77.53.200
+    port: 8119
+    password: cdBIDV42DCwnfIN
+    cipher: aes-256-gcm
+  - &id013
+    name: 🇺🇸_US_美国_4
+    type: ss
+    server: 89.117.109.97
+    port: 443
+    password: rhnAUMfOWIgjT917yYCG7u
+    cipher: chacha20-ietf-poly1305
+  - &id014
+    name: 🇵🇱_PL_波兰_3
+    type: ss
+    server: 51.77.53.200
+    port: 8118
+    password: cdBIDV42DCwnfIN
+    cipher: aes-256-gcm
+  - &id015
+    name: 🇵🇱_PL_波兰_4
+    type: ss
+    server: 51.77.53.200
+    port: 7002
+    password: RexnBgU7EV5ADxG
+    cipher: aes-256-gcm
+  - &id016
+    name: 🇵🇱_PL_波兰_5
+    type: ss
+    server: 51.77.53.200
+    port: 7306
+    password: FoOiGlkAA9yPEGP
+    cipher: aes-256-gcm
+  - &id017
+    name: 🇵🇱_PL_波兰_6
+    type: ss
+    server: 51.77.53.200
+    port: 5001
+    password: Y6R9pAtvxxzmGC
+    cipher: aes-256-gcm
+  - &id018
+    name: 🇵🇱_PL_波兰_7
+    type: ss
+    server: 51.77.53.200
+    port: 5004
+    password: g5MeD6Ft3CWlJId
+    cipher: aes-256-gcm
+  - &id019
+    name: 🇵🇱_PL_波兰_8
+    type: ss
+    server: 51.77.53.200
+    port: 6379
+    password: zDNVedRFPQexG9v
+    cipher: aes-256-gcm
+  - &id020
+    name: 🇵🇱_PL_波兰_9
+    type: ss
+    server: 51.77.53.200
+    port: 8881
+    password: kDWvXYZoTBcGkC4
+    cipher: aes-256-gcm
+  - &id021
+    name: 🇵🇱_PL_波兰_10
+    type: ss
+    server: 51.77.53.200
+    port: 8091
+    password: PCnnH6SQSnfoS27
+    cipher: aes-256-gcm
+  - &id022
+    name: 🇬🇧_GB_英国_3
+    type: ss
+    server: 212.102.53.193
+    port: 443
+    password: shadowsocks
+    cipher: aes-128-gcm
+  - &id023
+    name: 🇬🇧_GB_英国_4
+    type: ss
+    server: 212.102.53.195
+    port: 443
+    password: shadowsocks
+    cipher: aes-128-gcm
+  - &id024
+    name: 🇵🇱_PL_波兰_11
+    type: ss
+    server: 51.77.53.200
+    port: 2375
+    password: faBAoD54k87UJG7
+    cipher: aes-256-gcm
+  - &id025
+    name: 🇵🇱_PL_波兰_12
+    type: ss
+    server: 51.77.53.200
+    port: 6679
+    password: TEzjfAYq2IjtuoS
+    cipher: aes-256-gcm
+  - &id026
+    name: 🇵🇱_PL_波兰_13
+    type: ss
+    server: 51.77.53.200
+    port: 8009
+    password: XKFKl2rULjIp74
+    cipher: aes-256-gcm
+  - &id027
+    name: 🇵🇱_PL_波兰_14
+    type: ss
+    server: 51.77.53.200
+    port: 9102
+    password: e4FCWrgpkji3QY
+    cipher: aes-256-gcm
+  - &id028
+    name: 🇵🇱_PL_波兰_15
+    type: ss
+    server: 51.77.53.200
+    port: 7307
+    password: FoOiGlkAA9yPEGP
+    cipher: aes-256-gcm
+  - &id029
+    name: 🇵🇱_PL_波兰_16
+    type: ss
+    server: 51.77.53.200
+    port: 8000
+    password: KixLvKzwjekG00rm
+    cipher: aes-256-gcm
+  - &id030
+    name: 🇵🇱_PL_波兰_17
+    type: ss
+    server: 51.77.53.200
+    port: 4444
+    password: pKEW8JPByTVTLtM
+    cipher: aes-256-gcm
+  - &id031
+    name: 🇵🇱_PL_波兰_18
+    type: ss
+    server: 51.77.53.200
+    port: 8882
+    password: kDWvXYZoTBcGkC4
+    cipher: aes-256-gcm
+  - &id032
+    name: 🇷🇺_RU_俄罗斯联邦
+    type: ss
+    server: 94.228.165.178
+    port: 58176
+    password: afKAHp1VfRWZu91LIi9o0D
+    cipher: chacha20-ietf-poly1305
 proxy-groups:
   - name: PROXY
     type: select
@@ -252,6 +307,22 @@ proxy-groups:
       - *id014
       - *id015
       - *id016
+      - *id017
+      - *id018
+      - *id019
+      - *id020
+      - *id021
+      - *id022
+      - *id023
+      - *id024
+      - *id025
+      - *id026
+      - *id027
+      - *id028
+      - *id029
+      - *id030
+      - *id031
+      - *id032
   - name: LOAD-BALANCE
     type: load-balance
     url: http://www.gstatic.com/generate_204
@@ -273,6 +344,22 @@ proxy-groups:
       - *id014
       - *id015
       - *id016
+      - *id017
+      - *id018
+      - *id019
+      - *id020
+      - *id021
+      - *id022
+      - *id023
+      - *id024
+      - *id025
+      - *id026
+      - *id027
+      - *id028
+      - *id029
+      - *id030
+      - *id031
+      - *id032
   - name: SELECT
     type: select
     proxies:
@@ -292,6 +379,22 @@ proxy-groups:
       - *id014
       - *id015
       - *id016
+      - *id017
+      - *id018
+      - *id019
+      - *id020
+      - *id021
+      - *id022
+      - *id023
+      - *id024
+      - *id025
+      - *id026
+      - *id027
+      - *id028
+      - *id029
+      - *id030
+      - *id031
+      - *id032
 rules:
   - RULE-SET,applications,DIRECT
   - DOMAIN,clash.razord.top,DIRECT
