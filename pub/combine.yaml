@@ -207,24 +207,24 @@ proxy-groups:
       - DIRECT
       - REJECT
 rules:
-  - RULE-SET,apple,DIRECT
+  - RULE-SET,cncidr,DIRECT
   - RULE-SET,greatfire,PROXY
-  - RULE-SET,google,DIRECT
-  - RULE-SET,private,DIRECT
-  - RULE-SET,icloud,DIRECT
   - GEOIP,CN,DIRECT
+  - RULE-SET,proxy,OTHER
+  - MATCH,OTHER
+  - RULE-SET,icloud,DIRECT
+  - RULE-SET,reject,AD
+  - RULE-SET,google,DIRECT
+  - DOMAIN,yacd.haishan.me,DIRECT
+  - RULE-SET,apple,DIRECT
+  - RULE-SET,telegramcidr,PROXY
+  - RULE-SET,private,DIRECT
+  - RULE-SET,gfw,PROXY
+  - RULE-SET,applications,DIRECT
+  - RULE-SET,lancidr,DIRECT
   - DOMAIN,clash.razord.top,DIRECT
   - RULE-SET,tld-not-cn,PROXY
-  - RULE-SET,telegramcidr,PROXY
-  - RULE-SET,reject,AD
-  - DOMAIN,yacd.haishan.me,DIRECT
-  - RULE-SET,cncidr,DIRECT
-  - RULE-SET,proxy,OTHER
-  - RULE-SET,gfw,PROXY
   - RULE-SET,direct,DIRECT
-  - MATCH,OTHER
-  - RULE-SET,lancidr,DIRECT
-  - RULE-SET,applications,DIRECT
 rule-providers:
   reject:
     type: http
