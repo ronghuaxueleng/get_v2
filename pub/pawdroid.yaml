@@ -1,4 +1,4 @@
-# Update: 2024-12-30 12:14:12
+# Update: 2024-12-30 14:07:37
 # Created by caoqiang
 port: 7890
 socks-port: 7891
@@ -12,35 +12,12 @@ log-level: info
 external-controller: 0.0.0.0:9090
 proxies:
   - &id001
-    name: 🇺🇸 美国 Fastly全球Anycast节点
-    server: 151.101.194.168
-    port: 80
-    client-fingerprint: chrome
-    type: vmess
-    uuid: beb7d098-48ba-4be8-a47a-758bf3c470b8
-    alterId: 0
-    cipher: auto
-    tls: false
-    network: ws
-    ws-opts:
-      path: /?ed=2048
-      headers:
-        Host: amd.al
-  - &id002
-    name: 🇫🇷 法国 巴黎Amazon数据中心
-    server: 52.47.207.185
-    port: 22222
-    client-fingerprint: chrome
-    type: trojan
-    password: telegram-id-privatevpns
-    sni: trojan.burgerip.co.uk
-  - &id003
     name: 🇺🇸 美国 CloudFlare节点
-    server: server31.beheshtbaneh.com
+    server: 104.21.82.183
     port: 8880
     client-fingerprint: chrome
     type: vmess
-    uuid: 4154143c-bbba-47a4-9f79-c2ed087cbcc9
+    uuid: 5a7021e0-26b4-45d6-b175-fe551601ca97
     alterId: 0
     cipher: auto
     tls: false
@@ -48,90 +25,165 @@ proxies:
     ws-opts:
       path: /
       headers:
-        Host: server31.beheshtbaneh.com
-  - &id004
-    name: 🇮🇳 印度 V2CROSS.COM
-    server: 202.78.162.5
-    port: 443
-    client-fingerprint: chrome
-    type: vmess
-    uuid: 2ff97c6d-8557-42a4-b43f-19c77c5959ea
-    alterId: 0
-    cipher: auto
-    tls: true
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        Host: irsoft.sytes.net
-  - &id005
+        Host: server26.beheshtbaneh.com
+  - &id002
     name: 🇺🇸 美国 Amazon EC2服务器
-    server: admin.c2.havij.co
+    server: series-a2-mec.varzesh360.co
     port: 443
     client-fingerprint: chrome
     type: ss
     cipher: chacha20-ietf-poly1305
-    password: AG9OLKmqMAiDm3Zh
-  - &id006
-    name: 🇺🇸 美国 Amazon EC2服务器 2
-    server: 3.97.199.230
+    password: u17T3BvpYaaiuW2c
+  - &id003
+    name: 🇸🇪 瑞典 斯德哥尔摩Amazon数据中心
+    server: 13.48.102.225
     port: 22222
     client-fingerprint: chrome
     type: trojan
     password: telegram-id-directvpn
     sni: trojan.burgerip.co.uk
-  - &id007
-    name: 亚太地区 V2CROSS.COM
-    server: 103.149.183.178
-    port: 27512
+  - &id004
+    name: 🇨🇳 广东省广州市 移动
+    server: s-g04.loveroise.com
+    port: 54030
     client-fingerprint: chrome
-    type: vmess
-    uuid: 96d38683-0817-4d91-bffa-6f03df18d9dc
-    alterId: 0
-    cipher: auto
-    tls: false
-  - &id008
-    name: 🇮🇳 印度 V2CROSS.COM 2
-    server: 202.78.162.5
+    type: ss
+    cipher: chacha20-ietf-poly1305
+    password: 09833a6f-4d46-426e-87fe-7793a5489f84
+  - &id005
+    name: 🇲🇩 摩尔多瓦 V2CROSS.COM
+    server: 87.251.79.34
+    port: 20684
+    client-fingerprint: chrome
+    type: ss
+    cipher: chacha20-ietf-poly1305
+    password: 2IIcQKmqauNMSxhUOk28et
+  - &id006
+    name: 🇫🇮 芬兰 赫尔辛基Hetzner数据中心
+    server: 95.216.202.137
+    port: 19304
+    client-fingerprint: chrome
+    type: ss
+    cipher: 2022-blake3-aes-256-gcm
+    password: 
+      0RE9wxKCxco4hvwYpDdSmWdcl2FRs6jJQNezUyFA1u8=:Xf5trxObRuzLIWTI7xiRPb2RY6yjWSEy36OOWr0iXQk=
+  - &id007
+    name: 🇺🇸 美国 V2CROSS.COM
+    server: primer.ibilibi.li
     port: 443
     client-fingerprint: chrome
     type: vmess
-    uuid: 118287d2-e968-42e1-80d0-12fa2f5d38d6
+    uuid: e5852393-ca52-4c90-a237-d63cbbb57f21
     alterId: 0
     cipher: auto
     tls: true
     network: ws
     ws-opts:
-      path: /
+      path: /farcry?ed=2560
       headers:
-        Host: sahand.serveminecraft.net
-  - &id009
-    name: 🇺🇸 美国 Amazon数据中心
+        Host: loki.oracle
+  - &id008
+    name: 🇺🇸 美国 麻省理工学院
     server: series-a2.samanehha.co
     port: 443
     client-fingerprint: chrome
     type: ss
     cipher: chacha20-ietf-poly1305
     password: mps3FwmDjLrWaOVg
-  - &id010
-    name: 🇺🇸 美国 内华达州克拉克县亨德森市Enzu股份有限公司
-    server: 3.v2.a.www.speedtest.net.2.op.jahesh-tolid.website
+  - &id009
+    name: 🇺🇸 美国 Amazon EC2服务器 2
+    server: 3.28.34.157
     port: 443
     client-fingerprint: chrome
     type: ss
     cipher: chacha20-ietf-poly1305
-    password: kbmwAPhErPtyfPrGFusEoF6u4zcqJK/DjOGBJLLab9I=
-  - &id011
-    name: 🇨🇳 广东省广州市 移动
-    server: 183.236.51.23
-    port: 53002
+    password: u17T3BvpYaaiuW2c
+  - &id010
+    name: 🇺🇸 美国 CloudFlare节点 2
+    server: lamusa.daozhang.site
+    port: 8880
     client-fingerprint: chrome
     type: vmess
-    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-    alterId: 64
+    uuid: 1c1cb7fe-a929-4e47-b292-4073b63d2d4b
+    alterId: 0
     cipher: auto
     tls: false
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        Host: lamusa.daozhang.site
+  - &id011
+    name: 🇩🇪 德国 V2CROSS.COM
+    server: 194.76.18.129
+    port: 443
+    client-fingerprint: chrome
+    type: trojan
+    password: tg-fq521free
+    sni: torjan.xn--xhq44j.eu.org
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        Host: torjan.xn--xhq44j.eu.org
   - &id012
+    name: 🇺🇸 美国 Amazon EC2服务器 3
+    server: 3.132.187.240
+    port: 22222
+    client-fingerprint: chrome
+    type: trojan
+    password: telegram-id-directvpn
+    sni: trojan.burgerip.co.ukhttp%252F1.1
+  - &id013
+    name: 🇺🇸 美国 内华达州克拉克县亨德森市Enzu股份有限公司
+    server: 23.88.39.22
+    port: 22301
+    client-fingerprint: chrome
+    type: ss
+    cipher: 2022-blake3-aes-256-gcm
+    password: 
+      TczN1j63KbLamEeXYjNQj7d7I/UPhOZWpJ5qBoI/f10=:NMZX2WajjShpecWvxU5TIsPQGJEaC1rF9zCBsA3thJg=
+  - &id014
+    name: 🇧🇷 巴西圣保罗 CloudFlare节点
+    server: 188.114.96.3
+    port: 443
+    client-fingerprint: chrome
+    type: vmess
+    uuid: 5f726fe3-d82e-4da5-a711-8af0cbb2b682
+    alterId: 0
+    cipher: auto
+    tls: true
+    network: ws
+    ws-opts:
+      path: /azumase.ren
+      headers:
+        Host: b62a948c-faa2-4e8a-bf8a-3ff3121c875a.asoul-ava.top
+  - &id015
+    name: 🇺🇸 美国 Amazon数据中心
+    server: 13.43.233.119
+    port: 22222
+    client-fingerprint: chrome
+    type: trojan
+    password: telegram-id-privatevpns
+    sni: trojan.burgerip.co.uk
+  - &id016
+    name: 🇺🇸 北美地区 V2CROSS.COM
+    server: 104.219.41.229
+    port: 443
+    client-fingerprint: chrome
+    type: trojan
+    password: Julius
+    sni: miami.juliusnet.com
+    skip-cert-verify: false
+  - &id017
+    name: 🇺🇸 美国 惠普HP
+    server: admin.c3.havij.co
+    port: 443
+    client-fingerprint: chrome
+    type: ss
+    cipher: chacha20-ietf-poly1305
+    password: P7PqQpnyhsnzKNrm
+  - &id018
     name: 🇧🇬 保加利亚 V2CROSS.COM
     server: 149.34.244.68
     port: 443
@@ -139,32 +191,7 @@ proxies:
     type: ss
     cipher: aes-128-gcm
     password: shadowsocks
-  - &id013
-    name: 🇨🇳 广东省广州市 移动 2
-    server: k-r01.loveroise.com
-    port: 54008
-    client-fingerprint: chrome
-    type: ss
-    cipher: chacha20-ietf-poly1305
-    password: 09833a6f-4d46-426e-87fe-7793a5489f84
-  - &id014
-    name: 🇨🇿 捷克 V2CROSS.COM
-    server: 198.105.123.190
-    port: 46902
-    client-fingerprint: chrome
-    type: ss
-    cipher: chacha20-ietf-poly1305
-    password: 
-      2UrSffeNABXGXXfNhoL6xBUnh1RzqMizrQ2s9QfC38P2YPuYPRTqW5zZg6jGisiNhkzM4SRjF6nzvFb18GPtESWoXWjhqyC8
-  - &id015
-    name: 🇷🇺 俄罗斯 V2CROSS.COM
-    server: 185.242.86.156
-    port: 54170
-    client-fingerprint: chrome
-    type: ss
-    cipher: chacha20-ietf-poly1305
-    password: 36ZCHeabUSfKjfQEvJ4HDV
-  - &id016
+  - &id019
     name: 🇺🇸 美国 Akamai科技公司CDN网络节点
     server: irhms03.dongfeng.cfd
     port: 443
@@ -179,81 +206,39 @@ proxies:
       path: /linkws
       headers:
         Host: hms03.dongfeng.cfd
-  - &id017
-    name: 🇸🇪 瑞典 斯德哥尔摩Amazon数据中心
-    server: 13.53.250.56
-    port: 22222
-    client-fingerprint: chrome
-    type: trojan
-    password: telegram-id-privatevpns
-    sni: trojan.burgerip.co.uk
-  - &id018
-    name: 🇮🇪 爱尔兰 都柏林Amazon数据中心
-    server: 52.214.131.130
-    port: 22222
-    client-fingerprint: chrome
-    type: trojan
-    password: telegram-id-privatevpns
-    sni: trojan.burgerip.co.uk
-  - &id019
-    name: 🇺🇸 美国 V2CROSS.COM
-    server: primer.ibilibi.li
-    port: 443
-    client-fingerprint: chrome
-    type: vmess
-    uuid: e5852393-ca52-4c90-a237-d63cbbb57f21
-    alterId: 0
-    cipher: auto
-    tls: true
-    servername: ameblo.jp
-    network: ws
-    ws-opts:
-      path: /farcry?ed=2560
-      headers:
-        Host: loki.oracle
   - &id020
-    name: 🇩🇪 德国 V2CROSS.COM
-    server: 194.76.18.129
-    port: 443
+    name: 🇺🇸 美国 加利福尼亚
+    server: 64.176.71.35
+    port: 42141
     client-fingerprint: chrome
-    type: trojan
-    password: tg-fq521free
-    sni: torjan.xn--xhq44j.eu.org
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        Host: torjan.xn--xhq44j.eu.org
+    type: ss
+    cipher: 2022-blake3-aes-256-gcm
+    password: 
+      iwVoxpUSEaEBeQK9HZap7gTAN3OGoE4rg2h9orLZvdA=:pLsOybg5ng6icspjXqxXnwfVqyGk8j29Pcpytxp7O6E=
   - &id021
-    name: 🇺🇸 美国 V2CROSS.COM 2
-    server: 199.180.101.29
-    port: 38004
+    name: 🇷🇺 俄罗斯 V2CROSS.COM
+    server: 185.172.129.91
+    port: 56220
     client-fingerprint: chrome
-    type: vmess
-    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-    alterId: 64
-    cipher: auto
-    tls: true
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        Host: www.70778598.xyz
+    type: ss
+    cipher: chacha20-ietf-poly1305
+    password: LLInmUBrxMgEn85Y6vVjeH
   - &id022
-    name: 🇺🇸 美国 CloudFlare节点 2
-    server: 104.16.60.8
-    port: 2095
+    name: 欧盟 V2CROSS.COM
+    server: 45.87.175.157
+    port: 8080
     client-fingerprint: chrome
-    type: vmess
-    uuid: f584de15-2034-4170-a723-f48c2bae5e0f
-    alterId: 0
-    cipher: auto
-    tls: false
-    network: ws
-    ws-opts:
-      path: /afrhms16v.bestxray.buzz/linkws
-      headers:
-        Host: worker-mute-bar-1719.nifotok993.workers.dev
+    type: ss
+    cipher: chacha20-ietf-poly1305
+    password: 1RWwXhwfAB5gAEozU4G2Pg
+  - &id023
+    name: 🇺🇸 美国 V2CROSS.COM 2
+    server: 159.223.93.233
+    port: 40138
+    client-fingerprint: chrome
+    type: ss
+    cipher: chacha20-ietf-poly1305
+    password: eXxh01a3fvKAPmoFkX1cU3
 proxy-groups:
   - name: PROXY
     type: select
@@ -302,6 +287,7 @@ proxy-groups:
       - *id020
       - *id021
       - *id022
+      - *id023
   - name: LOAD-BALANCE
     type: load-balance
     url: http://www.gstatic.com/generate_204
@@ -329,6 +315,7 @@ proxy-groups:
       - *id020
       - *id021
       - *id022
+      - *id023
   - name: SELECT
     type: select
     proxies:
@@ -354,6 +341,7 @@ proxy-groups:
       - *id020
       - *id021
       - *id022
+      - *id023
 rules:
   - RULE-SET,applications,DIRECT
   - DOMAIN,clash.razord.top,DIRECT

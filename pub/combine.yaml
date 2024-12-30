@@ -1,4 +1,4 @@
-# Update: 2024-12-30 12:14:13
+# Update: 2024-12-30 14:07:39
 # Created by caoqiang
 port: 7890
 socks-port: 7891
@@ -15,18 +15,32 @@ proxies:
     cipher: auto
     h2-opts: {}
     http-opts: {}
-    name: 0|-https://t.me/MrXbin-53
+    name: 0|-https://t.me/MrXbin-42
     network: ws
     port: 443
-    server: 151.101.194.133
-    servername: mio.splashthat.com
+    server: irvideo.cfd
     tls: true
     type: vmess
-    uuid: 545485da-9ff4-48c5-ae94-45e6e4ee7d26
+    uuid: e537f2f5-2a0c-4f59-92c9-832ca6433bf3
     ws-opts:
       headers:
-        Host: 6606.com
-      path: /racevpn
+        Host: irvideo.cfd
+      path: /linkws
+  - alterId: 64
+    cipher: auto
+    h2-opts: {}
+    http-opts: {}
+    name: 0|-https://t.me/MrXbin-45
+    network: ws
+    port: 38004
+    server: 199.180.101.29
+    tls: true
+    type: vmess
+    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+    ws-opts:
+      headers:
+        Host: www.70778598.xyz
+      path: /path/1734770577466
   - alterId: 64
     cipher: auto
     name: 13|🇭🇰 香港3|@ripaojiedian
@@ -225,24 +239,24 @@ proxy-groups:
       - DIRECT
       - REJECT
 rules:
-  - RULE-SET,greatfire,PROXY
-  - RULE-SET,google,DIRECT
-  - RULE-SET,direct,DIRECT
-  - RULE-SET,tld-not-cn,PROXY
-  - RULE-SET,cncidr,DIRECT
-  - MATCH,OTHER
-  - GEOIP,CN,DIRECT
-  - DOMAIN,clash.razord.top,DIRECT
-  - RULE-SET,icloud,DIRECT
-  - RULE-SET,proxy,OTHER
-  - DOMAIN,yacd.haishan.me,DIRECT
-  - RULE-SET,telegramcidr,PROXY
-  - RULE-SET,apple,DIRECT
   - RULE-SET,gfw,PROXY
-  - RULE-SET,reject,AD
-  - RULE-SET,applications,DIRECT
-  - RULE-SET,lancidr,DIRECT
   - RULE-SET,private,DIRECT
+  - DOMAIN,yacd.haishan.me,DIRECT
+  - RULE-SET,tld-not-cn,PROXY
+  - DOMAIN,clash.razord.top,DIRECT
+  - RULE-SET,cncidr,DIRECT
+  - RULE-SET,applications,DIRECT
+  - RULE-SET,proxy,OTHER
+  - MATCH,OTHER
+  - RULE-SET,reject,AD
+  - RULE-SET,greatfire,PROXY
+  - RULE-SET,lancidr,DIRECT
+  - RULE-SET,direct,DIRECT
+  - GEOIP,CN,DIRECT
+  - RULE-SET,google,DIRECT
+  - RULE-SET,apple,DIRECT
+  - RULE-SET,icloud,DIRECT
+  - RULE-SET,telegramcidr,PROXY
 rule-providers:
   reject:
     type: http
