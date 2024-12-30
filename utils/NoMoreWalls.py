@@ -14,7 +14,8 @@ def get_content(current_work_dir):
     url = 'https://raw.githubusercontent.com/peasoft/NoMoreWalls/master/list.yml'
     print(url)
     file = requests.get(url, proxies=proxies)
-    with open(f"{pub_dir}/NoMoreWalls.yaml", "wb") as f:
+    yml_file_path = f"{pub_dir}/NoMoreWalls.yaml"
+    with open(yml_file_path, "wb") as f:
         f.write(file.content)
 
 

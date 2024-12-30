@@ -42,11 +42,13 @@ def get_content(current_work_dir):
             "clash -> https://fs.v2rayse.com/share/\d{8}/\S+.yaml", doc.text()
         )
         for url in urls:
+            url = url.replace('clash -> ', '')
             print(url)
-            file = requests.get(url.replace('clash -> ', ''), proxies=proxies, stream=True)
+            file = requests.get(url, proxies=proxies, stream=True)
             yml = yaml.YAML()
             yml.indent(mapping=2, sequence=4, offset=2)
-            with open(f"{pub_dir}/cfmem.yaml", "w+", encoding="utf8") as outfile:
+            yml_file_path = f"{pub_dir}/cfmem.yaml"
+            with open(yml_file_path, "w+", encoding="utf8") as outfile:
                 yml.dump(reset_yaml_stream(file.content), outfile)
     except Exception as e:
         print(e)
