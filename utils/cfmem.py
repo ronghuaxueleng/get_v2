@@ -18,7 +18,7 @@ def get_content(current_work_dir):
 
     data = requests.get(url, proxies=proxies)
     text = data.text
-    print(text)
+    # print(text)
     soup = BeautifulSoup(text, "lxml")
     div_list = soup.findAll(
         name="a",
@@ -29,7 +29,7 @@ def get_content(current_work_dir):
         a_list = []
         p = re.compile(r"\d{4}年\d+月\d{2}(日)?\S*更新")
         for val in div_list[:1]:
-            print(val.text)
+            # print(val.text)
             if p.search(val.text):
                 a_list.append(val.get("href"))
 
@@ -37,7 +37,7 @@ def get_content(current_work_dir):
         new_v2ray_data = requests.get(new_v2ray_url, proxies=proxies)
         new_v2ray_data_html = new_v2ray_data.text
         doc = PyQuery(new_v2ray_data_html)
-        print(new_v2ray_url)
+        # print(new_v2ray_url)
         urls = re.findall(
             "clash -> https://fs.v2rayse.com/share/\d{8}/\S+.yaml", doc.text()
         )
