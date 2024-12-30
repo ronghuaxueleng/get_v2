@@ -1,4 +1,4 @@
-# Update: 2024-12-30 20:08:52
+# Update: 2024-12-30 22:07:28
 # Created by caoqiang
 port: 7890
 socks-port: 7891
@@ -15,7 +15,7 @@ proxies:
     cipher: auto
     h2-opts: {}
     http-opts: {}
-    name: 0|-https://t.me/MrXbin-48
+    name: 0|-https://t.me/MrXbin-60
     network: ws
     port: 38004
     server: 199.180.101.29
@@ -26,22 +26,6 @@ proxies:
       headers:
         Host: www.70778598.xyz
       path: /path/1734770577466
-  - alterId: 0
-    cipher: auto
-    h2-opts: {}
-    http-opts: {}
-    name: 0|-https://t.me/MrXbin-59
-    network: ws
-    port: 443
-    server: 151.101.194.133
-    servername: mio.splashthat.com
-    tls: true
-    type: vmess
-    uuid: 545485da-9ff4-48c5-ae94-45e6e4ee7d26
-    ws-opts:
-      headers:
-        Host: 6606.com
-      path: /racevpn
   - alterId: 64
     cipher: auto
     name: 13|🇭🇰 香港3|@ripaojiedian
@@ -240,24 +224,24 @@ proxy-groups:
       - DIRECT
       - REJECT
 rules:
+  - RULE-SET,telegramcidr,PROXY
+  - RULE-SET,apple,DIRECT
+  - RULE-SET,google,DIRECT
+  - RULE-SET,icloud,DIRECT
+  - RULE-SET,private,DIRECT
+  - RULE-SET,cncidr,DIRECT
+  - RULE-SET,applications,DIRECT
+  - RULE-SET,reject,AD
+  - RULE-SET,tld-not-cn,PROXY
+  - GEOIP,CN,DIRECT
+  - RULE-SET,direct,DIRECT
   - RULE-SET,proxy,OTHER
   - RULE-SET,gfw,PROXY
-  - RULE-SET,lancidr,DIRECT
-  - RULE-SET,apple,DIRECT
-  - MATCH,OTHER
-  - RULE-SET,icloud,DIRECT
-  - RULE-SET,telegramcidr,PROXY
-  - RULE-SET,greatfire,PROXY
-  - RULE-SET,direct,DIRECT
-  - RULE-SET,cncidr,DIRECT
   - DOMAIN,clash.razord.top,DIRECT
-  - RULE-SET,private,DIRECT
-  - RULE-SET,tld-not-cn,PROXY
-  - RULE-SET,reject,AD
-  - GEOIP,CN,DIRECT
-  - RULE-SET,google,DIRECT
+  - MATCH,OTHER
   - DOMAIN,yacd.haishan.me,DIRECT
-  - RULE-SET,applications,DIRECT
+  - RULE-SET,greatfire,PROXY
+  - RULE-SET,lancidr,DIRECT
 rule-providers:
   reject:
     type: http
