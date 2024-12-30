@@ -14,15 +14,16 @@ def get_content():
 
     data = requests.get(url, proxies=proxies)
     text = data.text
+    print(text)
     soup = BeautifulSoup(text, "lxml")
     div_list = soup.findAll(
         name="a",
-        attrs={"href": re.compile(r"https?://www\.cfmem\.com/\d{4}/\d{2}/\S+v2rayclash-vpn.html")},
+        attrs={"href": re.compile(r"https?://www\.cfmem\.com/\d{4}/\d{2}/\S+-v2rayclashsingbox-vpn.html")},
     )
 
     try:
         a_list = []
-        p = re.compile(r"\d{4}年\d+月\d{2}日\S*更新")
+        p = re.compile(r"\d{4}年\d+月\d{2}(日)?\S*更新")
         for val in div_list[:1]:
             print(val.text)
             if p.search(val.text):
@@ -34,11 +35,11 @@ def get_content():
         doc = PyQuery(new_v2ray_data_html)
         print(new_v2ray_url)
         urls = re.findall(
-            "clash订阅链接：https://oss.v2rayse.com/\S+", doc.text()
+            "clash -> https://fs.v2rayse.com/share/\d{8}/\S+.yaml", doc.text()
         )
         for url in urls:
             print(url)
-            file = requests.get(url.replace('clash订阅链接：', ''), proxies=proxies, stream=True)
+            file = requests.get(url.replace('clash -> ', ''), proxies=proxies, stream=True)
             yml = yaml.YAML()
             yml.indent(mapping=2, sequence=4, offset=2)
             with open("pub/cfmem.yaml", "w+", encoding="utf8") as outfile:
