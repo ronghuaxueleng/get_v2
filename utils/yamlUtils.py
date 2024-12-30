@@ -170,7 +170,7 @@ class YamlUtils:
     def save_file(self, savepath="clash.yaml", with_adguard_dns=False):
         if savepath is not None:
             template = copy.deepcopy(self.template)
-            template.pop("rule-providers")
+            # template.pop("rule-providers")
             if with_adguard_dns:
                 template["dns"] = self.adguard_dns
             yml = yaml.YAML()
