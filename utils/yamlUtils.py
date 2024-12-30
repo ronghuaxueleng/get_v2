@@ -1,3 +1,4 @@
+import datetime
 import os
 import json
 import time
@@ -9,6 +10,7 @@ from ruamel import yaml
 
 from git.repo import Repo
 from git.repo.fun import is_git_dir
+from ruamel.yaml import StringIO, CommentedMap
 
 
 class YamlUtils:
@@ -175,8 +177,15 @@ class YamlUtils:
                 template["dns"] = self.adguard_dns
             yml = yaml.YAML()
             yml.indent(mapping=2, sequence=4, offset=2)
-            with open(savepath, "w+", encoding="utf8") as outfile:
-                yml.dump(template, outfile)
+            output = StringIO()
+            yml.dump(CommentedMap(template), output)
+            # 获取 StringIO 中的内容
+            yaml_str = output.getvalue()
+            Update = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+            header_comment = f"# Update: {Update}\n# Created by caoqiang\n"
+            with open(savepath, 'w', encoding="utf8") as file:
+                file.write(header_comment)
+                file.write(yaml_str)
 
     def save_file_without_providers(
             self, savepath="clash_without_providers.yaml", with_adguard_dns=False

@@ -1,9 +1,8 @@
 import os
 
 import requests
-from ruamel import yaml
 
-from utils.formatUtils import reset_yaml_stream
+from utils.formatUtils import write_yaml_file
 from utils.proxyUtils import get_proxy
 
 
@@ -16,11 +15,8 @@ def get_content(current_work_dir):
     url = "https://url.v1.mk/sub?target=clash&new_name=true&url={}&insert=false&config=https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/config/ACL4SSR_Online.ini".format(url)
     print(url)
     file = requests.get(url, proxies=proxies)
-    yml = yaml.YAML()
-    yml.indent(mapping=2, sequence=4, offset=2)
     yml_file_path = f"{pub_dir}/pawdroid.yaml"
-    with open(yml_file_path, "w+", encoding="utf8") as outfile:
-        yml.dump(reset_yaml_stream(file.content), outfile)
+    write_yaml_file(file, yml_file_path)
 
 
 if __name__ == '__main__':

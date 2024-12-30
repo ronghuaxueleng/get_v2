@@ -1,10 +1,12 @@
 import copy
+import datetime
 import hashlib
 import json
 import time
 import uuid
 
 from ruamel import yaml
+from ruamel.yaml import CommentedMap, StringIO
 
 
 def reset_yaml_file(yaml_path):
@@ -19,6 +21,20 @@ def reset_yaml_stream(yaml_stream):
         return reset_yaml_content(yaml_obj)
     except Exception as e:
         print(e)
+
+
+def write_yaml_file(file, yml_file_path):
+    yml = yaml.YAML()
+    yml.indent(mapping=2, sequence=4, offset=2)
+    output = StringIO()
+    yml.dump(reset_yaml_stream(file.content), output)
+    # 获取 StringIO 中的内容
+    yaml_str = output.getvalue()
+    Update = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    header_comment = f"# Update: {Update}\n# Created by caoqiang\n"
+    with open(yml_file_path, 'w', encoding="utf8") as file:
+        file.write(header_comment)
+        file.write(yaml_str)
 
 
 def reset_yaml_content(yaml_obj):
@@ -71,4 +87,5 @@ def reset_yaml_content(yaml_obj):
 
     template["proxies"] = list(proxies_md5_dict.values())
 
-    return template
+    data = CommentedMap(template)
+    return data
