@@ -14,10 +14,10 @@ from utils.NoMoreWalls import get_content as NoMoreWalls_content
 # yamlUtils.make_template_dict("yaml", dirname)
 # yamlUtils.save_file("pub/changfengoss.yaml")
 # shutil.rmtree(changfengoss)
-
-cfmem_content()
-pawdroid_content()
-NoMoreWalls_content()
+current_work_dir = os.path.dirname(__file__)
+cfmem_content(current_work_dir)
+pawdroid_content(current_work_dir)
+NoMoreWalls_content(current_work_dir)
 
 
 pub = os.path.join("pub")

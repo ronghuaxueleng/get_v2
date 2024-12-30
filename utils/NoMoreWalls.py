@@ -1,15 +1,20 @@
 # -*- coding: utf-8 -*-
+import os
+
 import requests
 
 from utils.proxyUtils import get_proxy
 
 
-def get_content():
+def get_content(current_work_dir):
+    pub_dir = os.path.join(current_work_dir, 'pub')
+    if not os.path.exists(pub_dir):
+        os.makedirs(pub_dir)
     proxies = get_proxy()
     url = 'https://raw.githubusercontent.com/peasoft/NoMoreWalls/master/list.yml'
     print(url)
     file = requests.get(url, proxies=proxies)
-    with open("pub/NoMoreWalls.yaml", "wb") as f:
+    with open(f"{pub_dir}/NoMoreWalls.yaml", "wb") as f:
         f.write(file.content)
 
 

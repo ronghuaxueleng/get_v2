@@ -1,3 +1,4 @@
+import os
 import re
 import requests
 from bs4 import BeautifulSoup
@@ -8,7 +9,10 @@ from utils.formatUtils import reset_yaml_stream
 from utils.proxyUtils import get_proxy
 
 
-def get_content():
+def get_content(current_work_dir):
+    pub_dir = os.path.join(current_work_dir, 'pub')
+    if not os.path.exists(pub_dir):
+        os.makedirs(pub_dir)
     url = "https://www.cfmem.com/search/label/free"
     proxies = get_proxy()
 
@@ -42,7 +46,7 @@ def get_content():
             file = requests.get(url.replace('clash -> ', ''), proxies=proxies, stream=True)
             yml = yaml.YAML()
             yml.indent(mapping=2, sequence=4, offset=2)
-            with open("pub/cfmem.yaml", "w+", encoding="utf8") as outfile:
+            with open(f"{pub_dir}/cfmem.yaml", "w+", encoding="utf8") as outfile:
                 yml.dump(reset_yaml_stream(file.content), outfile)
     except Exception as e:
         print(e)
