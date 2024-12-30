@@ -1,4 +1,4 @@
-# Update: 2024-12-30 14:07:39
+# Update: 2024-12-30 16:09:01
 # Created by caoqiang
 port: 7890
 socks-port: 7891
@@ -30,7 +30,7 @@ proxies:
     cipher: auto
     h2-opts: {}
     http-opts: {}
-    name: 0|-https://t.me/MrXbin-45
+    name: 0|-https://t.me/MrXbin-43
     network: ws
     port: 38004
     server: 199.180.101.29
@@ -239,24 +239,24 @@ proxy-groups:
       - DIRECT
       - REJECT
 rules:
-  - RULE-SET,gfw,PROXY
-  - RULE-SET,private,DIRECT
-  - DOMAIN,yacd.haishan.me,DIRECT
-  - RULE-SET,tld-not-cn,PROXY
+  - RULE-SET,google,DIRECT
+  - RULE-SET,icloud,DIRECT
   - DOMAIN,clash.razord.top,DIRECT
-  - RULE-SET,cncidr,DIRECT
-  - RULE-SET,applications,DIRECT
-  - RULE-SET,proxy,OTHER
-  - MATCH,OTHER
-  - RULE-SET,reject,AD
+  - RULE-SET,apple,DIRECT
+  - RULE-SET,tld-not-cn,PROXY
   - RULE-SET,greatfire,PROXY
   - RULE-SET,lancidr,DIRECT
-  - RULE-SET,direct,DIRECT
-  - GEOIP,CN,DIRECT
-  - RULE-SET,google,DIRECT
-  - RULE-SET,apple,DIRECT
-  - RULE-SET,icloud,DIRECT
   - RULE-SET,telegramcidr,PROXY
+  - RULE-SET,proxy,OTHER
+  - RULE-SET,direct,DIRECT
+  - RULE-SET,reject,AD
+  - RULE-SET,gfw,PROXY
+  - GEOIP,CN,DIRECT
+  - DOMAIN,yacd.haishan.me,DIRECT
+  - MATCH,OTHER
+  - RULE-SET,cncidr,DIRECT
+  - RULE-SET,private,DIRECT
+  - RULE-SET,applications,DIRECT
 rule-providers:
   reject:
     type: http
