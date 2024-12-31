@@ -1,4 +1,4 @@
-# Update: 2024-12-31 06:11:23
+# Update: 2024-12-31 08:10:48
 # Created by caoqiang
 port: 7890
 socks-port: 7891
@@ -12,180 +12,68 @@ log-level: info
 external-controller: 0.0.0.0:9090
 proxies:
   - &id001
-    name: 欧盟 V2CROSS.COM
-    server: beesyar.org
-    port: 8080
+    name: 🇫🇷 法国 巴黎Choopa数据中心
+    server: 108.61.177.251
+    port: 443
     client-fingerprint: chrome
-    type: ss
-    cipher: chacha20-ietf-poly1305
-    password: 4a2rfixophdjffa8KVA4Aa
+    type: trojan
+    password: e8105dfd24414268b6c7652c63731097
+    sni: yournextcareerstep.online
   - &id002
-    name: 🇺🇸 美国 Sprint网络
-    server: 63.177.131.100
-    port: 22222
+    name: 欧盟 V2CROSS.COM
+    server: 45.8.98.163
+    port: 52839
     client-fingerprint: chrome
-    type: trojan
-    password: telegram-id-directvpn
-    sni: trojan.burgerip.co.uk
+    type: ss
+    cipher: chacha20-ietf-poly1305
+    password: 3N2JoZhDodMX5wPfr0xbT5
   - &id003
-    name: 🇹🇼 台湾省 中华电信
-    server: 1.170.227.135
-    port: 30337
-    client-fingerprint: random
-    type: trojan
-    password: 1a668915-d98f-4440-8bac-2c51d508f811
-    sni: ddns.200566.xyz
+    name: 🇯🇵 日本 东京Amazon数据中心
+    server: 54.199.222.232
+    port: 443
+    client-fingerprint: chrome
+    type: vmess
+    uuid: 60c0bbfa-c54f-49a9-81ba-779b0206a9fd
+    alterId: 0
+    cipher: auto
+    tls: true
+    network: ws
+    ws-opts:
+      path: /ylks
+      headers:
+        Host: nl.zhuk.us.kg
   - &id004
-    name: 🇫🇷 法国 法国计算机科学大学
-    server: 163.5.159.231
+    name: 🇨🇦 加拿大 魁北克省蒙特利尔Amazon数据中心
+    server: 35.182.188.214
     port: 443
     client-fingerprint: chrome
     type: vmess
-    uuid: e537f2f5-2a0c-4f59-92c9-832ca6433bf3
+    uuid: 60c0bbfa-c54f-49a9-81ba-779b0206a9fd
     alterId: 0
     cipher: auto
     tls: true
     network: ws
     ws-opts:
-      path: /linkws
+      path: /ylks
       headers:
-        Host: irvideo.cfd
+        Host: nl.zhuk.us.kg
   - &id005
-    name: 亚太地区 V2CROSS.COM
-    server: 103.149.183.178
-    port: 27512
+    name: 🇵🇱 波兰 V2CROSS.COM
+    server: 193.243.147.128
+    port: 40368
     client-fingerprint: chrome
-    type: vmess
-    uuid: 96d38683-0817-4d91-bffa-6f03df18d9dc
-    alterId: 0
-    cipher: auto
-    tls: false
+    type: ss
+    cipher: aes-256-gcm
+    password: 7BcLdsO1WweoGD0X
   - &id006
-    name: 🇺🇸 美国 V2CROSS.COM
-    server: 208.67.105.87
-    port: 42501
-    client-fingerprint: chrome
-    type: ss
-    cipher: chacha20-ietf-poly1305
-    password: 
-      nq96KftrZAj3LuFQESqmn44Mo5oCuo2cipoEsae25mrmHG2oJ4VT37scBfVBpN5DWtUELZutVhhXs8Le5B8fZ9hLn9ytwvbf
-  - &id007
-    name: 🇺🇸 美国 Fastly全球Anycast节点
-    server: 151.101.130.168
-    port: 80
-    client-fingerprint: chrome
-    type: vmess
-    uuid: beb7d098-48ba-4be8-a47a-758bf3c470b8
-    alterId: 0
-    cipher: auto
-    tls: false
-    network: ws
-    ws-opts:
-      path: /?ed=2048
-      headers:
-        Host: amd.al
-  - &id008
-    name: 🇨🇳 广东省 移动
-    server: 2.forlive.live
-    port: 61005
-    client-fingerprint: chrome
-    type: ss
-    cipher: chacha20-ietf-poly1305
-    password: 82fb692e-1c8b-3a65-ad83-23ad9deee111
-  - &id009
-    name: 🇺🇸 美国 Amazon EC2服务器
-    server: 3.97.210.171
-    port: 22222
-    client-fingerprint: chrome
-    type: trojan
-    password: telegram-id-directvpn
-    sni: trojan.burgerip.co.uk
-  - &id010
-    name: 🇺🇸 美国 Fastly全球Anycast节点 2
-    server: 151.101.2.168
-    port: 80
-    client-fingerprint: chrome
-    type: vmess
-    uuid: beb7d098-48ba-4be8-a47a-758bf3c470b8
-    alterId: 0
-    cipher: auto
-    tls: false
-    network: ws
-    ws-opts:
-      path: /?ed=2048
-      headers:
-        Host: amd.al
-  - &id011
-    name: 🇺🇸 美国 Amazon EC2服务器 2
-    server: 3.78.163.45
-    port: 22222
-    client-fingerprint: chrome
-    type: trojan
-    password: telegram-id-privatevpns
-    sni: trojan.burgerip.co.uk
-  - &id012
-    name: 🇨🇳 江苏省徐州市 移动
-    server: 223.113.54.149
-    port: 14505
-    client-fingerprint: chrome
-    type: trojan
-    password: vzhXXZVw
-    skip-cert-verify: true
-  - &id013
-    name: 🇭🇰 香港 特别行政区
-    server: 154.83.88.106
-    port: 8888
-    client-fingerprint: chrome
-    type: vmess
-    uuid: 63ab66f1-4d71-424e-8f2d-f4fb90fc92a2
-    alterId: 0
-    cipher: auto
-    tls: false
-  - &id014
-    name: 🇺🇸 美国 CloudFlare节点
-    server: 104.26.9.227
-    port: 443
-    client-fingerprint: random
-    type: trojan
-    password: b80Iy90Fma
-    sni: usa03.rtx.al
-    network: ws
-    ws-opts:
-      path: /cfyyds
-      headers:
-        Host: usa03.rtx.al
-  - &id015
     name: 🇷🇺 俄罗斯 V2CROSS.COM
-    server: 77.73.70.200
-    port: 3832
+    server: 185.242.86.156
+    port: 54170
     client-fingerprint: chrome
     type: ss
     cipher: chacha20-ietf-poly1305
-    password: TLzTbRU2xuSDMOU9o8e0QQ
-  - &id016
-    name: 欧盟 V2CROSS.COM 2
-    server: 45.87.175.154
-    port: 8080
-    client-fingerprint: chrome
-    type: ss
-    cipher: chacha20-ietf-poly1305
-    password: QCXDxuDlTTMD7jtgHUjIoj
-  - &id017
-    name: 🇺🇸 美国 CloudFlare节点 2
-    server: 172.64.170.159
-    port: 443
-    client-fingerprint: chrome
-    type: vmess
-    uuid: bf67437e-6c90-45ca-abc2-c7240a5ce2aa
-    alterId: 0
-    cipher: auto
-    tls: true
-    network: ws
-    ws-opts:
-      path: /eisasqa
-      headers:
-        Host: foxlux.fovi.tk
-  - &id018
+    password: 36ZCHeabUSfKjfQEvJ4HDV
+  - &id007
     name: 🇨🇳 甘肃省兰州市 移动
     server: 50023.baidu-cdn.top
     port: 50023
@@ -195,41 +83,100 @@ proxies:
     alterId: 0
     cipher: auto
     tls: false
-  - &id019
-    name: 🇯🇵 日本 东京Fastly节点
-    server: www.aetv.com
-    port: 80
+  - &id008
+    name: 🇩🇪 德国 黑森州法兰克福AMazon数据中心
+    server: 3.122.62.145
+    port: 443
     client-fingerprint: chrome
     type: vmess
-    uuid: beb7d098-48ba-4be8-a47a-758bf3c470b8
+    uuid: 60c0bbfa-c54f-49a9-81ba-779b0206a9fd
     alterId: 0
     cipher: auto
-    tls: false
+    tls: true
     network: ws
     ws-opts:
-      path: /?ed=2048
+      path: /ylks
       headers:
-        Host: amd.al
-  - &id020
-    name: 🇺🇸 美国 Amazon数据中心
-    server: 13.37.159.235
+        Host: nl.zhuk.us.kg
+  - &id009
+    name: 🇨🇳 江苏省盐城市 创凡云
+    server: 223.111.144.12
+    port: 4252
+    client-fingerprint: chrome
+    type: trojan
+    password: vzhXXZVw
+  - &id010
+    name: 🇺🇸 美国 麻省理工学院
+    server: 18.135.213.190
     port: 22222
     client-fingerprint: chrome
     type: trojan
     password: telegram-id-privatevpns
     sni: trojan.burgerip.co.uk
-  - &id021
-    name: 🇨🇿 捷克 V2CROSS.COM
-    server: 198.105.123.190
-    port: 46902
+  - &id011
+    name: 亚太地区 V2CROSS.COM
+    server: arxfw2b78fi2q9hzylhn.freesocks.work
+    port: 443
     client-fingerprint: chrome
     type: ss
     cipher: chacha20-ietf-poly1305
-    password: 
-      2UrSffeNABXGXXfNhoL6xBUnh1RzqMizrQ2s9QfC38P2YPuYPRTqW5zZg6jGisiNhkzM4SRjF6nzvFb18GPtESWoXWjhqyC8
-  - &id022
-    name: 🇺🇸 美国 麻省理工学院
-    server: 18.135.213.190
+    password: Nk9asglDzHzjktVzTkvhaA
+  - &id012
+    name: 🇺🇸 美国 CloudFlare节点
+    server: 104.21.82.183
+    port: 8880
+    client-fingerprint: chrome
+    type: vmess
+    uuid: 5a7021e0-26b4-45d6-b175-fe551601ca97
+    alterId: 0
+    cipher: auto
+    tls: false
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        Host: server26.beheshtbaneh.com
+  - &id013
+    name: 🇬🇧 英国 社会保险安全部
+    server: 51.21.48.77
+    port: 443
+    client-fingerprint: chrome
+    type: vmess
+    uuid: 60c0bbfa-c54f-49a9-81ba-779b0206a9fd
+    alterId: 0
+    cipher: auto
+    tls: true
+    network: ws
+    ws-opts:
+      path: /ylks
+      headers:
+        Host: nl.zhuk.us.kg
+  - &id014
+    name: 🇮🇪 爱尔兰 V2CROSS.COM
+    server: 54.247.12.244
+    port: 22222
+    client-fingerprint: chrome
+    type: trojan
+    password: telegram-id-privatevpns
+    sni: trojan.burgerip.co.uk
+  - &id015
+    name: 🇳🇱 荷兰 V2CROSS.COM
+    server: 132.226.31.178
+    port: 443
+    client-fingerprint: chrome
+    type: vmess
+    uuid: 60c0bbfa-c54f-49a9-81ba-779b0206a9fd
+    alterId: 0
+    cipher: auto
+    tls: true
+    network: ws
+    ws-opts:
+      path: /ylks
+      headers:
+        Host: nl.zhuk.us.kg
+  - &id016
+    name: 🇺🇸 美国 Xerox
+    server: 13.51.182.234
     port: 22222
     client-fingerprint: chrome
     type: trojan
@@ -277,12 +224,6 @@ proxy-groups:
       - *id014
       - *id015
       - *id016
-      - *id017
-      - *id018
-      - *id019
-      - *id020
-      - *id021
-      - *id022
   - name: LOAD-BALANCE
     type: load-balance
     url: http://www.gstatic.com/generate_204
@@ -304,12 +245,6 @@ proxy-groups:
       - *id014
       - *id015
       - *id016
-      - *id017
-      - *id018
-      - *id019
-      - *id020
-      - *id021
-      - *id022
   - name: SELECT
     type: select
     proxies:
@@ -329,12 +264,6 @@ proxy-groups:
       - *id014
       - *id015
       - *id016
-      - *id017
-      - *id018
-      - *id019
-      - *id020
-      - *id021
-      - *id022
 rules:
   - RULE-SET,applications,DIRECT
   - DOMAIN,clash.razord.top,DIRECT
