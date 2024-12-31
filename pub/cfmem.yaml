@@ -1,4 +1,4 @@
-# Update: 2024-12-31 14:05:04
+# Update: 2024-12-31 15:44:37
 # Created by caoqiang
 mixed-port: 7890
 allow-lan: true
@@ -10,106 +10,91 @@ log-level: info
 external-controller: 0.0.0.0:9090
 global-client-fingerprint: chrome
 proxies:
-  - &id001
-    name: 🇺🇸_US_美国
+  - name: 🇺🇸_US_美国
     type: ss
     server: 38.110.1.46
     port: 443
     cipher: aes-256-gcm
     password: pKEW8JPByTVTLtM
-  - &id002
-    name: 🇺🇸_US_美国_1
+  - name: 🇺🇸_US_美国_1
     type: ss
     server: 54.69.180.74
     port: 443
     cipher: aes-256-cfb
     password: amazonskr05
-  - &id003
-    name: 🇺🇸_US_美国_2
+  - name: 🇺🇸_US_美国_2
     type: ss
     server: 52.89.164.115
     port: 443
     cipher: aes-256-cfb
     password: amazonskr05
-  - &id004
-    name: 🇺🇸_US_美国_3
+  - name: 🇺🇸_US_美国_3
     type: ss
     server: 38.110.1.46
     port: 8080
     cipher: aes-256-gcm
     password: KixLvKzwjekG00rm
-  - &id005
-    name: 🇷🇺_RU_俄罗斯_1
+  - name: 🇷🇺_RU_俄罗斯_1
     type: ss
     server: 217.30.10.18
     port: 9079
     cipher: aes-256-cfb
     password: TPqX8edgbAURcAMb
-  - &id006
-    name: 🇷🇺_RU_俄罗斯_2
+  - name: 🇷🇺_RU_俄罗斯_2
     type: ss
     server: 217.30.10.18
     port: 9038
     cipher: aes-256-cfb
     password: gYCYXfkUQEs2TaJQ
-  - &id007
-    name: 🇷🇺_RU_俄罗斯_3
+  - name: 🇷🇺_RU_俄罗斯_3
     type: ss
     server: 217.30.10.18
     port: 9026
     cipher: aes-256-cfb
     password: QWDDvVE9npNurQfA
-  - &id008
-    name: 🇷🇺_RU_俄罗斯_4
+  - name: 🇷🇺_RU_俄罗斯_4
     type: ss
     server: 217.30.10.18
     port: 9005
     cipher: aes-256-cfb
     password: ZET59LF6DvCC8KVt
-  - &id009
-    name: 🇺🇸_US_美国_4
+  - name: 🇺🇸_US_美国_4
     type: ss
     server: 54.244.200.142
     port: 443
     cipher: aes-256-cfb
     password: amazonskr05
-  - &id010
-    name: 🇷🇺_RU_俄罗斯_5
+  - name: 🇷🇺_RU_俄罗斯_5
     type: ss
     server: 217.30.10.18
     port: 9014
     cipher: aes-256-cfb
     password: KnJGad3FqTvjqbaX
-  - &id011
-    name: 🇺🇸_US_美国_7
+  - name: 🇺🇸_US_美国_7
     type: ss
     server: 38.110.1.46
     port: 5500
     cipher: aes-256-gcm
     password: KixLvKzwjekG00rm
-  - &id012
-    name: 🇷🇺_RU_俄罗斯_6
+  - name: 🇷🇺_RU_俄罗斯_6
     type: ss
     server: 217.30.10.18
     port: 9059
     cipher: aes-256-cfb
     password: 9XwYyZsK8SNzQDtY
-  - &id013
-    name: 🇺🇸_US_美国->🇷🇺_RU_俄罗斯
+  - name: 🇺🇸_US_美国->🇷🇺_RU_俄罗斯
     type: ss
     server: 169.150.210.233
     port: 8080
     cipher: rc4-md5
     password: 14fFPrbezE3HDZzsMOr6
-  - &id014
-    name: 🇺🇸_US_美国->🇰🇷_KR_韩国
+  - name: 🇺🇸_US_美国->🇰🇷_KR_韩国
     type: ss
     server: 34.213.242.165
     port: 443
     cipher: aes-256-cfb
     password: amazonskr05
-  - &id015
-    name: 🇷🇺_RU_俄罗斯_7
+  - name: 🇷🇺_RU_俄罗斯_7
     type: ss
     server: 217.30.10.18
     port: 9041
@@ -141,59 +126,59 @@ proxy-groups:
     lazy: true
     tolerance: 100
     proxies:
-      - *id001
-      - *id002
-      - *id003
-      - *id004
-      - *id005
-      - *id006
-      - *id007
-      - *id008
-      - *id009
-      - *id010
-      - *id011
-      - *id012
-      - *id013
-      - *id014
-      - *id015
+      - 🇺🇸_US_美国->🇷🇺_RU_俄罗斯
+      - 🇺🇸_US_美国->🇰🇷_KR_韩国
+      - 🇷🇺_RU_俄罗斯_1
+      - 🇺🇸_US_美国_7
+      - 🇺🇸_US_美国
+      - 🇺🇸_US_美国_1
+      - 🇷🇺_RU_俄罗斯_5
+      - 🇺🇸_US_美国_4
+      - 🇷🇺_RU_俄罗斯_6
+      - 🇷🇺_RU_俄罗斯_3
+      - 🇷🇺_RU_俄罗斯_2
+      - 🇷🇺_RU_俄罗斯_7
+      - 🇷🇺_RU_俄罗斯_4
+      - 🇺🇸_US_美国_2
+      - 🇺🇸_US_美国_3
   - name: LOAD-BALANCE
     type: load-balance
     url: http://www.gstatic.com/generate_204
     interval: 600
     proxies:
-      - *id001
-      - *id002
-      - *id003
-      - *id004
-      - *id005
-      - *id006
-      - *id007
-      - *id008
-      - *id009
-      - *id010
-      - *id011
-      - *id012
-      - *id013
-      - *id014
-      - *id015
+      - 🇺🇸_US_美国->🇷🇺_RU_俄罗斯
+      - 🇺🇸_US_美国->🇰🇷_KR_韩国
+      - 🇷🇺_RU_俄罗斯_1
+      - 🇺🇸_US_美国_7
+      - 🇺🇸_US_美国
+      - 🇺🇸_US_美国_1
+      - 🇷🇺_RU_俄罗斯_5
+      - 🇺🇸_US_美国_4
+      - 🇷🇺_RU_俄罗斯_6
+      - 🇷🇺_RU_俄罗斯_3
+      - 🇷🇺_RU_俄罗斯_2
+      - 🇷🇺_RU_俄罗斯_7
+      - 🇷🇺_RU_俄罗斯_4
+      - 🇺🇸_US_美国_2
+      - 🇺🇸_US_美国_3
   - name: SELECT
     type: select
     proxies:
-      - *id001
-      - *id002
-      - *id003
-      - *id004
-      - *id005
-      - *id006
-      - *id007
-      - *id008
-      - *id009
-      - *id010
-      - *id011
-      - *id012
-      - *id013
-      - *id014
-      - *id015
+      - 🇺🇸_US_美国->🇷🇺_RU_俄罗斯
+      - 🇺🇸_US_美国->🇰🇷_KR_韩国
+      - 🇷🇺_RU_俄罗斯_1
+      - 🇺🇸_US_美国_7
+      - 🇺🇸_US_美国
+      - 🇺🇸_US_美国_1
+      - 🇷🇺_RU_俄罗斯_5
+      - 🇺🇸_US_美国_4
+      - 🇷🇺_RU_俄罗斯_6
+      - 🇷🇺_RU_俄罗斯_3
+      - 🇷🇺_RU_俄罗斯_2
+      - 🇷🇺_RU_俄罗斯_7
+      - 🇷🇺_RU_俄罗斯_4
+      - 🇺🇸_US_美国_2
+      - 🇺🇸_US_美国_3
 rules:
   - RULE-SET,applications,DIRECT
   - DOMAIN,clash.razord.top,DIRECT
@@ -217,85 +202,99 @@ rule-providers:
   reject:
     type: http
     behavior: domain
-    url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/reject.txt
+    url: 
+      https://gh.xxooo.cf/https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/reject.txt
     path: ./ruleset/reject.yaml
     interval: 86400
   icloud:
     type: http
     behavior: domain
-    url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/icloud.txt
+    url: 
+      https://gh.xxooo.cf/https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/icloud.txt
     path: ./ruleset/icloud.yaml
     interval: 86400
   apple:
     type: http
     behavior: domain
-    url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/apple.txt
+    url: 
+      https://gh.xxooo.cf/https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/apple.txt
     path: ./ruleset/apple.yaml
     interval: 86400
   google:
     type: http
     behavior: domain
-    url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/google.txt
+    url: 
+      https://gh.xxooo.cf/https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/google.txt
     path: ./ruleset/google.yaml
     interval: 86400
   proxy:
     type: http
     behavior: domain
-    url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/proxy.txt
+    url: 
+      https://gh.xxooo.cf/https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/proxy.txt
     path: ./ruleset/proxy.yaml
     interval: 86400
   direct:
     type: http
     behavior: domain
-    url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/direct.txt
+    url: 
+      https://gh.xxooo.cf/https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/direct.txt
     path: ./ruleset/direct.yaml
     interval: 86400
   private:
     type: http
     behavior: domain
-    url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/private.txt
+    url: 
+      https://gh.xxooo.cf/https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/private.txt
     path: ./ruleset/private.yaml
     interval: 86400
   gfw:
     type: http
     behavior: domain
-    url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/gfw.txt
+    url: 
+      https://gh.xxooo.cf/https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/gfw.txt
     path: ./ruleset/gfw.yaml
     interval: 86400
   greatfire:
     type: http
     behavior: domain
-    url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/greatfire.txt
+    url: 
+      https://gh.xxooo.cf/https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/greatfire.txt
     path: ./ruleset/greatfire.yaml
     interval: 86400
   tld-not-cn:
     type: http
     behavior: domain
-    url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/tld-not-cn.txt
+    url: 
+      https://gh.xxooo.cf/https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/tld-not-cn.txt
     path: ./ruleset/tld-not-cn.yaml
     interval: 86400
   telegramcidr:
     type: http
     behavior: ipcidr
-    url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/telegramcidr.txt
+    url: 
+      https://gh.xxooo.cf/https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/telegramcidr.txt
     path: ./ruleset/telegramcidr.yaml
     interval: 86400
   cncidr:
     type: http
     behavior: ipcidr
-    url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/cncidr.txt
+    url: 
+      https://gh.xxooo.cf/https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/cncidr.txt
     path: ./ruleset/cncidr.yaml
     interval: 86400
   lancidr:
     type: http
     behavior: ipcidr
-    url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/lancidr.txt
+    url: 
+      https://gh.xxooo.cf/https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/lancidr.txt
     path: ./ruleset/lancidr.yaml
     interval: 86400
   applications:
     type: http
     behavior: classical
-    url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/applications.txt
+    url: 
+      https://gh.xxooo.cf/https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/applications.txt
     path: ./ruleset/applications.yaml
     interval: 86400
 tcp-concurrent: true
