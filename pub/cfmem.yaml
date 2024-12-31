@@ -1,4 +1,4 @@
-# Update: 2024-12-30 22:07:25
+# Update: 2024-12-31 00:36:14
 # Created by caoqiang
 port: 7890
 socks-port: 7891
@@ -12,147 +12,110 @@ log-level: info
 external-controller: 0.0.0.0:9090
 proxies:
   - &id001
-    name: 🇬🇧_GB_英国
+    name: 🇺🇸_US_美国
     type: ss
-    server: 51.15.15.82
-    port: 989
-    cipher: aes-256-cfb
-    password: f8f7aCzcPKbsF8p3
+    server: 38.110.1.46
+    port: 443
+    cipher: aes-256-gcm
+    password: pKEW8JPByTVTLtM
   - &id002
     name: 🇺🇸_US_美国_1
     type: ss
-    server: 34.211.229.86
+    server: 54.69.180.74
     port: 443
     cipher: aes-256-cfb
     password: amazonskr05
   - &id003
-    name: 🇬🇧_GB_英国->🇺🇸_US_美国
+    name: 🇺🇸_US_美国_2
     type: ss
-    server: 51.13.35.115
-    port: 20760
-    cipher: chacha20-ietf-poly1305
-    password: SK8DG4IJFnDwuhy35hOWUj
-  - &id004
-    name: 🇺🇸_US_美国_3
-    type: trojan
-    server: 104.219.41.229
-    port: 443
-    sni: miami.juliusnet.com
-    password: Julius
-    network: tcp
-    skip-cert-verify: true
-  - &id005
-    name: 🇧🇬_BG_保加利亚->🇨🇳_CN_中国
-    type: ss
-    server: 149.34.244.68
-    port: 443
-    cipher: aes-128-gcm
-    password: shadowsocks
-  - &id006
-    name: 🇺🇸_US_美国_4
-    type: ss
-    server: 35.85.33.177
+    server: 52.89.164.115
     port: 443
     cipher: aes-256-cfb
     password: amazonskr05
-  - &id007
+  - &id004
+    name: 🇺🇸_US_美国_3
+    type: ss
+    server: 38.110.1.46
+    port: 8080
+    cipher: aes-256-gcm
+    password: KixLvKzwjekG00rm
+  - &id005
     name: 🇷🇺_RU_俄罗斯_1
     type: ss
     server: 217.30.10.18
-    port: 9050
+    port: 9079
     cipher: aes-256-cfb
-    password: FG5ddLsMPbV5CutE
-  - &id008
+    password: TPqX8edgbAURcAMb
+  - &id006
     name: 🇷🇺_RU_俄罗斯_2
     type: ss
     server: 217.30.10.18
-    port: 9010
+    port: 9038
     cipher: aes-256-cfb
-    password: f63gg8EruDnUrmz4
-  - &id009
+    password: gYCYXfkUQEs2TaJQ
+  - &id007
     name: 🇷🇺_RU_俄罗斯_3
     type: ss
     server: 217.30.10.18
-    port: 9041
+    port: 9026
     cipher: aes-256-cfb
-    password: U6qnYRhfyDmn8sgn
-  - &id010
+    password: QWDDvVE9npNurQfA
+  - &id008
     name: 🇷🇺_RU_俄罗斯_4
     type: ss
     server: 217.30.10.18
-    port: 9019
+    port: 9005
     cipher: aes-256-cfb
-    password: GA9KzeEgvfxNrgmM
-  - &id011
-    name: 🇩🇪_DE_德国->🇷🇺_RU_俄罗斯
-    type: ss
-    server: 45.87.175.188
-    port: 8080
-    cipher: chacha20-ietf-poly1305
-    password: 1RWwXhwfAB5gAEozU4G2Pg
-  - &id012
-    name: 🇷🇺_RU_俄罗斯_6
-    type: ss
-    server: 217.30.10.18
-    port: 9060
-    cipher: aes-256-cfb
-    password: ueLXVkvh4hckhErQ
-  - &id013
-    name: 🇷🇺_RU_俄罗斯_7
-    type: ss
-    server: 217.30.10.18
-    port: 9003
-    cipher: aes-256-cfb
-    password: JdmRK9gMEqFgs8nP
-  - &id014
-    name: 🇷🇺_RU_俄罗斯_8
-    type: ss
-    server: 217.30.10.18
-    port: 9031
-    cipher: aes-256-cfb
-    password: BwcAUZk8hUFAkDGN
-  - &id015
-    name: 🇷🇺_RU_俄罗斯_9
-    type: ss
-    server: 217.30.10.18
-    port: 9042
-    cipher: aes-256-cfb
-    password: S7KwUu7yBy58S3Ga
-  - &id016
-    name: 🇺🇸_US_美国_7
+    password: ZET59LF6DvCC8KVt
+  - &id009
+    name: 🇺🇸_US_美国_4
     type: ss
     server: 54.244.200.142
     port: 443
     cipher: aes-256-cfb
     password: amazonskr05
-  - &id017
-    name: 🇷🇺_RU_俄罗斯_10
-    type: ss
-    server: 217.30.10.18
-    port: 9011
-    cipher: aes-256-cfb
-    password: M3t2ZEQcMGRWBjRa
-  - &id018
-    name: 🇷🇺_RU_俄罗斯_11
-    type: ss
-    server: 217.30.10.18
-    port: 9093
-    cipher: aes-256-cfb
-    password: wfLC2y7rzZyCmuyt
-  - &id019
-    name: 🇺🇸_US_美国_10
-    type: ss
-    server: 52.32.68.164
-    port: 443
-    cipher: aes-256-cfb
-    password: amazonskr05
-  - &id020
-    name: 🇷🇺_RU_俄罗斯_12
+  - &id010
+    name: 🇷🇺_RU_俄罗斯_5
     type: ss
     server: 217.30.10.18
     port: 9014
     cipher: aes-256-cfb
     password: KnJGad3FqTvjqbaX
+  - &id011
+    name: 🇺🇸_US_美国_7
+    type: ss
+    server: 38.110.1.46
+    port: 5500
+    cipher: aes-256-gcm
+    password: KixLvKzwjekG00rm
+  - &id012
+    name: 🇷🇺_RU_俄罗斯_6
+    type: ss
+    server: 217.30.10.18
+    port: 9059
+    cipher: aes-256-cfb
+    password: 9XwYyZsK8SNzQDtY
+  - &id013
+    name: 🇺🇸_US_美国->🇷🇺_RU_俄罗斯
+    type: ss
+    server: 169.150.210.233
+    port: 8080
+    cipher: rc4-md5
+    password: 14fFPrbezE3HDZzsMOr6
+  - &id014
+    name: 🇺🇸_US_美国->🇰🇷_KR_韩国
+    type: ss
+    server: 34.213.242.165
+    port: 443
+    cipher: aes-256-cfb
+    password: amazonskr05
+  - &id015
+    name: 🇷🇺_RU_俄罗斯_7
+    type: ss
+    server: 217.30.10.18
+    port: 9041
+    cipher: aes-256-cfb
+    password: U6qnYRhfyDmn8sgn
 proxy-groups:
   - name: PROXY
     type: select
@@ -194,11 +157,6 @@ proxy-groups:
       - *id013
       - *id014
       - *id015
-      - *id016
-      - *id017
-      - *id018
-      - *id019
-      - *id020
   - name: LOAD-BALANCE
     type: load-balance
     url: http://www.gstatic.com/generate_204
@@ -219,11 +177,6 @@ proxy-groups:
       - *id013
       - *id014
       - *id015
-      - *id016
-      - *id017
-      - *id018
-      - *id019
-      - *id020
   - name: SELECT
     type: select
     proxies:
@@ -242,11 +195,6 @@ proxy-groups:
       - *id013
       - *id014
       - *id015
-      - *id016
-      - *id017
-      - *id018
-      - *id019
-      - *id020
 rules:
   - RULE-SET,applications,DIRECT
   - DOMAIN,clash.razord.top,DIRECT
