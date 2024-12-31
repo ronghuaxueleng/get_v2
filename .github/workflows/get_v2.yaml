@@ -40,14 +40,14 @@ jobs:
           git pull
           git commit --allow-empty -m "up"
           git push
-      - name: 同步到gitee
-        uses: Yikun/hub-mirror-action@master
-        with:
-          src: github/ronghuaxueleng
-          dst: gitee/getready
-          static_list: "get_v2"
-          dst_key: ${{ secrets.GITEE_PRIVATE_KEY }}
-          dst_token: ${{ secrets.GITEE_TOKEN }}
+#      - name: 同步到gitee
+#        uses: Yikun/hub-mirror-action@master
+#        with:
+#          src: github/ronghuaxueleng
+#          dst: gitee/getready
+#          static_list: "get_v2"
+#          dst_key: ${{ secrets.GITEE_PRIVATE_KEY }}
+#          dst_token: ${{ secrets.GITEE_TOKEN }}
       - name: 删除过多的workflows
         uses: Mattraks/delete-workflow-runs@main
         with:
