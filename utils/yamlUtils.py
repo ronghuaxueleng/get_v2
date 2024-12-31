@@ -176,7 +176,7 @@ class YamlUtils:
             if with_adguard_dns:
                 template["dns"] = self.adguard_dns
             yml = yaml.YAML()
-            # yml.indent(mapping=2, sequence=4, offset=2)
+            yml.indent(mapping=2, sequence=4, offset=2)
             output = StringIO()
             yml.dump(CommentedMap(template), output)
             # 获取 StringIO 中的内容
@@ -196,6 +196,6 @@ class YamlUtils:
             if with_adguard_dns:
                 template["dns"] = self.adguard_dns
             yml = yaml.YAML()
-            # yml.indent(mapping=2, sequence=4, offset=2)
+            yml.indent(mapping=2, sequence=4, offset=2)
             with open(savepath, "w+", encoding="utf8") as outfile:
                 yml.dump(template, outfile)
