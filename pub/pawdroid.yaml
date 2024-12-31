@@ -1,4 +1,4 @@
-# Update: 2024-12-31 02:41:25
+# Update: 2024-12-31 04:09:56
 # Created by caoqiang
 port: 7890
 socks-port: 7891
@@ -12,14 +12,73 @@ log-level: info
 external-controller: 0.0.0.0:9090
 proxies:
   - &id001
-    name: 🇧🇬 保加利亚 V2CROSS.COM
-    server: 149.34.244.68
+    name: 🇩🇪 德国 黑森州法兰克福Amazon数据中心
+    server: 3.127.100.2
+    port: 22222
+    client-fingerprint: chrome
+    type: trojan
+    password: telegram-id-directvpn
+    sni: trojan.burgerip.co.uk
+  - &id002
+    name: 🇨🇳 甘肃省兰州市 移动
+    server: 50015.baidu-cdn.top
+    port: 50015
+    client-fingerprint: chrome
+    type: vmess
+    uuid: fa2c4c94-b477-4809-9db8-3db03ef06202
+    alterId: 0
+    cipher: auto
+    tls: false
+  - &id003
+    name: 🇺🇸 美国 Amazon数据中心
+    server: 13.37.159.235
+    port: 22222
+    client-fingerprint: chrome
+    type: trojan
+    password: telegram-id-privatevpns
+    sni: trojan.burgerip.co.uk
+  - &id004
+    name: 🇫🇷 法国 法国计算机科学大学
+    server: irvideo.cfd
     port: 443
     client-fingerprint: chrome
+    type: vmess
+    uuid: e537f2f5-2a0c-4f59-92c9-832ca6433bf3
+    alterId: 0
+    cipher: auto
+    tls: true
+    network: ws
+    ws-opts:
+      path: /linkws
+      headers:
+        Host: irvideo.cfd
+  - &id005
+    name: 🇺🇸 美国 Xerox
+    server: 13.51.182.234
+    port: 22222
+    client-fingerprint: chrome
+    type: trojan
+    password: telegram-id-privatevpns
+    sni: trojan.burgerip.co.uk
+  - &id006
+    name: 亚太地区 V2CROSS.COM
+    server: 103.149.183.178
+    port: 54675
+    client-fingerprint: chrome
+    type: vmess
+    uuid: 3a907956-f668-4e6b-ea03-0949f0c9c0a5
+    alterId: 0
+    cipher: auto
+    tls: false
+  - &id007
+    name: 🇷🇺 俄罗斯 V2CROSS.COM
+    server: 185.242.86.156
+    port: 54170
+    client-fingerprint: chrome
     type: ss
-    cipher: aes-128-gcm
-    password: shadowsocks
-  - &id002
+    cipher: chacha20-ietf-poly1305
+    password: 36ZCHeabUSfKjfQEvJ4HDV
+  - &id008
     name: 🇨🇳 广东省广州市 移动
     server: 183.236.51.23
     port: 53002
@@ -29,13 +88,21 @@ proxies:
     alterId: 64
     cipher: auto
     tls: false
-  - &id003
-    name: 🇺🇸 美国 CloudFlare节点
-    server: www.darkroom.lol
+  - &id009
+    name: 欧盟 V2CROSS.COM
+    server: beesyar.org
     port: 8080
     client-fingerprint: chrome
+    type: ss
+    cipher: chacha20-ietf-poly1305
+    password: 1RWwXhwfAB5gAEozU4G2Pg
+  - &id010
+    name: 🇺🇸 美国 CloudFlare节点
+    server: server31.beheshtbaneh.com
+    port: 8880
+    client-fingerprint: chrome
     type: vmess
-    uuid: 22826b44-5c1a-4b4b-dbaa-83a2e8bd95f0
+    uuid: 4154143c-bbba-47a4-9f79-c2ed087cbcc9
     alterId: 0
     cipher: auto
     tls: false
@@ -43,171 +110,82 @@ proxies:
     ws-opts:
       path: /
       headers:
-        Host: www.darkroom.lol
-  - &id004
-    name: 🇸🇪 瑞典 斯德哥尔摩Amazon数据中心
-    server: 13.48.109.62
+        Host: server31.beheshtbaneh.com
+  - &id011
+    name: 🇮🇪 爱尔兰都柏林 亚马逊云
+    server: 3.248.98.229
     port: 22222
     client-fingerprint: chrome
     type: trojan
     password: telegram-id-privatevpns
     sni: trojan.burgerip.co.uk
-  - &id005
-    name: 🇺🇸 美国 V2CROSS.COM
-    server: 208.67.105.87
-    port: 42501
+  - &id012
+    name: 🇭🇰 香港 电讯盈科有限公司
+    server: 112.120.54.47
+    port: 61067
     client-fingerprint: chrome
     type: ss
-    cipher: chacha20-ietf-poly1305
+    cipher: 2022-blake3-aes-256-gcm
     password: 
-      nq96KftrZAj3LuFQESqmn44Mo5oCuo2cipoEsae25mrmHG2oJ4VT37scBfVBpN5DWtUELZutVhhXs8Le5B8fZ9hLn9ytwvbf
-  - &id006
-    name: 🇮🇷 伊朗 V2CROSS.COM
-    server: 92.242.220.22
-    port: 37885
-    client-fingerprint: chrome
-    type: vmess
-    uuid: 8dee19ab-50ce-4d06-be42-5e53c8989ccc
-    alterId: 0
-    cipher: auto
-    tls: false
-  - &id007
-    name: 🇳🇱 荷兰 V2CROSS.COM
-    server: 145.223.100.85
-    port: 52221
-    client-fingerprint: chrome
-    type: ss
-    cipher: chacha20-ietf-poly1305
-    password: idJTwZjM2vUUqCyRdvBsII
-  - &id008
-    name: 🇩🇪 德国 法兰克福Oracle云计算数据中心
-    server: frankfurt03.zgjok.com
-    port: 443
-    client-fingerprint: chrome
-    type: vmess
-    uuid: 4f7c2243-a38a-4672-983b-f1378aee0a7f
-    alterId: 0
-    cipher: auto
-    tls: true
-    servername: frankfurt03.zgjok.com
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        Host: frankfurt03.zgjok.com
-  - &id009
-    name: 🇮🇳 印度 V2CROSS.COM
-    server: 202.78.162.5
-    port: 443
-    client-fingerprint: chrome
-    type: vmess
-    uuid: 2ff97c6d-8557-42a4-b43f-19c77c5959ea
-    alterId: 0
-    cipher: auto
-    tls: true
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        Host: irsoft.sytes.net
-  - &id010
-    name: 🇵🇱 波兰 V2CROSS.COM
-    server: 193.243.147.128
-    port: 40368
-    client-fingerprint: chrome
-    type: ss
-    cipher: aes-256-gcm
-    password: 7BcLdsO1WweoGD0X
-  - &id011
-    name: 🇺🇸 美国 Amazon数据中心
-    server: 13.39.154.105
+      Y2U5MWY0N2IwMDAxY2EwMmQzNzdkM2RhNDYyNjFiOGY=:YjVhNmM3MWMtYjBlMi00OWYyLWEyMGYtZDNkMWZjZWI=
+  - &id013
+    name: 🇺🇸 美国 Amazon数据中心 2
+    server: 13.42.237.59
     port: 22222
     client-fingerprint: chrome
     type: trojan
     password: telegram-id-directvpn
     sni: trojan.burgerip.co.uk
-  - &id012
-    name: 🇫🇷 法国 巴黎Choopa数据中心
-    server: 108.61.177.251
-    port: 443
-    client-fingerprint: chrome
-    type: trojan
-    password: 984e400bf5d541b7b0815913fe0c432a
-    sni: yournextcareerstep.online
-    skip-cert-verify: true
-  - &id013
-    name: 🇺🇸 美国 Xerox
-    server: 13.51.182.234
-    port: 22222
-    client-fingerprint: chrome
-    type: trojan
-    password: telegram-id-privatevpns
-    sni: trojan.burgerip.co.uk
   - &id014
-    name: 🇺🇸 美国 惠普公司
-    server: 16.16.231.31
-    port: 22222
+    name: 🇨🇳 江苏省徐州市 移动
+    server: 223.113.54.149
+    port: 14505
     client-fingerprint: chrome
     type: trojan
-    password: telegram-id-privatevpns
-    sni: trojan.burgerip.co.uk
+    password: vzhXXZVw
+    skip-cert-verify: true
   - &id015
-    name: 🇺🇸 美国 俄亥俄州都柏林Amazon数据中心
-    server: 3.19.191.129
+    name: 🇺🇸 美国 Sprint网络
+    server: 63.177.131.100
     port: 22222
     client-fingerprint: chrome
     type: trojan
     password: telegram-id-directvpn
     sni: trojan.burgerip.co.uk
   - &id016
-    name: 🇺🇸 美国 Fastly全球Anycast节点
-    server: 151.101.64.155
-    port: 80
-    client-fingerprint: chrome
-    type: vmess
-    uuid: 214170c0-a531-4285-af3a-55779de6527c
-    alterId: 0
-    cipher: auto
-    tls: false
-    network: ws
-    ws-opts:
-      path: /?ed=80/#id-telegram:@vpn_whal<---
-      headers:
-        Host: khamenei-313.IR.
-  - &id017
-    name: 🇺🇸 美国 V2CROSS.COM 2
-    server: bz02.ssr.ee
-    port: 443
+    name: 🇺🇸 美国 Amazon EC2服务器
+    server: 3.78.163.45
+    port: 22222
     client-fingerprint: chrome
     type: trojan
-    password: 9d0a75d2-f747-4afa-b43f-d208af9e8f9a
-    sni: bz02.ssr.ee
+    password: telegram-id-privatevpns
+    sni: trojan.burgerip.co.uk
+  - &id017
+    name: 欧盟 V2CROSS.COM 2
+    server: 45.87.175.157
+    port: 8080
+    client-fingerprint: chrome
+    type: ss
+    cipher: chacha20-ietf-poly1305
+    password: cvII85TrW6n0OGyfpHVS1u
   - &id018
-    name: 🇺🇸 美国 加利福尼亚州圣何塞PEG TECH
-    server: 142.4.108.131
-    port: 38007
+    name: 🇨🇳 中国 阿里云
+    server: 8.222.161.29
+    port: 443
     client-fingerprint: chrome
     type: vmess
-    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-    alterId: 64
+    uuid: 9b456c2a-f2c1-45e1-87a9-b7628b04bb24
+    alterId: 0
     cipher: auto
     tls: true
     network: ws
     ws-opts:
-      path: /path/283126261303
+      path: /linkws
+      headers:
+        Host: beyonddsz.cfd
   - &id019
-    name: 🇨🇳 广东省广州市 移动 2
-    server: 183.236.51.23
-    port: 51704
-    client-fingerprint: chrome
-    type: vmess
-    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-    alterId: 64
-    cipher: auto
-    tls: false
-  - &id020
-    name: 🇺🇸 美国 Fastly全球Anycast节点 2
-    server: 151.101.130.168
+    name: 🇺🇸 美国 Fastly全球Anycast节点
+    server: 151.101.194.168
     port: 80
     client-fingerprint: chrome
     type: vmess
@@ -220,7 +198,30 @@ proxies:
       path: /?ed=2048
       headers:
         Host: amd.al
+  - &id020
+    name: 🇺🇸 美国 Fastly全球Anycast节点 2
+    server: 151.101.194.133
+    port: 443
+    client-fingerprint: chrome
+    type: vmess
+    uuid: 545485da-9ff4-48c5-ae94-45e6e4ee7d26
+    alterId: 0
+    cipher: auto
+    tls: true
+    network: ws
+    ws-opts:
+      path: /racevpn
+      headers:
+        Host: 6606.com
   - &id021
+    name: 亚太地区 V2CROSS.COM 2
+    server: arxfw2b78fi2q9hzylhn.freesocks.work
+    port: 443
+    client-fingerprint: chrome
+    type: ss
+    cipher: chacha20-ietf-poly1305
+    password: Nk9asglDzHzjktVzTkvhaA
+  - &id022
     name: 🇺🇸 美国 Fastly全球Anycast节点 3
     server: 151.101.192.155
     port: 80
@@ -235,6 +236,29 @@ proxies:
       path: /?ed=80/#id-telegram:@vpn_whal<---
       headers:
         Host: khamenei-313.IR.
+  - &id023
+    name: 🇫🇷 法国 巴黎Choopa数据中心
+    server: 108.61.177.251
+    port: 443
+    client-fingerprint: chrome
+    type: trojan
+    password: e8105dfd24414268b6c7652c63731097
+    sni: yournextcareerstep.online
+  - &id024
+    name: 🇺🇸 美国 V2CROSS.COM
+    server: 199.232.214.133
+    port: 443
+    client-fingerprint: chrome
+    type: vmess
+    uuid: e5852393-ca52-4c90-a237-d63cbbb57f21
+    alterId: 0
+    cipher: auto
+    tls: true
+    network: ws
+    ws-opts:
+      path: /farcry?ed=2560
+      headers:
+        Host: loki.oracle
 proxy-groups:
   - name: PROXY
     type: select
@@ -282,6 +306,9 @@ proxy-groups:
       - *id019
       - *id020
       - *id021
+      - *id022
+      - *id023
+      - *id024
   - name: LOAD-BALANCE
     type: load-balance
     url: http://www.gstatic.com/generate_204
@@ -308,6 +335,9 @@ proxy-groups:
       - *id019
       - *id020
       - *id021
+      - *id022
+      - *id023
+      - *id024
   - name: SELECT
     type: select
     proxies:
@@ -332,6 +362,9 @@ proxy-groups:
       - *id019
       - *id020
       - *id021
+      - *id022
+      - *id023
+      - *id024
 rules:
   - RULE-SET,applications,DIRECT
   - DOMAIN,clash.razord.top,DIRECT
