@@ -9,7 +9,9 @@ import uuid
 from ruamel import yaml
 from ruamel.yaml import CommentedMap
 from ruamel.yaml.compat import StringIO
+
 yaml.representer.RoundTripRepresenter.ignore_aliases = lambda x, y: True
+
 
 def reset_yaml_file(yml, yaml_path):
     with open(yaml_path, "r", encoding="utf8") as yaml_file:
@@ -82,7 +84,7 @@ def reset_yaml_content(yaml_obj):
     for group in template_proxy_groups:
         group_name = group.get("name")
         if group_name == 'URL-TEST' or group_name == 'LOAD-BALANCE' or group_name == 'SELECT':
-            group["proxies"] = list(proxies_md5_dict.values())
+            group["proxies"] = list(proxy_names_set)
         proxy_groups[group_name] = group
 
     if len(proxy_groups) > 0:
