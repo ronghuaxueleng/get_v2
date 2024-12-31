@@ -25,7 +25,7 @@ def reset_yaml_stream(yaml_stream):
 
 def write_yaml_file(file, yml_file_path):
     yml = yaml.YAML()
-    yml.indent(mapping=2, sequence=4, offset=2)
+    # yml.indent(mapping=2, sequence=4, offset=2)
     output = StringIO()
     yml.dump(reset_yaml_stream(file.content), output)
     # 获取 StringIO 中的内容
