@@ -3,31 +3,34 @@ import datetime
 import hashlib
 import json
 import time
+import traceback
 import uuid
 
 from ruamel import yaml
-from ruamel.yaml import CommentedMap, StringIO
+from ruamel.yaml import CommentedMap
+from ruamel.yaml.compat import StringIO
 
 
-def reset_yaml_file(yaml_path):
+def reset_yaml_file(yml, yaml_path):
     with open(yaml_path, "r", encoding="utf8") as yaml_file:
-        yaml_obj = yaml.safe_load(yaml_file)
+        yaml_obj = yml.load(yaml_file)
         return reset_yaml_content(yaml_obj)
 
 
-def reset_yaml_stream(yaml_stream):
+def reset_yaml_stream(yml, yaml_stream):
     try:
-        yaml_obj = yaml.safe_load(bytes(yaml_stream))
+        yaml_obj = yml.load(bytes(yaml_stream))
         return reset_yaml_content(yaml_obj)
     except Exception as e:
-        print(e)
+        print(traceback.format_exc())
 
 
 def write_yaml_file(file, yml_file_path):
     yml = yaml.YAML()
     yml.indent(mapping=2, sequence=4, offset=2)
+    data = reset_yaml_stream(yml, file.content)
     output = StringIO()
-    yml.dump(reset_yaml_stream(file.content), output)
+    yml.dump(data, output)
     # 获取 StringIO 中的内容
     yaml_str = output.getvalue()
     Update = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
@@ -57,7 +60,7 @@ def reset_yaml_content(yaml_obj):
             )
         ).hexdigest()
         if data_md5 not in proxies_md5_dict:
-            if proxy.get("name") in proxy_names_set:
+            if proxy_copy.get("name") in proxy_names_set:
                 proxy["name"] = (
                         proxy.get("name")
                         + "_"
