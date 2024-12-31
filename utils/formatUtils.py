@@ -9,7 +9,7 @@ import uuid
 from ruamel import yaml
 from ruamel.yaml import CommentedMap
 from ruamel.yaml.compat import StringIO
-
+yaml.representer.RoundTripRepresenter.ignore_aliases = lambda x, y: True
 
 def reset_yaml_file(yml, yaml_path):
     with open(yaml_path, "r", encoding="utf8") as yaml_file:

@@ -11,6 +11,7 @@ from ruamel import yaml
 from git.repo import Repo
 from git.repo.fun import is_git_dir
 from ruamel.yaml import StringIO, CommentedMap
+yaml.representer.RoundTripRepresenter.ignore_aliases = lambda x, y: True
 
 
 class YamlUtils:
