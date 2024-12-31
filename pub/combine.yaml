@@ -1,4 +1,4 @@
-# Update: 2024-12-31 08:10:49
+# Update: 2024-12-31 10:08:23
 # Created by caoqiang
 port: 7890
 socks-port: 7891
@@ -15,21 +15,33 @@ proxies:
     cipher: auto
     h2-opts: {}
     http-opts: {}
-    name: 0|-https://t.me/MrXbin-41
+    name: 0|-https://t.me/MrXbin-35
     network: ws
     port: 443
-    server: 38.75.137.21
-    servername: 
-      wrmelmwxlf.gktevlrqznwqqozy.fabpfs66gizmnojhcvqxwl.kytrcfzqla87gvgvs6c7kjnrubuh.cc
-    skip-cert-verify: true
+    server: irvideo.cfd
     tls: true
     type: vmess
-    udp: true
-    uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
+    uuid: e537f2f5-2a0c-4f59-92c9-832ca6433bf3
     ws-opts:
       headers:
-        Host: harriscity.com
-      path: /linkvws
+        Host: irvideo.cfd
+      path: /linkws
+  - alterId: 0
+    cipher: auto
+    h2-opts: {}
+    http-opts: {}
+    name: 0|-https://t.me/MrXbin-36
+    network: ws
+    port: 443
+    server: 151.101.194.133
+    servername: mio.splashthat.com
+    tls: true
+    type: vmess
+    uuid: 545485da-9ff4-48c5-ae94-45e6e4ee7d26
+    ws-opts:
+      headers:
+        Host: 6606.com
+      path: /racevpn
   - alterId: 64
     cipher: auto
     name: 13|🇭🇰 香港3|@ripaojiedian
@@ -229,24 +241,24 @@ proxy-groups:
       - DIRECT
       - REJECT
 rules:
-  - RULE-SET,gfw,PROXY
-  - RULE-SET,direct,DIRECT
-  - GEOIP,CN,DIRECT
-  - RULE-SET,icloud,DIRECT
-  - RULE-SET,reject,AD
   - RULE-SET,cncidr,DIRECT
-  - RULE-SET,google,DIRECT
-  - MATCH,OTHER
-  - RULE-SET,applications,DIRECT
-  - RULE-SET,proxy,OTHER
-  - DOMAIN,yacd.haishan.me,DIRECT
   - RULE-SET,greatfire,PROXY
-  - RULE-SET,tld-not-cn,PROXY
   - RULE-SET,apple,DIRECT
-  - RULE-SET,telegramcidr,PROXY
+  - RULE-SET,tld-not-cn,PROXY
   - DOMAIN,clash.razord.top,DIRECT
-  - RULE-SET,lancidr,DIRECT
+  - DOMAIN,yacd.haishan.me,DIRECT
+  - RULE-SET,proxy,OTHER
+  - GEOIP,CN,DIRECT
+  - RULE-SET,google,DIRECT
+  - RULE-SET,direct,DIRECT
+  - MATCH,OTHER
+  - RULE-SET,gfw,PROXY
   - RULE-SET,private,DIRECT
+  - RULE-SET,reject,AD
+  - RULE-SET,icloud,DIRECT
+  - RULE-SET,lancidr,DIRECT
+  - RULE-SET,applications,DIRECT
+  - RULE-SET,telegramcidr,PROXY
 rule-providers:
   reject:
     type: http
