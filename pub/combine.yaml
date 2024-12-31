@@ -1,4 +1,4 @@
-# Update: 2024-12-31 10:08:23
+# Update: 2024-12-31 12:13:48
 # Created by caoqiang
 port: 7890
 socks-port: 7891
@@ -241,24 +241,24 @@ proxy-groups:
       - DIRECT
       - REJECT
 rules:
-  - RULE-SET,cncidr,DIRECT
-  - RULE-SET,greatfire,PROXY
   - RULE-SET,apple,DIRECT
-  - RULE-SET,tld-not-cn,PROXY
-  - DOMAIN,clash.razord.top,DIRECT
-  - DOMAIN,yacd.haishan.me,DIRECT
-  - RULE-SET,proxy,OTHER
   - GEOIP,CN,DIRECT
-  - RULE-SET,google,DIRECT
+  - RULE-SET,greatfire,PROXY
+  - DOMAIN,yacd.haishan.me,DIRECT
+  - RULE-SET,gfw,PROXY
+  - RULE-SET,telegramcidr,PROXY
+  - DOMAIN,clash.razord.top,DIRECT
+  - RULE-SET,reject,AD
+  - RULE-SET,tld-not-cn,PROXY
+  - RULE-SET,proxy,OTHER
   - RULE-SET,direct,DIRECT
   - MATCH,OTHER
-  - RULE-SET,gfw,PROXY
-  - RULE-SET,private,DIRECT
-  - RULE-SET,reject,AD
   - RULE-SET,icloud,DIRECT
-  - RULE-SET,lancidr,DIRECT
+  - RULE-SET,cncidr,DIRECT
   - RULE-SET,applications,DIRECT
-  - RULE-SET,telegramcidr,PROXY
+  - RULE-SET,private,DIRECT
+  - RULE-SET,google,DIRECT
+  - RULE-SET,lancidr,DIRECT
 rule-providers:
   reject:
     type: http
