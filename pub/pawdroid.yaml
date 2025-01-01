@@ -1,4 +1,4 @@
-# Update: 2025-01-01 16:08:13
+# Update: 2025-01-01 18:09:42
 # Created by caoqiang
 mixed-port: 7890
 allow-lan: true
@@ -10,107 +10,95 @@ log-level: info
 external-controller: 0.0.0.0:9090
 global-client-fingerprint: chrome
 proxies:
-  - {name: 🇬🇧 英国 伦敦Amazon数据中心, server: 35.179.218.63, port: 22222, client-fingerprint: chrome,
+  - {name: 亚太地区 V2CROSS.COM, server: 103.149.183.178, port: 27512, client-fingerprint: chrome,
+    type: vmess, uuid: 96d38683-0817-4d91-bffa-6f03df18d9dc, alterId: 0, cipher: auto,
+    tls: false}
+  - {name: 🇮🇪 爱尔兰 都柏林Amazon数据中心, server: 52.208.124.124, port: 22222, client-fingerprint: chrome,
     type: trojan, password: telegram-id-privatevpns, sni: trojan.burgerip.co.uk}
-  - {name: 🇺🇸 美国 俄勒冈州波特兰Amazon数据中心, server: 34.219.53.148, port: 443, client-fingerprint: chrome,
+  - {name: 🇺🇸 美国 V2CROSS.COM, server: 129.159.84.71, port: 443, client-fingerprint: chrome,
     type: vmess, uuid: 60c0bbfa-c54f-49a9-81ba-779b0206a9fd, alterId: 0, cipher: auto,
     tls: true, network: ws, ws-opts: {path: /ylks, headers: {Host: nl.zhuk.us.kg}}}
-  - {name: 🇸🇪 瑞典 Oracle Corporation, server: 141.147.147.180, port: 443, client-fingerprint: chrome,
+  - {name: 🇺🇸 美国 Amazon EC2服务器, server: 3.98.73.243, port: 443, client-fingerprint: chrome,
     type: vmess, uuid: 60c0bbfa-c54f-49a9-81ba-779b0206a9fd, alterId: 0, cipher: auto,
     tls: true, network: ws, ws-opts: {path: /ylks, headers: {Host: nl.zhuk.us.kg}}}
-  - {name: 🇨🇳 广东省广州市 移动, server: s-g04.loveroise.com, port: 54030, client-fingerprint: chrome,
-    type: ss, cipher: chacha20-ietf-poly1305, password: 09833a6f-4d46-426e-87fe-7793a5489f84}
-  - {name: 🇺🇸 美国 内华达州克拉克县亨德森市Enzu股份有限公司, server: 23.88.39.22, port: 22301, client-fingerprint: chrome,
-    type: ss, cipher: 2022-blake3-aes-256-gcm, password: 
-      TczN1j63KbLamEeXYjNQj7d7I/UPhOZWpJ5qBoI/f10=:NMZX2WajjShpecWvxU5TIsPQGJEaC1rF9zCBsA3thJg=}
-  - {name: 🇺🇸 美国 V2CROSS.COM, server: 208.67.105.87, port: 42501, client-fingerprint: chrome,
-    type: ss, cipher: chacha20-ietf-poly1305, password: 
-      nq96KftrZAj3LuFQESqmn44Mo5oCuo2cipoEsae25mrmHG2oJ4VT37scBfVBpN5DWtUELZutVhhXs8Le5B8fZ9hLn9ytwvbf}
-  - {name: 🇺🇸 美国 惠普HP, server: 16.170.116.229, port: 22222, client-fingerprint: chrome,
-    type: trojan, password: telegram-id-directvpn, sni: trojan.burgerip.co.uk}
-  - {name: 🇹🇼 台湾省彰化县 中华电信, server: tw.ssrxray.click, port: 36918, client-fingerprint: chrome,
-    type: ss, cipher: aes-256-gcm, password: uoXctIQ4L89ykUZwn17Pn3CzNDNcZSRabCgN5hyNV7JQ}
-  - {name: 🇺🇸 美国 V2CROSS.COM 2, server: 199.232.214.133, port: 443, client-fingerprint: chrome,
-    type: vmess, uuid: e5852393-ca52-4c90-a237-d63cbbb57f21, alterId: 0, cipher: auto,
-    tls: true, network: ws, ws-opts: {path: /farcry?ed=2560, headers: {Host: loki.oracle}}}
-  - {name: 🇩🇪 德国 黑森州法兰克福AMazon数据中心, server: 3.123.54.238, port: 22222, client-fingerprint: chrome,
-    type: trojan, password: telegram-id-privatevpns, sni: trojan.burgerip.co.uk}
-  - {name: 🇯🇵 日本 东京Fastly节点, server: www.aetv.com, port: 80, client-fingerprint: chrome,
-    type: vmess, uuid: beb7d098-48ba-4be8-a47a-758bf3c470b8, alterId: 0, cipher: auto,
-    tls: false, network: ws, ws-opts: {path: /?ed=2048, headers: {Host: amd.al}}}
-  - {name: 🇺🇸 美国 弗吉尼亚州阿什本Amazon数据中心, server: 52.20.152.104, port: 443, client-fingerprint: chrome,
-    type: vmess, uuid: 60c0bbfa-c54f-49a9-81ba-779b0206a9fd, alterId: 0, cipher: auto,
-    tls: true, network: ws, ws-opts: {path: /ylks, headers: {Host: nl.zhuk.us.kg}}}
-  - {name: 🇳🇴 挪威 V2CROSS.COM, server: 146.59.55.50, port: 443, client-fingerprint: chrome,
-    type: vmess, uuid: 03fcc618-b93d-6796-6aed-8a38c975d581, alterId: 0, cipher: auto,
-    tls: true, network: ws, ws-opts: {path: /linkvws, headers: {Host: o.metuji.com}}}
-  - {name: 🇺🇸 美国 Fastly全球Anycast节点, server: gov.uk, port: 443, client-fingerprint: chrome,
-    type: vmess, uuid: 77848824-93b7-4b89-ffd0-e91afff406ce, alterId: 0, cipher: auto,
-    tls: true, network: ws, ws-opts: {path: /77848824, headers: {Host: zheshiscp.com}}}
-  - {name: 🇺🇸 美国 Amazon EC2服务器, server: 3.13.196.41, port: 443, client-fingerprint: chrome,
-    type: vmess, uuid: 60c0bbfa-c54f-49a9-81ba-779b0206a9fd, alterId: 0, cipher: auto,
-    tls: true, network: ws, ws-opts: {path: /ylks, headers: {Host: nl.zhuk.us.kg}}}
+  - {name: 🇨🇳 江苏省 移动, server: 36.150.215.222, port: 48544, client-fingerprint: chrome,
+    type: trojan, password: vzhXXZVw}
+  - {name: 🇬🇧 英国 伦敦Amazon数据中心, server: series-a1.samanehha.co, port: 443, client-fingerprint: chrome,
+    type: ss, cipher: chacha20-ietf-poly1305, password: W74XFALLLuw6m5IA}
+  - {name: 🇺🇸 美国 Amazon数据中心, server: 13.42.112.122, port: 443, client-fingerprint: chrome,
+    type: ss, cipher: chacha20-ietf-poly1305, password: W74XFALLLuw6m5IA}
   - {name: 🇩🇪 德国 黑森州法兰克福Amazon数据中心, server: 18.196.70.197, port: 443, client-fingerprint: chrome,
     type: vmess, uuid: 60c0bbfa-c54f-49a9-81ba-779b0206a9fd, alterId: 0, cipher: auto,
     tls: true, network: ws, ws-opts: {path: /ylks, headers: {Host: nl.zhuk.us.kg}}}
-  - {name: 🇺🇸 美国 Amazon EC2服务器 2, server: 3.69.0.8, port: 443, client-fingerprint: chrome,
+  - {name: 🇦🇺 澳大利亚 V2CROSS.COM, server: 129.154.46.115, port: 443, client-fingerprint: chrome,
     type: vmess, uuid: 60c0bbfa-c54f-49a9-81ba-779b0206a9fd, alterId: 0, cipher: auto,
     tls: true, network: ws, ws-opts: {path: /ylks, headers: {Host: nl.zhuk.us.kg}}}
-  - {name: 🇨🇳 广东省广州市 移动 2, server: 183.236.51.23, port: 51704, client-fingerprint: chrome,
-    type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 64, cipher: auto,
-    tls: false}
-  - {name: 🇺🇸 美国 俄亥俄州都柏林Amazon数据中心, server: 18.191.122.211, port: 443, client-fingerprint: chrome,
-    type: vmess, uuid: 60c0bbfa-c54f-49a9-81ba-779b0206a9fd, alterId: 0, cipher: auto,
-    tls: true, network: ws, ws-opts: {path: /ylks, headers: {Host: nl.zhuk.us.kg}}}
-  - {name: 🇺🇸 美国 Amazon EC2服务器 3, server: 3.68.62.122, port: 443, client-fingerprint: chrome,
-    type: vmess, uuid: 60c0bbfa-c54f-49a9-81ba-779b0206a9fd, alterId: 0, cipher: auto,
-    tls: true, network: ws, ws-opts: {path: /ylks, headers: {Host: nl.zhuk.us.kg}}}
-  - {name: 🇺🇸 美国 CloudFlare节点, server: 104.21.82.183, port: 8880, client-fingerprint: chrome,
-    type: vmess, uuid: 5a7021e0-26b4-45d6-b175-fe551601ca97, alterId: 0, cipher: auto,
-    tls: false, network: ws, ws-opts: {path: /, headers: {Host: server26.beheshtbaneh.com}}}
-  - {name: 🇮🇳 印度 孟买Amazon数据中心, server: 3.7.108.69, port: 443, client-fingerprint: chrome,
-    type: vmess, uuid: 60c0bbfa-c54f-49a9-81ba-779b0206a9fd, alterId: 0, cipher: auto,
-    tls: true, network: ws, ws-opts: {path: /ylks, headers: {Host: nl.zhuk.us.kg}}}
-  - {name: 🇨🇳 江苏省 移动, server: zx1.1010520.xyz, port: 18759, client-fingerprint: chrome,
+  - {name: 🇧🇬 保加利亚 V2CROSS.COM, server: 149.34.244.82, port: 443, client-fingerprint: chrome,
+    type: ss, cipher: aes-128-gcm, password: shadowsocks}
+  - {name: 🇺🇸 美国 CloudFlare节点, server: 172.67.164.232, port: 443, client-fingerprint: chrome,
+    type: vmess, uuid: 33f6d8b0-81f8-4fce-b3df-79dc8fd6d8c5, alterId: 0, cipher: auto,
+    tls: true, network: ws, ws-opts: {path: /rongseven?ed=2048, headers: {Host: 33.bycf.us.kg}}}
+  - {name: 🇺🇸 美国 Fastly全球Anycast节点, server: 151.101.2.168, port: 80, client-fingerprint: chrome,
+    type: vmess, uuid: beb7d098-48ba-4be8-a47a-758bf3c470b8, alterId: 0, cipher: auto,
+    tls: false, network: ws, ws-opts: {path: /?ed=2048, headers: {Host: amd.al}}}
+  - {name: 🇨🇳 江苏省 移动 2, server: zx1.1010520.xyz, port: 18119, client-fingerprint: chrome,
     type: ss, cipher: chacha20-ietf-poly1305, password: f5136746-de79-46d0-b3be-d15d9992fa07}
-  - {name: 🇺🇸 美国 弗吉尼亚州阿什本Amazon数据中心 2, server: 52.21.77.77, port: 22222, client-fingerprint: chrome,
-    type: trojan, password: telegram-id-directvpn, sni: trojan.burgerip.co.uk}
-  - {name: 🇺🇸 美国 Sprint网络, server: 63.176.126.186, port: 22222, client-fingerprint: chrome,
-    type: trojan, password: telegram-id-privatevpns, sni: trojan.burgerip.co.uk}
-  - {name: 🇩🇪 德国 黑森州法兰克福Amazon数据中心 2, server: 35.156.58.237, port: 443, client-fingerprint: chrome,
+  - {name: 🇨🇳 中国 阿里云, server: 8.222.161.29, port: 443, client-fingerprint: chrome,
+    type: vmess, uuid: 9b456c2a-f2c1-45e1-87a9-b7628b04bb24, alterId: 0, cipher: auto,
+    tls: true, network: ws, ws-opts: {path: /linkws, headers: {Host: beyonddsz.cfd}}}
+  - {name: 🇨🇿 捷克 V2CROSS.COM, server: 198.105.123.190, port: 46902, client-fingerprint: chrome,
+    type: ss, cipher: chacha20-ietf-poly1305, password: 
+      2UrSffeNABXGXXfNhoL6xBUnh1RzqMizrQ2s9QfC38P2YPuYPRTqW5zZg6jGisiNhkzM4SRjF6nzvFb18GPtESWoXWjhqyC8}
+  - {name: 🇨🇭 瑞士 Oracle Corporation, server: 141.148.220.141, port: 443, client-fingerprint: chrome,
     type: vmess, uuid: 60c0bbfa-c54f-49a9-81ba-779b0206a9fd, alterId: 0, cipher: auto,
     tls: true, network: ws, ws-opts: {path: /ylks, headers: {Host: nl.zhuk.us.kg}}}
-  - {name: 🇨🇭 瑞士 Oracle Corporation, server: 141.148.187.195, port: 443, client-fingerprint: chrome,
+  - {name: 🇫🇷 法国 巴黎Amazon数据中心, server: 35.181.77.67, port: 443, client-fingerprint: chrome,
     type: vmess, uuid: 60c0bbfa-c54f-49a9-81ba-779b0206a9fd, alterId: 0, cipher: auto,
     tls: true, network: ws, ws-opts: {path: /ylks, headers: {Host: nl.zhuk.us.kg}}}
-  - {name: 🇺🇸 美国 Amazon数据中心, server: 18.157.156.32, port: 22222, client-fingerprint: chrome,
-    type: trojan, password: telegram-id-privatevpns, sni: trojan.burgerip.co.uk}
-  - {name: 🇯🇵 日本 V2CROSS.COM, server: 43.204.208.173, port: 443, client-fingerprint: chrome,
-    type: vmess, uuid: 60c0bbfa-c54f-49a9-81ba-779b0206a9fd, alterId: 0, cipher: auto,
-    tls: true, network: ws, ws-opts: {path: /ylks, headers: {Host: nl.zhuk.us.kg}}}
-  - {name: 🇮🇪 爱尔兰 都柏林Amazon数据中心, server: 34.251.2.62, port: 443, client-fingerprint: chrome,
-    type: vmess, uuid: 60c0bbfa-c54f-49a9-81ba-779b0206a9fd, alterId: 0, cipher: auto,
-    tls: true, network: ws, ws-opts: {path: /ylks, headers: {Host: nl.zhuk.us.kg}}}
-  - {name: 🇨🇳 广东省湛江市 移动, server: 120.198.71.214, port: 34493, client-fingerprint: chrome,
+  - {name: 🇨🇳 广东省江门市 移动, server: 120.234.102.229, port: 52908, client-fingerprint: chrome,
     type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 64, cipher: auto,
     tls: false}
-  - {name: 🇨🇳 广东省广州市 移动 3, server: 183.236.51.23, port: 54104, client-fingerprint: chrome,
-    type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 64, cipher: auto,
-    tls: false}
-  - {name: 🇺🇸 美国 亚利桑那州凤凰城Oracle云计算数据中心, server: 129.146.168.102, port: 443, client-fingerprint: chrome,
-    type: vmess, uuid: 60c0bbfa-c54f-49a9-81ba-779b0206a9fd, alterId: 0, cipher: auto,
-    tls: true, network: ws, ws-opts: {path: /ylks, headers: {Host: nl.zhuk.us.kg}}}
-  - {name: 🇮🇳 印度 V2CROSS.COM, server: 202.78.162.5, port: 443, client-fingerprint: chrome,
-    type: vmess, uuid: 2ff97c6d-8557-42a4-b43f-19c77c5959ea, alterId: 0, cipher: auto,
-    tls: true, network: ws, ws-opts: {path: /, headers: {Host: irsoft.sytes.net}}}
-  - {name: 🇬🇧 英国 社会保险安全部, server: 51.20.99.157, port: 443, client-fingerprint: chrome,
-    type: vmess, uuid: 60c0bbfa-c54f-49a9-81ba-779b0206a9fd, alterId: 0, cipher: auto,
-    tls: true, network: ws, ws-opts: {path: /ylks, headers: {Host: nl.zhuk.us.kg}}}
-  - {name: 亚太地区 V2CROSS.COM, server: 103.149.183.178, port: 54675, client-fingerprint: chrome,
-    type: vmess, uuid: 3a907956-f668-4e6b-ea03-0949f0c9c0a5, alterId: 0, cipher: auto,
-    tls: false}
-  - {name: 🇬🇧 英国 社会保险安全部 2, server: series-a2-mec.varzesh360.co, port: 443, client-fingerprint: chrome,
+  - {name: 🇺🇸 美国, server: 40.172.42.57, port: 443, client-fingerprint: chrome, type: ss,
+    cipher: chacha20-ietf-poly1305, password: u17T3BvpYaaiuW2c}
+  - {name: 🇺🇸 美国 内华达州克拉克县亨德森市Enzu股份有限公司, server: 23.88.39.22, port: 22301, client-fingerprint: chrome,
+    type: ss, cipher: 2022-blake3-aes-256-gcm, password: 
+      TczN1j63KbLamEeXYjNQj7d7I/UPhOZWpJ5qBoI/f10=:NMZX2WajjShpecWvxU5TIsPQGJEaC1rF9zCBsA3thJg=}
+  - {name: 🇯🇵 日本 东京都Amazon数据中心, server: fleet-weevil.boa152.lol, port: 443, client-fingerprint: chrome,
+    type: trojan, password: 3723507166611775488, sni: fleet-weevil.boa152.lol, skip-cert-verify: false}
+  - {name: 🇬🇧 英国 社会保险安全部, server: series-a2-mec.varzesh360.co, port: 443, client-fingerprint: chrome,
     type: ss, cipher: chacha20-ietf-poly1305, password: u17T3BvpYaaiuW2c}
+  - {name: 🇺🇸 美国 弗吉尼亚州阿什本Amazon数据中心, server: 34.225.195.136, port: 443, client-fingerprint: chrome,
+    type: vmess, uuid: 60c0bbfa-c54f-49a9-81ba-779b0206a9fd, alterId: 0, cipher: auto,
+    tls: true, network: ws, ws-opts: {path: /ylks, headers: {Host: nl.zhuk.us.kg}}}
+  - {name: 🇸🇪 瑞典 斯德哥尔摩Amazon数据中心, server: 13.48.80.188, port: 22222, client-fingerprint: chrome,
+    type: trojan, password: telegram-id-privatevpns, sni: trojan.burgerip.co.uk}
+  - {name: 🇮🇪 爱尔兰 都柏林Amazon数据中心 2, server: 34.254.140.84, port: 22222, client-fingerprint: chrome,
+    type: trojan, password: telegram-id-directvpn, sni: trojan.burgerip.co.uk}
+  - {name: 🇬🇧 英国 社会保险安全部 2, server: 51.20.161.26, port: 443, client-fingerprint: chrome,
+    type: vmess, uuid: 60c0bbfa-c54f-49a9-81ba-779b0206a9fd, alterId: 0, cipher: auto,
+    tls: true, network: ws, ws-opts: {path: /ylks, headers: {Host: nl.zhuk.us.kg}}}
+  - {name: 🇰🇷 韩国 首尔Oracle云计算数据中心, server: 132.145.94.80, port: 443, client-fingerprint: chrome,
+    type: trojan, password: e8105dfd24414268b6c7652c63731097, sni: yournextcareerstep.online}
+  - {name: 🇺🇸 美国 弗吉尼亚州阿什本Amazon数据中心 2, server: 54.89.91.89, port: 443, client-fingerprint: chrome,
+    type: vmess, uuid: 60c0bbfa-c54f-49a9-81ba-779b0206a9fd, alterId: 0, cipher: auto,
+    tls: true, network: ws, ws-opts: {path: /ylks, headers: {Host: nl.zhuk.us.kg}}}
+  - {name: 🇩🇪 德国 黑森州法兰克福Amazon数据中心 2, server: 18.194.63.128, port: 22222, client-fingerprint: chrome,
+    type: trojan, password: telegram-id-privatevpns, sni: trojan.burgerip.co.uk}
+  - {name: 巴林 Amazon数据中心, server: 15.185.57.121, port: 443, client-fingerprint: chrome,
+    type: ss, cipher: chacha20-ietf-poly1305, password: Bog0ELmMM9DSxDdQ}
+  - {name: 🇺🇸 美国 德克萨斯州达拉斯ColoCrossing数据中心, server: 107.174.133.203, port: 9875, client-fingerprint: chrome,
+    type: ss, cipher: aes-256-gcm, password: BoiX102924}
+  - {name: 🇮🇷 伊朗 V2CROSS.COM, server: 92.242.220.22, port: 37885, client-fingerprint: chrome,
+    type: vmess, uuid: 8dee19ab-50ce-4d06-be42-5e53c8989ccc, alterId: 0, cipher: auto,
+    tls: false}
+  - {name: 🇺🇸 美国 Amazon数据中心 2, server: 18.157.156.32, port: 22222, client-fingerprint: chrome,
+    type: trojan, password: telegram-id-privatevpns, sni: trojan.burgerip.co.uk}
+  - {name: 🇪🇸 西班牙 V2CROSS.COM, server: 149.7.16.188, port: 443, client-fingerprint: chrome,
+    type: vmess, uuid: 03fcc618-b93d-6796-6aed-8a38c975d581, alterId: 0, cipher: auto,
+    tls: true, network: ws, ws-opts: {path: /linkvws}}
+  - {name: 🇬🇧 英国 社会保险安全部 3, server: 51.21.48.77, port: 443, client-fingerprint: chrome,
+    type: vmess, uuid: 60c0bbfa-c54f-49a9-81ba-779b0206a9fd, alterId: 0, cipher: auto,
+    tls: true, network: ws, ws-opts: {path: /ylks, headers: {Host: nl.zhuk.us.kg}}}
 proxy-groups:
   - name: PROXY
     type: select
@@ -137,125 +125,119 @@ proxy-groups:
     lazy: true
     tolerance: 100
     proxies:
-      - 🇺🇸 美国 弗吉尼亚州阿什本Amazon数据中心 2
-      - 🇺🇸 美国 Amazon EC2服务器 3
-      - 🇮🇳 印度 孟买Amazon数据中心
-      - 🇺🇸 美国 Amazon数据中心
-      - 🇺🇸 美国 亚利桑那州凤凰城Oracle云计算数据中心
-      - 🇬🇧 英国 社会保险安全部
-      - 🇺🇸 美国 内华达州克拉克县亨德森市Enzu股份有限公司
-      - 🇨🇭 瑞士 Oracle Corporation
-      - 🇯🇵 日本 V2CROSS.COM
-      - 🇨🇳 江苏省 移动
-      - 🇬🇧 英国 伦敦Amazon数据中心
-      - 🇺🇸 美国 俄勒冈州波特兰Amazon数据中心
-      - 🇯🇵 日本 东京Fastly节点
-      - 🇺🇸 美国 Fastly全球Anycast节点
-      - 🇨🇳 广东省湛江市 移动
-      - 🇨🇳 广东省广州市 移动 3
-      - 🇩🇪 德国 黑森州法兰克福AMazon数据中心
-      - 🇳🇴 挪威 V2CROSS.COM
-      - 🇺🇸 美国 惠普HP
-      - 🇨🇳 广东省广州市 移动 2
-      - 🇺🇸 美国 弗吉尼亚州阿什本Amazon数据中心
-      - 🇮🇪 爱尔兰 都柏林Amazon数据中心
-      - 🇸🇪 瑞典 Oracle Corporation
-      - 🇩🇪 德国 黑森州法兰克福Amazon数据中心 2
-      - 🇺🇸 美国 Sprint网络
-      - 🇺🇸 美国 V2CROSS.COM 2
-      - 🇮🇳 印度 V2CROSS.COM
-      - 🇺🇸 美国 CloudFlare节点
+      - 🇸🇪 瑞典 斯德哥尔摩Amazon数据中心
       - 🇺🇸 美国 Amazon EC2服务器
-      - 🇺🇸 美国 V2CROSS.COM
-      - 🇹🇼 台湾省彰化县 中华电信
-      - 🇺🇸 美国 俄亥俄州都柏林Amazon数据中心
-      - 亚太地区 V2CROSS.COM
-      - 🇺🇸 美国 Amazon EC2服务器 2
-      - 🇨🇳 广东省广州市 移动
-      - 🇬🇧 英国 社会保险安全部 2
       - 🇩🇪 德国 黑森州法兰克福Amazon数据中心
+      - 🇺🇸 美国 弗吉尼亚州阿什本Amazon数据中心 2
+      - 🇦🇺 澳大利亚 V2CROSS.COM
+      - 🇺🇸 美国 CloudFlare节点
+      - 巴林 Amazon数据中心
+      - 🇬🇧 英国 伦敦Amazon数据中心
+      - 🇬🇧 英国 社会保险安全部
+      - 🇨🇳 江苏省 移动
+      - 🇺🇸 美国 Amazon数据中心 2
+      - 🇺🇸 美国 Amazon数据中心
+      - 🇨🇳 中国 阿里云
+      - 🇮🇪 爱尔兰 都柏林Amazon数据中心 2
+      - 🇩🇪 德国 黑森州法兰克福Amazon数据中心 2
+      - 🇨🇭 瑞士 Oracle Corporation
+      - 🇺🇸 美国 德克萨斯州达拉斯ColoCrossing数据中心
+      - 🇨🇳 广东省江门市 移动
+      - 🇰🇷 韩国 首尔Oracle云计算数据中心
+      - 🇪🇸 西班牙 V2CROSS.COM
+      - 🇧🇬 保加利亚 V2CROSS.COM
+      - 🇯🇵 日本 东京都Amazon数据中心
+      - 🇺🇸 美国
+      - 亚太地区 V2CROSS.COM
+      - 🇮🇪 爱尔兰 都柏林Amazon数据中心
+      - 🇨🇿 捷克 V2CROSS.COM
+      - 🇨🇳 江苏省 移动 2
+      - 🇺🇸 美国 弗吉尼亚州阿什本Amazon数据中心
+      - 🇫🇷 法国 巴黎Amazon数据中心
+      - 🇺🇸 美国 Fastly全球Anycast节点
+      - 🇬🇧 英国 社会保险安全部 3
+      - 🇮🇷 伊朗 V2CROSS.COM
+      - 🇺🇸 美国 V2CROSS.COM
+      - 🇬🇧 英国 社会保险安全部 2
+      - 🇺🇸 美国 内华达州克拉克县亨德森市Enzu股份有限公司
   - name: LOAD-BALANCE
     type: load-balance
     url: http://www.gstatic.com/generate_204
     interval: 600
     proxies:
-      - 🇺🇸 美国 弗吉尼亚州阿什本Amazon数据中心 2
-      - 🇺🇸 美国 Amazon EC2服务器 3
-      - 🇮🇳 印度 孟买Amazon数据中心
-      - 🇺🇸 美国 Amazon数据中心
-      - 🇺🇸 美国 亚利桑那州凤凰城Oracle云计算数据中心
-      - 🇬🇧 英国 社会保险安全部
-      - 🇺🇸 美国 内华达州克拉克县亨德森市Enzu股份有限公司
-      - 🇨🇭 瑞士 Oracle Corporation
-      - 🇯🇵 日本 V2CROSS.COM
-      - 🇨🇳 江苏省 移动
-      - 🇬🇧 英国 伦敦Amazon数据中心
-      - 🇺🇸 美国 俄勒冈州波特兰Amazon数据中心
-      - 🇯🇵 日本 东京Fastly节点
-      - 🇺🇸 美国 Fastly全球Anycast节点
-      - 🇨🇳 广东省湛江市 移动
-      - 🇨🇳 广东省广州市 移动 3
-      - 🇩🇪 德国 黑森州法兰克福AMazon数据中心
-      - 🇳🇴 挪威 V2CROSS.COM
-      - 🇺🇸 美国 惠普HP
-      - 🇨🇳 广东省广州市 移动 2
-      - 🇺🇸 美国 弗吉尼亚州阿什本Amazon数据中心
-      - 🇮🇪 爱尔兰 都柏林Amazon数据中心
-      - 🇸🇪 瑞典 Oracle Corporation
-      - 🇩🇪 德国 黑森州法兰克福Amazon数据中心 2
-      - 🇺🇸 美国 Sprint网络
-      - 🇺🇸 美国 V2CROSS.COM 2
-      - 🇮🇳 印度 V2CROSS.COM
-      - 🇺🇸 美国 CloudFlare节点
+      - 🇸🇪 瑞典 斯德哥尔摩Amazon数据中心
       - 🇺🇸 美国 Amazon EC2服务器
-      - 🇺🇸 美国 V2CROSS.COM
-      - 🇹🇼 台湾省彰化县 中华电信
-      - 🇺🇸 美国 俄亥俄州都柏林Amazon数据中心
-      - 亚太地区 V2CROSS.COM
-      - 🇺🇸 美国 Amazon EC2服务器 2
-      - 🇨🇳 广东省广州市 移动
-      - 🇬🇧 英国 社会保险安全部 2
       - 🇩🇪 德国 黑森州法兰克福Amazon数据中心
+      - 🇺🇸 美国 弗吉尼亚州阿什本Amazon数据中心 2
+      - 🇦🇺 澳大利亚 V2CROSS.COM
+      - 🇺🇸 美国 CloudFlare节点
+      - 巴林 Amazon数据中心
+      - 🇬🇧 英国 伦敦Amazon数据中心
+      - 🇬🇧 英国 社会保险安全部
+      - 🇨🇳 江苏省 移动
+      - 🇺🇸 美国 Amazon数据中心 2
+      - 🇺🇸 美国 Amazon数据中心
+      - 🇨🇳 中国 阿里云
+      - 🇮🇪 爱尔兰 都柏林Amazon数据中心 2
+      - 🇩🇪 德国 黑森州法兰克福Amazon数据中心 2
+      - 🇨🇭 瑞士 Oracle Corporation
+      - 🇺🇸 美国 德克萨斯州达拉斯ColoCrossing数据中心
+      - 🇨🇳 广东省江门市 移动
+      - 🇰🇷 韩国 首尔Oracle云计算数据中心
+      - 🇪🇸 西班牙 V2CROSS.COM
+      - 🇧🇬 保加利亚 V2CROSS.COM
+      - 🇯🇵 日本 东京都Amazon数据中心
+      - 🇺🇸 美国
+      - 亚太地区 V2CROSS.COM
+      - 🇮🇪 爱尔兰 都柏林Amazon数据中心
+      - 🇨🇿 捷克 V2CROSS.COM
+      - 🇨🇳 江苏省 移动 2
+      - 🇺🇸 美国 弗吉尼亚州阿什本Amazon数据中心
+      - 🇫🇷 法国 巴黎Amazon数据中心
+      - 🇺🇸 美国 Fastly全球Anycast节点
+      - 🇬🇧 英国 社会保险安全部 3
+      - 🇮🇷 伊朗 V2CROSS.COM
+      - 🇺🇸 美国 V2CROSS.COM
+      - 🇬🇧 英国 社会保险安全部 2
+      - 🇺🇸 美国 内华达州克拉克县亨德森市Enzu股份有限公司
   - name: SELECT
     type: select
     proxies:
-      - 🇺🇸 美国 弗吉尼亚州阿什本Amazon数据中心 2
-      - 🇺🇸 美国 Amazon EC2服务器 3
-      - 🇮🇳 印度 孟买Amazon数据中心
-      - 🇺🇸 美国 Amazon数据中心
-      - 🇺🇸 美国 亚利桑那州凤凰城Oracle云计算数据中心
-      - 🇬🇧 英国 社会保险安全部
-      - 🇺🇸 美国 内华达州克拉克县亨德森市Enzu股份有限公司
-      - 🇨🇭 瑞士 Oracle Corporation
-      - 🇯🇵 日本 V2CROSS.COM
-      - 🇨🇳 江苏省 移动
-      - 🇬🇧 英国 伦敦Amazon数据中心
-      - 🇺🇸 美国 俄勒冈州波特兰Amazon数据中心
-      - 🇯🇵 日本 东京Fastly节点
-      - 🇺🇸 美国 Fastly全球Anycast节点
-      - 🇨🇳 广东省湛江市 移动
-      - 🇨🇳 广东省广州市 移动 3
-      - 🇩🇪 德国 黑森州法兰克福AMazon数据中心
-      - 🇳🇴 挪威 V2CROSS.COM
-      - 🇺🇸 美国 惠普HP
-      - 🇨🇳 广东省广州市 移动 2
-      - 🇺🇸 美国 弗吉尼亚州阿什本Amazon数据中心
-      - 🇮🇪 爱尔兰 都柏林Amazon数据中心
-      - 🇸🇪 瑞典 Oracle Corporation
-      - 🇩🇪 德国 黑森州法兰克福Amazon数据中心 2
-      - 🇺🇸 美国 Sprint网络
-      - 🇺🇸 美国 V2CROSS.COM 2
-      - 🇮🇳 印度 V2CROSS.COM
-      - 🇺🇸 美国 CloudFlare节点
+      - 🇸🇪 瑞典 斯德哥尔摩Amazon数据中心
       - 🇺🇸 美国 Amazon EC2服务器
-      - 🇺🇸 美国 V2CROSS.COM
-      - 🇹🇼 台湾省彰化县 中华电信
-      - 🇺🇸 美国 俄亥俄州都柏林Amazon数据中心
-      - 亚太地区 V2CROSS.COM
-      - 🇺🇸 美国 Amazon EC2服务器 2
-      - 🇨🇳 广东省广州市 移动
-      - 🇬🇧 英国 社会保险安全部 2
       - 🇩🇪 德国 黑森州法兰克福Amazon数据中心
+      - 🇺🇸 美国 弗吉尼亚州阿什本Amazon数据中心 2
+      - 🇦🇺 澳大利亚 V2CROSS.COM
+      - 🇺🇸 美国 CloudFlare节点
+      - 巴林 Amazon数据中心
+      - 🇬🇧 英国 伦敦Amazon数据中心
+      - 🇬🇧 英国 社会保险安全部
+      - 🇨🇳 江苏省 移动
+      - 🇺🇸 美国 Amazon数据中心 2
+      - 🇺🇸 美国 Amazon数据中心
+      - 🇨🇳 中国 阿里云
+      - 🇮🇪 爱尔兰 都柏林Amazon数据中心 2
+      - 🇩🇪 德国 黑森州法兰克福Amazon数据中心 2
+      - 🇨🇭 瑞士 Oracle Corporation
+      - 🇺🇸 美国 德克萨斯州达拉斯ColoCrossing数据中心
+      - 🇨🇳 广东省江门市 移动
+      - 🇰🇷 韩国 首尔Oracle云计算数据中心
+      - 🇪🇸 西班牙 V2CROSS.COM
+      - 🇧🇬 保加利亚 V2CROSS.COM
+      - 🇯🇵 日本 东京都Amazon数据中心
+      - 🇺🇸 美国
+      - 亚太地区 V2CROSS.COM
+      - 🇮🇪 爱尔兰 都柏林Amazon数据中心
+      - 🇨🇿 捷克 V2CROSS.COM
+      - 🇨🇳 江苏省 移动 2
+      - 🇺🇸 美国 弗吉尼亚州阿什本Amazon数据中心
+      - 🇫🇷 法国 巴黎Amazon数据中心
+      - 🇺🇸 美国 Fastly全球Anycast节点
+      - 🇬🇧 英国 社会保险安全部 3
+      - 🇮🇷 伊朗 V2CROSS.COM
+      - 🇺🇸 美国 V2CROSS.COM
+      - 🇬🇧 英国 社会保险安全部 2
+      - 🇺🇸 美国 内华达州克拉克县亨德森市Enzu股份有限公司
 rules:
   - RULE-SET,applications,DIRECT
   - DOMAIN,clash.razord.top,DIRECT
