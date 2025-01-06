@@ -1,4 +1,4 @@
-# Update: 2025-01-06 18:10:09
+# Update: 2025-01-06 20:07:07
 # Created by caoqiang
 mixed-port: 7890
 allow-lan: true
@@ -10,49 +10,51 @@ log-level: info
 external-controller: 0.0.0.0:9090
 global-client-fingerprint: chrome
 proxies:
-  - {name: 🇫🇷 法国 巴黎Amazon数据中心, server: 52.47.81.213, port: 22222, client-fingerprint: chrome,
-    type: trojan, password: telegram-id-directvpn, sni: trojan.burgerip.co.uk}
-  - {name: 🇺🇸 美国 Amazon EC2服务器, server: 3.79.125.82, port: 22222, client-fingerprint: chrome,
+  - {name: 🇫🇷 法国 法国计算机科学大学, server: irvideo.cfd, port: 443, client-fingerprint: chrome,
+    type: vmess, uuid: e537f2f5-2a0c-4f59-92c9-832ca6433bf3, alterId: 0, cipher: auto,
+    tls: true, network: ws, ws-opts: {path: /linkws, headers: {Host: irvideo.cfd}}}
+  - {name: 🇺🇸 美国 华盛顿Cogent通信公司, server: 38.174.190.72, port: 38007, client-fingerprint: chrome,
+    type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 64, cipher: auto,
+    tls: true, network: ws, ws-opts: {path: /path/100318230503}}
+  - {name: 🇺🇸 美国 麻省理工学院, server: 18.135.78.141, port: 22222, client-fingerprint: chrome,
     type: trojan, password: telegram-id-privatevpns, sni: trojan.burgerip.co.uk}
-  - {name: 🇺🇸 美国 Amazon数据中心, server: series-a2.samanehha.co, port: 443, client-fingerprint: chrome,
-    type: ss, cipher: chacha20-ietf-poly1305, password: W74XFALLLuw6m5IA}
-  - {name: 🇵🇱 波兰 V2CROSS.COM, server: holy-seahorse.boa152.lol, port: 443, client-fingerprint: chrome,
-    type: trojan, password: 3723507166611775488, sni: holy-seahorse.boa152.lol, skip-cert-verify: true}
-  - {name: 🇷🇴 罗马尼亚 V2CROSS.COM, server: 77.83.246.74, port: 443, client-fingerprint: chrome,
-    type: ss, cipher: chacha20-ietf-poly1305, password: Jb8HXFuvnTsZLHzBd2i9Xz}
+  - {name: 🇺🇸 美国 华盛顿Cogent通信公司 2, server: 38.110.1.46, port: 5000, client-fingerprint: chrome,
+    type: ss, cipher: aes-256-gcm, password: Y6R9pAtvxxzmGC}
+  - {name: 🇸🇬 澳大利亚 新南威尔士州悉尼Linode数据中心, server: 172.105.172.209, port: 443, client-fingerprint: chrome,
+    type: vmess, uuid: 03fcc618-b93d-6796-6aed-8a38c975d581, alterId: 1, cipher: auto,
+    tls: true, network: ws, ws-opts: {path: /, headers: {Host: 172.105.172.209}}}
+  - {name: 🇺🇸 美国 V2CROSS.COM, server: 165.22.74.230, port: 443, client-fingerprint: chrome,
+    type: trojan, password: 4732adfa16c6450bbef87264e41332db, sni: nextstepcareer.online}
+  - {name: 🇷🇺 俄罗斯 V2CROSS.COM, server: 89.185.85.227, port: 19262, client-fingerprint: chrome,
+    type: ss, cipher: chacha20-ietf-poly1305, password: 0goatjlGmKeKt9En6vfsJF}
+  - {name: 🇬🇧 英国 伦敦Amazon数据中心, server: 3.11.78.236, port: 22222, client-fingerprint: chrome,
+    type: trojan, password: telegram-id-directvpn, sni: trojan.burgerip.co.uk}
+  - {name: 🇫🇷 法国 法国计算机科学大学 2, server: 163.5.159.231, port: 443, client-fingerprint: chrome,
+    type: vmess, uuid: e537f2f5-2a0c-4f59-92c9-832ca6433bf3, alterId: 0, cipher: auto,
+    tls: true, network: ws, ws-opts: {path: /linkws, headers: {Host: irvideo.cfd}}}
+  - {name: 🇺🇸 美国 Amazon EC2服务器, server: 3.97.101.244, port: 22222, client-fingerprint: chrome,
+    type: trojan, password: telegram-id-directvpn, sni: trojan.burgerip.co.uk}
+  - {name: 🇺🇸 美国 内华达州克拉克县亨德森市Enzu股份有限公司, server: 23.88.37.31, port: 443, client-fingerprint: chrome,
+    type: ss, cipher: chacha20-ietf-poly1305, password: LuxyNetBot}
+  - {name: 🇬🇧 英国 社会保险安全部, server: 51.44.38.92, port: 22222, client-fingerprint: chrome,
+    type: trojan, password: telegram-id-privatevpns, sni: trojan.burgerip.co.uk}
+  - {name: 🇷🇺 俄罗斯 V2CROSS.COM 2, server: 77.105.147.212, port: 55098, client-fingerprint: chrome,
+    type: ss, cipher: chacha20-ietf-poly1305, password: NChVdloynewtqS0847jui6PQejHLO3gUuw1tnUmYVPI=}
+  - {name: 🇺🇸 美国 Amazon EC2服务器 2, server: 3.79.125.82, port: 22222, client-fingerprint: chrome,
+    type: trojan, password: telegram-id-privatevpns, sni: trojan.burgerip.co.uk}
   - {name: 🇺🇸 美国 加利福尼亚州洛杉矶PetaExpress, server: 107.148.207.249, port: 48712, client-fingerprint: chrome,
     type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 64, cipher: auto,
     tls: false}
-  - {name: 🇬🇧 英国 伦敦Amazon数据中心, server: 3.10.191.122, port: 22222, client-fingerprint: chrome,
+  - {name: 🇫🇷 法国 巴黎Amazon数据中心, server: 52.47.81.213, port: 22222, client-fingerprint: chrome,
+    type: trojan, password: telegram-id-directvpn, sni: trojan.burgerip.co.uk}
+  - {name: 🇺🇸 美国 Amazon数据中心, server: 13.37.123.220, port: 22222, client-fingerprint: chrome,
     type: trojan, password: telegram-id-privatevpns, sni: trojan.burgerip.co.uk}
-  - {name: 🇮🇷 伊朗 V2CROSS.COM, server: 5.75.197.221, port: 8080, client-fingerprint: chrome,
-    type: vmess, uuid: b44ceabe-997c-4988-932d-8efa6a530fc5, alterId: 0, cipher: auto,
-    tls: false}
-  - {name: 🇷🇺 俄罗斯 V2CROSS.COM, server: 185.242.86.156, port: 54170, client-fingerprint: chrome,
-    type: ss, cipher: chacha20-ietf-poly1305, password: 36ZCHeabUSfKjfQEvJ4HDV}
-  - {name: 🇺🇸 美国 内华达州克拉克县亨德森市Enzu股份有限公司, server: 23.88.37.31, port: 443, client-fingerprint: chrome,
-    type: ss, cipher: chacha20-ietf-poly1305, password: LuxyNetBot}
-  - {name: 🇺🇸 美国 V2CROSS.COM, server: nextstepcareer.online, port: 443, client-fingerprint: chrome,
-    type: trojan, password: 4732adfa16c6450bbef87264e41332db, sni: nextstepcareer.online,
-    skip-cert-verify: true}
-  - {name: 🇬🇧 英国 伦敦Amazon数据中心 2, server: 3.9.9.86, port: 443, client-fingerprint: chrome,
+  - {name: 🇺🇸 美国 惠普HP, server: 16.171.89.89, port: 22222, client-fingerprint: chrome,
+    type: trojan, password: telegram-id-privatevpns, sni: trojan.burgerip.co.uk}
+  - {name: 🇺🇸 美国 Amazon数据中心 2, server: 13.43.99.113, port: 443, client-fingerprint: chrome,
     type: ss, cipher: chacha20-ietf-poly1305, password: W74XFALLLuw6m5IA}
-  - {name: 🇬🇧 英国 Microsoft公司, server: 51.13.182.236, port: 6870, client-fingerprint: chrome,
-    type: ss, cipher: chacha20-ietf-poly1305, password: M7x1mGNOwhPiRB9jSxZJNy}
-  - {name: 🇮🇳 印度 V2CROSS.COM, server: 202.78.162.5, port: 443, client-fingerprint: chrome,
-    type: vmess, uuid: 118287d2-e968-42e1-80d0-12fa2f5d38d6, alterId: 0, cipher: auto,
-    tls: true, network: ws, ws-opts: {path: /, headers: {Host: sahand.serveminecraft.net}}}
-  - {name: 🇺🇸 美国 Amazon数据中心 2, server: series-a2.varzesh360.co, port: 443, client-fingerprint: chrome,
-    type: ss, cipher: chacha20-ietf-poly1305, password: mps3FwmDjLrWaOVg}
-  - {name: 🇺🇸 美国 CloudFlare节点, server: cf-vod.nimo.tv, port: 80, client-fingerprint: chrome,
-    type: vmess, uuid: 3a18edb8-80c1-4cba-b912-4f10513da259, alterId: 0, cipher: auto,
-    tls: false, network: ws, ws-opts: {path: /vmessws, headers: {Host: ovh.reonolimits.my.id}}}
-  - {name: 🇺🇸 美国 Xerox, server: 13.51.8.163, port: 22222, client-fingerprint: chrome,
-    type: trojan, password: telegram-id-privatevpns, sni: trojan.burgerip.co.uk}
-  - {name: 🇺🇸 美国 惠普公司, server: 16.16.9.49, port: 22222, client-fingerprint: chrome,
-    type: trojan, password: telegram-id-privatevpns, sni: trojan.burgerip.co.uk}
-  - {name: 🇮🇪 爱尔兰 都柏林Amazon数据中心, server: 54.155.31.15, port: 22222, client-fingerprint: chrome,
-    type: trojan, password: telegram-id-privatevpns, sni: trojan.burgerip.co.uk}
+  - {name: 🇰🇷 韩国 首尔Oracle云计算数据中心, server: 132.145.94.80, port: 443, client-fingerprint: chrome,
+    type: trojan, password: e8105dfd24414268b6c7652c63731097, sni: yournextcareerstep.online}
 proxy-groups:
   - name: PROXY
     type: select
@@ -79,71 +81,74 @@ proxy-groups:
     lazy: true
     tolerance: 100
     proxies:
-      - 🇺🇸 美国 惠普公司
-      - 🇮🇷 伊朗 V2CROSS.COM
-      - 🇵🇱 波兰 V2CROSS.COM
-      - 🇮🇪 爱尔兰 都柏林Amazon数据中心
-      - 🇬🇧 英国 Microsoft公司
-      - 🇺🇸 美国 V2CROSS.COM
-      - 🇺🇸 美国 Amazon数据中心 2
-      - 🇺🇸 美国 加利福尼亚州洛杉矶PetaExpress
-      - 🇺🇸 美国 内华达州克拉克县亨德森市Enzu股份有限公司
       - 🇺🇸 美国 Amazon EC2服务器
-      - 🇺🇸 美国 CloudFlare节点
+      - 🇺🇸 美国 麻省理工学院
       - 🇫🇷 法国 巴黎Amazon数据中心
-      - 🇬🇧 英国 伦敦Amazon数据中心
-      - 🇬🇧 英国 伦敦Amazon数据中心 2
-      - 🇷🇴 罗马尼亚 V2CROSS.COM
-      - 🇷🇺 俄罗斯 V2CROSS.COM
-      - 🇺🇸 美国 Xerox
+      - 🇷🇺 俄罗斯 V2CROSS.COM 2
+      - 🇺🇸 美国 华盛顿Cogent通信公司
+      - 🇺🇸 美国 惠普HP
+      - 🇺🇸 美国 Amazon数据中心 2
       - 🇺🇸 美国 Amazon数据中心
-      - 🇮🇳 印度 V2CROSS.COM
+      - 🇺🇸 美国 V2CROSS.COM
+      - 🇬🇧 英国 社会保险安全部
+      - 🇫🇷 法国 法国计算机科学大学
+      - 🇺🇸 美国 加利福尼亚州洛杉矶PetaExpress
+      - 🇷🇺 俄罗斯 V2CROSS.COM
+      - 🇺🇸 美国 Amazon EC2服务器 2
+      - 🇺🇸 美国 华盛顿Cogent通信公司 2
+      - 🇫🇷 法国 法国计算机科学大学 2
+      - 🇸🇬 澳大利亚 新南威尔士州悉尼Linode数据中心
+      - 🇰🇷 韩国 首尔Oracle云计算数据中心
+      - 🇺🇸 美国 内华达州克拉克县亨德森市Enzu股份有限公司
+      - 🇬🇧 英国 伦敦Amazon数据中心
   - name: LOAD-BALANCE
     type: load-balance
     url: http://www.gstatic.com/generate_204
     interval: 600
     proxies:
-      - 🇺🇸 美国 惠普公司
-      - 🇮🇷 伊朗 V2CROSS.COM
-      - 🇵🇱 波兰 V2CROSS.COM
-      - 🇮🇪 爱尔兰 都柏林Amazon数据中心
-      - 🇬🇧 英国 Microsoft公司
-      - 🇺🇸 美国 V2CROSS.COM
-      - 🇺🇸 美国 Amazon数据中心 2
-      - 🇺🇸 美国 加利福尼亚州洛杉矶PetaExpress
-      - 🇺🇸 美国 内华达州克拉克县亨德森市Enzu股份有限公司
       - 🇺🇸 美国 Amazon EC2服务器
-      - 🇺🇸 美国 CloudFlare节点
+      - 🇺🇸 美国 麻省理工学院
       - 🇫🇷 法国 巴黎Amazon数据中心
-      - 🇬🇧 英国 伦敦Amazon数据中心
-      - 🇬🇧 英国 伦敦Amazon数据中心 2
-      - 🇷🇴 罗马尼亚 V2CROSS.COM
-      - 🇷🇺 俄罗斯 V2CROSS.COM
-      - 🇺🇸 美国 Xerox
+      - 🇷🇺 俄罗斯 V2CROSS.COM 2
+      - 🇺🇸 美国 华盛顿Cogent通信公司
+      - 🇺🇸 美国 惠普HP
+      - 🇺🇸 美国 Amazon数据中心 2
       - 🇺🇸 美国 Amazon数据中心
-      - 🇮🇳 印度 V2CROSS.COM
+      - 🇺🇸 美国 V2CROSS.COM
+      - 🇬🇧 英国 社会保险安全部
+      - 🇫🇷 法国 法国计算机科学大学
+      - 🇺🇸 美国 加利福尼亚州洛杉矶PetaExpress
+      - 🇷🇺 俄罗斯 V2CROSS.COM
+      - 🇺🇸 美国 Amazon EC2服务器 2
+      - 🇺🇸 美国 华盛顿Cogent通信公司 2
+      - 🇫🇷 法国 法国计算机科学大学 2
+      - 🇸🇬 澳大利亚 新南威尔士州悉尼Linode数据中心
+      - 🇰🇷 韩国 首尔Oracle云计算数据中心
+      - 🇺🇸 美国 内华达州克拉克县亨德森市Enzu股份有限公司
+      - 🇬🇧 英国 伦敦Amazon数据中心
   - name: SELECT
     type: select
     proxies:
-      - 🇺🇸 美国 惠普公司
-      - 🇮🇷 伊朗 V2CROSS.COM
-      - 🇵🇱 波兰 V2CROSS.COM
-      - 🇮🇪 爱尔兰 都柏林Amazon数据中心
-      - 🇬🇧 英国 Microsoft公司
-      - 🇺🇸 美国 V2CROSS.COM
-      - 🇺🇸 美国 Amazon数据中心 2
-      - 🇺🇸 美国 加利福尼亚州洛杉矶PetaExpress
-      - 🇺🇸 美国 内华达州克拉克县亨德森市Enzu股份有限公司
       - 🇺🇸 美国 Amazon EC2服务器
-      - 🇺🇸 美国 CloudFlare节点
+      - 🇺🇸 美国 麻省理工学院
       - 🇫🇷 法国 巴黎Amazon数据中心
-      - 🇬🇧 英国 伦敦Amazon数据中心
-      - 🇬🇧 英国 伦敦Amazon数据中心 2
-      - 🇷🇴 罗马尼亚 V2CROSS.COM
-      - 🇷🇺 俄罗斯 V2CROSS.COM
-      - 🇺🇸 美国 Xerox
+      - 🇷🇺 俄罗斯 V2CROSS.COM 2
+      - 🇺🇸 美国 华盛顿Cogent通信公司
+      - 🇺🇸 美国 惠普HP
+      - 🇺🇸 美国 Amazon数据中心 2
       - 🇺🇸 美国 Amazon数据中心
-      - 🇮🇳 印度 V2CROSS.COM
+      - 🇺🇸 美国 V2CROSS.COM
+      - 🇬🇧 英国 社会保险安全部
+      - 🇫🇷 法国 法国计算机科学大学
+      - 🇺🇸 美国 加利福尼亚州洛杉矶PetaExpress
+      - 🇷🇺 俄罗斯 V2CROSS.COM
+      - 🇺🇸 美国 Amazon EC2服务器 2
+      - 🇺🇸 美国 华盛顿Cogent通信公司 2
+      - 🇫🇷 法国 法国计算机科学大学 2
+      - 🇸🇬 澳大利亚 新南威尔士州悉尼Linode数据中心
+      - 🇰🇷 韩国 首尔Oracle云计算数据中心
+      - 🇺🇸 美国 内华达州克拉克县亨德森市Enzu股份有限公司
+      - 🇬🇧 英国 伦敦Amazon数据中心
 rules:
   - RULE-SET,applications,DIRECT
   - DOMAIN,clash.razord.top,DIRECT
