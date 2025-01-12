@@ -1,16 +1,15 @@
-import datetime
-import os
-import json
-import time
 import copy
 import hashlib
+import json
+import os
+import time
 import uuid
-
-from ruamel import yaml
 
 from git.repo import Repo
 from git.repo.fun import is_git_dir
-from ruamel.yaml import StringIO, CommentedMap
+from ruamel import yaml
+
+from utils.formatUtils import reset_template, write_yaml_stream
 
 yaml.representer.RoundTripRepresenter.ignore_aliases = lambda x, y: True
 
@@ -164,21 +163,11 @@ class YamlUtils:
     def get_template_dict(self):
         return self.template
 
-    def save_file(self, savepath="clash.yaml", with_adguard_dns=False):
+    def save_file(self, savepath="clash.yaml"):
         if savepath is not None:
             template = copy.deepcopy(self.template)
-            # template.pop("rule-providers")
-            if with_adguard_dns:
-                template["dns"] = self.adguard_dns
-            output = StringIO()
-            self.yaml.dump(CommentedMap(template), output)
-            # 获取 StringIO 中的内容
-            yaml_str = output.getvalue()
-            Update = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-            header_comment = f"# Update: {Update}\n# Created by caoqiang\n"
-            with open(savepath, 'w', encoding="utf8") as file:
-                file.write(header_comment)
-                file.write(yaml_str)
+            data = reset_template(template["proxies"], template)
+            write_yaml_stream(self.yaml, data, savepath)
 
     def save_file_without_providers(
             self, savepath="clash_without_providers.yaml", with_adguard_dns=False

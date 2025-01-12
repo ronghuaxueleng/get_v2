@@ -31,6 +31,10 @@ def write_yaml_file(file, yml_file_path):
     yml = yaml.YAML()
     yml.indent(mapping=2, sequence=4, offset=2)
     data = reset_yaml_stream(yml, file.content)
+    write_yaml_stream(yml, data, yml_file_path)
+
+
+def write_yaml_stream(yml, data, yml_file_path):
     output = StringIO()
     yml.dump(data, output)
     # 获取 StringIO 中的内容
@@ -43,14 +47,15 @@ def write_yaml_file(file, yml_file_path):
 
 
 def reset_yaml_content(yaml_obj):
+    with open("template.json", "r", encoding="utf8") as template_file:
+        template = json.load(template_file)
+    return reset_template(yaml_obj.get("proxies"), template)
+
+
+def reset_template(proxies, template):
     proxies_md5_dict = dict()
     proxies_md5_name_dict = dict()
     proxy_names_set = set()
-
-    with open("template.json", "r", encoding="utf8") as template_file:
-        template = json.load(template_file)
-
-    proxies = yaml_obj.get("proxies")
     merged_proxy = dict()
     for proxy in proxies:
         proxy["port"] = int(proxy.get("port"))
