@@ -1,4 +1,4 @@
-# Update: 2025-01-12 06:21:22
+# Update: 2025-01-12 14:37:35
 # Created by caoqiang
 mixed-port: 7890
 allow-lan: true
@@ -9,42 +9,289 @@ mode: rule
 log-level: info
 external-controller: 0.0.0.0:9090
 global-client-fingerprint: chrome
-proxies: []
+proxies:
+  - name: 🇨🇳_CN_中国->🇷🇺_RU_俄罗斯
+    type: vmess
+    server: cm1.awslcn.info
+    port: 25230
+    sni: ''
+    uuid: 243eab52-9ac1-405c-887c-eb112c0985b8
+    cipher: auto
+    network: ws
+    skip-cert-verify: true
+    ws-opts:
+      path: /
+      headers:
+        host: cm1.awslcn.info
+    alterId: 0
+  - name: 🇺🇸_US_美国->🇫🇷_FR_法国
+    type: vmess
+    server: 151.101.2.216
+    port: 80
+    sni: ''
+    uuid: c69f3029-ae1e-45ca-aa08-70970f14dfd2
+    cipher: auto
+    network: ws
+    fingerprint: ''
+    ws-opts:
+      path: /racevpn?telegram@ISVvpn-telegram@ISVvpn-telegram@ISVvpn
+      headers:
+        host: telegram-ISVvpn.ir
+    alterId: 0
+  - name: 🇺🇸_US_美国->🇨🇳_CN_中国
+    type: vmess
+    server: 142.0.134.245
+    port: 45017
+    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+    cipher: auto
+    network: tcp
+    alterId: 64
+  - alterId: 64
+    cipher: auto
+    name: 13|🇭🇰 香港3|@ripaojiedian
+    port: 52908
+    server: 120.234.102.229
+    skip-cert-verify: false
+    tfo: false
+    tls: false
+    type: vmess
+    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+  - alterId: 64
+    cipher: auto
+    name: 13|🇭🇰 香港5|@ripaojiedian
+    port: 51704
+    server: 183.236.51.23
+    skip-cert-verify: false
+    tfo: false
+    tls: false
+    type: vmess
+    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+  - alterId: 0
+    cipher: auto
+    name: 13|🇭🇰 香港8|@ripaojiedian
+    port: 23782
+    server: 38.147.189.188
+    skip-cert-verify: false
+    tfo: false
+    tls: false
+    type: vmess
+    uuid: 6ba78aee-1390-4bbe-9fca-a07c736948cd
+  - alterId: 64
+    cipher: auto
+    name: 14|香港3|@ripaojiedian
+    network: tcp
+    port: 52908
+    server: 120.234.102.229
+    servername: ''
+    tls: false
+    type: vmess
+    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+  - alterId: 64
+    cipher: auto
+    name: 14|香港5|@ripaojiedian
+    network: tcp
+    port: 51704
+    server: 183.236.51.23
+    servername: ''
+    tls: false
+    type: vmess
+    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+  - alterId: 0
+    cipher: auto
+    name: 14|香港8|@ripaojiedian
+    network: tcp
+    port: 23782
+    server: 38.147.189.188
+    servername: ''
+    tls: false
+    type: vmess
+    uuid: 6ba78aee-1390-4bbe-9fca-a07c736948cd
+  - alterId: 0
+    cipher: auto
+    name: 16|d*********g.com_2
+    network: tcp
+    port: 443
+    server: 42.236.73.72
+    servername: www.zitian.cn
+    tls: true
+    type: vmess
+    uuid: 044f0177-0675-4dcf-89d4-804b6788e518
+  - {name: 🇨🇳 海南省 移动(全省通用), server: cm1.awslcn.info, port: 25230, client-fingerprint: chrome,
+    type: vmess, uuid: 243eab52-9ac1-405c-887c-eb112c0985b8, alterId: 0, cipher: auto,
+    tls: false, network: ws, ws-opts: {path: /, headers: {Host: cm1.awslcn.info}}}
+  - {name: 🇫🇷 法国 法国计算机科学大学, server: irvideo.cfd, port: 443, client-fingerprint: chrome,
+    type: vmess, uuid: e537f2f5-2a0c-4f59-92c9-832ca6433bf3, alterId: 0, cipher: auto,
+    tls: true, network: ws, ws-opts: {path: /linkws, headers: {Host: irvideo.cfd}}}
+  - {name: 🇺🇸 美国 CloudFlare节点, server: s2.db-link02.top, port: 8880, client-fingerprint: chrome,
+    type: vmess, uuid: 4b36625c-b9d9-3ea6-aed5-86d62c70e16d, alterId: 0, cipher: auto,
+    tls: false, network: ws, ws-opts: {path: /, headers: {Host: 100-40-188-237.s2.db-link02.top}}}
+  - {name: 🇺🇸 美国 加利福尼亚州圣何塞PEG TECH, server: 142.4.108.147, port: 38007, client-fingerprint: chrome,
+    type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 64, cipher: auto,
+    tls: true, network: ws, ws-opts: {path: /path/181721272114}}
+  - {name: 🇺🇸 美国 加利福尼亚州圣何塞PEG TECH 2, server: 142.4.108.139, port: 38007, client-fingerprint: chrome,
+    type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 64, cipher: auto,
+    tls: true, network: ws, ws-opts: {path: /path/021101252414}}
+  - {name: 🇺🇸 美国 CloudFlare节点 2, server: s3.db-link01.top, port: 2082, client-fingerprint: chrome,
+    type: vmess, uuid: 4b36625c-b9d9-3ea6-aed5-86d62c70e16d, alterId: 0, cipher: auto,
+    tls: false, network: ws, ws-opts: {path: /dabai.in104.25.204.117, headers: {Host: 100-6-204-129.s3.db-link01.top}}}
+  - {name: 🇺🇸 美国 Fastly全球Anycast节点, server: gov.uk, port: 443, client-fingerprint: chrome,
+    type: vmess, uuid: 77848824-93b7-4b89-ffd0-e91afff406ce, alterId: 0, cipher: auto,
+    tls: true, network: ws, ws-opts: {path: /77848824, headers: {Host: zheshiscp.com}}}
+  - {name: 🇷🇺 俄罗斯 V2CROSS.COM, server: 194.87.69.50, port: 2019, client-fingerprint: chrome,
+    type: vmess, uuid: 1cc59a3a-9625-40f7-b0e6-e233286ae82d, alterId: 0, cipher: auto,
+    tls: false, network: ws, ws-opts: {path: /}}
+  - {name: 🇺🇸 美国 V2CROSS.COM, server: 199.180.101.23, port: 38004, client-fingerprint: chrome,
+    type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 64, cipher: auto,
+    tls: true, network: ws, ws-opts: {path: /path/1736589334800}}
+  - {name: 🇺🇸 美国 V2CROSS.COM 2, server: 199.180.103.24, port: 37007, client-fingerprint: chrome,
+    type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 64, cipher: auto,
+    tls: true, network: ws, ws-opts: {path: /path/1736589334800}}
+  - {name: 🇺🇸 美国 CloudFlare节点 3, server: s2.db-link02.top, port: 2095, client-fingerprint: chrome,
+    type: vmess, uuid: 4b36625c-b9d9-3ea6-aed5-86d62c70e16d, alterId: 0, cipher: auto,
+    tls: false, network: ws, ws-opts: {path: /dabai.in104.20.27.115, headers: {Host: 100-209-47-141.s2.db-link02.top}}}
+  - {name: 🇺🇸 美国 CloudFlare节点 4, server: 104.21.16.1, port: 8443, client-fingerprint: chrome,
+    type: vmess, uuid: 89c344f2-096c-445c-b629-9b15152f38e7, alterId: 0, cipher: auto,
+    tls: true, network: ws, ws-opts: {path: /89c344f2, headers: {Host: ff.kncc2.top}}}
+  - {name: 🇺🇸 美国 CloudFlare节点 5, server: s2.db-link02.top, port: 2086, client-fingerprint: chrome,
+    type: vmess, uuid: 4b36625c-b9d9-3ea6-aed5-86d62c70e16d, alterId: 0, cipher: auto,
+    tls: false, network: ws, ws-opts: {path: /dabai.in172.64.43.14, headers: {Host: 100-171-104-238.s2.db-link02.top}}}
+  - {name: 🇺🇸 美国 加利福尼亚州圣何塞PEG TECH数据中心, server: 192.74.236.130, port: 30004, client-fingerprint: chrome,
+    type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 64, cipher: auto,
+    tls: true, network: ws, ws-opts: {path: /path/1730194244147}}
+  - {name: 🇺🇸 美国 CloudFlare节点 6, server: ff.kncc2.top, port: 8443, client-fingerprint: chrome,
+    type: vmess, uuid: 89c344f2-096c-445c-b629-9b15152f38e7, alterId: 0, cipher: auto,
+    tls: true, network: ws, ws-opts: {path: /89c344f2, headers: {Host: ff.kncc2.top}}}
+  - {name: 🇺🇸 美国 加利福尼亚州圣何塞PEG TECH数据中心 2, server: 192.74.236.157, port: 30004, client-fingerprint: chrome,
+    type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 64, cipher: auto,
+    tls: true, network: ws, ws-opts: {path: /path/1736503352193}}
 proxy-groups:
   - name: PROXY
     type: select
     proxies:
-      - URL-TEST
-      - LOAD-BALANCE
-      - SELECT
       - DIRECT
+      - REJECT
   - name: OTHER
     type: select
     proxies:
-      - PROXY
       - DIRECT
+      - REJECT
   - name: AD
     type: select
     proxies:
-      - REJECT
       - DIRECT
-      - PROXY
-  - name: URL-TEST
+      - REJECT
+  - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 600
     lazy: true
     tolerance: 100
-    proxies: []
+    proxies:
+      - 🇨🇳_CN_中国->🇷🇺_RU_俄罗斯
+      - 🇺🇸_US_美国->🇫🇷_FR_法国
+      - 🇺🇸_US_美国->🇨🇳_CN_中国
+      - 13|🇭🇰 香港5|@ripaojiedian
+      - 13|🇭🇰 香港3|@ripaojiedian
+      - 16|d*********g.com_2
+      - 13|🇭🇰 香港8|@ripaojiedian
+      - 14|香港8|@ripaojiedian
+      - 14|香港5|@ripaojiedian
+      - 14|香港3|@ripaojiedian
+      - 🇨🇳 海南省 移动(全省通用)
+      - 🇺🇸 美国 CloudFlare节点 3
+      - 🇺🇸 美国 Fastly全球Anycast节点
+      - 🇺🇸 美国 加利福尼亚州圣何塞PEG TECH数据中心
+      - 🇺🇸 美国 CloudFlare节点 5
+      - 🇺🇸 美国 V2CROSS.COM 2
+      - 🇺🇸 美国 加利福尼亚州圣何塞PEG TECH数据中心 2
+      - 🇺🇸 美国 CloudFlare节点
+      - 🇺🇸 美国 加利福尼亚州圣何塞PEG TECH 2
+      - 🇫🇷 法国 法国计算机科学大学
+      - 🇺🇸 美国 加利福尼亚州圣何塞PEG TECH
+      - 🇺🇸 美国 CloudFlare节点 4
+      - 🇺🇸 美国 V2CROSS.COM
+      - 🇺🇸 美国 CloudFlare节点 6
+      - 🇷🇺 俄罗斯 V2CROSS.COM
+      - 🇺🇸 美国 CloudFlare节点 2
   - name: LOAD-BALANCE
     type: load-balance
     url: http://www.gstatic.com/generate_204
     interval: 600
-    proxies: []
+    proxies:
+      - 🇨🇳_CN_中国->🇷🇺_RU_俄罗斯
+      - 🇺🇸_US_美国->🇫🇷_FR_法国
+      - 🇺🇸_US_美国->🇨🇳_CN_中国
+      - 13|🇭🇰 香港5|@ripaojiedian
+      - 13|🇭🇰 香港3|@ripaojiedian
+      - 16|d*********g.com_2
+      - 13|🇭🇰 香港8|@ripaojiedian
+      - 14|香港8|@ripaojiedian
+      - 14|香港5|@ripaojiedian
+      - 14|香港3|@ripaojiedian
+      - 🇨🇳 海南省 移动(全省通用)
+      - 🇺🇸 美国 CloudFlare节点 3
+      - 🇺🇸 美国 Fastly全球Anycast节点
+      - 🇺🇸 美国 加利福尼亚州圣何塞PEG TECH数据中心
+      - 🇺🇸 美国 CloudFlare节点 5
+      - 🇺🇸 美国 V2CROSS.COM 2
+      - 🇺🇸 美国 加利福尼亚州圣何塞PEG TECH数据中心 2
+      - 🇺🇸 美国 CloudFlare节点
+      - 🇺🇸 美国 加利福尼亚州圣何塞PEG TECH 2
+      - 🇫🇷 法国 法国计算机科学大学
+      - 🇺🇸 美国 加利福尼亚州圣何塞PEG TECH
+      - 🇺🇸 美国 CloudFlare节点 4
+      - 🇺🇸 美国 V2CROSS.COM
+      - 🇺🇸 美国 CloudFlare节点 6
+      - 🇷🇺 俄罗斯 V2CROSS.COM
+      - 🇺🇸 美国 CloudFlare节点 2
   - name: SELECT
     type: select
-    proxies: []
-rules: []
+    proxies:
+      - 🇨🇳_CN_中国->🇷🇺_RU_俄罗斯
+      - 🇺🇸_US_美国->🇫🇷_FR_法国
+      - 🇺🇸_US_美国->🇨🇳_CN_中国
+      - 13|🇭🇰 香港5|@ripaojiedian
+      - 13|🇭🇰 香港3|@ripaojiedian
+      - 16|d*********g.com_2
+      - 13|🇭🇰 香港8|@ripaojiedian
+      - 14|香港8|@ripaojiedian
+      - 14|香港5|@ripaojiedian
+      - 14|香港3|@ripaojiedian
+      - 🇨🇳 海南省 移动(全省通用)
+      - 🇺🇸 美国 CloudFlare节点 3
+      - 🇺🇸 美国 Fastly全球Anycast节点
+      - 🇺🇸 美国 加利福尼亚州圣何塞PEG TECH数据中心
+      - 🇺🇸 美国 CloudFlare节点 5
+      - 🇺🇸 美国 V2CROSS.COM 2
+      - 🇺🇸 美国 加利福尼亚州圣何塞PEG TECH数据中心 2
+      - 🇺🇸 美国 CloudFlare节点
+      - 🇺🇸 美国 加利福尼亚州圣何塞PEG TECH 2
+      - 🇫🇷 法国 法国计算机科学大学
+      - 🇺🇸 美国 加利福尼亚州圣何塞PEG TECH
+      - 🇺🇸 美国 CloudFlare节点 4
+      - 🇺🇸 美国 V2CROSS.COM
+      - 🇺🇸 美国 CloudFlare节点 6
+      - 🇷🇺 俄罗斯 V2CROSS.COM
+      - 🇺🇸 美国 CloudFlare节点 2
+rules:
+  - RULE-SET,reject,AD
+  - RULE-SET,cncidr,DIRECT
+  - MATCH,OTHER
+  - RULE-SET,applications,DIRECT
+  - RULE-SET,google,DIRECT
+  - RULE-SET,lancidr,DIRECT
+  - RULE-SET,proxy,OTHER
+  - RULE-SET,telegramcidr,PROXY
+  - DOMAIN,yacd.haishan.me,DIRECT
+  - RULE-SET,private,DIRECT
+  - GEOIP,CN,DIRECT
+  - RULE-SET,gfw,PROXY
+  - DOMAIN,clash.razord.top,DIRECT
+  - RULE-SET,apple,DIRECT
+  - RULE-SET,greatfire,PROXY
+  - RULE-SET,direct,DIRECT
+  - RULE-SET,icloud,DIRECT
+  - RULE-SET,tld-not-cn,PROXY
 rule-providers:
   reject:
     type: http

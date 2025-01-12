@@ -1,11 +1,9 @@
 import os
-import time
-import shutil
 
-from utils.yamlUtils import YamlUtils
+from utils.NoMoreWalls import get_content as NoMoreWalls_content
 from utils.cfmem import get_content as cfmem_content
 from utils.pawdroid import get_content as pawdroid_content
-from utils.NoMoreWalls import get_content as NoMoreWalls_content
+from utils.yamlUtils import YamlUtils
 
 # changfengoss = os.path.join("changfengoss")
 # dirname = time.strftime("%Y_%m_%d", time.localtime(time.time()))
@@ -20,9 +18,9 @@ pawdroid_content(current_work_dir)
 NoMoreWalls_content(current_work_dir)
 
 
-pub = os.path.join("pub")
+pub = os.path.join(current_work_dir, "pub")
 yamlUtils = YamlUtils(pub)
 yamlUtils.make_template(
-    ["cfmem.yaml", "NoMoreWalls.yaml"]
+    ["cfmem.yaml", "NoMoreWalls.yaml", "pawdroid.yaml"]
 )
 yamlUtils.save_file("pub/combine.yaml")

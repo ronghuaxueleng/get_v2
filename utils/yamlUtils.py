@@ -11,6 +11,7 @@ from ruamel import yaml
 from git.repo import Repo
 from git.repo.fun import is_git_dir
 from ruamel.yaml import StringIO, CommentedMap
+
 yaml.representer.RoundTripRepresenter.ignore_aliases = lambda x, y: True
 
 
@@ -33,6 +34,8 @@ class YamlUtils:
             self.template = json.load(template_file)
         with open(adguard_dns_path, "r", encoding="utf8") as template_file:
             self.adguard_dns = json.load(template_file)
+        self.yaml = yaml.YAML()
+        self.yaml.indent(mapping=2, sequence=4, offset=2)
 
     def clone_repo(self, repo_url, branch=None, depth=1):
         git_local_path = os.path.join(self.local_path, ".git")
@@ -77,7 +80,7 @@ class YamlUtils:
                     file_path = os.path.join(self.local_path, item)
                     if os.path.exists(file_path) and os.path.isfile(file_path):
                         with open(file_path, "r", encoding="utf8") as yaml_file:
-                            yaml_obj = yaml.safe_load(yaml_file)
+                            yaml_obj = self.yaml.load(yaml_file)
                             rules = yaml_obj.get("rules")
                             proxies = yaml_obj.get("proxies")
                             self.filtered_rules.extend(rules)
@@ -176,10 +179,8 @@ class YamlUtils:
             # template.pop("rule-providers")
             if with_adguard_dns:
                 template["dns"] = self.adguard_dns
-            yml = yaml.YAML()
-            yml.indent(mapping=2, sequence=4, offset=2)
             output = StringIO()
-            yml.dump(CommentedMap(template), output)
+            self.yaml.dump(CommentedMap(template), output)
             # 获取 StringIO 中的内容
             yaml_str = output.getvalue()
             Update = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
@@ -196,7 +197,5 @@ class YamlUtils:
             template.pop("rule-providers")
             if with_adguard_dns:
                 template["dns"] = self.adguard_dns
-            yml = yaml.YAML()
-            yml.indent(mapping=2, sequence=4, offset=2)
             with open(savepath, "w+", encoding="utf8") as outfile:
-                yml.dump(template, outfile)
+                self.yaml.dump(template, outfile)
