@@ -87,40 +87,31 @@ class YamlUtils:
                             merged_proxy = dict()
                             deleted_proxy = list()
                             for proxy in proxies:
-                                if check_proxy(proxy):
-                                    if proxy.get(
-                                            "network"
-                                    ) in self.network and not proxy.get("tls"):
-                                        deleted_proxy.append(proxy.get("name"))
-                                        continue
-                                    proxy["port"] = int(proxy.get("port"))
-                                    proxy_copy = copy.deepcopy(proxy)
-                                    proxy_copy.pop("name")
-                                    data_md5 = hashlib.md5(
-                                        json.dumps(proxy_copy, sort_keys=True).encode(
-                                            "utf-8"
+                                proxy["port"] = int(proxy.get("port"))
+                                proxy_copy = copy.deepcopy(proxy)
+                                proxy_copy.pop("name")
+                                data_md5 = hashlib.md5(
+                                    json.dumps(proxy_copy, sort_keys=True).encode(
+                                        "utf-8"
+                                    )
+                                ).hexdigest()
+                                if data_md5 not in self.proxies_md5_dict:
+                                    if proxy_copy.get("name") in self.proxy_names_set:
+                                        proxy["name"] = (
+                                                proxy.get("name")
+                                                + "_"
+                                                + str(round(time.time() * 1000))
+                                                + str(uuid.uuid4())
                                         )
-                                    ).hexdigest()
-                                    if data_md5 not in self.proxies_md5_dict:
-                                        if proxy.get("name") in self.proxy_names_set:
-                                            proxy["name"] = (
-                                                    proxy.get("name")
-                                                    + "_"
-                                                    + item
-                                                    + "_"
-                                                    + str(round(time.time() * 1000))
-                                                    + uuid.uuid4()
-                                            )
-                                        self.proxy_names_set.add(proxy.get("name"))
-                                        self.proxies_md5_dict[data_md5] = proxy
-                                        self.proxies_md5_name_dict[
-                                            data_md5
-                                        ] = proxy.get("name")
-                                    merged_proxy[
-                                        proxy.get("name")
-                                    ] = self.proxies_md5_name_dict.get(data_md5)
-                                else:
-                                    deleted_proxy.append(proxy.get("name"))
+                                    self.proxy_names_set.add(proxy.get("name"))
+                                    self.proxies_md5_dict[data_md5] = proxy
+                                    self.proxies_md5_name_dict[
+                                        data_md5
+                                    ] = proxy.get("name")
+                                merged_proxy[
+                                    proxy.get("name")
+                                ] = self.proxies_md5_name_dict.get(data_md5)
+
                             proxy_groups = yaml_obj.get("proxy-groups")
 
                             for index, group in enumerate(proxy_groups):
