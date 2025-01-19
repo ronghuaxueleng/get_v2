@@ -62,17 +62,6 @@ class YamlUtils:
         self.make_template(log_list, keyword, dirname)
 
     def make_template(self, filelist, keyword="yaml", dirname=None):
-        def check_proxy(proxy):
-            return (
-                    "server" in proxy
-                    and proxy.get("cipher") not in self.not_support_ciphers
-                    and proxy.get("alterId") is not None
-                    and proxy.get("alterId") not in self.not_support_alterIds
-                    and proxy.get("type") not in self.not_support_type
-                    and type(proxy.get("port") == int)
-                    and proxy.get("port") > 0
-            )
-
         for item in filelist:
             if (dirname is None or dirname in item) and keyword in item:
                 try:
@@ -141,7 +130,7 @@ class YamlUtils:
                                 group["proxies"] = (
                                     saved_proxies
                                     if len(saved_proxies) > 0
-                                    else ["DIRECT", "REJECT"]
+                                    else ["DIRECT", "REJECT", "LOAD-BALANCE", "SELECT", "♻️ 自动选择"]
                                 )
                                 self.proxy_groups[group_name] = group
                 except Exception as e:
