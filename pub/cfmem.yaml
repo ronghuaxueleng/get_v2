@@ -1,4 +1,4 @@
-# Update: 2025-01-21 16:08:34
+# Update: 2025-01-21 18:10:08
 # Created by caoqiang
 mixed-port: 7890
 allow-lan: true
@@ -62,22 +62,22 @@ proxy-groups:
     lazy: true
     tolerance: 100
     proxies:
-      - 🇺🇸_US_美国
       - 🇨🇭_CH_瑞士->🇨🇳_CN_中国
+      - 🇺🇸_US_美国
       - 🇦🇹_AT_奥地利->🇺🇸_US_美国
   - name: LOAD-BALANCE
     type: load-balance
     url: http://www.gstatic.com/generate_204
     interval: 600
     proxies:
-      - 🇺🇸_US_美国
       - 🇨🇭_CH_瑞士->🇨🇳_CN_中国
+      - 🇺🇸_US_美国
       - 🇦🇹_AT_奥地利->🇺🇸_US_美国
   - name: SELECT
     type: select
     proxies:
-      - 🇺🇸_US_美国
       - 🇨🇭_CH_瑞士->🇨🇳_CN_中国
+      - 🇺🇸_US_美国
       - 🇦🇹_AT_奥地利->🇺🇸_US_美国
 rules:
   - RULE-SET,applications,DIRECT
