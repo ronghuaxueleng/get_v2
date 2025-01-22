@@ -1,4 +1,4 @@
-# Update: 2025-01-22 00:35:10
+# Update: 2025-01-22 02:40:46
 # Created by caoqiang
 mixed-port: 7890
 allow-lan: true
@@ -10,362 +10,139 @@ log-level: info
 external-controller: 0.0.0.0:9090
 global-client-fingerprint: chrome
 proxies:
-  - name: 🇷🇺_RU_俄罗斯
-    type: vmess
-    server: 45.8.159.241
-    port: 33395
-    sni: ''
-    uuid: 398ce84e-4849-4e5f-9b1a-a56fbe233b81
-    cipher: auto
-    network: ws
-    skip-cert-verify: true
-    ws-opts:
-      path: /
-    alterId: 0
-  - name: 🇺🇸_US_美国
-    type: trojan
-    server: 16.16.87.68
-    port: 22222
-    sni: trojan.burgerip.co.uk
-    password: telegram-id-directvpn
-    network: tcp
-    alpn:
-      - http/1.1
-  - name: 🇵🇱_PL_波兰
-    type: ss
-    server: 185.255.123.92
-    port: 990
-    cipher: chacha20-ietf-poly1305
-    password: f8f7aCzcPKbsF8p3
-  - name: 🇮🇷_IR_伊朗
-    type: vmess
-    server: 94.182.150.230
-    port: 80
-    sni: ''
-    uuid: 2b7ce1d2-0372-4104-aa06-f7d999f26e1d
-    cipher: auto
-    network: tcp
-    alterId: 0
-  - name: 🇦🇱_AL_阿尔巴尼亚
-    type: ss
-    server: 109.104.154.146
-    port: 33333
-    cipher: aes-256-gcm
-    password: dongtaiwang.com
-  - name: 🇩🇪_DE_德国_1
-    type: trojan
-    server: 35.157.231.252
-    port: 22222
-    sni: trojan.burgerip.co.uk
-    password: telegram-id-privatevpns
-    network: tcp
-    alpn:
-      - http/1.1
-  - name: 🇺🇸_US_美国_1
-    type: ss
-    server: 54.187.174.202
-    port: 443
-    cipher: aes-256-cfb
-    password: amazonskr05
-  - name: 🇺🇸_US_美国_2
-    type: vmess
-    server: 190.93.245.230
-    port: 2086
-    uuid: 3fd7b958-2161-46e1-b6fc-bd6bb2165312
-    cipher: auto
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        host: shs.xiaoqi666.xyz
-    alterId: 0
-  - name: 🇮🇹_IT_意大利
-    type: ss
-    server: 37.143.129.230
-    port: 989
-    cipher: aes-256-cfb
-    password: f8f7aCzcPKbsF8p3
-  - name: 🇷🇺_RU_俄罗斯_1
-    type: vmess
-    server: 195.58.49.42
-    port: 17926
-    sni: ''
-    uuid: d39ad1df-e8b5-4759-8c58-e27d2f3ff679
-    cipher: auto
-    network: ws
-    skip-cert-verify: true
-    ws-opts:
-      path: /
-    alterId: 0
-  - name: 🇺🇸_US_美国_3
-    type: vmess
-    server: s1.db-link01.top
-    port: 2052
-    uuid: 4b36625c-b9d9-3ea6-aed5-86d62c70e16d
-    cipher: auto
-    network: ws
-    ws-opts:
-      path: /dabai.in172.67.2.142
-      headers:
-        host: 100-151-164-47.s1.db-link01.top
-    alterId: 0
-  - name: 🇳🇱_NL_荷兰
-    type: ss
-    server: 45.140.146.223
-    port: 8388
-    cipher: chacha20-ietf-poly1305
-    password: YjJiYzBj
-  - name: 🇺🇸_US_美国_4
-    type: vmess
-    server: 64.225.109.206
-    port: 2082
-    sni: ''
-    uuid: 48264b45-64b8-4e9f-8a88-cef41f20c736
-    cipher: auto
-    network: http
-    skip-cert-verify: true
-    http-opts: {}
-    alterId: 0
-  - name: 🇺🇸_US_美国_5
-    type: ss
-    server: 54.190.19.18
-    port: 443
-    cipher: aes-256-cfb
-    password: amazonskr05
-  - name: 🇷🇺_RU_俄罗斯_2
-    type: vmess
-    server: 195.58.49.50
-    port: 17926
-    sni: ''
-    uuid: de3695e9-b174-4788-ba90-16bc9e46f53c
-    cipher: auto
-    network: ws
-    skip-cert-verify: true
-    ws-opts:
-      path: /
-    alterId: 0
-  - name: 🇮🇷_IR_伊朗_1
-    type: vmess
-    server: 94.182.150.231
-    port: 80
-    sni: ''
-    uuid: 2b7ce1d2-0372-4104-aa06-f7d999f26e1d
-    cipher: auto
-    network: tcp
-    alterId: 0
-  - name: 🇨🇦_CA_加拿大
-    type: trojan
-    server: 15.222.88.136
-    port: 22222
-    sni: trojan.burgerip.co.uk
-    password: telegram-id-directvpn
-    network: tcp
-    alpn:
-      - http/1.1
-  - name: 🇺🇸_US_美国->🇨🇳_CN_中国
-    type: ss
-    server: 35.94.25.109
-    port: 443
-    cipher: aes-256-cfb
-    password: amazonskr05
-  - name: 🇨🇳_CN_中国->🇷🇺_RU_俄罗斯
-    type: trojan
-    server: 221.131.165.210
-    port: 60194
-    password: 38571ca6-6692-4559-b901-0bc5826b7661
-    skip-cert-verify: true
-  - name: 🇨🇳_CN_中国->🇷🇺_RU_俄罗斯_1
-    type: vmess
-    server: cm1.awslcn.info
-    port: 25230
-    sni: ''
-    uuid: 243eab52-9ac1-405c-887c-eb112c0985b8
-    cipher: auto
-    network: ws
-    skip-cert-verify: true
-    ws-opts:
-      path: /
-      headers:
-        host: cm1.awslcn.info
-    alterId: 0
-  - name: 🇷🇴_RO_罗马尼亚
-    type: ss
-    server: 185.193.49.88
-    port: 989
-    cipher: aes-256-cfb
-    password: f8f7aCzcPKbsF8p3
-  - name: 🇬🇧_GB_英国
-    type: vmess
-    server: 5.39.254.196
-    port: 23985
-    sni: ''
-    uuid: 398ce84e-4849-4e5f-9b1a-a56fbe233b81
-    cipher: auto
-    network: ws
-    skip-cert-verify: true
-    ws-opts:
-      path: /
-      headers:
-        host: 5.39.254.196
-    alterId: 0
-  - name: 🇺🇸_US_美国_6
-    type: ss
-    server: 185.47.252.251
-    port: 989
-    cipher: aes-256-cfb
-    password: f8f7aCzcPKbsF8p3
-  - cipher: aes-256-cfb
-    name: 0|-https://t.me/MrXbin-1
-    password: amazonskr05
-    port: 443
-    server: 3.34.189.113
-    type: ss
-    udp: true
   - cipher: aes-256-cfb
     name: 0|-https://t.me/MrXbin-2
-    password: amazonskr05
-    port: 443
-    server: 54.190.19.18
-    type: ss
-    udp: true
-  - cipher: aes-256-cfb
-    name: 0|-https://t.me/MrXbin-3
-    password: amazonskr05
-    port: 443
-    server: 54.187.174.202
-    type: ss
-    udp: true
-  - cipher: aes-256-cfb
-    name: 0|-https://t.me/MrXbin-5
-    password: amazonskr05
-    port: 443
-    server: 13.230.174.203
-    type: ss
-    udp: true
-  - cipher: aes-256-cfb
-    name: 0|-https://t.me/MrXbin-6
     password: qwerREWQ@@
     port: 28290
     server: p220.panda001.net
     type: ss
     udp: true
   - cipher: aes-256-cfb
+    name: 0|-https://t.me/MrXbin-4
+    password: amazonskr05
+    port: 443
+    server: 3.36.116.141
+    type: ss
+    udp: true
+  - cipher: chacha20-ietf-poly1305
+    name: 0|-https://t.me/MrXbin-5
+    password: 1RWwXhwfAB5gAEozU4G2Pg
+    port: 8080
+    server: 45.87.175.188
+    type: ss
+  - cipher: chacha20-ietf-poly1305
+    name: 0|-https://t.me/MrXbin-6
+    password: cvII85TrW6n0OGyfpHVS1u
+    port: 8080
+    server: 193.29.139.189
+    type: ss
+    udp: true
+  - cipher: chacha20-ietf-poly1305
     name: 0|-https://t.me/MrXbin-7
+    password: 4a2rfixophdjffa8KVA4Aa
+    port: 8080
+    server: 45.87.175.154
+    type: ss
+  - cipher: aes-256-cfb
+    name: 0|-https://t.me/MrXbin-8
+    password: amazonskr05
+    port: 443
+    server: 3.34.189.113
+    type: ss
+    udp: true
+  - cipher: chacha20-ietf-poly1305
+    name: 0|-https://t.me/MrXbin-9
+    password: cvII85TrW6n0OGyfpHVS1u
+    port: 8080
+    server: 45.87.175.154
+    type: ss
+  - cipher: aes-256-cfb
+    name: 0|-https://t.me/MrXbin-11
+    password: amazonskr05
+    port: 443
+    server: 54.190.19.18
+    type: ss
+    udp: true
+  - cipher: aes-256-cfb
+    name: 0|-https://t.me/MrXbin-12
+    password: amazonskr05
+    port: 443
+    server: 54.187.174.202
+    type: ss
+    udp: true
+  - cipher: aes-256-cfb
+    name: 0|-https://t.me/MrXbin-13
+    password: amazonskr05
+    port: 443
+    server: 54.179.54.70
+    type: ss
+    udp: true
+  - cipher: aes-256-cfb
+    name: 0|-https://t.me/MrXbin-14
     password: amazonskr05
     port: 443
     server: 54.202.49.210
     type: ss
     udp: true
   - cipher: aes-256-cfb
-    name: 0|-https://t.me/MrXbin-8
+    name: 0|-https://t.me/MrXbin-15
     password: amazonskr05
     port: 443
-    server: 34.210.56.216
+    server: 13.230.174.203
     type: ss
     udp: true
   - cipher: aes-256-cfb
-    name: 0|-https://t.me/MrXbin-9
+    name: 0|-https://t.me/MrXbin-25
+    password: qwerREWQ@@
+    port: 28290
+    server: 125.141.31.74
+    type: ss
+  - cipher: aes-256-cfb
+    name: 0|-https://t.me/MrXbin-27
     password: amazonskr05
     port: 443
     server: 18.182.13.204
     type: ss
     udp: true
-  - cipher: aes-256-gcm
-    name: 0|-https://t.me/MrXbin-11
-    password: faBAoD54k87UJG7
-    port: 2376
-    server: 23.154.136.247
-    type: ss
   - cipher: aes-256-cfb
-    name: 0|-https://t.me/MrXbin-12
-    password: qwerREWQ@@
-    port: 28902
-    server: 218.38.103.150
-    type: ss
-    udp: true
-  - cipher: chacha20-ietf-poly1305
-    name: 0|-https://t.me/MrXbin-13
-    password: VpKABcOpNNA0l5G2AVOmw8
-    port: 62685
-    server: 213.109.147.242
-    type: ss
-  - cipher: aes-256-cfb
-    name: 0|-https://t.me/MrXbin-15
+    name: 0|-https://t.me/MrXbin-28
     password: amazonskr05
     port: 443
-    server: 3.36.116.141
+    server: 35.94.25.109
     type: ss
     udp: true
   - cipher: aes-256-cfb
-    name: 0|-https://t.me/MrXbin-16
-    password: qwerREWQ@@
-    port: 27973
-    server: p196.panda001.net
-    type: ss
-    udp: true
-  - cipher: aes-256-cfb
-    name: 0|-https://t.me/MrXbin-17
-    password: qwerREWQ@@
-    port: 34847
-    server: 218.50.149.114
-    type: ss
-    udp: true
-  - cipher: aes-256-cfb
-    name: 0|-https://t.me/MrXbin-23
-    password: qwerREWQ@@
-    port: 27973
-    server: 221.168.44.72
-    type: ss
-  - cipher: aes-256-cfb
-    name: 0|-https://t.me/MrXbin-24
+    name: 0|-https://t.me/MrXbin-30
     password: qwerREWQ@@
     port: 37041
     server: 121.170.203.147
     type: ss
     udp: true
   - cipher: aes-256-cfb
-    name: 0|-https://t.me/MrXbin-25
+    name: 0|-https://t.me/MrXbin-31
     password: qwerREWQ@@
     port: 4563
     server: 121.170.203.148
     type: ss
   - cipher: aes-256-cfb
-    name: 0|-https://t.me/MrXbin-26
-    password: qwerREWQ@@
-    port: 28290
-    server: 125.141.31.74
+    name: 0|-https://t.me/MrXbin-33
+    password: amazonskr05
+    port: 443
+    server: 34.211.250.149
     type: ss
+    udp: true
+  - cipher: aes-256-cfb
+    name: 0|-https://t.me/MrXbin-34
+    password: qwerREWQ@@
+    port: 27973
+    server: p196.panda001.net
+    type: ss
+    udp: true
   - alterId: 0
     cipher: auto
     h2-opts: {}
     http-opts: {}
-    name: 0|-https://t.me/MrXbin-47
-    port: 80
-    server: 94.182.150.230
-    skip-cert-verify: true
-    type: vmess
-    udp: true
-    uuid: 2b7ce1d2-0372-4104-aa06-f7d999f26e1d
-  - alterId: 0
-    cipher: auto
-    h2-opts: {}
-    http-opts:
-      method: GET
-      path:
-        - /
-    name: 0|-https://t.me/MrXbin-51
-    network: http
-    port: 2082
-    server: 64.225.109.206
-    skip-cert-verify: true
-    type: vmess
-    udp: true
-    uuid: 48264b45-64b8-4e9f-8a88-cef41f20c736
-  - alterId: 0
-    cipher: auto
-    h2-opts: {}
-    http-opts: {}
-    name: 0|-https://t.me/MrXbin-55
+    name: 0|-https://t.me/MrXbin-50
     network: ws
     port: 8880
     server: yx1.changyouVPN.top
@@ -380,50 +157,94 @@ proxies:
     cipher: auto
     h2-opts: {}
     http-opts: {}
-    name: 0|-https://t.me/MrXbin-56
-    network: tcp
-    port: 64016
-    server: in06.my1188.org
-    servername: us01.wechat-cdn-us01.one
-    skip-cert-verify: true
-    type: vmess
-    uuid: fe0346d9-a972-3d8a-bac7-310604fa108f
-  - alterId: 0
-    cipher: auto
-    h2-opts: {}
-    http-opts: {}
-    name: 0|-https://t.me/MrXbin-58
-    network: ws
-    port: 17926
-    server: 195.58.49.42
-    skip-cert-verify: true
-    type: vmess
-    udp: true
-    uuid: 88bab07f-144f-4931-ba7b-2e812b46e99e
-    ws-opts: {}
-  - alterId: 0
-    cipher: auto
-    h2-opts: {}
-    http-opts: {}
-    name: 0|-https://t.me/MrXbin-59
+    name: 0,13|🇩🇪 德国2|@ripaojiedian
     port: 80
-    server: 94.182.150.231
-    skip-cert-verify: true
+    server: 94.182.150.230
+    skip-cert-verify: false
+    tfo: false
+    tls: false
     type: vmess
     udp: true
     uuid: 2b7ce1d2-0372-4104-aa06-f7d999f26e1d
   - alterId: 0
     cipher: auto
     h2-opts: {}
+    http-opts:
+      method: GET
+      path:
+        - /
+    name: 0|-https://t.me/MrXbin-55
+    network: http
+    port: 2082
+    server: 64.225.109.206
+    skip-cert-verify: true
+    type: vmess
+    udp: true
+    uuid: 48264b45-64b8-4e9f-8a88-cef41f20c736
+  - alterId: 0
+    cipher: auto
+    h2-opts: {}
     http-opts: {}
     name: 0|-https://t.me/MrXbin-60
     network: ws
-    port: 17926
-    server: 212.192.12.70
+    port: 80
+    server: s5.db-link02.top
     type: vmess
     udp: true
-    uuid: dae301f8-eeda-473f-aa6c-306b5061c48d
-    ws-opts: {}
+    uuid: 4b36625c-b9d9-3ea6-aed5-86d62c70e16d
+    ws-opts:
+      headers:
+        Host: 100-235-225-209.s5.db-link02.top
+      path: /dabai.in104.18.75.85
+  - alterId: 0
+    cipher: auto
+    h2-opts: {}
+    http-opts: {}
+    name: 0|-https://t.me/MrXbin-61
+    port: 80
+    server: 94.182.150.231
+    skip-cert-verify: true
+    type: vmess
+    udp: true
+    uuid: 2b7ce1d2-0372-4104-aa06-f7d999f26e1d
+  - name: 0|-https://t.me/MrXbin-66
+    password: 243eab52-9ac1-405c-887c-eb112c0985b8
+    port: 443
+    server: 74.226.136.204
+    skip-cert-verify: true
+    sni: us01.trojanyyds.xyz
+    type: trojan
+  - name: 0|-https://t.me/MrXbin-67
+    password: 243eab52-9ac1-405c-887c-eb112c0985b8
+    port: 443
+    server: us01.trojanyyds.xyz
+    skip-cert-verify: true
+    type: trojan
+    udp: true
+  - name: 0|-https://t.me/MrXbin-68
+    password: 243eab52-9ac1-405c-887c-eb112c0985b8
+    port: 443
+    server: sg02.trojanyyds.xyz
+    type: trojan
+  - name: 0|-https://t.me/MrXbin-69
+    password: 243eab52-9ac1-405c-887c-eb112c0985b8
+    port: 443
+    server: tw01.trojanyyds.xyz
+    sni: tw01.trojanyyds.xyz
+    type: trojan
+  - name: 0|-https://t.me/MrXbin-70
+    password: 243eab52-9ac1-405c-887c-eb112c0985b8
+    port: 443
+    server: tw02.trojanyyds.xyz
+    sni: tw02.trojanyyds.xyz
+    type: trojan
+    udp: true
+  - name: 0|-https://t.me/MrXbin-71
+    password: 243eab52-9ac1-405c-887c-eb112c0985b8
+    port: 443
+    server: in01.trojanyyds.xyz
+    sni: in01.trojanyyds.xyz
+    type: trojan
   - name: 13,14|香港|@ripaojiedian
     network: tcp
     password: phXKwfrd
@@ -438,16 +259,14 @@ proxies:
     server: 36.150.215.196
     skip-cert-verify: true
     type: trojan
-  - cipher: rc4-md5
-    name: 13|🇭🇰 香港3|@ripaojiedian
-    obfs: plain
-    obfs-param: cd2b692902.6602b8463464108506.microsoft.com
-    password: ENZ52K
-    port: 40239
-    protocol: auth_aes128_md5
-    protocol-param: 92902:pFWGOQ
-    server: 3.link-hub.click
-    type: ssr
+  - name: 13,14|香港3|@ripaojiedian
+    network: tcp
+    password: a38f4d99-8726-3484-8341-91eb513e7a3c
+    port: 36821
+    server: gy.58n.net
+    skip-cert-verify: false
+    sni: z262.hongkongnode.top
+    type: trojan
   - alterId: 64
     cipher: auto
     name: 13|🇭🇰 香港4|@ripaojiedian
@@ -458,52 +277,46 @@ proxies:
     tls: false
     type: vmess
     uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-  - cipher: aes-256-gcm
-    name: 13|🇭🇰 香港5|@ripaojiedian
-    password: D8TQ0D993NS6XK0K
-    port: 15008
-    server: w72tapyb.slashdevslashnetslashtun.net
-    tfo: false
-    type: ss
-  - cipher: aes-256-gcm
-    name: 13|🇭🇰 香港6|@ripaojiedian
-    password: K09H5MS4WFZH4414
-    port: 15005
-    server: 8tv68qhq.slashdevslashnetslashtun.net
-    tfo: false
-    type: ss
-  - name: 13,14|香港7|@ripaojiedian
-    network: tcp
-    password: be28a019-a855-4cd9-bfa1-1471c56921a4
-    port: 13003
-    server: naiu-hk.05vr9nyqg5.download
-    skip-cert-verify: false
-    sni: cloudflare.node-ssl.cdn-alibaba.com
-    type: trojan
-  - cipher: aes-256-gcm
-    name: 13|🇯🇵 日本|@ripaojiedian
-    password: 9KGIJUHW23WGZMHJ
-    port: 18008
-    server: w72tapyb.slashdevslashnetslashtun.net
-    tfo: false
-    type: ss
-  - cipher: aes-256-gcm
-    name: 13|🇯🇵 日本2|@ripaojiedian
-    password: 2T2TOL67SAUD3SME
-    port: 18012
-    server: w72tapyb.slashdevslashnetslashtun.net
-    tfo: false
-    type: ss
   - cipher: rc4-md5
-    name: 13|🇯🇵 日本3|@ripaojiedian
+    name: 13|🇭🇰 香港5|@ripaojiedian
     obfs: plain
     obfs-param: cd2b692902.6602b8463464108506.microsoft.com
     password: ENZ52K
-    port: 40219
+    port: 40206
     protocol: auth_aes128_md5
     protocol-param: 92902:pFWGOQ
     server: 2.hublink.pro
     type: ssr
+  - alterId: 0
+    cipher: auto
+    name: 13|🇭🇰 香港6|@ripaojiedian
+    port: 64667
+    server: fiwejniavzoj.xn--fiqs8sjz2bull.com
+    skip-cert-verify: false
+    tfo: false
+    tls: false
+    type: vmess
+    uuid: cdc67dd7-1a08-4ac4-b04b-6f04d5dbadff
+  - alterId: 0
+    cipher: auto
+    name: 13|🇹🇼 台湾|@ripaojiedian
+    port: 60852
+    server: fiwejniavzoj.xn--fiqs8sjz2bull.com
+    skip-cert-verify: false
+    tfo: false
+    tls: false
+    type: vmess
+    uuid: cdc67dd7-1a08-4ac4-b04b-6f04d5dbadff
+  - alterId: 0
+    cipher: auto
+    name: 13|🇯🇵 日本|@ripaojiedian
+    port: 63494
+    server: ywtwepcnwlou.xn--fiqs8sjz2bull.com
+    skip-cert-verify: false
+    tfo: false
+    tls: false
+    type: vmess
+    uuid: cdc67dd7-1a08-4ac4-b04b-6f04d5dbadff
   - cipher: chacha20-ietf-poly1305
     name: 13|🇸🇬 新加坡|@ripaojiedian
     password: f16d3752-7bae-474e-87dc-f892df2caeaf
@@ -511,64 +324,51 @@ proxies:
     server: ctmm.gscloud.bond
     tfo: false
     type: ss
-  - cipher: aes-256-gcm
-    name: 13|🇸🇬 新加坡2|@ripaojiedian
-    password: TOU9PB2B767TFQVU
-    port: 16007
-    server: qh62onjn.slashdevslashnetslashtun.net
+  - name: '13,14|新加坡|@ripaojiedian #1'
+    network: tcp
+    password: a38f4d99-8726-3484-8341-91eb513e7a3c
+    port: 20130
+    server: gy.58n.net
+    skip-cert-verify: false
+    sni: x130.flybar.work
+    type: trojan
+  - alterId: 2
+    cipher: auto
+    name: 13,14|美国|@ripaojiedian
+    network: ws
+    port: 22643
+    server: tk.hzlt.tkddns.xyz
+    servername: zxjp-c.tkong.cc
+    skip-cert-verify: false
     tfo: false
-    type: ss
-  - cipher: aes-256-gcm
-    name: 13|🇺🇸 美国|@ripaojiedian
-    password: 8FW4QUIM9HH9WV1I
-    port: 17002
-    server: ti3hyra4.slashdevslashnetslashtun.net
-    tfo: false
-    type: ss
-  - cipher: aes-256-gcm
-    name: 13|🇺🇸 美国2|@ripaojiedian
-    password: 1XQDHG7MU61NKDX2
-    port: 17008
-    server: w72tapyb.slashdevslashnetslashtun.net
-    tfo: false
-    type: ss
-  - cipher: aes-256-cfb
-    name: 13|🇯🇵 日本特殊|@ripaojiedian
-    password: amazonskr05
-    port: 443
-    server: 47.128.244.15
-    tfo: false
-    type: ss
+    tls: true
+    type: vmess
+    uuid: 98e96c9f-4bb3-39d4-9a2c-fac04257f7c7
+    ws-opts:
+      headers:
+        Host: zxjp-c.tkong.cc
+      path: /
   - cipher: aes-256-cfb
     name: 13|🇸🇬 狮城特殊|@ripaojiedian
     password: amazonskr05
     port: 443
-    server: 54.255.240.168
+    server: 13.213.51.39
     tfo: false
     type: ss
   - cipher: aes-256-cfb
     name: 13|🇰🇷 韩国特殊|@ripaojiedian
     password: amazonskr05
     port: 443
-    server: 18.142.225.149
+    server: 3.39.223.233
     tfo: false
     type: ss
-  - alterId: 0
-    cipher: auto
-    name: 13,14|英国|@ripaojiedian
-    network: ws
-    port: 23985
-    server: 5.39.254.196
-    servername: ''
-    skip-cert-verify: false
+  - cipher: aes-256-cfb
+    name: 13|🇯🇵 日本特殊|@ripaojiedian
+    password: amazonskr05
+    port: 443
+    server: 54.151.193.123
     tfo: false
-    tls: false
-    type: vmess
-    uuid: 398ce84e-4849-4e5f-9b1a-a56fbe233b81
-    ws-opts:
-      headers:
-        Host: ''
-      path: /
+    type: ss
   - cipher: aes-256-gcm
     name: 13|🇳🇱 荷兰|@ripaojiedian
     password: dongtaiwang.com
@@ -586,32 +386,6 @@ proxies:
     tls: false
     type: vmess
     uuid: 48264b45-64b8-4e9f-8a88-cef41f20c736
-  - alterId: 0
-    cipher: auto
-    name: 13,14|俄罗斯|@ripaojiedian
-    network: ws
-    port: 17926
-    server: 194.87.69.52
-    servername: ''
-    skip-cert-verify: false
-    tfo: false
-    tls: false
-    type: vmess
-    uuid: c3f7ff71-8e83-4983-94fd-c7bc4018b824
-    ws-opts:
-      headers:
-        Host: ''
-      path: /
-  - cipher: rc4-md5
-    name: 14|6aaZ5rivM3xAcmlwYW9qaWVkaWFu
-    obfs: plain
-    obfs-param: Y2QyYjY5MjkwMi42NjAyYjg0NjM0NjQxMDg1MDYubWljcm9zb2Z0LmNvbQ
-    password: ENZ52K
-    port: 40239
-    protocol: auth_aes128_md5
-    protocol-param: OTI5MDI6cEZXR09R
-    server: 3.link-hub.click
-    type: ssr
   - alterId: 64
     cipher: auto
     name: 14|香港4|@ripaojiedian
@@ -623,15 +397,45 @@ proxies:
     type: vmess
     uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
   - cipher: rc4-md5
-    name: 14|5pel5pysM3xAcmlwYW9qaWVkaWFu
+    name: 14|6aaZ5rivNXxAcmlwYW9qaWVkaWFu
     obfs: plain
     obfs-param: Y2QyYjY5MjkwMi42NjAyYjg0NjM0NjQxMDg1MDYubWljcm9zb2Z0LmNvbQ
     password: ENZ52K
-    port: 40219
+    port: 40206
     protocol: auth_aes128_md5
     protocol-param: OTI5MDI6cEZXR09R
     server: 2.hublink.pro
     type: ssr
+  - alterId: 0
+    cipher: auto
+    name: 14|香港6|@ripaojiedian
+    network: tcp
+    port: 64667
+    server: fiwejniavzoj.xn--fiqs8sjz2bull.com
+    servername: ''
+    tls: false
+    type: vmess
+    uuid: cdc67dd7-1a08-4ac4-b04b-6f04d5dbadff
+  - alterId: 0
+    cipher: auto
+    name: 14|台湾|@ripaojiedian
+    network: tcp
+    port: 60852
+    server: fiwejniavzoj.xn--fiqs8sjz2bull.com
+    servername: ''
+    tls: false
+    type: vmess
+    uuid: cdc67dd7-1a08-4ac4-b04b-6f04d5dbadff
+  - alterId: 0
+    cipher: auto
+    name: 14|日本|@ripaojiedian
+    network: tcp
+    port: 63494
+    server: ywtwepcnwlou.xn--fiqs8sjz2bull.com
+    servername: ''
+    tls: false
+    type: vmess
+    uuid: cdc67dd7-1a08-4ac4-b04b-6f04d5dbadff
   - alterId: 0
     cipher: auto
     name: 14|德国|@ripaojiedian
@@ -642,6 +446,56 @@ proxies:
     tls: false
     type: vmess
     uuid: 48264b45-64b8-4e9f-8a88-cef41f20c736
+  - alterId: 0
+    cipher: auto
+    name: 14|德国2|@ripaojiedian
+    network: tcp
+    port: 80
+    server: 94.182.150.230
+    servername: ''
+    tls: false
+    type: vmess
+    uuid: 2b7ce1d2-0372-4104-aa06-f7d999f26e1d
+  - name: 15|IN_speednode_0106
+    password: '3648425794742788096'
+    port: 443
+    server: 5.8.35.208
+    skip-cert-verify: false
+    sni: loving-boa.treefrog761.one
+    type: trojan
+    udp: true
+  - name: 15|JP_speednode_0109
+    password: 243eab52-9ac1-405c-887c-eb112c0985b8
+    port: 443
+    server: 74.226.136.204
+    skip-cert-verify: false
+    sni: tw02.trojanyyds.xyz
+    type: trojan
+    udp: true
+  - name: 15|JP_speednode_0110
+    password: 243eab52-9ac1-405c-887c-eb112c0985b8
+    port: 443
+    server: sg02.trojanyyds.xyz
+    skip-cert-verify: false
+    sni: sg02.trojanyyds.xyz
+    type: trojan
+    udp: true
+  - name: 15|JP_speednode_0111
+    password: 243eab52-9ac1-405c-887c-eb112c0985b8
+    port: 443
+    server: 74.226.136.204
+    skip-cert-verify: false
+    sni: hk03.trojanyyds.xyz
+    type: trojan
+    udp: true
+  - name: 15|JP_speednode_0112
+    password: 243eab52-9ac1-405c-887c-eb112c0985b8
+    port: 443
+    server: 74.226.136.204
+    skip-cert-verify: true
+    sni: sg02.trojanyyds.xyz
+    type: trojan
+    udp: true
   - alterId: 0
     cipher: auto
     name: 16|d*********g.com_2
@@ -664,76 +518,75 @@ proxies:
     ws-opts:
       headers:
         Host: www.zitian.cn
-  - {name: 🇺🇸 美国 CloudFlare节点, server: 104.21.89.219, port: 2086, client-fingerprint: chrome,
-    type: vmess, uuid: 3fd7b958-2161-46e1-b6fc-bd6bb2165312, alterId: 0, cipher: auto,
-    tls: false, network: ws, ws-opts: {path: /, headers: {Host: shs.xiaoqi666.xyz}}}
-  - {name: 🇺🇸 美国 CloudFlare节点 2, server: s1.cn-db.top, port: 2086, client-fingerprint: chrome,
-    type: vmess, uuid: 4b36625c-b9d9-3ea6-aed5-86d62c70e16d, alterId: 0, cipher: auto,
-    tls: false, network: ws, ws-opts: {path: /dabai.in104.24.181.189, headers: {Host: 100-47-154-9.s1.cn-db.top}}}
-  - {name: 🇷🇺 俄罗斯 V2CROSS.COM, server: 185.242.86.156, port: 54170, client-fingerprint: chrome,
-    type: ss, cipher: chacha20-ietf-poly1305, password: 36ZCHeabUSfKjfQEvJ4HDV}
-  - {name: 🇨🇳 广东省广州市 移动, server: 183.236.51.23, port: 53002, client-fingerprint: chrome,
-    type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 64, cipher: auto,
-    tls: false}
-  - {name: 🇸🇬 俄罗斯 新西伯利亚justhost, server: 45.8.159.241, port: 33395, client-fingerprint: chrome,
-    type: vmess, uuid: 398ce84e-4849-4e5f-9b1a-a56fbe233b81, alterId: 0, cipher: auto,
-    tls: false, network: ws, ws-opts: {path: /}}
-  - {name: 🇺🇸 美国 CloudFlare节点 3, server: s2.db-link01.top, port: 8880, client-fingerprint: chrome,
-    type: vmess, uuid: 4b36625c-b9d9-3ea6-aed5-86d62c70e16d, alterId: 0, cipher: auto,
-    tls: false, network: ws, ws-opts: {path: /dabai.in172.64.0.32, headers: {Host: 100-14-147-154.s2.db-link01.top}}}
-  - {name: 🇮🇪 爱尔兰都柏林 亚马逊云, server: 3.248.124.85, port: 22222, client-fingerprint: chrome,
-    type: trojan, password: telegram-id-privatevpns, sni: trojan.burgerip.co.uk, alpn: [
-      http/1.1]}
-  - {name: 🇺🇸 美国 CloudFlare节点 4, server: s1.db-link01.top, port: 8880, client-fingerprint: chrome,
-    type: vmess, uuid: 4b36625c-b9d9-3ea6-aed5-86d62c70e16d, alterId: 0, cipher: auto,
-    tls: false, network: ws, ws-opts: {path: /dabai.in172.67.95.35, headers: {Host: 100-250-32-53.s1.db-link01.top}}}
-  - {name: 🇪🇺 欧洲 V2CROSS.COM, server: 147.78.1.27, port: 990, client-fingerprint: chrome,
-    type: ss, cipher: chacha20-ietf-poly1305, password: f8f7aCzcPKbsF8p3}
-  - {name: 🇺🇸 美国 Fastly全球Anycast节点, server: gov.uk, port: 443, client-fingerprint: chrome,
-    type: vmess, uuid: 77848824-93b7-4b89-ffd0-e91afff406ce, alterId: 0, cipher: auto,
-    tls: true, network: ws, ws-opts: {path: /77848824, headers: {Host: zheshiscp.com}}}
-  - {name: 🇺🇸 美国 CloudFlare节点 5, server: 104.19.48.236, port: 80, client-fingerprint: chrome,
+  - {name: 🇨🇳 中国 上海欧网网络科技发展有限公司, server: 45.250.184.183, port: 6181, client-fingerprint: chrome,
+    type: ss, cipher: chacha20-ietf-poly1305, password: 11a805f2-41a7-4cd8-8406-0470c3cde0d3}
+  - {name: 🇨🇳 海南省海口市 电信, server: ctmm.gscloud.bond, port: 31620, client-fingerprint: chrome,
+    type: ss, cipher: chacha20-ietf-poly1305, password: f16d3752-7bae-474e-87dc-f892df2caeaf}
+  - {name: 🇺🇸 美国 CloudFlare节点, server: 104.17.213.241, port: 80, client-fingerprint: chrome,
     type: vmess, uuid: e6543319-0574-42ac-b778-1c4325d626f5, alterId: 0, cipher: auto,
     tls: false, network: ws, ws-opts: {path: /, headers: {Host: chunchuan.kejixiaoqi666.store}}}
-  - {name: 🇮🇷 伊朗 V2CROSS.COM, server: 94.182.150.230, port: 80, client-fingerprint: chrome,
-    type: vmess, uuid: 2b7ce1d2-0372-4104-aa06-f7d999f26e1d, alterId: 0, cipher: auto,
+  - {name: 🇷🇺 俄罗斯 V2CROSS.COM, server: 195.58.49.50, port: 17926, client-fingerprint: chrome,
+    type: vmess, uuid: 192f7b8a-444f-4a0a-8ae1-b93ff72bb7ec, alterId: 0, cipher: auto,
+    tls: false, network: ws, ws-opts: {path: /}}
+  - {name: 🇺🇸 美国 V2CROSS.COM, server: 45.144.48.128, port: 8443, client-fingerprint: chrome,
+    type: vmess, uuid: a4850481-9b95-430f-9b2d-192d2410b4f4, alterId: 0, cipher: auto,
+    tls: true, network: ws, ws-opts: {path: /vmess/}}
+  - {name: 亚太地区 V2CROSS.COM, server: 36.50.135.142, port: 443, client-fingerprint: chrome,
+    type: trojan, password: 94d219c9-1afc-4d42-b090-8b3794764380, sni: bs1.loadingip.com}
+  - {name: 🇺🇸 美国 CloudFlare节点 2, server: hk1.899994.xyz, port: 443, client-fingerprint: chrome,
+    type: vmess, uuid: a0605527-28e4-449c-80ee-5642cc16a8af, alterId: 0, cipher: auto,
+    tls: true, network: ws, ws-opts: {path: /index, headers: {Host: hk1.899994.xyz}}}
+  - {name: 🇺🇸 美国 CloudFlare节点 3, server: s5.db-link02.top, port: 8080, client-fingerprint: chrome,
+    type: vmess, uuid: 4b36625c-b9d9-3ea6-aed5-86d62c70e16d, alterId: 0, cipher: auto,
+    tls: false, network: ws, ws-opts: {path: /dabai.in104.20.16.209, headers: {Host: 100-149-191-2.s5.db-link02.top}}}
+  - {name: 🇺🇸 美国 CloudFlare节点 4, server: s5.cn-db.top, port: 80, client-fingerprint: chrome,
+    type: vmess, uuid: 4b36625c-b9d9-3ea6-aed5-86d62c70e16d, alterId: 0, cipher: auto,
+    tls: false, network: ws, ws-opts: {path: /dabai.in104.25.66.1, headers: {Host: 100-116-186-216.s5.cn-db.top}}}
+  - {name: 🇺🇸 美国 CloudFlare节点 5, server: 104.16.155.10, port: 2095, client-fingerprint: chrome,
+    type: vmess, uuid: 4b36625c-b9d9-3ea6-aed5-86d62c70e16d, alterId: 0, cipher: auto,
+    tls: false, network: ws, ws-opts: {path: /dabai.in104.20.27.115, headers: {Host: 100-209-47-141.s2.db-link02.top}}}
+  - {name: 🇺🇸 美国 CloudFlare节点 6, server: 190.93.245.230, port: 2086, client-fingerprint: chrome,
+    type: vmess, uuid: 3fd7b958-2161-46e1-b6fc-bd6bb2165312, alterId: 0, cipher: auto,
+    tls: false, network: ws, ws-opts: {path: /, headers: {Host: shs.xiaoqi666.xyz}}}
+  - {name: 🇺🇸 美国 CloudFlare节点 7, server: s2.db-link01.top, port: 80, client-fingerprint: chrome,
+    type: vmess, uuid: 4b36625c-b9d9-3ea6-aed5-86d62c70e16d, alterId: 0, cipher: auto,
+    tls: false, network: ws, ws-opts: {path: /dabai.in172.67.60.154, headers: {Host: 100-55-60-174.s2.db-link01.top}}}
+  - {name: 🇺🇸 美国 V2CROSS.COM 2, server: 45.140.146.223, port: 8388, client-fingerprint: chrome,
+    type: ss, cipher: chacha20-ietf-poly1305, password: YjJiYzBj}
+  - {name: 🇷🇺 俄罗斯 Rubtsovsk Branch of Altai State University, server: 212.192.12.70,
+    port: 17926, client-fingerprint: chrome, type: vmess, uuid: 5cb8c9f4-7d55-48cf-96ca-579db43caa8d,
+    alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: /}}
+  - {name: 🇯🇵 日本 东京Amazon数据中心, server: jp007.421421.xyz, port: 20230, client-fingerprint: chrome,
+    type: trojan, password: 47072f01-8e77-4136-8e85-b0f0d9d08f1d, sni: 421421.xyz}
+  - {name: 🇫🇮 芬兰 Hetzner Online公司, server: 95.217.222.148, port: 443, client-fingerprint: chrome,
+    type: vmess, uuid: fb57f378-b964-4077-af69-4d461a525539, alterId: 0, cipher: auto,
     tls: false}
-  - {name: 🇺🇸 美国 CloudFlare节点 6, server: se.899994.xyz, port: 443, client-fingerprint: chrome,
+  - {name: 🇩🇰 丹麦 V2CROSS.COM, server: 195.85.59.95, port: 8880, client-fingerprint: chrome,
+    type: vmess, uuid: 85c7eba1-dfba-4f3e-9f7a-833fa729dc19, alterId: 0, cipher: auto,
+    tls: false, network: ws, ws-opts: {path: /?ed=2048, headers: {Host: yg.changyouVPN.top}}}
+  - {name: 🇺🇸 美国 CloudFlare节点 8, server: phoenix.899994.xyz, port: 8443, client-fingerprint: chrome,
     type: vmess, uuid: a0605527-28e4-449c-80ee-5642cc16a8af, alterId: 0, cipher: auto,
-    tls: true, network: ws, ws-opts: {path: /index, headers: {Host: se.899994.xyz}}}
-  - {name: 🇦🇱 阿尔巴尼亚 V2CROSS.COM, server: 109.104.154.146, port: 33333, client-fingerprint: chrome,
-    type: ss, cipher: aes-256-gcm, password: dongtaiwang.com}
-  - {name: 🇮🇪 爱尔兰 V2CROSS.COM, server: 99.80.243.143, port: 22222, client-fingerprint: chrome,
-    type: trojan, password: telegram-id-privatevpns, sni: trojan.burgerip.co.uk, alpn: [
-      http/1.1]}
-  - {name: 🇺🇸 美国 CloudFlare节点 7, server: us.cowvpn.org, port: 443, client-fingerprint: chrome,
-    type: vmess, uuid: 11a805f2-41a7-4cd8-8406-0470c3cde0d3, alterId: 0, cipher: auto,
-    tls: true, network: ws, ws-opts: {path: /cctv13/vmess_us1, headers: {Host: us2cf.cowvpn.org}}}
-  - {name: 🇨🇳 湖北省武汉市 联通, server: in06.my1188.org, port: 64016, client-fingerprint: chrome,
-    type: vmess, uuid: fe0346d9-a972-3d8a-bac7-310604fa108f, alterId: 0, cipher: auto,
-    tls: false, servername: us01.wechat-cdn-us01.one}
-  - {name: 🇺🇸 美国 CloudFlare节点 8, server: s4.cn-db.top, port: 80, client-fingerprint: chrome,
+    tls: true, network: ws, ws-opts: {path: /index, headers: {Host: phoenix.899994.xyz}}}
+  - {name: 🇬🇧 英国 V2CROSS.COM, server: 5.39.254.196, port: 23985, client-fingerprint: chrome,
+    type: vmess, uuid: 398ce84e-4849-4e5f-9b1a-a56fbe233b81, alterId: 0, cipher: auto,
+    tls: false, network: ws, ws-opts: {path: /}}
+  - {name: 🇩🇰 丹麦 V2CROSS.COM 2, server: 195.85.59.161, port: 8880, client-fingerprint: chrome,
+    type: vmess, uuid: 85c7eba1-dfba-4f3e-9f7a-833fa729dc19, alterId: 0, cipher: auto,
+    tls: false, network: ws, ws-opts: {path: /?ed=2048, headers: {Host: yg.changyouVPN.top}}}
+  - {name: 🇺🇸 美国 Bodis有限责任公司, server: www.darkroom.lol, port: 8080, client-fingerprint: chrome,
+    type: vmess, uuid: 22826b44-5c1a-4b4b-dbaa-83a2e8bd95f0, alterId: 0, cipher: auto,
+    tls: false, network: ws, ws-opts: {path: /, headers: {Host: www.darkroom.lol}}}
+  - {name: 🇺🇸 美国 CloudFlare节点 9, server: s5.db-link02.top, port: 8880, client-fingerprint: chrome,
     type: vmess, uuid: 4b36625c-b9d9-3ea6-aed5-86d62c70e16d, alterId: 0, cipher: auto,
-    tls: false, network: ws, ws-opts: {path: /dabai.in172.64.27.157, headers: {Host: 100-210-164-205.s4.cn-db.top}}}
-  - {name: 🇺🇸 美国 CloudFlare节点 9, server: s2.cn-db.top, port: 2082, client-fingerprint: chrome,
+    tls: false, network: ws, ws-opts: {path: /dabai.in104.19.220.104, headers: {Host: 100-85-25-119.s5.db-link02.top}}}
+  - {name: 🇺🇸 美国 CloudFlare节点 10, server: s1.db-link01.top, port: 2052, client-fingerprint: chrome,
     type: vmess, uuid: 4b36625c-b9d9-3ea6-aed5-86d62c70e16d, alterId: 0, cipher: auto,
-    tls: false, network: ws, ws-opts: {path: /dabai.in104.21.22.199, headers: {Host: 100-22-66-14.s2.cn-db.top}}}
-  - {name: 🇺🇸 美国 CloudFlare节点 10, server: tokyo.899994.xyz, port: 443, client-fingerprint: chrome,
-    type: vmess, uuid: a0605527-28e4-449c-80ee-5642cc16a8af, alterId: 0, cipher: auto,
-    tls: true, network: ws, ws-opts: {path: /index, headers: {Host: tokyo.899994.xyz}}}
-  - {name: 🇺🇸 北美地区 V2CROSS.COM, server: 23.154.136.247, port: 2376, client-fingerprint: chrome,
-    type: ss, cipher: aes-256-gcm, password: faBAoD54k87UJG7}
-  - {name: 🇫🇷 法国 OVH, server: 51.38.65.155, port: 443, client-fingerprint: chrome,
-    type: trojan, password: ead93bc0-d7fc-11ef-a52e-1239d0255272}
-  - {name: 🇺🇸 美国 CloudFlare节点 11, server: s4.db-link02.top, port: 2082, client-fingerprint: chrome,
-    type: vmess, uuid: 4b36625c-b9d9-3ea6-aed5-86d62c70e16d, alterId: 0, cipher: auto,
-    tls: false, network: ws, ws-opts: {path: /dabai.in172.67.8.3, headers: {Host: 100-116-85-183.s4.db-link02.top}}}
-  - {name: 🇺🇸 美国 CloudFlare节点 12, server: sg2.cowvpn.org, port: 443, client-fingerprint: chrome,
-    type: vmess, uuid: 11a805f2-41a7-4cd8-8406-0470c3cde0d3, alterId: 0, cipher: auto,
-    tls: true, network: ws, ws-opts: {path: /cctv13/vmess_sg2cf, headers: {Host: sg2cf.cowvpn.org}}}
-  - {name: 🇫🇷 法国 法国计算机科学大学, server: 163.5.159.231, port: 443, client-fingerprint: chrome,
-    type: vmess, uuid: e537f2f5-2a0c-4f59-92c9-832ca6433bf3, alterId: 0, cipher: auto,
-    tls: true, network: ws, ws-opts: {path: /linkws, headers: {Host: irvideo.cfd}}}
+    tls: false, network: ws, ws-opts: {path: /dabai.in172.67.2.142, headers: {Host: 100-151-164-47.s1.db-link01.top}}}
+  - {name: 🇺🇸 美国 CloudFlare节点 11, server: 172.67.155.172, port: 8080, client-fingerprint: chrome,
+    type: vmess, uuid: 20666f30-0add-4da4-bba0-28f985426978, alterId: 0, cipher: auto,
+    tls: false, network: ws, ws-opts: {path: /?ed=2048, headers: {Host: domg.pmy666.xyz}}}
+  - {name: 🇷🇺 俄罗斯 V2CROSS.COM 2, server: 185.242.86.156, port: 54170, client-fingerprint: chrome,
+    type: ss, cipher: chacha20-ietf-poly1305, password: 36ZCHeabUSfKjfQEvJ4HDV}
 proxy-groups:
   - name: PROXY
     type: select
@@ -766,333 +619,288 @@ proxy-groups:
     lazy: true
     tolerance: 100
     proxies:
-      - 🇺🇸_US_美国->🇨🇳_CN_中国
-      - 🇨🇳_CN_中国->🇷🇺_RU_俄罗斯_1
-      - 🇩🇪_DE_德国_1
-      - 🇺🇸_US_美国
-      - 🇬🇧_GB_英国
-      - 🇷🇴_RO_罗马尼亚
-      - 🇺🇸_US_美国_6
-      - 🇺🇸_US_美国_5
-      - 🇨🇦_CA_加拿大
-      - 🇨🇳_CN_中国->🇷🇺_RU_俄罗斯
-      - 🇺🇸_US_美国_2
-      - 🇺🇸_US_美国_4
-      - 🇦🇱_AL_阿尔巴尼亚
-      - 🇺🇸_US_美国_3
-      - 🇳🇱_NL_荷兰
-      - 🇷🇺_RU_俄罗斯_2
-      - 🇺🇸_US_美国_1
-      - 🇮🇷_IR_伊朗
-      - 🇵🇱_PL_波兰
-      - 🇮🇷_IR_伊朗_1
-      - 🇷🇺_RU_俄罗斯
-      - 🇷🇺_RU_俄罗斯_1
-      - 🇮🇹_IT_意大利
-      - 14|德国|@ripaojiedian
-      - 13|🇸🇬 狮城特殊|@ripaojiedian
-      - 13|🇰🇷 韩国特殊|@ripaojiedian
-      - 0|-https://t.me/MrXbin-26
-      - 13|🇩🇪 德国|@ripaojiedian
-      - 13,14|俄罗斯|@ripaojiedian
-      - 0|-https://t.me/MrXbin-12
-      - 0|-https://t.me/MrXbin-59
-      - 13,14|香港2|@ripaojiedian
-      - 0|-https://t.me/MrXbin-9
-      - 13|🇭🇰 香港3|@ripaojiedian
-      - 13|🇭🇰 香港4|@ripaojiedian
-      - 13|🇺🇸 美国|@ripaojiedian
-      - 0|-https://t.me/MrXbin-47
-      - 0|-https://t.me/MrXbin-13
-      - 16|d*********g.com_3
-      - 13|🇳🇱 荷兰|@ripaojiedian
-      - 13|🇭🇰 香港6|@ripaojiedian
-      - 0|-https://t.me/MrXbin-23
-      - 13|🇸🇬 新加坡2|@ripaojiedian
-      - 13,14|香港|@ripaojiedian
-      - 0|-https://t.me/MrXbin-6
-      - 0|-https://t.me/MrXbin-25
-      - 13|🇺🇸 美国2|@ripaojiedian
-      - 14|6aaZ5rivM3xAcmlwYW9qaWVkaWFu
-      - 0|-https://t.me/MrXbin-11
-      - 14|香港4|@ripaojiedian
-      - 16|d*********g.com_2
-      - 0|-https://t.me/MrXbin-5
-      - 0|-https://t.me/MrXbin-8
-      - 13|🇸🇬 新加坡|@ripaojiedian
-      - 0|-https://t.me/MrXbin-24
-      - 0|-https://t.me/MrXbin-51
-      - 0|-https://t.me/MrXbin-58
-      - 14|5pel5pysM3xAcmlwYW9qaWVkaWFu
-      - 0|-https://t.me/MrXbin-17
-      - 0|-https://t.me/MrXbin-1
-      - 0|-https://t.me/MrXbin-16
-      - 13,14|香港7|@ripaojiedian
-      - 13|🇭🇰 香港5|@ripaojiedian
-      - 0|-https://t.me/MrXbin-55
       - 13|🇯🇵 日本特殊|@ripaojiedian
-      - 13|🇯🇵 日本|@ripaojiedian
-      - 0|-https://t.me/MrXbin-56
+      - 13,14|香港2|@ripaojiedian
+      - 14|香港6|@ripaojiedian
+      - 0|-https://t.me/MrXbin-69
+      - 0|-https://t.me/MrXbin-30
       - 0|-https://t.me/MrXbin-60
-      - 13|🇯🇵 日本2|@ripaojiedian
+      - 0|-https://t.me/MrXbin-50
+      - 14|香港4|@ripaojiedian
+      - 0|-https://t.me/MrXbin-5
+      - 13|🇹🇼 台湾|@ripaojiedian
+      - 13|🇸🇬 狮城特殊|@ripaojiedian
+      - 13|🇭🇰 香港4|@ripaojiedian
+      - 13|🇯🇵 日本|@ripaojiedian
+      - 0|-https://t.me/MrXbin-70
+      - 13|🇸🇬 新加坡|@ripaojiedian
+      - 0|-https://t.me/MrXbin-68
+      - 14|6aaZ5rivNXxAcmlwYW9qaWVkaWFu
+      - 13,14|香港|@ripaojiedian
+      - 14|日本|@ripaojiedian
+      - 15|JP_speednode_0110
+      - 0|-https://t.me/MrXbin-13
+      - 16|d*********g.com_2
+      - 0|-https://t.me/MrXbin-67
       - 0|-https://t.me/MrXbin-2
-      - 0|-https://t.me/MrXbin-3
-      - 13,14|英国|@ripaojiedian
+      - 0|-https://t.me/MrXbin-4
+      - 0|-https://t.me/MrXbin-33
+      - 0|-https://t.me/MrXbin-61
+      - 0|-https://t.me/MrXbin-14
+      - 13|🇭🇰 香港5|@ripaojiedian
+      - 13|🇰🇷 韩国特殊|@ripaojiedian
+      - '13,14|新加坡|@ripaojiedian #1'
+      - 15|JP_speednode_0112
+      - 0|-https://t.me/MrXbin-25
+      - 0|-https://t.me/MrXbin-34
+      - 15|IN_speednode_0106
+      - 16|d*********g.com_3
+      - 15|JP_speednode_0111
+      - 0|-https://t.me/MrXbin-55
+      - 0|-https://t.me/MrXbin-12
+      - 0|-https://t.me/MrXbin-27
+      - 0,13|🇩🇪 德国2|@ripaojiedian
+      - 13|🇳🇱 荷兰|@ripaojiedian
+      - 14|德国|@ripaojiedian
+      - 0|-https://t.me/MrXbin-6
+      - 13|🇭🇰 香港6|@ripaojiedian
+      - 0|-https://t.me/MrXbin-31
+      - 13|🇩🇪 德国|@ripaojiedian
+      - 0|-https://t.me/MrXbin-28
       - 0|-https://t.me/MrXbin-7
       - 0|-https://t.me/MrXbin-15
-      - 13|🇯🇵 日本3|@ripaojiedian
-      - 🇮🇪 爱尔兰都柏林 亚马逊云
-      - 🇫🇷 法国 OVH
-      - 🇺🇸 美国 CloudFlare节点 5
-      - 🇺🇸 美国 CloudFlare节点 9
-      - 🇮🇷 伊朗 V2CROSS.COM
-      - 🇺🇸 美国 CloudFlare节点 4
-      - 🇺🇸 美国 CloudFlare节点 8
-      - 🇺🇸 美国 CloudFlare节点 2
-      - 🇺🇸 美国 CloudFlare节点 10
-      - 🇺🇸 美国 CloudFlare节点 12
-      - 🇺🇸 美国 Fastly全球Anycast节点
-      - 🇺🇸 美国 CloudFlare节点 6
-      - 🇺🇸 美国 CloudFlare节点
-      - 🇨🇳 湖北省武汉市 联通
-      - 🇺🇸 北美地区 V2CROSS.COM
-      - 🇫🇷 法国 法国计算机科学大学
-      - 🇦🇱 阿尔巴尼亚 V2CROSS.COM
-      - 🇨🇳 广东省广州市 移动
+      - 0|-https://t.me/MrXbin-11
+      - 13,14|香港3|@ripaojiedian
+      - 0|-https://t.me/MrXbin-71
+      - 14|台湾|@ripaojiedian
+      - 15|JP_speednode_0109
+      - 0|-https://t.me/MrXbin-66
+      - 13,14|美国|@ripaojiedian
+      - 0|-https://t.me/MrXbin-8
+      - 14|德国2|@ripaojiedian
+      - 0|-https://t.me/MrXbin-9
       - 🇺🇸 美国 CloudFlare节点 3
-      - 🇷🇺 俄罗斯 V2CROSS.COM
-      - 🇮🇪 爱尔兰 V2CROSS.COM
+      - 🇺🇸 美国 V2CROSS.COM 2
+      - 🇺🇸 美国 Bodis有限责任公司
+      - 🇺🇸 美国 CloudFlare节点 6
+      - 🇺🇸 美国 CloudFlare节点 8
+      - 🇨🇳 海南省海口市 电信
+      - 🇺🇸 美国 CloudFlare节点 10
+      - 🇨🇳 中国 上海欧网网络科技发展有限公司
+      - 🇷🇺 俄罗斯 Rubtsovsk Branch of Altai State University
+      - 亚太地区 V2CROSS.COM
+      - 🇺🇸 美国 CloudFlare节点
       - 🇺🇸 美国 CloudFlare节点 11
+      - 🇷🇺 俄罗斯 V2CROSS.COM
+      - 🇺🇸 美国 V2CROSS.COM
+      - 🇩🇰 丹麦 V2CROSS.COM
       - 🇺🇸 美国 CloudFlare节点 7
-      - 🇸🇬 俄罗斯 新西伯利亚justhost
-      - 🇪🇺 欧洲 V2CROSS.COM
+      - 🇫🇮 芬兰 Hetzner Online公司
+      - 🇺🇸 美国 CloudFlare节点 2
+      - 🇺🇸 美国 CloudFlare节点 9
+      - 🇺🇸 美国 CloudFlare节点 4
+      - 🇺🇸 美国 CloudFlare节点 5
+      - 🇷🇺 俄罗斯 V2CROSS.COM 2
+      - 🇩🇰 丹麦 V2CROSS.COM 2
+      - 🇬🇧 英国 V2CROSS.COM
+      - 🇯🇵 日本 东京Amazon数据中心
   - name: LOAD-BALANCE
     type: load-balance
     url: http://www.gstatic.com/generate_204
     interval: 600
     proxies:
-      - 0|-https://t.me/MrXbin-12
-      - 🇺🇸_US_美国
-      - 🇬🇧_GB_英国
-      - 🇺🇸_US_美国_5
-      - 🇺🇸 美国 Fastly全球Anycast节点
-      - 🇺🇸 美国 CloudFlare节点 6
-      - 🇷🇺_RU_俄罗斯_2
-      - 🇺🇸 北美地区 V2CROSS.COM
-      - 0|-https://t.me/MrXbin-8
-      - 🇮🇷_IR_伊朗_1
-      - 0|-https://t.me/MrXbin-1
-      - 13|🇭🇰 香港5|@ripaojiedian
-      - 🇨🇳 广东省广州市 移动
-      - 0|-https://t.me/MrXbin-3
-      - 🇸🇬 俄罗斯 新西伯利亚justhost
-      - 0|-https://t.me/MrXbin-15
-      - 🇺🇸_US_美国->🇨🇳_CN_中国
-      - 14|德国|@ripaojiedian
-      - 13|🇸🇬 狮城特殊|@ripaojiedian
-      - 0|-https://t.me/MrXbin-26
-      - 🇩🇪_DE_德国_1
-      - 0|-https://t.me/MrXbin-47
-      - 🇮🇷 伊朗 V2CROSS.COM
-      - 🇺🇸 美国 CloudFlare节点 4
-      - 🇺🇸_US_美国_2
-      - 16|d*********g.com_3
-      - 🇺🇸 美国 CloudFlare节点
-      - 0|-https://t.me/MrXbin-23
-      - 0|-https://t.me/MrXbin-6
-      - 🇨🇳 湖北省武汉市 联通
-      - 14|6aaZ5rivM3xAcmlwYW9qaWVkaWFu
-      - 14|香港4|@ripaojiedian
-      - 🇮🇷_IR_伊朗
-      - 16|d*********g.com_2
-      - 0|-https://t.me/MrXbin-5
-      - 13|🇸🇬 新加坡|@ripaojiedian
-      - 0|-https://t.me/MrXbin-58
-      - 0|-https://t.me/MrXbin-17
-      - 0|-https://t.me/MrXbin-16
-      - 🇦🇱 阿尔巴尼亚 V2CROSS.COM
-      - 🇷🇺 俄罗斯 V2CROSS.COM
-      - 13|🇯🇵 日本2|@ripaojiedian
-      - 🇷🇺_RU_俄罗斯
-      - 13,14|英国|@ripaojiedian
-      - 13|🇯🇵 日本3|@ripaojiedian
-      - 🇨🇳_CN_中国->🇷🇺_RU_俄罗斯_1
-      - 🇫🇷 法国 OVH
-      - 13,14|俄罗斯|@ripaojiedian
-      - 13|🇭🇰 香港3|@ripaojiedian
-      - 0|-https://t.me/MrXbin-59
-      - 🇷🇴_RO_罗马尼亚
-      - 🇺🇸 美国 CloudFlare节点 5
-      - 🇺🇸_US_美国_6
-      - 🇨🇦_CA_加拿大
-      - 🇨🇳_CN_中国->🇷🇺_RU_俄罗斯
-      - 🇺🇸 美国 CloudFlare节点 12
-      - 🇺🇸_US_美国_3
-      - 13,14|香港|@ripaojiedian
-      - 🇳🇱_NL_荷兰
-      - 0|-https://t.me/MrXbin-11
-      - 🇺🇸_US_美国_1
-      - 🇫🇷 法国 法国计算机科学大学
-      - 14|5pel5pysM3xAcmlwYW9qaWVkaWFu
-      - 13,14|香港7|@ripaojiedian
       - 13|🇯🇵 日本特殊|@ripaojiedian
-      - 🇺🇸 美国 CloudFlare节点 3
-      - 🇺🇸 美国 CloudFlare节点 11
-      - 🇺🇸 美国 CloudFlare节点 7
-      - 🇷🇺_RU_俄罗斯_1
-      - 0|-https://t.me/MrXbin-7
+      - 14|香港4|@ripaojiedian
+      - 13|🇹🇼 台湾|@ripaojiedian
+      - 13|🇸🇬 狮城特殊|@ripaojiedian
       - 🇺🇸 美国 CloudFlare节点 10
-      - 🇮🇪 爱尔兰都柏林 亚马逊云
-      - 13|🇰🇷 韩国特殊|@ripaojiedian
+      - 13|🇸🇬 新加坡|@ripaojiedian
+      - 13,14|香港|@ripaojiedian
+      - 🇨🇳 中国 上海欧网网络科技发展有限公司
+      - 13|🇭🇰 香港5|@ripaojiedian
       - 13|🇩🇪 德国|@ripaojiedian
-      - 13|🇭🇰 香港4|@ripaojiedian
-      - 13,14|香港2|@ripaojiedian
-      - 0|-https://t.me/MrXbin-9
-      - 13|🇺🇸 美国|@ripaojiedian
-      - 🇺🇸 美国 CloudFlare节点 9
-      - 0|-https://t.me/MrXbin-13
-      - 🇺🇸 美国 CloudFlare节点 2
-      - 🇺🇸 美国 CloudFlare节点 8
-      - 🇺🇸_US_美国_4
-      - 🇦🇱_AL_阿尔巴尼亚
-      - 13|🇳🇱 荷兰|@ripaojiedian
-      - 13|🇭🇰 香港6|@ripaojiedian
-      - 13|🇸🇬 新加坡2|@ripaojiedian
-      - 0|-https://t.me/MrXbin-25
-      - 13|🇺🇸 美国2|@ripaojiedian
-      - 🇵🇱_PL_波兰
-      - 0|-https://t.me/MrXbin-24
-      - 0|-https://t.me/MrXbin-51
-      - 0|-https://t.me/MrXbin-55
-      - 13|🇯🇵 日本|@ripaojiedian
-      - 🇮🇪 爱尔兰 V2CROSS.COM
-      - 0|-https://t.me/MrXbin-56
-      - 0|-https://t.me/MrXbin-60
+      - 14|台湾|@ripaojiedian
+      - 15|JP_speednode_0109
+      - 0|-https://t.me/MrXbin-66
+      - 13,14|美国|@ripaojiedian
+      - 0|-https://t.me/MrXbin-8
+      - 14|德国2|@ripaojiedian
+      - 0|-https://t.me/MrXbin-70
+      - 14|日本|@ripaojiedian
+      - 15|JP_speednode_0110
       - 0|-https://t.me/MrXbin-2
-      - 🇮🇹_IT_意大利
-      - 🇪🇺 欧洲 V2CROSS.COM
+      - 🇺🇸 美国 CloudFlare节点
+      - 13|🇰🇷 韩国特殊|@ripaojiedian
+      - 15|JP_speednode_0112
+      - 🇺🇸 美国 CloudFlare节点 11
+      - 0|-https://t.me/MrXbin-34
+      - 🇩🇰 丹麦 V2CROSS.COM
+      - 14|德国|@ripaojiedian
+      - 0|-https://t.me/MrXbin-28
+      - 0|-https://t.me/MrXbin-11
+      - 🇬🇧 英国 V2CROSS.COM
+      - 🇯🇵 日本 东京Amazon数据中心
+      - 14|香港6|@ripaojiedian
+      - 0|-https://t.me/MrXbin-30
+      - 0|-https://t.me/MrXbin-60
+      - 🇺🇸 美国 V2CROSS.COM 2
+      - 🇺🇸 美国 CloudFlare节点 6
+      - 13|🇭🇰 香港4|@ripaojiedian
+      - 🇺🇸 美国 CloudFlare节点 8
+      - 0|-https://t.me/MrXbin-67
+      - 0|-https://t.me/MrXbin-4
+      - 0|-https://t.me/MrXbin-33
+      - 0|-https://t.me/MrXbin-14
+      - '13,14|新加坡|@ripaojiedian #1'
+      - 0|-https://t.me/MrXbin-25
+      - 15|IN_speednode_0106
+      - 0|-https://t.me/MrXbin-55
+      - 0|-https://t.me/MrXbin-12
+      - 🇺🇸 美国 V2CROSS.COM
+      - 13|🇳🇱 荷兰|@ripaojiedian
+      - 🇺🇸 美国 CloudFlare节点 7
+      - 13|🇭🇰 香港6|@ripaojiedian
+      - 0|-https://t.me/MrXbin-31
+      - 🇫🇮 芬兰 Hetzner Online公司
+      - 0|-https://t.me/MrXbin-7
+      - 13,14|香港3|@ripaojiedian
+      - 🇺🇸 美国 CloudFlare节点 4
+      - 🇺🇸 美国 CloudFlare节点 5
+      - 🇩🇰 丹麦 V2CROSS.COM 2
+      - 0|-https://t.me/MrXbin-9
+      - 13,14|香港2|@ripaojiedian
+      - 0|-https://t.me/MrXbin-69
+      - 🇺🇸 美国 CloudFlare节点 3
+      - 0|-https://t.me/MrXbin-50
+      - 0|-https://t.me/MrXbin-5
+      - 🇺🇸 美国 Bodis有限责任公司
+      - 🇨🇳 海南省海口市 电信
+      - 13|🇯🇵 日本|@ripaojiedian
+      - 14|6aaZ5rivNXxAcmlwYW9qaWVkaWFu
+      - 0|-https://t.me/MrXbin-68
+      - 0|-https://t.me/MrXbin-13
+      - 16|d*********g.com_2
+      - 🇷🇺 俄罗斯 Rubtsovsk Branch of Altai State University
+      - 亚太地区 V2CROSS.COM
+      - 0|-https://t.me/MrXbin-61
+      - 16|d*********g.com_3
+      - 🇷🇺 俄罗斯 V2CROSS.COM
+      - 15|JP_speednode_0111
+      - 0|-https://t.me/MrXbin-27
+      - 0,13|🇩🇪 德国2|@ripaojiedian
+      - 0|-https://t.me/MrXbin-6
+      - 🇺🇸 美国 CloudFlare节点 2
+      - 🇺🇸 美国 CloudFlare节点 9
+      - 0|-https://t.me/MrXbin-15
+      - 0|-https://t.me/MrXbin-71
+      - 🇷🇺 俄罗斯 V2CROSS.COM 2
   - name: SELECT
     type: select
     proxies:
-      - 0|-https://t.me/MrXbin-12
-      - 🇺🇸_US_美国
-      - 🇬🇧_GB_英国
-      - 🇺🇸_US_美国_5
-      - 🇺🇸 美国 Fastly全球Anycast节点
-      - 🇺🇸 美国 CloudFlare节点 6
-      - 🇷🇺_RU_俄罗斯_2
-      - 🇺🇸 北美地区 V2CROSS.COM
-      - 0|-https://t.me/MrXbin-8
-      - 🇮🇷_IR_伊朗_1
-      - 0|-https://t.me/MrXbin-1
-      - 13|🇭🇰 香港5|@ripaojiedian
-      - 🇨🇳 广东省广州市 移动
-      - 0|-https://t.me/MrXbin-3
-      - 🇸🇬 俄罗斯 新西伯利亚justhost
-      - 0|-https://t.me/MrXbin-15
-      - 🇺🇸_US_美国->🇨🇳_CN_中国
-      - 14|德国|@ripaojiedian
-      - 13|🇸🇬 狮城特殊|@ripaojiedian
-      - 0|-https://t.me/MrXbin-26
-      - 🇩🇪_DE_德国_1
-      - 0|-https://t.me/MrXbin-47
-      - 🇮🇷 伊朗 V2CROSS.COM
-      - 🇺🇸 美国 CloudFlare节点 4
-      - 🇺🇸_US_美国_2
-      - 16|d*********g.com_3
-      - 🇺🇸 美国 CloudFlare节点
-      - 0|-https://t.me/MrXbin-23
-      - 0|-https://t.me/MrXbin-6
-      - 🇨🇳 湖北省武汉市 联通
-      - 14|6aaZ5rivM3xAcmlwYW9qaWVkaWFu
-      - 14|香港4|@ripaojiedian
-      - 🇮🇷_IR_伊朗
-      - 16|d*********g.com_2
-      - 0|-https://t.me/MrXbin-5
-      - 13|🇸🇬 新加坡|@ripaojiedian
-      - 0|-https://t.me/MrXbin-58
-      - 0|-https://t.me/MrXbin-17
-      - 0|-https://t.me/MrXbin-16
-      - 🇦🇱 阿尔巴尼亚 V2CROSS.COM
-      - 🇷🇺 俄罗斯 V2CROSS.COM
-      - 13|🇯🇵 日本2|@ripaojiedian
-      - 🇷🇺_RU_俄罗斯
-      - 13,14|英国|@ripaojiedian
-      - 13|🇯🇵 日本3|@ripaojiedian
-      - 🇨🇳_CN_中国->🇷🇺_RU_俄罗斯_1
-      - 🇫🇷 法国 OVH
-      - 13,14|俄罗斯|@ripaojiedian
-      - 13|🇭🇰 香港3|@ripaojiedian
-      - 0|-https://t.me/MrXbin-59
-      - 🇷🇴_RO_罗马尼亚
-      - 🇺🇸 美国 CloudFlare节点 5
-      - 🇺🇸_US_美国_6
-      - 🇨🇦_CA_加拿大
-      - 🇨🇳_CN_中国->🇷🇺_RU_俄罗斯
-      - 🇺🇸 美国 CloudFlare节点 12
-      - 🇺🇸_US_美国_3
-      - 13,14|香港|@ripaojiedian
-      - 🇳🇱_NL_荷兰
-      - 0|-https://t.me/MrXbin-11
-      - 🇺🇸_US_美国_1
-      - 🇫🇷 法国 法国计算机科学大学
-      - 14|5pel5pysM3xAcmlwYW9qaWVkaWFu
-      - 13,14|香港7|@ripaojiedian
       - 13|🇯🇵 日本特殊|@ripaojiedian
-      - 🇺🇸 美国 CloudFlare节点 3
-      - 🇺🇸 美国 CloudFlare节点 11
-      - 🇺🇸 美国 CloudFlare节点 7
-      - 🇷🇺_RU_俄罗斯_1
-      - 0|-https://t.me/MrXbin-7
+      - 14|香港4|@ripaojiedian
+      - 13|🇹🇼 台湾|@ripaojiedian
+      - 13|🇸🇬 狮城特殊|@ripaojiedian
       - 🇺🇸 美国 CloudFlare节点 10
-      - 🇮🇪 爱尔兰都柏林 亚马逊云
-      - 13|🇰🇷 韩国特殊|@ripaojiedian
+      - 13|🇸🇬 新加坡|@ripaojiedian
+      - 13,14|香港|@ripaojiedian
+      - 🇨🇳 中国 上海欧网网络科技发展有限公司
+      - 13|🇭🇰 香港5|@ripaojiedian
       - 13|🇩🇪 德国|@ripaojiedian
-      - 13|🇭🇰 香港4|@ripaojiedian
-      - 13,14|香港2|@ripaojiedian
-      - 0|-https://t.me/MrXbin-9
-      - 13|🇺🇸 美国|@ripaojiedian
-      - 🇺🇸 美国 CloudFlare节点 9
-      - 0|-https://t.me/MrXbin-13
-      - 🇺🇸 美国 CloudFlare节点 2
-      - 🇺🇸 美国 CloudFlare节点 8
-      - 🇺🇸_US_美国_4
-      - 🇦🇱_AL_阿尔巴尼亚
-      - 13|🇳🇱 荷兰|@ripaojiedian
-      - 13|🇭🇰 香港6|@ripaojiedian
-      - 13|🇸🇬 新加坡2|@ripaojiedian
-      - 0|-https://t.me/MrXbin-25
-      - 13|🇺🇸 美国2|@ripaojiedian
-      - 🇵🇱_PL_波兰
-      - 0|-https://t.me/MrXbin-24
-      - 0|-https://t.me/MrXbin-51
-      - 0|-https://t.me/MrXbin-55
-      - 13|🇯🇵 日本|@ripaojiedian
-      - 🇮🇪 爱尔兰 V2CROSS.COM
-      - 0|-https://t.me/MrXbin-56
-      - 0|-https://t.me/MrXbin-60
+      - 14|台湾|@ripaojiedian
+      - 15|JP_speednode_0109
+      - 0|-https://t.me/MrXbin-66
+      - 13,14|美国|@ripaojiedian
+      - 0|-https://t.me/MrXbin-8
+      - 14|德国2|@ripaojiedian
+      - 0|-https://t.me/MrXbin-70
+      - 14|日本|@ripaojiedian
+      - 15|JP_speednode_0110
       - 0|-https://t.me/MrXbin-2
-      - 🇮🇹_IT_意大利
-      - 🇪🇺 欧洲 V2CROSS.COM
+      - 🇺🇸 美国 CloudFlare节点
+      - 13|🇰🇷 韩国特殊|@ripaojiedian
+      - 15|JP_speednode_0112
+      - 🇺🇸 美国 CloudFlare节点 11
+      - 0|-https://t.me/MrXbin-34
+      - 🇩🇰 丹麦 V2CROSS.COM
+      - 14|德国|@ripaojiedian
+      - 0|-https://t.me/MrXbin-28
+      - 0|-https://t.me/MrXbin-11
+      - 🇬🇧 英国 V2CROSS.COM
+      - 🇯🇵 日本 东京Amazon数据中心
+      - 14|香港6|@ripaojiedian
+      - 0|-https://t.me/MrXbin-30
+      - 0|-https://t.me/MrXbin-60
+      - 🇺🇸 美国 V2CROSS.COM 2
+      - 🇺🇸 美国 CloudFlare节点 6
+      - 13|🇭🇰 香港4|@ripaojiedian
+      - 🇺🇸 美国 CloudFlare节点 8
+      - 0|-https://t.me/MrXbin-67
+      - 0|-https://t.me/MrXbin-4
+      - 0|-https://t.me/MrXbin-33
+      - 0|-https://t.me/MrXbin-14
+      - '13,14|新加坡|@ripaojiedian #1'
+      - 0|-https://t.me/MrXbin-25
+      - 15|IN_speednode_0106
+      - 0|-https://t.me/MrXbin-55
+      - 0|-https://t.me/MrXbin-12
+      - 🇺🇸 美国 V2CROSS.COM
+      - 13|🇳🇱 荷兰|@ripaojiedian
+      - 🇺🇸 美国 CloudFlare节点 7
+      - 13|🇭🇰 香港6|@ripaojiedian
+      - 0|-https://t.me/MrXbin-31
+      - 🇫🇮 芬兰 Hetzner Online公司
+      - 0|-https://t.me/MrXbin-7
+      - 13,14|香港3|@ripaojiedian
+      - 🇺🇸 美国 CloudFlare节点 4
+      - 🇺🇸 美国 CloudFlare节点 5
+      - 🇩🇰 丹麦 V2CROSS.COM 2
+      - 0|-https://t.me/MrXbin-9
+      - 13,14|香港2|@ripaojiedian
+      - 0|-https://t.me/MrXbin-69
+      - 🇺🇸 美国 CloudFlare节点 3
+      - 0|-https://t.me/MrXbin-50
+      - 0|-https://t.me/MrXbin-5
+      - 🇺🇸 美国 Bodis有限责任公司
+      - 🇨🇳 海南省海口市 电信
+      - 13|🇯🇵 日本|@ripaojiedian
+      - 14|6aaZ5rivNXxAcmlwYW9qaWVkaWFu
+      - 0|-https://t.me/MrXbin-68
+      - 0|-https://t.me/MrXbin-13
+      - 16|d*********g.com_2
+      - 🇷🇺 俄罗斯 Rubtsovsk Branch of Altai State University
+      - 亚太地区 V2CROSS.COM
+      - 0|-https://t.me/MrXbin-61
+      - 16|d*********g.com_3
+      - 🇷🇺 俄罗斯 V2CROSS.COM
+      - 15|JP_speednode_0111
+      - 0|-https://t.me/MrXbin-27
+      - 0,13|🇩🇪 德国2|@ripaojiedian
+      - 0|-https://t.me/MrXbin-6
+      - 🇺🇸 美国 CloudFlare节点 2
+      - 🇺🇸 美国 CloudFlare节点 9
+      - 0|-https://t.me/MrXbin-15
+      - 0|-https://t.me/MrXbin-71
+      - 🇷🇺 俄罗斯 V2CROSS.COM 2
 rules:
-  - RULE-SET,apple,DIRECT
-  - GEOIP,CN,DIRECT
-  - RULE-SET,reject,AD
-  - RULE-SET,applications,DIRECT
-  - RULE-SET,icloud,DIRECT
   - RULE-SET,gfw,PROXY
-  - RULE-SET,proxy,OTHER
-  - MATCH,OTHER
   - DOMAIN,clash.razord.top,DIRECT
-  - RULE-SET,tld-not-cn,PROXY
-  - RULE-SET,lancidr,DIRECT
-  - RULE-SET,cncidr,DIRECT
-  - RULE-SET,greatfire,PROXY
+  - RULE-SET,icloud,DIRECT
+  - GEOIP,CN,DIRECT
+  - RULE-SET,proxy,OTHER
+  - RULE-SET,applications,DIRECT
   - RULE-SET,private,DIRECT
-  - RULE-SET,direct,DIRECT
-  - RULE-SET,google,DIRECT
-  - DOMAIN,yacd.haishan.me,DIRECT
+  - RULE-SET,reject,AD
+  - RULE-SET,apple,DIRECT
+  - RULE-SET,lancidr,DIRECT
   - RULE-SET,telegramcidr,PROXY
+  - RULE-SET,cncidr,DIRECT
+  - RULE-SET,google,DIRECT
+  - RULE-SET,tld-not-cn,PROXY
+  - MATCH,OTHER
+  - RULE-SET,greatfire,PROXY
+  - RULE-SET,direct,DIRECT
+  - DOMAIN,yacd.haishan.me,DIRECT
 rule-providers:
   reject:
     type: http
