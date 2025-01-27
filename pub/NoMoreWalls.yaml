@@ -1,4 +1,4 @@
-# Update: 2025-01-27 00:36:50
+# Update: 2025-01-27 02:39:57
 # Created by caoqiang
 mixed-port: 7890
 allow-lan: true
@@ -10,65 +10,45 @@ log-level: info
 external-controller: 0.0.0.0:9090
 global-client-fingerprint: chrome
 proxies:
-  - cipher: chacha20-ietf
-    name: 0|-https://t.me/MrXbin-1
-    password: asd123456
-    port: 8388
-    server: 103.36.91.32
-    type: ss
   - cipher: aes-256-cfb
-    name: 0|-https://t.me/MrXbin-4
+    name: 0|-https://t.me/MrXbin-3
     password: qwerREWQ@@
     port: 51199
     server: 221.139.79.20
     type: ss
     udp: true
-  - cipher: aes-128-gcm
-    name: 0|-https://t.me/MrXbin-5
-    password: shadowsocks
+  - cipher: aes-256-cfb
+    name: 0|-https://t.me/MrXbin-4
+    password: amazonskr05
     port: 443
-    server: uk-dc1.yangon.club
-    type: ss
-  - cipher: aes-128-gcm
-    name: 0|-https://t.me/MrXbin-7
-    password: shadowsocks
-    port: 443
-    server: 212.102.53.197
-    type: ss
-  - cipher: chacha20-ietf
-    name: 0|-https://t.me/MrXbin-9
-    password: asd123456
-    port: 8388
-    server: 202.162.109.169
+    server: 13.231.234.231
     type: ss
     udp: true
-  - cipher: aes-256-cfb
-    name: 0|-https://t.me/MrXbin-14
-    password: qwerREWQ@@
-    port: 4231
-    server: 112.213.102.228
-    type: ss
   - cipher: rc4-md5
-    name: 0|-https://t.me/MrXbin-16
-    password: 14fFPrbezE3HDZzsMOr6
-    port: 8080
-    server: 68.183.227.45
-    type: ss
+    name: 0|-https://t.me/MrXbin-15
+    obfs: tls1.2_ticket_auth
+    password: Cskw6d
+    port: 13206
+    protocol: auth_aes128_md5
+    protocol-param: 524959:5u4MZ6
+    server: xrbsy1.cdn.node.a.tddns-ounk.com
+    type: ssr
   - cipher: aes-128-cfb
-    name: 0|-https://t.me/MrXbin-37
+    name: 0|-https://t.me/MrXbin-17
     obfs: http_post
     password: +asd6a5s5df+
     port: 443
     protocol: auth_aes128_md5
     server: nsus3.irundns.net
     type: ssr
-  - cipher: aes-256-cfb
-    name: 0|-https://t.me/MrXbin-38
-    obfs: plain
-    password: f8f7aCzcPKbsF8p3
-    port: 989
-    protocol: origin
-    server: 195.154.169.198
+  - cipher: rc4-md5
+    name: 0|-https://t.me/MrXbin-19
+    obfs: tls1.2_ticket_auth
+    password: Cskw6d
+    port: 13317
+    protocol: auth_aes128_md5
+    protocol-param: 524959:5u4MZ6
+    server: lld9k6.cdn.node.a.tddns-ounk.com
     type: ssr
   - alterId: 0
     cipher: auto
@@ -77,7 +57,7 @@ proxies:
       method: GET
       path:
         - /
-    name: 0|-https://t.me/MrXbin-57
+    name: 0|-https://t.me/MrXbin-28
     network: http
     port: 2082
     server: 64.225.109.206
@@ -97,34 +77,52 @@ proxies:
       headers:
         Host: tr.koxok.us.kg
       path: /?ed=2560
-  - alterId: 64
+  - alterId: 0
     cipher: auto
-    name: 13|🇭🇰 香港2|@ripaojiedian
-    port: 48109
-    server: 183.236.51.23
+    name: 13,14|香港2|@ripaojiedian
+    network: ws
+    port: 23532
+    server: 212.192.12.70
+    servername: ''
     skip-cert-verify: false
     tfo: false
     tls: false
     type: vmess
-    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+    uuid: 5549a8c5-5d90-4abb-b1df-3182009206a0
+    ws-opts:
+      headers:
+        Host: ''
+      path: /
   - alterId: 64
     cipher: auto
     name: 13|🇭🇰 香港3|@ripaojiedian
-    port: 54104
+    port: 45017
+    server: 142.0.134.242
+    skip-cert-verify: false
+    tfo: false
+    tls: false
+    type: vmess
+    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+  - alterId: 64
+    cipher: auto
+    name: 13|🇭🇰 香港4|@ripaojiedian
+    port: 40565
+    server: 120.232.153.63
+    skip-cert-verify: false
+    tfo: false
+    tls: false
+    type: vmess
+    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+  - alterId: 64
+    cipher: auto
+    name: 13|🇭🇰 香港5|@ripaojiedian
+    port: 51037
     server: 183.236.51.23
     skip-cert-verify: false
     tfo: false
     tls: false
     type: vmess
     uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-  - name: 13,14|香港4|@ripaojiedian
-    network: tcp
-    password: 9e2a92c6-bbe6-49fa-a280-e6f8f3eed7c5
-    port: 27886
-    server: zhk5.capoonetwork.com
-    skip-cert-verify: true
-    sni: www.bilibili.com
-    type: trojan
   - alterId: 64
     cipher: auto
     name: 13|🇭🇰 香港6|@ripaojiedian
@@ -135,17 +133,18 @@ proxies:
     tls: false
     type: vmess
     uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-  - cipher: chacha20-ietf-poly1305
-    name: 13|🇹🇼 台湾|@ripaojiedian
-    password: 9e2a92c6-bbe6-49fa-a280-e6f8f3eed7c5
-    port: 30228
-    server: pretw.capoonetwork.com
-    tfo: false
-    type: ss
+  - name: 13,14|台湾|@ripaojiedian
+    network: tcp
+    password: af2201a4-5455-492b-b78b-bc2bd713295e
+    port: 18147
+    server: wb.kaiqsz.com
+    skip-cert-verify: false
+    sni: mm2.redapricotcloud.com
+    type: trojan
   - alterId: 0
     cipher: auto
     name: 13|🇯🇵 日本|@ripaojiedian
-    port: 19690
+    port: 52380
     server: ywtwepcnwlou.xn--fiqs8sjz2bull.com
     skip-cert-verify: false
     tfo: false
@@ -164,13 +163,6 @@ proxies:
       headers:
         Host: tr.koxok.us.kg
       path: /?ed=2560
-  - cipher: chacha20-ietf-poly1305
-    name: 13|🇯🇵 日本3|@ripaojiedian
-    password: 9e2a92c6-bbe6-49fa-a280-e6f8f3eed7c5
-    port: 19550
-    server: prejp.capoonetwork.com
-    tfo: false
-    type: ss
   - name: 13|🇰🇷 韩国|@ripaojiedian
     network: ws
     password: ouo
@@ -200,28 +192,10 @@ proxies:
     tls: false
     type: vmess
     uuid: 38eda6f2-6e04-4484-8f82-e859e76612d6
-  - name: 13,14|新加坡3|@ripaojiedian
-    network: tcp
-    password: 9e2a92c6-bbe6-49fa-a280-e6f8f3eed7c5
-    port: 23570
-    server: zsg2.capoonetwork.com
-    skip-cert-verify: true
-    sni: v.qq.com
-    type: trojan
-  - alterId: 0
-    cipher: auto
-    name: 13|🇺🇸 美国|@ripaojiedian
-    port: 46833
-    server: 38.147.161.252
-    skip-cert-verify: false
-    tfo: false
-    tls: false
-    type: vmess
-    uuid: 77175906-b651-4c44-9397-04b30a602c0c
-  - name: 13,14|美国2|@ripaojiedian
+  - name: 13,14|美国|@ripaojiedian
     network: tcp
     password: 2b39bbdd-a565-4f8e-b6b6-6b034b2076f4
-    port: 13021
+    port: 13022
     server: naiu-us.05vr9nyqg5.download
     skip-cert-verify: false
     sni: cloudflare.node-ssl.cdn-alibaba.com
@@ -230,21 +204,21 @@ proxies:
     name: 13|🇰🇷 韩国特殊|@ripaojiedian
     password: amazonskr05
     port: 443
-    server: 3.35.54.92
+    server: 54.178.47.135
     tfo: false
     type: ss
   - cipher: aes-256-cfb
     name: 13|🇸🇬 狮城特殊|@ripaojiedian
     password: amazonskr05
     port: 443
-    server: 43.207.72.50
+    server: 54.255.94.7
     tfo: false
     type: ss
   - cipher: aes-256-cfb
     name: 13|🇯🇵 日本特殊|@ripaojiedian
     password: amazonskr05
     port: 443
-    server: 54.180.250.244
+    server: 13.114.24.98
     tfo: false
     type: ss
   - alterId: 0
@@ -270,19 +244,29 @@ proxies:
       path: '%2F%3Fed%3D2560'
   - alterId: 64
     cipher: auto
-    name: 14|香港2|@ripaojiedian
+    name: 14|香港3|@ripaojiedian
     network: tcp
-    port: 48109
-    server: 183.236.51.23
+    port: 45017
+    server: 142.0.134.242
     servername: ''
     tls: false
     type: vmess
     uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
   - alterId: 64
     cipher: auto
-    name: 14|香港3|@ripaojiedian
+    name: 14|香港4|@ripaojiedian
     network: tcp
-    port: 54104
+    port: 40565
+    server: 120.232.153.63
+    servername: ''
+    tls: false
+    type: vmess
+    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+  - alterId: 64
+    cipher: auto
+    name: 14|香港5|@ripaojiedian
+    network: tcp
+    port: 51037
     server: 183.236.51.23
     servername: ''
     tls: false
@@ -302,7 +286,7 @@ proxies:
     cipher: auto
     name: 14|日本|@ripaojiedian
     network: tcp
-    port: 19690
+    port: 52380
     server: ywtwepcnwlou.xn--fiqs8sjz2bull.com
     servername: ''
     tls: false
@@ -342,16 +326,6 @@ proxies:
     tls: false
     type: vmess
     uuid: 38eda6f2-6e04-4484-8f82-e859e76612d6
-  - alterId: 0
-    cipher: auto
-    name: 14|美国|@ripaojiedian
-    network: tcp
-    port: 46833
-    server: 38.147.161.252
-    servername: ''
-    tls: false
-    type: vmess
-    uuid: 77175906-b651-4c44-9397-04b30a602c0c
   - alterId: 0
     cipher: auto
     name: 14|德国|@ripaojiedian
@@ -410,137 +384,119 @@ proxy-groups:
     lazy: true
     tolerance: 100
     proxies:
-      - 0|-https://t.me/MrXbin-37
-      - 0|-https://t.me/MrXbin-14
-      - 13|🇯🇵 日本3|@ripaojiedian
-      - 0|-https://t.me/MrXbin-4
-      - 14|香港3|@ripaojiedian
-      - 0|-https://t.me/MrXbin-57
-      - 13|🇺🇸 美国|@ripaojiedian
-      - 14|日本|@ripaojiedian
-      - 14|韩国|@ripaojiedian
       - 16|d*********g.com_3
-      - 13,14|香港4|@ripaojiedian
-      - 13|🇯🇵 日本特殊|@ripaojiedian
-      - 13|🇰🇷 韩国特殊|@ripaojiedian
-      - 0|-https://t.me/MrXbin-9
-      - 0|-https://t.me/MrXbin-1
+      - 13|🇭🇰 香港4|@ripaojiedian
+      - 0|-https://t.me/MrXbin-15
+      - 0|-https://t.me/MrXbin-19
       - 13|🇸🇬 新加坡2|@ripaojiedian
-      - 13,14|美国2|@ripaojiedian
-      - 13|🇭🇰 香港3|@ripaojiedian
-      - 14|香港2|@ripaojiedian
-      - 14|日本2|@ripaojiedian
-      - 16|d*********g.com_2
-      - 13|🇭🇰 香港6|@ripaojiedian
-      - 0|-https://t.me/MrXbin-5
-      - 13|🇸🇬 新加坡|@ripaojiedian
-      - 14|香港|@ripaojiedian
-      - 14|香港6|@ripaojiedian
-      - 13|🇸🇬 狮城特殊|@ripaojiedian
       - 13|🇰🇷 韩国|@ripaojiedian
-      - 13,14|新加坡3|@ripaojiedian
-      - 14|新加坡2|@ripaojiedian
-      - 13|🇭🇰 香港2|@ripaojiedian
-      - 13|🇭🇰 香港|@ripaojiedian
-      - 0|-https://t.me/MrXbin-7
-      - 0|-https://t.me/MrXbin-16
-      - 13|🇯🇵 日本|@ripaojiedian
-      - 13|🇩🇪 德国|@ripaojiedian
-      - 13|🇹🇼 台湾|@ripaojiedian
+      - 16|d*********g.com_2
+      - 13|🇭🇰 香港5|@ripaojiedian
+      - 13|🇰🇷 韩国特殊|@ripaojiedian
+      - 13|🇭🇰 香港6|@ripaojiedian
+      - 14|香港4|@ripaojiedian
+      - 13|🇯🇵 日本特殊|@ripaojiedian
       - 14|德国|@ripaojiedian
-      - 0|-https://t.me/MrXbin-38
+      - 0|-https://t.me/MrXbin-28
+      - 13,14|美国|@ripaojiedian
+      - 14|日本|@ripaojiedian
+      - 13|🇭🇰 香港|@ripaojiedian
+      - 13|🇸🇬 新加坡|@ripaojiedian
+      - 14|新加坡2|@ripaojiedian
+      - 0|-https://t.me/MrXbin-3
+      - 13|🇭🇰 香港3|@ripaojiedian
+      - 13|🇸🇬 狮城特殊|@ripaojiedian
+      - 0|-https://t.me/MrXbin-17
+      - 14|香港6|@ripaojiedian
       - 13|🇯🇵 日本2|@ripaojiedian
-      - 14|美国|@ripaojiedian
+      - 13,14|台湾|@ripaojiedian
+      - 14|香港5|@ripaojiedian
+      - 14|日本2|@ripaojiedian
+      - 13|🇩🇪 德国|@ripaojiedian
+      - 13|🇯🇵 日本|@ripaojiedian
+      - 14|香港3|@ripaojiedian
+      - 0|-https://t.me/MrXbin-4
+      - 14|香港|@ripaojiedian
+      - 14|韩国|@ripaojiedian
+      - 13,14|香港2|@ripaojiedian
   - name: LOAD-BALANCE
     type: load-balance
     url: http://www.gstatic.com/generate_204
     interval: 600
     proxies:
-      - 0|-https://t.me/MrXbin-37
-      - 0|-https://t.me/MrXbin-14
-      - 13|🇯🇵 日本3|@ripaojiedian
-      - 0|-https://t.me/MrXbin-4
-      - 14|香港3|@ripaojiedian
-      - 0|-https://t.me/MrXbin-57
-      - 13|🇺🇸 美国|@ripaojiedian
-      - 14|日本|@ripaojiedian
-      - 14|韩国|@ripaojiedian
       - 16|d*********g.com_3
-      - 13,14|香港4|@ripaojiedian
-      - 13|🇯🇵 日本特殊|@ripaojiedian
-      - 13|🇰🇷 韩国特殊|@ripaojiedian
-      - 0|-https://t.me/MrXbin-9
-      - 0|-https://t.me/MrXbin-1
+      - 13|🇭🇰 香港4|@ripaojiedian
+      - 0|-https://t.me/MrXbin-15
+      - 0|-https://t.me/MrXbin-19
       - 13|🇸🇬 新加坡2|@ripaojiedian
-      - 13,14|美国2|@ripaojiedian
-      - 13|🇭🇰 香港3|@ripaojiedian
-      - 14|香港2|@ripaojiedian
-      - 14|日本2|@ripaojiedian
-      - 16|d*********g.com_2
-      - 13|🇭🇰 香港6|@ripaojiedian
-      - 0|-https://t.me/MrXbin-5
-      - 13|🇸🇬 新加坡|@ripaojiedian
-      - 14|香港|@ripaojiedian
-      - 14|香港6|@ripaojiedian
-      - 13|🇸🇬 狮城特殊|@ripaojiedian
       - 13|🇰🇷 韩国|@ripaojiedian
-      - 13,14|新加坡3|@ripaojiedian
-      - 14|新加坡2|@ripaojiedian
-      - 13|🇭🇰 香港2|@ripaojiedian
-      - 13|🇭🇰 香港|@ripaojiedian
-      - 0|-https://t.me/MrXbin-7
-      - 0|-https://t.me/MrXbin-16
-      - 13|🇯🇵 日本|@ripaojiedian
-      - 13|🇩🇪 德国|@ripaojiedian
-      - 13|🇹🇼 台湾|@ripaojiedian
+      - 16|d*********g.com_2
+      - 13|🇭🇰 香港5|@ripaojiedian
+      - 13|🇰🇷 韩国特殊|@ripaojiedian
+      - 13|🇭🇰 香港6|@ripaojiedian
+      - 14|香港4|@ripaojiedian
+      - 13|🇯🇵 日本特殊|@ripaojiedian
       - 14|德国|@ripaojiedian
-      - 0|-https://t.me/MrXbin-38
+      - 0|-https://t.me/MrXbin-28
+      - 13,14|美国|@ripaojiedian
+      - 14|日本|@ripaojiedian
+      - 13|🇭🇰 香港|@ripaojiedian
+      - 13|🇸🇬 新加坡|@ripaojiedian
+      - 14|新加坡2|@ripaojiedian
+      - 0|-https://t.me/MrXbin-3
+      - 13|🇭🇰 香港3|@ripaojiedian
+      - 13|🇸🇬 狮城特殊|@ripaojiedian
+      - 0|-https://t.me/MrXbin-17
+      - 14|香港6|@ripaojiedian
       - 13|🇯🇵 日本2|@ripaojiedian
-      - 14|美国|@ripaojiedian
+      - 13,14|台湾|@ripaojiedian
+      - 14|香港5|@ripaojiedian
+      - 14|日本2|@ripaojiedian
+      - 13|🇩🇪 德国|@ripaojiedian
+      - 13|🇯🇵 日本|@ripaojiedian
+      - 14|香港3|@ripaojiedian
+      - 0|-https://t.me/MrXbin-4
+      - 14|香港|@ripaojiedian
+      - 14|韩国|@ripaojiedian
+      - 13,14|香港2|@ripaojiedian
   - name: SELECT
     type: select
     proxies:
-      - 0|-https://t.me/MrXbin-37
-      - 0|-https://t.me/MrXbin-14
-      - 13|🇯🇵 日本3|@ripaojiedian
-      - 0|-https://t.me/MrXbin-4
-      - 14|香港3|@ripaojiedian
-      - 0|-https://t.me/MrXbin-57
-      - 13|🇺🇸 美国|@ripaojiedian
-      - 14|日本|@ripaojiedian
-      - 14|韩国|@ripaojiedian
       - 16|d*********g.com_3
-      - 13,14|香港4|@ripaojiedian
-      - 13|🇯🇵 日本特殊|@ripaojiedian
-      - 13|🇰🇷 韩国特殊|@ripaojiedian
-      - 0|-https://t.me/MrXbin-9
-      - 0|-https://t.me/MrXbin-1
+      - 13|🇭🇰 香港4|@ripaojiedian
+      - 0|-https://t.me/MrXbin-15
+      - 0|-https://t.me/MrXbin-19
       - 13|🇸🇬 新加坡2|@ripaojiedian
-      - 13,14|美国2|@ripaojiedian
-      - 13|🇭🇰 香港3|@ripaojiedian
-      - 14|香港2|@ripaojiedian
-      - 14|日本2|@ripaojiedian
-      - 16|d*********g.com_2
-      - 13|🇭🇰 香港6|@ripaojiedian
-      - 0|-https://t.me/MrXbin-5
-      - 13|🇸🇬 新加坡|@ripaojiedian
-      - 14|香港|@ripaojiedian
-      - 14|香港6|@ripaojiedian
-      - 13|🇸🇬 狮城特殊|@ripaojiedian
       - 13|🇰🇷 韩国|@ripaojiedian
-      - 13,14|新加坡3|@ripaojiedian
-      - 14|新加坡2|@ripaojiedian
-      - 13|🇭🇰 香港2|@ripaojiedian
-      - 13|🇭🇰 香港|@ripaojiedian
-      - 0|-https://t.me/MrXbin-7
-      - 0|-https://t.me/MrXbin-16
-      - 13|🇯🇵 日本|@ripaojiedian
-      - 13|🇩🇪 德国|@ripaojiedian
-      - 13|🇹🇼 台湾|@ripaojiedian
+      - 16|d*********g.com_2
+      - 13|🇭🇰 香港5|@ripaojiedian
+      - 13|🇰🇷 韩国特殊|@ripaojiedian
+      - 13|🇭🇰 香港6|@ripaojiedian
+      - 14|香港4|@ripaojiedian
+      - 13|🇯🇵 日本特殊|@ripaojiedian
       - 14|德国|@ripaojiedian
-      - 0|-https://t.me/MrXbin-38
+      - 0|-https://t.me/MrXbin-28
+      - 13,14|美国|@ripaojiedian
+      - 14|日本|@ripaojiedian
+      - 13|🇭🇰 香港|@ripaojiedian
+      - 13|🇸🇬 新加坡|@ripaojiedian
+      - 14|新加坡2|@ripaojiedian
+      - 0|-https://t.me/MrXbin-3
+      - 13|🇭🇰 香港3|@ripaojiedian
+      - 13|🇸🇬 狮城特殊|@ripaojiedian
+      - 0|-https://t.me/MrXbin-17
+      - 14|香港6|@ripaojiedian
       - 13|🇯🇵 日本2|@ripaojiedian
-      - 14|美国|@ripaojiedian
+      - 13,14|台湾|@ripaojiedian
+      - 14|香港5|@ripaojiedian
+      - 14|日本2|@ripaojiedian
+      - 13|🇩🇪 德国|@ripaojiedian
+      - 13|🇯🇵 日本|@ripaojiedian
+      - 14|香港3|@ripaojiedian
+      - 0|-https://t.me/MrXbin-4
+      - 14|香港|@ripaojiedian
+      - 14|韩国|@ripaojiedian
+      - 13,14|香港2|@ripaojiedian
 rules:
   - RULE-SET,applications,DIRECT
   - DOMAIN,clash.razord.top,DIRECT
