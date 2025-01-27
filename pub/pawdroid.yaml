@@ -1,4 +1,474 @@
-# Update: 2025-01-27 04:09:43
+# Update: 2025-01-27 06:11:11
 # Created by caoqiang
-null
-...
+mixed-port: 7890
+allow-lan: true
+dns:
+  enable: false
+ipv6: true
+mode: rule
+log-level: info
+external-controller: 0.0.0.0:9090
+global-client-fingerprint: chrome
+proxies:
+  - {name: 🇿🇦 南非 V2CROSS.COM, server: 129.232.134.112, port: 990, client-fingerprint: chrome,
+    type: ss, cipher: chacha20-ietf-poly1305, password: f8f7aCzcPKbsF8p3}
+  - {name: 🇺🇸 美国 V2CROSS.COM, server: 167.68.42.137, port: 8443, client-fingerprint: chrome,
+    type: vmess, uuid: e88b85c6-93b4-47f6-b3fb-2c55dcb1289f, alterId: 0, cipher: auto,
+    tls: true, network: ws, ws-opts: {path: /dyajvws, headers: {Host: lax2.ibgfw.top}}}
+  - {name: 🇭🇰 香港 CN2, server: 156.226.173.220, port: 56214, client-fingerprint: chrome,
+    type: vmess, uuid: 394294cc-eb0f-4f17-8453-5edbed60f4ee, alterId: 0, cipher: auto,
+    tls: true, network: ws, ws-opts: {path: /login, headers: {Host: default.hk.akile-5.ddns.ad.989567.xyz}}}
+  - {name: 亚太地区 V2CROSS.COM, server: 103.173.66.191, port: 443, client-fingerprint: chrome,
+    type: trojan, password: 5f7be901-1bb7-4cc5-9c7d-e33bd7e407ad}
+  - {name: 🇺🇸 美国 Amazon EC2服务器, server: 3.77.135.77, port: 22222, client-fingerprint: chrome,
+    type: trojan, password: telegram-id-directvpn, sni: trojan.burgerip.co.uk, alpn: [
+      http/1.1]}
+  - {name: 🇮🇪 爱尔兰 都柏林Amazon数据中心, server: 34.241.79.47, port: 22222, client-fingerprint: chrome,
+    type: trojan, password: telegram-id-directvpn, sni: trojan.burgerip.co.uk}
+  - {name: 🇭🇰 香港 UCloud, server: 118.193.34.158, port: 52825, client-fingerprint: chrome,
+    type: vmess, uuid: 67ff500a-8484-4ed8-cf8f-b8d341534140, alterId: 0, cipher: auto,
+    tls: false}
+  - {name: 🇮🇪 爱尔兰都柏林 亚马逊云, server: 3.250.247.186, port: 443, client-fingerprint: chrome,
+    type: trojan, password: 3763495894587285504, sni: daring-puma.goat627.mom}
+  - {name: 🇺🇸 美国 CloudFlare节点, server: 104.16.155.10, port: 2052, client-fingerprint: chrome,
+    type: vmess, uuid: 4b36625c-b9d9-3ea6-aed5-86d62c70e16d, alterId: 0, cipher: auto,
+    tls: false, network: ws, ws-opts: {path: /dabai.in104.25.175.137, headers: {Host: 100-102-247-92.s1.db-link02.top}}}
+  - {name: 🇮🇳 印度 V2CROSS.COM, server: 14.102.229.82, port: 8443, client-fingerprint: chrome,
+    type: vmess, uuid: e88b85c6-93b4-47f6-b3fb-2c55dcb1289f, alterId: 0, cipher: auto,
+    tls: true, network: ws, ws-opts: {path: /dyajvws, headers: {Host: lax2.ibgfw.top}}}
+  - {name: 🇬🇧 英国 社会保险安全部, server: faithful-chicken.treefrog761.one, port: 443, client-fingerprint: chrome,
+    type: trojan, password: 3763495894587285504, sni: faithful-chicken.treefrog761.one}
+  - {name: 🇨🇳 广东省 移动, server: 5.forlive.live, port: 60033, client-fingerprint: chrome,
+    type: ss, cipher: chacha20-ietf-poly1305, password: 54d73e4b-054d-4148-bab6-22646f4431a9}
+  - {name: 🇷🇺 俄罗斯 V2CROSS.COM, server: 195.58.49.50, port: 23532, client-fingerprint: chrome,
+    type: vmess, uuid: 47b79e95-3d2a-493b-9ac0-ef6783e656c2, alterId: 0, cipher: auto,
+    tls: false, network: ws, ws-opts: {path: /}}
+  - {name: 🇺🇸 美国 Amazon EC2服务器 2, server: 3.67.55.100, port: 443, client-fingerprint: chrome,
+    type: trojan, password: 3763495894587285504, sni: exact-stud.goat627.mom}
+  - {name: 🇬🇧 英国 伦敦Amazon数据中心, server: 35.179.201.133, port: 22222, client-fingerprint: chrome,
+    type: trojan, password: telegram-id-privatevpns, sni: trojan.burgerip.co.uk}
+  - {name: 🇺🇸 美国 CloudFlare节点 2, server: s2.db-link01.top, port: 2095, client-fingerprint: chrome,
+    type: vmess, uuid: 4b36625c-b9d9-3ea6-aed5-86d62c70e16d, alterId: 0, cipher: auto,
+    tls: false, network: ws, ws-opts: {path: /, headers: {Host: 100-130-136-50.s2.db-link01.top}}}
+  - {name: 🇮🇪 爱尔兰都柏林 亚马逊云 2, server: useful-monkfish.goat627.mom, port: 443, client-fingerprint: chrome,
+    type: trojan, password: 3763495894587285504, sni: useful-monkfish.goat627.mom}
+  - {name: 🇮🇪 爱尔兰 都柏林Amazon数据中心 2, server: 52.213.14.4, port: 22222, client-fingerprint: chrome,
+    type: trojan, password: telegram-id-directvpn, sni: trojan.burgerip.co.uk}
+  - {name: 亚太地区 V2CROSS.COM 2, server: bs1.loadingip.com, port: 443, client-fingerprint: chrome,
+    type: trojan, password: 94d219c9-1afc-4d42-b090-8b3794764380, sni: bs1.loadingip.com}
+  - {name: 🇺🇸 美国 惠普公司, server: 15.236.83.201, port: 22222, client-fingerprint: chrome,
+    type: trojan, password: telegram-id-privatevpns, sni: trojan.burgerip.co.uk}
+  - {name: 🇺🇸 美国 Amazon数据中心, server: 44.223.178.42, port: 22222, client-fingerprint: chrome,
+    type: trojan, password: telegram-id-directvpn, sni: trojan.burgerip.co.uk}
+  - {name: 🇫🇷 法国 巴黎Amazon数据中心, server: 35.181.173.20, port: 443, client-fingerprint: chrome,
+    type: trojan, password: 3763495894587285504, sni: artistic-vulture.goat627.mom,
+    skip-cert-verify: false}
+  - {name: 🇸🇬 新加坡 Amazon数据中心, server: assured-fowl.treefrog761.one, port: 443, client-fingerprint: chrome,
+    type: trojan, password: 3763495894587285504, sni: assured-fowl.treefrog761.one}
+  - {name: 🇭🇰 香港 UCloud 2, server: 118.193.38.173, port: 21066, client-fingerprint: chrome,
+    type: vmess, uuid: f11cf8ff-89b3-4c4c-fdf8-b47111d852d8, alterId: 0, cipher: auto,
+    tls: false}
+  - {name: 🇺🇸 美国 Amazon数据中心 2, server: 13.42.172.101, port: 22222, client-fingerprint: chrome,
+    type: trojan, password: telegram-id-privatevpns, sni: trojan.burgerip.co.uk, alpn: [
+      http/1.1]}
+  - {name: 亚太地区 V2CROSS.COM 3, server: cmc3.5gsieuvip.vn, port: 443, client-fingerprint: chrome,
+    type: trojan, password: 5f7be901-1bb7-4cc5-9c7d-e33bd7e407ad, sni: cmc3.5gsieuvip.vn,
+    skip-cert-verify: false}
+  - {name: 🇭🇺 匈牙利 V2CROSS.COM, server: sensible-crow.goat627.mom, port: 443, client-fingerprint: chrome,
+    type: trojan, password: 3763495894587285504, sni: sensible-crow.goat627.mom}
+  - {name: 🇺🇸 美国 CloudFlare节点 3, server: s4.db-link02.top, port: 8080, client-fingerprint: chrome,
+    type: vmess, uuid: 4b36625c-b9d9-3ea6-aed5-86d62c70e16d, alterId: 0, cipher: auto,
+    tls: false, network: ws, ws-opts: {path: /dabai.in104.19.103.96, headers: {Host: 100-80-77-140.s4.db-link02.top}}}
+  - {name: 🇺🇸 美国 亚特兰大, server: in01.trojanyyds.xyz, port: 443, client-fingerprint: chrome,
+    type: trojan, password: 243eab52-9ac1-405c-887c-eb112c0985b8, sni: in01.trojanyyds.xyz,
+    skip-cert-verify: false}
+  - {name: 🇹🇷 土耳其 V2CROSS.COM, server: 185.67.125.160, port: 443, client-fingerprint: chrome,
+    type: trojan, password: 3763495982449565696, sni: topical-gibbon.goat627.mom,
+    skip-cert-verify: false}
+  - {name: 🇺🇸 美国 CloudFlare节点 4, server: 172.67.165.53, port: 2086, client-fingerprint: chrome,
+    type: vmess, uuid: 3fd7b958-2161-46e1-b6fc-bd6bb2165312, alterId: 0, cipher: auto,
+    tls: false, network: ws, ws-opts: {path: /, headers: {Host: shs.xiaoqi666.xyz}}}
+  - {name: 🇺🇸 美国 Amazon数据中心 3, server: clever-chimp.goat627.mom, port: 443, client-fingerprint: chrome,
+    type: trojan, password: 3763495894587285504, sni: clever-chimp.goat627.mom}
+  - {name: 🇫🇷 法国 巴黎Amazon数据中心 2, server: maximum-ant.treefrog761.one, port: 443, client-fingerprint: chrome,
+    type: trojan, password: 3763495894587285504, sni: maximum-ant.treefrog761.one}
+  - {name: 🇺🇸 美国 惠普HP, server: us01.trojanyyds.xyz, port: 443, client-fingerprint: chrome,
+    type: trojan, password: 243eab52-9ac1-405c-887c-eb112c0985b8, sni: us01.trojanyyds.xyz}
+  - {name: 🇺🇸 美国 V2CROSS.COM 2, server: climbing-racer.treefrog761.one, port: 443,
+    client-fingerprint: chrome, type: trojan, password: 3763495894587285504, sni: climbing-racer.treefrog761.one}
+  - {name: 🇺🇸 美国 Amazon EC2服务器 3, server: artistic-snapper.goat627.mom, port: 443,
+    client-fingerprint: chrome, type: trojan, password: 3763495894587285504, sni: artistic-snapper.goat627.mom}
+  - {name: 🇦🇺 澳大利亚 V2CROSS.COM, server: 160.30.21.105, port: 443, client-fingerprint: chrome,
+    type: trojan, password: 94d219c9-1afc-4d42-b090-8b3794764380, sni: std1.loadingip.com}
+  - {name: 🇺🇸 美国 弗吉尼亚州阿什本Amazon数据中心, server: smooth-buck.goat627.mom, port: 443, client-fingerprint: chrome,
+    type: trojan, password: 3763495894587285504, sni: smooth-buck.goat627.mom}
+  - {name: 🇺🇸 美国 CloudFlare节点 5, server: tokyo.899994.xyz, port: 443, client-fingerprint: chrome,
+    type: vmess, uuid: a0605527-28e4-449c-80ee-5642cc16a8af, alterId: 0, cipher: auto,
+    tls: true, network: ws, ws-opts: {path: /index, headers: {Host: tokyo.899994.xyz}}}
+  - {name: 🇺🇸 美国 Amazon数据中心 4, server: 13.43.156.128, port: 443, client-fingerprint: chrome,
+    type: trojan, password: 3763495894587285504, sni: useful-honeybee.treefrog761.one}
+  - {name: 🇺🇸 美国 Fastly全球Anycast节点, server: gov.uk, port: 443, client-fingerprint: chrome,
+    type: vmess, uuid: 77848824-93b7-4b89-ffd0-e91afff406ce, alterId: 0, cipher: auto,
+    tls: true, network: ws, ws-opts: {path: /77848824, headers: {Host: zheshiscp.com}}}
+  - {name: 🇦🇺 澳大利亚 V2CROSS.COM 2, server: 160.30.160.134, port: 443, client-fingerprint: chrome,
+    type: trojan, password: 5f7be901-1bb7-4cc5-9c7d-e33bd7e407ad, sni: cmc5.5gsieuvip.vn}
+  - {name: 🇺🇸 美国 Amazon数据中心 5, server: useful-honeybee.treefrog761.one, port: 443,
+    client-fingerprint: chrome, type: trojan, password: 3763495894587285504, sni: useful-honeybee.treefrog761.one}
+  - {name: 🇺🇸 美国 Amazon数据中心 6, server: 18.199.215.148, port: 22222, client-fingerprint: chrome,
+    type: trojan, password: telegram-id-privatevpns, sni: trojan.burgerip.co.uk, alpn: [
+      http/1.1]}
+  - {name: 🇦🇷 阿根廷 V2CROSS.COM, server: 181.119.30.20, port: 990, client-fingerprint: chrome,
+    type: ss, cipher: chacha20-ietf-poly1305, password: f8f7aCzcPKbsF8p3}
+  - {name: 🇵🇱 波兰 V2CROSS.COM, server: nearby-sheep.goat627.mom, port: 443, client-fingerprint: chrome,
+    type: trojan, password: 3763495894587285504, sni: nearby-sheep.goat627.mom}
+  - {name: 🇺🇸 美国 CloudFlare节点 6, server: 104.16.155.10, port: 8880, client-fingerprint: chrome,
+    type: vmess, uuid: 4b36625c-b9d9-3ea6-aed5-86d62c70e16d, alterId: 0, cipher: auto,
+    tls: false, network: ws, ws-opts: {path: /dabai.in104.24.185.219, headers: {Host: 100-151-81-36.s4.db-link01.top}}}
+  - {name: 🇺🇸 美国 CloudFlare节点 7, server: s2.cn-db.top, port: 2082, client-fingerprint: chrome,
+    type: vmess, uuid: 6e07bf0c-06d0-3b3b-9468-9463b119e64c, alterId: 0, cipher: auto,
+    tls: false, network: ws, ws-opts: {path: /dabai.in172.64.53.101, headers: {Host: 100-119-106-139.s2.cn-db.top}}}
+  - {name: 🇺🇸 美国 V2CROSS.COM 3, server: 161.35.34.48, port: 443, client-fingerprint: chrome,
+    type: trojan, password: 2cba4104747d49d18319e5ade1b93ab5, sni: yourjobnavigator.online,
+    skip-cert-verify: true}
+  - {name: 🇧🇪 比利时 V2CROSS.COM, server: a-config.96hezar.ir, port: 4017, client-fingerprint: chrome,
+    type: ss, cipher: chacha20-ietf-poly1305, password: o9v9NS2O0sxebNmxvZ06sg}
+  - {name: 🇺🇸 美国 加州, server: 64.74.163.130, port: 990, client-fingerprint: chrome,
+    type: ss, cipher: chacha20-ietf-poly1305, password: f8f7aCzcPKbsF8p3}
+  - {name: 🇵🇱 波兰 V2CROSS.COM 2, server: 94.177.131.199, port: 443, client-fingerprint: chrome,
+    type: trojan, password: 3763495894587285504, sni: nearby-sheep.goat627.mom}
+  - {name: 🇷🇴 罗马尼亚 V2CROSS.COM, server: 89.39.70.207, port: 443, client-fingerprint: chrome,
+    type: trojan, password: 3763495894587285504, sni: pet-bulldog.goat627.mom}
+  - {name: 🇨🇳 中国 上海欧网网络科技发展有限公司, server: 45.250.184.183, port: 6181, client-fingerprint: chrome,
+    type: ss, cipher: chacha20-ietf-poly1305, password: 11a805f2-41a7-4cd8-8406-0470c3cde0d3}
+  - {name: 🇺🇸 美国 V2CROSS.COM 4, server: 45.144.48.128, port: 8443, client-fingerprint: chrome,
+    type: vmess, uuid: a4850481-9b95-430f-9b2d-192d2410b4f4, alterId: 0, cipher: auto,
+    tls: true, network: ws, ws-opts: {path: /vmess/}}
+  - {name: 🇯🇵 日本 东京都Amazon数据中心, server: top-aphid.goat627.mom, port: 443, client-fingerprint: chrome,
+    type: trojan, password: 3763495894587285504, sni: top-aphid.goat627.mom}
+  - {name: 🇨🇳 广东省广州市 移动, server: 120.232.153.63, port: 40565, client-fingerprint: chrome,
+    type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 64, cipher: auto,
+    tls: false}
+proxy-groups:
+  - name: PROXY
+    type: select
+    proxies:
+      - URL-TEST
+      - LOAD-BALANCE
+      - SELECT
+      - DIRECT
+  - name: OTHER
+    type: select
+    proxies:
+      - PROXY
+      - DIRECT
+  - name: AD
+    type: select
+    proxies:
+      - REJECT
+      - DIRECT
+      - PROXY
+  - name: URL-TEST
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 600
+    lazy: true
+    tolerance: 100
+    proxies:
+      - 🇭🇺 匈牙利 V2CROSS.COM
+      - 🇺🇸 美国 Amazon数据中心 6
+      - 亚太地区 V2CROSS.COM 2
+      - 🇺🇸 美国 亚特兰大
+      - 🇺🇸 美国 Amazon EC2服务器
+      - 🇮🇪 爱尔兰都柏林 亚马逊云
+      - 🇺🇸 美国 CloudFlare节点 7
+      - 🇷🇺 俄罗斯 V2CROSS.COM
+      - 🇭🇰 香港 CN2
+      - 🇺🇸 美国 V2CROSS.COM 2
+      - 🇮🇪 爱尔兰 都柏林Amazon数据中心 2
+      - 🇺🇸 美国 惠普公司
+      - 🇸🇬 新加坡 Amazon数据中心
+      - 🇬🇧 英国 社会保险安全部
+      - 亚太地区 V2CROSS.COM 3
+      - 🇭🇰 香港 UCloud 2
+      - 🇺🇸 美国 Amazon数据中心 2
+      - 🇺🇸 美国 CloudFlare节点 2
+      - 🇹🇷 土耳其 V2CROSS.COM
+      - 🇺🇸 美国 CloudFlare节点 5
+      - 🇺🇸 美国 弗吉尼亚州阿什本Amazon数据中心
+      - 🇧🇪 比利时 V2CROSS.COM
+      - 🇯🇵 日本 东京都Amazon数据中心
+      - 🇺🇸 美国 Amazon EC2服务器 2
+      - 🇺🇸 美国 Amazon EC2服务器 3
+      - 🇺🇸 美国 惠普HP
+      - 🇷🇴 罗马尼亚 V2CROSS.COM
+      - 🇨🇳 广东省广州市 移动
+      - 亚太地区 V2CROSS.COM
+      - 🇺🇸 美国 加州
+      - 🇫🇷 法国 巴黎Amazon数据中心 2
+      - 🇺🇸 美国 CloudFlare节点
+      - 🇫🇷 法国 巴黎Amazon数据中心
+      - 🇮🇪 爱尔兰 都柏林Amazon数据中心
+      - 🇬🇧 英国 伦敦Amazon数据中心
+      - 🇺🇸 美国 CloudFlare节点 3
+      - 🇦🇺 澳大利亚 V2CROSS.COM
+      - 🇦🇺 澳大利亚 V2CROSS.COM 2
+      - 🇦🇷 阿根廷 V2CROSS.COM
+      - 🇺🇸 美国 CloudFlare节点 4
+      - 🇺🇸 美国 Fastly全球Anycast节点
+      - 🇭🇰 香港 UCloud
+      - 🇺🇸 美国 V2CROSS.COM
+      - 🇺🇸 美国 V2CROSS.COM 4
+      - 🇨🇳 广东省 移动
+      - 🇺🇸 美国 Amazon数据中心 4
+      - 🇿🇦 南非 V2CROSS.COM
+      - 🇺🇸 美国 Amazon数据中心 5
+      - 🇺🇸 美国 CloudFlare节点 6
+      - 🇺🇸 美国 V2CROSS.COM 3
+      - 🇵🇱 波兰 V2CROSS.COM
+      - 🇨🇳 中国 上海欧网网络科技发展有限公司
+      - 🇮🇪 爱尔兰都柏林 亚马逊云 2
+      - 🇮🇳 印度 V2CROSS.COM
+      - 🇺🇸 美国 Amazon数据中心
+      - 🇵🇱 波兰 V2CROSS.COM 2
+      - 🇺🇸 美国 Amazon数据中心 3
+  - name: LOAD-BALANCE
+    type: load-balance
+    url: http://www.gstatic.com/generate_204
+    interval: 600
+    proxies:
+      - 🇭🇺 匈牙利 V2CROSS.COM
+      - 🇺🇸 美国 Amazon数据中心 6
+      - 亚太地区 V2CROSS.COM 2
+      - 🇺🇸 美国 亚特兰大
+      - 🇺🇸 美国 Amazon EC2服务器
+      - 🇮🇪 爱尔兰都柏林 亚马逊云
+      - 🇺🇸 美国 CloudFlare节点 7
+      - 🇷🇺 俄罗斯 V2CROSS.COM
+      - 🇭🇰 香港 CN2
+      - 🇺🇸 美国 V2CROSS.COM 2
+      - 🇮🇪 爱尔兰 都柏林Amazon数据中心 2
+      - 🇺🇸 美国 惠普公司
+      - 🇸🇬 新加坡 Amazon数据中心
+      - 🇬🇧 英国 社会保险安全部
+      - 亚太地区 V2CROSS.COM 3
+      - 🇭🇰 香港 UCloud 2
+      - 🇺🇸 美国 Amazon数据中心 2
+      - 🇺🇸 美国 CloudFlare节点 2
+      - 🇹🇷 土耳其 V2CROSS.COM
+      - 🇺🇸 美国 CloudFlare节点 5
+      - 🇺🇸 美国 弗吉尼亚州阿什本Amazon数据中心
+      - 🇧🇪 比利时 V2CROSS.COM
+      - 🇯🇵 日本 东京都Amazon数据中心
+      - 🇺🇸 美国 Amazon EC2服务器 2
+      - 🇺🇸 美国 Amazon EC2服务器 3
+      - 🇺🇸 美国 惠普HP
+      - 🇷🇴 罗马尼亚 V2CROSS.COM
+      - 🇨🇳 广东省广州市 移动
+      - 亚太地区 V2CROSS.COM
+      - 🇺🇸 美国 加州
+      - 🇫🇷 法国 巴黎Amazon数据中心 2
+      - 🇺🇸 美国 CloudFlare节点
+      - 🇫🇷 法国 巴黎Amazon数据中心
+      - 🇮🇪 爱尔兰 都柏林Amazon数据中心
+      - 🇬🇧 英国 伦敦Amazon数据中心
+      - 🇺🇸 美国 CloudFlare节点 3
+      - 🇦🇺 澳大利亚 V2CROSS.COM
+      - 🇦🇺 澳大利亚 V2CROSS.COM 2
+      - 🇦🇷 阿根廷 V2CROSS.COM
+      - 🇺🇸 美国 CloudFlare节点 4
+      - 🇺🇸 美国 Fastly全球Anycast节点
+      - 🇭🇰 香港 UCloud
+      - 🇺🇸 美国 V2CROSS.COM
+      - 🇺🇸 美国 V2CROSS.COM 4
+      - 🇨🇳 广东省 移动
+      - 🇺🇸 美国 Amazon数据中心 4
+      - 🇿🇦 南非 V2CROSS.COM
+      - 🇺🇸 美国 Amazon数据中心 5
+      - 🇺🇸 美国 CloudFlare节点 6
+      - 🇺🇸 美国 V2CROSS.COM 3
+      - 🇵🇱 波兰 V2CROSS.COM
+      - 🇨🇳 中国 上海欧网网络科技发展有限公司
+      - 🇮🇪 爱尔兰都柏林 亚马逊云 2
+      - 🇮🇳 印度 V2CROSS.COM
+      - 🇺🇸 美国 Amazon数据中心
+      - 🇵🇱 波兰 V2CROSS.COM 2
+      - 🇺🇸 美国 Amazon数据中心 3
+  - name: SELECT
+    type: select
+    proxies:
+      - 🇭🇺 匈牙利 V2CROSS.COM
+      - 🇺🇸 美国 Amazon数据中心 6
+      - 亚太地区 V2CROSS.COM 2
+      - 🇺🇸 美国 亚特兰大
+      - 🇺🇸 美国 Amazon EC2服务器
+      - 🇮🇪 爱尔兰都柏林 亚马逊云
+      - 🇺🇸 美国 CloudFlare节点 7
+      - 🇷🇺 俄罗斯 V2CROSS.COM
+      - 🇭🇰 香港 CN2
+      - 🇺🇸 美国 V2CROSS.COM 2
+      - 🇮🇪 爱尔兰 都柏林Amazon数据中心 2
+      - 🇺🇸 美国 惠普公司
+      - 🇸🇬 新加坡 Amazon数据中心
+      - 🇬🇧 英国 社会保险安全部
+      - 亚太地区 V2CROSS.COM 3
+      - 🇭🇰 香港 UCloud 2
+      - 🇺🇸 美国 Amazon数据中心 2
+      - 🇺🇸 美国 CloudFlare节点 2
+      - 🇹🇷 土耳其 V2CROSS.COM
+      - 🇺🇸 美国 CloudFlare节点 5
+      - 🇺🇸 美国 弗吉尼亚州阿什本Amazon数据中心
+      - 🇧🇪 比利时 V2CROSS.COM
+      - 🇯🇵 日本 东京都Amazon数据中心
+      - 🇺🇸 美国 Amazon EC2服务器 2
+      - 🇺🇸 美国 Amazon EC2服务器 3
+      - 🇺🇸 美国 惠普HP
+      - 🇷🇴 罗马尼亚 V2CROSS.COM
+      - 🇨🇳 广东省广州市 移动
+      - 亚太地区 V2CROSS.COM
+      - 🇺🇸 美国 加州
+      - 🇫🇷 法国 巴黎Amazon数据中心 2
+      - 🇺🇸 美国 CloudFlare节点
+      - 🇫🇷 法国 巴黎Amazon数据中心
+      - 🇮🇪 爱尔兰 都柏林Amazon数据中心
+      - 🇬🇧 英国 伦敦Amazon数据中心
+      - 🇺🇸 美国 CloudFlare节点 3
+      - 🇦🇺 澳大利亚 V2CROSS.COM
+      - 🇦🇺 澳大利亚 V2CROSS.COM 2
+      - 🇦🇷 阿根廷 V2CROSS.COM
+      - 🇺🇸 美国 CloudFlare节点 4
+      - 🇺🇸 美国 Fastly全球Anycast节点
+      - 🇭🇰 香港 UCloud
+      - 🇺🇸 美国 V2CROSS.COM
+      - 🇺🇸 美国 V2CROSS.COM 4
+      - 🇨🇳 广东省 移动
+      - 🇺🇸 美国 Amazon数据中心 4
+      - 🇿🇦 南非 V2CROSS.COM
+      - 🇺🇸 美国 Amazon数据中心 5
+      - 🇺🇸 美国 CloudFlare节点 6
+      - 🇺🇸 美国 V2CROSS.COM 3
+      - 🇵🇱 波兰 V2CROSS.COM
+      - 🇨🇳 中国 上海欧网网络科技发展有限公司
+      - 🇮🇪 爱尔兰都柏林 亚马逊云 2
+      - 🇮🇳 印度 V2CROSS.COM
+      - 🇺🇸 美国 Amazon数据中心
+      - 🇵🇱 波兰 V2CROSS.COM 2
+      - 🇺🇸 美国 Amazon数据中心 3
+rules:
+  - RULE-SET,applications,DIRECT
+  - DOMAIN,clash.razord.top,DIRECT
+  - DOMAIN,yacd.haishan.me,DIRECT
+  - RULE-SET,private,DIRECT
+  - RULE-SET,reject,AD
+  - RULE-SET,icloud,DIRECT
+  - RULE-SET,apple,DIRECT
+  - RULE-SET,google,DIRECT
+  - RULE-SET,tld-not-cn,PROXY
+  - RULE-SET,gfw,PROXY
+  - RULE-SET,greatfire,PROXY
+  - RULE-SET,telegramcidr,PROXY
+  - RULE-SET,lancidr,DIRECT
+  - RULE-SET,cncidr,DIRECT
+  - GEOIP,CN,DIRECT
+  - RULE-SET,direct,DIRECT
+  - RULE-SET,proxy,OTHER
+  - MATCH,OTHER
+rule-providers:
+  reject:
+    type: http
+    behavior: domain
+    url: 
+      https://gh.xxooo.cf/https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/reject.txt
+    path: ./ruleset/reject.yaml
+    interval: 86400
+  icloud:
+    type: http
+    behavior: domain
+    url: 
+      https://gh.xxooo.cf/https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/icloud.txt
+    path: ./ruleset/icloud.yaml
+    interval: 86400
+  apple:
+    type: http
+    behavior: domain
+    url: 
+      https://gh.xxooo.cf/https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/apple.txt
+    path: ./ruleset/apple.yaml
+    interval: 86400
+  google:
+    type: http
+    behavior: domain
+    url: 
+      https://gh.xxooo.cf/https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/google.txt
+    path: ./ruleset/google.yaml
+    interval: 86400
+  proxy:
+    type: http
+    behavior: domain
+    url: 
+      https://gh.xxooo.cf/https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/proxy.txt
+    path: ./ruleset/proxy.yaml
+    interval: 86400
+  direct:
+    type: http
+    behavior: domain
+    url: 
+      https://gh.xxooo.cf/https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/direct.txt
+    path: ./ruleset/direct.yaml
+    interval: 86400
+  private:
+    type: http
+    behavior: domain
+    url: 
+      https://gh.xxooo.cf/https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/private.txt
+    path: ./ruleset/private.yaml
+    interval: 86400
+  gfw:
+    type: http
+    behavior: domain
+    url: 
+      https://gh.xxooo.cf/https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/gfw.txt
+    path: ./ruleset/gfw.yaml
+    interval: 86400
+  greatfire:
+    type: http
+    behavior: domain
+    url: 
+      https://gh.xxooo.cf/https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/greatfire.txt
+    path: ./ruleset/greatfire.yaml
+    interval: 86400
+  tld-not-cn:
+    type: http
+    behavior: domain
+    url: 
+      https://gh.xxooo.cf/https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/tld-not-cn.txt
+    path: ./ruleset/tld-not-cn.yaml
+    interval: 86400
+  telegramcidr:
+    type: http
+    behavior: ipcidr
+    url: 
+      https://gh.xxooo.cf/https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/telegramcidr.txt
+    path: ./ruleset/telegramcidr.yaml
+    interval: 86400
+  cncidr:
+    type: http
+    behavior: ipcidr
+    url: 
+      https://gh.xxooo.cf/https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/cncidr.txt
+    path: ./ruleset/cncidr.yaml
+    interval: 86400
+  lancidr:
+    type: http
+    behavior: ipcidr
+    url: 
+      https://gh.xxooo.cf/https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/lancidr.txt
+    path: ./ruleset/lancidr.yaml
+    interval: 86400
+  applications:
+    type: http
+    behavior: classical
+    url: 
+      https://gh.xxooo.cf/https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/applications.txt
+    path: ./ruleset/applications.yaml
+    interval: 86400
+tcp-concurrent: true
