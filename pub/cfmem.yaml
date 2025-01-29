@@ -1,4 +1,4 @@
-# Update: 2025-01-28 22:04:57
+# Update: 2025-01-29 00:35:10
 # Created by caoqiang
 mixed-port: 7890
 allow-lan: true
@@ -10,22 +10,16 @@ log-level: info
 external-controller: 0.0.0.0:9090
 global-client-fingerprint: chrome
 proxies:
-  - name: 🇷🇺_RU_俄罗斯
+  - name: 🇫🇷_FR_法国
+    type: ss
+    server: 163.172.121.25
+    port: 12345
+    cipher: aes-256-gcm
+    password: dongtaiwang.com
+  - name: 🇨🇳_CN_中国->🇺🇸_US_美国
     type: vmess
-    server: 195.58.49.42
-    port: 23532
-    sni: ''
-    uuid: 98ad0351-d756-4eac-8de0-e7a4e9761f87
-    cipher: auto
-    network: ws
-    skip-cert-verify: true
-    ws-opts:
-      path: /
-    alterId: 0
-  - name: 🇨🇳_CN_中国->🇷🇺_RU_俄罗斯
-    type: vmess
-    server: 183.236.51.60
-    port: 25230
+    server: us1.awslcn.info
+    port: 25238
     sni: ''
     uuid: 243eab52-9ac1-405c-887c-eb112c0985b8
     cipher: auto
@@ -34,24 +28,42 @@ proxies:
     ws-opts:
       path: /
       headers:
-        host: 183.236.51.60
+        host: us1.awslcn.info
     alterId: 0
-  - name: 🇺🇸_US_美国->🇭🇺_HU_匈牙利
-    type: ss
-    server: 35.88.145.179
+  - name: 🇺🇸_US_美国->🇫🇷_FR_法国
+    type: trojan
+    server: 3.97.239.52
+    port: 22222
+    sni: trojan.burgerip.co.uk
+    password: telegram-id-directvpn
+    network: tcp
+    alpn:
+      - http/1.1
+  - name: 🇺🇸_US_美国->🇨🇳_CN_中国
+    type: vmess
+    server: 137.175.20.81
+    port: 45017
+    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+    cipher: auto
+    network: tcp
+    alterId: 64
+  - name: 🇺🇸_US_美国->🇷🇺_RU_俄罗斯
+    type: trojan
+    server: ru01.trojanyyds.xyz
     port: 443
-    cipher: aes-256-cfb
-    password: amazonskr05
-  - name: 🇺🇸_US_美国
-    type: ss
-    server: 185.47.253.171
-    port: 989
-    cipher: aes-256-cfb
-    password: f8f7aCzcPKbsF8p3
-  - name: 🇨🇳_CN_中国->🇷🇺_RU_俄罗斯_1
+    sni: ru01.trojanyyds.xyz
+    password: 243eab52-9ac1-405c-887c-eb112c0985b8
+  - name: 未知
+    type: trojan
+    server: 46.229.253.79
+    port: 443
+    sni: right-goldfish.goat627.mom
+    password: '3763495894587285504'
+    network: tcp
+  - name: 🇨🇳_CN_中国->🇺🇸_US_美国_1
     type: vmess
     server: cm1.awslcn.info
-    port: 25230
+    port: 25240
     sni: ''
     uuid: 243eab52-9ac1-405c-887c-eb112c0985b8
     cipher: auto
@@ -62,70 +74,83 @@ proxies:
       headers:
         host: cm1.awslcn.info
     alterId: 0
-  - name: 🇺🇦_UA_乌克兰
+  - name: 🇺🇸_US_美国
+    type: trojan
+    server: busy-buffalo.treefrog761.one
+    port: 443
+    sni: busy-buffalo.treefrog761.one
+    password: '3723507166611775488'
+    skip-cert-verify: false
+  - name: 🇲🇩_MD_摩尔多瓦
     type: ss
-    server: at1.opensocks.site
-    port: 8388
-    cipher: chacha20-ietf-poly1305
-    password: ZmQwZjFk
-  - name: 🇷🇺_RU_俄罗斯_1
-    type: vmess
-    server: 185.22.153.73
-    port: 49663
-    sni: 185.22.153.73
-    uuid: af7f07dc-d726-4b1e-967d-dbb6c594999f
-    cipher: auto
-    network: ws
-    fingerprint: ''
-    ws-opts:
-      path: github.com/Alvin9999
-      headers:
-        host: 185.22.153.73
-    alterId: 0
-  - name: 🇸🇰_SK_斯洛伐克
-    type: ss
-    server: 156.146.40.194
+    server: 91.132.94.200
     port: 989
     cipher: aes-256-cfb
     password: f8f7aCzcPKbsF8p3
-  - name: 🇷🇴_RO_罗马尼亚
+  - name: 🇦🇹_AT_奥地利
+    type: ss
+    server: 192.36.61.59
+    port: 990
+    cipher: chacha20-ietf-poly1305
+    password: f8f7aCzcPKbsF8p3
+  - name: 🇺🇸_US_美国_1
     type: trojan
-    server: pet-bulldog.goat627.mom
+    server: 74.226.136.204
     port: 443
-    sni: pet-bulldog.goat627.mom
-    password: '3763495894587285504'
+    sni: us01.trojanyyds.xyz
+    password: 243eab52-9ac1-405c-887c-eb112c0985b8
+  - name: 🇷🇴_RO_罗马尼亚
+    type: ss
+    server: 188.214.36.155
+    port: 989
+    cipher: aes-256-cfb
+    password: f8f7aCzcPKbsF8p3
+  - name: 🇿🇦_ZA_南非
+    type: ss
+    server: 129.232.134.112
+    port: 990
+    cipher: chacha20-ietf-poly1305
+    password: f8f7aCzcPKbsF8p3
+  - name: 🇭🇺_HU_匈牙利
+    type: trojan
+    server: 109.61.16.83
+    port: 443
+    sni: sensible-crow.goat627.mom
+    password: '3763495982449565696'
+    skip-cert-verify: true
+  - name: 🇩🇪_DE_德国->🇫🇷_FR_法国
+    type: trojan
+    server: 3.123.242.3
+    port: 22222
+    sni: trojan.burgerip.co.uk
+    password: telegram-id-privatevpns
     network: tcp
-  - name: 未知
+    alpn:
+      - http/1.1
+  - name: 🇦🇷_AR_阿根廷
+    type: ss
+    server: 181.119.30.20
+    port: 990
+    cipher: chacha20-ietf-poly1305
+    password: f8f7aCzcPKbsF8p3
+  - name: 未知_1
     type: trojan
     server: right-goldfish.goat627.mom
     port: 443
     sni: right-goldfish.goat627.mom
     password: '3763495894587285504'
-  - name: 🇷🇺_RU_俄罗斯_2
-    type: vmess
-    server: 195.58.49.50
-    port: 23532
-    sni: ''
-    uuid: de4f8e2a-3ca2-4684-b774-e7e821dc2842
-    cipher: auto
-    network: ws
-    skip-cert-verify: true
-    ws-opts:
-      path: /
-    alterId: 0
-  - name: 未知_1
-    type: trojan
-    server: 46.229.253.79
-    port: 443
-    sni: right-goldfish.goat627.mom
-    password: '3763495894587285504'
-    network: tcp
-  - name: 🇺🇸_US_美国_2
+  - name: 🇦🇹_AT_奥地利_1
     type: ss
-    server: 35.92.44.190
-    port: 443
+    server: 192.36.61.59
+    port: 989
     cipher: aes-256-cfb
-    password: amazonskr05
+    password: f8f7aCzcPKbsF8p3
+  - name: 🇩🇪_DE_德国->🇺🇸_US_美国
+    type: ss
+    server: 45.87.175.181
+    port: 8080
+    cipher: chacha20-ietf-poly1305
+    password: 4a2rfixophdjffa8KVA4Aa
   - name: 🇷🇴_RO_罗马尼亚_1
     type: trojan
     server: 89.39.70.207
@@ -133,86 +158,24 @@ proxies:
     sni: pet-bulldog.goat627.mom
     password: '3763495894587285504'
     skip-cert-verify: true
-  - name: 🇭🇺_HU_匈牙利
-    type: trojan
-    server: 109.61.16.83
-    port: 443
-    sni: sensible-crow.goat627.mom
-    password: '3763495982449565696'
-    skip-cert-verify: false
-  - name: 🇹🇷_TR_土耳其->🇩🇪_DE_德国
+  - name: 🇺🇸_US_美国_3
     type: ss
-    server: 2323.need9ping.ir
-    port: 4018
-    cipher: chacha20-ietf-poly1305
-    password: fR09uI3YFOmtqJzwu2Eoqg
-  - name: 🇺🇦_UA_乌克兰_1
-    type: ss
-    server: 95.164.36.59
-    port: 8388
-    cipher: chacha20-ietf-poly1305
-    password: ZmQwZjFk
-  - name: 🇿🇦_ZA_南非
-    type: ss
-    server: 129.232.134.112
-    port: 990
-    cipher: chacha20-ietf-poly1305
-    password: f8f7aCzcPKbsF8p3
-  - name: 🇭🇺_HU_匈牙利_1
-    type: trojan
-    server: sensible-crow.goat627.mom
-    port: 443
-    sni: sensible-crow.goat627.mom
-    password: '3763495894587285504'
-    skip-cert-verify: false
-  - name: 🇮🇹_IT_意大利
-    type: ss
-    server: 37.143.129.230
+    server: 185.47.253.171
     port: 989
     cipher: aes-256-cfb
     password: f8f7aCzcPKbsF8p3
-  - name: 🇫🇷_FR_法国->🇨🇳_CN_中国
-    type: trojan
-    server: honest-cow.goat627.mom
-    port: 443
-    sni: honest-cow.goat627.mom
-    password: '3763495894587285504'
-    network: tcp
-  - name: 未知_2
-    type: trojan
-    server: naiu-us.05vr9nyqg5.download
-    port: 13022
-    sni: cloudflare.node-ssl.cdn-alibaba.com
-    password: 2b39bbdd-a565-4f8e-b6b6-6b034b2076f4
-  - name: 🇱🇻_LV_拉脱维亚->🇿🇦_ZA_南非
+  - name: 🇨🇳_CN_中国->🇺🇸_US_美国_2
     type: ss
-    server: 46.183.217.232
-    port: 990
-    cipher: chacha20-ietf-poly1305
+    server: ti3hyra4.slashdevslashnetslashtun.net
+    port: 17004
+    cipher: aes-256-gcm
+    password: K0AA69ZLLFIBXP1Q
+  - name: 🇩🇰_DK_丹麦
+    type: ss
+    server: 185.186.79.53
+    port: 989
+    cipher: aes-256-cfb
     password: f8f7aCzcPKbsF8p3
-  - name: 🇺🇸_US_美国_4
-    type: ss
-    server: 54.244.34.53
-    port: 443
-    cipher: aes-256-cfb
-    password: amazonskr05
-  - name: 🇺🇸_US_美国->🇮🇹_IT_意大利
-    type: ss
-    server: 54.189.160.123
-    port: 443
-    cipher: aes-256-cfb
-    password: amazonskr05
-  - name: 🇺🇸_US_美国_5
-    type: vmess
-    server: 64.225.109.206
-    port: 2082
-    sni: ''
-    uuid: 48264b45-64b8-4e9f-8a88-cef41f20c736
-    cipher: auto
-    network: http
-    skip-cert-verify: true
-    http-opts: {}
-    alterId: 0
 proxy-groups:
   - name: PROXY
     type: select
@@ -239,92 +202,83 @@ proxy-groups:
     lazy: true
     tolerance: 100
     proxies:
-      - 🇺🇦_UA_乌克兰
-      - 🇷🇺_RU_俄罗斯_2
-      - 🇷🇴_RO_罗马尼亚_1
-      - 🇫🇷_FR_法国->🇨🇳_CN_中国
-      - 🇺🇸_US_美国_4
-      - 🇭🇺_HU_匈牙利
-      - 🇺🇸_US_美国->🇭🇺_HU_匈牙利
-      - 未知
-      - 🇺🇸_US_美国_5
-      - 🇨🇳_CN_中国->🇷🇺_RU_俄罗斯_1
-      - 🇺🇸_US_美国_2
-      - 🇷🇺_RU_俄罗斯
-      - 🇷🇺_RU_俄罗斯_1
-      - 🇸🇰_SK_斯洛伐克
-      - 🇨🇳_CN_中国->🇷🇺_RU_俄罗斯
-      - 🇮🇹_IT_意大利
-      - 未知_2
-      - 🇭🇺_HU_匈牙利_1
-      - 🇱🇻_LV_拉脱维亚->🇿🇦_ZA_南非
-      - 🇺🇸_US_美国->🇮🇹_IT_意大利
       - 🇺🇸_US_美国
+      - 🇦🇹_AT_奥地利_1
       - 🇿🇦_ZA_南非
-      - 🇷🇴_RO_罗马尼亚
-      - 🇹🇷_TR_土耳其->🇩🇪_DE_德国
-      - 🇺🇦_UA_乌克兰_1
+      - 🇫🇷_FR_法国
+      - 🇺🇸_US_美国_3
+      - 未知
+      - 🇺🇸_US_美国->🇫🇷_FR_法国
       - 未知_1
+      - 🇨🇳_CN_中国->🇺🇸_US_美国
+      - 🇨🇳_CN_中国->🇺🇸_US_美国_1
+      - 🇺🇸_US_美国_1
+      - 🇦🇷_AR_阿根廷
+      - 🇺🇸_US_美国->🇷🇺_RU_俄罗斯
+      - 🇩🇪_DE_德国->🇺🇸_US_美国
+      - 🇦🇹_AT_奥地利
+      - 🇩🇰_DK_丹麦
+      - 🇩🇪_DE_德国->🇫🇷_FR_法国
+      - 🇨🇳_CN_中国->🇺🇸_US_美国_2
+      - 🇺🇸_US_美国->🇨🇳_CN_中国
+      - 🇷🇴_RO_罗马尼亚
+      - 🇲🇩_MD_摩尔多瓦
+      - 🇷🇴_RO_罗马尼亚_1
+      - 🇭🇺_HU_匈牙利
   - name: LOAD-BALANCE
     type: load-balance
     url: http://www.gstatic.com/generate_204
     interval: 600
     proxies:
-      - 🇺🇦_UA_乌克兰
-      - 🇷🇺_RU_俄罗斯_2
-      - 🇷🇴_RO_罗马尼亚_1
-      - 🇫🇷_FR_法国->🇨🇳_CN_中国
-      - 🇺🇸_US_美国_4
-      - 🇭🇺_HU_匈牙利
-      - 🇺🇸_US_美国->🇭🇺_HU_匈牙利
-      - 未知
-      - 🇺🇸_US_美国_5
-      - 🇨🇳_CN_中国->🇷🇺_RU_俄罗斯_1
-      - 🇺🇸_US_美国_2
-      - 🇷🇺_RU_俄罗斯
-      - 🇷🇺_RU_俄罗斯_1
-      - 🇸🇰_SK_斯洛伐克
-      - 🇨🇳_CN_中国->🇷🇺_RU_俄罗斯
-      - 🇮🇹_IT_意大利
-      - 未知_2
-      - 🇭🇺_HU_匈牙利_1
-      - 🇱🇻_LV_拉脱维亚->🇿🇦_ZA_南非
-      - 🇺🇸_US_美国->🇮🇹_IT_意大利
       - 🇺🇸_US_美国
+      - 🇦🇹_AT_奥地利_1
       - 🇿🇦_ZA_南非
-      - 🇷🇴_RO_罗马尼亚
-      - 🇹🇷_TR_土耳其->🇩🇪_DE_德国
-      - 🇺🇦_UA_乌克兰_1
+      - 🇫🇷_FR_法国
+      - 🇺🇸_US_美国_3
+      - 未知
+      - 🇺🇸_US_美国->🇫🇷_FR_法国
       - 未知_1
+      - 🇨🇳_CN_中国->🇺🇸_US_美国
+      - 🇨🇳_CN_中国->🇺🇸_US_美国_1
+      - 🇺🇸_US_美国_1
+      - 🇦🇷_AR_阿根廷
+      - 🇺🇸_US_美国->🇷🇺_RU_俄罗斯
+      - 🇩🇪_DE_德国->🇺🇸_US_美国
+      - 🇦🇹_AT_奥地利
+      - 🇩🇰_DK_丹麦
+      - 🇩🇪_DE_德国->🇫🇷_FR_法国
+      - 🇨🇳_CN_中国->🇺🇸_US_美国_2
+      - 🇺🇸_US_美国->🇨🇳_CN_中国
+      - 🇷🇴_RO_罗马尼亚
+      - 🇲🇩_MD_摩尔多瓦
+      - 🇷🇴_RO_罗马尼亚_1
+      - 🇭🇺_HU_匈牙利
   - name: SELECT
     type: select
     proxies:
-      - 🇺🇦_UA_乌克兰
-      - 🇷🇺_RU_俄罗斯_2
-      - 🇷🇴_RO_罗马尼亚_1
-      - 🇫🇷_FR_法国->🇨🇳_CN_中国
-      - 🇺🇸_US_美国_4
-      - 🇭🇺_HU_匈牙利
-      - 🇺🇸_US_美国->🇭🇺_HU_匈牙利
-      - 未知
-      - 🇺🇸_US_美国_5
-      - 🇨🇳_CN_中国->🇷🇺_RU_俄罗斯_1
-      - 🇺🇸_US_美国_2
-      - 🇷🇺_RU_俄罗斯
-      - 🇷🇺_RU_俄罗斯_1
-      - 🇸🇰_SK_斯洛伐克
-      - 🇨🇳_CN_中国->🇷🇺_RU_俄罗斯
-      - 🇮🇹_IT_意大利
-      - 未知_2
-      - 🇭🇺_HU_匈牙利_1
-      - 🇱🇻_LV_拉脱维亚->🇿🇦_ZA_南非
-      - 🇺🇸_US_美国->🇮🇹_IT_意大利
       - 🇺🇸_US_美国
+      - 🇦🇹_AT_奥地利_1
       - 🇿🇦_ZA_南非
-      - 🇷🇴_RO_罗马尼亚
-      - 🇹🇷_TR_土耳其->🇩🇪_DE_德国
-      - 🇺🇦_UA_乌克兰_1
+      - 🇫🇷_FR_法国
+      - 🇺🇸_US_美国_3
+      - 未知
+      - 🇺🇸_US_美国->🇫🇷_FR_法国
       - 未知_1
+      - 🇨🇳_CN_中国->🇺🇸_US_美国
+      - 🇨🇳_CN_中国->🇺🇸_US_美国_1
+      - 🇺🇸_US_美国_1
+      - 🇦🇷_AR_阿根廷
+      - 🇺🇸_US_美国->🇷🇺_RU_俄罗斯
+      - 🇩🇪_DE_德国->🇺🇸_US_美国
+      - 🇦🇹_AT_奥地利
+      - 🇩🇰_DK_丹麦
+      - 🇩🇪_DE_德国->🇫🇷_FR_法国
+      - 🇨🇳_CN_中国->🇺🇸_US_美国_2
+      - 🇺🇸_US_美国->🇨🇳_CN_中国
+      - 🇷🇴_RO_罗马尼亚
+      - 🇲🇩_MD_摩尔多瓦
+      - 🇷🇴_RO_罗马尼亚_1
+      - 🇭🇺_HU_匈牙利
 rules:
   - RULE-SET,applications,DIRECT
   - DOMAIN,clash.razord.top,DIRECT
