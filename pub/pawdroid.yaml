@@ -1,4 +1,281 @@
-# Update: 2025-02-02 18:08:41
+# Update: 2025-02-02 20:07:10
 # Created by caoqiang
-null
-...
+mixed-port: 7890
+allow-lan: true
+dns:
+  enable: false
+ipv6: true
+mode: rule
+log-level: info
+external-controller: 0.0.0.0:9090
+global-client-fingerprint: chrome
+proxies:
+  - {name: 🇦🇺 澳大利亚 V2CROSS.COM, server: std1.loadingip.com, port: 443, client-fingerprint: chrome,
+    type: trojan, password: 94d219c9-1afc-4d42-b090-8b3794764380, sni: std1.loadingip.com}
+  - {name: 🇺🇸 美国 CloudFlare节点, server: cf.fovi.tk, port: 443, client-fingerprint: chrome,
+    type: vmess, uuid: bf67437e-6c90-45ca-abc2-c7240a5ce2aa, alterId: 0, cipher: auto,
+    tls: true, network: ws, ws-opts: {path: /eisasqa, headers: {Host: foxlux.fovi.tk}}}
+  - {name: 🇺🇸 美国 Amazon数据中心, server: 49aef3335f8047e664ebb63875db0e2b.us.in.node-is.green,
+    port: 45424, client-fingerprint: chrome, type: trojan, password: 61130614-528c-4b45-ac9b-e7987cff4952,
+    sni: hk12.bilibili.com}
+  - {name: 🇺🇸 美国 CloudFlare节点 2, server: 104.16.155.10, port: 2082, client-fingerprint: chrome,
+    type: vmess, uuid: 4b36625c-b9d9-3ea6-aed5-86d62c70e16d, alterId: 0, cipher: auto,
+    tls: false, network: ws, ws-opts: {path: /dabai.in104.18.42.172, headers: {Host: 100-38-62-25.s5.db-link02.top}}}
+  - {name: 🇺🇸 美国 CloudFlare节点 3, server: 104.21.112.1, port: 443, client-fingerprint: chrome,
+    type: vmess, uuid: a0605527-28e4-449c-80ee-5642cc16a8af, alterId: 0, cipher: auto,
+    tls: true, network: ws, ws-opts: {path: /index, headers: {Host: tokyo.899994.xyz}}}
+  - {name: 🇺🇸 美国 CloudFlare节点 4, server: 198.41.209.70, port: 8080, client-fingerprint: chrome,
+    type: vmess, uuid: 4b36625c-b9d9-3ea6-aed5-86d62c70e16d, alterId: 0, cipher: auto,
+    tls: false, network: ws, ws-opts: {path: /dabai.in104.21.151.202, headers: {Host: 100-213-61-102.s1.db-link02.top}}}
+  - {name: 🇺🇸 美国 CloudFlare节点 5, server: s2.db-link02.top, port: 80, client-fingerprint: chrome,
+    type: vmess, uuid: 4b36625c-b9d9-3ea6-aed5-86d62c70e16d, alterId: 0, cipher: auto,
+    tls: false, network: ws, ws-opts: {path: /dabai.in104.20.76.67, headers: {Host: 100-66-201-35.s2.db-link02.top}}}
+  - {name: 🇺🇸 美国 CloudFlare节点 6, server: s2.db-link01.top, port: 2086, client-fingerprint: chrome,
+    type: vmess, uuid: 4b36625c-b9d9-3ea6-aed5-86d62c70e16d, alterId: 0, cipher: auto,
+    tls: false, network: ws, ws-opts: {path: /dabai.in172.67.68.139, headers: {Host: 100-154-72-114.s2.db-link01.top}}}
+  - {name: 🇺🇸 美国 Amazon数据中心 2, server: 3be6de7d746f56fe4a524d3b5f810c13.us.in.node-is.green,
+    port: 49783, client-fingerprint: chrome, type: trojan, password: 61130614-528c-4b45-ac9b-e7987cff4952,
+    sni: hk12.bilibili.com}
+  - {name: 🇺🇸 美国 惠普HP, server: 15.184.224.240, port: 443, client-fingerprint: chrome,
+    type: ss, cipher: chacha20-ietf-poly1305, password: Bog0ELmMM9DSxDdQ}
+  - {name: 🇬🇧 英国 V2CROSS.COM, server: 77.239.99.180, port: 34775, client-fingerprint: chrome,
+    type: ss, cipher: chacha20-ietf-poly1305, password: QruuUyTvuIY9UgAZbnGfaf}
+  - {name: 🇺🇸 美国 CloudFlare节点 7, server: s1.db-link02.top, port: 8880, client-fingerprint: chrome,
+    type: vmess, uuid: 4b36625c-b9d9-3ea6-aed5-86d62c70e16d, alterId: 0, cipher: auto,
+    tls: false, network: ws, ws-opts: {path: /dabai.in104.25.249.215, headers: {Host: 100-103-58-39.s1.db-link02.top}}}
+  - {name: 🇺🇸 美国 Amazon数据中心 3, server: bbb0c2ec701aee01ee23fbefa238d419.us.in.node-is.green,
+    port: 49783, client-fingerprint: chrome, type: trojan, password: 61130614-528c-4b45-ac9b-e7987cff4952,
+    sni: hk12.bilibili.com}
+  - {name: 🇺🇸 美国 CloudFlare节点 8, server: 104.21.96.1, port: 8443, client-fingerprint: chrome,
+    type: vmess, uuid: 89c344f2-096c-445c-b629-9b15152f38e7, alterId: 0, cipher: auto,
+    tls: true, network: ws, ws-opts: {path: /89c344f2, headers: {Host: ff.kncc2.top}}}
+  - {name: 🇬🇧 英国 伦敦Amazon数据中心, server: 52.56.39.239, port: 22222, client-fingerprint: chrome,
+    type: trojan, password: telegram-id-privatevpns, sni: trojan.burgerip.co.uk, alpn: [
+      http/1.1]}
+  - {name: 🇨🇳 广东省广州市白云区 电信, server: 219.135.231.205, port: 21019, client-fingerprint: chrome,
+    type: trojan, password: 20a84ebf-9341-4f5f-8245-3975e2fdeee5, skip-cert-verify: true}
+  - {name: 🇺🇸 美国 CloudFlare节点 9, server: s4.db-link01.top, port: 8080, client-fingerprint: chrome,
+    type: vmess, uuid: 4b36625c-b9d9-3ea6-aed5-86d62c70e16d, alterId: 0, cipher: auto,
+    tls: false, network: ws, ws-opts: {path: /dabai.in104.20.125.64, headers: {Host: 100-143-127-247.s4.db-link01.top}}}
+  - {name: 🇺🇸 美国 CloudFlare节点 10, server: s5.db-link02.top, port: 8080, client-fingerprint: chrome,
+    type: vmess, uuid: 4b36625c-b9d9-3ea6-aed5-86d62c70e16d, alterId: 0, cipher: auto,
+    tls: false, network: ws, ws-opts: {path: /dabai.in104.20.16.209, headers: {Host: 100-149-191-2.s5.db-link02.top}}}
+  - {name: 🇺🇸 美国 CloudFlare节点 11, server: s4.db-link01.top, port: 2082, client-fingerprint: chrome,
+    type: vmess, uuid: 4b36625c-b9d9-3ea6-aed5-86d62c70e16d, alterId: 0, cipher: auto,
+    tls: false, network: ws, ws-opts: {path: /dabai.in104.25.248.188, headers: {Host: 100-4-150-250.s4.db-link01.top}}}
+  - {name: 🇨🇳 广东省广州市 移动, server: 120.232.153.63, port: 40565, client-fingerprint: chrome,
+    type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 64, cipher: auto,
+    tls: false}
+proxy-groups:
+  - name: PROXY
+    type: select
+    proxies:
+      - URL-TEST
+      - LOAD-BALANCE
+      - SELECT
+      - DIRECT
+  - name: OTHER
+    type: select
+    proxies:
+      - PROXY
+      - DIRECT
+  - name: AD
+    type: select
+    proxies:
+      - REJECT
+      - DIRECT
+      - PROXY
+  - name: URL-TEST
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 600
+    lazy: true
+    tolerance: 100
+    proxies:
+      - 🇬🇧 英国 伦敦Amazon数据中心
+      - 🇨🇳 广东省广州市白云区 电信
+      - 🇺🇸 美国 CloudFlare节点 2
+      - 🇺🇸 美国 CloudFlare节点 5
+      - 🇬🇧 英国 V2CROSS.COM
+      - 🇺🇸 美国 CloudFlare节点 11
+      - 🇺🇸 美国 CloudFlare节点 3
+      - 🇺🇸 美国 Amazon数据中心
+      - 🇺🇸 美国 CloudFlare节点 8
+      - 🇨🇳 广东省广州市 移动
+      - 🇺🇸 美国 Amazon数据中心 3
+      - 🇺🇸 美国 CloudFlare节点 4
+      - 🇺🇸 美国 CloudFlare节点 6
+      - 🇺🇸 美国 CloudFlare节点 10
+      - 🇺🇸 美国 CloudFlare节点
+      - 🇦🇺 澳大利亚 V2CROSS.COM
+      - 🇺🇸 美国 CloudFlare节点 7
+      - 🇺🇸 美国 Amazon数据中心 2
+      - 🇺🇸 美国 惠普HP
+      - 🇺🇸 美国 CloudFlare节点 9
+  - name: LOAD-BALANCE
+    type: load-balance
+    url: http://www.gstatic.com/generate_204
+    interval: 600
+    proxies:
+      - 🇬🇧 英国 伦敦Amazon数据中心
+      - 🇨🇳 广东省广州市白云区 电信
+      - 🇺🇸 美国 CloudFlare节点 2
+      - 🇺🇸 美国 CloudFlare节点 5
+      - 🇬🇧 英国 V2CROSS.COM
+      - 🇺🇸 美国 CloudFlare节点 11
+      - 🇺🇸 美国 CloudFlare节点 3
+      - 🇺🇸 美国 Amazon数据中心
+      - 🇺🇸 美国 CloudFlare节点 8
+      - 🇨🇳 广东省广州市 移动
+      - 🇺🇸 美国 Amazon数据中心 3
+      - 🇺🇸 美国 CloudFlare节点 4
+      - 🇺🇸 美国 CloudFlare节点 6
+      - 🇺🇸 美国 CloudFlare节点 10
+      - 🇺🇸 美国 CloudFlare节点
+      - 🇦🇺 澳大利亚 V2CROSS.COM
+      - 🇺🇸 美国 CloudFlare节点 7
+      - 🇺🇸 美国 Amazon数据中心 2
+      - 🇺🇸 美国 惠普HP
+      - 🇺🇸 美国 CloudFlare节点 9
+  - name: SELECT
+    type: select
+    proxies:
+      - 🇬🇧 英国 伦敦Amazon数据中心
+      - 🇨🇳 广东省广州市白云区 电信
+      - 🇺🇸 美国 CloudFlare节点 2
+      - 🇺🇸 美国 CloudFlare节点 5
+      - 🇬🇧 英国 V2CROSS.COM
+      - 🇺🇸 美国 CloudFlare节点 11
+      - 🇺🇸 美国 CloudFlare节点 3
+      - 🇺🇸 美国 Amazon数据中心
+      - 🇺🇸 美国 CloudFlare节点 8
+      - 🇨🇳 广东省广州市 移动
+      - 🇺🇸 美国 Amazon数据中心 3
+      - 🇺🇸 美国 CloudFlare节点 4
+      - 🇺🇸 美国 CloudFlare节点 6
+      - 🇺🇸 美国 CloudFlare节点 10
+      - 🇺🇸 美国 CloudFlare节点
+      - 🇦🇺 澳大利亚 V2CROSS.COM
+      - 🇺🇸 美国 CloudFlare节点 7
+      - 🇺🇸 美国 Amazon数据中心 2
+      - 🇺🇸 美国 惠普HP
+      - 🇺🇸 美国 CloudFlare节点 9
+rules:
+  - RULE-SET,applications,DIRECT
+  - DOMAIN,clash.razord.top,DIRECT
+  - DOMAIN,yacd.haishan.me,DIRECT
+  - RULE-SET,private,DIRECT
+  - RULE-SET,reject,AD
+  - RULE-SET,icloud,DIRECT
+  - RULE-SET,apple,DIRECT
+  - RULE-SET,google,DIRECT
+  - RULE-SET,tld-not-cn,PROXY
+  - RULE-SET,gfw,PROXY
+  - RULE-SET,greatfire,PROXY
+  - RULE-SET,telegramcidr,PROXY
+  - RULE-SET,lancidr,DIRECT
+  - RULE-SET,cncidr,DIRECT
+  - GEOIP,CN,DIRECT
+  - RULE-SET,direct,DIRECT
+  - RULE-SET,proxy,OTHER
+  - MATCH,OTHER
+rule-providers:
+  reject:
+    type: http
+    behavior: domain
+    url: 
+      https://gh.xxooo.cf/https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/reject.txt
+    path: ./ruleset/reject.yaml
+    interval: 86400
+  icloud:
+    type: http
+    behavior: domain
+    url: 
+      https://gh.xxooo.cf/https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/icloud.txt
+    path: ./ruleset/icloud.yaml
+    interval: 86400
+  apple:
+    type: http
+    behavior: domain
+    url: 
+      https://gh.xxooo.cf/https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/apple.txt
+    path: ./ruleset/apple.yaml
+    interval: 86400
+  google:
+    type: http
+    behavior: domain
+    url: 
+      https://gh.xxooo.cf/https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/google.txt
+    path: ./ruleset/google.yaml
+    interval: 86400
+  proxy:
+    type: http
+    behavior: domain
+    url: 
+      https://gh.xxooo.cf/https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/proxy.txt
+    path: ./ruleset/proxy.yaml
+    interval: 86400
+  direct:
+    type: http
+    behavior: domain
+    url: 
+      https://gh.xxooo.cf/https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/direct.txt
+    path: ./ruleset/direct.yaml
+    interval: 86400
+  private:
+    type: http
+    behavior: domain
+    url: 
+      https://gh.xxooo.cf/https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/private.txt
+    path: ./ruleset/private.yaml
+    interval: 86400
+  gfw:
+    type: http
+    behavior: domain
+    url: 
+      https://gh.xxooo.cf/https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/gfw.txt
+    path: ./ruleset/gfw.yaml
+    interval: 86400
+  greatfire:
+    type: http
+    behavior: domain
+    url: 
+      https://gh.xxooo.cf/https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/greatfire.txt
+    path: ./ruleset/greatfire.yaml
+    interval: 86400
+  tld-not-cn:
+    type: http
+    behavior: domain
+    url: 
+      https://gh.xxooo.cf/https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/tld-not-cn.txt
+    path: ./ruleset/tld-not-cn.yaml
+    interval: 86400
+  telegramcidr:
+    type: http
+    behavior: ipcidr
+    url: 
+      https://gh.xxooo.cf/https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/telegramcidr.txt
+    path: ./ruleset/telegramcidr.yaml
+    interval: 86400
+  cncidr:
+    type: http
+    behavior: ipcidr
+    url: 
+      https://gh.xxooo.cf/https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/cncidr.txt
+    path: ./ruleset/cncidr.yaml
+    interval: 86400
+  lancidr:
+    type: http
+    behavior: ipcidr
+    url: 
+      https://gh.xxooo.cf/https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/lancidr.txt
+    path: ./ruleset/lancidr.yaml
+    interval: 86400
+  applications:
+    type: http
+    behavior: classical
+    url: 
+      https://gh.xxooo.cf/https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/applications.txt
+    path: ./ruleset/applications.yaml
+    interval: 86400
+tcp-concurrent: true

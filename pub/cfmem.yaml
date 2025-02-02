@@ -1,4 +1,4 @@
-# Update: 2025-02-02 18:08:30
+# Update: 2025-02-02 20:07:07
 # Created by caoqiang
 mixed-port: 7890
 allow-lan: true
@@ -60,26 +60,26 @@ proxy-groups:
     lazy: true
     tolerance: 100
     proxies:
-      - 🇨🇭_CH_瑞士
-      - 🇺🇸_US_美国
       - 🇨🇳_CN_中国->🇺🇸_US_美国
+      - 🇨🇭_CH_瑞士
       - 🇳🇱_NL_荷兰
+      - 🇺🇸_US_美国
   - name: LOAD-BALANCE
     type: load-balance
     url: http://www.gstatic.com/generate_204
     interval: 600
     proxies:
-      - 🇨🇭_CH_瑞士
-      - 🇺🇸_US_美国
       - 🇨🇳_CN_中国->🇺🇸_US_美国
+      - 🇨🇭_CH_瑞士
       - 🇳🇱_NL_荷兰
+      - 🇺🇸_US_美国
   - name: SELECT
     type: select
     proxies:
-      - 🇨🇭_CH_瑞士
-      - 🇺🇸_US_美国
       - 🇨🇳_CN_中国->🇺🇸_US_美国
+      - 🇨🇭_CH_瑞士
       - 🇳🇱_NL_荷兰
+      - 🇺🇸_US_美国
 rules:
   - RULE-SET,applications,DIRECT
   - DOMAIN,clash.razord.top,DIRECT
