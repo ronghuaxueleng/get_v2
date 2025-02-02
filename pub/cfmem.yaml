@@ -1,4 +1,4 @@
-# Update: 2025-02-01 22:00:56
+# Update: 2025-02-02 00:37:17
 # Created by caoqiang
 mixed-port: 7890
 allow-lan: true
@@ -9,7 +9,31 @@ mode: rule
 log-level: info
 external-controller: 0.0.0.0:9090
 global-client-fingerprint: chrome
-proxies: []
+proxies:
+  - name: 🇺🇸_US_美国
+    type: ss
+    server: 34.215.210.60
+    port: 443
+    cipher: aes-256-cfb
+    password: amazonskr05
+  - name: 🇨🇭_CH_瑞士
+    type: ss
+    server: 84.17.53.160
+    port: 989
+    cipher: aes-256-cfb
+    password: f8f7aCzcPKbsF8p3
+  - name: 🇨🇳_CN_中国->🇺🇸_US_美国
+    type: trojan
+    server: 219.135.231.205
+    port: 21019
+    password: 20a84ebf-9341-4f5f-8245-3975e2fdeee5
+    skip-cert-verify: true
+  - name: 🇳🇱_NL_荷兰
+    type: ss
+    server: 193.29.139.189
+    port: 8080
+    cipher: chacha20-ietf-poly1305
+    password: cvII85TrW6n0OGyfpHVS1u
 proxy-groups:
   - name: PROXY
     type: select
@@ -35,15 +59,27 @@ proxy-groups:
     interval: 600
     lazy: true
     tolerance: 100
-    proxies: []
+    proxies:
+      - 🇳🇱_NL_荷兰
+      - 🇨🇳_CN_中国->🇺🇸_US_美国
+      - 🇺🇸_US_美国
+      - 🇨🇭_CH_瑞士
   - name: LOAD-BALANCE
     type: load-balance
     url: http://www.gstatic.com/generate_204
     interval: 600
-    proxies: []
+    proxies:
+      - 🇳🇱_NL_荷兰
+      - 🇨🇳_CN_中国->🇺🇸_US_美国
+      - 🇺🇸_US_美国
+      - 🇨🇭_CH_瑞士
   - name: SELECT
     type: select
-    proxies: []
+    proxies:
+      - 🇳🇱_NL_荷兰
+      - 🇨🇳_CN_中国->🇺🇸_US_美国
+      - 🇺🇸_US_美国
+      - 🇨🇭_CH_瑞士
 rules:
   - RULE-SET,applications,DIRECT
   - DOMAIN,clash.razord.top,DIRECT
