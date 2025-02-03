@@ -1,4 +1,4 @@
-# Update: 2025-02-02 22:01:01
+# Update: 2025-02-03 00:36:13
 # Created by caoqiang
 mixed-port: 7890
 allow-lan: true
@@ -10,30 +10,93 @@ log-level: info
 external-controller: 0.0.0.0:9090
 global-client-fingerprint: chrome
 proxies:
-  - name: 🇺🇸_US_美国
-    type: ss
-    server: 34.215.210.60
-    port: 443
-    cipher: aes-256-cfb
-    password: amazonskr05
-  - name: 🇨🇭_CH_瑞士
-    type: ss
-    server: 84.17.53.160
-    port: 989
-    cipher: aes-256-cfb
-    password: f8f7aCzcPKbsF8p3
   - name: 🇨🇳_CN_中国->🇺🇸_US_美国
     type: trojan
     server: 219.135.231.205
     port: 21019
     password: 20a84ebf-9341-4f5f-8245-3975e2fdeee5
     skip-cert-verify: true
-  - name: 🇳🇱_NL_荷兰
+  - name: 🇺🇸_US_美国
+    type: trojan
+    server: fitting-foxhound.goat627.mom
+    port: 443
+    sni: fitting-foxhound.goat627.mom
+    password: '3770966768580042752'
+  - name: 🇹🇷_TR_土耳其->🇯🇵_JP_日本
+    type: trojan
+    server: correct-boxer.goat627.mom
+    port: 443
+    sni: correct-boxer.goat627.mom
+    password: '3770966768580042752'
+  - name: 🇺🇸_US_美国_1
     type: ss
-    server: 193.29.139.189
-    port: 8080
+    server: 47.128.217.182
+    port: 443
+    cipher: aes-256-cfb
+    password: amazonskr05
+  - name: 🇲🇩_MD_摩尔多瓦
+    type: ss
+    server: 91.132.94.200
+    port: 989
+    cipher: aes-256-cfb
+    password: f8f7aCzcPKbsF8p3
+  - name: 🇺🇸_US_美国->🇩🇪_DE_德国
+    type: ss
+    server: 34.217.72.81
+    port: 443
+    cipher: aes-256-cfb
+    password: amazonskr05
+  - name: 🇹🇷_TR_土耳其->🇯🇵_JP_日本_1
+    type: trojan
+    server: clever-primate.goat627.mom
+    port: 443
+    sni: clever-primate.goat627.mom
+    password: '3770966768580042752'
+  - name: 🇺🇸_US_美国->🇯🇵_JP_日本
+    type: ss
+    server: us-boardman-oregon-2.keenvpn.me
+    port: 443
     cipher: chacha20-ietf-poly1305
-    password: cvII85TrW6n0OGyfpHVS1u
+    password: 2afbc97400ca71c8f3306f9843a6e1c2
+  - name: 🇷🇴_RO_罗马尼亚
+    type: ss
+    server: 185.193.49.88
+    port: 989
+    cipher: aes-256-cfb
+    password: f8f7aCzcPKbsF8p3
+  - name: 🇲🇩_MD_摩尔多瓦->🇮🇷_IR_伊朗
+    type: ss
+    server: 87.251.79.34
+    port: 20684
+    cipher: chacha20-ietf-poly1305
+    password: 5iGkW9yxMcH2VE5FO9FMQJ
+  - name: 🇺🇸_US_美国->🇯🇵_JP_日本_1
+    type: trojan
+    server: 63.176.213.29
+    port: 22222
+    sni: trojan.burgerip.co.uk
+    password: telegram-id-directvpn
+    network: tcp
+    alpn:
+      - http/1.1
+  - name: 🇺🇸_US_美国->🇯🇵_JP_日本_2
+    type: trojan
+    server: prompt-gibbon.goat627.mom
+    port: 443
+    sni: prompt-gibbon.goat627.mom
+    password: '3770966768580042752'
+  - name: 🇺🇸_US_美国->🇯🇵_JP_日本_3
+    type: trojan
+    server: bursting-bunny.goat627.mom
+    port: 443
+    sni: bursting-bunny.goat627.mom
+    password: '3770966768580042752'
+  - name: 🇬🇧_GB_英国
+    type: ss
+    server: 62.100.205.48
+    port: 989
+    cipher: aes-256-cfb
+    password: f8f7aCzcPKbsF8p3
 proxy-groups:
   - name: PROXY
     type: select
@@ -60,26 +123,56 @@ proxy-groups:
     lazy: true
     tolerance: 100
     proxies:
+      - 🇺🇸_US_美国->🇩🇪_DE_德国
+      - 🇺🇸_US_美国->🇯🇵_JP_日本
+      - 🇷🇴_RO_罗马尼亚
+      - 🇬🇧_GB_英国
+      - 🇺🇸_US_美国_1
+      - 🇺🇸_US_美国->🇯🇵_JP_日本_3
+      - 🇹🇷_TR_土耳其->🇯🇵_JP_日本
+      - 🇲🇩_MD_摩尔多瓦->🇮🇷_IR_伊朗
+      - 🇲🇩_MD_摩尔多瓦
+      - 🇺🇸_US_美国->🇯🇵_JP_日本_1
+      - 🇺🇸_US_美国->🇯🇵_JP_日本_2
       - 🇨🇳_CN_中国->🇺🇸_US_美国
+      - 🇹🇷_TR_土耳其->🇯🇵_JP_日本_1
       - 🇺🇸_US_美国
-      - 🇨🇭_CH_瑞士
-      - 🇳🇱_NL_荷兰
   - name: LOAD-BALANCE
     type: load-balance
     url: http://www.gstatic.com/generate_204
     interval: 600
     proxies:
+      - 🇺🇸_US_美国->🇩🇪_DE_德国
+      - 🇺🇸_US_美国->🇯🇵_JP_日本
+      - 🇷🇴_RO_罗马尼亚
+      - 🇬🇧_GB_英国
+      - 🇺🇸_US_美国_1
+      - 🇺🇸_US_美国->🇯🇵_JP_日本_3
+      - 🇹🇷_TR_土耳其->🇯🇵_JP_日本
+      - 🇲🇩_MD_摩尔多瓦->🇮🇷_IR_伊朗
+      - 🇲🇩_MD_摩尔多瓦
+      - 🇺🇸_US_美国->🇯🇵_JP_日本_1
+      - 🇺🇸_US_美国->🇯🇵_JP_日本_2
       - 🇨🇳_CN_中国->🇺🇸_US_美国
+      - 🇹🇷_TR_土耳其->🇯🇵_JP_日本_1
       - 🇺🇸_US_美国
-      - 🇨🇭_CH_瑞士
-      - 🇳🇱_NL_荷兰
   - name: SELECT
     type: select
     proxies:
+      - 🇺🇸_US_美国->🇩🇪_DE_德国
+      - 🇺🇸_US_美国->🇯🇵_JP_日本
+      - 🇷🇴_RO_罗马尼亚
+      - 🇬🇧_GB_英国
+      - 🇺🇸_US_美国_1
+      - 🇺🇸_US_美国->🇯🇵_JP_日本_3
+      - 🇹🇷_TR_土耳其->🇯🇵_JP_日本
+      - 🇲🇩_MD_摩尔多瓦->🇮🇷_IR_伊朗
+      - 🇲🇩_MD_摩尔多瓦
+      - 🇺🇸_US_美国->🇯🇵_JP_日本_1
+      - 🇺🇸_US_美国->🇯🇵_JP_日本_2
       - 🇨🇳_CN_中国->🇺🇸_US_美国
+      - 🇹🇷_TR_土耳其->🇯🇵_JP_日本_1
       - 🇺🇸_US_美国
-      - 🇨🇭_CH_瑞士
-      - 🇳🇱_NL_荷兰
 rules:
   - RULE-SET,applications,DIRECT
   - DOMAIN,clash.razord.top,DIRECT
