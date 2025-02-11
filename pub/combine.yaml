@@ -1,4 +1,4 @@
-# Update: 2025-02-11 18:08:29
+# Update: 2025-02-11 20:08:19
 # Created by caoqiang
 mixed-port: 7890
 allow-lan: true
@@ -206,69 +206,81 @@ proxies:
     tls: true
     type: vmess
     uuid: e0c6b3b7-9f5b-4bd6-9abf-260663aa4f1b
-  - {name: 🇺🇸 美国 Vegasnap公司, server: 104.129.164.255, port: 8443, client-fingerprint: chrome,
-    type: vmess, uuid: e88b85c6-93b4-47f6-b3fb-2c55dcb1289f, alterId: 0, cipher: auto,
-    tls: true, network: ws, ws-opts: {path: /dyajvws, headers: {Host: lax2.ibgfw.top}}}
-  - {name: 🇯🇵 日本 V2CROSS.COM, server: dozo01.flztjc.top, port: 5306, client-fingerprint: chrome,
-    type: trojan, password: 069a7054-7269-554b-bfab-a7f2651f92e5, sni: tw-06-592.flztjc.net}
-  - {name: 🇬🇧 英国 伦敦Amazon数据中心, server: 3.8.231.141, port: 22222, client-fingerprint: chrome,
+  - {name: 🇺🇸 美国 Bodis有限责任公司, server: www.darkroom.lol, port: 8080, client-fingerprint: chrome,
+    type: vmess, uuid: 22826b44-5c1a-4b4b-dbaa-83a2e8bd95f0, alterId: 0, cipher: auto,
+    tls: false, network: ws, ws-opts: {path: /, headers: {Host: www.darkroom.lol}}}
+  - {name: 🇺🇸 美国 惠普公司, server: 15.236.67.39, port: 22222, client-fingerprint: chrome,
     type: trojan, password: telegram-id-privatevpns, sni: trojan.burgerip.co.uk}
-  - {name: 🇺🇸 美国 CloudFlare节点, server: 104.16.155.10, port: 80, client-fingerprint: chrome,
+  - {name: 🇺🇸 美国 CloudFlare节点, server: jp.cowvpn.org, port: 443, client-fingerprint: chrome,
+    type: vmess, uuid: 11a805f2-41a7-4cd8-8406-0470c3cde0d3, alterId: 0, cipher: auto,
+    tls: true, network: ws, ws-opts: {path: /cctv13/vmess_jpcf, headers: {Host: jpcf.cowvpn.org}}}
+  - {name: 🇨🇳 广东省东莞市 联通, server: dozo01.flztjc.top, port: 6304, client-fingerprint: chrome,
+    type: trojan, password: 069a7054-7269-554b-bfab-a7f2651f92e5, sni: jp-4-557.flztjc.net}
+  - {name: 🇷🇺 俄罗斯 V2CROSS.COM, server: 185.242.86.156, port: 54170, client-fingerprint: chrome,
+    type: ss, cipher: chacha20-ietf-poly1305, password: 36ZCHeabUSfKjfQEvJ4HDV}
+  - {name: 🇺🇸 美国 CloudFlare节点 2, server: 104.16.155.10, port: 2095, client-fingerprint: chrome,
     type: vmess, uuid: 4b36625c-b9d9-3ea6-aed5-86d62c70e16d, alterId: 0, cipher: auto,
-    tls: false, network: ws, ws-opts: {path: /dabai.in104.17.169.115, headers: {Host: 100-49-141-209.s1.db-link02.top}}}
-  - {name: 🇺🇸 美国 CloudFlare节点 2, server: 104.21.61.73, port: 443, client-fingerprint: chrome,
-    type: trojan, password: yaml777, sni: yaml7.ggff.net, network: ws, ws-opts: {
-      path: /, headers: {Host: yaml7.ggff.net}}}
+    tls: false, network: ws, ws-opts: {path: /dabai.in104.20.27.115, headers: {Host: 100-209-47-141.s2.db-link02.top}}}
+  - {name: 🇺🇸 北美地区 V2CROSS.COM, server: 23.158.56.21, port: 48961, client-fingerprint: chrome,
+    type: vmess, uuid: 6eef3448-bbc0-4933-894a-72b3e8786109, alterId: 0, cipher: auto,
+    tls: false}
+  - {name: 🇺🇸 美国 Fastly全球Anycast节点, server: gov.uk, port: 443, client-fingerprint: chrome,
+    type: vmess, uuid: 77848824-93b7-4b89-ffd0-e91afff406ce, alterId: 0, cipher: auto,
+    tls: true, network: ws, ws-opts: {path: /77848824, headers: {Host: zheshiscp.com}}}
+  - {name: 🇪🇸 西班牙 V2CROSS.COM, server: 150.241.97.216, port: 26039, client-fingerprint: chrome,
+    type: ss, cipher: chacha20-ietf-poly1305, password: gj1dvw15nnjIyMSjSficeC}
+  - {name: 🇺🇸 美国 CloudFlare节点 3, server: se.899994.xyz, port: 443, client-fingerprint: chrome,
+    type: vmess, uuid: a0605527-28e4-449c-80ee-5642cc16a8af, alterId: 0, cipher: auto,
+    tls: true, network: ws, ws-opts: {path: /index, headers: {Host: se.899994.xyz}}}
+  - {name: 🇺🇸 美国 V2CROSS.COM, server: 45.144.48.128, port: 8443, client-fingerprint: chrome,
+    type: vmess, uuid: a4850481-9b95-430f-9b2d-192d2410b4f4, alterId: 0, cipher: auto,
+    tls: true, network: ws, ws-opts: {path: /vmess/}}
+  - {name: 🇺🇸 美国 CloudFlare节点 4, server: zmkkyc.whmvmkwuey.store, port: 443, client-fingerprint: chrome,
+    type: vmess, uuid: 2c6dcb36-c268-4e63-aa46-bfae30a78614, alterId: 0, cipher: auto,
+    tls: true, network: ws, ws-opts: {path: /, headers: {Host: zmkkyc.whmvmkwuey.store}}}
+  - {name: 🇮🇪 爱尔兰 V2CROSS.COM, server: 99.80.232.202, port: 22222, client-fingerprint: chrome,
+    type: trojan, password: telegram-id-privatevpns, sni: trojan.burgerip.co.uk}
+  - {name: 🇹🇼 台湾省新竹市 中华电信, server: tttxbmsm.fask511.cfd, port: 25774, client-fingerprint: chrome,
+    type: vmess, uuid: 6b83a28c-e872-4f7e-9b13-ffcef4b5fc44, alterId: 0, cipher: auto,
+    tls: false, network: ws, ws-opts: {path: /?ed=1024, headers: {Host: www.douyin.com}}}
+  - {name: 🇺🇸 美国 CloudFlare节点 5, server: s2.db-link01.top, port: 2095, client-fingerprint: chrome,
+    type: vmess, uuid: 4b36625c-b9d9-3ea6-aed5-86d62c70e16d, alterId: 0, cipher: auto,
+    tls: false, network: ws, ws-opts: {path: /dabai.in104.21.133.12, headers: {Host: 100-130-136-50.s2.db-link01.top}}}
+  - {name: 🇯🇵 日本 东京Amazon数据中心, server: vn.mjt000.com, port: 443, client-fingerprint: chrome,
+    type: trojan, password: 6557bf4a-852b-4a69-ad35-d53293386a13, sni: vn.mjt000.com}
+  - {name: 🇺🇸 美国 加利福尼亚州圣何塞PEG TECH, server: 142.4.108.135, port: 38007, client-fingerprint: chrome,
+    type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 64, cipher: auto,
+    tls: true, network: ws, ws-opts: {path: /path/1720963559796}}
   - {name: 🇮🇳 印度 V2CROSS.COM, server: 202.78.162.5, port: 443, client-fingerprint: chrome,
     type: vmess, uuid: 716eded6-2201-4dbd-9d63-1638c9e8e677, alterId: 0, cipher: auto,
     tls: true, network: ws, ws-opts: {path: /, headers: {Host: pendar.onthewifi.com}}}
-  - {name: 🇺🇸 美国 CloudFlare节点 3, server: buffalocdn.899994.xyz, port: 2087, client-fingerprint: chrome,
-    type: vmess, uuid: a0605527-28e4-449c-80ee-5642cc16a8af, alterId: 0, cipher: auto,
-    tls: true, network: ws, ws-opts: {path: /, headers: {Host: buffalocdn.899994.xyz}}}
-  - {name: 🇷🇺 俄罗斯 V2CROSS.COM, server: 185.242.86.156, port: 54170, client-fingerprint: chrome,
-    type: ss, cipher: chacha20-ietf-poly1305, password: 36ZCHeabUSfKjfQEvJ4HDV}
-  - {name: 🇺🇸 美国 CloudFlare节点 4, server: visa.com, port: 443, client-fingerprint: chrome,
-    type: vmess, uuid: 3e125fac-2e5e-44f4-bd5b-5de5712fdbff, alterId: 0, cipher: auto,
-    tls: true, network: ws, ws-opts: {path: /, headers: {Host: hanguo.daluquan.top}}}
-  - {name: 🇺🇸 美国 CloudFlare节点 5, server: br.899994.xyz, port: 443, client-fingerprint: chrome,
-    type: vmess, uuid: a0605527-28e4-449c-80ee-5642cc16a8af, alterId: 0, cipher: auto,
-    tls: true, servername: br.899994.xyz, network: ws, ws-opts: {path: /, headers: {
-        Host: br.899994.xyz}}}
-  - {name: 🇺🇸 美国 CloudFlare节点 6, server: c3.v2raybrasil.xyz, port: 2082, client-fingerprint: chrome,
-    type: vmess, uuid: a71c8f6c-5210-45a0-8f47-1d2556ee3083, alterId: 0, cipher: auto,
-    tls: false, network: ws, ws-opts: {path: /, headers: {Host: ybr.redbullplus.xyz}}}
-  - {name: 🇸🇪 瑞典 V2CROSS.COM, server: 185.255.123.92, port: 990, client-fingerprint: chrome,
-    type: ss, cipher: chacha20-ietf-poly1305, password: f8f7aCzcPKbsF8p3}
-  - {name: 🇨🇳 广东省广州市白云区 电信, server: 219.135.231.205, port: 21019, client-fingerprint: chrome,
-    type: trojan, password: 20a84ebf-9341-4f5f-8245-3975e2fdeee5, skip-cert-verify: true}
-  - {name: 🇺🇸 美国 CloudFlare节点 7, server: p2.v2raybrasil.xyz, port: 2052, client-fingerprint: chrome,
-    type: vmess, uuid: a71c8f6c-5210-45a0-8f47-1d2556ee3083, alterId: 0, cipher: auto,
-    tls: false, network: ws, ws-opts: {path: /, headers: {Host: ybr.redbullplus.xyz}}}
-  - {name: 🇹🇼 台湾省新竹市 中华电信, server: bvdhgfhfs.fask511.cfd, port: 25774, client-fingerprint: chrome,
+  - {name: 🇺🇸 美国 CloudFlare节点 6, server: 104.21.82.183, port: 8880, client-fingerprint: chrome,
+    type: vmess, uuid: 5a7021e0-26b4-45d6-b175-fe551601ca97, alterId: 0, cipher: auto,
+    tls: false, network: ws, ws-opts: {path: /, headers: {Host: server26.beheshtbaneh.com}}}
+  - {name: 🇺🇸 美国 CloudFlare节点 7, server: s2.db-link02.top, port: 2082, client-fingerprint: chrome,
+    type: vmess, uuid: 13514c2c-d5a4-335f-965a-5dc292e36759, alterId: 0, cipher: auto,
+    tls: false, network: ws, ws-opts: {path: /dabai.in104.24.60.200, headers: {Host: 100-87-160-252.s2.db-link02.top}}}
+  - {name: 🇩🇪 德国下萨克森州萨尔茨吉特 德国电信, server: service.ouluyun9803.com, port: 20005, client-fingerprint: chrome,
+    type: ss, cipher: chacha20-ietf-poly1305, password: d6105bbd-be0d-45b2-82ad-31fd1071c1d2}
+  - {name: 🇺🇸 美国 CloudFlare节点 8, server: 104.16.155.10, port: 2082, client-fingerprint: chrome,
+    type: vmess, uuid: 4b36625c-b9d9-3ea6-aed5-86d62c70e16d, alterId: 0, cipher: auto,
+    tls: false, network: ws, ws-opts: {path: /dabai.in104.18.42.172, headers: {Host: 100-38-62-25.s5.db-link02.top}}}
+  - {name: 🇹🇼 台湾省新竹市 中华电信 2, server: bvdhgfhfs.fask511.cfd, port: 25780, client-fingerprint: chrome,
     type: vmess, uuid: 6b83a28c-e872-4f7e-9b13-ffcef4b5fc44, alterId: 0, cipher: auto,
     tls: false, network: ws, ws-opts: {path: /?ed=1024, headers: {Host: www.douyin.com}}}
-  - {name: 🇺🇸 美国 CloudFlare节点 8, server: s2.db-link02.top, port: 2052, client-fingerprint: chrome,
-    type: vmess, uuid: 4b36625c-b9d9-3ea6-aed5-86d62c70e16d, alterId: 0, cipher: auto,
-    tls: false, network: ws, ws-opts: {path: /dabai.in172.64.6.224, headers: {Host: 100-34-100-44.s2.db-link02.top}}}
-  - {name: 🇺🇸 美国 CloudFlare节点 9, server: hkwapcdn.899994.xyz, port: 443, client-fingerprint: chrome,
-    type: vmess, uuid: a0605527-28e4-449c-80ee-5642cc16a8af, alterId: 0, cipher: auto,
-    tls: true, network: ws, ws-opts: {path: /index, headers: {Host: hkwapcdn.899994.xyz}}}
-  - {name: 🇷🇺 俄罗斯 鞑靼斯坦喀山justhost, server: 46.17.40.190, port: 12330, client-fingerprint: chrome,
-    type: ss, cipher: aes-256-gcm, password: dongtaiwang.com}
-  - {name: 🇺🇸 美国 CloudFlare节点 10, server: hk1.899994.xyz, port: 443, client-fingerprint: chrome,
-    type: vmess, uuid: a0605527-28e4-449c-80ee-5642cc16a8af, alterId: 0, cipher: auto,
-    tls: true, network: ws, ws-opts: {path: /index, headers: {Host: hk1.899994.xyz}}}
-  - {name: 🇺🇸 美国 CloudFlare节点 11, server: c1.v2raybrasil.xyz, port: 2082, client-fingerprint: chrome,
-    type: vmess, uuid: a71c8f6c-5210-45a0-8f47-1d2556ee3083, alterId: 0, cipher: auto,
-    tls: false, network: ws, ws-opts: {path: /, headers: {Host: ybr.redbullplus.xyz}}}
-  - {name: 🇬🇧 英国 V2CROSS.COM, server: 77.239.99.180, port: 34775, client-fingerprint: chrome,
-    type: ss, cipher: chacha20-ietf-poly1305, password: nHDhqhjSzmrCNUeRalyPwQ}
-  - {name: 🇺🇸 美国 CloudFlare节点 12, server: hknbyivfffj.site, port: 443, client-fingerprint: chrome,
-    type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto,
-    tls: true, network: ws, ws-opts: {path: /rbqqvws, headers: {Host: hknbyivfffj.site}}}
-  - {name: 🇺🇸 美国 麻省理工学院, server: 18.133.81.136, port: 22222, client-fingerprint: chrome,
-    type: trojan, password: telegram-id-directvpn, sni: trojan.burgerip.co.uk, alpn: [
-      http/1.1]}
+  - {name: 🇺🇸 美国 Fastly全球Anycast节点 2, server: plex.com, port: 80, client-fingerprint: chrome,
+    type: vmess, uuid: ca387597-d79e-48c2-89a7-e2dc66a88a70, alterId: 0, cipher: auto,
+    tls: false, network: ws, ws-opts: {path: /racevpn?telegram-@ISVvpn-telegram-@ISVvpn-telegram-@ISVvpn-telegram-@ISVvpn,
+      headers: {Host: telegram-isvvpn.ir}}}
+  - {name: 🇺🇸 美国 CloudFlare节点 9, server: iqdpduvc.whmvmkwuey.store, port: 443, client-fingerprint: chrome,
+    type: vmess, uuid: 08436ae1-9a75-48da-b1e8-5272b001d678, alterId: 0, cipher: auto,
+    tls: true, network: ws, ws-opts: {path: /, headers: {Host: iqdpduvc.whmvmkwuey.store}}}
+  - {name: 🇺🇸 美国 CloudFlare节点 10, server: sg2.cowvpn.org, port: 443, client-fingerprint: chrome,
+    type: vmess, uuid: 11a805f2-41a7-4cd8-8406-0470c3cde0d3, alterId: 0, cipher: auto,
+    tls: true, network: ws, ws-opts: {path: /cctv13/vmess_sg2cf, headers: {Host: sg2cf.cowvpn.org}}}
+  - {name: 🇺🇸 美国 V2CROSS.COM 2, server: 3h-poland1.09vpn.com, port: 8443, client-fingerprint: chrome,
+    type: vmess, uuid: a4850481-9b95-430f-9b2d-192d2410b4f4, alterId: 0, cipher: auto,
+    tls: true, network: ws, ws-opts: {path: /vmess/, headers: {Host: 3h-poland1.09vpn.com}}}
 proxy-groups:
   - name: PROXY
     type: select
@@ -301,183 +313,195 @@ proxy-groups:
     lazy: true
     tolerance: 100
     proxies:
-      - 🇺🇸_US_美国_17
-      - 🇺🇸_US_美国_12
-      - 🇹🇷_TR_土耳其
-      - 🇳🇱_NL_荷兰
-      - 🇺🇸_US_美国_3
-      - 🇺🇸_US_美国_5
-      - 🇷🇺_RU_俄罗斯_1
-      - 🇺🇸_US_美国_13
-      - 🇺🇸_US_美国_10
-      - 🇺🇸_US_美国_1
-      - 🇺🇸_US_美国_14
-      - 🇷🇺_RU_俄罗斯
-      - 🇺🇸_US_美国_8
-      - 🇺🇸_US_美国_7
-      - 🇺🇸_US_美国_16
-      - 🇺🇸_US_美国
-      - 🇺🇸_US_美国_6
       - 🇺🇸_US_美国_2
+      - 🇷🇺_RU_俄罗斯_1
+      - 🇺🇸_US_美国_17
+      - 🇺🇸_US_美国->🇫🇷_FR_法国
+      - 🇳🇱_NL_荷兰->🇷🇺_RU_俄罗斯
+      - 🇺🇸_US_美国_6
+      - 🇹🇷_TR_土耳其
+      - 🇺🇸_US_美国_16
+      - 🇺🇸_US_美国_12
+      - 🇺🇸_US_美国_1
+      - 🇺🇸_US_美国_3
+      - 🇺🇸_US_美国_8
+      - 🇺🇸_US_美国_14
       - 🇺🇸_US_美国_9
+      - 🇺🇸_US_美国
       - 🇺🇸_US_美国_15
       - 🇺🇸_US_美国_11
-      - 🇺🇸_US_美国->🇫🇷_FR_法国
+      - 🇺🇸_US_美国_10
       - 🇧🇪_BE_比利时
-      - 🇳🇱_NL_荷兰->🇷🇺_RU_俄罗斯
+      - 🇳🇱_NL_荷兰
+      - 🇺🇸_US_美国_13
+      - 🇺🇸_US_美国_7
+      - 🇷🇺_RU_俄罗斯
+      - 🇺🇸_US_美国_5
       - 敏感时期，更新暂停
-      - 庆祝亚冬会胜利召开
       - 如有需要，自行搭建
-      - 🇨🇳 广东省广州市白云区 电信
-      - 🇹🇼 台湾省新竹市 中华电信
-      - 🇬🇧 英国 伦敦Amazon数据中心
-      - 🇮🇳 印度 V2CROSS.COM
-      - 🇺🇸 美国 CloudFlare节点 5
-      - 🇺🇸 美国 CloudFlare节点 3
-      - 🇯🇵 日本 V2CROSS.COM
-      - 🇺🇸 美国 CloudFlare节点 12
-      - 🇺🇸 美国 CloudFlare节点 6
+      - 庆祝亚冬会胜利召开
+      - 🇺🇸 美国 V2CROSS.COM
       - 🇺🇸 美国 CloudFlare节点
-      - 🇺🇸 美国 CloudFlare节点 10
-      - 🇺🇸 美国 CloudFlare节点 11
-      - 🇺🇸 美国 麻省理工学院
-      - 🇺🇸 美国 CloudFlare节点 4
+      - 🇺🇸 美国 惠普公司
+      - 🇺🇸 美国 CloudFlare节点 5
       - 🇺🇸 美国 CloudFlare节点 7
-      - 🇺🇸 美国 Vegasnap公司
-      - 🇺🇸 美国 CloudFlare节点 9
-      - 🇷🇺 俄罗斯 鞑靼斯坦喀山justhost
-      - 🇬🇧 英国 V2CROSS.COM
-      - 🇷🇺 俄罗斯 V2CROSS.COM
-      - 🇺🇸 美国 CloudFlare节点 2
-      - 🇸🇪 瑞典 V2CROSS.COM
+      - 🇺🇸 美国 V2CROSS.COM 2
       - 🇺🇸 美国 CloudFlare节点 8
+      - 🇹🇼 台湾省新竹市 中华电信 2
+      - 🇹🇼 台湾省新竹市 中华电信
+      - 🇮🇪 爱尔兰 V2CROSS.COM
+      - 🇺🇸 北美地区 V2CROSS.COM
+      - 🇺🇸 美国 CloudFlare节点 6
+      - 🇺🇸 美国 Fastly全球Anycast节点 2
+      - 🇺🇸 美国 CloudFlare节点 9
+      - 🇺🇸 美国 Bodis有限责任公司
+      - 🇺🇸 美国 CloudFlare节点 3
+      - 🇺🇸 美国 Fastly全球Anycast节点
+      - 🇺🇸 美国 CloudFlare节点 2
+      - 🇺🇸 美国 加利福尼亚州圣何塞PEG TECH
+      - 🇺🇸 美国 CloudFlare节点 4
+      - 🇮🇳 印度 V2CROSS.COM
+      - 🇯🇵 日本 东京Amazon数据中心
+      - 🇷🇺 俄罗斯 V2CROSS.COM
+      - 🇪🇸 西班牙 V2CROSS.COM
+      - 🇩🇪 德国下萨克森州萨尔茨吉特 德国电信
+      - 🇨🇳 广东省东莞市 联通
+      - 🇺🇸 美国 CloudFlare节点 10
   - name: LOAD-BALANCE
     type: load-balance
     url: http://www.gstatic.com/generate_204
     interval: 600
     proxies:
-      - 🇺🇸_US_美国_17
-      - 🇺🇸_US_美国_12
-      - 🇹🇷_TR_土耳其
-      - 🇳🇱_NL_荷兰
-      - 🇨🇳 广东省广州市白云区 电信
-      - 如有需要，自行搭建
-      - 🇺🇸_US_美国_3
-      - 🇹🇼 台湾省新竹市 中华电信
-      - 🇬🇧 英国 伦敦Amazon数据中心
-      - 🇺🇸_US_美国_5
-      - 🇷🇺_RU_俄罗斯_1
-      - 🇺🇸_US_美国_13
-      - 🇮🇳 印度 V2CROSS.COM
-      - 🇺🇸_US_美国_10
-      - 🇺🇸 美国 CloudFlare节点 5
-      - 🇺🇸 美国 CloudFlare节点 3
-      - 🇯🇵 日本 V2CROSS.COM
-      - 🇺🇸_US_美国_1
-      - 🇺🇸 美国 CloudFlare节点
-      - 🇺🇸 美国 CloudFlare节点 6
-      - 🇺🇸 美国 CloudFlare节点 12
-      - 🇺🇸_US_美国_14
-      - 🇷🇺_RU_俄罗斯
-      - 🇺🇸 美国 CloudFlare节点 10
-      - 🇺🇸 美国 CloudFlare节点 11
-      - 🇺🇸_US_美国_8
-      - 🇺🇸_US_美国_7
-      - 🇺🇸_US_美国_16
-      - 🇺🇸 美国 麻省理工学院
-      - 🇺🇸 美国 CloudFlare节点 4
-      - 🇺🇸_US_美国
-      - 🇺🇸 美国 CloudFlare节点 7
-      - 🇺🇸_US_美国_6
-      - 庆祝亚冬会胜利召开
       - 🇺🇸_US_美国_2
-      - 🇺🇸 美国 Vegasnap公司
-      - 🇺🇸 美国 CloudFlare节点 9
-      - 🇺🇸_US_美国_9
-      - 敏感时期，更新暂停
-      - 🇷🇺 俄罗斯 鞑靼斯坦喀山justhost
-      - 🇺🇸_US_美国_15
-      - 🇬🇧 英国 V2CROSS.COM
-      - 🇺🇸_US_美国_11
-      - 🇷🇺 俄罗斯 V2CROSS.COM
+      - 🇺🇸 美国 V2CROSS.COM
+      - 🇺🇸 美国 惠普公司
+      - 🇺🇸 美国 CloudFlare节点
+      - 🇺🇸 美国 CloudFlare节点 5
+      - 🇷🇺_RU_俄罗斯_1
+      - 🇺🇸_US_美国_17
       - 🇺🇸_US_美国->🇫🇷_FR_法国
-      - 🇺🇸 美国 CloudFlare节点 2
-      - 🇸🇪 瑞典 V2CROSS.COM
-      - 🇧🇪_BE_比利时
-      - 🇺🇸 美国 CloudFlare节点 8
+      - 🇺🇸 美国 CloudFlare节点 7
       - 🇳🇱_NL_荷兰->🇷🇺_RU_俄罗斯
+      - 🇺🇸_US_美国_6
+      - 🇹🇷_TR_土耳其
+      - 🇺🇸_US_美国_16
+      - 🇺🇸 美国 CloudFlare节点 8
+      - 🇹🇼 台湾省新竹市 中华电信 2
+      - 🇺🇸_US_美国_12
+      - 🇹🇼 台湾省新竹市 中华电信
+      - 🇺🇸_US_美国_1
+      - 🇮🇪 爱尔兰 V2CROSS.COM
+      - 🇺🇸_US_美国_3
+      - 🇺🇸 北美地区 V2CROSS.COM
+      - 🇺🇸_US_美国_8
+      - 🇺🇸_US_美国_14
+      - 🇺🇸 美国 V2CROSS.COM 2
+      - 🇺🇸_US_美国_9
+      - 如有需要，自行搭建
+      - 🇺🇸_US_美国
+      - 🇺🇸_US_美国_15
+      - 🇺🇸 美国 CloudFlare节点 6
+      - 🇺🇸 美国 Fastly全球Anycast节点 2
+      - 🇺🇸_US_美国_11
+      - 🇺🇸 美国 CloudFlare节点 9
+      - 🇺🇸 美国 Bodis有限责任公司
+      - 🇺🇸 美国 CloudFlare节点 3
+      - 🇺🇸 美国 Fastly全球Anycast节点
+      - 🇺🇸 美国 CloudFlare节点 2
+      - 🇺🇸_US_美国_10
+      - 🇺🇸 美国 加利福尼亚州圣何塞PEG TECH
+      - 🇺🇸 美国 CloudFlare节点 4
+      - 🇧🇪_BE_比利时
+      - 🇳🇱_NL_荷兰
+      - 🇺🇸_US_美国_13
+      - 🇺🇸_US_美国_7
+      - 🇷🇺 俄罗斯 V2CROSS.COM
+      - 敏感时期，更新暂停
+      - 🇯🇵 日本 东京Amazon数据中心
+      - 🇮🇳 印度 V2CROSS.COM
+      - 🇷🇺_RU_俄罗斯
+      - 🇺🇸_US_美国_5
+      - 🇪🇸 西班牙 V2CROSS.COM
+      - 🇩🇪 德国下萨克森州萨尔茨吉特 德国电信
+      - 🇨🇳 广东省东莞市 联通
+      - 🇺🇸 美国 CloudFlare节点 10
+      - 庆祝亚冬会胜利召开
   - name: SELECT
     type: select
     proxies:
-      - 🇺🇸_US_美国_17
-      - 🇺🇸_US_美国_12
-      - 🇹🇷_TR_土耳其
-      - 🇳🇱_NL_荷兰
-      - 🇨🇳 广东省广州市白云区 电信
-      - 如有需要，自行搭建
-      - 🇺🇸_US_美国_3
-      - 🇹🇼 台湾省新竹市 中华电信
-      - 🇬🇧 英国 伦敦Amazon数据中心
-      - 🇺🇸_US_美国_5
-      - 🇷🇺_RU_俄罗斯_1
-      - 🇺🇸_US_美国_13
-      - 🇮🇳 印度 V2CROSS.COM
-      - 🇺🇸_US_美国_10
-      - 🇺🇸 美国 CloudFlare节点 5
-      - 🇺🇸 美国 CloudFlare节点 3
-      - 🇯🇵 日本 V2CROSS.COM
-      - 🇺🇸_US_美国_1
-      - 🇺🇸 美国 CloudFlare节点
-      - 🇺🇸 美国 CloudFlare节点 6
-      - 🇺🇸 美国 CloudFlare节点 12
-      - 🇺🇸_US_美国_14
-      - 🇷🇺_RU_俄罗斯
-      - 🇺🇸 美国 CloudFlare节点 10
-      - 🇺🇸 美国 CloudFlare节点 11
-      - 🇺🇸_US_美国_8
-      - 🇺🇸_US_美国_7
-      - 🇺🇸_US_美国_16
-      - 🇺🇸 美国 麻省理工学院
-      - 🇺🇸 美国 CloudFlare节点 4
-      - 🇺🇸_US_美国
-      - 🇺🇸 美国 CloudFlare节点 7
-      - 🇺🇸_US_美国_6
-      - 庆祝亚冬会胜利召开
       - 🇺🇸_US_美国_2
-      - 🇺🇸 美国 Vegasnap公司
-      - 🇺🇸 美国 CloudFlare节点 9
-      - 🇺🇸_US_美国_9
-      - 敏感时期，更新暂停
-      - 🇷🇺 俄罗斯 鞑靼斯坦喀山justhost
-      - 🇺🇸_US_美国_15
-      - 🇬🇧 英国 V2CROSS.COM
-      - 🇺🇸_US_美国_11
-      - 🇷🇺 俄罗斯 V2CROSS.COM
+      - 🇺🇸 美国 V2CROSS.COM
+      - 🇺🇸 美国 惠普公司
+      - 🇺🇸 美国 CloudFlare节点
+      - 🇺🇸 美国 CloudFlare节点 5
+      - 🇷🇺_RU_俄罗斯_1
+      - 🇺🇸_US_美国_17
       - 🇺🇸_US_美国->🇫🇷_FR_法国
-      - 🇺🇸 美国 CloudFlare节点 2
-      - 🇸🇪 瑞典 V2CROSS.COM
-      - 🇧🇪_BE_比利时
-      - 🇺🇸 美国 CloudFlare节点 8
+      - 🇺🇸 美国 CloudFlare节点 7
       - 🇳🇱_NL_荷兰->🇷🇺_RU_俄罗斯
+      - 🇺🇸_US_美国_6
+      - 🇹🇷_TR_土耳其
+      - 🇺🇸_US_美国_16
+      - 🇺🇸 美国 CloudFlare节点 8
+      - 🇹🇼 台湾省新竹市 中华电信 2
+      - 🇺🇸_US_美国_12
+      - 🇹🇼 台湾省新竹市 中华电信
+      - 🇺🇸_US_美国_1
+      - 🇮🇪 爱尔兰 V2CROSS.COM
+      - 🇺🇸_US_美国_3
+      - 🇺🇸 北美地区 V2CROSS.COM
+      - 🇺🇸_US_美国_8
+      - 🇺🇸_US_美国_14
+      - 🇺🇸 美国 V2CROSS.COM 2
+      - 🇺🇸_US_美国_9
+      - 如有需要，自行搭建
+      - 🇺🇸_US_美国
+      - 🇺🇸_US_美国_15
+      - 🇺🇸 美国 CloudFlare节点 6
+      - 🇺🇸 美国 Fastly全球Anycast节点 2
+      - 🇺🇸_US_美国_11
+      - 🇺🇸 美国 CloudFlare节点 9
+      - 🇺🇸 美国 Bodis有限责任公司
+      - 🇺🇸 美国 CloudFlare节点 3
+      - 🇺🇸 美国 Fastly全球Anycast节点
+      - 🇺🇸 美国 CloudFlare节点 2
+      - 🇺🇸_US_美国_10
+      - 🇺🇸 美国 加利福尼亚州圣何塞PEG TECH
+      - 🇺🇸 美国 CloudFlare节点 4
+      - 🇧🇪_BE_比利时
+      - 🇳🇱_NL_荷兰
+      - 🇺🇸_US_美国_13
+      - 🇺🇸_US_美国_7
+      - 🇷🇺 俄罗斯 V2CROSS.COM
+      - 敏感时期，更新暂停
+      - 🇯🇵 日本 东京Amazon数据中心
+      - 🇮🇳 印度 V2CROSS.COM
+      - 🇷🇺_RU_俄罗斯
+      - 🇺🇸_US_美国_5
+      - 🇪🇸 西班牙 V2CROSS.COM
+      - 🇩🇪 德国下萨克森州萨尔茨吉特 德国电信
+      - 🇨🇳 广东省东莞市 联通
+      - 🇺🇸 美国 CloudFlare节点 10
+      - 庆祝亚冬会胜利召开
 rules:
-  - RULE-SET,tld-not-cn,PROXY
   - RULE-SET,lancidr,DIRECT
-  - RULE-SET,cncidr,DIRECT
-  - RULE-SET,private,DIRECT
-  - GEOIP,CN,DIRECT
-  - RULE-SET,direct,DIRECT
-  - RULE-SET,reject,AD
-  - DOMAIN,yacd.haishan.me,DIRECT
-  - RULE-SET,icloud,DIRECT
-  - RULE-SET,gfw,PROXY
-  - RULE-SET,greatfire,PROXY
-  - RULE-SET,proxy,OTHER
-  - RULE-SET,apple,DIRECT
-  - RULE-SET,telegramcidr,PROXY
-  - RULE-SET,applications,DIRECT
   - DOMAIN,clash.razord.top,DIRECT
-  - RULE-SET,google,DIRECT
+  - RULE-SET,private,DIRECT
   - MATCH,OTHER
+  - RULE-SET,tld-not-cn,PROXY
+  - RULE-SET,apple,DIRECT
+  - RULE-SET,greatfire,PROXY
+  - RULE-SET,icloud,DIRECT
+  - RULE-SET,direct,DIRECT
+  - GEOIP,CN,DIRECT
+  - RULE-SET,proxy,OTHER
+  - RULE-SET,telegramcidr,PROXY
+  - RULE-SET,gfw,PROXY
+  - DOMAIN,yacd.haishan.me,DIRECT
+  - RULE-SET,reject,AD
+  - RULE-SET,cncidr,DIRECT
+  - RULE-SET,google,DIRECT
+  - RULE-SET,applications,DIRECT
 rule-providers:
   reject:
     type: http
