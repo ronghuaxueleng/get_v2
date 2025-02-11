@@ -1,4 +1,4 @@
-# Update: 2025-02-10 22:07:10
+# Update: 2025-02-11 00:36:02
 # Created by caoqiang
 mixed-port: 7890
 allow-lan: true
@@ -13,9 +13,9 @@ proxies:
   - name: 🇷🇺_RU_俄罗斯
     type: ss
     server: 217.30.10.18
-    port: 9040
+    port: 9033
     cipher: aes-256-cfb
-    password: p9z5BVADH2YFs3MN
+    password: UTJA57ypk2XKQpnm
   - name: 🇺🇸_US_美国
     type: ss
     server: 38.68.135.239
@@ -24,29 +24,76 @@ proxies:
     password: FoOiGlkAA9yPEGP
   - name: 🇺🇸_US_美国_1
     type: ss
-    server: 38.68.135.239
-    port: 2375
+    server: 23.157.40.115
+    port: 5498
     cipher: aes-256-gcm
-    password: faBAoD54k87UJG7
-  - name: 🇺🇸_US_美国->🇩🇪_DE_德国
+    password: lGqs95QkFHo2NV
+  - name: 🇺🇸_US_美国_2
     type: vmess
-    server: join.ISVvpn.fastly80-3.hosting-ip.com
+    server: plex.com
     port: 80
     uuid: ca387597-d79e-48c2-89a7-e2dc66a88a70
     cipher: auto
     network: ws
     ws-opts:
-      path: /racevpn
+      path: /racevpn?telegram-@ISVvpn-telegram-@ISVvpn-telegram-@ISVvpn-telegram-@ISVvpn
       headers:
         host: telegram-isvvpn.ir
     alterId: 0
-  - name: 🇺🇸_US_美国_2
+  - name: 🇺🇸_US_美国_3
     type: ss
-    server: 34.221.167.203
+    server: 23.157.40.115
+    port: 9090
+    cipher: aes-256-gcm
+    password: Y6R9pAtvxxzmGC
+  - name: 🇺🇸_US_美国_5
+    type: ss
+    server: 185.47.252.251
+    port: 989
+    cipher: aes-256-cfb
+    password: f8f7aCzcPKbsF8p3
+  - name: 🇺🇸_US_美国_6
+    type: ss
+    server: 54.200.164.45
     port: 443
     cipher: aes-256-cfb
     password: amazonskr05
-  - name: 🇺🇸_US_美国->🇩🇪_DE_德国_1
+  - name: 🇺🇸_US_美国_7
+    type: ss
+    server: 23.157.40.115
+    port: 443
+    cipher: aes-256-gcm
+    password: pKEW8JPByTVTLtM
+  - name: 🇺🇸_US_美国_8
+    type: vmess
+    server: 155.138.208.122
+    port: 8881
+    sni: ''
+    uuid: db5afae4-ac23-41a6-8378-f307a9a47436
+    cipher: auto
+    network: http
+    skip-cert-verify: true
+    http-opts: {}
+    alterId: 0
+  - name: 🇧🇪_BE_比利时
+    type: ss
+    server: 192.71.249.146
+    port: 990
+    cipher: chacha20-ietf-poly1305
+    password: f8f7aCzcPKbsF8p3
+  - name: 🇺🇸_US_美国_9
+    type: ss
+    server: 23.157.40.115
+    port: 2375
+    cipher: aes-256-gcm
+    password: faBAoD54k87UJG7
+  - name: 🇺🇸_US_美国_10
+    type: ss
+    server: 54.190.43.178
+    port: 443
+    cipher: aes-256-cfb
+    password: amazonskr05
+  - name: 🇺🇸_US_美国->🇫🇷_FR_法国
     type: vmess
     server: 151.101.0.155
     port: 80
@@ -60,132 +107,75 @@ proxies:
       headers:
         host: telegram-isvvpn.ir
     alterId: 0
-  - name: 🇷🇺_RU_俄罗斯_1
-    type: ss
-    server: 217.30.10.18
-    port: 9006
-    cipher: aes-256-cfb
-    password: FAdUvMJUq5vDgKEq
-  - name: 🇺🇸_US_美国_3
-    type: ss
-    server: 38.68.135.239
-    port: 3306
-    cipher: aes-256-gcm
-    password: Y6R9pAtvxxzmGC
-  - name: 🇺🇸_US_美国_4
-    type: ss
-    server: 54.190.43.178
-    port: 443
-    cipher: aes-256-cfb
-    password: amazonskr05
-  - name: 🇮🇹_IT_意大利->🇺🇸_US_美国
-    type: ss
-    server: 37.143.129.230
-    port: 989
-    cipher: aes-256-cfb
-    password: f8f7aCzcPKbsF8p3
-  - name: 🇺🇸_US_美国->🇩🇪_DE_德国_2
+  - name: 🇺🇸_US_美国_11
     type: trojan
-    server: 3.128.108.85
+    server: 3.23.6.202
     port: 22222
     sni: trojan.burgerip.co.uk
     password: telegram-id-directvpn
-  - name: 🇷🇺_RU_俄罗斯_2
+    network: tcp
+    alpn:
+      - http/1.1
+  - name: 🇷🇺_RU_俄罗斯_1
     type: ss
     server: 217.30.10.18
-    port: 9001
+    port: 9088
     cipher: aes-256-cfb
-    password: UkXRsXvR6buDMG2Y
-  - name: 🇺🇦_UA_乌克兰
+    password: f8npKgNzdkss2ytn
+  - name: 🇺🇸_US_美国_12
     type: ss
-    server: 176.103.53.105
-    port: 989
-    cipher: aes-256-cfb
-    password: f8f7aCzcPKbsF8p3
-  - name: 🇺🇸_US_美国->🇫🇷_FR_法国
-    type: vmess
-    server: 151.101.194.133
-    port: 80
-    sni: ''
-    uuid: ca387597-d79e-48c2-89a7-e2dc66a88a70
-    cipher: auto
-    network: ws
-    fingerprint: ''
-    ws-opts:
-      path: /racevpn?telegram-@ISVvpn-telegram-@ISVvpn-telegram-@ISVvpn-telegram-@ISVvpn
-      headers:
-        host: telegram-isvvpn.ir
-    alterId: 0
-  - name: 🇺🇸_US_美国_5
+    server: 23.157.40.115
+    port: 6379
+    cipher: aes-256-gcm
+    password: zDNVedRFPQexG9v
+  - name: 🇹🇷_TR_土耳其
     type: ss
-    server: 185.47.252.251
-    port: 989
-    cipher: aes-256-cfb
+    server: 185.123.101.241
+    port: 990
+    cipher: chacha20-ietf-poly1305
     password: f8f7aCzcPKbsF8p3
-  - name: 🇳🇱_NL_荷兰->🇺🇸_US_美国
+  - name: 🇺🇸_US_美国_13
+    type: ss
+    server: 23.157.40.115
+    port: 5001
+    cipher: aes-256-gcm
+    password: Y6R9pAtvxxzmGC
+  - name: 🇺🇸_US_美国_14
+    type: ss
+    server: 23.157.40.115
+    port: 3306
+    cipher: aes-256-gcm
+    password: Y6R9pAtvxxzmGC
+  - name: 🇳🇱_NL_荷兰
     type: ss
     server: 193.29.139.189
     port: 8080
     cipher: chacha20-ietf-poly1305
     password: cvII85TrW6n0OGyfpHVS1u
-  - name: 🇷🇺_RU_俄罗斯_3
+  - name: 🇺🇸_US_美国_15
     type: ss
-    server: 217.30.10.18
-    port: 9059
-    cipher: aes-256-cfb
-    password: 9XwYyZsK8SNzQDtY
-  - name: 🇷🇺_RU_俄罗斯_4
+    server: 38.86.135.223
+    port: 9102
+    cipher: aes-256-gcm
+    password: e4FCWrgpkji3QY
+  - name: 🇺🇸_US_美国_16
     type: ss
-    server: 217.30.10.18
-    port: 9094
-    cipher: aes-256-cfb
-    password: rpgbNnU9rDDU4aWZ
-  - name: 🇺🇸_US_美国->🇫🇷_FR_法国_1
-    type: vmess
-    server: 151.101.130.133
-    port: 80
-    uuid: ca387597-d79e-48c2-89a7-e2dc66a88a70
-    cipher: auto
-    network: ws
-    ws-opts:
-      path: /racevpn?telegram-
-      headers:
-        host: telegram-isvvpn.ir
-    alterId: 0
-  - name: 🇮🇪_IE_爱尔兰
-    type: trojan
-    server: 34.250.225.60
-    port: 22222
-    sni: trojan.burgerip.co.uk
-    password: telegram-id-privatevpns
-    network: tcp
-    alpn:
-      - http/1.1
-  - name: 🇮🇳_IN_印度_1
+    server: 23.157.40.115
+    port: 3389
+    cipher: aes-256-gcm
+    password: Y6R9pAtvxxzmGC
+  - name: 🇺🇸_US_美国_17
     type: ss
-    server: 103.104.247.47
+    server: 23.157.40.115
+    port: 8009
+    cipher: aes-256-gcm
+    password: XKFKl2rULjIp74
+  - name: 🇳🇱_NL_荷兰->🇷🇺_RU_俄罗斯
+    type: ss
+    server: 45.158.171.136
     port: 8080
     cipher: chacha20-ietf-poly1305
-    password: oZIoA69Q8yhcQV8ka3Pa3A
-  - name: 🇷🇺_RU_俄罗斯_5
-    type: ss
-    server: 185.231.233.112
-    port: 989
-    cipher: aes-256-cfb
-    password: f8f7aCzcPKbsF8p3
-  - name: 🇬🇧_GB_英国
-    type: trojan
-    server: 35.179.63.48
-    port: 22222
-    sni: trojan.burgerip.co.uk
-    password: telegram-id-privatevpns
-    skip-cert-verify: false
-  - name: 🇷🇺_RU_俄罗斯_6
-    type: ss
-    server: 89.221.224.166
-    port: 8388
-    cipher: chacha20-ietf-poly1305
-    password: NjBlZDlk
+    password: cvII85TrW6n0OGyfpHVS1u
 proxy-groups:
   - name: PROXY
     type: select
@@ -212,86 +202,86 @@ proxy-groups:
     lazy: true
     tolerance: 100
     proxies:
-      - 🇮🇳_IN_印度_1
-      - 🇺🇸_US_美国->🇩🇪_DE_德国
-      - 🇷🇺_RU_俄罗斯_4
-      - 🇬🇧_GB_英国
-      - 🇺🇸_US_美国_2
-      - 🇮🇹_IT_意大利->🇺🇸_US_美国
-      - 🇳🇱_NL_荷兰->🇺🇸_US_美国
-      - 🇷🇺_RU_俄罗斯_1
-      - 🇷🇺_RU_俄罗斯_5
-      - 🇺🇸_US_美国_3
-      - 🇺🇸_US_美国_4
-      - 🇺🇸_US_美国->🇩🇪_DE_德国_1
-      - 🇺🇦_UA_乌克兰
-      - 🇷🇺_RU_俄罗斯_2
-      - 🇮🇪_IE_爱尔兰
+      - 🇺🇸_US_美国_11
       - 🇺🇸_US_美国
-      - 🇷🇺_RU_俄罗斯_6
-      - 🇺🇸_US_美国->🇫🇷_FR_法国_1
+      - 🇺🇸_US_美国_17
       - 🇺🇸_US_美国_1
-      - 🇷🇺_RU_俄罗斯
       - 🇺🇸_US_美国->🇫🇷_FR_法国
-      - 🇷🇺_RU_俄罗斯_3
+      - 🇺🇸_US_美国_14
+      - 🇧🇪_BE_比利时
+      - 🇳🇱_NL_荷兰
+      - 🇺🇸_US_美国_8
+      - 🇺🇸_US_美国_3
+      - 🇺🇸_US_美国_9
+      - 🇺🇸_US_美国_12
+      - 🇺🇸_US_美国_7
+      - 🇷🇺_RU_俄罗斯_1
+      - 🇺🇸_US_美国_13
+      - 🇹🇷_TR_土耳其
+      - 🇺🇸_US_美国_15
+      - 🇺🇸_US_美国_16
+      - 🇺🇸_US_美国_2
       - 🇺🇸_US_美国_5
-      - 🇺🇸_US_美国->🇩🇪_DE_德国_2
+      - 🇺🇸_US_美国_6
+      - 🇺🇸_US_美国_10
+      - 🇷🇺_RU_俄罗斯
+      - 🇳🇱_NL_荷兰->🇷🇺_RU_俄罗斯
   - name: LOAD-BALANCE
     type: load-balance
     url: http://www.gstatic.com/generate_204
     interval: 600
     proxies:
-      - 🇮🇳_IN_印度_1
-      - 🇺🇸_US_美国->🇩🇪_DE_德国
-      - 🇷🇺_RU_俄罗斯_4
-      - 🇬🇧_GB_英国
-      - 🇺🇸_US_美国_2
-      - 🇮🇹_IT_意大利->🇺🇸_US_美国
-      - 🇳🇱_NL_荷兰->🇺🇸_US_美国
-      - 🇷🇺_RU_俄罗斯_1
-      - 🇷🇺_RU_俄罗斯_5
-      - 🇺🇸_US_美国_3
-      - 🇺🇸_US_美国_4
-      - 🇺🇸_US_美国->🇩🇪_DE_德国_1
-      - 🇺🇦_UA_乌克兰
-      - 🇷🇺_RU_俄罗斯_2
-      - 🇮🇪_IE_爱尔兰
+      - 🇺🇸_US_美国_11
       - 🇺🇸_US_美国
-      - 🇷🇺_RU_俄罗斯_6
-      - 🇺🇸_US_美国->🇫🇷_FR_法国_1
+      - 🇺🇸_US_美国_17
       - 🇺🇸_US_美国_1
-      - 🇷🇺_RU_俄罗斯
       - 🇺🇸_US_美国->🇫🇷_FR_法国
-      - 🇷🇺_RU_俄罗斯_3
+      - 🇺🇸_US_美国_14
+      - 🇧🇪_BE_比利时
+      - 🇳🇱_NL_荷兰
+      - 🇺🇸_US_美国_8
+      - 🇺🇸_US_美国_3
+      - 🇺🇸_US_美国_9
+      - 🇺🇸_US_美国_12
+      - 🇺🇸_US_美国_7
+      - 🇷🇺_RU_俄罗斯_1
+      - 🇺🇸_US_美国_13
+      - 🇹🇷_TR_土耳其
+      - 🇺🇸_US_美国_15
+      - 🇺🇸_US_美国_16
+      - 🇺🇸_US_美国_2
       - 🇺🇸_US_美国_5
-      - 🇺🇸_US_美国->🇩🇪_DE_德国_2
+      - 🇺🇸_US_美国_6
+      - 🇺🇸_US_美国_10
+      - 🇷🇺_RU_俄罗斯
+      - 🇳🇱_NL_荷兰->🇷🇺_RU_俄罗斯
   - name: SELECT
     type: select
     proxies:
-      - 🇮🇳_IN_印度_1
-      - 🇺🇸_US_美国->🇩🇪_DE_德国
-      - 🇷🇺_RU_俄罗斯_4
-      - 🇬🇧_GB_英国
-      - 🇺🇸_US_美国_2
-      - 🇮🇹_IT_意大利->🇺🇸_US_美国
-      - 🇳🇱_NL_荷兰->🇺🇸_US_美国
-      - 🇷🇺_RU_俄罗斯_1
-      - 🇷🇺_RU_俄罗斯_5
-      - 🇺🇸_US_美国_3
-      - 🇺🇸_US_美国_4
-      - 🇺🇸_US_美国->🇩🇪_DE_德国_1
-      - 🇺🇦_UA_乌克兰
-      - 🇷🇺_RU_俄罗斯_2
-      - 🇮🇪_IE_爱尔兰
+      - 🇺🇸_US_美国_11
       - 🇺🇸_US_美国
-      - 🇷🇺_RU_俄罗斯_6
-      - 🇺🇸_US_美国->🇫🇷_FR_法国_1
+      - 🇺🇸_US_美国_17
       - 🇺🇸_US_美国_1
-      - 🇷🇺_RU_俄罗斯
       - 🇺🇸_US_美国->🇫🇷_FR_法国
-      - 🇷🇺_RU_俄罗斯_3
+      - 🇺🇸_US_美国_14
+      - 🇧🇪_BE_比利时
+      - 🇳🇱_NL_荷兰
+      - 🇺🇸_US_美国_8
+      - 🇺🇸_US_美国_3
+      - 🇺🇸_US_美国_9
+      - 🇺🇸_US_美国_12
+      - 🇺🇸_US_美国_7
+      - 🇷🇺_RU_俄罗斯_1
+      - 🇺🇸_US_美国_13
+      - 🇹🇷_TR_土耳其
+      - 🇺🇸_US_美国_15
+      - 🇺🇸_US_美国_16
+      - 🇺🇸_US_美国_2
       - 🇺🇸_US_美国_5
-      - 🇺🇸_US_美国->🇩🇪_DE_德国_2
+      - 🇺🇸_US_美国_6
+      - 🇺🇸_US_美国_10
+      - 🇷🇺_RU_俄罗斯
+      - 🇳🇱_NL_荷兰->🇷🇺_RU_俄罗斯
 rules:
   - RULE-SET,applications,DIRECT
   - DOMAIN,clash.razord.top,DIRECT
