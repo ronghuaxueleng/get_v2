@@ -1,4 +1,4 @@
-# Update: 2025-02-19 22:07:01
+# Update: 2025-02-20 00:36:08
 # Created by caoqiang
 mixed-port: 7890
 allow-lan: true
@@ -10,51 +10,150 @@ log-level: info
 external-controller: 0.0.0.0:9090
 global-client-fingerprint: chrome
 proxies:
-  - name: 🇩🇪_DE_德国
+  - name: 未知
     type: trojan
-    server: 52.57.173.145
+    server: naiu-us.05vr9nyqg5.download
+    port: 13019
+    sni: cloudflare.node-ssl.cdn-alibaba.com
+    password: 65f14831-5c67-483f-9e85-f3aa73f21187
+    skip-cert-verify: false
+  - name: 🇩🇪_DE_德国->🇷🇺_RU_俄罗斯
+    type: trojan
+    server: 35.156.221.161
+    port: 22222
+    sni: trojan.burgerip.co.uk
+    password: telegram-id-privatevpns
+    network: tcp
+    alpn:
+      - http/1.1
+  - name: 🇺🇸_US_美国_1
+    type: ss
+    server: 54.244.0.4
     port: 443
-    sni: patient-ghost.treefrog761.one
-    password: '3782591447421952000'
-    skip-cert-verify: true
-  - name: 🇮🇹_IT_意大利
-    type: ss
-    server: 37.143.129.230
-    port: 989
     cipher: aes-256-cfb
-    password: f8f7aCzcPKbsF8p3
-  - name: 🇰🇷_KR_韩国
-    type: ss
-    server: 154.223.16.212
-    port: 989
-    cipher: aes-256-cfb
-    password: f8f7aCzcPKbsF8p3
+    password: amazonskr05
   - name: 🇷🇺_RU_俄罗斯
+    type: ss
+    server: 217.30.10.18
+    port: 9025
+    cipher: aes-256-cfb
+    password: XPtzA9sCug3SPR4c
+  - name: 🇷🇺_RU_俄罗斯_1
+    type: ss
+    server: 217.30.10.18
+    port: 9056
+    cipher: aes-256-cfb
+    password: rNBfNuuANFCAk7KB
+  - name: 🇷🇺_RU_俄罗斯_2
     type: ss
     server: 217.30.10.18
     port: 9010
     cipher: aes-256-cfb
     password: f63gg8EruDnUrmz4
-  - name: 🇮🇳_IN_印度
+  - name: 🇩🇰_DK_丹麦
     type: ss
-    server: 103.104.247.47
-    port: 8080
-    cipher: chacha20-ietf-poly1305
-    password: oZIoA69Q8yhcQV8ka3Pa3A
-  - name: 🇷🇺_RU_俄罗斯_1
-    type: ss
-    server: 185.231.233.173
+    server: 185.186.79.53
     port: 989
     cipher: aes-256-cfb
     password: f8f7aCzcPKbsF8p3
-  - name: 🇮🇷_IR_伊朗
+  - name: 🇷🇺_RU_俄罗斯_3
+    type: ss
+    server: 217.30.10.18
+    port: 9001
+    cipher: aes-256-cfb
+    password: UkXRsXvR6buDMG2Y
+  - name: 🇷🇺_RU_俄罗斯_4
+    type: ss
+    server: 217.30.10.18
+    port: 9040
+    cipher: aes-256-cfb
+    password: p9z5BVADH2YFs3MN
+  - name: 🇷🇺_RU_俄罗斯_5
+    type: ss
+    server: is3.opensocks.site
+    port: 8388
+    cipher: chacha20-ietf-poly1305
+    password: NjBlZDlk
+  - name: 🇨🇳_CN_中国->🇺🇸_US_美国
+    type: vmess
+    server: tttxbmsm.fask511.cfd
+    port: 25774
+    uuid: 50b3fb1b-5591-4743-8e9b-0601c5dfe86d
+    cipher: auto
+    network: ws
+    ws-opts:
+      path: /?ed=1024
+    alterId: 0
+  - name: 🇩🇪_DE_德国
+    type: ss
+    server: 45.87.175.65
+    port: 8080
+    cipher: chacha20-ietf-poly1305
+    password: oZIoA69Q8yhcQV8ka3Pa3A
+  - name: 🇨🇭_CH_瑞士->🇧🇪_BE_比利时
+    type: ss
+    server: 84.17.53.160
+    port: 989
+    cipher: aes-256-cfb
+    password: f8f7aCzcPKbsF8p3
+  - name: 🇷🇺_RU_俄罗斯_6
+    type: ss
+    server: 217.30.10.18
+    port: 9018
+    cipher: aes-256-cfb
+    password: fG2artUmHfNT2cX7
+  - name: 🇬🇧_GB_英国->🇷🇺_RU_俄罗斯
     type: trojan
-    server: 188.253.22.10
-    port: 443
-    sni: key-pangolin.treefrog761.one
-    password: '3778399737045327872'
+    server: 51.24.35.171
+    port: 22222
+    sni: trojan.burgerip.co.uk
+    password: telegram-id-directvpn
     network: tcp
-    skip-cert-verify: true
+    alpn:
+      - http/1.1
+  - name: 🇺🇦_UA_乌克兰
+    type: ss
+    server: beta.mattenadene.org
+    port: 54075
+    cipher: chacha20-ietf-poly1305
+    password: 
+      o38yuvzSe3m5aDNpHtUPH1zGwbGEXXMDsGwVaub2SYEmHUa2WGZUjiezX3Vvva9CCzpjxYtuJLgKsSnsyKBf9ciPVba3y4o3
+  - name: 🇷🇺_RU_俄罗斯_7
+    type: ss
+    server: 217.30.10.18
+    port: 9033
+    cipher: aes-256-cfb
+    password: UTJA57ypk2XKQpnm
+  - name: 🇷🇺_RU_俄罗斯_8
+    type: ss
+    server: 217.30.10.18
+    port: 9045
+    cipher: aes-256-cfb
+    password: Lp27rqyJq72bZsqX
+  - name: 🇺🇦_UA_乌克兰_1
+    type: ss
+    server: at1.opensocks.site
+    port: 8388
+    cipher: chacha20-ietf-poly1305
+    password: OWY4ODBm
+  - name: 🇮🇹_IT_意大利->🇷🇺_RU_俄罗斯
+    type: ss
+    server: 37.143.129.230
+    port: 989
+    cipher: aes-256-cfb
+    password: f8f7aCzcPKbsF8p3
+  - name: 🇷🇺_RU_俄罗斯_9
+    type: ss
+    server: 217.30.10.18
+    port: 9014
+    cipher: aes-256-cfb
+    password: KnJGad3FqTvjqbaX
+  - name: 🇷🇺_RU_俄罗斯_10
+    type: ss
+    server: 217.30.10.18
+    port: 9011
+    cipher: aes-256-cfb
+    password: M3t2ZEQcMGRWBjRa
   - alterId: 0
     cipher: auto
     name: 庆祝亚冬会胜利召开
@@ -85,59 +184,6 @@ proxies:
     tls: true
     type: vmess
     uuid: e0c6b3b7-9f5b-4bd6-9abf-260663aa4f1b
-  - {name: 🇺🇸 美国 CloudFlare节点, server: s1.cn-db.top, port: 80, client-fingerprint: chrome,
-    type: vmess, uuid: 4b36625c-b9d9-3ea6-aed5-86d62c70e16d, alterId: 0, cipher: auto,
-    tls: false, network: ws, ws-opts: {path: /dabai.in172.64.34.18, headers: {Host: 100-215-151-174.s1.cn-db.top}}}
-  - {name: 🇮🇳 印度 V2CROSS.COM, server: 202.78.162.5, port: 443, client-fingerprint: chrome,
-    type: vmess, uuid: 118287d2-e968-42e1-80d0-12fa2f5d38d6, alterId: 0, cipher: auto,
-    tls: true, network: ws, ws-opts: {path: /, headers: {Host: sahand.serveminecraft.net}}}
-  - {name: 🇹🇼 台湾省桃园市 中华电信, server: kkkghdragxc.fask511.cfd, port: 25777, client-fingerprint: chrome,
-    type: vmess, uuid: 50b3fb1b-5591-4743-8e9b-0601c5dfe86d, alterId: 0, cipher: auto,
-    tls: false, network: ws, ws-opts: {path: /?ed=1024, headers: {Host: kkkghdragxc.fask511.cfd}}}
-  - {name: 🇺🇸 美国 CloudFlare节点 2, server: 172.64.32.217, port: 2087, client-fingerprint: chrome,
-    type: vmess, uuid: db5afae4-ac23-41a6-8378-f307a9a47436, alterId: 0, cipher: auto,
-    tls: true, servername: dd21146ygfdSNA9191281280kdm22kas2123Aawdsd1234bb155138161148.meratnet.ir,
-    network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: /}}
-  - {name: 🇮🇳 印度 V2CROSS.COM 2, server: 202.78.162.5, port: 443, client-fingerprint: chrome,
-    type: vmess, uuid: 716eded6-2201-4dbd-9d63-1638c9e8e677, alterId: 0, cipher: auto,
-    tls: true, network: ws, ws-opts: {path: /, headers: {Host: pendar.onthewifi.com}}}
-  - {name: 🇺🇸 美国 麻省理工学院, server: 18.134.50.101, port: 22222, client-fingerprint: chrome,
-    type: trojan, password: telegram-id-privatevpns, sni: trojan.burgerip.co.uk, alpn: [
-      http/1.1]}
-  - {name: 🇺🇸 美国 CloudFlare节点 3, server: 104.16.155.10, port: 2082, client-fingerprint: chrome,
-    type: vmess, uuid: 4b36625c-b9d9-3ea6-aed5-86d62c70e16d, alterId: 0, cipher: auto,
-    tls: false, network: ws, ws-opts: {path: /, headers: {Host: 100-241-177-44.s5.db-link01.top}}}
-  - {name: 🇺🇸 美国 CloudFlare节点 4, server: anycast.cf.030419.xyz, port: 80, client-fingerprint: chrome,
-    type: vmess, uuid: b9a3206d-278c-4614-b352-eef632d1c8d5, alterId: 0, cipher: auto,
-    tls: false, network: ws, ws-opts: {path: /rongseven?ed=2048, headers: {Host: 33.bycf.us.kg}}}
-  - {name: 🇬🇧 英国 伦敦, server: 85.210.213.50, port: 443, client-fingerprint: chrome,
-    type: ss, cipher: chacha20-ietf-poly1305, password: W74XFALLLuw6m5IA}
-  - {name: 🇺🇸 美国 V2CROSS.COM, server: 137.175.42.250, port: 30001, client-fingerprint: chrome,
-    type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 64, cipher: auto,
-    tls: true, network: ws, ws-opts: {path: /path/1739892314173}}
-  - {name: 🇹🇼 台湾省桃园市 中华电信 2, server: tttxbmsm.fask511.cfd, port: 25774, client-fingerprint: chrome,
-    type: vmess, uuid: 50b3fb1b-5591-4743-8e9b-0601c5dfe86d, alterId: 0, cipher: auto,
-    tls: false, network: ws, ws-opts: {path: /?ed=1024, headers: {Host: tttxbmsm.fask511.cfd}}}
-  - {name: 🇨🇳 广东省广州市 移动, server: naiu-other.05vr9nyqg5.download, port: 13035, client-fingerprint: chrome,
-    type: trojan, password: 65f14831-5c67-483f-9e85-f3aa73f21187, sni: cloudflare.node-ssl.cdn-alibaba.com,
-    skip-cert-verify: true}
-  - {name: 🇺🇸 北美地区 V2CROSS.COM, server: 23.185.248.17, port: 17007, client-fingerprint: chrome,
-    type: ss, cipher: aes-256-gcm, password: Z7C08JB1HBMWQHVP}
-  - {name: 🇬🇧 英国 V2CROSS.COM, server: 185.126.239.231, port: 20002, client-fingerprint: chrome,
-    type: ss, cipher: aes-256-gcm, password: G2LC1BQ48SXSBKZX}
-  - {name: 🇺🇸 美国 CloudFlare节点 5, server: s1.db-link01.top, port: 8080, client-fingerprint: chrome,
-    type: vmess, uuid: 4b36625c-b9d9-3ea6-aed5-86d62c70e16d, alterId: 0, cipher: auto,
-    tls: false, network: ws, ws-opts: {path: /dabai.in172.64.55.203, headers: {Host: 100-79-28-26.s1.db-link01.top}}}
-  - {name: 🇺🇸 美国 惠普公司, server: series-a2-me.varzesh360.co, port: 443, client-fingerprint: chrome,
-    type: ss, cipher: chacha20-ietf-poly1305, password: Bog0ELmMM9DSxDdQ}
-  - {name: 🇨🇳 山东省青岛市 联通, server: 119.167.230.252, port: 22040, client-fingerprint: chrome,
-    type: ss, cipher: aes-128-gcm, password: b637f2e47b7827b308ebf399008075d2}
-  - {name: 🇺🇸 美国 CloudFlare节点 6, server: s1.db-link02.top, port: 2095, client-fingerprint: chrome,
-    type: vmess, uuid: 4b36625c-b9d9-3ea6-aed5-86d62c70e16d, alterId: 0, cipher: auto,
-    tls: false, network: ws, ws-opts: {path: /dabai.in104.24.248.64, headers: {Host: 100-33-108-197.s1.db-link02.top}}}
-  - {name: 🇮🇳 印度 V2CROSS.COM 3, server: 202.78.162.5, port: 443, client-fingerprint: chrome,
-    type: vmess, uuid: 2ff97c6d-8557-42a4-b43f-19c77c5959ea, alterId: 0, cipher: auto,
-    tls: true, network: ws, ws-opts: {path: /, headers: {Host: irsoft.sytes.net}}}
 proxy-groups:
   - name: PROXY
     type: select
@@ -170,120 +216,108 @@ proxy-groups:
     lazy: true
     tolerance: 100
     proxies:
+      - 🇷🇺_RU_俄罗斯_5
+      - 🇷🇺_RU_俄罗斯_2
+      - 🇷🇺_RU_俄罗斯_10
       - 🇩🇪_DE_德国
-      - 🇮🇹_IT_意大利
-      - 🇰🇷_KR_韩国
+      - 🇷🇺_RU_俄罗斯_7
+      - 🇺🇦_UA_乌克兰
+      - 🇮🇹_IT_意大利->🇷🇺_RU_俄罗斯
+      - 🇷🇺_RU_俄罗斯_4
+      - 🇷🇺_RU_俄罗斯_8
       - 🇷🇺_RU_俄罗斯_1
       - 🇷🇺_RU_俄罗斯
-      - 🇮🇷_IR_伊朗
-      - 🇮🇳_IN_印度
-      - 庆祝亚冬会胜利召开
+      - 🇷🇺_RU_俄罗斯_3
+      - 🇺🇦_UA_乌克兰_1
+      - 🇩🇰_DK_丹麦
+      - 🇨🇭_CH_瑞士->🇧🇪_BE_比利时
+      - 🇷🇺_RU_俄罗斯_6
+      - 🇩🇪_DE_德国->🇷🇺_RU_俄罗斯
+      - 🇺🇸_US_美国_1
+      - 未知
+      - 🇨🇳_CN_中国->🇺🇸_US_美国
+      - 🇬🇧_GB_英国->🇷🇺_RU_俄罗斯
+      - 🇷🇺_RU_俄罗斯_9
       - 如有需要，自行搭建
       - 敏感时期，更新暂停
-      - 🇺🇸 美国 CloudFlare节点 5
-      - 🇬🇧 英国 伦敦
-      - 🇬🇧 英国 V2CROSS.COM
-      - 🇺🇸 美国 CloudFlare节点 6
-      - 🇺🇸 美国 V2CROSS.COM
-      - 🇺🇸 美国 CloudFlare节点 3
-      - 🇺🇸 美国 麻省理工学院
-      - 🇺🇸 美国 CloudFlare节点 2
-      - 🇹🇼 台湾省桃园市 中华电信 2
-      - 🇺🇸 北美地区 V2CROSS.COM
-      - 🇺🇸 美国 CloudFlare节点
-      - 🇨🇳 山东省青岛市 联通
-      - 🇺🇸 美国 CloudFlare节点 4
-      - 🇮🇳 印度 V2CROSS.COM 2
-      - 🇹🇼 台湾省桃园市 中华电信
-      - 🇨🇳 广东省广州市 移动
-      - 🇮🇳 印度 V2CROSS.COM 3
-      - 🇮🇳 印度 V2CROSS.COM
-      - 🇺🇸 美国 惠普公司
+      - 庆祝亚冬会胜利召开
   - name: LOAD-BALANCE
     type: load-balance
     url: http://www.gstatic.com/generate_204
     interval: 600
     proxies:
-      - 🇺🇸 美国 CloudFlare节点 5
+      - 🇷🇺_RU_俄罗斯_5
+      - 🇷🇺_RU_俄罗斯_2
+      - 🇷🇺_RU_俄罗斯_10
       - 🇩🇪_DE_德国
-      - 🇬🇧 英国 伦敦
-      - 🇮🇹_IT_意大利
-      - 🇰🇷_KR_韩国
-      - 🇬🇧 英国 V2CROSS.COM
-      - 🇷🇺_RU_俄罗斯
-      - 🇮🇷_IR_伊朗
-      - 🇺🇸 美国 CloudFlare节点 6
-      - 🇺🇸 美国 V2CROSS.COM
-      - 庆祝亚冬会胜利召开
-      - 如有需要，自行搭建
-      - 🇺🇸 美国 CloudFlare节点 3
-      - 🇺🇸 美国 麻省理工学院
-      - 🇺🇸 美国 CloudFlare节点 2
-      - 🇹🇼 台湾省桃园市 中华电信 2
-      - 🇺🇸 北美地区 V2CROSS.COM
-      - 🇺🇸 美国 CloudFlare节点
-      - 敏感时期，更新暂停
-      - 🇨🇳 山东省青岛市 联通
-      - 🇺🇸 美国 CloudFlare节点 4
-      - 🇮🇳 印度 V2CROSS.COM 2
-      - 🇹🇼 台湾省桃园市 中华电信
-      - 🇨🇳 广东省广州市 移动
-      - 🇮🇳 印度 V2CROSS.COM 3
+      - 🇷🇺_RU_俄罗斯_7
+      - 🇺🇦_UA_乌克兰
+      - 🇮🇹_IT_意大利->🇷🇺_RU_俄罗斯
+      - 🇷🇺_RU_俄罗斯_4
+      - 🇷🇺_RU_俄罗斯_8
       - 🇷🇺_RU_俄罗斯_1
-      - 🇮🇳_IN_印度
-      - 🇮🇳 印度 V2CROSS.COM
-      - 🇺🇸 美国 惠普公司
+      - 庆祝亚冬会胜利召开
+      - 🇷🇺_RU_俄罗斯
+      - 🇷🇺_RU_俄罗斯_3
+      - 🇺🇦_UA_乌克兰_1
+      - 🇩🇰_DK_丹麦
+      - 敏感时期，更新暂停
+      - 如有需要，自行搭建
+      - 🇨🇭_CH_瑞士->🇧🇪_BE_比利时
+      - 🇷🇺_RU_俄罗斯_6
+      - 🇩🇪_DE_德国->🇷🇺_RU_俄罗斯
+      - 🇺🇸_US_美国_1
+      - 未知
+      - 🇨🇳_CN_中国->🇺🇸_US_美国
+      - 🇬🇧_GB_英国->🇷🇺_RU_俄罗斯
+      - 🇷🇺_RU_俄罗斯_9
   - name: SELECT
     type: select
     proxies:
-      - 🇺🇸 美国 CloudFlare节点 5
+      - 🇷🇺_RU_俄罗斯_5
+      - 🇷🇺_RU_俄罗斯_2
+      - 🇷🇺_RU_俄罗斯_10
       - 🇩🇪_DE_德国
-      - 🇬🇧 英国 伦敦
-      - 🇮🇹_IT_意大利
-      - 🇰🇷_KR_韩国
-      - 🇬🇧 英国 V2CROSS.COM
-      - 🇷🇺_RU_俄罗斯
-      - 🇮🇷_IR_伊朗
-      - 🇺🇸 美国 CloudFlare节点 6
-      - 🇺🇸 美国 V2CROSS.COM
-      - 庆祝亚冬会胜利召开
-      - 如有需要，自行搭建
-      - 🇺🇸 美国 CloudFlare节点 3
-      - 🇺🇸 美国 麻省理工学院
-      - 🇺🇸 美国 CloudFlare节点 2
-      - 🇹🇼 台湾省桃园市 中华电信 2
-      - 🇺🇸 北美地区 V2CROSS.COM
-      - 🇺🇸 美国 CloudFlare节点
-      - 敏感时期，更新暂停
-      - 🇨🇳 山东省青岛市 联通
-      - 🇺🇸 美国 CloudFlare节点 4
-      - 🇮🇳 印度 V2CROSS.COM 2
-      - 🇹🇼 台湾省桃园市 中华电信
-      - 🇨🇳 广东省广州市 移动
-      - 🇮🇳 印度 V2CROSS.COM 3
+      - 🇷🇺_RU_俄罗斯_7
+      - 🇺🇦_UA_乌克兰
+      - 🇮🇹_IT_意大利->🇷🇺_RU_俄罗斯
+      - 🇷🇺_RU_俄罗斯_4
+      - 🇷🇺_RU_俄罗斯_8
       - 🇷🇺_RU_俄罗斯_1
-      - 🇮🇳_IN_印度
-      - 🇮🇳 印度 V2CROSS.COM
-      - 🇺🇸 美国 惠普公司
+      - 庆祝亚冬会胜利召开
+      - 🇷🇺_RU_俄罗斯
+      - 🇷🇺_RU_俄罗斯_3
+      - 🇺🇦_UA_乌克兰_1
+      - 🇩🇰_DK_丹麦
+      - 敏感时期，更新暂停
+      - 如有需要，自行搭建
+      - 🇨🇭_CH_瑞士->🇧🇪_BE_比利时
+      - 🇷🇺_RU_俄罗斯_6
+      - 🇩🇪_DE_德国->🇷🇺_RU_俄罗斯
+      - 🇺🇸_US_美国_1
+      - 未知
+      - 🇨🇳_CN_中国->🇺🇸_US_美国
+      - 🇬🇧_GB_英国->🇷🇺_RU_俄罗斯
+      - 🇷🇺_RU_俄罗斯_9
 rules:
-  - RULE-SET,telegramcidr,PROXY
-  - RULE-SET,private,DIRECT
-  - RULE-SET,icloud,DIRECT
   - DOMAIN,yacd.haishan.me,DIRECT
-  - RULE-SET,apple,DIRECT
-  - GEOIP,CN,DIRECT
+  - RULE-SET,tld-not-cn,PROXY
+  - RULE-SET,proxy,OTHER
   - RULE-SET,lancidr,DIRECT
   - MATCH,OTHER
-  - RULE-SET,proxy,OTHER
-  - RULE-SET,reject,AD
-  - RULE-SET,cncidr,DIRECT
-  - RULE-SET,direct,DIRECT
-  - RULE-SET,tld-not-cn,PROXY
-  - RULE-SET,applications,DIRECT
-  - RULE-SET,google,DIRECT
-  - DOMAIN,clash.razord.top,DIRECT
-  - RULE-SET,greatfire,PROXY
   - RULE-SET,gfw,PROXY
+  - RULE-SET,greatfire,PROXY
+  - GEOIP,CN,DIRECT
+  - RULE-SET,reject,AD
+  - DOMAIN,clash.razord.top,DIRECT
+  - RULE-SET,telegramcidr,PROXY
+  - RULE-SET,direct,DIRECT
+  - RULE-SET,applications,DIRECT
+  - RULE-SET,apple,DIRECT
+  - RULE-SET,private,DIRECT
+  - RULE-SET,google,DIRECT
+  - RULE-SET,cncidr,DIRECT
+  - RULE-SET,icloud,DIRECT
 rule-providers:
   reject:
     type: http
