@@ -1,4 +1,4 @@
-# Update: 2025-02-27 02:45:10
+# Update: 2025-02-27 04:09:41
 # Created by caoqiang
 mixed-port: 7890
 allow-lan: true
@@ -10,70 +10,85 @@ log-level: info
 external-controller: 0.0.0.0:9090
 global-client-fingerprint: chrome
 proxies:
-  - {name: 🇭🇰 香港 特别行政区, server: 43.249.36.70, port: 443, client-fingerprint: chrome,
-    type: ss, cipher: chacha20-ietf-poly1305, password: 2afbc97400ca71c8f3306f9843a6e1c2}
-  - {name: 🇬🇧 英国 伦敦Amazon数据中心, server: 35.178.238.219, port: 22222, client-fingerprint: chrome,
-    type: trojan, password: telegram-id-directvpn, sni: trojan.burgerip.co.uk, alpn: [
-      http/1.1]}
-  - {name: 🇫🇷 法国 巴黎Amazon数据中心, server: 15.188.215.183, port: 22222, client-fingerprint: chrome,
-    type: trojan, password: telegram-id-directvpn, sni: trojan.burgerip.co.uk, alpn: [
-      http/1.1]}
-  - {name: 🇨🇳 广东省广州市 腾讯云, server: 8tv68qhq.slashdevslashnetslashtun.net, port: 16013,
-    client-fingerprint: chrome, type: ss, cipher: aes-256-gcm, password: IHWLYZSSSX4GSKLA}
   - {name: 🇺🇸 美国 CloudFlare节点, server: 104.21.80.1, port: 8443, client-fingerprint: randomized,
     type: trojan, password: s42%26umY%28K5n*csP4, sni: JOInMAHDiseRVer-EEu.pAGEs.dEv,
     alpn: [h2%2Chttp%2F1.1], network: ws, ws-opts: {path: /trOagy9SuM2cDpqUqO?ed=2560,
       headers: {Host: JOInMAHDiseRVer-EEu.pAGEs.dEv}}}
-  - {name: 🇮🇪 爱尔兰 都柏林Amazon数据中心, server: 52.18.80.61, port: 22222, client-fingerprint: chrome,
-    type: trojan, password: telegram-id-privatevpns, sni: trojan.burgerip.co.uk}
-  - {name: 🇬🇧 英国 伦敦Amazon数据中心 2, server: 18.130.53.155, port: 22222, client-fingerprint: chrome,
-    type: trojan, password: telegram-id-privatevpns, sni: trojan.burgerip.co.uk}
-  - {name: 🇺🇸 美国 CloudFlare节点 2, server: 104.21.48.1, port: 8443, client-fingerprint: randomized,
-    type: trojan, password: s42%26umY%28K5n*csP4, sni: JOInMAHDiseRVer-EEu.pAGEs.dEv,
-    alpn: [h2%2Chttp%2F1.1], network: ws, ws-opts: {path: /trOagy9SuM2cDpqUqO?ed=2560,
-      headers: {Host: JOInMAHDiseRVer-EEu.pAGEs.dEv}}}
-  - {name: 🇨🇳 广东省广州市 移动, server: 120.232.153.63, port: 40172, client-fingerprint: chrome,
-    type: vmess, uuid: 770ee730-2450-4e3c-a6c6-3932bd32afbd, alterId: 0, cipher: auto,
-    tls: false}
-  - {name: 🇺🇸 美国 CloudFlare节点 3, server: 104.21.96.1, port: 8443, client-fingerprint: randomized,
-    type: trojan, password: s42%26umY%28K5n*csP4, sni: JOInMAHDiseRVer-EEu.pAGEs.dEv,
-    alpn: [h2%2Chttp%2F1.1], network: ws, ws-opts: {path: /trOagy9SuM2cDpqUqO?ed=2560,
-      headers: {Host: JOInMAHDiseRVer-EEu.pAGEs.dEv}}}
-  - {name: 🇺🇦 乌克兰 V2CROSS.COM, server: 185.234.64.35, port: 8388, client-fingerprint: chrome,
-    type: ss, cipher: chacha20-ietf-poly1305, password: YTNjNDY5}
-  - {name: 🇺🇸 美国 CloudFlare节点 4, server: bazar.ir, port: 443, client-fingerprint: chrome,
-    type: vmess, uuid: 542f38d4-4af4-40fe-929d-167053fb04a8, alterId: 0, cipher: auto,
-    tls: true, network: ws, ws-opts: {path: /vmess, headers: {Host: de1-vmess.greenssh.org}}}
-  - {name: 🇺🇸 美国 V2CROSS.COM, server: beesyar.org, port: 8080, client-fingerprint: chrome,
-    type: ss, cipher: chacha20-ietf-poly1305, password: QCXDxuDlTTMD7jtgHUjIoj}
-  - {name: 🇺🇸 美国 CloudFlare节点 5, server: 104.21.16.1, port: 8443, client-fingerprint: randomized,
-    type: trojan, password: s42%26umY%28K5n*csP4, sni: JOInMAHDiseRVer-EEu.pAGEs.dEv,
-    alpn: [h2%2Chttp%2F1.1], network: ws, ws-opts: {path: /trOagy9SuM2cDpqUqO?ed=2560,
-      headers: {Host: JOInMAHDiseRVer-EEu.pAGEs.dEv}}}
-  - {name: 🇺🇸 美国 惠普公司, server: 15.237.65.103, port: 22222, client-fingerprint: chrome,
-    type: trojan, password: telegram-id-privatevpns, sni: trojan.burgerip.co.uk}
-  - {name: 🇺🇸 美国 华盛顿Cogent通信公司, server: 38.14.107.228, port: 38003, client-fingerprint: chrome,
-    type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 64, cipher: auto,
-    tls: true, network: ws, ws-opts: {path: /path/181721272114, headers: {Host: www.23179753.xyz}}}
-  - {name: 🇺🇸 美国 CloudFlare节点 6, server: 172.66.44.173, port: 443, client-fingerprint: randomized,
+  - {name: 🇷🇴 罗马尼亚 V2CROSS.COM, server: 77.83.246.74, port: 443, client-fingerprint: chrome,
+    type: ss, cipher: chacha20-ietf-poly1305, password: ajeK4uJTPKgdb97gcLSNXJ}
+  - {name: 🇨🇳 安徽省滁州市 电信, server: hk01.x.quickcht3.club, port: 52611, client-fingerprint: chrome,
+    type: ss, cipher: chacha20-ietf-poly1305, password: 2be0c954-4291-45ea-b47d-ca713180550b}
+  - {name: 🇺🇸 美国 CloudFlare节点 2, server: 172.66.44.173, port: 443, client-fingerprint: randomized,
     type: trojan, password: '%3AZ%23%253cdIG%27c*%3B*O%7D', sni: JoinmAhDiSeRvER-csn.PaGeS.DEv,
     alpn: [h2%2Chttp%2F1.1], network: ws, ws-opts: {path: /trVxXjc9031MC8sntF?ed=2560,
       headers: {Host: JoinmAhDiSeRvER-csn.PaGeS.DEv}}}
-  - {name: 🇺🇸 美国 Fastly全球Anycast节点, server: 151.101.64.155, port: 80, client-fingerprint: chrome,
+  - {name: 🇺🇸 美国 华盛顿Cogent通信公司, server: 38.14.107.228, port: 38003, client-fingerprint: chrome,
+    type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 64, cipher: auto,
+    tls: true, network: ws, ws-opts: {path: /, headers: {Host: www.23179753.xyz}}}
+  - {name: 🇮🇪 爱尔兰都柏林 亚马逊云, server: 3.255.52.2, port: 22222, client-fingerprint: chrome,
+    type: trojan, password: telegram-id-privatevpns, sni: trojan.burgerip.co.uk}
+  - {name: 🇬🇧 英国 V2CROSS.COM, server: 78.129.140.11, port: 443, client-fingerprint: chrome,
+    type: ss, cipher: chacha20-ietf-poly1305, password: UnSyTV9bo3ZwVcupeRIGoX}
+  - {name: 🇺🇸 美国 CloudFlare节点 3, server: 6b2a30.50f8-2268-45e0.cfd, port: 80, client-fingerprint: chrome,
+    type: vmess, uuid: 0ba4a240-1586-4a54-929c-26389c8a4111, alterId: 0, cipher: auto,
+    tls: false, network: ws, ws-opts: {path: /, headers: {Host: jp01s.50f8-2268-45e0.cfd}}}
+  - {name: 🇬🇧 英国 伦敦Amazon数据中心, server: 3.9.54.176, port: 22222, client-fingerprint: chrome,
+    type: trojan, password: telegram-id-privatevpns, sni: trojan.burgerip.co.uk, alpn: [
+      http/1.1]}
+  - {name: 🇯🇵 日本 东京都Amazon数据中心, server: jp007.421421.xyz, port: 20230, client-fingerprint: chrome,
+    type: trojan, password: 7d9c7804-1f7d-43f7-b19a-fa7c2fff4569, sni: 421421.xyz}
+  - {name: 🇨🇳 广东省广州市 移动, server: 183.236.51.38, port: 51754, client-fingerprint: chrome,
+    type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 0, cipher: auto,
+    tls: false}
+  - {name: 🇺🇸 美国 CloudFlare节点 4, server: hkvm.gecs.top, port: 443, client-fingerprint: chrome,
+    type: vmess, uuid: 0a3cd062-241a-43fc-9c50-eccacbbd5aae, alterId: 0, cipher: auto,
+    tls: true, servername: hkvm.gecs.top, network: ws, ws-opts: {path: /, headers: {
+        Host: hkvm.gecs.top}}}
+  - {name: 🇬🇧 英国 伦敦Amazon数据中心 2, server: 18.130.53.155, port: 22222, client-fingerprint: chrome,
+    type: trojan, password: telegram-id-privatevpns, sni: trojan.burgerip.co.uk}
+  - {name: 🇪🇺 欧洲 V2CROSS.COM, server: 147.78.140.50, port: 8443, client-fingerprint: chrome,
+    type: vmess, uuid: e88b85c6-93b4-47f6-b3fb-2c55dcb1289f, alterId: 0, cipher: auto,
+    tls: true, network: ws, ws-opts: {path: /dyajvws, headers: {Host: lax2.ibgfw.top}}}
+  - {name: 🇸🇬 江西省新余市 电信, server: gdgs.tarioblink.me, port: 30001, client-fingerprint: chrome,
+    type: ss, cipher: chacha20-ietf-poly1305, password: b7e92acc-70e2-4945-9625-c909251ca5ee}
+  - {name: 🇯🇵 日本 东京Amazon数据中心, server: light-minnow.husky461.skin, port: 443, client-fingerprint: chrome,
+    type: trojan, password: 3787016276694802432, sni: light-minnow.husky461.skin,
+    skip-cert-verify: true}
+  - {name: 🇺🇸 美国 Fastly全球Anycast节点, server: 151.101.128.155, port: 80, client-fingerprint: chrome,
     type: vmess, uuid: 6e3ac406-a15b-461d-8b05-ca01b284d9a0, alterId: 0, cipher: auto,
     tls: false, network: ws, ws-opts: {path: /racevpn, headers: {Host: telegram-isvvpn.dev}}}
-  - {name: 🇸🇬 新加坡 Amazon数据中心, server: sg005.421421.xyz, port: 20230, client-fingerprint: chrome,
-    type: trojan, password: 7d9c7804-1f7d-43f7-b19a-fa7c2fff4569, sni: 421421.xyz,
-    skip-cert-verify: false}
-  - {name: 🇺🇸 美国 Amazon EC2服务器, server: 3.77.226.3, port: 22222, client-fingerprint: chrome,
-    type: trojan, password: telegram-id-directvpn, sni: trojan.burgerip.co.uk, alpn: [
+  - {name: 🇺🇸 美国 CloudFlare节点 5, server: 104.21.32.1, port: 8443, client-fingerprint: randomized,
+    type: trojan, password: s42%26umY%28K5n*csP4, sni: JOInMAHDiseRVer-EEu.pAGEs.dEv,
+    alpn: [h2%2Chttp%2F1.1], network: ws, ws-opts: {path: /trOagy9SuM2cDpqUqO?ed=2560,
+      headers: {Host: JOInMAHDiseRVer-EEu.pAGEs.dEv}}}
+  - {name: 🇺🇸 美国 V2CROSS.COM, server: 45.144.48.128, port: 8443, client-fingerprint: chrome,
+    type: vmess, uuid: a4850481-9b95-430f-9b2d-192d2410b4f4, alterId: 0, cipher: auto,
+    tls: true, network: ws, ws-opts: {path: /vmess/}}
+  - {name: 🇺🇸 美国 CloudFlare节点 6, server: cf.fovi.tk, port: 443, client-fingerprint: chrome,
+    type: vmess, uuid: bf67437e-6c90-45ca-abc2-c7240a5ce2aa, alterId: 0, cipher: auto,
+    tls: true, network: ws, ws-opts: {path: /eisasqa, headers: {Host: foxlux.fovi.tk}}}
+  - {name: 🇺🇸 美国 CloudFlare节点 7, server: ffa41b.5d8ecf82.cfd, port: 80, client-fingerprint: chrome,
+    type: vmess, uuid: 4bf074f4-7e9c-4e4b-a10d-156e26199729, alterId: 0, cipher: auto,
+    tls: false, network: ws, ws-opts: {path: /, headers: {Host: us03s.5d8ecf82.cfd}}}
+  - {name: 🇬🇧 英国 社会保险安全部, server: 51.21.153.118, port: 22222, client-fingerprint: chrome,
+    type: trojan, password: telegram-id-privatevpns, sni: trojan.burgerip.co.uk, alpn: [
       http/1.1]}
-  - {name: 🇭🇰 香港 Clayer Limited数据中心, server: 104.251.227.182, port: 443, client-fingerprint: chrome,
-    type: trojan, password: 1e63e585ab2fef3adcc9ea75a62abc23, sni: hezijiasuqi.com}
-  - {name: 🇭🇰 香港 特别行政区 2, server: hong-kong-3.keenvpn.me, port: 443, client-fingerprint: chrome,
-    type: ss, cipher: chacha20-ietf-poly1305, password: 2afbc97400ca71c8f3306f9843a6e1c2}
-  - {name: 🇺🇸 美国 惠普公司 2, server: 15.237.237.194, port: 22222, client-fingerprint: chrome,
-    type: trojan, password: telegram-id-privatevpns, sni: trojan.burgerip.co.uk}
+  - {name: 🇮🇳 印度 V2CROSS.COM, server: 202.78.162.5, port: 443, client-fingerprint: chrome,
+    type: vmess, uuid: 2ff97c6d-8557-42a4-b43f-19c77c5959ea, alterId: 0, cipher: auto,
+    tls: true, network: ws, ws-opts: {path: /, headers: {Host: irsoft.sytes.net}}}
+  - {name: 🇨🇳 广东省广州市 腾讯云, server: ti3hyra4.slashdevslashnetslashtun.net, port: 18002,
+    client-fingerprint: chrome, type: ss, cipher: aes-256-gcm, password: 84HMRAWILKB49QUZ}
+  - {name: 🇦🇷 阿根廷 V2CROSS.COM, server: 181.119.30.20, port: 990, client-fingerprint: chrome,
+    type: ss, cipher: chacha20-ietf-poly1305, password: f8f7aCzcPKbsF8p3}
+  - {name: 🇺🇸 美国 V2CROSS.COM 2, server: 45.142.120.190, port: 2082, client-fingerprint: chrome,
+    type: vmess, uuid: 3f638f34-8dba-4186-bc43-2716a7ddd4be, alterId: 0, cipher: auto,
+    tls: false, network: ws, ws-opts: {path: /az05.beyondy.cfd/link#@AZARBAYJAB1@AZARBAYJAB1@AZARBAYJAB1?ed=2570,
+      headers: {Host: yellow-paper-029c.yvonna.workers.dev}}}
+  - {name: 🇨🇳 广东省广州市 腾讯云 2, server: ti3hyra4.slashdevslashnetslashtun.net, port: 21001,
+    client-fingerprint: chrome, type: ss, cipher: aes-256-gcm, password: Y2U58S90E3GST1AQ}
+  - {name: 🇨🇳 广东省肇庆市 中移铁通, server: 19.mamamajd.site, port: 23619, client-fingerprint: chrome,
+    type: vmess, uuid: 6dbcb4d1-23da-30bd-b3e0-8e4f31100b77, alterId: 2, cipher: auto,
+    tls: false, network: ws, ws-opts: {path: /, headers: {Host: 19.mamamajd.site}}}
 proxy-groups:
   - name: PROXY
     type: select
@@ -100,83 +115,98 @@ proxy-groups:
     lazy: true
     tolerance: 100
     proxies:
-      - 🇺🇸 美国 CloudFlare节点 3
-      - 🇫🇷 法国 巴黎Amazon数据中心
-      - 🇺🇸 美国 Amazon EC2服务器
-      - 🇺🇸 美国 CloudFlare节点
-      - 🇬🇧 英国 伦敦Amazon数据中心
-      - 🇺🇸 美国 惠普公司 2
-      - 🇺🇸 美国 CloudFlare节点 2
-      - 🇭🇰 香港 Clayer Limited数据中心
-      - 🇺🇸 美国 CloudFlare节点 5
       - 🇨🇳 广东省广州市 腾讯云
-      - 🇨🇳 广东省广州市 移动
-      - 🇺🇦 乌克兰 V2CROSS.COM
-      - 🇬🇧 英国 伦敦Amazon数据中心 2
-      - 🇭🇰 香港 特别行政区 2
-      - 🇭🇰 香港 特别行政区
-      - 🇺🇸 美国 V2CROSS.COM
-      - 🇺🇸 美国 惠普公司
-      - 🇸🇬 新加坡 Amazon数据中心
       - 🇺🇸 美国 CloudFlare节点 4
-      - 🇮🇪 爱尔兰 都柏林Amazon数据中心
-      - 🇺🇸 美国 CloudFlare节点 6
       - 🇺🇸 美国 Fastly全球Anycast节点
+      - 🇬🇧 英国 V2CROSS.COM
+      - 🇦🇷 阿根廷 V2CROSS.COM
+      - 🇷🇴 罗马尼亚 V2CROSS.COM
+      - 🇪🇺 欧洲 V2CROSS.COM
+      - 🇺🇸 美国 CloudFlare节点 3
+      - 🇨🇳 广东省广州市 移动
+      - 🇺🇸 美国 V2CROSS.COM 2
+      - 🇺🇸 美国 CloudFlare节点 5
+      - 🇮🇳 印度 V2CROSS.COM
+      - 🇺🇸 美国 CloudFlare节点
+      - 🇨🇳 安徽省滁州市 电信
+      - 🇬🇧 英国 社会保险安全部
+      - 🇸🇬 江西省新余市 电信
+      - 🇮🇪 爱尔兰都柏林 亚马逊云
+      - 🇬🇧 英国 伦敦Amazon数据中心 2
+      - 🇯🇵 日本 东京Amazon数据中心
+      - 🇨🇳 广东省广州市 腾讯云 2
+      - 🇺🇸 美国 V2CROSS.COM
+      - 🇺🇸 美国 CloudFlare节点 6
+      - 🇺🇸 美国 CloudFlare节点 2
       - 🇺🇸 美国 华盛顿Cogent通信公司
+      - 🇬🇧 英国 伦敦Amazon数据中心
+      - 🇺🇸 美国 CloudFlare节点 7
+      - 🇯🇵 日本 东京都Amazon数据中心
+      - 🇨🇳 广东省肇庆市 中移铁通
   - name: LOAD-BALANCE
     type: load-balance
     url: http://www.gstatic.com/generate_204
     interval: 600
     proxies:
-      - 🇺🇸 美国 CloudFlare节点 3
-      - 🇫🇷 法国 巴黎Amazon数据中心
-      - 🇺🇸 美国 Amazon EC2服务器
-      - 🇺🇸 美国 CloudFlare节点
-      - 🇬🇧 英国 伦敦Amazon数据中心
-      - 🇺🇸 美国 惠普公司 2
-      - 🇺🇸 美国 CloudFlare节点 2
-      - 🇭🇰 香港 Clayer Limited数据中心
-      - 🇺🇸 美国 CloudFlare节点 5
       - 🇨🇳 广东省广州市 腾讯云
-      - 🇨🇳 广东省广州市 移动
-      - 🇺🇦 乌克兰 V2CROSS.COM
-      - 🇬🇧 英国 伦敦Amazon数据中心 2
-      - 🇭🇰 香港 特别行政区 2
-      - 🇭🇰 香港 特别行政区
-      - 🇺🇸 美国 V2CROSS.COM
-      - 🇺🇸 美国 惠普公司
-      - 🇸🇬 新加坡 Amazon数据中心
       - 🇺🇸 美国 CloudFlare节点 4
-      - 🇮🇪 爱尔兰 都柏林Amazon数据中心
-      - 🇺🇸 美国 CloudFlare节点 6
       - 🇺🇸 美国 Fastly全球Anycast节点
+      - 🇬🇧 英国 V2CROSS.COM
+      - 🇦🇷 阿根廷 V2CROSS.COM
+      - 🇷🇴 罗马尼亚 V2CROSS.COM
+      - 🇪🇺 欧洲 V2CROSS.COM
+      - 🇺🇸 美国 CloudFlare节点 3
+      - 🇨🇳 广东省广州市 移动
+      - 🇺🇸 美国 V2CROSS.COM 2
+      - 🇺🇸 美国 CloudFlare节点 5
+      - 🇮🇳 印度 V2CROSS.COM
+      - 🇺🇸 美国 CloudFlare节点
+      - 🇨🇳 安徽省滁州市 电信
+      - 🇬🇧 英国 社会保险安全部
+      - 🇸🇬 江西省新余市 电信
+      - 🇮🇪 爱尔兰都柏林 亚马逊云
+      - 🇬🇧 英国 伦敦Amazon数据中心 2
+      - 🇯🇵 日本 东京Amazon数据中心
+      - 🇨🇳 广东省广州市 腾讯云 2
+      - 🇺🇸 美国 V2CROSS.COM
+      - 🇺🇸 美国 CloudFlare节点 6
+      - 🇺🇸 美国 CloudFlare节点 2
       - 🇺🇸 美国 华盛顿Cogent通信公司
+      - 🇬🇧 英国 伦敦Amazon数据中心
+      - 🇺🇸 美国 CloudFlare节点 7
+      - 🇯🇵 日本 东京都Amazon数据中心
+      - 🇨🇳 广东省肇庆市 中移铁通
   - name: SELECT
     type: select
     proxies:
-      - 🇺🇸 美国 CloudFlare节点 3
-      - 🇫🇷 法国 巴黎Amazon数据中心
-      - 🇺🇸 美国 Amazon EC2服务器
-      - 🇺🇸 美国 CloudFlare节点
-      - 🇬🇧 英国 伦敦Amazon数据中心
-      - 🇺🇸 美国 惠普公司 2
-      - 🇺🇸 美国 CloudFlare节点 2
-      - 🇭🇰 香港 Clayer Limited数据中心
-      - 🇺🇸 美国 CloudFlare节点 5
       - 🇨🇳 广东省广州市 腾讯云
-      - 🇨🇳 广东省广州市 移动
-      - 🇺🇦 乌克兰 V2CROSS.COM
-      - 🇬🇧 英国 伦敦Amazon数据中心 2
-      - 🇭🇰 香港 特别行政区 2
-      - 🇭🇰 香港 特别行政区
-      - 🇺🇸 美国 V2CROSS.COM
-      - 🇺🇸 美国 惠普公司
-      - 🇸🇬 新加坡 Amazon数据中心
       - 🇺🇸 美国 CloudFlare节点 4
-      - 🇮🇪 爱尔兰 都柏林Amazon数据中心
-      - 🇺🇸 美国 CloudFlare节点 6
       - 🇺🇸 美国 Fastly全球Anycast节点
+      - 🇬🇧 英国 V2CROSS.COM
+      - 🇦🇷 阿根廷 V2CROSS.COM
+      - 🇷🇴 罗马尼亚 V2CROSS.COM
+      - 🇪🇺 欧洲 V2CROSS.COM
+      - 🇺🇸 美国 CloudFlare节点 3
+      - 🇨🇳 广东省广州市 移动
+      - 🇺🇸 美国 V2CROSS.COM 2
+      - 🇺🇸 美国 CloudFlare节点 5
+      - 🇮🇳 印度 V2CROSS.COM
+      - 🇺🇸 美国 CloudFlare节点
+      - 🇨🇳 安徽省滁州市 电信
+      - 🇬🇧 英国 社会保险安全部
+      - 🇸🇬 江西省新余市 电信
+      - 🇮🇪 爱尔兰都柏林 亚马逊云
+      - 🇬🇧 英国 伦敦Amazon数据中心 2
+      - 🇯🇵 日本 东京Amazon数据中心
+      - 🇨🇳 广东省广州市 腾讯云 2
+      - 🇺🇸 美国 V2CROSS.COM
+      - 🇺🇸 美国 CloudFlare节点 6
+      - 🇺🇸 美国 CloudFlare节点 2
       - 🇺🇸 美国 华盛顿Cogent通信公司
+      - 🇬🇧 英国 伦敦Amazon数据中心
+      - 🇺🇸 美国 CloudFlare节点 7
+      - 🇯🇵 日本 东京都Amazon数据中心
+      - 🇨🇳 广东省肇庆市 中移铁通
 rules:
   - RULE-SET,applications,DIRECT
   - DOMAIN,clash.razord.top,DIRECT
