@@ -1,4 +1,4 @@
-# Update: 2025-03-03 22:07:21
+# Update: 2025-03-04 00:37:16
 # Created by caoqiang
 mixed-port: 7890
 allow-lan: true
@@ -10,31 +10,25 @@ log-level: info
 external-controller: 0.0.0.0:9090
 global-client-fingerprint: chrome
 proxies:
-  - name: 🇸🇪_SE_瑞典
+  - name: 🇺🇸_US_美国
+    type: trojan
+    server: 13.61.43.128
+    port: 22222
+    sni: trojan.burgerip.co.uk
+    password: telegram-id-privatevpns
+  - name: 🇺🇸_US_美国_1
     type: ss
-    server: 194.14.217.38
+    server: 23.166.88.104
+    port: 6697
+    cipher: aes-256-gcm
+    password: TEzjfAYq2IjtuoS
+  - name: 🇷🇺_RU_俄罗斯
+    type: ss
+    server: 213.156.137.67
     port: 989
     cipher: aes-256-cfb
     password: f8f7aCzcPKbsF8p3
-  - name: 🇺🇸_US_美国_1
-    type: ss
-    server: 52.34.200.48
-    port: 443
-    cipher: aes-256-cfb
-    password: amazonskr05
-  - name: 🇺🇸_US_美国_2
-    type: ss
-    server: 38.86.135.223
-    port: 9102
-    cipher: aes-256-gcm
-    password: e4FCWrgpkji3QY
-  - name: 🇷🇺_RU_俄罗斯
-    type: ss
-    server: 217.30.10.18
-    port: 9024
-    cipher: aes-256-cfb
-    password: BejrQvtu9sqUeNuZ
-  - name: 🇺🇸_US_美国->🇷🇺_RU_俄罗斯
+  - name: 🇺🇸_US_美国->🇩🇪_DE_德国
     type: vmess
     server: 151.101.66.168
     port: 80
@@ -49,108 +43,166 @@ proxies:
     alterId: 0
   - name: 🇷🇺_RU_俄罗斯_1
     type: ss
-    server: 217.30.10.18
-    port: 9011
-    cipher: aes-256-cfb
-    password: M3t2ZEQcMGRWBjRa
-  - name: 🇨🇳_CN_中国->🇮🇪_IE_爱尔兰
-    type: ss
-    server: 107.155.57.11
-    port: 8080
-    cipher: rc4-md5
-    password: 14fFPrbezE3HDZzsMOr6
-  - name: 🇩🇪_DE_德国
-    type: ss
-    server: 134.255.210.49
+    server: 185.231.233.173
     port: 989
     cipher: aes-256-cfb
     password: f8f7aCzcPKbsF8p3
   - name: 🇺🇦_UA_乌克兰
     type: ss
-    server: 176.103.53.105
-    port: 989
+    server: 95.164.36.59
+    port: 8388
+    cipher: chacha20-ietf-poly1305
+    password: ODA2MGZh
+  - name: 🇷🇺_RU_俄罗斯_2
+    type: ss
+    server: 217.30.10.18
+    port: 9040
     cipher: aes-256-cfb
-    password: f8f7aCzcPKbsF8p3
+    password: p9z5BVADH2YFs3MN
+  - name: 🇷🇺_RU_俄罗斯_3
+    type: ss
+    server: 217.30.10.18
+    port: 9027
+    cipher: aes-256-cfb
+    password: EXN3S3eQpjE7EJu8
   - name: 🇲🇩_MD_摩尔多瓦
     type: ss
     server: 91.132.94.200
     port: 989
     cipher: aes-256-cfb
     password: f8f7aCzcPKbsF8p3
-  - name: 🇷🇺_RU_俄罗斯_2
+  - name: 🇷🇺_RU_俄罗斯_4
+    type: ss
+    server: 217.30.10.18
+    port: 9093
+    cipher: aes-256-cfb
+    password: wfLC2y7rzZyCmuyt
+  - name: 🇩🇰_DK_丹麦
+    type: ss
+    server: 185.186.79.53
+    port: 989
+    cipher: aes-256-cfb
+    password: f8f7aCzcPKbsF8p3
+  - name: 🇷🇺_RU_俄罗斯_5
+    type: ss
+    server: 217.30.10.18
+    port: 9038
+    cipher: aes-256-cfb
+    password: gYCYXfkUQEs2TaJQ
+  - name: 🇺🇸_US_美国_3
+    type: ss
+    server: 185.47.253.171
+    port: 989
+    cipher: aes-256-cfb
+    password: f8f7aCzcPKbsF8p3
+  - name: 🇷🇺_RU_俄罗斯_6
+    type: ss
+    server: 217.30.10.18
+    port: 9003
+    cipher: aes-256-cfb
+    password: JdmRK9gMEqFgs8nP
+  - name: 🇨🇦_CA_加拿大
+    type: ss
+    server: 23.154.136.162
+    port: 7002
+    cipher: aes-256-gcm
+    password: RexnBgU7EV5ADxG
+  - name: 🇺🇦_UA_乌克兰_1
+    type: ss
+    server: 176.103.53.105
+    port: 989
+    cipher: aes-256-cfb
+    password: f8f7aCzcPKbsF8p3
+  - name: 🇺🇸_US_美国_4
+    type: ss
+    server: 54.185.211.74
+    port: 443
+    cipher: aes-256-cfb
+    password: amazonskr05
+  - name: 🇯🇵_JP_日本->🇺🇸_US_美国
+    type: vmess
+    server: www.aetv.com
+    port: 80
+    uuid: 7dc78582-88a8-4b4c-9e3e-50831d672766
+    cipher: auto
+    network: ws
+    ws-opts:
+      path: /XESALISTHEBEST?ed=2048
+      headers:
+        host: amd.al
+    alterId: 0
+  - name: 🇷🇺_RU_俄罗斯_7
+    type: ss
+    server: 217.30.10.18
+    port: 9060
+    cipher: aes-256-cfb
+    password: ueLXVkvh4hckhErQ
+  - name: 🇷🇺_RU_俄罗斯_8
+    type: ss
+    server: 217.30.10.18
+    port: 9088
+    cipher: aes-256-cfb
+    password: f8npKgNzdkss2ytn
+  - name: 🇷🇺_RU_俄罗斯_9
     type: ss
     server: 217.30.10.18
     port: 9094
     cipher: aes-256-cfb
     password: rpgbNnU9rDDU4aWZ
-  - name: 🇮🇳_IN_印度
+  - name: 🇨🇭_CH_瑞士->🇮🇹_IT_意大利
     type: ss
-    server: 103.104.247.49
-    port: 8080
-    cipher: chacha20-ietf-poly1305
-    password: oZIoA69Q8yhcQV8ka3Pa3A
-  - name: 🇷🇺_RU_俄罗斯_3
-    type: ss
-    server: 217.30.10.18
-    port: 9019
-    cipher: aes-256-cfb
-    password: GA9KzeEgvfxNrgmM
-  - name: 🇩🇪_DE_德国->🇷🇴_RO_罗马尼亚
-    type: ss
-    server: 45.87.175.154
-    port: 8080
-    cipher: chacha20-ietf-poly1305
-    password: 4a2rfixophdjffa8KVA4Aa
-  - name: 🇺🇸_US_美国_3
-    type: ss
-    server: 185.237.185.160
+    server: 84.17.53.160
     port: 989
     cipher: aes-256-cfb
     password: f8f7aCzcPKbsF8p3
-  - name: 🇷🇺_RU_俄罗斯_4
-    type: ss
-    server: 217.30.10.18
-    port: 9005
-    cipher: aes-256-cfb
-    password: ZET59LF6DvCC8KVt
-  - name: 🇺🇸_US_美国_7
-    type: ss
-    server: 54.244.204.173
-    port: 443
-    cipher: aes-256-cfb
-    password: amazonskr05
-  - name: 🇷🇺_RU_俄罗斯_5
-    type: ss
-    server: 217.30.10.18
-    port: 9010
-    cipher: aes-256-cfb
-    password: f63gg8EruDnUrmz4
-  - name: 🇬🇧_GB_英国_1
-    type: ss
-    server: 212.102.53.196
-    port: 443
-    cipher: aes-128-gcm
-    password: shadowsocks
-  - name: 🇺🇸_US_美国->🇷🇺_RU_俄罗斯_3
-    type: vmess
-    server: 172.67.202.155
-    port: 8080
-    sni: ''
-    uuid: e322b371-9fb0-49b4-dd38-887e92a8a987
-    cipher: auto
-    network: ws
-    fingerprint: ''
-    ws-opts:
-      path: /mehdi
-      headers:
-        host: Freedomisnear.onetwothree123.ir
-    alterId: 0
-  - name: 🇷🇺_RU_俄罗斯_6
+  - name: 🇷🇺_RU_俄罗斯_10
     type: ss
     server: 217.30.10.18
     port: 9006
     cipher: aes-256-cfb
     password: FAdUvMJUq5vDgKEq
+  - name: 🇺🇸_US_美国->🇸🇬_SG_新加坡
+    type: ss
+    server: 34.212.0.149
+    port: 443
+    cipher: aes-256-cfb
+    password: amazonskr05
+  - name: 🇷🇺_RU_俄罗斯_11
+    type: ss
+    server: 217.30.10.18
+    port: 9011
+    cipher: aes-256-cfb
+    password: M3t2ZEQcMGRWBjRa
+  - name: 🇷🇺_RU_俄罗斯_12
+    type: ss
+    server: 217.30.10.18
+    port: 9031
+    cipher: aes-256-cfb
+    password: BwcAUZk8hUFAkDGN
+  - name: 🇨🇦_CA_加拿大_1
+    type: ss
+    server: 23.154.136.162
+    port: 6697
+    cipher: aes-256-gcm
+    password: TEzjfAYq2IjtuoS
+  - name: 🇷🇺_RU_俄罗斯_13
+    type: ss
+    server: 217.30.10.18
+    port: 9042
+    cipher: aes-256-cfb
+    password: S7KwUu7yBy58S3Ga
+  - name: 🇺🇸_US_美国_5
+    type: ss
+    server: 185.237.185.160
+    port: 989
+    cipher: aes-256-cfb
+    password: f8f7aCzcPKbsF8p3
+  - name: 🇮🇹_IT_意大利
+    type: ss
+    server: 37.143.129.230
+    port: 989
+    cipher: aes-256-cfb
+    password: f8f7aCzcPKbsF8p3
 proxy-groups:
   - name: PROXY
     type: select
@@ -177,77 +229,104 @@ proxy-groups:
     lazy: true
     tolerance: 100
     proxies:
-      - 🇩🇪_DE_德国
-      - 🇷🇺_RU_俄罗斯_2
-      - 🇨🇳_CN_中国->🇮🇪_IE_爱尔兰
-      - 🇷🇺_RU_俄罗斯_1
-      - 🇺🇸_US_美国_2
-      - 🇬🇧_GB_英国_1
+      - 🇮🇹_IT_意大利
       - 🇷🇺_RU_俄罗斯_4
-      - 🇷🇺_RU_俄罗斯_6
-      - 🇺🇸_US_美国->🇷🇺_RU_俄罗斯
-      - 🇲🇩_MD_摩尔多瓦
-      - 🇷🇺_RU_俄罗斯
-      - 🇷🇺_RU_俄罗斯_3
-      - 🇷🇺_RU_俄罗斯_5
-      - 🇺🇸_US_美国_3
-      - 🇩🇪_DE_德国->🇷🇴_RO_罗马尼亚
-      - 🇺🇸_US_美国_7
-      - 🇸🇪_SE_瑞典
-      - 🇺🇦_UA_乌克兰
+      - 🇨🇦_CA_加拿大
+      - 🇷🇺_RU_俄罗斯_10
+      - 🇷🇺_RU_俄罗斯_7
+      - 🇷🇺_RU_俄罗斯_11
       - 🇺🇸_US_美国_1
-      - 🇮🇳_IN_印度
-      - 🇺🇸_US_美国->🇷🇺_RU_俄罗斯_3
+      - 🇨🇦_CA_加拿大_1
+      - 🇺🇸_US_美国->🇸🇬_SG_新加坡
+      - 🇷🇺_RU_俄罗斯_13
+      - 🇺🇸_US_美国->🇩🇪_DE_德国
+      - 🇷🇺_RU_俄罗斯_2
+      - 🇷🇺_RU_俄罗斯_3
+      - 🇺🇦_UA_乌克兰
+      - 🇺🇸_US_美国
+      - 🇷🇺_RU_俄罗斯_6
+      - 🇷🇺_RU_俄罗斯
+      - 🇨🇭_CH_瑞士->🇮🇹_IT_意大利
+      - 🇺🇦_UA_乌克兰_1
+      - 🇷🇺_RU_俄罗斯_8
+      - 🇺🇸_US_美国_5
+      - 🇺🇸_US_美国_4
+      - 🇷🇺_RU_俄罗斯_9
+      - 🇺🇸_US_美国_3
+      - 🇷🇺_RU_俄罗斯_5
+      - 🇷🇺_RU_俄罗斯_12
+      - 🇲🇩_MD_摩尔多瓦
+      - 🇩🇰_DK_丹麦
+      - 🇯🇵_JP_日本->🇺🇸_US_美国
+      - 🇷🇺_RU_俄罗斯_1
   - name: LOAD-BALANCE
     type: load-balance
     url: http://www.gstatic.com/generate_204
     interval: 600
     proxies:
-      - 🇩🇪_DE_德国
-      - 🇷🇺_RU_俄罗斯_2
-      - 🇨🇳_CN_中国->🇮🇪_IE_爱尔兰
-      - 🇷🇺_RU_俄罗斯_1
-      - 🇺🇸_US_美国_2
-      - 🇬🇧_GB_英国_1
+      - 🇮🇹_IT_意大利
       - 🇷🇺_RU_俄罗斯_4
-      - 🇷🇺_RU_俄罗斯_6
-      - 🇺🇸_US_美国->🇷🇺_RU_俄罗斯
-      - 🇲🇩_MD_摩尔多瓦
-      - 🇷🇺_RU_俄罗斯
-      - 🇷🇺_RU_俄罗斯_3
-      - 🇷🇺_RU_俄罗斯_5
-      - 🇺🇸_US_美国_3
-      - 🇩🇪_DE_德国->🇷🇴_RO_罗马尼亚
-      - 🇺🇸_US_美国_7
-      - 🇸🇪_SE_瑞典
-      - 🇺🇦_UA_乌克兰
+      - 🇨🇦_CA_加拿大
+      - 🇷🇺_RU_俄罗斯_10
+      - 🇷🇺_RU_俄罗斯_7
+      - 🇷🇺_RU_俄罗斯_11
       - 🇺🇸_US_美国_1
-      - 🇮🇳_IN_印度
-      - 🇺🇸_US_美国->🇷🇺_RU_俄罗斯_3
+      - 🇨🇦_CA_加拿大_1
+      - 🇺🇸_US_美国->🇸🇬_SG_新加坡
+      - 🇷🇺_RU_俄罗斯_13
+      - 🇺🇸_US_美国->🇩🇪_DE_德国
+      - 🇷🇺_RU_俄罗斯_2
+      - 🇷🇺_RU_俄罗斯_3
+      - 🇺🇦_UA_乌克兰
+      - 🇺🇸_US_美国
+      - 🇷🇺_RU_俄罗斯_6
+      - 🇷🇺_RU_俄罗斯
+      - 🇨🇭_CH_瑞士->🇮🇹_IT_意大利
+      - 🇺🇦_UA_乌克兰_1
+      - 🇷🇺_RU_俄罗斯_8
+      - 🇺🇸_US_美国_5
+      - 🇺🇸_US_美国_4
+      - 🇷🇺_RU_俄罗斯_9
+      - 🇺🇸_US_美国_3
+      - 🇷🇺_RU_俄罗斯_5
+      - 🇷🇺_RU_俄罗斯_12
+      - 🇲🇩_MD_摩尔多瓦
+      - 🇩🇰_DK_丹麦
+      - 🇯🇵_JP_日本->🇺🇸_US_美国
+      - 🇷🇺_RU_俄罗斯_1
   - name: SELECT
     type: select
     proxies:
-      - 🇩🇪_DE_德国
-      - 🇷🇺_RU_俄罗斯_2
-      - 🇨🇳_CN_中国->🇮🇪_IE_爱尔兰
-      - 🇷🇺_RU_俄罗斯_1
-      - 🇺🇸_US_美国_2
-      - 🇬🇧_GB_英国_1
+      - 🇮🇹_IT_意大利
       - 🇷🇺_RU_俄罗斯_4
-      - 🇷🇺_RU_俄罗斯_6
-      - 🇺🇸_US_美国->🇷🇺_RU_俄罗斯
-      - 🇲🇩_MD_摩尔多瓦
-      - 🇷🇺_RU_俄罗斯
-      - 🇷🇺_RU_俄罗斯_3
-      - 🇷🇺_RU_俄罗斯_5
-      - 🇺🇸_US_美国_3
-      - 🇩🇪_DE_德国->🇷🇴_RO_罗马尼亚
-      - 🇺🇸_US_美国_7
-      - 🇸🇪_SE_瑞典
-      - 🇺🇦_UA_乌克兰
+      - 🇨🇦_CA_加拿大
+      - 🇷🇺_RU_俄罗斯_10
+      - 🇷🇺_RU_俄罗斯_7
+      - 🇷🇺_RU_俄罗斯_11
       - 🇺🇸_US_美国_1
-      - 🇮🇳_IN_印度
-      - 🇺🇸_US_美国->🇷🇺_RU_俄罗斯_3
+      - 🇨🇦_CA_加拿大_1
+      - 🇺🇸_US_美国->🇸🇬_SG_新加坡
+      - 🇷🇺_RU_俄罗斯_13
+      - 🇺🇸_US_美国->🇩🇪_DE_德国
+      - 🇷🇺_RU_俄罗斯_2
+      - 🇷🇺_RU_俄罗斯_3
+      - 🇺🇦_UA_乌克兰
+      - 🇺🇸_US_美国
+      - 🇷🇺_RU_俄罗斯_6
+      - 🇷🇺_RU_俄罗斯
+      - 🇨🇭_CH_瑞士->🇮🇹_IT_意大利
+      - 🇺🇦_UA_乌克兰_1
+      - 🇷🇺_RU_俄罗斯_8
+      - 🇺🇸_US_美国_5
+      - 🇺🇸_US_美国_4
+      - 🇷🇺_RU_俄罗斯_9
+      - 🇺🇸_US_美国_3
+      - 🇷🇺_RU_俄罗斯_5
+      - 🇷🇺_RU_俄罗斯_12
+      - 🇲🇩_MD_摩尔多瓦
+      - 🇩🇰_DK_丹麦
+      - 🇯🇵_JP_日本->🇺🇸_US_美国
+      - 🇷🇺_RU_俄罗斯_1
 rules:
   - RULE-SET,applications,DIRECT
   - DOMAIN,clash.razord.top,DIRECT
