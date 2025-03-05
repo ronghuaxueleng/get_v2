@@ -1,4 +1,4 @@
-# Update: 2025-03-04 22:07:13
+# Update: 2025-03-05 00:37:11
 # Created by caoqiang
 mixed-port: 7890
 allow-lan: true
@@ -10,24 +10,19 @@ log-level: info
 external-controller: 0.0.0.0:9090
 global-client-fingerprint: chrome
 proxies:
-  - name: 🇺🇸_US_美国
-    type: trojan
-    server: 13.61.43.128
-    port: 22222
-    sni: trojan.burgerip.co.uk
-    password: telegram-id-privatevpns
-  - name: 🇺🇸_US_美国_1
-    type: ss
-    server: 23.166.88.104
-    port: 6697
-    cipher: aes-256-gcm
-    password: TEzjfAYq2IjtuoS
-  - name: 🇷🇺_RU_俄罗斯
-    type: ss
-    server: 213.156.137.67
-    port: 989
-    cipher: aes-256-cfb
-    password: f8f7aCzcPKbsF8p3
+  - name: 🇨🇦_CA_加拿大
+    type: vmess
+    server: 51.79.103.76
+    port: 80
+    uuid: 58fe1542-5290-40ad-815a-77707a81afe5
+    cipher: auto
+    network: ws
+    ws-opts:
+      path: /IOebhLMhl1CTbFHbL95myfRX2
+      headers:
+        host: 
+          wrmelmwxlf.gktevlrqznwqqozy.fabpfs66gizmnojhcvqxwl.kytrcfzqla87gvgvs6c7kjnrubuh.cc
+    alterId: 0
   - name: 🇺🇸_US_美国->🇩🇪_DE_德国
     type: vmess
     server: 151.101.66.168
@@ -41,87 +36,62 @@ proxies:
       headers:
         host: amd.al
     alterId: 0
-  - name: 🇷🇺_RU_俄罗斯_1
-    type: ss
-    server: 185.231.233.173
-    port: 989
-    cipher: aes-256-cfb
-    password: f8f7aCzcPKbsF8p3
-  - name: 🇺🇦_UA_乌克兰
-    type: ss
-    server: 95.164.36.59
-    port: 8388
-    cipher: chacha20-ietf-poly1305
-    password: ODA2MGZh
-  - name: 🇷🇺_RU_俄罗斯_2
-    type: ss
-    server: 217.30.10.18
-    port: 9040
-    cipher: aes-256-cfb
-    password: p9z5BVADH2YFs3MN
-  - name: 🇷🇺_RU_俄罗斯_3
-    type: ss
-    server: 217.30.10.18
-    port: 9027
-    cipher: aes-256-cfb
-    password: EXN3S3eQpjE7EJu8
-  - name: 🇲🇩_MD_摩尔多瓦
-    type: ss
-    server: 91.132.94.200
-    port: 989
-    cipher: aes-256-cfb
-    password: f8f7aCzcPKbsF8p3
-  - name: 🇷🇺_RU_俄罗斯_4
-    type: ss
-    server: 217.30.10.18
-    port: 9093
-    cipher: aes-256-cfb
-    password: wfLC2y7rzZyCmuyt
   - name: 🇩🇰_DK_丹麦
     type: ss
     server: 185.186.79.53
     port: 989
     cipher: aes-256-cfb
     password: f8f7aCzcPKbsF8p3
-  - name: 🇷🇺_RU_俄罗斯_5
+  - name: 🇺🇸_US_美国_1
     type: ss
-    server: 217.30.10.18
-    port: 9038
-    cipher: aes-256-cfb
-    password: gYCYXfkUQEs2TaJQ
-  - name: 🇺🇸_US_美国_3
-    type: ss
-    server: 185.47.253.171
-    port: 989
-    cipher: aes-256-cfb
-    password: f8f7aCzcPKbsF8p3
-  - name: 🇷🇺_RU_俄罗斯_6
-    type: ss
-    server: 217.30.10.18
-    port: 9003
-    cipher: aes-256-cfb
-    password: JdmRK9gMEqFgs8nP
-  - name: 🇨🇦_CA_加拿大
-    type: ss
-    server: 23.154.136.162
-    port: 7002
-    cipher: aes-256-gcm
-    password: RexnBgU7EV5ADxG
-  - name: 🇺🇦_UA_乌克兰_1
-    type: ss
-    server: 176.103.53.105
-    port: 989
-    cipher: aes-256-cfb
-    password: f8f7aCzcPKbsF8p3
-  - name: 🇺🇸_US_美国_4
-    type: ss
-    server: 54.185.211.74
+    server: 34.212.0.149
     port: 443
     cipher: aes-256-cfb
     password: amazonskr05
-  - name: 🇯🇵_JP_日本->🇺🇸_US_美国
+  - name: 🇨🇦_CA_加拿大_1
     type: vmess
-    server: www.aetv.com
+    server: 51.79.102.253
+    port: 80
+    uuid: 58fe1542-5290-40ad-815a-77707a81afe5
+    cipher: auto
+    network: ws
+    ws-opts:
+      path: /IOebhLMhl1CTbFHbL95myfRX2
+      headers:
+        host: 
+          wrmelmwxlf.gktevlrqznwqqozy.fabpfs66gizmnojhcvqxwl.kytrcfzqla87gvgvs6c7kjnrubuh.cc
+    alterId: 0
+  - name: 🇳🇱_NL_荷兰
+    type: ssr
+    server: ssca.irundns.net
+    port: 443
+    cipher: aes-128-cfb
+    password: $$Turb0VPN$$
+    obfs: http_post
+    protocol: auth_aes128_md5
+  - name: 🇷🇺_RU_俄罗斯
+    type: ss
+    server: 185.231.233.112
+    port: 989
+    cipher: aes-256-cfb
+    password: f8f7aCzcPKbsF8p3
+  - name: 🇨🇭_CH_瑞士->🇩🇰_DK_丹麦
+    type: ss
+    server: 84.17.53.160
+    port: 989
+    cipher: aes-256-cfb
+    password: f8f7aCzcPKbsF8p3
+  - name: 🇺🇸_US_美国_5
+    type: trojan
+    server: 54.177.162.0
+    port: 41922
+    sni: hk12.bilibili.com
+    password: e1e72bbb-59ef-41b6-bd09-6b4d54c4877b
+    network: tcp
+    skip-cert-verify: true
+  - name: 🇺🇸_US_美国_7
+    type: vmess
+    server: 151.101.194.168
     port: 80
     uuid: 7dc78582-88a8-4b4c-9e3e-50831d672766
     cipher: auto
@@ -131,78 +101,51 @@ proxies:
       headers:
         host: amd.al
     alterId: 0
-  - name: 🇷🇺_RU_俄罗斯_7
-    type: ss
-    server: 217.30.10.18
-    port: 9060
-    cipher: aes-256-cfb
-    password: ueLXVkvh4hckhErQ
-  - name: 🇷🇺_RU_俄罗斯_8
-    type: ss
-    server: 217.30.10.18
-    port: 9088
-    cipher: aes-256-cfb
-    password: f8npKgNzdkss2ytn
-  - name: 🇷🇺_RU_俄罗斯_9
-    type: ss
-    server: 217.30.10.18
-    port: 9094
-    cipher: aes-256-cfb
-    password: rpgbNnU9rDDU4aWZ
-  - name: 🇨🇭_CH_瑞士->🇮🇹_IT_意大利
-    type: ss
-    server: 84.17.53.160
-    port: 989
-    cipher: aes-256-cfb
-    password: f8f7aCzcPKbsF8p3
-  - name: 🇷🇺_RU_俄罗斯_10
-    type: ss
-    server: 217.30.10.18
-    port: 9006
-    cipher: aes-256-cfb
-    password: FAdUvMJUq5vDgKEq
-  - name: 🇺🇸_US_美国->🇸🇬_SG_新加坡
-    type: ss
-    server: 34.212.0.149
+  - name: 🇺🇸_US_美国->🇨🇦_CA_加拿大
+    type: trojan
+    server: 89.187.181.179
+    port: 43118
+    sni: 
+      wrmelmwxlf.gktevlrqznwqqozy.fabpfs66gizmnojhcvqxwl.kytrcfzqla87gvgvs6c7kjnrubuh.cc
+    password: ypDt8RkT7J
+    skip-cert-verify: true
+  - name: 🇺🇸_US_美国_9
+    type: trojan
+    server: 54.241.211.51
+    port: 43995
+    sni: hk12.bilibili.com
+    password: e1e72bbb-59ef-41b6-bd09-6b4d54c4877b
+    network: tcp
+    skip-cert-verify: true
+  - name: 🇺🇸_US_美国_10
+    type: trojan
+    server: 161.35.34.48
     port: 443
-    cipher: aes-256-cfb
-    password: amazonskr05
-  - name: 🇷🇺_RU_俄罗斯_11
+    sni: yourjobnavigator.online
+    password: 2cba4104747d49d18319e5ade1b93ab5
+    skip-cert-verify: true
+  - name: 🇺🇸_US_美国->🇮🇪_IE_爱尔兰
+    type: trojan
+    server: 54.177.162.0
+    port: 46023
+    sni: hk12.bilibili.com
+    password: e1e72bbb-59ef-41b6-bd09-6b4d54c4877b
+    network: tcp
+    skip-cert-verify: true
+  - name: 🇺🇦_UA_乌克兰
     type: ss
-    server: 217.30.10.18
-    port: 9011
-    cipher: aes-256-cfb
-    password: M3t2ZEQcMGRWBjRa
-  - name: 🇷🇺_RU_俄罗斯_12
-    type: ss
-    server: 217.30.10.18
-    port: 9031
-    cipher: aes-256-cfb
-    password: BwcAUZk8hUFAkDGN
-  - name: 🇨🇦_CA_加拿大_1
-    type: ss
-    server: 23.154.136.162
-    port: 6697
-    cipher: aes-256-gcm
-    password: TEzjfAYq2IjtuoS
-  - name: 🇷🇺_RU_俄罗斯_13
-    type: ss
-    server: 217.30.10.18
-    port: 9042
-    cipher: aes-256-cfb
-    password: S7KwUu7yBy58S3Ga
-  - name: 🇺🇸_US_美国_5
-    type: ss
-    server: 185.237.185.160
-    port: 989
-    cipher: aes-256-cfb
-    password: f8f7aCzcPKbsF8p3
-  - name: 🇮🇹_IT_意大利
-    type: ss
-    server: 37.143.129.230
-    port: 989
-    cipher: aes-256-cfb
-    password: f8f7aCzcPKbsF8p3
+    server: 95.164.36.59
+    port: 8388
+    cipher: chacha20-ietf-poly1305
+    password: ODA2MGZh
+  - name: 🇺🇸_US_美国_12
+    type: trojan
+    server: 54.241.211.51
+    port: 41922
+    sni: hk12.bilibili.com
+    password: e1e72bbb-59ef-41b6-bd09-6b4d54c4877b
+    network: tcp
+    skip-cert-verify: true
 proxy-groups:
   - name: PROXY
     type: select
@@ -229,104 +172,62 @@ proxy-groups:
     lazy: true
     tolerance: 100
     proxies:
-      - 🇺🇦_UA_乌克兰_1
-      - 🇷🇺_RU_俄罗斯_2
-      - 🇨🇦_CA_加拿大_1
-      - 🇺🇦_UA_乌克兰
-      - 🇷🇺_RU_俄罗斯_1
-      - 🇷🇺_RU_俄罗斯_12
-      - 🇷🇺_RU_俄罗斯
-      - 🇩🇰_DK_丹麦
-      - 🇺🇸_US_美国_1
-      - 🇷🇺_RU_俄罗斯_9
-      - 🇷🇺_RU_俄罗斯_11
-      - 🇷🇺_RU_俄罗斯_4
+      - 🇺🇸_US_美国->🇨🇦_CA_加拿大
       - 🇺🇸_US_美国_5
-      - 🇺🇸_US_美国_3
-      - 🇮🇹_IT_意大利
-      - 🇷🇺_RU_俄罗斯_6
-      - 🇺🇸_US_美国_4
-      - 🇷🇺_RU_俄罗斯_13
-      - 🇷🇺_RU_俄罗斯_7
+      - 🇺🇸_US_美国_12
+      - 🇺🇸_US_美国_1
+      - 🇺🇸_US_美国_7
+      - 🇺🇸_US_美国->🇮🇪_IE_爱尔兰
+      - 🇺🇸_US_美国_10
+      - 🇺🇦_UA_乌克兰
+      - 🇷🇺_RU_俄罗斯
+      - 🇨🇦_CA_加拿大_1
       - 🇨🇦_CA_加拿大
-      - 🇨🇭_CH_瑞士->🇮🇹_IT_意大利
-      - 🇲🇩_MD_摩尔多瓦
-      - 🇯🇵_JP_日本->🇺🇸_US_美国
-      - 🇷🇺_RU_俄罗斯_5
-      - 🇺🇸_US_美国->🇸🇬_SG_新加坡
-      - 🇺🇸_US_美国
-      - 🇷🇺_RU_俄罗斯_3
-      - 🇷🇺_RU_俄罗斯_8
       - 🇺🇸_US_美国->🇩🇪_DE_德国
-      - 🇷🇺_RU_俄罗斯_10
+      - 🇩🇰_DK_丹麦
+      - 🇺🇸_US_美国_9
+      - 🇨🇭_CH_瑞士->🇩🇰_DK_丹麦
+      - 🇳🇱_NL_荷兰
   - name: LOAD-BALANCE
     type: load-balance
     url: http://www.gstatic.com/generate_204
     interval: 600
     proxies:
-      - 🇺🇦_UA_乌克兰_1
-      - 🇷🇺_RU_俄罗斯_2
-      - 🇨🇦_CA_加拿大_1
-      - 🇺🇦_UA_乌克兰
-      - 🇷🇺_RU_俄罗斯_1
-      - 🇷🇺_RU_俄罗斯_12
-      - 🇷🇺_RU_俄罗斯
-      - 🇩🇰_DK_丹麦
-      - 🇺🇸_US_美国_1
-      - 🇷🇺_RU_俄罗斯_9
-      - 🇷🇺_RU_俄罗斯_11
-      - 🇷🇺_RU_俄罗斯_4
+      - 🇺🇸_US_美国->🇨🇦_CA_加拿大
       - 🇺🇸_US_美国_5
-      - 🇺🇸_US_美国_3
-      - 🇮🇹_IT_意大利
-      - 🇷🇺_RU_俄罗斯_6
-      - 🇺🇸_US_美国_4
-      - 🇷🇺_RU_俄罗斯_13
-      - 🇷🇺_RU_俄罗斯_7
+      - 🇺🇸_US_美国_12
+      - 🇺🇸_US_美国_1
+      - 🇺🇸_US_美国_7
+      - 🇺🇸_US_美国->🇮🇪_IE_爱尔兰
+      - 🇺🇸_US_美国_10
+      - 🇺🇦_UA_乌克兰
+      - 🇷🇺_RU_俄罗斯
+      - 🇨🇦_CA_加拿大_1
       - 🇨🇦_CA_加拿大
-      - 🇨🇭_CH_瑞士->🇮🇹_IT_意大利
-      - 🇲🇩_MD_摩尔多瓦
-      - 🇯🇵_JP_日本->🇺🇸_US_美国
-      - 🇷🇺_RU_俄罗斯_5
-      - 🇺🇸_US_美国->🇸🇬_SG_新加坡
-      - 🇺🇸_US_美国
-      - 🇷🇺_RU_俄罗斯_3
-      - 🇷🇺_RU_俄罗斯_8
       - 🇺🇸_US_美国->🇩🇪_DE_德国
-      - 🇷🇺_RU_俄罗斯_10
+      - 🇩🇰_DK_丹麦
+      - 🇺🇸_US_美国_9
+      - 🇨🇭_CH_瑞士->🇩🇰_DK_丹麦
+      - 🇳🇱_NL_荷兰
   - name: SELECT
     type: select
     proxies:
-      - 🇺🇦_UA_乌克兰_1
-      - 🇷🇺_RU_俄罗斯_2
-      - 🇨🇦_CA_加拿大_1
-      - 🇺🇦_UA_乌克兰
-      - 🇷🇺_RU_俄罗斯_1
-      - 🇷🇺_RU_俄罗斯_12
-      - 🇷🇺_RU_俄罗斯
-      - 🇩🇰_DK_丹麦
-      - 🇺🇸_US_美国_1
-      - 🇷🇺_RU_俄罗斯_9
-      - 🇷🇺_RU_俄罗斯_11
-      - 🇷🇺_RU_俄罗斯_4
+      - 🇺🇸_US_美国->🇨🇦_CA_加拿大
       - 🇺🇸_US_美国_5
-      - 🇺🇸_US_美国_3
-      - 🇮🇹_IT_意大利
-      - 🇷🇺_RU_俄罗斯_6
-      - 🇺🇸_US_美国_4
-      - 🇷🇺_RU_俄罗斯_13
-      - 🇷🇺_RU_俄罗斯_7
+      - 🇺🇸_US_美国_12
+      - 🇺🇸_US_美国_1
+      - 🇺🇸_US_美国_7
+      - 🇺🇸_US_美国->🇮🇪_IE_爱尔兰
+      - 🇺🇸_US_美国_10
+      - 🇺🇦_UA_乌克兰
+      - 🇷🇺_RU_俄罗斯
+      - 🇨🇦_CA_加拿大_1
       - 🇨🇦_CA_加拿大
-      - 🇨🇭_CH_瑞士->🇮🇹_IT_意大利
-      - 🇲🇩_MD_摩尔多瓦
-      - 🇯🇵_JP_日本->🇺🇸_US_美国
-      - 🇷🇺_RU_俄罗斯_5
-      - 🇺🇸_US_美国->🇸🇬_SG_新加坡
-      - 🇺🇸_US_美国
-      - 🇷🇺_RU_俄罗斯_3
-      - 🇷🇺_RU_俄罗斯_8
       - 🇺🇸_US_美国->🇩🇪_DE_德国
-      - 🇷🇺_RU_俄罗斯_10
+      - 🇩🇰_DK_丹麦
+      - 🇺🇸_US_美国_9
+      - 🇨🇭_CH_瑞士->🇩🇰_DK_丹麦
+      - 🇳🇱_NL_荷兰
 rules:
   - RULE-SET,applications,DIRECT
   - DOMAIN,clash.razord.top,DIRECT
