@@ -1,4 +1,4 @@
-# Update: 2025-03-12 12:15:05
+# Update: 2025-03-12 14:07:53
 # Created by caoqiang
 mixed-port: 7890
 allow-lan: true
@@ -108,47 +108,47 @@ proxy-groups:
     lazy: true
     tolerance: 100
     proxies:
-      - 🇩🇪_DE_德国->🇨🇳_CN_中国
-      - 🇺🇸_US_美国_4
-      - 🇺🇸_US_美国_1
-      - 未知
       - 🇺🇦_UA_乌克兰->🇲🇩_MD_摩尔多瓦
+      - 🇺🇸_US_美国_4
+      - 🇩🇪_DE_德国->🇨🇳_CN_中国
       - 🇺🇸_US_美国->🇨🇳_CN_中国_2
       - 🇺🇸_US_美国->🇨🇳_CN_中国_1
-      - 🇷🇺_RU_俄罗斯
-      - 🇺🇸_US_美国_6
-      - 🇲🇩_MD_摩尔多瓦
       - 🇺🇸_US_美国->🇲🇩_MD_摩尔多瓦
+      - 🇺🇸_US_美国_1
+      - 🇷🇺_RU_俄罗斯
+      - 未知
+      - 🇲🇩_MD_摩尔多瓦
+      - 🇺🇸_US_美国_6
   - name: LOAD-BALANCE
     type: load-balance
     url: http://www.gstatic.com/generate_204
     interval: 600
     proxies:
-      - 🇩🇪_DE_德国->🇨🇳_CN_中国
-      - 🇺🇸_US_美国_4
-      - 🇺🇸_US_美国_1
-      - 未知
       - 🇺🇦_UA_乌克兰->🇲🇩_MD_摩尔多瓦
+      - 🇺🇸_US_美国_4
+      - 🇩🇪_DE_德国->🇨🇳_CN_中国
       - 🇺🇸_US_美国->🇨🇳_CN_中国_2
       - 🇺🇸_US_美国->🇨🇳_CN_中国_1
-      - 🇷🇺_RU_俄罗斯
-      - 🇺🇸_US_美国_6
-      - 🇲🇩_MD_摩尔多瓦
       - 🇺🇸_US_美国->🇲🇩_MD_摩尔多瓦
+      - 🇺🇸_US_美国_1
+      - 🇷🇺_RU_俄罗斯
+      - 未知
+      - 🇲🇩_MD_摩尔多瓦
+      - 🇺🇸_US_美国_6
   - name: SELECT
     type: select
     proxies:
-      - 🇩🇪_DE_德国->🇨🇳_CN_中国
-      - 🇺🇸_US_美国_4
-      - 🇺🇸_US_美国_1
-      - 未知
       - 🇺🇦_UA_乌克兰->🇲🇩_MD_摩尔多瓦
+      - 🇺🇸_US_美国_4
+      - 🇩🇪_DE_德国->🇨🇳_CN_中国
       - 🇺🇸_US_美国->🇨🇳_CN_中国_2
       - 🇺🇸_US_美国->🇨🇳_CN_中国_1
-      - 🇷🇺_RU_俄罗斯
-      - 🇺🇸_US_美国_6
-      - 🇲🇩_MD_摩尔多瓦
       - 🇺🇸_US_美国->🇲🇩_MD_摩尔多瓦
+      - 🇺🇸_US_美国_1
+      - 🇷🇺_RU_俄罗斯
+      - 未知
+      - 🇲🇩_MD_摩尔多瓦
+      - 🇺🇸_US_美国_6
 rules:
   - RULE-SET,applications,DIRECT
   - DOMAIN,clash.razord.top,DIRECT
