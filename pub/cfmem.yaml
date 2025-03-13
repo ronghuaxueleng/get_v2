@@ -1,4 +1,4 @@
-# Update: 2025-03-13 10:08:44
+# Update: 2025-03-13 12:14:23
 # Created by caoqiang
 mixed-port: 7890
 allow-lan: true
@@ -105,46 +105,46 @@ proxy-groups:
     tolerance: 100
     proxies:
       - 🇺🇦_UA_乌克兰_1
-      - 🇺🇸_US_美国->🇨🇳_CN_中国_2
       - 🇺🇸_US_美国->🇨🇳_CN_中国_1
-      - 🇨🇭_CH_瑞士
-      - 🇺🇸_US_美国->🇨🇳_CN_中国
-      - 🇨🇳_CN_中国->🇺🇸_US_美国
-      - 🇩🇪_DE_德国->🇨🇳_CN_中国
-      - 🇩🇰_DK_丹麦
-      - 🇺🇸_US_美国_3
-      - 🇺🇦_UA_乌克兰
       - 🇩🇪_DE_德国
+      - 🇺🇸_US_美国->🇨🇳_CN_中国
+      - 🇩🇪_DE_德国->🇨🇳_CN_中国
+      - 🇺🇦_UA_乌克兰
+      - 🇨🇳_CN_中国->🇺🇸_US_美国
+      - 🇺🇸_US_美国->🇨🇳_CN_中国_2
+      - 🇺🇸_US_美国_3
+      - 🇩🇰_DK_丹麦
+      - 🇨🇭_CH_瑞士
   - name: LOAD-BALANCE
     type: load-balance
     url: http://www.gstatic.com/generate_204
     interval: 600
     proxies:
       - 🇺🇦_UA_乌克兰_1
-      - 🇺🇸_US_美国->🇨🇳_CN_中国_2
       - 🇺🇸_US_美国->🇨🇳_CN_中国_1
-      - 🇨🇭_CH_瑞士
-      - 🇺🇸_US_美国->🇨🇳_CN_中国
-      - 🇨🇳_CN_中国->🇺🇸_US_美国
-      - 🇩🇪_DE_德国->🇨🇳_CN_中国
-      - 🇩🇰_DK_丹麦
-      - 🇺🇸_US_美国_3
-      - 🇺🇦_UA_乌克兰
       - 🇩🇪_DE_德国
+      - 🇺🇸_US_美国->🇨🇳_CN_中国
+      - 🇩🇪_DE_德国->🇨🇳_CN_中国
+      - 🇺🇦_UA_乌克兰
+      - 🇨🇳_CN_中国->🇺🇸_US_美国
+      - 🇺🇸_US_美国->🇨🇳_CN_中国_2
+      - 🇺🇸_US_美国_3
+      - 🇩🇰_DK_丹麦
+      - 🇨🇭_CH_瑞士
   - name: SELECT
     type: select
     proxies:
       - 🇺🇦_UA_乌克兰_1
-      - 🇺🇸_US_美国->🇨🇳_CN_中国_2
       - 🇺🇸_US_美国->🇨🇳_CN_中国_1
-      - 🇨🇭_CH_瑞士
-      - 🇺🇸_US_美国->🇨🇳_CN_中国
-      - 🇨🇳_CN_中国->🇺🇸_US_美国
-      - 🇩🇪_DE_德国->🇨🇳_CN_中国
-      - 🇩🇰_DK_丹麦
-      - 🇺🇸_US_美国_3
-      - 🇺🇦_UA_乌克兰
       - 🇩🇪_DE_德国
+      - 🇺🇸_US_美国->🇨🇳_CN_中国
+      - 🇩🇪_DE_德国->🇨🇳_CN_中国
+      - 🇺🇦_UA_乌克兰
+      - 🇨🇳_CN_中国->🇺🇸_US_美国
+      - 🇺🇸_US_美国->🇨🇳_CN_中国_2
+      - 🇺🇸_US_美国_3
+      - 🇩🇰_DK_丹麦
+      - 🇨🇭_CH_瑞士
 rules:
   - RULE-SET,applications,DIRECT
   - DOMAIN,clash.razord.top,DIRECT
