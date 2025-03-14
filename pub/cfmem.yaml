@@ -1,4 +1,4 @@
-# Update: 2025-03-13 22:06:49
+# Update: 2025-03-14 00:37:00
 # Created by caoqiang
 mixed-port: 7890
 allow-lan: true
@@ -10,74 +10,48 @@ log-level: info
 external-controller: 0.0.0.0:9090
 global-client-fingerprint: chrome
 proxies:
-  - name: 🇺🇸_US_美国->🇨🇳_CN_中国
+  - name: 🇧🇪_BE_比利时
     type: ss
-    server: 34.217.100.159
-    port: 443
-    cipher: aes-256-cfb
-    password: amazonskr05
-  - name: 🇺🇸_US_美国->🇨🇳_CN_中国_1
+    server: 57.128.190.245
+    port: 20568
+    cipher: chacha20-ietf-poly1305
+    password: e014f8ab71735926
+  - name: 🇺🇸_US_美国_1
+    type: vmess
+    server: 207.90.237.96
+    port: 23008
+    sni: ''
+    uuid: 5f3c5e30-7b83-403e-9a3d-8adacd160d21
+    cipher: auto
+    network: ws
+    skip-cert-verify: true
+    ws-opts:
+      path: /
+    alterId: 0
+  - name: 🇩🇪_DE_德国
     type: ss
-    server: 34.219.71.252
-    port: 443
-    cipher: aes-256-cfb
-    password: amazonskr05
-  - name: 🇩🇰_DK_丹麦
-    type: ss
-    server: 185.186.79.53
-    port: 989
-    cipher: aes-256-cfb
-    password: f8f7aCzcPKbsF8p3
+    server: 45.87.175.188
+    port: 8080
+    cipher: chacha20-ietf-poly1305
+    password: 1RWwXhwfAB5gAEozU4G2Pg
   - name: 🇨🇭_CH_瑞士
     type: ss
     server: 84.17.53.160
     port: 989
     cipher: aes-256-cfb
     password: f8f7aCzcPKbsF8p3
-  - name: 🇺🇸_US_美国->🇨🇳_CN_中国_2
+  - name: 🇺🇸_US_美国_3
     type: ss
-    server: 18.237.73.216
+    server: 34.219.71.252
     port: 443
     cipher: aes-256-cfb
     password: amazonskr05
-  - name: 🇺🇸_US_美国_3
+  - name: 🇳🇱_NL_荷兰
     type: ss
-    server: 38.165.233.18
-    port: 990
-    cipher: chacha20-ietf-poly1305
-    password: f8f7aCzcPKbsF8p3
-  - name: 🇺🇦_UA_乌克兰
-    type: ss
-    server: 95.164.68.37
-    port: 1443
-    cipher: chacha20-ietf-poly1305
-    password: ZDljYmNh
-  - name: 🇨🇳_CN_中国->🇺🇸_US_美国
-    type: vmess
-    server: 183.236.51.38
-    port: 41699
-    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-    cipher: auto
-    network: tcp
-    alterId: 0
-  - name: 🇩🇪_DE_德国
-    type: ss
-    server: 45.87.175.166
+    server: 45.158.171.110
     port: 8080
     cipher: chacha20-ietf-poly1305
-    password: 1RWwXhwfAB5gAEozU4G2Pg
-  - name: 🇩🇪_DE_德国->🇨🇳_CN_中国
-    type: ss
-    server: 45.87.175.199
-    port: 8080
-    cipher: chacha20-ietf-poly1305
-    password: QCXDxuDlTTMD7jtgHUjIoj
-  - name: 🇺🇦_UA_乌克兰_1
-    type: ss
-    server: de2.opensocks.site
-    port: 1443
-    cipher: chacha20-ietf-poly1305
-    password: ZDljYmNh
+    password: oZIoA69Q8yhcQV8ka3Pa3A
 proxy-groups:
   - name: PROXY
     type: select
@@ -104,47 +78,32 @@ proxy-groups:
     lazy: true
     tolerance: 100
     proxies:
-      - 🇺🇸_US_美国->🇨🇳_CN_中国_2
-      - 🇺🇦_UA_乌克兰
-      - 🇺🇸_US_美国->🇨🇳_CN_中国_1
-      - 🇨🇳_CN_中国->🇺🇸_US_美国
-      - 🇩🇪_DE_德国->🇨🇳_CN_中国
-      - 🇺🇸_US_美国->🇨🇳_CN_中国
       - 🇺🇸_US_美国_3
-      - 🇺🇦_UA_乌克兰_1
-      - 🇩🇰_DK_丹麦
-      - 🇩🇪_DE_德国
+      - 🇧🇪_BE_比利时
       - 🇨🇭_CH_瑞士
+      - 🇳🇱_NL_荷兰
+      - 🇩🇪_DE_德国
+      - 🇺🇸_US_美国_1
   - name: LOAD-BALANCE
     type: load-balance
     url: http://www.gstatic.com/generate_204
     interval: 600
     proxies:
-      - 🇺🇸_US_美国->🇨🇳_CN_中国_2
-      - 🇺🇦_UA_乌克兰
-      - 🇺🇸_US_美国->🇨🇳_CN_中国_1
-      - 🇨🇳_CN_中国->🇺🇸_US_美国
-      - 🇩🇪_DE_德国->🇨🇳_CN_中国
-      - 🇺🇸_US_美国->🇨🇳_CN_中国
       - 🇺🇸_US_美国_3
-      - 🇺🇦_UA_乌克兰_1
-      - 🇩🇰_DK_丹麦
-      - 🇩🇪_DE_德国
+      - 🇧🇪_BE_比利时
       - 🇨🇭_CH_瑞士
+      - 🇳🇱_NL_荷兰
+      - 🇩🇪_DE_德国
+      - 🇺🇸_US_美国_1
   - name: SELECT
     type: select
     proxies:
-      - 🇺🇸_US_美国->🇨🇳_CN_中国_2
-      - 🇺🇦_UA_乌克兰
-      - 🇺🇸_US_美国->🇨🇳_CN_中国_1
-      - 🇨🇳_CN_中国->🇺🇸_US_美国
-      - 🇩🇪_DE_德国->🇨🇳_CN_中国
-      - 🇺🇸_US_美国->🇨🇳_CN_中国
       - 🇺🇸_US_美国_3
-      - 🇺🇦_UA_乌克兰_1
-      - 🇩🇰_DK_丹麦
-      - 🇩🇪_DE_德国
+      - 🇧🇪_BE_比利时
       - 🇨🇭_CH_瑞士
+      - 🇳🇱_NL_荷兰
+      - 🇩🇪_DE_德国
+      - 🇺🇸_US_美国_1
 rules:
   - RULE-SET,applications,DIRECT
   - DOMAIN,clash.razord.top,DIRECT
