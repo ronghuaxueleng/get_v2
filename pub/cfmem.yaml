@@ -1,4 +1,4 @@
-# Update: 2025-03-14 22:06:55
+# Update: 2025-03-15 00:36:38
 # Created by caoqiang
 mixed-port: 7890
 allow-lan: true
@@ -9,49 +9,7 @@ mode: rule
 log-level: info
 external-controller: 0.0.0.0:9090
 global-client-fingerprint: chrome
-proxies:
-  - name: 🇧🇪_BE_比利时
-    type: ss
-    server: 57.128.190.245
-    port: 20568
-    cipher: chacha20-ietf-poly1305
-    password: e014f8ab71735926
-  - name: 🇺🇸_US_美国_1
-    type: vmess
-    server: 207.90.237.96
-    port: 23008
-    sni: ''
-    uuid: 5f3c5e30-7b83-403e-9a3d-8adacd160d21
-    cipher: auto
-    network: ws
-    skip-cert-verify: true
-    ws-opts:
-      path: /
-    alterId: 0
-  - name: 🇩🇪_DE_德国
-    type: ss
-    server: 45.87.175.188
-    port: 8080
-    cipher: chacha20-ietf-poly1305
-    password: 1RWwXhwfAB5gAEozU4G2Pg
-  - name: 🇨🇭_CH_瑞士
-    type: ss
-    server: 84.17.53.160
-    port: 989
-    cipher: aes-256-cfb
-    password: f8f7aCzcPKbsF8p3
-  - name: 🇺🇸_US_美国_3
-    type: ss
-    server: 34.219.71.252
-    port: 443
-    cipher: aes-256-cfb
-    password: amazonskr05
-  - name: 🇳🇱_NL_荷兰
-    type: ss
-    server: 45.158.171.110
-    port: 8080
-    cipher: chacha20-ietf-poly1305
-    password: oZIoA69Q8yhcQV8ka3Pa3A
+proxies: []
 proxy-groups:
   - name: PROXY
     type: select
@@ -77,33 +35,15 @@ proxy-groups:
     interval: 600
     lazy: true
     tolerance: 100
-    proxies:
-      - 🇩🇪_DE_德国
-      - 🇨🇭_CH_瑞士
-      - 🇳🇱_NL_荷兰
-      - 🇺🇸_US_美国_1
-      - 🇧🇪_BE_比利时
-      - 🇺🇸_US_美国_3
+    proxies: []
   - name: LOAD-BALANCE
     type: load-balance
     url: http://www.gstatic.com/generate_204
     interval: 600
-    proxies:
-      - 🇩🇪_DE_德国
-      - 🇨🇭_CH_瑞士
-      - 🇳🇱_NL_荷兰
-      - 🇺🇸_US_美国_1
-      - 🇧🇪_BE_比利时
-      - 🇺🇸_US_美国_3
+    proxies: []
   - name: SELECT
     type: select
-    proxies:
-      - 🇩🇪_DE_德国
-      - 🇨🇭_CH_瑞士
-      - 🇳🇱_NL_荷兰
-      - 🇺🇸_US_美国_1
-      - 🇧🇪_BE_比利时
-      - 🇺🇸_US_美国_3
+    proxies: []
 rules:
   - RULE-SET,applications,DIRECT
   - DOMAIN,clash.razord.top,DIRECT
