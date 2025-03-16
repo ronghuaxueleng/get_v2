@@ -1,4 +1,4 @@
-# Update: 2025-03-15 22:00:55
+# Update: 2025-03-16 00:40:53
 # Created by caoqiang
 mixed-port: 7890
 allow-lan: true
@@ -9,7 +9,134 @@ mode: rule
 log-level: info
 external-controller: 0.0.0.0:9090
 global-client-fingerprint: chrome
-proxies: []
+proxies:
+  - name: 🇺🇸_US_美国
+    type: ss
+    server: 34.210.253.95
+    port: 443
+    cipher: aes-256-cfb
+    password: amazonskr05
+  - name: 🇺🇸_US_美国_1
+    type: trojan
+    server: 192.3.130.103
+    port: 443
+    udp: true
+    sni: us10-01.iran2030.ggff.net
+    password: 576c81b6-4976-4fe3-b1a9-05a9c302e98e
+    network: grpc
+    alpn:
+      - h2
+    client-fingerprint: chrome
+    grpc-opts:
+      grpc-service-name: i8oL7PsxV002zYFTmiIeg
+  - name: 🇺🇸_US_美国_2
+    type: ss
+    server: 184.170.241.194
+    port: 443
+    cipher: aes-128-cfb
+    password: shadowsocks
+  - name: 🇩🇰_DK_丹麦
+    type: ss
+    server: 185.186.79.53
+    port: 989
+    cipher: aes-256-cfb
+    password: f8f7aCzcPKbsF8p3
+  - name: 🇺🇸_US_美国_3
+    type: ss
+    server: 18.236.137.219
+    port: 443
+    cipher: aes-256-cfb
+    password: amazonskr05
+  - name: 🇬🇧_GB_英国
+    type: ss
+    server: 51.15.23.63
+    port: 989
+    cipher: aes-256-cfb
+    password: f8f7aCzcPKbsF8p3
+  - name: 🇰🇼_KW_科威特
+    type: ss
+    server: 163.171.181.49
+    port: 12317
+    cipher: chacha20-ietf-poly1305
+    password: 877c3b069c335ffc
+  - name: 🇺🇸_US_美国->🇩🇰_DK_丹麦
+    type: ss
+    server: 34.211.230.161
+    port: 443
+    cipher: aes-256-cfb
+    password: amazonskr05
+  - name: 🇸🇰_SK_斯洛伐克
+    type: ss
+    server: 156.146.40.194
+    port: 989
+    cipher: aes-256-cfb
+    password: f8f7aCzcPKbsF8p3
+  - name: 🇮🇸_IS_冰岛
+    type: ss
+    server: 37.235.49.152
+    port: 989
+    cipher: aes-256-cfb
+    password: f8f7aCzcPKbsF8p3
+  - name: 🇺🇸_US_美国_4
+    type: ss
+    server: 35.86.111.233
+    port: 443
+    cipher: aes-256-cfb
+    password: amazonskr05
+  - name: 🇺🇸_US_美国_5
+    type: ss
+    server: 54.202.63.169
+    port: 443
+    cipher: aes-256-cfb
+    password: amazonskr05
+  - name: 🇨🇭_CH_瑞士
+    type: ss
+    server: 84.17.53.160
+    port: 989
+    cipher: aes-256-cfb
+    password: f8f7aCzcPKbsF8p3
+  - name: 🇺🇸_US_美国->🇸🇬_SG_新加坡
+    type: ss
+    server: 54.218.61.43
+    port: 443
+    cipher: aes-256-cfb
+    password: amazonskr05
+  - name: 🇺🇸_US_美国_7
+    type: ss
+    server: 45.10.154.245
+    port: 26268
+    cipher: chacha20-ietf-poly1305
+    password: 11955ffa5b58cae3
+  - name: 🇺🇸_US_美国_8
+    type: ss
+    server: 35.87.37.159
+    port: 443
+    cipher: aes-256-cfb
+    password: amazonskr05
+  - name: 🇺🇸_US_美国->🇰🇷_KR_韩国
+    type: ss
+    server: 35.91.216.191
+    port: 443
+    cipher: aes-256-cfb
+    password: amazonskr05
+  - name: 🇧🇪_BE_比利时
+    type: ss
+    server: 57.128.190.214
+    port: 48977
+    cipher: chacha20-ietf-poly1305
+    password: 99eedf8e9170c8a4
+  - name: 🇩🇪_DE_德国
+    type: ss
+    server: 193.108.119.230
+    port: 8080
+    cipher: rc4-md5
+    password: 14fFPrbezE3HDZzsMOr6
+  - name: 🇺🇸_US_美国_9
+    type: ss
+    server: 54.184.74.88
+    port: 443
+    cipher: aes-256-cfb
+    password: amazonskr05
 proxy-groups:
   - name: PROXY
     type: select
@@ -35,15 +162,75 @@ proxy-groups:
     interval: 600
     lazy: true
     tolerance: 100
-    proxies: []
+    proxies:
+      - 🇺🇸_US_美国->🇸🇬_SG_新加坡
+      - 🇺🇸_US_美国_7
+      - 🇨🇭_CH_瑞士
+      - 🇺🇸_US_美国_4
+      - 🇩🇪_DE_德国
+      - 🇺🇸_US_美国->🇩🇰_DK_丹麦
+      - 🇰🇼_KW_科威特
+      - 🇸🇰_SK_斯洛伐克
+      - 🇺🇸_US_美国
+      - 🇺🇸_US_美国->🇰🇷_KR_韩国
+      - 🇮🇸_IS_冰岛
+      - 🇺🇸_US_美国_5
+      - 🇩🇰_DK_丹麦
+      - 🇺🇸_US_美国_2
+      - 🇺🇸_US_美国_9
+      - 🇬🇧_GB_英国
+      - 🇺🇸_US_美国_8
+      - 🇺🇸_US_美国_1
+      - 🇧🇪_BE_比利时
+      - 🇺🇸_US_美国_3
   - name: LOAD-BALANCE
     type: load-balance
     url: http://www.gstatic.com/generate_204
     interval: 600
-    proxies: []
+    proxies:
+      - 🇺🇸_US_美国->🇸🇬_SG_新加坡
+      - 🇺🇸_US_美国_7
+      - 🇨🇭_CH_瑞士
+      - 🇺🇸_US_美国_4
+      - 🇩🇪_DE_德国
+      - 🇺🇸_US_美国->🇩🇰_DK_丹麦
+      - 🇰🇼_KW_科威特
+      - 🇸🇰_SK_斯洛伐克
+      - 🇺🇸_US_美国
+      - 🇺🇸_US_美国->🇰🇷_KR_韩国
+      - 🇮🇸_IS_冰岛
+      - 🇺🇸_US_美国_5
+      - 🇩🇰_DK_丹麦
+      - 🇺🇸_US_美国_2
+      - 🇺🇸_US_美国_9
+      - 🇬🇧_GB_英国
+      - 🇺🇸_US_美国_8
+      - 🇺🇸_US_美国_1
+      - 🇧🇪_BE_比利时
+      - 🇺🇸_US_美国_3
   - name: SELECT
     type: select
-    proxies: []
+    proxies:
+      - 🇺🇸_US_美国->🇸🇬_SG_新加坡
+      - 🇺🇸_US_美国_7
+      - 🇨🇭_CH_瑞士
+      - 🇺🇸_US_美国_4
+      - 🇩🇪_DE_德国
+      - 🇺🇸_US_美国->🇩🇰_DK_丹麦
+      - 🇰🇼_KW_科威特
+      - 🇸🇰_SK_斯洛伐克
+      - 🇺🇸_US_美国
+      - 🇺🇸_US_美国->🇰🇷_KR_韩国
+      - 🇮🇸_IS_冰岛
+      - 🇺🇸_US_美国_5
+      - 🇩🇰_DK_丹麦
+      - 🇺🇸_US_美国_2
+      - 🇺🇸_US_美国_9
+      - 🇬🇧_GB_英国
+      - 🇺🇸_US_美国_8
+      - 🇺🇸_US_美国_1
+      - 🇧🇪_BE_比利时
+      - 🇺🇸_US_美国_3
 rules:
   - RULE-SET,applications,DIRECT
   - DOMAIN,clash.razord.top,DIRECT
