@@ -1,4 +1,4 @@
-# Update: 2025-03-22 20:00:54
+# Update: 2025-03-22 22:01:02
 # Created by caoqiang
 mixed-port: 7890
 allow-lan: true
@@ -10,805 +10,624 @@ log-level: info
 external-controller: 0.0.0.0:9090
 global-client-fingerprint: chrome
 proxies:
-  - name: 🇺🇸_US_美国->🇰🇷_KR_韩国
-    type: vmess
-    server: 104.16.0.178
-    port: 80
-    sni: ''
-    uuid: 27c85fdb-5e8f-43ea-bf43-4ed4d0a3b306
-    cipher: auto
-    network: ws
-    skip-cert-verify: true
-    ws-opts:
-      path: /dubai.html?ed=2048
-      headers:
-        host: 886207003891252025032010340550358.dblxc.chibaba.filegear-sg.me
-    alterId: 0
-  - name: 🇺🇸_US_美国->🇨🇳_CN_中国
-    type: ss
-    server: 137.175.113.193
-    port: 8388
-    cipher: chacha20-ietf
-    password: asd123456
-  - name: 🇨🇭_CH_瑞士
-    type: ss
-    server: 84.17.53.160
-    port: 989
-    cipher: aes-256-cfb
-    password: f8f7aCzcPKbsF8p3
-  - name: 🇺🇸_US_美国->🏳️_unKnow_未知
-    type: vmess
-    server: 172.67.152.71
-    port: 80
-    sni: ''
-    uuid: 27c85fdb-5e8f-43ea-bf43-4ed4d0a3b306
-    cipher: auto
-    network: ws
-    skip-cert-verify: true
-    ws-opts:
-      path: /dubai.html?ed=2048
-      headers:
-        host: 462583301568512025032010340527704.dblxc.chibaba.filegear-sg.me
-    alterId: 0
-  - name: 🇨🇳_CN_中国->🇦🇺_AU_澳大利亚
-    type: ss
-    server: csuzhou01.1cooldns.com
-    port: 18755
-    cipher: aes-128-gcm
-    password: VMhGp5wEIyCDf90T
-  - name: 🇸🇰_SK_斯洛伐克
-    type: ss
-    server: 156.146.40.194
-    port: 989
-    cipher: aes-256-cfb
-    password: f8f7aCzcPKbsF8p3
-  - name: 🇷🇺_RU_俄罗斯
-    type: ss
-    server: 91.103.253.151
-    port: 19057
-    cipher: chacha20-ietf-poly1305
-    password: k2ZakKaVDBnhWnUxI483R1
-  - name: 🇺🇸_US_美国
-    type: ss
-    server: 54.202.63.169
-    port: 443
-    cipher: aes-256-cfb
-    password: amazonskr05
-  - name: 🇺🇸_US_美国->🇨🇳_CN_中国_1
-    type: ss
-    server: 35.87.29.54
-    port: 443
-    cipher: aes-256-cfb
-    password: amazonskr05
-  - name: 🇺🇸_US_美国_2
-    type: ss
-    server: 44.242.208.211
-    port: 443
-    cipher: aes-256-cfb
-    password: amazonskr05
-  - name: 🇺🇸_US_美国->🇰🇷_KR_韩国_1
-    type: ss
-    server: 34.210.253.95
-    port: 443
-    cipher: aes-256-cfb
-    password: amazonskr05
-  - name: 🇺🇸_US_美国_3
-    type: ss
-    server: 34.219.71.252
-    port: 443
-    cipher: aes-256-cfb
-    password: amazonskr05
-  - name: 🇺🇸_US_美国_4
-    type: trojan
-    server: stodewrn.homeofbrave.net
-    port: 443
-    password: ZCR3pplzBEDwYy3w3e8X685aCxFCgaIeYSxSROa97KxDxaC328lD0T4z7SynagqSXA6cR
-  - name: 🇺🇸_US_美国_5
-    type: ss
-    server: 35.93.21.189
-    port: 443
-    cipher: aes-256-cfb
-    password: amazonskr05
-  - name: 🇺🇸_US_美国_6
-    type: trojan
-    server: 192.3.130.103
-    port: 443
-    udp: true
-    sni: us10-01zl.huangshang.filegear-sg.me
-    password: 576c81b6-4976-4fe3-b1a9-05a9c302e98e
-    network: grpc
-    grpc-opts:
-      grpc-service-name: i8oL7PsxV002zYFTmiIeg
-  - name: 🇧🇪_BE_比利时
-    type: ss
-    server: 57.128.190.245
-    port: 20568
-    cipher: chacha20-ietf-poly1305
-    password: e014f8ab71735926
-  - name: 🇺🇸_US_美国->🇸🇬_SG_新加坡
-    type: ss
-    server: 44.246.28.217
-    port: 443
-    cipher: aes-256-cfb
-    password: amazonskr05
-  - name: 🇮🇳_IN_印度
-    type: ss
-    server: 103.104.247.49
-    port: 8080
-    cipher: chacha20-ietf-poly1305
-    password: oZIoA69Q8yhcQV8ka3Pa3A
-  - name: 🇺🇸_US_美国_8
-    type: ss
-    server: 54.184.74.88
-    port: 443
-    cipher: aes-256-cfb
-    password: amazonskr05
-  - name: 🇸🇬_SG_新加坡->🇨🇳_CN_中国
-    type: ss
-    server: 54.179.179.201
-    port: 443
-    cipher: aes-256-cfb
-    password: amazonskr05
-  - name: 🇺🇸_US_美国->🇫🇷_FR_法国
-    type: ss
-    server: 52.33.164.139
-    port: 443
-    cipher: aes-256-cfb
-    password: amazonskr05
-  - name: 🇺🇸_US_美国->🇨🇳_CN_中国_3
-    type: vmess
-    server: 141.195.112.53
-    port: 20022
-    uuid: 98d30ce3-cf8c-499e-ba2b-fbc9b008fc07
-    cipher: auto
-    network: ws
-    ws-opts:
-      path: /
-    alterId: 0
-  - name: 🇺🇸_US_美国_9
-    type: ss
-    server: 35.87.37.159
-    port: 443
-    cipher: aes-256-cfb
-    password: amazonskr05
   - cipher: chacha20-ietf-poly1305
     name: 0|🇭🇰 香港 01 | 1x HK
-    password: 7c493c21-b1cb-438b-ad59-ba13064dd5b3
+    password: d78a0849-f363-4200-a523-c7c04410ee34
     port: 36141
     server: free.2weradf.xyz
     type: ss
     udp: true
   - cipher: chacha20-ietf-poly1305
     name: 0|🇭🇰 香港 02 | 1x HK
-    password: 7c493c21-b1cb-438b-ad59-ba13064dd5b3
+    password: d78a0849-f363-4200-a523-c7c04410ee34
     port: 36143
     server: free.2weradf.xyz
     type: ss
     udp: true
   - cipher: chacha20-ietf-poly1305
     name: 0|🇭🇰 香港住宅IP 03 | 1x HK
-    password: 7c493c21-b1cb-438b-ad59-ba13064dd5b3
+    password: d78a0849-f363-4200-a523-c7c04410ee34
     port: 36145
     server: free.2weradf.xyz
     type: ss
     udp: true
   - cipher: chacha20-ietf-poly1305
     name: 0|🇹🇼 台湾 01 | 1x TW
-    password: 7c493c21-b1cb-438b-ad59-ba13064dd5b3
+    password: d78a0849-f363-4200-a523-c7c04410ee34
     port: 36241
     server: free.2weradf.xyz
     type: ss
     udp: true
   - cipher: chacha20-ietf-poly1305
     name: 0|🇹🇼 台湾 02 | 1x TW
-    password: 7c493c21-b1cb-438b-ad59-ba13064dd5b3
+    password: d78a0849-f363-4200-a523-c7c04410ee34
     port: 36243
     server: free.2weradf.xyz
     type: ss
     udp: true
   - cipher: chacha20-ietf-poly1305
     name: 0|🇹🇼 台湾 03 | 1x TW
-    password: 7c493c21-b1cb-438b-ad59-ba13064dd5b3
+    password: d78a0849-f363-4200-a523-c7c04410ee34
     port: 36245
     server: free.2weradf.xyz
     type: ss
     udp: true
   - cipher: chacha20-ietf-poly1305
     name: 0|🇯🇵 日本 01 | 1x JP
-    password: 7c493c21-b1cb-438b-ad59-ba13064dd5b3
+    password: d78a0849-f363-4200-a523-c7c04410ee34
     port: 36111
     server: free.2weradf.xyz
     type: ss
     udp: true
   - cipher: chacha20-ietf-poly1305
     name: 0|🇯🇵 日本 02 | 1x JP
-    password: 7c493c21-b1cb-438b-ad59-ba13064dd5b3
+    password: d78a0849-f363-4200-a523-c7c04410ee34
     port: 36113
     server: free.2weradf.xyz
     type: ss
     udp: true
   - cipher: chacha20-ietf-poly1305
     name: 0|🇯🇵 日本 03 | 1x JP
-    password: 7c493c21-b1cb-438b-ad59-ba13064dd5b3
+    password: d78a0849-f363-4200-a523-c7c04410ee34
     port: 36115
     server: free.2weradf.xyz
     type: ss
     udp: true
   - cipher: chacha20-ietf-poly1305
     name: 0|🇸🇬 新加坡 01 | 1x SG
-    password: 7c493c21-b1cb-438b-ad59-ba13064dd5b3
+    password: d78a0849-f363-4200-a523-c7c04410ee34
     port: 36171
     server: free.2weradf.xyz
     type: ss
     udp: true
   - cipher: chacha20-ietf-poly1305
     name: 0|🇸🇬 新加坡 02 | 1x SG
-    password: 7c493c21-b1cb-438b-ad59-ba13064dd5b3
+    password: d78a0849-f363-4200-a523-c7c04410ee34
     port: 36173
     server: free.2weradf.xyz
     type: ss
     udp: true
   - cipher: chacha20-ietf-poly1305
     name: 0|🇸🇬 新加坡 03 | 1x SG
-    password: 7c493c21-b1cb-438b-ad59-ba13064dd5b3
+    password: d78a0849-f363-4200-a523-c7c04410ee34
     port: 36175
     server: free.2weradf.xyz
     type: ss
     udp: true
   - cipher: chacha20-ietf-poly1305
     name: 0|🇰🇷 韩国 01 | 1x KR
-    password: 7c493c21-b1cb-438b-ad59-ba13064dd5b3
+    password: d78a0849-f363-4200-a523-c7c04410ee34
     port: 36311
     server: free.2weradf.xyz
     type: ss
     udp: true
   - cipher: chacha20-ietf-poly1305
     name: 0|🇰🇷 韩国 02 | 1x KR
-    password: 7c493c21-b1cb-438b-ad59-ba13064dd5b3
+    password: d78a0849-f363-4200-a523-c7c04410ee34
     port: 36313
     server: free.2weradf.xyz
     type: ss
     udp: true
   - cipher: chacha20-ietf-poly1305
     name: 0|🇵🇭 菲律宾 01 | 1x PH
-    password: 7c493c21-b1cb-438b-ad59-ba13064dd5b3
+    password: d78a0849-f363-4200-a523-c7c04410ee34
     port: 36341
     server: free.2weradf.xyz
     type: ss
     udp: true
   - cipher: chacha20-ietf-poly1305
     name: 0|🇺🇸 美国 01 | 1x US Los Angeles
-    password: 7c493c21-b1cb-438b-ad59-ba13064dd5b3
+    password: d78a0849-f363-4200-a523-c7c04410ee34
     port: 36211
     server: free.2weradf.xyz
     type: ss
     udp: true
   - cipher: chacha20-ietf-poly1305
     name: 0|🇺🇸 美国住宅IP 02 | 1x US Los Angel...
-    password: 7c493c21-b1cb-438b-ad59-ba13064dd5b3
+    password: d78a0849-f363-4200-a523-c7c04410ee34
     port: 36213
     server: free.2weradf.xyz
     type: ss
     udp: true
   - cipher: chacha20-ietf-poly1305
     name: 0|🇺🇸 美国 03 | 1x US Washington
-    password: 7c493c21-b1cb-438b-ad59-ba13064dd5b3
+    password: d78a0849-f363-4200-a523-c7c04410ee34
     port: 36215
     server: free.2weradf.xyz
     type: ss
     udp: true
   - cipher: chacha20-ietf-poly1305
     name: 0|🇬🇧 英国住宅IP 01 | 1x UK
-    password: 7c493c21-b1cb-438b-ad59-ba13064dd5b3
+    password: d78a0849-f363-4200-a523-c7c04410ee34
     port: 36271
     server: free.2weradf.xyz
     type: ss
     udp: true
   - cipher: chacha20-ietf-poly1305
     name: 0|🇲🇾马来西亚 01 | 1x MY
-    password: 7c493c21-b1cb-438b-ad59-ba13064dd5b3
+    password: d78a0849-f363-4200-a523-c7c04410ee34
     port: 36721
     server: free.2weradf.xyz
     type: ss
     udp: true
   - cipher: chacha20-ietf-poly1305
     name: 0|🇮🇳西班牙 01 | 1x ES
-    password: 7c493c21-b1cb-438b-ad59-ba13064dd5b3
+    password: d78a0849-f363-4200-a523-c7c04410ee34
     port: 36741
     server: free.2weradf.xyz
     type: ss
     udp: true
   - cipher: chacha20-ietf-poly1305
     name: 0|🇹🇭泰国 01 | 1x TH
-    password: 7c493c21-b1cb-438b-ad59-ba13064dd5b3
+    password: d78a0849-f363-4200-a523-c7c04410ee34
     port: 36731
     server: free.2weradf.xyz
     type: ss
     udp: true
   - cipher: chacha20-ietf-poly1305
     name: 0|🇮🇳 印度 01 | 1x IN
-    password: 7c493c21-b1cb-438b-ad59-ba13064dd5b3
+    password: d78a0849-f363-4200-a523-c7c04410ee34
     port: 36371
     server: free.2weradf.xyz
     type: ss
     udp: true
   - cipher: chacha20-ietf-poly1305
     name: 0|🇦🇺 澳大利亚 01 | 1x AU
-    password: 7c493c21-b1cb-438b-ad59-ba13064dd5b3
+    password: d78a0849-f363-4200-a523-c7c04410ee34
     port: 36411
     server: free.2weradf.xyz
     type: ss
     udp: true
   - cipher: chacha20-ietf-poly1305
     name: 0|🇨🇦 加拿大 01 | 1x CA
-    password: 7c493c21-b1cb-438b-ad59-ba13064dd5b3
+    password: d78a0849-f363-4200-a523-c7c04410ee34
     port: 36441
     server: free.2weradf.xyz
     type: ss
     udp: true
   - cipher: chacha20-ietf-poly1305
     name: 0|🇩🇪 德国 01 | 1x DE
-    password: 7c493c21-b1cb-438b-ad59-ba13064dd5b3
+    password: d78a0849-f363-4200-a523-c7c04410ee34
     port: 36471
     server: free.2weradf.xyz
     type: ss
     udp: true
   - cipher: chacha20-ietf-poly1305
     name: 0|🇷🇺 俄罗斯 01 | 1x RU
-    password: 7c493c21-b1cb-438b-ad59-ba13064dd5b3
+    password: d78a0849-f363-4200-a523-c7c04410ee34
     port: 36511
     server: free.2weradf.xyz
     type: ss
     udp: true
   - cipher: chacha20-ietf-poly1305
     name: 0|🇹🇷 土耳其 01 | 1x TR
-    password: 7c493c21-b1cb-438b-ad59-ba13064dd5b3
+    password: d78a0849-f363-4200-a523-c7c04410ee34
     port: 36571
     server: free.2weradf.xyz
     type: ss
     udp: true
   - cipher: chacha20-ietf-poly1305
     name: 0|🇺🇦 乌克兰 01 | 1x UA
-    password: 7c493c21-b1cb-438b-ad59-ba13064dd5b3
+    password: d78a0849-f363-4200-a523-c7c04410ee34
     port: 36611
     server: free.2weradf.xyz
     type: ss
     udp: true
   - cipher: chacha20-ietf-poly1305
     name: 0|🇻🇳 越南 01 | 1x VN
-    password: 7c493c21-b1cb-438b-ad59-ba13064dd5b3
+    password: d78a0849-f363-4200-a523-c7c04410ee34
     port: 36641
     server: free.2weradf.xyz
     type: ss
     udp: true
   - cipher: chacha20-ietf-poly1305
     name: 0|🇧🇷 巴西 01 | 1x BR
-    password: 7c493c21-b1cb-438b-ad59-ba13064dd5b3
+    password: d78a0849-f363-4200-a523-c7c04410ee34
     port: 36671
     server: free.2weradf.xyz
     type: ss
     udp: true
   - cipher: chacha20-ietf-poly1305
     name: 0|🇮🇩 印度尼西亚 01 | 1x ID
-    password: 7c493c21-b1cb-438b-ad59-ba13064dd5b3
+    password: d78a0849-f363-4200-a523-c7c04410ee34
     port: 36677
     server: free.2weradf.xyz
     type: ss
     udp: true
   - cipher: chacha20-ietf-poly1305
     name: 1|🇭🇰香港 01 | 1x HK
-    password: bac6f863-3347-4af7-acf0-83e8fba746a6
+    password: 2b917485-b24b-4c0f-bad3-b97baad4df61
     port: 31141
     server: free.2apzhfa.xyz
     type: ss
     udp: true
   - cipher: chacha20-ietf-poly1305
     name: 1|🇭🇰香港 02 | 1x HK
-    password: bac6f863-3347-4af7-acf0-83e8fba746a6
+    password: 2b917485-b24b-4c0f-bad3-b97baad4df61
     port: 31143
     server: free.2apzhfa.xyz
     type: ss
     udp: true
   - cipher: chacha20-ietf-poly1305
     name: 1|🇭🇰香港家宽 03 | 1x HK
-    password: bac6f863-3347-4af7-acf0-83e8fba746a6
+    password: 2b917485-b24b-4c0f-bad3-b97baad4df61
     port: 31145
     server: free.2apzhfa.xyz
     type: ss
     udp: true
   - cipher: chacha20-ietf-poly1305
     name: 1|🇹🇼台湾 01 | 1x TW
-    password: bac6f863-3347-4af7-acf0-83e8fba746a6
+    password: 2b917485-b24b-4c0f-bad3-b97baad4df61
     port: 31241
     server: free.2apzhfa.xyz
     type: ss
     udp: true
   - cipher: chacha20-ietf-poly1305
     name: 1|🇹🇼台湾 02 | 1x TW
-    password: bac6f863-3347-4af7-acf0-83e8fba746a6
+    password: 2b917485-b24b-4c0f-bad3-b97baad4df61
     port: 31243
     server: free.2apzhfa.xyz
     type: ss
     udp: true
   - cipher: chacha20-ietf-poly1305
     name: 1|🇹🇼台湾 03 | 1x TW
-    password: bac6f863-3347-4af7-acf0-83e8fba746a6
+    password: 2b917485-b24b-4c0f-bad3-b97baad4df61
     port: 31245
     server: free.2apzhfa.xyz
     type: ss
     udp: true
   - cipher: chacha20-ietf-poly1305
     name: 1|🇯🇵日本 01 | 1x JP
-    password: bac6f863-3347-4af7-acf0-83e8fba746a6
+    password: 2b917485-b24b-4c0f-bad3-b97baad4df61
     port: 31111
     server: free.2apzhfa.xyz
     type: ss
     udp: true
   - cipher: chacha20-ietf-poly1305
     name: 1|🇯🇵日本 02 | 1x JP
-    password: bac6f863-3347-4af7-acf0-83e8fba746a6
+    password: 2b917485-b24b-4c0f-bad3-b97baad4df61
     port: 31113
     server: free.2apzhfa.xyz
     type: ss
     udp: true
   - cipher: chacha20-ietf-poly1305
     name: 1|🇯🇵日本 03 | 1x JP
-    password: bac6f863-3347-4af7-acf0-83e8fba746a6
+    password: 2b917485-b24b-4c0f-bad3-b97baad4df61
     port: 31115
     server: free.2apzhfa.xyz
     type: ss
     udp: true
   - cipher: chacha20-ietf-poly1305
     name: 1|🇸🇬新加坡 01 | 1x SG
-    password: bac6f863-3347-4af7-acf0-83e8fba746a6
+    password: 2b917485-b24b-4c0f-bad3-b97baad4df61
     port: 31171
     server: free.2apzhfa.xyz
     type: ss
     udp: true
   - cipher: chacha20-ietf-poly1305
     name: 1|🇸🇬新加坡 02 | 1x SG
-    password: bac6f863-3347-4af7-acf0-83e8fba746a6
+    password: 2b917485-b24b-4c0f-bad3-b97baad4df61
     port: 31173
     server: free.2apzhfa.xyz
     type: ss
     udp: true
   - cipher: chacha20-ietf-poly1305
     name: 1|🇸🇬新加坡 03 | 1x SG
-    password: bac6f863-3347-4af7-acf0-83e8fba746a6
+    password: 2b917485-b24b-4c0f-bad3-b97baad4df61
     port: 31175
     server: free.2apzhfa.xyz
     type: ss
     udp: true
   - cipher: chacha20-ietf-poly1305
     name: 1|🇰🇷韩国 01 | 1x KR
-    password: bac6f863-3347-4af7-acf0-83e8fba746a6
+    password: 2b917485-b24b-4c0f-bad3-b97baad4df61
     port: 31311
     server: free.2apzhfa.xyz
     type: ss
     udp: true
   - cipher: chacha20-ietf-poly1305
     name: 1|🇰🇷韩国 02 | 1x KR
-    password: bac6f863-3347-4af7-acf0-83e8fba746a6
+    password: 2b917485-b24b-4c0f-bad3-b97baad4df61
     port: 31313
     server: free.2apzhfa.xyz
     type: ss
     udp: true
   - cipher: chacha20-ietf-poly1305
     name: 1|🇵🇭菲律宾 01 | 1x PH
-    password: bac6f863-3347-4af7-acf0-83e8fba746a6
+    password: 2b917485-b24b-4c0f-bad3-b97baad4df61
     port: 31341
     server: free.2apzhfa.xyz
     type: ss
     udp: true
   - cipher: chacha20-ietf-poly1305
     name: 1|🇺🇸美国 01 | 1x US Los Angeles
-    password: bac6f863-3347-4af7-acf0-83e8fba746a6
+    password: 2b917485-b24b-4c0f-bad3-b97baad4df61
     port: 31211
     server: free.2apzhfa.xyz
     type: ss
     udp: true
   - cipher: chacha20-ietf-poly1305
     name: 1|🇺🇸美国家宽 02 | 1x US Los Angeles
-    password: bac6f863-3347-4af7-acf0-83e8fba746a6
+    password: 2b917485-b24b-4c0f-bad3-b97baad4df61
     port: 31213
     server: free.2apzhfa.xyz
     type: ss
     udp: true
   - cipher: chacha20-ietf-poly1305
     name: 1|🇺🇸美国 03 | 1x US Washington
-    password: bac6f863-3347-4af7-acf0-83e8fba746a6
+    password: 2b917485-b24b-4c0f-bad3-b97baad4df61
     port: 31215
     server: free.2apzhfa.xyz
     type: ss
     udp: true
   - cipher: chacha20-ietf-poly1305
     name: 1|🇬🇧英国家宽 01 | 1x UK
-    password: bac6f863-3347-4af7-acf0-83e8fba746a6
+    password: 2b917485-b24b-4c0f-bad3-b97baad4df61
     port: 31271
     server: free.2apzhfa.xyz
     type: ss
     udp: true
   - cipher: chacha20-ietf-poly1305
     name: 1|🇹🇭泰国01  | 1x TH
-    password: bac6f863-3347-4af7-acf0-83e8fba746a6
+    password: 2b917485-b24b-4c0f-bad3-b97baad4df61
     port: 31741
     server: free.2apzhfa.xyz
     type: ss
     udp: true
   - cipher: chacha20-ietf-poly1305
     name: 1|🇲🇾马来西亚01 | 1x MY
-    password: bac6f863-3347-4af7-acf0-83e8fba746a6
+    password: 2b917485-b24b-4c0f-bad3-b97baad4df61
     port: 31721
     server: free.2apzhfa.xyz
     type: ss
     udp: true
   - cipher: chacha20-ietf-poly1305
     name: 1|🇮🇳印度 01 | 1x IN
-    password: bac6f863-3347-4af7-acf0-83e8fba746a6
+    password: 2b917485-b24b-4c0f-bad3-b97baad4df61
     port: 31371
     server: free.2apzhfa.xyz
     type: ss
     udp: true
   - cipher: chacha20-ietf-poly1305
     name: 1|🇦🇺澳大利亚 01 | 1x AU
-    password: bac6f863-3347-4af7-acf0-83e8fba746a6
+    password: 2b917485-b24b-4c0f-bad3-b97baad4df61
     port: 31411
     server: free.2apzhfa.xyz
     type: ss
     udp: true
   - cipher: chacha20-ietf-poly1305
     name: 1|🇨🇦加拿大 01 | 1x CA
-    password: bac6f863-3347-4af7-acf0-83e8fba746a6
+    password: 2b917485-b24b-4c0f-bad3-b97baad4df61
     port: 31441
     server: free.2apzhfa.xyz
     type: ss
     udp: true
   - cipher: chacha20-ietf-poly1305
     name: 1|🇩🇪德国 01 | 1x DE
-    password: bac6f863-3347-4af7-acf0-83e8fba746a6
+    password: 2b917485-b24b-4c0f-bad3-b97baad4df61
     port: 31471
     server: free.2apzhfa.xyz
     type: ss
     udp: true
   - cipher: chacha20-ietf-poly1305
     name: 1|🇷🇺俄罗斯 01 | 1x RU
-    password: bac6f863-3347-4af7-acf0-83e8fba746a6
+    password: 2b917485-b24b-4c0f-bad3-b97baad4df61
     port: 31511
     server: free.2apzhfa.xyz
     type: ss
     udp: true
   - cipher: chacha20-ietf-poly1305
     name: 1|🇹🇷土耳其 01 | 1x TR
-    password: bac6f863-3347-4af7-acf0-83e8fba746a6
+    password: 2b917485-b24b-4c0f-bad3-b97baad4df61
     port: 31571
     server: free.2apzhfa.xyz
     type: ss
     udp: true
   - cipher: chacha20-ietf-poly1305
     name: 1|🇺🇦乌克兰 01 | 1x UA
-    password: bac6f863-3347-4af7-acf0-83e8fba746a6
+    password: 2b917485-b24b-4c0f-bad3-b97baad4df61
     port: 31611
     server: free.2apzhfa.xyz
     type: ss
     udp: true
   - cipher: chacha20-ietf-poly1305
     name: 1|🇻🇳越南 01 | 1x VN
-    password: bac6f863-3347-4af7-acf0-83e8fba746a6
+    password: 2b917485-b24b-4c0f-bad3-b97baad4df61
     port: 31641
     server: free.2apzhfa.xyz
     type: ss
     udp: true
   - cipher: chacha20-ietf-poly1305
     name: 1|🇧🇷巴西 01 | 1x BR
-    password: bac6f863-3347-4af7-acf0-83e8fba746a6
+    password: 2b917485-b24b-4c0f-bad3-b97baad4df61
     port: 31671
     server: free.2apzhfa.xyz
     type: ss
     udp: true
   - cipher: chacha20-ietf-poly1305
     name: 1|🇮🇩印度尼西亚 01 | 1x ID
-    password: bac6f863-3347-4af7-acf0-83e8fba746a6
+    password: 2b917485-b24b-4c0f-bad3-b97baad4df61
     port: 31677
     server: free.2apzhfa.xyz
     type: ss
     udp: true
   - cipher: aes-256-cfb
-    name: 2|🇺🇸1 |  5.4MB/s
+    name: 2|🇰🇷1 |  5.8MB/s
     password: amazonskr05
     port: 443
-    server: 35.94.124.230
+    server: 3.38.92.181
     type: ss
-  - name: 2|🇯🇵1 |  4.6MB/s
-    password: eba56086-1813-33c9-86e6-33e3e89f62e7
-    port: 20300
+  - name: 2|🇺🇸2 |  1.4MB/s
+    password: 25953b05-882d-3d3b-9f8b-89bb6ff80909
+    port: 30767
     server: gy.58n.net
     skip-cert-verify: true
-    sni: z300.hongkongnode.top
+    sni: z61.hongkongnode.top
     type: trojan
     udp: true
-  - name: 2|🇯🇵5 |  5.7MB/s
-    password: eba56086-1813-33c9-86e6-33e3e89f62e7
-    port: 20071
-    server: gy.58n.net
-    skip-cert-verify: true
-    sni: x71.flybar.work
-    type: trojan
-    udp: true
-  - name: 2|🇭🇰2 |  5.7MB/s
-    password: eba56086-1813-33c9-86e6-33e3e89f62e7
-    port: 28678
-    server: gy.58n.net
-    skip-cert-verify: true
-    sni: z143.hongkongnode.top
-    type: trojan
-    udp: true
-  - alterId: 2
-    cipher: auto
-    name: 2|🇸🇬2 |  2.7MB/s
-    network: ws
-    port: 23617
-    server: 17.mamamajd.site
-    skip-cert-verify: true
-    tls: false
-    type: vmess
-    udp: true
-    uuid: e992c424-af2e-3ada-bcc4-f7446e257363
-    ws-opts:
-      headers:
-        Host: 17.mamamajd.site
-      path: /
-  - cipher: aes-256-cfb
-    name: 2|🇰🇷2 |  4.0MB/s
-    password: amazonskr05
-    port: 443
-    server: 15.165.19.6
-    type: ss
-  - name: 2|🇯🇵7 |  5.5MB/s
-    password: eba56086-1813-33c9-86e6-33e3e89f62e7
-    port: 20141
-    server: gy.58n.net
-    skip-cert-verify: true
-    sni: z141.hongkongnode.top
-    type: trojan
-    udp: true
-  - name: 2|🇺🇸9 |  5.6MB/s
-    password: eba56086-1813-33c9-86e6-33e3e89f62e7
-    port: 20296
-    server: gy.58n.net
-    skip-cert-verify: true
-    sni: z296.hongkongnode.top
-    type: trojan
-    udp: true
-  - name: 2|🇭🇰4 |  2.0MB/s
-    password: eba56086-1813-33c9-86e6-33e3e89f62e7
-    port: 22741
-    server: gy.58n.net
-    skip-cert-verify: true
-    sni: dufu.hongkongnode.top
-    type: trojan
-    udp: true
-  - name: 2|🇺🇸10 |  4.2MB/s
-    password: eba56086-1813-33c9-86e6-33e3e89f62e7
-    port: 11215
-    server: gy.58n.net
-    skip-cert-verify: true
-    sni: z268.hongkongnode.top
-    type: trojan
-    udp: true
-  - alterId: 2
-    cipher: auto
-    name: 2|🇮🇳1 |  6.0MB/s
-    network: ws
-    port: 23611
-    server: 11.mamamajd.site
-    skip-cert-verify: true
-    tls: false
-    type: vmess
-    udp: true
-    uuid: e992c424-af2e-3ada-bcc4-f7446e257363
-    ws-opts:
-      headers:
-        Host: 11.mamamajd.site
-      path: /
-  - cipher: aes-256-cfb
-    name: 2|🇯🇵9 |  6.1MB/s
-    password: amazonskr05
-    port: 443
-    server: 52.195.175.110
-    type: ss
-  - alterId: 2
-    cipher: auto
-    name: 2|🇩🇪2 |  5.0MB/s
-    network: ws
-    port: 23616
-    server: 16.mamamajd.site
-    skip-cert-verify: true
-    tls: false
-    type: vmess
-    udp: true
-    uuid: e992c424-af2e-3ada-bcc4-f7446e257363
-    ws-opts:
-      headers:
-        Host: 16.mamamajd.site
-      path: /
-  - name: 2|🇯🇵10 |  1.3MB/s
-    password: eba56086-1813-33c9-86e6-33e3e89f62e7
-    port: 41767
-    server: gy.58n.net
-    skip-cert-verify: true
-    sni: x114.flybar.work
-    type: trojan
-    udp: true
-  - alterId: 2
-    cipher: auto
-    name: 2|🇬🇧1 |  5.1MB/s
-    network: ws
-    port: 23605
-    server: 5.mamamajd.site
-    skip-cert-verify: true
-    tls: false
-    type: vmess
-    udp: true
-    uuid: e992c424-af2e-3ada-bcc4-f7446e257363
-    ws-opts:
-      headers:
-        Host: 5.mamamajd.site
-      path: /
-  - name: 2|🇺🇸13 |  5.0MB/s
-    password: eba56086-1813-33c9-86e6-33e3e89f62e7
-    port: 20288
-    server: gy.58n.net
-    skip-cert-verify: true
-    sni: z288.hongkongnode.top
-    type: trojan
-    udp: true
-  - name: 2|🇺🇸14 |  4.6MB/s
-    password: eba56086-1813-33c9-86e6-33e3e89f62e7
-    port: 20308
-    server: gy.58n.net
-    skip-cert-verify: true
-    sni: z308.hongkongnode.top
-    type: trojan
-    udp: true
-  - alterId: 2
-    cipher: auto
-    name: 2|🌀9- |  4.5MB/s
-    network: ws
-    port: 23615
-    server: 15.mamamajd.site
-    skip-cert-verify: true
-    tls: false
-    type: vmess
-    udp: true
-    uuid: e992c424-af2e-3ada-bcc4-f7446e257363
-    ws-opts:
-      headers:
-        Host: 15.mamamajd.site
-      path: /
-  - name: 2|🇺🇸17 |  2.0MB/s
-    password: eba56086-1813-33c9-86e6-33e3e89f62e7
-    port: 20305
-    server: gy.58n.net
-    skip-cert-verify: true
-    sni: z305.hongkongnode.top
-    type: trojan
-    udp: true
-  - name: 2|🇯🇵12 |  6.2MB/s
-    password: eba56086-1813-33c9-86e6-33e3e89f62e7
+  - name: 2|🇯🇵1 |  5.8MB/s
+    password: 25953b05-882d-3d3b-9f8b-89bb6ff80909
     port: 20140
     server: gy.58n.net
     skip-cert-verify: true
     sni: z140.hongkongnode.top
     type: trojan
     udp: true
+  - name: 2|🇺🇸3 |  5.4MB/s
+    password: 25953b05-882d-3d3b-9f8b-89bb6ff80909
+    port: 16895
+    server: gy.58n.net
+    skip-cert-verify: true
+    sni: x40.flybar.work
+    type: trojan
+    udp: true
+  - name: 2|🇯🇵3 |  5.9MB/s
+    password: 25953b05-882d-3d3b-9f8b-89bb6ff80909
+    port: 20300
+    server: gy.58n.net
+    skip-cert-verify: true
+    sni: z300.hongkongnode.top
+    type: trojan
+    udp: true
   - cipher: aes-256-cfb
-    name: 2|🇰🇷3 |  5.9MB/s
+    name: 2|🌀1- |  6.1MB/s
     password: amazonskr05
     port: 443
-    server: 3.35.138.170
+    server: 43.203.249.105
     type: ss
-  - name: 2|🇭🇰7 |  6.2MB/s
-    password: eba56086-1813-33c9-86e6-33e3e89f62e7
+  - cipher: chacha20-ietf
+    name: 2|🇭🇰2 |  2.6MB/s
+    password: asd123456
+    port: 8388
+    server: 103.149.183.61
+    type: ss
+  - allowInsecure: ''
+    name: 2|🇬🇧1 |  5.2MB/s
+    network: ws
+    password: 4PbOjiMDLh
+    port: 2096
+    server: 172.67.202.155
+    skip-cert-verify: false
+    sni: support.onetwothree123.ir
+    tls: true
+    type: trojan
+    ws-opts:
+      headers:
+        Host: support.onetwothree123.ir
+      path: /🆔@M3HDIO1
+  - alterId: 0
+    cipher: auto
+    name: 2|🇺🇸5 |  5.5MB/s
+    port: 30606
+    server: 142.214.153.82
+    tls: false
+    type: vmess
+    uuid: 4012915a-0190-4cbd-ba2c-3f751c66f127
+  - cipher: chacha20-ietf-poly1305
+    name: 2|🇭🇰3 |  6.2MB/s
+    password: 96edc7d4-7490-48ff-99cc-496b0f4a27e9
+    port: 19240
+    server: ss.miloli.cc
+    tfo: false
+    type: ss
+  - name: 2|🇭🇰4 |  1.5MB/s
+    password: 25953b05-882d-3d3b-9f8b-89bb6ff80909
+    port: 20307
+    server: gy.58n.net
+    skip-cert-verify: true
+    sni: z307.hongkongnode.top
+    type: trojan
+    udp: true
+  - cipher: aes-256-cfb
+    name: 2|🌀2-T1 |  1.9MB/s
+    password: f8f7aCzcPKbsF8p3
+    port: 989
+    server: 51.15.23.63
+    type: ss
+  - alterId: '0'
+    cipher: auto
+    name: 2|🇺🇸8 |  6.0MB/s
+    network: ws
+    port: 443
+    server: ny05.890603.xyz
+    tls: true
+    type: vmess
+    uuid: a1925233-669e-4068-b740-d77f41986c43
+    ws-opts:
+      headers:
+        host: ny05.890603.xyz
+      path: /K5rR8fBY26DxDtOnU
+  - name: 2|🇭🇰6 |  6.2MB/s
+    password: 25953b05-882d-3d3b-9f8b-89bb6ff80909
+    port: 20309
+    server: gyl.58n.net
+    skip-cert-verify: true
+    sni: z309.hongkongnode.top
+    type: trojan
+    udp: true
+  - name: 2|🇯🇵7 |  5.5MB/s
+    password: 25953b05-882d-3d3b-9f8b-89bb6ff80909
+    port: 20298
+    server: gy.58n.net
+    skip-cert-verify: true
+    sni: z298.hongkongnode.top
+    type: trojan
+    udp: true
+  - name: 2|🇭🇰8 |  3.5MB/s
+    password: 25953b05-882d-3d3b-9f8b-89bb6ff80909
+    port: 20279
+    server: gy.58n.net
+    skip-cert-verify: true
+    sni: z279.hongkongnode.top
+    type: trojan
+    udp: true
+  - cipher: aes-256-cfb
+    name: 2|🇯🇵10 |  3.4MB/s
+    password: amazonskr05
+    port: 443
+    server: 3.112.18.99
+    type: ss
+  - cipher: aes-256-cfb
+    name: 2|🇺🇸11 |  4.4MB/s
+    password: amazonskr05
+    port: 443
+    server: 34.210.253.95
+    type: ss
+  - cipher: aes-128-gcm
+    name: 2|🇦🇺1 |  4.6MB/s
+    password: VMhGp5wEIyCDf90T
+    port: 18755
+    server: csuzhou01.1cooldns.com
+    type: ss
+  - cipher: aes-256-cfb
+    name: 2|🌀5-SK |  4.6MB/s
+    password: f8f7aCzcPKbsF8p3
+    port: 989
+    server: 156.146.40.194
+    type: ss
+  - cipher: aes-256-cfb
+    delay: 684
+    name: 2|🇸🇬1 |  1.0MB/s
+    password: amazonskr05
+    port: 443
+    server: 54.251.193.0
+    type: ss
+  - cipher: aes-256-cfb
+    country: 🇺🇸US
+    delay: 538
+    name: 2|🇰🇷3 |  6.1MB/s
+    password: amazonskr05
+    port: 443
+    server: 43.203.196.43
+    type: ss
+  - cipher: aes-256-cfb
+    name: 2|🇺🇸16 |  5.5MB/s
+    password: amazonskr05
+    port: 443
+    server: 44.242.208.211
+    type: ss
+  - name: 2|🇭🇰12 |  3.5MB/s
+    password: 25953b05-882d-3d3b-9f8b-89bb6ff80909
     port: 20278
     server: gy.58n.net
     skip-cert-verify: true
@@ -816,19 +635,112 @@ proxies:
     type: trojan
     udp: true
   - cipher: aes-256-cfb
-    name: 2|🇰🇷4 |  3.7MB/s
+    name: 2|🇺🇸18 |  1.5MB/s
     password: amazonskr05
     port: 443
-    server: 3.38.92.181
+    server: 52.33.164.139
     type: ss
   - cipher: aes-256-cfb
-    name: 2|🇰🇷5 |  4.9MB/s
+    country: 🇺🇸US
+    delay: 692
+    name: 2|🌀9- |  4.7MB/s
     password: amazonskr05
     port: 443
-    server: 54.180.131.20
+    server: 34.216.142.212
+    type: ss
+  - cipher: chacha20-ietf-poly1305
+    name: 2|🌀10-TR |  2.6MB/s
+    password: UP3JN98C6EOR
+    port: 443
+    server: 62.60.233.21
     type: ss
   - cipher: aes-256-cfb
-    name: 2|🇰🇷7 |  5.8MB/s
+    name: 2|🇺🇸20 |  5.3MB/s
+    password: amazonskr05
+    port: 443
+    server: 54.184.74.88
+    type: ss
+  - alterId: 0
+    cipher: auto
+    name: 2|🇭🇰13 |  2.0MB/s
+    network: tcp
+    port: 51039
+    server: 183.236.51.38
+    skip-cert-verify: true
+    tls: false
+    type: vmess
+    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+    ws-headers:
+      Host: 183.236.51.38
+    ws-path: /
+  - cipher: aes-256-cfb
+    name: 2|🇯🇵15 |  6.2MB/s
+    password: amazonskr05
+    port: 443
+    server: 54.248.66.29
+    type: ss
+  - cipher: aes-256-cfb
+    name: 2|🌀12-T1 |  3.4MB/s
+    password: f8f7aCzcPKbsF8p3
+    port: 989
+    server: 51.15.15.82
+    type: ss
+  - allowInsecure: ''
+    name: 2|🌀13-SE |  1.8MB/s
+    network: ws
+    password: 4PbOjiMDLh
+    port: 2096
+    server: 104.21.44.185
+    skip-cert-verify: false
+    sni: support.onetwothree123.ir
+    tls: true
+    type: trojan
+    ws-opts:
+      headers:
+        Host: support.onetwothree123.ir
+      path: /🆔@M3HDIO1
+  - name: 2|🇺🇸28 |  4.5MB/s
+    password: 25953b05-882d-3d3b-9f8b-89bb6ff80909
+    port: 20306
+    server: gy.58n.net
+    skip-cert-verify: true
+    sni: z306.hongkongnode.top
+    type: trojan
+    udp: true
+  - cipher: aes-256-cfb
+    name: 2|🇺🇸29 |  1.9MB/s
+    password: amazonskr05
+    port: 443
+    server: 35.93.21.189
+    type: ss
+  - allowInsecure: ''
+    name: 2|🇺🇸32 |  5.9MB/s
+    network: ws
+    password: a8fce442-ae9a-4cc1-a0cc-20308ff0a0db
+    port: 443
+    server: 172.67.200.238
+    skip-cert-verify: false
+    sni: 1P.890689.xyZ
+    tls: true
+    type: trojan
+    ws-opts:
+      headers:
+        Host: 1p.890689.xyz
+      path: /lXENb74xF4ylXngZ
+  - cipher: aes-128-gcm
+    name: 2|🇹🇼15 |  5.0MB/s
+    password: VMhGp5wEIyCDf90T
+    port: 64050
+    server: csuzhou01.1cooldns.com
+    type: ss
+  - cipher: aes-128-gcm
+    name: 2|🇷🇺3 |  4.9MB/s
+    password: VMhGp5wEIyCDf90T
+    port: 56226
+    server: bsuqian01.dynu.net
+    type: ss
+  - cipher: aes-256-cfb
+    name: 2|🇰🇷7 |  3.2MB/s
     password: amazonskr05
     port: 443
     server: 43.203.206.73
@@ -1078,69 +990,63 @@ proxies:
     tls: false
     type: vmess
     uuid: 3949be3c-f862-4081-afca-9979bd189648
-  - {name: 🇺🇸 美国 CloudFlare节点, server: s4.db-link02.top, port: 2095, client-fingerprint: chrome,
+  - {name: 🇨🇳 广东省广州市 移动, server: 183.236.51.38, port: 51039, client-fingerprint: chrome,
+    type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 0, cipher: auto,
+    tls: false}
+  - {name: 🇺🇸 美国 Amazon数据中心, server: 18.157.251.9, port: 22222, client-fingerprint: chrome,
+    type: trojan, password: telegram-id-privatevpns, sni: trojan.burgerip.co.uk}
+  - {name: 🇺🇸 美国 CloudFlare节点, server: s2.db-link02.top, port: 2052, client-fingerprint: chrome,
+    type: vmess, uuid: 4b36625c-b9d9-3ea6-aed5-86d62c70e16d, alterId: 0, cipher: auto,
+    tls: false, network: ws, ws-opts: {path: /dabai.in172.64.6.224, headers: {Host: 100-34-100-44.s2.db-link02.top}}}
+  - {name: 🇺🇸 美国 CloudFlare节点 2, server: 104.21.32.1, port: 443, client-fingerprint: chrome,
+    type: trojan, password: a8fce442-ae9a-4cc1-a0cc-20308ff0a0db, sni: 1kM.HUaNgSHang.pP.UA,
+    alpn: [http%2F1.1], network: ws, ws-opts: {path: /lXENb74xF4ylXngZ, headers: {
+        Host: 1kM.HUaNgSHang.pP.UA}}}
+  - {name: 🇺🇸 美国 CloudFlare节点 3, server: s4.db-link02.top, port: 2052, client-fingerprint: chrome,
+    type: vmess, uuid: 4b36625c-b9d9-3ea6-aed5-86d62c70e16d, alterId: 0, cipher: auto,
+    tls: false, network: ws, ws-opts: {path: /dabai.in172.64.8.26, headers: {Host: 100-145-217-186.s4.db-link02.top}}}
+  - {name: 🇺🇸 美国 CloudFlare节点 4, server: s4.db-link01.top, port: 2095, client-fingerprint: chrome,
+    type: vmess, uuid: 4b36625c-b9d9-3ea6-aed5-86d62c70e16d, alterId: 0, cipher: auto,
+    tls: false, network: ws, ws-opts: {path: /dabai.in104.17.28.240, headers: {Host: 100-114-107-221.s4.db-link01.top}}}
+  - {name: 🇨🇳 广东省湛江市 移动, server: 120.198.71.216, port: 40059, client-fingerprint: chrome,
+    type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 0, cipher: auto,
+    tls: false}
+  - {name: 🇨🇳 广东省广州市 移动 2, server: 120.232.153.123, port: 51052, client-fingerprint: chrome,
+    type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 0, cipher: auto,
+    tls: false}
+  - {name: 🇺🇸 美国 CloudFlare节点 5, server: s2.cn-db.top, port: 2086, client-fingerprint: chrome,
+    type: vmess, uuid: 4b36625c-b9d9-3ea6-aed5-86d62c70e16d, alterId: 0, cipher: auto,
+    tls: false, network: ws, ws-opts: {path: /dabai.in104.18.128.173, headers: {Host: 100-28-190-253.s2.cn-db.top}}}
+  - {name: 🇺🇸 美国 CloudFlare节点 6, server: 104.16.155.10, port: 8080, client-fingerprint: chrome,
+    type: vmess, uuid: 4b36625c-b9d9-3ea6-aed5-86d62c70e16d, alterId: 0, cipher: auto,
+    tls: false, network: ws, ws-opts: {path: /dabai.in104.20.16.209, headers: {Host: 100-149-191-2.s5.db-link02.top}}}
+  - {name: 🇫🇷 法国 国际航空电讯集团公司(SITA), server: 57.128.190.245, port: 20568, client-fingerprint: chrome,
+    type: ss, cipher: chacha20-ietf-poly1305, password: e014f8ab71735926}
+  - {name: 🇭🇰 香港 特别行政区, server: 103.104.247.49, port: 8080, client-fingerprint: chrome,
+    type: ss, cipher: chacha20-ietf-poly1305, password: oZIoA69Q8yhcQV8ka3Pa3A}
+  - {name: 🇬🇧 英国 社会保险安全部, server: 51.44.138.115, port: 22222, client-fingerprint: chrome,
+    type: trojan, password: telegram-id-directvpn, sni: trojan.burgerip.co.uk, alpn: [
+      http/1.1]}
+  - {name: 🇺🇸 美国 CloudFlare节点 7, server: s4.db-link02.top, port: 2095, client-fingerprint: chrome,
     type: vmess, uuid: 4b36625c-b9d9-3ea6-aed5-86d62c70e16d, alterId: 0, cipher: auto,
     tls: false, network: ws, ws-opts: {path: /dabai.in104.19.97.91, headers: {Host: 100-187-244-205.s4.db-link02.top}}}
-  - {name: 🇺🇸 美国 麻省理工学院, server: 18.133.107.64, port: 22222, client-fingerprint: chrome,
-    type: trojan, password: telegram-id-directvpn, sni: trojan.burgerip.co.uk}
-  - {name: 🇵🇱 波兰 V2CROSS.COM, server: 193.243.147.128, port: 40368, client-fingerprint: chrome,
-    type: ss, cipher: aes-256-gcm, password: 7BcLdsO1WweoGD0X}
-  - {name: 🇺🇸 美国 Amazon EC2服务器, server: 3.68.56.126, port: 22222, client-fingerprint: chrome,
-    type: trojan, password: telegram-id-privatevpns, sni: trojan.burgerip.co.uk}
-  - {name: 🇺🇸 美国 CloudFlare节点 2, server: 104.21.96.1, port: 443, client-fingerprint: chrome,
-    type: trojan, password: a8fce442-ae9a-4cc1-a0cc-20308ff0a0db, sni: 1kM.HUaNgSHang.pP.UA,
-    alpn: [http%2F1.1], network: ws, ws-opts: {path: /lXENb74xF4ylXngZ, headers: {
-        Host: 1kM.HUaNgSHang.pP.UA}}}
-  - {name: 🇺🇸 美国 CloudFlare节点 3, server: 104.21.82.183, port: 8880, client-fingerprint: chrome,
-    type: vmess, uuid: 5a7021e0-26b4-45d6-b175-fe551601ca97, alterId: 0, cipher: auto,
-    tls: false, network: ws, ws-opts: {path: /, headers: {Host: server26.beheshtbaneh.com}}}
-  - {name: 🇺🇸 美国 CloudFlare节点 4, server: s4.cn-db.top, port: 2082, client-fingerprint: chrome,
+  - {name: 🇺🇸 美国 CloudFlare节点 8, server: s4.db-link02.top, port: 8080, client-fingerprint: chrome,
     type: vmess, uuid: 4b36625c-b9d9-3ea6-aed5-86d62c70e16d, alterId: 0, cipher: auto,
-    tls: false, network: ws, ws-opts: {path: /dabai.in104.19.101.110, headers: {Host: 100-59-178-247.s4.cn-db.top}}}
-  - {name: 🇨🇳 广东省广州市 移动, server: 120.232.153.123, port: 51052, client-fingerprint: chrome,
-    type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 0, cipher: auto,
-    tls: false}
-  - {name: 🇭🇰 香港 特别行政区, server: 62.60.233.21, port: 443, client-fingerprint: chrome,
+    tls: false, network: ws, ws-opts: {path: /dabai.in104.25.238.226, headers: {Host: 100-217-184-172.s4.db-link02.top}}}
+  - {name: 🇭🇰 香港 特别行政区 2, server: 62.60.233.21, port: 443, client-fingerprint: chrome,
     type: ss, cipher: chacha20-ietf-poly1305, password: UP3JN98C6EOR}
-  - {name: 🇨🇳 广东省江门市 移动, server: 120.234.102.229, port: 31998, client-fingerprint: chrome,
-    type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 0, cipher: auto,
-    tls: false}
-  - {name: 🇺🇸 美国 CloudFlare节点 5, server: f8494f.c32d-15b2-f027.sbs, port: 80, client-fingerprint: chrome,
-    type: vmess, uuid: dfc6433f-48b2-4226-8c51-3e0c6cf1b0f6, alterId: 0, cipher: auto,
-    tls: false, network: ws, ws-opts: {path: /, headers: {Host: sg04s.c32d-15b2-f027.sbs}}}
-  - {name: 🇸🇪 瑞典 斯德哥尔摩Amazon数据中心, server: 13.48.7.125, port: 22222, client-fingerprint: chrome,
-    type: trojan, password: telegram-id-privatevpns, sni: trojan.burgerip.co.uk, alpn: [
-      http/1.1]}
-  - {name: 🇺🇸 美国 CloudFlare节点 6, server: s4.cn-db.top, port: 2052, client-fingerprint: chrome,
+  - {name: 🇺🇸 美国 CloudFlare节点 9, server: s2.db-link02.top, port: 2082, client-fingerprint: chrome,
     type: vmess, uuid: 4b36625c-b9d9-3ea6-aed5-86d62c70e16d, alterId: 0, cipher: auto,
-    tls: false, network: ws, ws-opts: {path: /dabai.in104.25.124.184, headers: {Host: 100-106-60-74.s4.cn-db.top}}}
-  - {name: 🇺🇸 美国 V2CROSS.COM, server: 207.90.238.136, port: 20022, client-fingerprint: chrome,
-    type: vmess, uuid: 0d1ced97-0f4b-4804-8f04-bdd1619565e8, alterId: 0, cipher: auto,
-    tls: false, network: ws, ws-opts: {path: /}}
-  - {name: 🇺🇸 美国 CloudFlare节点 7, server: 104.21.80.1, port: 443, client-fingerprint: chrome,
+    tls: false, network: ws, ws-opts: {path: /dabai.in104.21.83.57, headers: {Host: 100-4-20-123.s2.db-link02.top}}}
+  - {name: 🇺🇸 美国 CloudFlare节点 10, server: 104.21.64.1, port: 443, client-fingerprint: chrome,
     type: trojan, password: a8fce442-ae9a-4cc1-a0cc-20308ff0a0db, sni: 1kM.HUaNgSHang.pP.UA,
     alpn: [http%2F1.1], network: ws, ws-opts: {path: /lXENb74xF4ylXngZ, headers: {
         Host: 1kM.HUaNgSHang.pP.UA}}}
-  - {name: 🇨🇳 广东省湛江市 移动, server: 120.198.71.219, port: 42055, client-fingerprint: chrome,
-    type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 0, cipher: auto,
-    tls: false}
-  - {name: 🇺🇸 美国 CloudFlare节点 8, server: s2.cn-db.top, port: 2095, client-fingerprint: chrome,
+  - {name: 🇨🇳 广东省广州市 电信, server: qh62onjn.slashdevslashnetslashtun.net, port: 15007,
+    client-fingerprint: chrome, type: ss, cipher: aes-256-gcm, password: SQIDT5H25BVNZXZE}
+  - {name: 🇺🇸 美国 CloudFlare节点 11, server: s5.db-link02.top, port: 2095, client-fingerprint: chrome,
     type: vmess, uuid: 4b36625c-b9d9-3ea6-aed5-86d62c70e16d, alterId: 0, cipher: auto,
-    tls: false, network: ws, ws-opts: {path: /dabai.in172.64.13.172, headers: {Host: 100-51-243-128.s2.cn-db.top}}}
-  - {name: 🇨🇳 广东省广州市 移动 2, server: 183.236.51.38, port: 59554, client-fingerprint: chrome,
-    type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 0, cipher: auto,
-    tls: false}
-  - {name: 🇺🇸 美国 CloudFlare节点 9, server: s2.cn-db.top, port: 8880, client-fingerprint: chrome,
-    type: vmess, uuid: 4b36625c-b9d9-3ea6-aed5-86d62c70e16d, alterId: 0, cipher: auto,
-    tls: false, network: ws, ws-opts: {path: /dabai.in104.24.231.155, headers: {Host: 100-165-40-54.s2.cn-db.top}}}
-  - {name: 🇷🇺 俄罗斯 V2CROSS.COM, server: 185.242.86.156, port: 54170, client-fingerprint: chrome,
-    type: ss, cipher: chacha20-ietf-poly1305, password: 36ZCHeabUSfKjfQEvJ4HDV}
-  - {name: 🇺🇸 美国 CloudFlare节点 10, server: s4.cn-db.top, port: 2086, client-fingerprint: chrome,
-    type: vmess, uuid: 4b36625c-b9d9-3ea6-aed5-86d62c70e16d, alterId: 0, cipher: auto,
-    tls: false, network: ws, ws-opts: {path: /dabai.in172.67.103.33, headers: {Host: 100-59-133-139.s4.cn-db.top}}}
-  - {name: 🇺🇸 美国 CloudFlare节点 11, server: 172.67.175.56, port: 443, client-fingerprint: chrome,
-    type: vmess, uuid: f584de15-2034-4170-a723-f48c2bae5e0f, alterId: 0, cipher: auto,
-    tls: true, network: ws, ws-opts: {path: /linkws, headers: {Host: afrhms16v.bestxray.buzz}}}
+    tls: false, network: ws, ws-opts: {path: /dabai.in172.67.11.171, headers: {Host: 100-26-239-98.s5.db-link02.top}}}
 proxy-groups:
   - name: PROXY
     type: select
@@ -1173,519 +1079,483 @@ proxy-groups:
     lazy: true
     tolerance: 100
     proxies:
-      - 🇸🇬_SG_新加坡->🇨🇳_CN_中国
-      - 🇺🇸_US_美国_2
-      - 🇺🇸_US_美国_9
-      - 🇨🇭_CH_瑞士
-      - 🇷🇺_RU_俄罗斯
-      - 🇺🇸_US_美国_6
-      - 🇺🇸_US_美国->🇨🇳_CN_中国
-      - 🇺🇸_US_美国_4
-      - 🇺🇸_US_美国
-      - 🇺🇸_US_美国->🇨🇳_CN_中国_1
-      - 🇺🇸_US_美国_5
-      - 🇺🇸_US_美国_8
-      - 🇺🇸_US_美国->🇸🇬_SG_新加坡
-      - 🇨🇳_CN_中国->🇦🇺_AU_澳大利亚
-      - 🇺🇸_US_美国->🏳️_unKnow_未知
-      - 🇮🇳_IN_印度
-      - 🇧🇪_BE_比利时
-      - 🇸🇰_SK_斯洛伐克
-      - 🇺🇸_US_美国->🇨🇳_CN_中国_3
-      - 🇺🇸_US_美国_3
-      - 🇺🇸_US_美国->🇫🇷_FR_法国
-      - 🇺🇸_US_美国->🇰🇷_KR_韩国
-      - 🇺🇸_US_美国->🇰🇷_KR_韩国_1
-      - 0|🇭🇰 香港 01 | 1x HK
-      - 12,13|新加坡3|@ripaojiedian
-      - 1|🇹🇼台湾 02 | 1x TW
-      - 1|🇦🇺澳大利亚 01 | 1x AU
-      - 1|🇰🇷韩国 02 | 1x KR
-      - 1|🇰🇷韩国 01 | 1x KR
-      - 12|🇯🇵 日本2|@ripaojiedian
-      - 1|🇯🇵日本 03 | 1x JP
-      - 0|🇭🇰 香港住宅IP 03 | 1x HK
-      - 0|🇯🇵 日本 01 | 1x JP
-      - 1|🇬🇧英国家宽 01 | 1x UK
-      - 12|🇸🇬 新加坡2|@ripaojiedian
-      - 0|🇦🇺 澳大利亚 01 | 1x AU
-      - 0|🇹🇷 土耳其 01 | 1x TR
-      - 1|🇮🇳印度 01 | 1x IN
-      - 1|🇷🇺俄罗斯 01 | 1x RU
-      - 1|🇹🇭泰国01  | 1x TH
-      - 2|🇺🇸10 |  4.2MB/s
-      - 0|🇭🇰 香港 02 | 1x HK
-      - 0|🇰🇷 韩国 02 | 1x KR
-      - 1|🇹🇷土耳其 01 | 1x TR
       - 13|香港3|@ripaojiedian
-      - 2|🇯🇵1 |  4.6MB/s
-      - 12|🇯🇵 日本特殊|@ripaojiedian
-      - 12,13|日本3|@ripaojiedian
-      - 1|🇸🇬新加坡 01 | 1x SG
-      - 2|🇰🇷7 |  5.8MB/s
-      - 1|🇭🇰香港 01 | 1x HK
-      - 2|🇸🇬2 |  2.7MB/s
-      - 0|🇹🇼 台湾 01 | 1x TW
-      - 1|🇸🇬新加坡 03 | 1x SG
-      - 2|🇰🇷2 |  4.0MB/s
-      - 12|🇺🇸 美国|@ripaojiedian
-      - 2|🇯🇵7 |  5.5MB/s
-      - 12|🇯🇵 日本|@ripaojiedian
-      - 0|🇺🇦 乌克兰 01 | 1x UA
-      - 2|🇺🇸1 |  5.4MB/s
-      - 1|🇺🇸美国 03 | 1x US Washington
-      - 1|🇺🇦乌克兰 01 | 1x UA
-      - 0|🇸🇬 新加坡 01 | 1x SG
-      - 1|🇲🇾马来西亚01 | 1x MY
-      - 2|🇯🇵12 |  6.2MB/s
-      - 12|🇭🇰 香港2|@ripaojiedian
-      - 13|日本A|@ripaojiedian
-      - 2|🇭🇰7 |  6.2MB/s
-      - 2|🇺🇸13 |  5.0MB/s
-      - 0|🇹🇼 台湾 02 | 1x TW
-      - 0|🇩🇪 德国 01 | 1x DE
-      - 12|🇰🇷 韩国特殊|@ripaojiedian
-      - 1|🇺🇸美国 01 | 1x US Los Angeles
-      - 0|🇹🇭泰国 01 | 1x TH
-      - 2|🇯🇵10 |  1.3MB/s
-      - 0|🇻🇳 越南 01 | 1x VN
-      - 0|🇵🇭 菲律宾 01 | 1x PH
-      - 0|🇲🇾马来西亚 01 | 1x MY
-      - 1|🇹🇼台湾 03 | 1x TW
-      - 2|🇯🇵5 |  5.7MB/s
-      - 12|🇭🇰 香港|@ripaojiedian
-      - 1|🇹🇼台湾 01 | 1x TW
-      - 0|🇺🇸 美国住宅IP 02 | 1x US Los Angel...
-      - 1|🇻🇳越南 01 | 1x VN
-      - 12|🇺🇸 美国2|@ripaojiedian
-      - 12|🇭🇰 香港4|@ripaojiedian
-      - 12|tg频道:@ripaojiedian
-      - 0|🇯🇵 日本 02 | 1x JP
-      - 1|🇮🇩印度尼西亚 01 | 1x ID
-      - 1|🇩🇪德国 01 | 1x DE
-      - 13|香港7|@ripaojiedian
-      - 1|🇺🇸美国家宽 02 | 1x US Los Angeles
-      - 13|美国3|@ripaojiedian
-      - 0|🇬🇧 英国住宅IP 01 | 1x UK
-      - 13|台湾|@ripaojiedian
+      - 2|🌀2-T1 |  1.9MB/s
       - 0|🇸🇬 新加坡 02 | 1x SG
-      - 12|🇹🇼 台湾|@ripaojiedian
-      - 2|🇰🇷5 |  4.9MB/s
-      - 2|🇬🇧1 |  5.1MB/s
-      - 0|🇮🇳 印度 01 | 1x IN
-      - 12,13|香港6|@ripaojiedian
-      - 0|🇰🇷 韩国 01 | 1x KR
-      - 2|🇯🇵9 |  6.1MB/s
-      - 2|🇰🇷3 |  5.9MB/s
-      - 2|🇺🇸9 |  5.6MB/s
-      - 1|🇭🇰香港 02 | 1x HK
-      - 0|🇯🇵 日本 03 | 1x JP
-      - 2|🇭🇰2 |  5.7MB/s
-      - 2|🇩🇪2 |  5.0MB/s
-      - 0|🇹🇼 台湾 03 | 1x TW
-      - 12|🇺🇸 美国3|@ripaojiedian
-      - 1|🇨🇦加拿大 01 | 1x CA
-      - 12|🇸🇬 狮城特殊|@ripaojiedian
-      - 0|🇮🇩 印度尼西亚 01 | 1x ID
-      - 12|🇭🇰 香港3|@ripaojiedian
-      - 1|🇯🇵日本 01 | 1x JP
+      - 2|🌀12-T1 |  3.4MB/s
+      - 2|🇯🇵10 |  3.4MB/s
       - 0|🇷🇺 俄罗斯 01 | 1x RU
-      - 0|🇮🇳西班牙 01 | 1x ES
-      - 12|🇭🇰 香港5|@ripaojiedian
-      - 2|🌀9- |  4.5MB/s
-      - 1|🇭🇰香港家宽 03 | 1x HK
-      - 2|🇺🇸14 |  4.6MB/s
-      - 2|🇺🇸17 |  2.0MB/s
       - 1|🇵🇭菲律宾 01 | 1x PH
-      - 2|🇭🇰4 |  2.0MB/s
-      - 0|🇧🇷 巴西 01 | 1x BR
-      - 0|🇺🇸 美国 01 | 1x US Los Angeles
-      - 2|🇮🇳1 |  6.0MB/s
-      - 0|🇺🇸 美国 03 | 1x US Washington
-      - 12,13|新加坡|@ripaojiedian
+      - 2|🇭🇰3 |  6.2MB/s
+      - 2|🇺🇸3 |  5.4MB/s
+      - 1|🇩🇪德国 01 | 1x DE
+      - 0|🇬🇧 英国住宅IP 01 | 1x UK
       - 0|🇸🇬 新加坡 03 | 1x SG
-      - 1|🇯🇵日本 02 | 1x JP
-      - 2|🇰🇷4 |  3.7MB/s
-      - 13|日本4|@ripaojiedian
-      - 13|香港A|@ripaojiedian
-      - 12|🇯🇵 日本4|@ripaojiedian
-      - 12|🇭🇰 香港7|@ripaojiedian
+      - 12|🇭🇰 香港4|@ripaojiedian
       - 1|🇸🇬新加坡 02 | 1x SG
-      - 1|🇧🇷巴西 01 | 1x BR
+      - 2|🇺🇸5 |  5.5MB/s
+      - 0|🇺🇸 美国 01 | 1x US Los Angeles
+      - 2|🇰🇷7 |  3.2MB/s
+      - 1|🇻🇳越南 01 | 1x VN
+      - 12|🇭🇰 香港|@ripaojiedian
+      - 12|🇯🇵 日本特殊|@ripaojiedian
+      - 1|🇰🇷韩国 01 | 1x KR
+      - 1|🇲🇾马来西亚01 | 1x MY
+      - 1|🇭🇰香港家宽 03 | 1x HK
+      - 12,13|新加坡|@ripaojiedian
+      - 1|🇹🇼台湾 01 | 1x TW
+      - 2|🇸🇬1 |  1.0MB/s
+      - 13|日本A|@ripaojiedian
+      - 0|🇯🇵 日本 03 | 1x JP
+      - 1|🇯🇵日本 03 | 1x JP
+      - 2|🇬🇧1 |  5.2MB/s
+      - 12|🇺🇸 美国3|@ripaojiedian
+      - 0|🇹🇭泰国 01 | 1x TH
+      - 1|🇯🇵日本 02 | 1x JP
+      - 0|🇮🇩 印度尼西亚 01 | 1x ID
+      - 2|🇰🇷1 |  5.8MB/s
+      - 12|🇯🇵 日本2|@ripaojiedian
+      - 13|香港A|@ripaojiedian
+      - 0|🇺🇸 美国住宅IP 02 | 1x US Los Angel...
+      - 1|🇰🇷韩国 02 | 1x KR
+      - 2|🇺🇸8 |  6.0MB/s
+      - 13|日本4|@ripaojiedian
+      - 0|🇭🇰 香港住宅IP 03 | 1x HK
+      - 0|🇮🇳 印度 01 | 1x IN
+      - 0|🇭🇰 香港 02 | 1x HK
+      - 2|🇯🇵15 |  6.2MB/s
+      - 1|🇬🇧英国家宽 01 | 1x UK
+      - 12|🇸🇬 狮城特殊|@ripaojiedian
+      - 2|🇺🇸2 |  1.4MB/s
+      - 13|台湾|@ripaojiedian
+      - 12|🇯🇵 日本4|@ripaojiedian
+      - 2|🇺🇸20 |  5.3MB/s
+      - 2|🇭🇰4 |  1.5MB/s
+      - 12|🇹🇼 台湾|@ripaojiedian
+      - 0|🇭🇰 香港 01 | 1x HK
+      - 1|🇸🇬新加坡 03 | 1x SG
+      - 1|🇹🇭泰国01  | 1x TH
+      - 2|🌀1- |  6.1MB/s
+      - 0|🇸🇬 新加坡 01 | 1x SG
+      - 2|🇭🇰2 |  2.6MB/s
+      - 0|🇻🇳 越南 01 | 1x VN
+      - 2|🇺🇸18 |  1.5MB/s
       - 0|🇨🇦 加拿大 01 | 1x CA
-      - 🇭🇰 香港 特别行政区
-      - 🇵🇱 波兰 V2CROSS.COM
+      - 0|🇩🇪 德国 01 | 1x DE
+      - 0|🇺🇦 乌克兰 01 | 1x UA
+      - 13|香港7|@ripaojiedian
+      - 1|🇺🇸美国 01 | 1x US Los Angeles
+      - 2|🇯🇵1 |  5.8MB/s
+      - 2|🇭🇰8 |  3.5MB/s
+      - 0|🇺🇸 美国 03 | 1x US Washington
+      - 2|🇹🇼15 |  5.0MB/s
+      - 12|🇸🇬 新加坡2|@ripaojiedian
+      - 2|🇦🇺1 |  4.6MB/s
+      - 0|🇹🇼 台湾 01 | 1x TW
+      - 0|🇧🇷 巴西 01 | 1x BR
+      - 1|🇺🇸美国 03 | 1x US Washington
+      - 0|🇰🇷 韩国 01 | 1x KR
+      - 1|🇹🇼台湾 02 | 1x TW
+      - 1|🇺🇸美国家宽 02 | 1x US Los Angeles
+      - 2|🇺🇸28 |  4.5MB/s
+      - 0|🇰🇷 韩国 02 | 1x KR
+      - 2|🇺🇸32 |  5.9MB/s
+      - 1|🇦🇺澳大利亚 01 | 1x AU
+      - 1|🇷🇺俄罗斯 01 | 1x RU
+      - 2|🇭🇰13 |  2.0MB/s
+      - 12,13|香港6|@ripaojiedian
+      - 2|🌀10-TR |  2.6MB/s
+      - 2|🇷🇺3 |  4.9MB/s
+      - 12|🇭🇰 香港5|@ripaojiedian
+      - 0|🇯🇵 日本 01 | 1x JP
+      - 1|🇨🇦加拿大 01 | 1x CA
+      - 2|🇯🇵7 |  5.5MB/s
+      - 13|美国3|@ripaojiedian
+      - 1|🇧🇷巴西 01 | 1x BR
+      - 12|🇭🇰 香港2|@ripaojiedian
+      - 1|🇭🇰香港 02 | 1x HK
+      - 2|🇭🇰6 |  6.2MB/s
+      - 0|🇮🇳西班牙 01 | 1x ES
+      - 12,13|新加坡3|@ripaojiedian
+      - 1|🇺🇦乌克兰 01 | 1x UA
+      - 1|🇹🇷土耳其 01 | 1x TR
+      - 2|🌀13-SE |  1.8MB/s
+      - 1|🇮🇩印度尼西亚 01 | 1x ID
+      - 12|🇭🇰 香港7|@ripaojiedian
+      - 12,13|日本3|@ripaojiedian
+      - 0|🇹🇼 台湾 02 | 1x TW
+      - 12|🇯🇵 日本|@ripaojiedian
+      - 12|tg频道:@ripaojiedian
+      - 12|🇺🇸 美国2|@ripaojiedian
+      - 2|🇺🇸29 |  1.9MB/s
+      - 1|🇯🇵日本 01 | 1x JP
+      - 2|🌀9- |  4.7MB/s
+      - 0|🇵🇭 菲律宾 01 | 1x PH
+      - 1|🇮🇳印度 01 | 1x IN
+      - 2|🇯🇵3 |  5.9MB/s
+      - 1|🇸🇬新加坡 01 | 1x SG
+      - 2|🌀5-SK |  4.6MB/s
+      - 2|🇺🇸16 |  5.5MB/s
+      - 0|🇹🇷 土耳其 01 | 1x TR
+      - 1|🇹🇼台湾 03 | 1x TW
+      - 12|🇰🇷 韩国特殊|@ripaojiedian
+      - 0|🇲🇾马来西亚 01 | 1x MY
+      - 1|🇭🇰香港 01 | 1x HK
+      - 2|🇰🇷3 |  6.1MB/s
+      - 12|🇭🇰 香港3|@ripaojiedian
+      - 0|🇯🇵 日本 02 | 1x JP
+      - 0|🇹🇼 台湾 03 | 1x TW
+      - 12|🇺🇸 美国|@ripaojiedian
+      - 0|🇦🇺 澳大利亚 01 | 1x AU
+      - 2|🇭🇰12 |  3.5MB/s
+      - 2|🇺🇸11 |  4.4MB/s
+      - 🇫🇷 法国 国际航空电讯集团公司(SITA)
+      - 🇭🇰 香港 特别行政区 2
+      - 🇺🇸 美国 CloudFlare节点 9
+      - 🇺🇸 美国 CloudFlare节点 2
+      - 🇺🇸 美国 CloudFlare节点 7
+      - 🇺🇸 美国 CloudFlare节点 10
+      - 🇺🇸 美国 CloudFlare节点 3
+      - 🇨🇳 广东省广州市 电信
+      - 🇨🇳 广东省广州市 移动 2
+      - 🇬🇧 英国 社会保险安全部
+      - 🇺🇸 美国 CloudFlare节点 11
+      - 🇺🇸 美国 CloudFlare节点 6
+      - 🇺🇸 美国 CloudFlare节点
+      - 🇺🇸 美国 CloudFlare节点 5
+      - 🇺🇸 美国 CloudFlare节点 4
       - 🇨🇳 广东省湛江市 移动
       - 🇺🇸 美国 CloudFlare节点 8
-      - 🇨🇳 广东省广州市 移动 2
-      - 🇺🇸 美国 麻省理工学院
-      - 🇺🇸 美国 CloudFlare节点 5
-      - 🇺🇸 美国 V2CROSS.COM
-      - 🇺🇸 美国 CloudFlare节点 4
-      - 🇺🇸 美国 Amazon EC2服务器
-      - 🇺🇸 美国 CloudFlare节点 11
-      - 🇺🇸 美国 CloudFlare节点
+      - 🇭🇰 香港 特别行政区
+      - 🇺🇸 美国 Amazon数据中心
       - 🇨🇳 广东省广州市 移动
-      - 🇷🇺 俄罗斯 V2CROSS.COM
-      - 🇺🇸 美国 CloudFlare节点 10
-      - 🇺🇸 美国 CloudFlare节点 6
-      - 🇺🇸 美国 CloudFlare节点 2
-      - 🇺🇸 美国 CloudFlare节点 9
-      - 🇺🇸 美国 CloudFlare节点 7
-      - 🇸🇪 瑞典 斯德哥尔摩Amazon数据中心
-      - 🇨🇳 广东省江门市 移动
-      - 🇺🇸 美国 CloudFlare节点 3
   - name: LOAD-BALANCE
     type: load-balance
     url: http://www.gstatic.com/generate_204
     interval: 600
     proxies:
-      - 0|🇭🇰 香港 01 | 1x HK
-      - 12,13|新加坡3|@ripaojiedian
-      - 1|🇹🇼台湾 02 | 1x TW
-      - 1|🇦🇺澳大利亚 01 | 1x AU
-      - 1|🇰🇷韩国 02 | 1x KR
-      - 1|🇰🇷韩国 01 | 1x KR
-      - 🇵🇱 波兰 V2CROSS.COM
-      - 12|🇯🇵 日本2|@ripaojiedian
-      - 1|🇯🇵日本 03 | 1x JP
-      - 0|🇭🇰 香港住宅IP 03 | 1x HK
-      - 🇺🇸_US_美国->🇨🇳_CN_中国
-      - 0|🇯🇵 日本 01 | 1x JP
-      - 🇺🇸_US_美国_5
-      - 🇺🇸_US_美国_8
-      - 1|🇬🇧英国家宽 01 | 1x UK
-      - 12|🇸🇬 新加坡2|@ripaojiedian
-      - 0|🇦🇺 澳大利亚 01 | 1x AU
-      - 🇺🇸 美国 CloudFlare节点 5
-      - 0|🇹🇷 土耳其 01 | 1x TR
-      - 1|🇮🇳印度 01 | 1x IN
-      - 1|🇷🇺俄罗斯 01 | 1x RU
-      - 1|🇹🇭泰国01  | 1x TH
-      - 2|🇺🇸10 |  4.2MB/s
-      - 🇧🇪_BE_比利时
-      - 0|🇭🇰 香港 02 | 1x HK
-      - 0|🇰🇷 韩国 02 | 1x KR
-      - 1|🇹🇷土耳其 01 | 1x TR
       - 13|香港3|@ripaojiedian
-      - 2|🇯🇵1 |  4.6MB/s
-      - 12|🇯🇵 日本特殊|@ripaojiedian
-      - 12,13|日本3|@ripaojiedian
-      - 🇺🇸_US_美国->🇫🇷_FR_法国
-      - 1|🇸🇬新加坡 01 | 1x SG
-      - 2|🇰🇷7 |  5.8MB/s
-      - 1|🇭🇰香港 01 | 1x HK
-      - 0|🇹🇼 台湾 01 | 1x TW
-      - 2|🇸🇬2 |  2.7MB/s
-      - 1|🇸🇬新加坡 03 | 1x SG
-      - 2|🇰🇷2 |  4.0MB/s
-      - 12|🇺🇸 美国|@ripaojiedian
-      - 2|🇯🇵7 |  5.5MB/s
-      - 12|🇯🇵 日本|@ripaojiedian
-      - 🇺🇸_US_美国_2
-      - 0|🇺🇦 乌克兰 01 | 1x UA
-      - 2|🇺🇸1 |  5.4MB/s
-      - 1|🇺🇸美国 03 | 1x US Washington
-      - 1|🇺🇦乌克兰 01 | 1x UA
-      - 0|🇸🇬 新加坡 01 | 1x SG
-      - 1|🇲🇾马来西亚01 | 1x MY
-      - 2|🇯🇵12 |  6.2MB/s
-      - 12|🇭🇰 香港2|@ripaojiedian
-      - 13|日本A|@ripaojiedian
-      - 🇺🇸_US_美国_6
-      - 🇺🇸_US_美国_4
-      - 2|🇭🇰7 |  6.2MB/s
-      - 🇺🇸_US_美国->🇨🇳_CN_中国_1
-      - 2|🇺🇸13 |  5.0MB/s
-      - 0|🇹🇼 台湾 02 | 1x TW
-      - 0|🇩🇪 德国 01 | 1x DE
-      - 🇺🇸 美国 CloudFlare节点 8
-      - 12|🇰🇷 韩国特殊|@ripaojiedian
-      - 1|🇺🇸美国 01 | 1x US Los Angeles
-      - 0|🇹🇭泰国 01 | 1x TH
-      - 🇺🇸 美国 麻省理工学院
-      - 2|🇯🇵10 |  1.3MB/s
-      - 0|🇻🇳 越南 01 | 1x VN
-      - 🇺🇸 美国 CloudFlare节点 4
-      - 0|🇵🇭 菲律宾 01 | 1x PH
-      - 0|🇲🇾马来西亚 01 | 1x MY
-      - 1|🇹🇼台湾 03 | 1x TW
-      - 2|🇯🇵5 |  5.7MB/s
-      - 12|🇭🇰 香港|@ripaojiedian
-      - 1|🇹🇼台湾 01 | 1x TW
-      - 0|🇺🇸 美国住宅IP 02 | 1x US Los Angel...
-      - 1|🇻🇳越南 01 | 1x VN
-      - 🇺🇸 美国 CloudFlare节点 6
-      - 🇺🇸 美国 CloudFlare节点 2
-      - 🇺🇸_US_美国->🇰🇷_KR_韩国
-      - 🇺🇸_US_美国->🇰🇷_KR_韩国_1
-      - 12|🇭🇰 香港4|@ripaojiedian
-      - 12|🇺🇸 美国2|@ripaojiedian
-      - 12|tg频道:@ripaojiedian
-      - 🇺🇸 美国 CloudFlare节点 7
-      - 🇺🇸 美国 CloudFlare节点 9
-      - 🇸🇪 瑞典 斯德哥尔摩Amazon数据中心
-      - 0|🇯🇵 日本 02 | 1x JP
-      - 🇨🇳 广东省江门市 移动
-      - 🇺🇸 美国 CloudFlare节点 3
-      - 1|🇮🇩印度尼西亚 01 | 1x ID
-      - 1|🇩🇪德国 01 | 1x DE
-      - 🇸🇬_SG_新加坡->🇨🇳_CN_中国
-      - 13|香港7|@ripaojiedian
-      - 1|🇺🇸美国家宽 02 | 1x US Los Angeles
-      - 13|美国3|@ripaojiedian
-      - 0|🇬🇧 英国住宅IP 01 | 1x UK
-      - 13|台湾|@ripaojiedian
+      - 2|🌀2-T1 |  1.9MB/s
       - 0|🇸🇬 新加坡 02 | 1x SG
-      - 🇨🇳 广东省湛江市 移动
-      - 12|🇹🇼 台湾|@ripaojiedian
-      - 🇷🇺_RU_俄罗斯
-      - 2|🇰🇷5 |  4.9MB/s
-      - 2|🇬🇧1 |  5.1MB/s
-      - 0|🇮🇳 印度 01 | 1x IN
-      - 12,13|香港6|@ripaojiedian
-      - 0|🇰🇷 韩国 01 | 1x KR
-      - 🇺🇸 美国 V2CROSS.COM
-      - 2|🇯🇵9 |  6.1MB/s
-      - 2|🇰🇷3 |  5.9MB/s
-      - 🇺🇸 美国 CloudFlare节点 11
-      - 🇮🇳_IN_印度
-      - 2|🇺🇸9 |  5.6MB/s
-      - 1|🇭🇰香港 02 | 1x HK
-      - 0|🇯🇵 日本 03 | 1x JP
-      - 2|🇭🇰2 |  5.7MB/s
-      - 2|🇩🇪2 |  5.0MB/s
-      - 0|🇹🇼 台湾 03 | 1x TW
-      - 12|🇺🇸 美国3|@ripaojiedian
-      - 🇺🇸_US_美国->🇨🇳_CN_中国_3
-      - 🇺🇸_US_美国_3
-      - 1|🇨🇦加拿大 01 | 1x CA
-      - 12|🇸🇬 狮城特殊|@ripaojiedian
-      - 0|🇮🇩 印度尼西亚 01 | 1x ID
-      - 12|🇭🇰 香港3|@ripaojiedian
-      - 🇺🇸 美国 CloudFlare节点 10
-      - 1|🇯🇵日本 01 | 1x JP
+      - 2|🌀12-T1 |  3.4MB/s
+      - 2|🇯🇵10 |  3.4MB/s
       - 0|🇷🇺 俄罗斯 01 | 1x RU
-      - 0|🇮🇳西班牙 01 | 1x ES
-      - 🇭🇰 香港 特别行政区
-      - 12|🇭🇰 香港5|@ripaojiedian
-      - 2|🌀9- |  4.5MB/s
-      - 🇺🇸_US_美国_9
-      - 🇨🇭_CH_瑞士
-      - 1|🇭🇰香港家宽 03 | 1x HK
-      - 2|🇺🇸14 |  4.6MB/s
-      - 2|🇺🇸17 |  2.0MB/s
-      - 🇺🇸_US_美国
       - 1|🇵🇭菲律宾 01 | 1x PH
-      - 2|🇭🇰4 |  2.0MB/s
-      - 🇨🇳 广东省广州市 移动 2
-      - 0|🇧🇷 巴西 01 | 1x BR
-      - 0|🇺🇸 美国 01 | 1x US Los Angeles
-      - 🇺🇸_US_美国->🇸🇬_SG_新加坡
-      - 🇨🇳_CN_中国->🇦🇺_AU_澳大利亚
-      - 2|🇮🇳1 |  6.0MB/s
-      - 0|🇺🇸 美国 03 | 1x US Washington
-      - 🇺🇸_US_美国->🏳️_unKnow_未知
-      - 12,13|新加坡|@ripaojiedian
+      - 2|🇭🇰3 |  6.2MB/s
+      - 2|🇺🇸3 |  5.4MB/s
+      - 1|🇩🇪德国 01 | 1x DE
+      - 0|🇬🇧 英国住宅IP 01 | 1x UK
       - 0|🇸🇬 新加坡 03 | 1x SG
-      - 🇺🇸 美国 Amazon EC2服务器
-      - 🇺🇸 美国 CloudFlare节点
-      - 1|🇯🇵日本 02 | 1x JP
-      - 2|🇰🇷4 |  3.7MB/s
-      - 13|日本4|@ripaojiedian
-      - 🇨🇳 广东省广州市 移动
-      - 🇷🇺 俄罗斯 V2CROSS.COM
-      - 13|香港A|@ripaojiedian
-      - 12|🇯🇵 日本4|@ripaojiedian
-      - 🇸🇰_SK_斯洛伐克
-      - 12|🇭🇰 香港7|@ripaojiedian
+      - 12|🇭🇰 香港4|@ripaojiedian
       - 1|🇸🇬新加坡 02 | 1x SG
-      - 1|🇧🇷巴西 01 | 1x BR
+      - 2|🇺🇸5 |  5.5MB/s
+      - 0|🇺🇸 美国 01 | 1x US Los Angeles
+      - 2|🇰🇷7 |  3.2MB/s
+      - 1|🇻🇳越南 01 | 1x VN
+      - 12|🇭🇰 香港|@ripaojiedian
+      - 🇬🇧 英国 社会保险安全部
+      - 12|🇯🇵 日本特殊|@ripaojiedian
+      - 1|🇰🇷韩国 01 | 1x KR
+      - 1|🇲🇾马来西亚01 | 1x MY
+      - 1|🇭🇰香港家宽 03 | 1x HK
+      - 12,13|新加坡|@ripaojiedian
+      - 1|🇹🇼台湾 01 | 1x TW
+      - 2|🇸🇬1 |  1.0MB/s
+      - 13|日本A|@ripaojiedian
+      - 0|🇯🇵 日本 03 | 1x JP
+      - 1|🇯🇵日本 03 | 1x JP
+      - 2|🇬🇧1 |  5.2MB/s
+      - 12|🇺🇸 美国3|@ripaojiedian
+      - 0|🇹🇭泰国 01 | 1x TH
+      - 1|🇯🇵日本 02 | 1x JP
+      - 0|🇮🇩 印度尼西亚 01 | 1x ID
+      - 2|🇰🇷1 |  5.8MB/s
+      - 12|🇯🇵 日本2|@ripaojiedian
+      - 13|香港A|@ripaojiedian
+      - 0|🇺🇸 美国住宅IP 02 | 1x US Los Angel...
+      - 1|🇰🇷韩国 02 | 1x KR
+      - 2|🇺🇸8 |  6.0MB/s
+      - 13|日本4|@ripaojiedian
+      - 0|🇭🇰 香港住宅IP 03 | 1x HK
+      - 0|🇮🇳 印度 01 | 1x IN
+      - 0|🇭🇰 香港 02 | 1x HK
+      - 2|🇯🇵15 |  6.2MB/s
+      - 🇺🇸 美国 Amazon数据中心
+      - 1|🇬🇧英国家宽 01 | 1x UK
+      - 12|🇸🇬 狮城特殊|@ripaojiedian
+      - 2|🇺🇸2 |  1.4MB/s
+      - 13|台湾|@ripaojiedian
+      - 12|🇯🇵 日本4|@ripaojiedian
+      - 2|🇺🇸20 |  5.3MB/s
+      - 2|🇭🇰4 |  1.5MB/s
+      - 12|🇹🇼 台湾|@ripaojiedian
+      - 0|🇭🇰 香港 01 | 1x HK
+      - 1|🇸🇬新加坡 03 | 1x SG
+      - 1|🇹🇭泰国01  | 1x TH
+      - 🇺🇸 美国 CloudFlare节点 7
+      - 2|🌀1- |  6.1MB/s
+      - 🇺🇸 美国 CloudFlare节点 10
+      - 0|🇸🇬 新加坡 01 | 1x SG
+      - 🇺🇸 美国 CloudFlare节点 3
+      - 2|🇭🇰2 |  2.6MB/s
+      - 0|🇻🇳 越南 01 | 1x VN
+      - 2|🇺🇸18 |  1.5MB/s
       - 0|🇨🇦 加拿大 01 | 1x CA
+      - 0|🇩🇪 德国 01 | 1x DE
+      - 0|🇺🇦 乌克兰 01 | 1x UA
+      - 13|香港7|@ripaojiedian
+      - 🇺🇸 美国 CloudFlare节点
+      - 1|🇺🇸美国 01 | 1x US Los Angeles
+      - 2|🇯🇵1 |  5.8MB/s
+      - 2|🇭🇰8 |  3.5MB/s
+      - 0|🇺🇸 美国 03 | 1x US Washington
+      - 2|🇹🇼15 |  5.0MB/s
+      - 12|🇸🇬 新加坡2|@ripaojiedian
+      - 🇭🇰 香港 特别行政区
+      - 2|🇦🇺1 |  4.6MB/s
+      - 0|🇹🇼 台湾 01 | 1x TW
+      - 0|🇧🇷 巴西 01 | 1x BR
+      - 1|🇺🇸美国 03 | 1x US Washington
+      - 0|🇰🇷 韩国 01 | 1x KR
+      - 🇭🇰 香港 特别行政区 2
+      - 1|🇹🇼台湾 02 | 1x TW
+      - 1|🇺🇸美国家宽 02 | 1x US Los Angeles
+      - 2|🇺🇸28 |  4.5MB/s
+      - 0|🇰🇷 韩国 02 | 1x KR
+      - 2|🇺🇸32 |  5.9MB/s
+      - 1|🇦🇺澳大利亚 01 | 1x AU
+      - 1|🇷🇺俄罗斯 01 | 1x RU
+      - 2|🇭🇰13 |  2.0MB/s
+      - 12,13|香港6|@ripaojiedian
+      - 2|🌀10-TR |  2.6MB/s
+      - 🇨🇳 广东省广州市 电信
+      - 🇨🇳 广东省广州市 移动 2
+      - 2|🇷🇺3 |  4.9MB/s
+      - 🇺🇸 美国 CloudFlare节点 6
+      - 🇺🇸 美国 CloudFlare节点 5
+      - 12|🇭🇰 香港5|@ripaojiedian
+      - 0|🇯🇵 日本 01 | 1x JP
+      - 1|🇨🇦加拿大 01 | 1x CA
+      - 2|🇯🇵7 |  5.5MB/s
+      - 13|美国3|@ripaojiedian
+      - 🇺🇸 美国 CloudFlare节点 4
+      - 🇨🇳 广东省湛江市 移动
+      - 1|🇧🇷巴西 01 | 1x BR
+      - 12|🇭🇰 香港2|@ripaojiedian
+      - 🇺🇸 美国 CloudFlare节点 8
+      - 1|🇭🇰香港 02 | 1x HK
+      - 2|🇭🇰6 |  6.2MB/s
+      - 0|🇮🇳西班牙 01 | 1x ES
+      - 12,13|新加坡3|@ripaojiedian
+      - 1|🇺🇦乌克兰 01 | 1x UA
+      - 1|🇹🇷土耳其 01 | 1x TR
+      - 🇨🇳 广东省广州市 移动
+      - 2|🌀13-SE |  1.8MB/s
+      - 1|🇮🇩印度尼西亚 01 | 1x ID
+      - 12|🇭🇰 香港7|@ripaojiedian
+      - 12,13|日本3|@ripaojiedian
+      - 0|🇹🇼 台湾 02 | 1x TW
+      - 12|🇯🇵 日本|@ripaojiedian
+      - 🇫🇷 法国 国际航空电讯集团公司(SITA)
+      - 12|tg频道:@ripaojiedian
+      - 🇺🇸 美国 CloudFlare节点 9
+      - 12|🇺🇸 美国2|@ripaojiedian
+      - 2|🇺🇸29 |  1.9MB/s
+      - 1|🇯🇵日本 01 | 1x JP
+      - 2|🌀9- |  4.7MB/s
+      - 0|🇵🇭 菲律宾 01 | 1x PH
+      - 🇺🇸 美国 CloudFlare节点 2
+      - 1|🇮🇳印度 01 | 1x IN
+      - 2|🇯🇵3 |  5.9MB/s
+      - 1|🇸🇬新加坡 01 | 1x SG
+      - 2|🌀5-SK |  4.6MB/s
+      - 2|🇺🇸16 |  5.5MB/s
+      - 🇺🇸 美国 CloudFlare节点 11
+      - 0|🇹🇷 土耳其 01 | 1x TR
+      - 1|🇹🇼台湾 03 | 1x TW
+      - 12|🇰🇷 韩国特殊|@ripaojiedian
+      - 0|🇲🇾马来西亚 01 | 1x MY
+      - 1|🇭🇰香港 01 | 1x HK
+      - 2|🇰🇷3 |  6.1MB/s
+      - 12|🇭🇰 香港3|@ripaojiedian
+      - 0|🇯🇵 日本 02 | 1x JP
+      - 0|🇹🇼 台湾 03 | 1x TW
+      - 12|🇺🇸 美国|@ripaojiedian
+      - 0|🇦🇺 澳大利亚 01 | 1x AU
+      - 2|🇭🇰12 |  3.5MB/s
+      - 2|🇺🇸11 |  4.4MB/s
   - name: SELECT
     type: select
     proxies:
-      - 0|🇭🇰 香港 01 | 1x HK
-      - 12,13|新加坡3|@ripaojiedian
-      - 1|🇹🇼台湾 02 | 1x TW
-      - 1|🇦🇺澳大利亚 01 | 1x AU
-      - 1|🇰🇷韩国 02 | 1x KR
-      - 1|🇰🇷韩国 01 | 1x KR
-      - 🇵🇱 波兰 V2CROSS.COM
-      - 12|🇯🇵 日本2|@ripaojiedian
-      - 1|🇯🇵日本 03 | 1x JP
-      - 0|🇭🇰 香港住宅IP 03 | 1x HK
-      - 🇺🇸_US_美国->🇨🇳_CN_中国
-      - 0|🇯🇵 日本 01 | 1x JP
-      - 🇺🇸_US_美国_5
-      - 🇺🇸_US_美国_8
-      - 1|🇬🇧英国家宽 01 | 1x UK
-      - 12|🇸🇬 新加坡2|@ripaojiedian
-      - 0|🇦🇺 澳大利亚 01 | 1x AU
-      - 🇺🇸 美国 CloudFlare节点 5
-      - 0|🇹🇷 土耳其 01 | 1x TR
-      - 1|🇮🇳印度 01 | 1x IN
-      - 1|🇷🇺俄罗斯 01 | 1x RU
-      - 1|🇹🇭泰国01  | 1x TH
-      - 2|🇺🇸10 |  4.2MB/s
-      - 🇧🇪_BE_比利时
-      - 0|🇭🇰 香港 02 | 1x HK
-      - 0|🇰🇷 韩国 02 | 1x KR
-      - 1|🇹🇷土耳其 01 | 1x TR
       - 13|香港3|@ripaojiedian
-      - 2|🇯🇵1 |  4.6MB/s
-      - 12|🇯🇵 日本特殊|@ripaojiedian
-      - 12,13|日本3|@ripaojiedian
-      - 🇺🇸_US_美国->🇫🇷_FR_法国
-      - 1|🇸🇬新加坡 01 | 1x SG
-      - 2|🇰🇷7 |  5.8MB/s
-      - 1|🇭🇰香港 01 | 1x HK
-      - 0|🇹🇼 台湾 01 | 1x TW
-      - 2|🇸🇬2 |  2.7MB/s
-      - 1|🇸🇬新加坡 03 | 1x SG
-      - 2|🇰🇷2 |  4.0MB/s
-      - 12|🇺🇸 美国|@ripaojiedian
-      - 2|🇯🇵7 |  5.5MB/s
-      - 12|🇯🇵 日本|@ripaojiedian
-      - 🇺🇸_US_美国_2
-      - 0|🇺🇦 乌克兰 01 | 1x UA
-      - 2|🇺🇸1 |  5.4MB/s
-      - 1|🇺🇸美国 03 | 1x US Washington
-      - 1|🇺🇦乌克兰 01 | 1x UA
-      - 0|🇸🇬 新加坡 01 | 1x SG
-      - 1|🇲🇾马来西亚01 | 1x MY
-      - 2|🇯🇵12 |  6.2MB/s
-      - 12|🇭🇰 香港2|@ripaojiedian
-      - 13|日本A|@ripaojiedian
-      - 🇺🇸_US_美国_6
-      - 🇺🇸_US_美国_4
-      - 2|🇭🇰7 |  6.2MB/s
-      - 🇺🇸_US_美国->🇨🇳_CN_中国_1
-      - 2|🇺🇸13 |  5.0MB/s
-      - 0|🇹🇼 台湾 02 | 1x TW
-      - 0|🇩🇪 德国 01 | 1x DE
-      - 🇺🇸 美国 CloudFlare节点 8
-      - 12|🇰🇷 韩国特殊|@ripaojiedian
-      - 1|🇺🇸美国 01 | 1x US Los Angeles
-      - 0|🇹🇭泰国 01 | 1x TH
-      - 🇺🇸 美国 麻省理工学院
-      - 2|🇯🇵10 |  1.3MB/s
-      - 0|🇻🇳 越南 01 | 1x VN
-      - 🇺🇸 美国 CloudFlare节点 4
-      - 0|🇵🇭 菲律宾 01 | 1x PH
-      - 0|🇲🇾马来西亚 01 | 1x MY
-      - 1|🇹🇼台湾 03 | 1x TW
-      - 2|🇯🇵5 |  5.7MB/s
-      - 12|🇭🇰 香港|@ripaojiedian
-      - 1|🇹🇼台湾 01 | 1x TW
-      - 0|🇺🇸 美国住宅IP 02 | 1x US Los Angel...
-      - 1|🇻🇳越南 01 | 1x VN
-      - 🇺🇸 美国 CloudFlare节点 6
-      - 🇺🇸 美国 CloudFlare节点 2
-      - 🇺🇸_US_美国->🇰🇷_KR_韩国
-      - 🇺🇸_US_美国->🇰🇷_KR_韩国_1
-      - 12|🇭🇰 香港4|@ripaojiedian
-      - 12|🇺🇸 美国2|@ripaojiedian
-      - 12|tg频道:@ripaojiedian
-      - 🇺🇸 美国 CloudFlare节点 7
-      - 🇺🇸 美国 CloudFlare节点 9
-      - 🇸🇪 瑞典 斯德哥尔摩Amazon数据中心
-      - 0|🇯🇵 日本 02 | 1x JP
-      - 🇨🇳 广东省江门市 移动
-      - 🇺🇸 美国 CloudFlare节点 3
-      - 1|🇮🇩印度尼西亚 01 | 1x ID
-      - 1|🇩🇪德国 01 | 1x DE
-      - 🇸🇬_SG_新加坡->🇨🇳_CN_中国
-      - 13|香港7|@ripaojiedian
-      - 1|🇺🇸美国家宽 02 | 1x US Los Angeles
-      - 13|美国3|@ripaojiedian
-      - 0|🇬🇧 英国住宅IP 01 | 1x UK
-      - 13|台湾|@ripaojiedian
+      - 2|🌀2-T1 |  1.9MB/s
       - 0|🇸🇬 新加坡 02 | 1x SG
-      - 🇨🇳 广东省湛江市 移动
-      - 12|🇹🇼 台湾|@ripaojiedian
-      - 🇷🇺_RU_俄罗斯
-      - 2|🇰🇷5 |  4.9MB/s
-      - 2|🇬🇧1 |  5.1MB/s
-      - 0|🇮🇳 印度 01 | 1x IN
-      - 12,13|香港6|@ripaojiedian
-      - 0|🇰🇷 韩国 01 | 1x KR
-      - 🇺🇸 美国 V2CROSS.COM
-      - 2|🇯🇵9 |  6.1MB/s
-      - 2|🇰🇷3 |  5.9MB/s
-      - 🇺🇸 美国 CloudFlare节点 11
-      - 🇮🇳_IN_印度
-      - 2|🇺🇸9 |  5.6MB/s
-      - 1|🇭🇰香港 02 | 1x HK
-      - 0|🇯🇵 日本 03 | 1x JP
-      - 2|🇭🇰2 |  5.7MB/s
-      - 2|🇩🇪2 |  5.0MB/s
-      - 0|🇹🇼 台湾 03 | 1x TW
-      - 12|🇺🇸 美国3|@ripaojiedian
-      - 🇺🇸_US_美国->🇨🇳_CN_中国_3
-      - 🇺🇸_US_美国_3
-      - 1|🇨🇦加拿大 01 | 1x CA
-      - 12|🇸🇬 狮城特殊|@ripaojiedian
-      - 0|🇮🇩 印度尼西亚 01 | 1x ID
-      - 12|🇭🇰 香港3|@ripaojiedian
-      - 🇺🇸 美国 CloudFlare节点 10
-      - 1|🇯🇵日本 01 | 1x JP
+      - 2|🌀12-T1 |  3.4MB/s
+      - 2|🇯🇵10 |  3.4MB/s
       - 0|🇷🇺 俄罗斯 01 | 1x RU
-      - 0|🇮🇳西班牙 01 | 1x ES
-      - 🇭🇰 香港 特别行政区
-      - 12|🇭🇰 香港5|@ripaojiedian
-      - 2|🌀9- |  4.5MB/s
-      - 🇺🇸_US_美国_9
-      - 🇨🇭_CH_瑞士
-      - 1|🇭🇰香港家宽 03 | 1x HK
-      - 2|🇺🇸14 |  4.6MB/s
-      - 2|🇺🇸17 |  2.0MB/s
-      - 🇺🇸_US_美国
       - 1|🇵🇭菲律宾 01 | 1x PH
-      - 2|🇭🇰4 |  2.0MB/s
-      - 🇨🇳 广东省广州市 移动 2
-      - 0|🇧🇷 巴西 01 | 1x BR
-      - 0|🇺🇸 美国 01 | 1x US Los Angeles
-      - 🇺🇸_US_美国->🇸🇬_SG_新加坡
-      - 🇨🇳_CN_中国->🇦🇺_AU_澳大利亚
-      - 2|🇮🇳1 |  6.0MB/s
-      - 0|🇺🇸 美国 03 | 1x US Washington
-      - 🇺🇸_US_美国->🏳️_unKnow_未知
-      - 12,13|新加坡|@ripaojiedian
+      - 2|🇭🇰3 |  6.2MB/s
+      - 2|🇺🇸3 |  5.4MB/s
+      - 1|🇩🇪德国 01 | 1x DE
+      - 0|🇬🇧 英国住宅IP 01 | 1x UK
       - 0|🇸🇬 新加坡 03 | 1x SG
-      - 🇺🇸 美国 Amazon EC2服务器
-      - 🇺🇸 美国 CloudFlare节点
-      - 1|🇯🇵日本 02 | 1x JP
-      - 2|🇰🇷4 |  3.7MB/s
-      - 13|日本4|@ripaojiedian
-      - 🇨🇳 广东省广州市 移动
-      - 🇷🇺 俄罗斯 V2CROSS.COM
-      - 13|香港A|@ripaojiedian
-      - 12|🇯🇵 日本4|@ripaojiedian
-      - 🇸🇰_SK_斯洛伐克
-      - 12|🇭🇰 香港7|@ripaojiedian
+      - 12|🇭🇰 香港4|@ripaojiedian
       - 1|🇸🇬新加坡 02 | 1x SG
-      - 1|🇧🇷巴西 01 | 1x BR
+      - 2|🇺🇸5 |  5.5MB/s
+      - 0|🇺🇸 美国 01 | 1x US Los Angeles
+      - 2|🇰🇷7 |  3.2MB/s
+      - 1|🇻🇳越南 01 | 1x VN
+      - 12|🇭🇰 香港|@ripaojiedian
+      - 🇬🇧 英国 社会保险安全部
+      - 12|🇯🇵 日本特殊|@ripaojiedian
+      - 1|🇰🇷韩国 01 | 1x KR
+      - 1|🇲🇾马来西亚01 | 1x MY
+      - 1|🇭🇰香港家宽 03 | 1x HK
+      - 12,13|新加坡|@ripaojiedian
+      - 1|🇹🇼台湾 01 | 1x TW
+      - 2|🇸🇬1 |  1.0MB/s
+      - 13|日本A|@ripaojiedian
+      - 0|🇯🇵 日本 03 | 1x JP
+      - 1|🇯🇵日本 03 | 1x JP
+      - 2|🇬🇧1 |  5.2MB/s
+      - 12|🇺🇸 美国3|@ripaojiedian
+      - 0|🇹🇭泰国 01 | 1x TH
+      - 1|🇯🇵日本 02 | 1x JP
+      - 0|🇮🇩 印度尼西亚 01 | 1x ID
+      - 2|🇰🇷1 |  5.8MB/s
+      - 12|🇯🇵 日本2|@ripaojiedian
+      - 13|香港A|@ripaojiedian
+      - 0|🇺🇸 美国住宅IP 02 | 1x US Los Angel...
+      - 1|🇰🇷韩国 02 | 1x KR
+      - 2|🇺🇸8 |  6.0MB/s
+      - 13|日本4|@ripaojiedian
+      - 0|🇭🇰 香港住宅IP 03 | 1x HK
+      - 0|🇮🇳 印度 01 | 1x IN
+      - 0|🇭🇰 香港 02 | 1x HK
+      - 2|🇯🇵15 |  6.2MB/s
+      - 🇺🇸 美国 Amazon数据中心
+      - 1|🇬🇧英国家宽 01 | 1x UK
+      - 12|🇸🇬 狮城特殊|@ripaojiedian
+      - 2|🇺🇸2 |  1.4MB/s
+      - 13|台湾|@ripaojiedian
+      - 12|🇯🇵 日本4|@ripaojiedian
+      - 2|🇺🇸20 |  5.3MB/s
+      - 2|🇭🇰4 |  1.5MB/s
+      - 12|🇹🇼 台湾|@ripaojiedian
+      - 0|🇭🇰 香港 01 | 1x HK
+      - 1|🇸🇬新加坡 03 | 1x SG
+      - 1|🇹🇭泰国01  | 1x TH
+      - 🇺🇸 美国 CloudFlare节点 7
+      - 2|🌀1- |  6.1MB/s
+      - 🇺🇸 美国 CloudFlare节点 10
+      - 0|🇸🇬 新加坡 01 | 1x SG
+      - 🇺🇸 美国 CloudFlare节点 3
+      - 2|🇭🇰2 |  2.6MB/s
+      - 0|🇻🇳 越南 01 | 1x VN
+      - 2|🇺🇸18 |  1.5MB/s
       - 0|🇨🇦 加拿大 01 | 1x CA
+      - 0|🇩🇪 德国 01 | 1x DE
+      - 0|🇺🇦 乌克兰 01 | 1x UA
+      - 13|香港7|@ripaojiedian
+      - 🇺🇸 美国 CloudFlare节点
+      - 1|🇺🇸美国 01 | 1x US Los Angeles
+      - 2|🇯🇵1 |  5.8MB/s
+      - 2|🇭🇰8 |  3.5MB/s
+      - 0|🇺🇸 美国 03 | 1x US Washington
+      - 2|🇹🇼15 |  5.0MB/s
+      - 12|🇸🇬 新加坡2|@ripaojiedian
+      - 🇭🇰 香港 特别行政区
+      - 2|🇦🇺1 |  4.6MB/s
+      - 0|🇹🇼 台湾 01 | 1x TW
+      - 0|🇧🇷 巴西 01 | 1x BR
+      - 1|🇺🇸美国 03 | 1x US Washington
+      - 0|🇰🇷 韩国 01 | 1x KR
+      - 🇭🇰 香港 特别行政区 2
+      - 1|🇹🇼台湾 02 | 1x TW
+      - 1|🇺🇸美国家宽 02 | 1x US Los Angeles
+      - 2|🇺🇸28 |  4.5MB/s
+      - 0|🇰🇷 韩国 02 | 1x KR
+      - 2|🇺🇸32 |  5.9MB/s
+      - 1|🇦🇺澳大利亚 01 | 1x AU
+      - 1|🇷🇺俄罗斯 01 | 1x RU
+      - 2|🇭🇰13 |  2.0MB/s
+      - 12,13|香港6|@ripaojiedian
+      - 2|🌀10-TR |  2.6MB/s
+      - 🇨🇳 广东省广州市 电信
+      - 🇨🇳 广东省广州市 移动 2
+      - 2|🇷🇺3 |  4.9MB/s
+      - 🇺🇸 美国 CloudFlare节点 6
+      - 🇺🇸 美国 CloudFlare节点 5
+      - 12|🇭🇰 香港5|@ripaojiedian
+      - 0|🇯🇵 日本 01 | 1x JP
+      - 1|🇨🇦加拿大 01 | 1x CA
+      - 2|🇯🇵7 |  5.5MB/s
+      - 13|美国3|@ripaojiedian
+      - 🇺🇸 美国 CloudFlare节点 4
+      - 🇨🇳 广东省湛江市 移动
+      - 1|🇧🇷巴西 01 | 1x BR
+      - 12|🇭🇰 香港2|@ripaojiedian
+      - 🇺🇸 美国 CloudFlare节点 8
+      - 1|🇭🇰香港 02 | 1x HK
+      - 2|🇭🇰6 |  6.2MB/s
+      - 0|🇮🇳西班牙 01 | 1x ES
+      - 12,13|新加坡3|@ripaojiedian
+      - 1|🇺🇦乌克兰 01 | 1x UA
+      - 1|🇹🇷土耳其 01 | 1x TR
+      - 🇨🇳 广东省广州市 移动
+      - 2|🌀13-SE |  1.8MB/s
+      - 1|🇮🇩印度尼西亚 01 | 1x ID
+      - 12|🇭🇰 香港7|@ripaojiedian
+      - 12,13|日本3|@ripaojiedian
+      - 0|🇹🇼 台湾 02 | 1x TW
+      - 12|🇯🇵 日本|@ripaojiedian
+      - 🇫🇷 法国 国际航空电讯集团公司(SITA)
+      - 12|tg频道:@ripaojiedian
+      - 🇺🇸 美国 CloudFlare节点 9
+      - 12|🇺🇸 美国2|@ripaojiedian
+      - 2|🇺🇸29 |  1.9MB/s
+      - 1|🇯🇵日本 01 | 1x JP
+      - 2|🌀9- |  4.7MB/s
+      - 0|🇵🇭 菲律宾 01 | 1x PH
+      - 🇺🇸 美国 CloudFlare节点 2
+      - 1|🇮🇳印度 01 | 1x IN
+      - 2|🇯🇵3 |  5.9MB/s
+      - 1|🇸🇬新加坡 01 | 1x SG
+      - 2|🌀5-SK |  4.6MB/s
+      - 2|🇺🇸16 |  5.5MB/s
+      - 🇺🇸 美国 CloudFlare节点 11
+      - 0|🇹🇷 土耳其 01 | 1x TR
+      - 1|🇹🇼台湾 03 | 1x TW
+      - 12|🇰🇷 韩国特殊|@ripaojiedian
+      - 0|🇲🇾马来西亚 01 | 1x MY
+      - 1|🇭🇰香港 01 | 1x HK
+      - 2|🇰🇷3 |  6.1MB/s
+      - 12|🇭🇰 香港3|@ripaojiedian
+      - 0|🇯🇵 日本 02 | 1x JP
+      - 0|🇹🇼 台湾 03 | 1x TW
+      - 12|🇺🇸 美国|@ripaojiedian
+      - 0|🇦🇺 澳大利亚 01 | 1x AU
+      - 2|🇭🇰12 |  3.5MB/s
+      - 2|🇺🇸11 |  4.4MB/s
 rules:
-  - RULE-SET,applications,DIRECT
-  - RULE-SET,tld-not-cn,PROXY
+  - RULE-SET,icloud,DIRECT
+  - RULE-SET,google,DIRECT
+  - RULE-SET,telegramcidr,PROXY
+  - DOMAIN,clash.razord.top,DIRECT
+  - MATCH,OTHER
+  - RULE-SET,private,DIRECT
+  - RULE-SET,greatfire,PROXY
+  - RULE-SET,apple,DIRECT
+  - RULE-SET,lancidr,DIRECT
   - RULE-SET,cncidr,DIRECT
-  - RULE-SET,gfw,PROXY
-  - DOMAIN,yacd.haishan.me,DIRECT
   - RULE-SET,reject,AD
   - GEOIP,CN,DIRECT
-  - RULE-SET,direct,DIRECT
+  - RULE-SET,applications,DIRECT
   - RULE-SET,proxy,OTHER
-  - RULE-SET,private,DIRECT
-  - RULE-SET,apple,DIRECT
-  - RULE-SET,greatfire,PROXY
-  - RULE-SET,google,DIRECT
-  - RULE-SET,icloud,DIRECT
-  - RULE-SET,lancidr,DIRECT
-  - RULE-SET,telegramcidr,PROXY
-  - MATCH,OTHER
-  - DOMAIN,clash.razord.top,DIRECT
+  - RULE-SET,gfw,PROXY
+  - RULE-SET,tld-not-cn,PROXY
+  - RULE-SET,direct,DIRECT
+  - DOMAIN,yacd.haishan.me,DIRECT
 rule-providers:
   reject:
     type: http
