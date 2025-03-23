@@ -1,4 +1,379 @@
-# Update: 2025-03-23 12:13:01
+# Update: 2025-03-23 14:01:54
 # Created by caoqiang
-null
-...
+mixed-port: 7890
+allow-lan: true
+dns:
+  enable: false
+ipv6: true
+mode: rule
+log-level: info
+external-controller: 0.0.0.0:9090
+global-client-fingerprint: chrome
+proxies:
+  - name: 🇺🇸_US_美国->🇸🇬_SG_新加坡
+    type: ss
+    server: 35.87.29.54
+    port: 443
+    cipher: aes-256-cfb
+    password: amazonskr05
+  - name: 🇺🇸_US_美国->🇧🇪_BE_比利时
+    type: ss
+    server: 34.221.169.63
+    port: 443
+    cipher: aes-256-cfb
+    password: amazonskr05
+  - name: 🇨🇳_CN_中国->🇦🇺_AU_澳大利亚
+    type: ss
+    server: csuzhou01.1cooldns.com
+    port: 18755
+    cipher: aes-128-gcm
+    password: VMhGp5wEIyCDf90T
+  - name: 🇺🇸_US_美国_1
+    type: trojan
+    server: 18.157.251.9
+    port: 22222
+    sni: trojan.burgerip.co.uk
+    password: telegram-id-privatevpns
+    skip-cert-verify: false
+  - name: 🇺🇸_US_美国_2
+    type: vmess
+    server: biiia-vpn-whal.fast.hosting-ip.com
+    port: 80
+    sni: ''
+    uuid: id9---@vpn-whal
+    cipher: auto
+    network: ws
+    ws-opts:
+      path: /?ed=2056/#id-telegram:--->@vpn_whal<---
+      headers:
+        host: cat.IR.
+    alterId: 0
+  - name: 🇺🇸_US_美国->🏳️_unKnow_未知
+    type: ss
+    server: 54.202.63.169
+    port: 443
+    cipher: aes-256-cfb
+    password: amazonskr05
+  - name: 🇨🇳_CN_中国
+    type: ss
+    server: 62.60.233.21
+    port: 443
+    cipher: chacha20-ietf-poly1305
+    password: UP3JN98C6EOR
+  - name: 🇨🇭_CH_瑞士->🏳️_unKnow_未知
+    type: ss
+    server: 84.17.53.160
+    port: 989
+    cipher: aes-256-cfb
+    password: f8f7aCzcPKbsF8p3
+  - name: 🇺🇸_US_美国_4
+    type: ss
+    server: 34.210.253.95
+    port: 443
+    cipher: aes-256-cfb
+    password: amazonskr05
+  - name: 🇮🇳_IN_印度
+    type: ss
+    server: 103.104.247.49
+    port: 8080
+    cipher: chacha20-ietf-poly1305
+    password: oZIoA69Q8yhcQV8ka3Pa3A
+  - name: 🇺🇸_US_美国->🏳️_unKnow_未知_1
+    type: vmess
+    server: 172.67.152.71
+    port: 80
+    sni: ''
+    uuid: 27c85fdb-5e8f-43ea-bf43-4ed4d0a3b306
+    cipher: auto
+    network: ws
+    skip-cert-verify: true
+    ws-opts:
+      path: /dubai.html?ed=2048
+      headers:
+        host: 462583301568512025032010340527704.dblxc.chibaba.filegear-sg.me
+    alterId: 0
+  - name: 🇺🇸_US_美国_5
+    type: ss
+    server: 54.187.221.114
+    port: 443
+    cipher: aes-256-cfb
+    password: amazonskr05
+  - name: 🇺🇸_US_美国_6
+    type: ss
+    server: 34.216.142.212
+    port: 443
+    cipher: aes-256-cfb
+    password: amazonskr05
+  - name: 🇺🇸_US_美国_7
+    type: ss
+    server: 35.94.124.230
+    port: 443
+    cipher: aes-256-cfb
+    password: amazonskr05
+  - name: 🇧🇪_BE_比利时
+    type: ss
+    server: 57.128.190.245
+    port: 20568
+    cipher: chacha20-ietf-poly1305
+    password: e014f8ab71735926
+  - name: 🇺🇸_US_美国_9
+    type: vmess
+    server: 207.90.238.136
+    port: 20022
+    uuid: 3a4acd31-f733-4e37-99d8-7fc46c4097b8
+    cipher: auto
+    network: ws
+    skip-cert-verify: true
+    ws-opts:
+      path: /
+    alterId: 0
+  - name: 🇺🇸_US_美国_10
+    type: trojan
+    server: 192.3.130.103
+    port: 443
+    udp: true
+    sni: us10-01zl.huangshang.filegear-sg.me
+    password: 576c81b6-4976-4fe3-b1a9-05a9c302e98e
+    network: grpc
+    grpc-opts:
+      grpc-service-name: i8oL7PsxV002zYFTmiIeg
+  - name: 🇺🇸_US_美国_11
+    type: ss
+    server: 52.33.164.139
+    port: 443
+    cipher: aes-256-cfb
+    password: amazonskr05
+  - name: 🇸🇰_SK_斯洛伐克
+    type: ss
+    server: 156.146.40.194
+    port: 989
+    cipher: aes-256-cfb
+    password: f8f7aCzcPKbsF8p3
+  - name: 🇺🇸_US_美国_12
+    type: ss
+    server: 54.184.74.88
+    port: 443
+    cipher: aes-256-cfb
+    password: amazonskr05
+  - name: 🇺🇸_US_美国_13
+    type: ss
+    server: 44.242.208.211
+    port: 443
+    cipher: aes-256-cfb
+    password: amazonskr05
+proxy-groups:
+  - name: PROXY
+    type: select
+    proxies:
+      - URL-TEST
+      - LOAD-BALANCE
+      - SELECT
+      - DIRECT
+  - name: OTHER
+    type: select
+    proxies:
+      - PROXY
+      - DIRECT
+  - name: AD
+    type: select
+    proxies:
+      - REJECT
+      - DIRECT
+      - PROXY
+  - name: URL-TEST
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 600
+    lazy: true
+    tolerance: 100
+    proxies:
+      - 🇺🇸_US_美国_11
+      - 🇺🇸_US_美国->🏳️_unKnow_未知
+      - 🇺🇸_US_美国->🇧🇪_BE_比利时
+      - 🇺🇸_US_美国_13
+      - 🇨🇳_CN_中国->🇦🇺_AU_澳大利亚
+      - 🇺🇸_US_美国_2
+      - 🇺🇸_US_美国_1
+      - 🇨🇭_CH_瑞士->🏳️_unKnow_未知
+      - 🇺🇸_US_美国_7
+      - 🇺🇸_US_美国_12
+      - 🇺🇸_US_美国_4
+      - 🇮🇳_IN_印度
+      - 🇺🇸_US_美国->🏳️_unKnow_未知_1
+      - 🇺🇸_US_美国_6
+      - 🇨🇳_CN_中国
+      - 🇺🇸_US_美国->🇸🇬_SG_新加坡
+      - 🇧🇪_BE_比利时
+      - 🇺🇸_US_美国_5
+      - 🇺🇸_US_美国_10
+      - 🇺🇸_US_美国_9
+      - 🇸🇰_SK_斯洛伐克
+  - name: LOAD-BALANCE
+    type: load-balance
+    url: http://www.gstatic.com/generate_204
+    interval: 600
+    proxies:
+      - 🇺🇸_US_美国_11
+      - 🇺🇸_US_美国->🏳️_unKnow_未知
+      - 🇺🇸_US_美国->🇧🇪_BE_比利时
+      - 🇺🇸_US_美国_13
+      - 🇨🇳_CN_中国->🇦🇺_AU_澳大利亚
+      - 🇺🇸_US_美国_2
+      - 🇺🇸_US_美国_1
+      - 🇨🇭_CH_瑞士->🏳️_unKnow_未知
+      - 🇺🇸_US_美国_7
+      - 🇺🇸_US_美国_12
+      - 🇺🇸_US_美国_4
+      - 🇮🇳_IN_印度
+      - 🇺🇸_US_美国->🏳️_unKnow_未知_1
+      - 🇺🇸_US_美国_6
+      - 🇨🇳_CN_中国
+      - 🇺🇸_US_美国->🇸🇬_SG_新加坡
+      - 🇧🇪_BE_比利时
+      - 🇺🇸_US_美国_5
+      - 🇺🇸_US_美国_10
+      - 🇺🇸_US_美国_9
+      - 🇸🇰_SK_斯洛伐克
+  - name: SELECT
+    type: select
+    proxies:
+      - 🇺🇸_US_美国_11
+      - 🇺🇸_US_美国->🏳️_unKnow_未知
+      - 🇺🇸_US_美国->🇧🇪_BE_比利时
+      - 🇺🇸_US_美国_13
+      - 🇨🇳_CN_中国->🇦🇺_AU_澳大利亚
+      - 🇺🇸_US_美国_2
+      - 🇺🇸_US_美国_1
+      - 🇨🇭_CH_瑞士->🏳️_unKnow_未知
+      - 🇺🇸_US_美国_7
+      - 🇺🇸_US_美国_12
+      - 🇺🇸_US_美国_4
+      - 🇮🇳_IN_印度
+      - 🇺🇸_US_美国->🏳️_unKnow_未知_1
+      - 🇺🇸_US_美国_6
+      - 🇨🇳_CN_中国
+      - 🇺🇸_US_美国->🇸🇬_SG_新加坡
+      - 🇧🇪_BE_比利时
+      - 🇺🇸_US_美国_5
+      - 🇺🇸_US_美国_10
+      - 🇺🇸_US_美国_9
+      - 🇸🇰_SK_斯洛伐克
+rules:
+  - RULE-SET,applications,DIRECT
+  - DOMAIN,clash.razord.top,DIRECT
+  - DOMAIN,yacd.haishan.me,DIRECT
+  - RULE-SET,private,DIRECT
+  - RULE-SET,reject,AD
+  - RULE-SET,icloud,DIRECT
+  - RULE-SET,apple,DIRECT
+  - RULE-SET,google,DIRECT
+  - RULE-SET,tld-not-cn,PROXY
+  - RULE-SET,gfw,PROXY
+  - RULE-SET,greatfire,PROXY
+  - RULE-SET,telegramcidr,PROXY
+  - RULE-SET,lancidr,DIRECT
+  - RULE-SET,cncidr,DIRECT
+  - GEOIP,CN,DIRECT
+  - RULE-SET,direct,DIRECT
+  - RULE-SET,proxy,OTHER
+  - MATCH,OTHER
+rule-providers:
+  reject:
+    type: http
+    behavior: domain
+    url: 
+      https://gh.xxooo.cf/https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/reject.txt
+    path: ./ruleset/reject.yaml
+    interval: 86400
+  icloud:
+    type: http
+    behavior: domain
+    url: 
+      https://gh.xxooo.cf/https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/icloud.txt
+    path: ./ruleset/icloud.yaml
+    interval: 86400
+  apple:
+    type: http
+    behavior: domain
+    url: 
+      https://gh.xxooo.cf/https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/apple.txt
+    path: ./ruleset/apple.yaml
+    interval: 86400
+  google:
+    type: http
+    behavior: domain
+    url: 
+      https://gh.xxooo.cf/https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/google.txt
+    path: ./ruleset/google.yaml
+    interval: 86400
+  proxy:
+    type: http
+    behavior: domain
+    url: 
+      https://gh.xxooo.cf/https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/proxy.txt
+    path: ./ruleset/proxy.yaml
+    interval: 86400
+  direct:
+    type: http
+    behavior: domain
+    url: 
+      https://gh.xxooo.cf/https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/direct.txt
+    path: ./ruleset/direct.yaml
+    interval: 86400
+  private:
+    type: http
+    behavior: domain
+    url: 
+      https://gh.xxooo.cf/https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/private.txt
+    path: ./ruleset/private.yaml
+    interval: 86400
+  gfw:
+    type: http
+    behavior: domain
+    url: 
+      https://gh.xxooo.cf/https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/gfw.txt
+    path: ./ruleset/gfw.yaml
+    interval: 86400
+  greatfire:
+    type: http
+    behavior: domain
+    url: 
+      https://gh.xxooo.cf/https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/greatfire.txt
+    path: ./ruleset/greatfire.yaml
+    interval: 86400
+  tld-not-cn:
+    type: http
+    behavior: domain
+    url: 
+      https://gh.xxooo.cf/https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/tld-not-cn.txt
+    path: ./ruleset/tld-not-cn.yaml
+    interval: 86400
+  telegramcidr:
+    type: http
+    behavior: ipcidr
+    url: 
+      https://gh.xxooo.cf/https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/telegramcidr.txt
+    path: ./ruleset/telegramcidr.yaml
+    interval: 86400
+  cncidr:
+    type: http
+    behavior: ipcidr
+    url: 
+      https://gh.xxooo.cf/https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/cncidr.txt
+    path: ./ruleset/cncidr.yaml
+    interval: 86400
+  lancidr:
+    type: http
+    behavior: ipcidr
+    url: 
+      https://gh.xxooo.cf/https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/lancidr.txt
+    path: ./ruleset/lancidr.yaml
+    interval: 86400
+  applications:
+    type: http
+    behavior: classical
+    url: 
+      https://gh.xxooo.cf/https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/applications.txt
+    path: ./ruleset/applications.yaml
+    interval: 86400
+tcp-concurrent: true
