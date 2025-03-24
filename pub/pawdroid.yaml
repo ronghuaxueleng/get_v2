@@ -1,4 +1,4 @@
-# Update: 2025-03-24 18:11:05
+# Update: 2025-03-24 20:08:14
 # Created by caoqiang
 mixed-port: 7890
 allow-lan: true
@@ -10,36 +10,38 @@ log-level: info
 external-controller: 0.0.0.0:9090
 global-client-fingerprint: chrome
 proxies:
-  - {name: 🇺🇸 美国 CloudFlare节点, server: f8494f.c32d-15b2-f027.sbs, port: 80, client-fingerprint: chrome,
-    type: vmess, uuid: dfc6433f-48b2-4226-8c51-3e0c6cf1b0f6, alterId: 0, cipher: auto,
-    tls: false, network: ws, ws-opts: {path: /, headers: {Host: sg04s.c32d-15b2-f027.sbs}}}
-  - {name: 🇨🇳 广东省广州市 移动, server: 120.232.150.248, port: 11008, client-fingerprint: chrome,
-    type: ss, cipher: chacha20-ietf-poly1305, password: ee19fceb-cedc-4832-b460-fccf24fdc8be}
-  - {name: 🇺🇸 美国 CloudFlare节点 2, server: 104.21.69.41, port: 443, client-fingerprint: chrome,
+  - {name: 🇧🇬 保加利亚 V2CROSS.COM, server: 185.184.70.90, port: 2082, client-fingerprint: chrome,
+    type: vmess, uuid: 7e84b5b9-e9fe-4dbe-906d-4abd67c09376, alterId: 0, cipher: auto,
+    tls: false, network: ws, ws-opts: {path: 7e84b5b9-e9fe-4dbe-906d-4abd67c09376-vm,
+      headers: {Host: www.bing.com}}}
+  - {name: 🇨🇳 广东省广州市 移动, server: 120.232.153.63, port: 40102, client-fingerprint: chrome,
+    type: vmess, uuid: 770ee730-2450-4e3c-a6c6-3932bd32afbd, alterId: 0, cipher: auto,
+    tls: false}
+  - {name: 🇩🇪 德国 黑森州法兰克福Amazon数据中心, server: 52.57.189.163, port: 22222, client-fingerprint: chrome,
+    type: trojan, password: telegram-id-privatevpns, sni: trojan.burgerip.co.uk}
+  - {name: 🇷🇺 俄罗斯 Rubtsovsk Branch of Altai State University, server: 212.192.12.56,
+    port: 21027, client-fingerprint: chrome, type: vmess, uuid: e98c144b-4890-40b0-87d9-c2e545882740,
+    alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: /}}
+  - {name: 🇨🇳 江苏省 移动, server: zf1.10101251.xyz, port: 41705, client-fingerprint: chrome,
+    type: ss, cipher: aes-256-gcm, password: 4bccdfb7-f45b-44bb-9cd3-fb6f8fc8072f}
+  - {name: 🇺🇸 美国 CloudFlare节点, server: 104.21.69.41, port: 443, client-fingerprint: chrome,
     type: trojan, password: 6040a753-e35b-4384-8713-96f3c639b621, sni: kju84.890602.XYZ,
     alpn: [http%2F1.1], network: ws, ws-opts: {path: /WxWOWO1YA9bs2HOmaeWimvT3, headers: {
         Host: kju84.890602.XYZ}}}
-  - {name: 🇺🇸 美国 CloudFlare节点 3, server: 104.21.82.183, port: 8880, client-fingerprint: chrome,
-    type: vmess, uuid: 5a7021e0-26b4-45d6-b175-fe551601ca97, alterId: 0, cipher: auto,
-    tls: false, network: ws, ws-opts: {path: /, headers: {Host: server26.beheshtbaneh.com}}}
-  - {name: 🇱🇹 立陶宛 V2CROSS.COM, server: 89.116.46.96, port: 8443, client-fingerprint: chrome,
-    type: vmess, uuid: 191babc5-2aaf-4fe5-a563-f14244aefb4e, alterId: 0, cipher: auto,
-    tls: true, network: ws, ws-opts: {path: /xrenvws, headers: {Host: lax1.ibgfw.top}}}
-  - {name: 🇧🇷 巴西圣保罗 CloudFlare节点, server: 188.114.96.3, port: 443, client-fingerprint: chrome,
-    type: vmess, uuid: 05641cf5-58d2-4ba4-a9f1-b3cda0b1fb1d, alterId: 0, cipher: auto,
-    tls: true, network: ws, ws-opts: {path: /linkws, headers: {Host: obdii.cfd}}}
-  - {name: 🇮🇷 伊朗 V2CROSS.COM, server: 109.122.241.66, port: 8081, client-fingerprint: chrome,
-    type: vmess, uuid: a450758b-4845-4b6a-b330-51c467dc5ea6, alterId: 0, cipher: auto,
+  - {name: 🇨🇦 加拿大 汉博大学, server: 142.214.153.82, port: 30606, client-fingerprint: chrome,
+    type: vmess, uuid: 4012915a-0190-4cbd-ba2c-3f751c66f127, alterId: 0, cipher: auto,
     tls: false}
-  - {name: 🇺🇸 美国 Xerox, server: 13.61.233.68, port: 22222, client-fingerprint: chrome,
-    type: trojan, password: telegram-id-directvpn, sni: trojan.burgerip.co.uk, alpn: [
-      http/1.1]}
-  - {name: 🇺🇸 美国 华盛顿Cogent通信公司, server: office-62006aa4ff.f9umiigcm1awo6p.qytnode.com,
-    port: 39029, client-fingerprint: chrome, type: ss, cipher: chacha20-ietf-poly1305,
-    password: 6df9d9f0-c5db-4e66-be0c-c967c0d6588e}
-  - {name: 🇷🇺 俄罗斯 V2CROSS.COM, server: 91.230.27.95, port: 54075, client-fingerprint: chrome,
-    type: ss, cipher: chacha20-ietf-poly1305, password: 
-      o38yuvzSe3m5aDNpHtUPH1zGwbGEXXMDsGwVaub2SYEmHUa2WGZUjiezX3Vvva9CCzpjxYtuJLgKsSnsyKBf9ciPVba3y4o3}
+  - {name: 🇨🇳 广东省广州市 移动 2, server: 120.232.153.40, port: 51182, client-fingerprint: chrome,
+    type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 0, cipher: auto,
+    tls: false}
+  - {name: 🇺🇸 美国 CloudFlare节点 2, server: 104.21.21.226, port: 443, client-fingerprint: chrome,
+    type: trojan, password: 6040a753-e35b-4384-8713-96f3c639b621, sni: uK803.890689.Xyz,
+    alpn: [http%2F1.1], network: ws, ws-opts: {path: /WxWOWO1YA9bs2HOmaeWimvT3, headers: {
+        Host: uK803.890689.Xyz}}}
+  - {name: 🇺🇸 美国 CloudFlare节点 3, server: 104.21.15.33, port: 2053, client-fingerprint: chrome,
+    type: vmess, uuid: c90932c0-a640-4113-a1d6-14812e4c64d1, alterId: 0, cipher: auto,
+    tls: true, servername: support.sabapardaziran.ir, network: ws, ws-opts: {path: /@M3HDIO1,
+      headers: {Host: support.sabapardaziran.ir}}}
 proxy-groups:
   - name: PROXY
     type: select
@@ -66,44 +68,44 @@ proxy-groups:
     lazy: true
     tolerance: 100
     proxies:
-      - 🇺🇸 美国 华盛顿Cogent通信公司
-      - 🇷🇺 俄罗斯 V2CROSS.COM
-      - 🇺🇸 美国 Xerox
-      - 🇱🇹 立陶宛 V2CROSS.COM
-      - 🇧🇷 巴西圣保罗 CloudFlare节点
-      - 🇺🇸 美国 CloudFlare节点 2
       - 🇺🇸 美国 CloudFlare节点 3
-      - 🇮🇷 伊朗 V2CROSS.COM
+      - 🇩🇪 德国 黑森州法兰克福Amazon数据中心
       - 🇺🇸 美国 CloudFlare节点
+      - 🇨🇳 广东省广州市 移动 2
+      - 🇨🇦 加拿大 汉博大学
       - 🇨🇳 广东省广州市 移动
+      - 🇨🇳 江苏省 移动
+      - 🇺🇸 美国 CloudFlare节点 2
+      - 🇧🇬 保加利亚 V2CROSS.COM
+      - 🇷🇺 俄罗斯 Rubtsovsk Branch of Altai State University
   - name: LOAD-BALANCE
     type: load-balance
     url: http://www.gstatic.com/generate_204
     interval: 600
     proxies:
-      - 🇺🇸 美国 华盛顿Cogent通信公司
-      - 🇷🇺 俄罗斯 V2CROSS.COM
-      - 🇺🇸 美国 Xerox
-      - 🇱🇹 立陶宛 V2CROSS.COM
-      - 🇧🇷 巴西圣保罗 CloudFlare节点
-      - 🇺🇸 美国 CloudFlare节点 2
       - 🇺🇸 美国 CloudFlare节点 3
-      - 🇮🇷 伊朗 V2CROSS.COM
+      - 🇩🇪 德国 黑森州法兰克福Amazon数据中心
       - 🇺🇸 美国 CloudFlare节点
+      - 🇨🇳 广东省广州市 移动 2
+      - 🇨🇦 加拿大 汉博大学
       - 🇨🇳 广东省广州市 移动
+      - 🇨🇳 江苏省 移动
+      - 🇺🇸 美国 CloudFlare节点 2
+      - 🇧🇬 保加利亚 V2CROSS.COM
+      - 🇷🇺 俄罗斯 Rubtsovsk Branch of Altai State University
   - name: SELECT
     type: select
     proxies:
-      - 🇺🇸 美国 华盛顿Cogent通信公司
-      - 🇷🇺 俄罗斯 V2CROSS.COM
-      - 🇺🇸 美国 Xerox
-      - 🇱🇹 立陶宛 V2CROSS.COM
-      - 🇧🇷 巴西圣保罗 CloudFlare节点
-      - 🇺🇸 美国 CloudFlare节点 2
       - 🇺🇸 美国 CloudFlare节点 3
-      - 🇮🇷 伊朗 V2CROSS.COM
+      - 🇩🇪 德国 黑森州法兰克福Amazon数据中心
       - 🇺🇸 美国 CloudFlare节点
+      - 🇨🇳 广东省广州市 移动 2
+      - 🇨🇦 加拿大 汉博大学
       - 🇨🇳 广东省广州市 移动
+      - 🇨🇳 江苏省 移动
+      - 🇺🇸 美国 CloudFlare节点 2
+      - 🇧🇬 保加利亚 V2CROSS.COM
+      - 🇷🇺 俄罗斯 Rubtsovsk Branch of Altai State University
 rules:
   - RULE-SET,applications,DIRECT
   - DOMAIN,clash.razord.top,DIRECT
