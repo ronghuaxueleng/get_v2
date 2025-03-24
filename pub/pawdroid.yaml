@@ -1,4 +1,4 @@
-# Update: 2025-03-24 14:08:21
+# Update: 2025-03-24 16:10:23
 # Created by caoqiang
 mixed-port: 7890
 allow-lan: true
@@ -10,55 +10,36 @@ log-level: info
 external-controller: 0.0.0.0:9090
 global-client-fingerprint: chrome
 proxies:
-  - {name: 🇨🇳 广东省广州市 移动, server: 120.232.150.248, port: 11008, client-fingerprint: chrome,
+  - {name: 🇨🇳 广东省广州市 移动, server: 183.232.229.164, port: 11002, client-fingerprint: chrome,
     type: ss, cipher: chacha20-ietf-poly1305, password: ee19fceb-cedc-4832-b460-fccf24fdc8be}
-  - {name: 🇺🇸 美国 CloudFlare节点, server: uS7-03.890624.XYZ, port: 80, client-fingerprint: chrome,
-    type: vmess, uuid: 4d04b30c-ef7b-4a07-8f9e-f581ec171f8a, alterId: 0, cipher: auto,
-    tls: false, network: ws, ws-opts: {path: /bua2hMcbA8wMzbGFtV, headers: {Host: us7-03.890624.xyz}}}
-  - {name: 🇺🇸 美国 V2CROSS.COM, server: 45.146.232.171, port: 42881, client-fingerprint: chrome,
+  - {name: 🇺🇸 美国 V2CROSS.COM, server: 45.146.232.172, port: 42881, client-fingerprint: chrome,
     type: trojan, password: 0979046d-90cc-4f58-9595-75ba19550d1c, sni: q08m.vgraxiw73s.hasyaf.cn}
-  - {name: 🇨🇳 广东省广州市 移动 2, server: 183.232.229.164, port: 11002, client-fingerprint: chrome,
-    type: ss, cipher: chacha20-ietf-poly1305, password: ee19fceb-cedc-4832-b460-fccf24fdc8be}
-  - {name: 🇺🇸 美国 华盛顿Cogent通信公司, server: 38.209.123.117, port: 31033, client-fingerprint: chrome,
-    type: vmess, uuid: c66f08a7-bfcf-40f1-da29-587abd97dfd9, alterId: 0, cipher: auto,
+  - {name: 🇨🇳 广东省广州市 移动 2, server: 183.236.51.38, port: 59554, client-fingerprint: chrome,
+    type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 0, cipher: auto,
     tls: false}
-  - {name: 🇺🇸 美国 CloudFlare节点 2, server: 172.67.200.238, port: 443, client-fingerprint: chrome,
-    type: trojan, password: 6040a753-e35b-4384-8713-96f3c639b621, sni: uK803.890689.Xyz,
-    alpn: [http%2F1.1], network: ws, ws-opts: {path: /WxWOWO1YA9bs2HOmaeWimvT3, headers: {
-        Host: uK803.890689.Xyz}}}
-  - {name: 🇷🇺 俄罗斯 V2CROSS.COM, server: 91.230.27.95, port: 54075, client-fingerprint: chrome,
-    type: ss, cipher: chacha20-ietf-poly1305, password: 
-      o38yuvzSe3m5aDNpHtUPH1zGwbGEXXMDsGwVaub2SYEmHUa2WGZUjiezX3Vvva9CCzpjxYtuJLgKsSnsyKBf9ciPVba3y4o3}
-  - {name: 🇺🇸 美国 V2CROSS.COM 2, server: 45.146.232.172, port: 42881, client-fingerprint: chrome,
-    type: trojan, password: 0979046d-90cc-4f58-9595-75ba19550d1c, sni: q08m.vgraxiw73s.hasyaf.cn}
+  - {name: 🇺🇸 美国 V2CROSS.COM 2, server: 45.146.232.173, port: 42881, client-fingerprint: chrome,
+    type: trojan, password: 0979046d-90cc-4f58-9595-75ba19550d1c, sni: q08m.vgraxiw73s.hasyaf.cn,
+    skip-cert-verify: false}
+  - {name: 🇺🇸 北美地区 V2CROSS.COM, server: 23.185.248.11, port: 17001, client-fingerprint: chrome,
+    type: ss, cipher: aes-256-gcm, password: 0C8XQRGKD622MR0Y}
+  - {name: 🇺🇸 美国 惠普HP, server: 15.204.58.214, port: 443, client-fingerprint: chrome,
+    type: trojan, password: 33fe5d7f-c9c1-4fd3-a2db-d0f3db6e5fba, sni: tro-us02.gproxy.gratis}
+  - {name: 🇺🇸 美国 V2CROSS.COM 3, server: 207.90.238.136, port: 20022, client-fingerprint: chrome,
+    type: vmess, uuid: d64fd5d9-ac44-43fe-b90a-87798dc491ea, alterId: 0, cipher: auto,
+    tls: false, network: ws, ws-opts: {path: /}}
+  - {name: 🇨🇳 上海市青浦区 电信, server: 61.172.235.22, port: 11001, client-fingerprint: chrome,
+    type: ss, cipher: chacha20-ietf-poly1305, password: ee19fceb-cedc-4832-b460-fccf24fdc8be}
   - {name: 🇨🇳 广东省广州市 电信, server: aafrtpfxr.sgl02i9zjfegelp.5xfsur8v62.gosdk.xyz, port: 42881,
     client-fingerprint: chrome, type: trojan, password: 0979046d-90cc-4f58-9595-75ba19550d1c,
     sni: q08m.vgraxiw73s.hasyaf.cn}
-  - {name: 🇮🇳 印度 V2CROSS.COM, server: 202.78.162.5, port: 443, client-fingerprint: chrome,
-    type: vmess, uuid: 2ff97c6d-8557-42a4-b43f-19c77c5959ea, alterId: 0, cipher: auto,
-    tls: true, network: ws, ws-opts: {path: /, headers: {Host: irsoft.sytes.net}}}
-  - {name: 🇺🇸 美国 CloudFlare节点 3, server: 172.67.198.187, port: 443, client-fingerprint: chrome,
-    type: vmess, uuid: 93ea486a-bada-42a4-ac38-d088b320fa1e, alterId: 0, cipher: auto,
-    tls: true, network: ws, ws-opts: {path: /linkws, headers: {Host: xmivideo.cfd}}}
-  - {name: 🇨🇳 广东省广州市 移动 3, server: 120.232.153.40, port: 51182, client-fingerprint: chrome,
-    type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 0, cipher: auto,
-    tls: false}
-  - {name: 🇨🇳 广东省湛江市 移动, server: 120.198.71.214, port: 34093, client-fingerprint: chrome,
-    type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 0, cipher: auto,
-    tls: false}
-  - {name: 🇿🇦 南非 V2CROSS.COM, server: 156.229.48.237, port: 8443, client-fingerprint: chrome,
-    type: vmess, uuid: e88b85c6-93b4-47f6-b3fb-2c55dcb1289f, alterId: 0, cipher: auto,
-    tls: true, network: ws, ws-opts: {path: /dyajvws, headers: {Host: lax2.ibgfw.top}}}
-  - {name: 🇧🇬 保加利亚 V2CROSS.COM, server: 185.184.70.90, port: 2082, client-fingerprint: chrome,
-    type: vmess, uuid: 7e84b5b9-e9fe-4dbe-906d-4abd67c09376, alterId: 0, cipher: auto,
-    tls: false, network: ws, ws-opts: {path: 7e84b5b9-e9fe-4dbe-906d-4abd67c09376-vm,
-      headers: {Host: www.bing.com}}}
-  - {name: 🇱🇹 立陶宛 V2CROSS.COM, server: 89.117.112.235, port: 8443, client-fingerprint: chrome,
+  - {name: 🇪🇸 西班牙 V2CROSS.COM, server: 185.238.228.41, port: 8443, client-fingerprint: chrome,
     type: vmess, uuid: 191babc5-2aaf-4fe5-a563-f14244aefb4e, alterId: 0, cipher: auto,
     tls: true, network: ws, ws-opts: {path: /xrenvws, headers: {Host: lax1.ibgfw.top}}}
-  - {name: 🇧🇷 巴西圣保罗 CloudFlare节点, server: 188.114.96.3, port: 443, client-fingerprint: chrome,
-    type: vmess, uuid: 950db6aa-4926-4616-816e-ec0312dcb87b, alterId: 0, cipher: auto,
-    tls: true, network: ws, ws-opts: {path: /linkws, headers: {Host: jahfkjha.cfd}}}
+  - {name: 🇨🇳 广东省广州市 移动 3, server: 120.232.153.63, port: 40102, client-fingerprint: chrome,
+    type: vmess, uuid: 770ee730-2450-4e3c-a6c6-3932bd32afbd, alterId: 0, cipher: auto,
+    tls: false}
+  - {name: 🇹🇼 台湾省新北市 是方电讯, server: 150.116.11.9, port: 21005, client-fingerprint: chrome,
+    type: ss, cipher: aes-256-gcm, password: YY1SVLAEC2CXXGRW}
 proxy-groups:
   - name: PROXY
     type: select
@@ -85,65 +66,50 @@ proxy-groups:
     lazy: true
     tolerance: 100
     proxies:
-      - 🇷🇺 俄罗斯 V2CROSS.COM
-      - 🇱🇹 立陶宛 V2CROSS.COM
-      - 🇿🇦 南非 V2CROSS.COM
-      - 🇺🇸 美国 V2CROSS.COM 2
-      - 🇧🇷 巴西圣保罗 CloudFlare节点
-      - 🇺🇸 美国 CloudFlare节点 3
-      - 🇺🇸 美国 CloudFlare节点
-      - 🇧🇬 保加利亚 V2CROSS.COM
-      - 🇨🇳 广东省广州市 电信
-      - 🇨🇳 广东省广州市 移动
-      - 🇺🇸 美国 华盛顿Cogent通信公司
+      - 🇹🇼 台湾省新北市 是方电讯
+      - 🇺🇸 美国 惠普HP
+      - 🇺🇸 北美地区 V2CROSS.COM
       - 🇨🇳 广东省广州市 移动 3
+      - 🇺🇸 美国 V2CROSS.COM 2
+      - 🇨🇳 上海市青浦区 电信
+      - 🇪🇸 西班牙 V2CROSS.COM
       - 🇺🇸 美国 V2CROSS.COM
+      - 🇨🇳 广东省广州市 移动
+      - 🇨🇳 广东省广州市 电信
       - 🇨🇳 广东省广州市 移动 2
-      - 🇨🇳 广东省湛江市 移动
-      - 🇮🇳 印度 V2CROSS.COM
-      - 🇺🇸 美国 CloudFlare节点 2
+      - 🇺🇸 美国 V2CROSS.COM 3
   - name: LOAD-BALANCE
     type: load-balance
     url: http://www.gstatic.com/generate_204
     interval: 600
     proxies:
-      - 🇷🇺 俄罗斯 V2CROSS.COM
-      - 🇱🇹 立陶宛 V2CROSS.COM
-      - 🇿🇦 南非 V2CROSS.COM
-      - 🇺🇸 美国 V2CROSS.COM 2
-      - 🇧🇷 巴西圣保罗 CloudFlare节点
-      - 🇺🇸 美国 CloudFlare节点 3
-      - 🇺🇸 美国 CloudFlare节点
-      - 🇧🇬 保加利亚 V2CROSS.COM
-      - 🇨🇳 广东省广州市 电信
-      - 🇨🇳 广东省广州市 移动
-      - 🇺🇸 美国 华盛顿Cogent通信公司
+      - 🇹🇼 台湾省新北市 是方电讯
+      - 🇺🇸 美国 惠普HP
+      - 🇺🇸 北美地区 V2CROSS.COM
       - 🇨🇳 广东省广州市 移动 3
+      - 🇺🇸 美国 V2CROSS.COM 2
+      - 🇨🇳 上海市青浦区 电信
+      - 🇪🇸 西班牙 V2CROSS.COM
       - 🇺🇸 美国 V2CROSS.COM
+      - 🇨🇳 广东省广州市 移动
+      - 🇨🇳 广东省广州市 电信
       - 🇨🇳 广东省广州市 移动 2
-      - 🇨🇳 广东省湛江市 移动
-      - 🇮🇳 印度 V2CROSS.COM
-      - 🇺🇸 美国 CloudFlare节点 2
+      - 🇺🇸 美国 V2CROSS.COM 3
   - name: SELECT
     type: select
     proxies:
-      - 🇷🇺 俄罗斯 V2CROSS.COM
-      - 🇱🇹 立陶宛 V2CROSS.COM
-      - 🇿🇦 南非 V2CROSS.COM
-      - 🇺🇸 美国 V2CROSS.COM 2
-      - 🇧🇷 巴西圣保罗 CloudFlare节点
-      - 🇺🇸 美国 CloudFlare节点 3
-      - 🇺🇸 美国 CloudFlare节点
-      - 🇧🇬 保加利亚 V2CROSS.COM
-      - 🇨🇳 广东省广州市 电信
-      - 🇨🇳 广东省广州市 移动
-      - 🇺🇸 美国 华盛顿Cogent通信公司
+      - 🇹🇼 台湾省新北市 是方电讯
+      - 🇺🇸 美国 惠普HP
+      - 🇺🇸 北美地区 V2CROSS.COM
       - 🇨🇳 广东省广州市 移动 3
+      - 🇺🇸 美国 V2CROSS.COM 2
+      - 🇨🇳 上海市青浦区 电信
+      - 🇪🇸 西班牙 V2CROSS.COM
       - 🇺🇸 美国 V2CROSS.COM
+      - 🇨🇳 广东省广州市 移动
+      - 🇨🇳 广东省广州市 电信
       - 🇨🇳 广东省广州市 移动 2
-      - 🇨🇳 广东省湛江市 移动
-      - 🇮🇳 印度 V2CROSS.COM
-      - 🇺🇸 美国 CloudFlare节点 2
+      - 🇺🇸 美国 V2CROSS.COM 3
 rules:
   - RULE-SET,applications,DIRECT
   - DOMAIN,clash.razord.top,DIRECT
