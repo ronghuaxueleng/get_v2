@@ -1,4 +1,4 @@
-# Update: 2025-03-24 22:07:28
+# Update: 2025-03-25 00:38:21
 # Created by caoqiang
 mixed-port: 7890
 allow-lan: true
@@ -10,66 +10,33 @@ log-level: info
 external-controller: 0.0.0.0:9090
 global-client-fingerprint: chrome
 proxies:
-  - name: 🇺🇸_US_美国->🇧🇪_BE_比利时
+  - name: 🇨🇳_CN_中国->🇮🇳_IN_印度
     type: ss
-    server: 34.209.89.4
+    server: bsuqian01.dynu.net
+    port: 56226
+    cipher: aes-128-gcm
+    password: VMhGp5wEIyCDf90T
+  - name: 🇺🇸_US_美国
+    type: ss
+    server: 35.89.254.58
     port: 443
     cipher: aes-256-cfb
     password: amazonskr05
-  - name: 🇩🇪_DE_德国->🇸🇪_SE_瑞典
+  - name: 🇨🇳_CN_中国->🇺🇸_US_美国
     type: ss
-    server: 193.108.119.230
-    port: 8080
-    cipher: rc4-md5
-    password: 14fFPrbezE3HDZzsMOr6
-  - name: 🇺🇸_US_美国
-    type: trojan
-    server: 172.67.200.238
-    port: 443
-    udp: true
-    sni: 1P.890689.xyZ
-    password: a8fce442-ae9a-4cc1-a0cc-20308ff0a0db
-    network: ws
-    ws-opts:
-      path: /lXENb74xF4ylXngZ
-      headers:
-        host: 1p.890689.xyz
-  - name: 🇷🇺_RU_俄罗斯->🇧🇪_BE_比利时
-    type: vmess
-    server: 31.15.16.69
-    port: 23083
-    sni: ''
-    uuid: 0a3c74af-a19b-4c77-8a5c-42f3c4d1d97d
-    cipher: auto
-    network: tcp
-    alterId: 0
+    server: csuzhou01.1cooldns.com
+    port: 18755
+    cipher: aes-128-gcm
+    password: VMhGp5wEIyCDf90T
   - name: 🇺🇸_US_美国_1
     type: ss
-    server: 54.200.106.206
+    server: 54.244.97.108
     port: 443
     cipher: aes-256-cfb
     password: amazonskr05
   - name: 🇺🇸_US_美国_2
-    type: trojan
-    server: 3.73.6.39
-    port: 22222
-    sni: trojan.burgerip.co.uk
-    password: telegram-id-privatevpns
-    skip-cert-verify: false
-  - name: 🇺🇸_US_美国->🇮🇩_ID_印度尼西亚
-    type: trojan
-    server: 1p.890689.xyz
-    port: 443
-    udp: true
-    password: a8fce442-ae9a-4cc1-a0cc-20308ff0a0db
-    network: ws
-    ws-opts:
-      path: /lXENb74xF4ylXngZ
-      headers:
-        host: 1p.890689.xyz
-  - name: 🇺🇸_US_美国_3
     type: ss
-    server: 54.202.63.169
+    server: 54.191.187.21
     port: 443
     cipher: aes-256-cfb
     password: amazonskr05
@@ -87,62 +54,49 @@ proxies:
     password: amazonskr05
   - name: 🇺🇸_US_美国_6
     type: ss
-    server: 54.188.6.233
+    server: 54.187.221.114
     port: 443
     cipher: aes-256-cfb
     password: amazonskr05
   - name: 🇺🇸_US_美国_7
     type: ss
-    server: 35.95.11.206
+    server: 54.184.74.88
     port: 443
     cipher: aes-256-cfb
     password: amazonskr05
-  - name: 🇺🇸_US_美国->🇸🇪_SE_瑞典
+  - name: 🇺🇸_US_美国_8
     type: ss
-    server: 35.94.124.230
+    server: 35.87.37.159
     port: 443
     cipher: aes-256-cfb
     password: amazonskr05
-  - name: 🇨🇳_CN_中国
+  - name: 🇧🇬_BG_保加利亚->🇺🇸_US_美国
     type: ss
-    server: zf1.10101251.xyz
-    port: 41705
-    cipher: aes-256-gcm
-    password: 4bccdfb7-f45b-44bb-9cd3-fb6f8fc8072f
+    server: 149.34.244.80
+    port: 443
+    cipher: aes-128-gcm
+    password: shadowsocks
   - name: 🇺🇸_US_美国_9
     type: ss
-    server: 34.216.142.212
+    server: 52.27.128.220
     port: 443
     cipher: aes-256-cfb
     password: amazonskr05
   - name: 🇺🇸_US_美国_10
     type: ss
-    server: 54.244.97.108
+    server: 34.216.142.212
     port: 443
     cipher: aes-256-cfb
     password: amazonskr05
-  - name: 🇺🇸_US_美国->🇮🇩_ID_印度尼西亚_1
-    type: trojan
-    server: 104.21.30.167
-    port: 443
-    udp: true
-    sni: 3y.2032.pp.ua
-    password: 2fec7227-9abe-46f2-af18-78302b836c45
-    network: ws
-    skip-cert-verify: false
-    ws-opts:
-      path: /XjTi1NYwi9A2bckpqdDoAgkondVWl
-      headers:
-        host: 3y.2032.pp.ua
   - name: 🇺🇸_US_美国_11
     type: ss
-    server: 54.184.74.88
+    server: 34.219.71.252
     port: 443
     cipher: aes-256-cfb
     password: amazonskr05
   - name: 🇺🇸_US_美国_12
     type: ss
-    server: 52.33.164.139
+    server: 35.95.11.206
     port: 443
     cipher: aes-256-cfb
     password: amazonskr05
@@ -152,27 +106,19 @@ proxies:
     port: 443
     cipher: aes-256-cfb
     password: amazonskr05
-  - name: 🇧🇪_BE_比利时
-    type: ss
-    server: 57.128.190.245
-    port: 20568
-    cipher: chacha20-ietf-poly1305
-    password: e014f8ab71735926
-  - name: 🇨🇦_CA_加拿大->🇨🇳_CN_中国
-    type: vmess
-    server: 142.214.153.82
-    port: 30606
-    uuid: 4012915a-0190-4cbd-ba2c-3f751c66f127
-    cipher: auto
-    network: tcp
-    alterId: 0
   - name: 🇺🇸_US_美国_14
     type: ss
-    server: 44.246.28.217
+    server: 35.161.163.245
     port: 443
     cipher: aes-256-cfb
     password: amazonskr05
-  - name: 🇺🇸_US_美国_15
+  - name: 🇺🇸_US_美国_17
+    type: ss
+    server: 54.244.128.249
+    port: 443
+    cipher: aes-256-cfb
+    password: amazonskr05
+  - name: 🇺🇸_US_美国_19
     type: trojan
     server: 192.3.130.103
     port: 443
@@ -182,24 +128,46 @@ proxies:
     network: grpc
     grpc-opts:
       grpc-service-name: i8oL7PsxV002zYFTmiIeg
-  - name: 🇺🇸_US_美国_16
+  - name: 🇺🇸_US_美国_20
     type: ss
-    server: 34.219.71.252
+    server: 54.201.58.186
     port: 443
     cipher: aes-256-cfb
     password: amazonskr05
-  - name: 🇸🇰_SK_斯洛伐克
+  - name: 🇺🇸_US_美国->🏳️_unKnow_未知
+    type: vmess
+    server: 104.16.0.178
+    port: 80
+    sni: ''
+    uuid: 27c85fdb-5e8f-43ea-bf43-4ed4d0a3b306
+    cipher: auto
+    network: ws
+    skip-cert-verify: true
+    ws-opts:
+      path: /dubai.html?ed=2048
+      headers:
+        host: 886207003891252025032010340550358.dblxc.chibaba.filegear-sg.me
+    alterId: 0
+  - name: 🇺🇸_US_美国_21
     type: ss
-    server: 156.146.40.194
-    port: 989
-    cipher: aes-256-cfb
-    password: f8f7aCzcPKbsF8p3
-  - name: 🇺🇸_US_美国_17
-    type: ss
-    server: 54.244.128.249
+    server: 54.185.253.219
     port: 443
     cipher: aes-256-cfb
     password: amazonskr05
+  - name: 🇺🇸_US_美国_22
+    type: ss
+    server: 35.93.21.189
+    port: 443
+    cipher: aes-256-cfb
+    password: amazonskr05
+  - name: 🇹🇷_TR_土耳其
+    type: vmess
+    server: 84.54.13.30
+    port: 21264
+    uuid: bdcd94a5-57d6-4727-d40c-5eb32f294eee
+    cipher: auto
+    network: tcp
+    alterId: 0
 proxy-groups:
   - name: PROXY
     type: select
@@ -226,95 +194,86 @@ proxy-groups:
     lazy: true
     tolerance: 100
     proxies:
-      - 🇺🇸_US_美国_14
-      - 🇺🇸_US_美国_11
-      - 🇺🇸_US_美国_5
-      - 🇺🇸_US_美国_13
-      - 🇺🇸_US_美国_2
-      - 🇺🇸_US_美国
-      - 🇧🇪_BE_比利时
-      - 🇺🇸_US_美国_4
-      - 🇨🇳_CN_中国
-      - 🇺🇸_US_美国_15
-      - 🇺🇸_US_美国_7
-      - 🇺🇸_US_美国->🇮🇩_ID_印度尼西亚
-      - 🇺🇸_US_美国_17
-      - 🇺🇸_US_美国_16
-      - 🇺🇸_US_美国_1
-      - 🇸🇰_SK_斯洛伐克
       - 🇺🇸_US_美国_9
-      - 🇺🇸_US_美国_12
-      - 🇺🇸_US_美国->🇧🇪_BE_比利时
-      - 🇺🇸_US_美国->🇸🇪_SE_瑞典
-      - 🇺🇸_US_美国_3
+      - 🇺🇸_US_美国->🏳️_unKnow_未知
       - 🇺🇸_US_美国_10
+      - 🇺🇸_US_美国_22
+      - 🇺🇸_US_美国_7
+      - 🇹🇷_TR_土耳其
+      - 🇺🇸_US_美国_17
+      - 🇨🇳_CN_中国->🇺🇸_US_美国
+      - 🇧🇬_BG_保加利亚->🇺🇸_US_美国
+      - 🇺🇸_US_美国_2
+      - 🇺🇸_US_美国_4
+      - 🇺🇸_US_美国
       - 🇺🇸_US_美国_6
-      - 🇩🇪_DE_德国->🇸🇪_SE_瑞典
-      - 🇺🇸_US_美国->🇮🇩_ID_印度尼西亚_1
-      - 🇷🇺_RU_俄罗斯->🇧🇪_BE_比利时
-      - 🇨🇦_CA_加拿大->🇨🇳_CN_中国
+      - 🇺🇸_US_美国_13
+      - 🇺🇸_US_美国_1
+      - 🇺🇸_US_美国_12
+      - 🇺🇸_US_美国_14
+      - 🇺🇸_US_美国_21
+      - 🇺🇸_US_美国_20
+      - 🇺🇸_US_美国_5
+      - 🇨🇳_CN_中国->🇮🇳_IN_印度
+      - 🇺🇸_US_美国_19
+      - 🇺🇸_US_美国_11
+      - 🇺🇸_US_美国_8
   - name: LOAD-BALANCE
     type: load-balance
     url: http://www.gstatic.com/generate_204
     interval: 600
     proxies:
-      - 🇺🇸_US_美国_14
-      - 🇺🇸_US_美国_11
-      - 🇺🇸_US_美国_5
-      - 🇺🇸_US_美国_13
-      - 🇺🇸_US_美国_2
-      - 🇺🇸_US_美国
-      - 🇧🇪_BE_比利时
-      - 🇺🇸_US_美国_4
-      - 🇨🇳_CN_中国
-      - 🇺🇸_US_美国_15
-      - 🇺🇸_US_美国_7
-      - 🇺🇸_US_美国->🇮🇩_ID_印度尼西亚
-      - 🇺🇸_US_美国_17
-      - 🇺🇸_US_美国_16
-      - 🇺🇸_US_美国_1
-      - 🇸🇰_SK_斯洛伐克
       - 🇺🇸_US_美国_9
-      - 🇺🇸_US_美国_12
-      - 🇺🇸_US_美国->🇧🇪_BE_比利时
-      - 🇺🇸_US_美国->🇸🇪_SE_瑞典
-      - 🇺🇸_US_美国_3
+      - 🇺🇸_US_美国->🏳️_unKnow_未知
       - 🇺🇸_US_美国_10
+      - 🇺🇸_US_美国_22
+      - 🇺🇸_US_美国_7
+      - 🇹🇷_TR_土耳其
+      - 🇺🇸_US_美国_17
+      - 🇨🇳_CN_中国->🇺🇸_US_美国
+      - 🇧🇬_BG_保加利亚->🇺🇸_US_美国
+      - 🇺🇸_US_美国_2
+      - 🇺🇸_US_美国_4
+      - 🇺🇸_US_美国
       - 🇺🇸_US_美国_6
-      - 🇩🇪_DE_德国->🇸🇪_SE_瑞典
-      - 🇺🇸_US_美国->🇮🇩_ID_印度尼西亚_1
-      - 🇷🇺_RU_俄罗斯->🇧🇪_BE_比利时
-      - 🇨🇦_CA_加拿大->🇨🇳_CN_中国
+      - 🇺🇸_US_美国_13
+      - 🇺🇸_US_美国_1
+      - 🇺🇸_US_美国_12
+      - 🇺🇸_US_美国_14
+      - 🇺🇸_US_美国_21
+      - 🇺🇸_US_美国_20
+      - 🇺🇸_US_美国_5
+      - 🇨🇳_CN_中国->🇮🇳_IN_印度
+      - 🇺🇸_US_美国_19
+      - 🇺🇸_US_美国_11
+      - 🇺🇸_US_美国_8
   - name: SELECT
     type: select
     proxies:
-      - 🇺🇸_US_美国_14
-      - 🇺🇸_US_美国_11
-      - 🇺🇸_US_美国_5
-      - 🇺🇸_US_美国_13
-      - 🇺🇸_US_美国_2
-      - 🇺🇸_US_美国
-      - 🇧🇪_BE_比利时
-      - 🇺🇸_US_美国_4
-      - 🇨🇳_CN_中国
-      - 🇺🇸_US_美国_15
-      - 🇺🇸_US_美国_7
-      - 🇺🇸_US_美国->🇮🇩_ID_印度尼西亚
-      - 🇺🇸_US_美国_17
-      - 🇺🇸_US_美国_16
-      - 🇺🇸_US_美国_1
-      - 🇸🇰_SK_斯洛伐克
       - 🇺🇸_US_美国_9
-      - 🇺🇸_US_美国_12
-      - 🇺🇸_US_美国->🇧🇪_BE_比利时
-      - 🇺🇸_US_美国->🇸🇪_SE_瑞典
-      - 🇺🇸_US_美国_3
+      - 🇺🇸_US_美国->🏳️_unKnow_未知
       - 🇺🇸_US_美国_10
+      - 🇺🇸_US_美国_22
+      - 🇺🇸_US_美国_7
+      - 🇹🇷_TR_土耳其
+      - 🇺🇸_US_美国_17
+      - 🇨🇳_CN_中国->🇺🇸_US_美国
+      - 🇧🇬_BG_保加利亚->🇺🇸_US_美国
+      - 🇺🇸_US_美国_2
+      - 🇺🇸_US_美国_4
+      - 🇺🇸_US_美国
       - 🇺🇸_US_美国_6
-      - 🇩🇪_DE_德国->🇸🇪_SE_瑞典
-      - 🇺🇸_US_美国->🇮🇩_ID_印度尼西亚_1
-      - 🇷🇺_RU_俄罗斯->🇧🇪_BE_比利时
-      - 🇨🇦_CA_加拿大->🇨🇳_CN_中国
+      - 🇺🇸_US_美国_13
+      - 🇺🇸_US_美国_1
+      - 🇺🇸_US_美国_12
+      - 🇺🇸_US_美国_14
+      - 🇺🇸_US_美国_21
+      - 🇺🇸_US_美国_20
+      - 🇺🇸_US_美国_5
+      - 🇨🇳_CN_中国->🇮🇳_IN_印度
+      - 🇺🇸_US_美国_19
+      - 🇺🇸_US_美国_11
+      - 🇺🇸_US_美国_8
 rules:
   - RULE-SET,applications,DIRECT
   - DOMAIN,clash.razord.top,DIRECT
