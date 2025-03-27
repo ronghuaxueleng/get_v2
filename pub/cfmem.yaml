@@ -1,4 +1,4 @@
-# Update: 2025-03-27 14:08:05
+# Update: 2025-03-27 16:09:49
 # Created by caoqiang
 mixed-port: 7890
 allow-lan: true
@@ -114,53 +114,53 @@ proxy-groups:
     lazy: true
     tolerance: 100
     proxies:
-      - 🇺🇸_US_美国_3
-      - 🇺🇸_US_美国_5
-      - 🇨🇳_CN_中国->🇺🇸_US_美国
-      - 🇺🇸_US_美国->🇸🇬_SG_新加坡
       - 🇨🇳_CN_中国
-      - 🇺🇸_US_美国
-      - 🇮🇸_IS_冰岛
-      - 🇺🇸_US_美国_7
+      - 🇺🇸_US_美国->🇸🇬_SG_新加坡
+      - 🇸🇬_SG_新加坡
       - 🇺🇸_US_美国_2
       - 🇨🇦_CA_加拿大
-      - 🇸🇬_SG_新加坡
-      - 🇺🇸_US_美国_4
+      - 🇺🇸_US_美国_5
+      - 🇨🇳_CN_中国->🇺🇸_US_美国
+      - 🇺🇸_US_美国
       - 🇩🇪_DE_德国->🇺🇸_US_美国
+      - 🇺🇸_US_美国_7
+      - 🇮🇸_IS_冰岛
+      - 🇺🇸_US_美国_3
+      - 🇺🇸_US_美国_4
   - name: LOAD-BALANCE
     type: load-balance
     url: http://www.gstatic.com/generate_204
     interval: 600
     proxies:
-      - 🇺🇸_US_美国_3
-      - 🇺🇸_US_美国_5
-      - 🇨🇳_CN_中国->🇺🇸_US_美国
-      - 🇺🇸_US_美国->🇸🇬_SG_新加坡
       - 🇨🇳_CN_中国
-      - 🇺🇸_US_美国
-      - 🇮🇸_IS_冰岛
-      - 🇺🇸_US_美国_7
+      - 🇺🇸_US_美国->🇸🇬_SG_新加坡
+      - 🇸🇬_SG_新加坡
       - 🇺🇸_US_美国_2
       - 🇨🇦_CA_加拿大
-      - 🇸🇬_SG_新加坡
-      - 🇺🇸_US_美国_4
+      - 🇺🇸_US_美国_5
+      - 🇨🇳_CN_中国->🇺🇸_US_美国
+      - 🇺🇸_US_美国
       - 🇩🇪_DE_德国->🇺🇸_US_美国
+      - 🇺🇸_US_美国_7
+      - 🇮🇸_IS_冰岛
+      - 🇺🇸_US_美国_3
+      - 🇺🇸_US_美国_4
   - name: SELECT
     type: select
     proxies:
-      - 🇺🇸_US_美国_3
-      - 🇺🇸_US_美国_5
-      - 🇨🇳_CN_中国->🇺🇸_US_美国
-      - 🇺🇸_US_美国->🇸🇬_SG_新加坡
       - 🇨🇳_CN_中国
-      - 🇺🇸_US_美国
-      - 🇮🇸_IS_冰岛
-      - 🇺🇸_US_美国_7
+      - 🇺🇸_US_美国->🇸🇬_SG_新加坡
+      - 🇸🇬_SG_新加坡
       - 🇺🇸_US_美国_2
       - 🇨🇦_CA_加拿大
-      - 🇸🇬_SG_新加坡
-      - 🇺🇸_US_美国_4
+      - 🇺🇸_US_美国_5
+      - 🇨🇳_CN_中国->🇺🇸_US_美国
+      - 🇺🇸_US_美国
       - 🇩🇪_DE_德国->🇺🇸_US_美国
+      - 🇺🇸_US_美国_7
+      - 🇮🇸_IS_冰岛
+      - 🇺🇸_US_美国_3
+      - 🇺🇸_US_美国_4
 rules:
   - RULE-SET,applications,DIRECT
   - DOMAIN,clash.razord.top,DIRECT
