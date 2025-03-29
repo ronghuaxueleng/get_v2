@@ -1,4 +1,4 @@
-# Update: 2025-03-28 22:07:09
+# Update: 2025-03-29 00:37:39
 # Created by caoqiang
 mixed-port: 7890
 allow-lan: true
@@ -11,12 +11,17 @@ external-controller: 0.0.0.0:9090
 global-client-fingerprint: chrome
 proxies:
   - name: 🇺🇸_US_美国
-    type: trojan
-    server: 18.169.179.112
-    port: 22222
-    sni: trojan.burgerip.co.uk
-    password: telegram-id-privatevpns
-    skip-cert-verify: false
+    type: vmess
+    server: 674ddbc7-stw740-stx214-84ap.fmt2-us.sghuawei.com
+    port: 420
+    uuid: b2ae33f6-edd2-11ee-808f-f23c93141fad
+    cipher: auto
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: 674ddbc7-stw740-stx214-84ap.fmt2-us.sghuawei.com
+    alterId: 2
   - name: 🇺🇸_US_美国_1
     type: ss
     server: 35.93.21.189
@@ -24,82 +29,120 @@ proxies:
     cipher: aes-256-cfb
     password: amazonskr05
   - name: 🇺🇸_US_美国_2
+    type: vmess
+    server: ac42c440-stw740-sxk0uf-4fy2.fmt2-us.sghuawei.com
+    port: 420
+    uuid: 753cc4e8-f9a3-11ed-bce0-f23c93665044
+    cipher: auto
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: ac42c440-stw740-sxk0uf-4fy2.fmt2-us.sghuawei.com
+    alterId: 2
+  - name: 🇺🇸_US_美国_3
     type: ss
     server: 35.161.163.245
     port: 443
     cipher: aes-256-cfb
     password: amazonskr05
-  - name: 🇺🇸_US_美国_3
-    type: ss
-    server: 184.170.241.194
-    port: 443
-    cipher: aes-128-cfb
-    password: shadowsocks
+  - name: 🇺🇸_US_美国->🇨🇳_CN_中国
+    type: vmess
+    server: 207.90.238.136
+    port: 20030
+    uuid: ea50474c-4ade-441a-bf30-b799cec05a43
+    cipher: auto
+    network: ws
+    skip-cert-verify: true
+    ws-opts:
+      path: /
+    alterId: 0
   - name: 🇺🇸_US_美国_4
+    type: vmess
+    server: 794c0cbe-stw740-styh7u-bxx2.fmt2-us.sghuawei.com
+    port: 420
+    uuid: 2cba013a-c284-11ef-92b5-f23c93136cb3
+    cipher: auto
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: 794c0cbe-stw740-styh7u-bxx2.fmt2-us.sghuawei.com
+    alterId: 2
+  - name: 🇺🇸_US_美国_5
     type: ss
-    server: 54.187.221.114
+    server: 34.219.71.252
     port: 443
     cipher: aes-256-cfb
     password: amazonskr05
-  - name: 🇩🇪_DE_德国->🇺🇸_US_美国
-    type: ss
-    server: 45.87.175.154
-    port: 8080
-    cipher: chacha20-ietf-poly1305
-    password: 4a2rfixophdjffa8KVA4Aa
-  - name: 🇷🇴_RO_罗马尼亚
-    type: ss
-    server: 194.5.215.59
-    port: 8080
-    cipher: rc4-md5
-    password: 14fFPrbezE3HDZzsMOr6
-  - name: 🇩🇪_DE_德国->🇺🇸_US_美国_1
-    type: vmess
-    server: cpanel.erade32.ir
-    port: 100
-    sni: ''
-    uuid: 628cf425-eae7-44d3-a34c-2c2fb6749b6f
-    cipher: auto
-    network: tcp
-    alterId: 0
-  - name: 🇺🇸_US_美国_5
+  - name: 🇺🇸_US_美国_6
     type: trojan
-    server: 104.21.69.41
-    port: 443
-    udp: true
-    sni: kju84.890602.XYZ
-    password: 6040a753-e35b-4384-8713-96f3c639b621
-    network: ws
+    server: 13.61.76.50
+    port: 22222
+    sni: trojan.burgerip.co.uk
+    password: telegram-id-privatevpns
+    skip-cert-verify: false
+  - name: 🇺🇸_US_美国_7
+    type: trojan
+    server: 13.36.115.203
+    port: 22222
+    sni: trojan.burgerip.co.uk
+    password: telegram-id-privatevpns
+    network: tcp
     alpn:
       - http/1.1
-    ws-opts:
-      path: /WxWOWO1YA9bs2HOmaeWimvT3
-      headers:
-        host: kju84.890602.xyz
-  - name: 🇺🇸_US_美国->🇸🇬_SG_新加坡
-    type: ss
-    server: 137.175.113.215
-    port: 8388
-    cipher: chacha20-ietf
-    password: asd123456
-  - name: 🇩🇪_DE_德国->🇯🇵_JP_日本
-    type: ss
-    server: 45.87.175.192
-    port: 8080
-    cipher: chacha20-ietf-poly1305
-    password: 4a2rfixophdjffa8KVA4Aa
   - name: 🇮🇸_IS_冰岛
     type: ss
     server: 37.235.49.152
     port: 989
     cipher: aes-256-cfb
     password: f8f7aCzcPKbsF8p3
+  - name: 🇨🇳_CN_中国->🇺🇸_US_美国
+    type: ss
+    server: zf1.10101251.xyz
+    port: 41705
+    cipher: aes-256-gcm
+    password: 4bccdfb7-f45b-44bb-9cd3-fb6f8fc8072f
+  - name: 🇵🇱_PL_波兰->🇨🇳_CN_中国
+    type: vmess
+    server: 91.185.184.61
+    port: 24301
+    sni: ''
+    uuid: d1ea8c41-67a6-4f63-e47a-c4adaca1d1a4
+    cipher: auto
+    network: tcp
+    fingerprint: ''
+    alterId: 0
+  - name: 🇺🇸_US_美国_8
+    type: vmess
+    server: 0e1f11d2-stw740-sy3miy-3kis.fmt2-us.sghuawei.com
+    port: 420
+    uuid: 117fc3d8-fd04-11ed-b345-f23c93136cb3
+    cipher: auto
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: 0e1f11d2-stw740-sy3miy-3kis.fmt2-us.sghuawei.com
+    alterId: 2
+  - name: 🇸🇬_SG_新加坡
+    type: ss
+    server: 18.140.70.168
+    port: 443
+    cipher: aes-256-cfb
+    password: amazonskr05
+  - name: 🇺🇸_US_美国_9
+    type: ss
+    server: 54.187.221.114
+    port: 443
+    cipher: aes-256-cfb
+    password: amazonskr05
   - name: 🇩🇪_DE_德国->🇮🇸_IS_冰岛
     type: ss
-    server: 45.87.175.199
+    server: 45.87.175.188
     port: 8080
     cipher: chacha20-ietf-poly1305
-    password: 1RWwXhwfAB5gAEozU4G2Pg
+    password: 4a2rfixophdjffa8KVA4Aa
   - cipher: chacha20-ietf-poly1305
     name: 0|🇭🇰香港 01 | 1x HK
     password: 202c5c6f-305e-4ed2-a3b6-0aba6a0ef0bd
@@ -968,47 +1011,50 @@ proxies:
     tls: false
     type: vmess
     uuid: 3949be3c-f862-4081-afca-9979bd189648
-  - {name: 欧盟 V2CROSS.COM, server: beesyar.org, port: 8080, client-fingerprint: chrome,
-    type: ss, cipher: chacha20-ietf-poly1305, password: 4a2rfixophdjffa8KVA4Aa}
-  - {name: 🇨🇳 广东省广州市 移动, server: 120.232.153.63, port: 40105, client-fingerprint: chrome,
+  - {name: 🇺🇸 美国 俄勒冈州波特兰Amazon数据中心, server: us003.421421.xyz, port: 20230, client-fingerprint: chrome,
+    type: trojan, password: 47072f01-8e77-4136-8e85-b0f0d9d08f1d, sni: us003.421421.xyz}
+  - {name: 🇯🇵 日本 东京Amazon数据中心, server: jp005.421421.xyz, port: 20230, client-fingerprint: chrome,
+    type: trojan, password: 90e7b2f3-fb61-4fd7-959f-176e9a51d8d7, sni: jp005.421421.xyz}
+  - {name: 🇺🇸 美国 惠普公司, server: 16.16.230.214, port: 22222, client-fingerprint: chrome,
+    type: trojan, password: telegram-id-privatevpns, sni: trojan.burgerip.co.uk}
+  - {name: 🇺🇸 美国 加利福尼亚州费利蒙Linode数据中心, server: 0e1f11d2-stw740-sy3miy-3kis.fmt2-us.sghuawei.com,
+    port: 420, client-fingerprint: chrome, type: vmess, uuid: 117fc3d8-fd04-11ed-b345-f23c93136cb3,
+    alterId: 2, cipher: auto, tls: false, network: ws, ws-opts: {path: /, headers: {
+        Host: 0e1f11d2-stw740-sy3miy-3kis.fmt2-us.sghuawei.com}}}
+  - {name: 🇬🇧 英国 V2CROSS.COM, server: 5.39.252.72, port: 20033, client-fingerprint: chrome,
+    type: vmess, uuid: 720d308b-c48a-40c1-a320-cf6b1caa92a5, alterId: 0, cipher: auto,
+    tls: false, network: ws, ws-opts: {path: /}}
+  - {name: 🇨🇳 江苏省 移动, server: xm.miloli.cc, port: 31778, client-fingerprint: chrome,
+    type: ss, cipher: chacha20-ietf-poly1305, password: 96edc7d4-7490-48ff-99cc-496b0f4a27e9}
+  - {name: 🇷🇺 俄罗斯 V2CROSS.COM, server: 185.242.86.156, port: 54170, client-fingerprint: chrome,
+    type: ss, cipher: chacha20-ietf-poly1305, password: 36ZCHeabUSfKjfQEvJ4HDV}
+  - {name: 🇺🇸 美国 Fastly全球Anycast节点, server: gov.uk, port: 443, client-fingerprint: chrome,
+    type: vmess, uuid: 77848824-93b7-4b89-ffd0-e91afff406ce, alterId: 0, cipher: auto,
+    tls: true, network: ws, ws-opts: {path: /77848824, headers: {Host: zheshiscp.com}}}
+  - {name: 🇺🇸 美国 V2CROSS.COM, server: beesyar.org, port: 8080, client-fingerprint: chrome,
+    type: ss, cipher: chacha20-ietf-poly1305, password: QCXDxuDlTTMD7jtgHUjIoj}
+  - {name: 🇺🇸 美国 CloudFlare节点, server: 104.21.48.1, port: 443, client-fingerprint: chrome,
+    type: trojan, password: a8fce442-ae9a-4cc1-a0cc-20308ff0a0db, sni: 1kM.HUaNgSHang.pP.UA,
+    alpn: [http%2F1.1], network: ws, ws-opts: {path: /lXENb74xF4ylXngZ, headers: {
+        Host: 1kM.HUaNgSHang.pP.UA}}}
+  - {name: 🇺🇸 美国 加利福尼亚州费利蒙Linode数据中心 2, server: 674ddbc7-stw740-stx214-84ap.fmt2-us.sghuawei.com,
+    port: 420, client-fingerprint: chrome, type: vmess, uuid: b2ae33f6-edd2-11ee-808f-f23c93141fad,
+    alterId: 2, cipher: auto, tls: false, network: ws, ws-opts: {path: /, headers: {
+        Host: 674ddbc7-stw740-stx214-84ap.fmt2-us.sghuawei.com}}}
+  - {name: 🇺🇸 美国 佐治亚州亚特兰大市BellSouth公司, server: series-a2.varzesh360.co, port: 443,
+    client-fingerprint: chrome, type: ss, cipher: chacha20-ietf-poly1305, password: mps3FwmDjLrWaOVg}
+  - {name: 🇨🇳 广东省广州市 移动, server: 183.236.51.38, port: 51039, client-fingerprint: chrome,
     type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 0, cipher: auto,
     tls: false}
-  - {name: 🇺🇸 美国 CloudFlare节点, server: 172.64.69.230, port: 80, client-fingerprint: chrome,
-    type: vmess, uuid: dfc6433f-48b2-4226-8c51-3e0c6cf1b0f6, alterId: 0, cipher: auto,
-    tls: false, network: ws, ws-opts: {path: /, headers: {Host: sg04s.c32d-15b2-f027.sbs}}}
-  - {name: 🇺🇸 美国 Xerox, server: 13.61.76.50, port: 22222, client-fingerprint: chrome,
-    type: trojan, password: telegram-id-privatevpns, sni: trojan.burgerip.co.uk, alpn: [
-      http/1.1]}
-  - {name: 🇺🇸 美国 CloudFlare节点 2, server: 104.21.15.232, port: 443, client-fingerprint: chrome,
-    type: trojan, password: 2fec7227-9abe-46f2-af18-78302b836c45, sni: 3r.2030.pp.ua,
-    alpn: [http%2F1.1], network: ws, ws-opts: {path: /XjTi1NYwi9A2bckpqdDoAgkondVWl,
-      headers: {Host: 3r.2030.pp.ua}}}
-  - {name: 🇨🇳 广东省广州市 移动 2, server: 120.232.153.40, port: 41002, client-fingerprint: chrome,
-    type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 0, cipher: auto,
-    tls: false}
-  - {name: 🇨🇳 广东省广州市 移动 3, server: 183.232.229.164, port: 11002, client-fingerprint: chrome,
-    type: ss, cipher: chacha20-ietf-poly1305, password: ee19fceb-cedc-4832-b460-fccf24fdc8be}
-  - {name: 🇺🇸 美国 Amazon数据中心, server: 13.39.168.64, port: 22222, client-fingerprint: chrome,
-    type: trojan, password: telegram-id-directvpn, sni: trojan.burgerip.co.uk, alpn: [
-      http/1.1]}
-  - {name: 🇺🇸 美国 CloudFlare节点 3, server: 104.21.96.1, port: 2096, client-fingerprint: chrome,
-    type: vmess, uuid: 75a0885f-0ca5-42a4-8651-391cf8193154, alterId: 0, cipher: auto,
-    tls: true, network: ws, ws-opts: {path: /, headers: {Host: de01.sh-cloudflare.sbs}}}
-  - {name: 🇺🇸 北美地区 V2CROSS.COM, server: 23.150.152.43, port: 7002, client-fingerprint: chrome,
-    type: ss, cipher: aes-256-gcm, password: RexnBgU7EV5ADxG}
-  - {name: 🇷🇺 俄罗斯 Rubtsovsk Branch of Altai State University, server: 212.192.12.56,
-    port: 21032, client-fingerprint: chrome, type: vmess, uuid: 720d308b-c48a-40c1-a320-cf6b1caa92a5,
-    alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: /}}
-  - {name: 🇺🇸 美国 加利福尼亚州费利蒙Linode数据中心, server: 794c0cbe-stw740-styh7u-bxx2.fmt2-us.sghuawei.com,
+  - {name: 🇺🇸 美国 加利福尼亚州费利蒙Linode数据中心 3, server: 794c0cbe-stw740-styh7u-bxx2.fmt2-us.sghuawei.com,
     port: 420, client-fingerprint: chrome, type: vmess, uuid: 2cba013a-c284-11ef-92b5-f23c93136cb3,
     alterId: 2, cipher: auto, tls: false, network: ws, ws-opts: {path: /, headers: {
         Host: 794c0cbe-stw740-styh7u-bxx2.fmt2-us.sghuawei.com}}}
-  - {name: 🇺🇸 美国 阿勒格尼大学, server: 141.195.112.33, port: 20033, client-fingerprint: chrome,
-    type: vmess, uuid: 7b2730d6-a55a-465f-a502-60c427f2850e, alterId: 0, cipher: auto,
-    tls: false, network: ws, ws-opts: {path: /}}
-  - {name: 🇺🇸 美国 CloudFlare节点 4, server: f8494f.c32d-15b2-f027.sbs, port: 80, client-fingerprint: chrome,
-    type: vmess, uuid: dfc6433f-48b2-4226-8c51-3e0c6cf1b0f6, alterId: 0, cipher: auto,
-    tls: false, network: ws, ws-opts: {path: /, headers: {Host: sg04s.c32d-15b2-f027.sbs}}}
+  - {name: 🇺🇸 美国 Sprint网络, server: 63.176.58.244, port: 22222, client-fingerprint: chrome,
+    type: trojan, password: telegram-id-privatevpns, sni: trojan.burgerip.co.uk}
+  - {name: 🇨🇳 广东省广州市 移动 2, server: 183.236.51.38, port: 55754, client-fingerprint: chrome,
+    type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 0, cipher: auto,
+    tls: false}
 proxy-groups:
   - name: PROXY
     type: select
@@ -1041,447 +1087,462 @@ proxy-groups:
     lazy: true
     tolerance: 100
     proxies:
-      - 🇺🇸_US_美国->🇸🇬_SG_新加坡
-      - 🇩🇪_DE_德国->🇮🇸_IS_冰岛
-      - 🇩🇪_DE_德国->🇺🇸_US_美国
-      - 🇺🇸_US_美国_1
-      - 🇺🇸_US_美国_3
-      - 🇷🇴_RO_罗马尼亚
-      - 🇺🇸_US_美国_4
+      - 🇸🇬_SG_新加坡
+      - 🇵🇱_PL_波兰->🇨🇳_CN_中国
       - 🇺🇸_US_美国_2
-      - 🇺🇸_US_美国_5
-      - 🇩🇪_DE_德国->🇺🇸_US_美国_1
-      - 🇺🇸_US_美国
+      - 🇺🇸_US_美国_1
       - 🇮🇸_IS_冰岛
-      - 🇩🇪_DE_德国->🇯🇵_JP_日本
-      - 1|🇯🇵 日本 03 | 1x JP
-      - 12|🇯🇵 日本|@ripaojiedian
-      - 1|🇺🇦 乌克兰 01 | 1x UA
-      - 12|🇹🇼 台湾|@ripaojiedian
-      - 12|🇸🇬 新加坡|@ripaojiedian
-      - 1|🇹🇼 台湾 02 | 1x TW
-      - 12|🇭🇰 香港7|@ripaojiedian
-      - 1|🇲🇾马来西亚 01 | 1x MY
-      - 0|🇺🇦乌克兰 01 | 1x UA
-      - 2|🇯🇵3 |  3.8MB/s
-      - 12|🇭🇰 香港|@ripaojiedian
-      - 0|🇬🇧英国家宽 01 | 1x UK
-      - 0|🇸🇬新加坡 02 | 1x SG
-      - 0|🇯🇵日本 02 | 1x JP
-      - 12|🇯🇵 日本2|@ripaojiedian
-      - 0|🇨🇦加拿大 01 | 1x CA
-      - 1|🇷🇺 俄罗斯 01 | 1x RU
-      - 1|🇹🇷 土耳其 01 | 1x TR
-      - 2|🇬🇧2 |  5.2MB/s
-      - 0|🇺🇸美国 01 | 1x US Los Angeles
-      - 13|5paw5Yqg5Z2hfEByaXBhb2ppZWRpYW...
-      - 12|tg频道:@ripaojiedian
-      - 12|🇺🇸 美国|@ripaojiedian
-      - 2|🇺🇸13 |  5.6MB/s
-      - 2|🌀5- |  5.3MB/s
-      - 0|🇹🇭泰国01  | 1x TH
-      - 0|🇧🇷巴西 01 | 1x BR
-      - 0|🇰🇷韩国 02 | 1x KR
-      - 13|香港7|@ripaojiedian
-      - 1|🇬🇧 英国住宅IP 01 | 1x UK
-      - 1|🇸🇬 新加坡 01 | 1x SG
-      - 2|🇸🇬4 |  5.9MB/s
-      - 1|🇵🇭 菲律宾 01 | 1x PH
-      - 1|🇦🇺 澳大利亚 01 | 1x AU
-      - 2|🇸🇬1 |  1.9MB/s
-      - 0|🇦🇺澳大利亚 01 | 1x AU
-      - 13|美国3|@ripaojiedian
-      - 0|🇮🇳印度 01 | 1x IN
-      - 2|🇺🇸12 |  1.0MB/s
-      - 12|🇯🇵 日本特殊|@ripaojiedian
-      - 12|🇰🇷 韩国|@ripaojiedian
-      - 2|🇰🇷3 |  2.8MB/s
-      - 0|🇷🇺俄罗斯 01 | 1x RU
-      - 2|🇸🇬2 |  5.9MB/s
-      - 0|🇭🇰香港家宽 03 | 1x HK
-      - 1|🇹🇭泰国 01 | 1x TH
-      - 0|🇭🇰香港 01 | 1x HK
-      - 13|香港|@ripaojiedian
-      - 12|🇭🇰 香港5|@ripaojiedian
-      - 1|🇮🇳西班牙 01 | 1x ES
-      - 1|🇺🇸 美国 03 | 1x US Washington
-      - 13|香港A|@ripaojiedian
-      - 2|🇭🇰17 |  6.1MB/s
-      - 12|🇭🇰 香港6|@ripaojiedian
-      - 1|🇹🇼 台湾 01 | 1x TW
-      - 2|🇯🇵8 |  2.1MB/s
-      - 1|🇨🇦 加拿大 01 | 1x CA
-      - 2|🇰🇷4 |  2.6MB/s
-      - 0|🇹🇷土耳其 01 | 1x TR
-      - 12|🇸🇬 狮城特殊|@ripaojiedian
-      - 12,13|台湾2|@ripaojiedian
-      - 1|🇻🇳 越南 01 | 1x VN
-      - 0|🇮🇩印度尼西亚 01 | 1x ID
-      - 2|🌀16- |  2.4MB/s
-      - 12|🇰🇷 韩国特殊|@ripaojiedian
-      - 13|香港4|@ripaojiedian
-      - 1|🇭🇰 香港住宅IP 03 | 1x HK
-      - 12|🇩🇪 德国|@ripaojiedian
-      - 0|🇺🇸美国 03 | 1x US Washington
-      - 2|🇸🇬6 |  5.8MB/s
-      - 0|🇻🇳越南 01 | 1x VN
-      - 1|🇸🇬 新加坡 02 | 1x SG
-      - 2|🇸🇬5 |  3.1MB/s
-      - 12|🇺🇸 美国2|@ripaojiedian
-      - 2|🇰🇷2 |  5.7MB/s
-      - 1|🇺🇸 美国住宅IP 02 | 1x US Los Angel...
-      - 12|🇺🇸 美国3|@ripaojiedian
-      - 13|台湾|@ripaojiedian
-      - 0|🇲🇾马来西亚01 | 1x MY
-      - 0|🇸🇬新加坡 03 | 1x SG
-      - 1|🇮🇩 印度尼西亚 01 | 1x ID
-      - 2|🌀1-T1 |  1.9MB/s
-      - 0|🇹🇼台湾 02 | 1x TW
-      - 0|🇵🇭菲律宾 01 | 1x PH
-      - 1|🇭🇰 香港 01 | 1x HK
-      - 1|🇧🇷 巴西 01 | 1x BR
-      - 1|🇹🇼 台湾 03 | 1x TW
-      - 1|🇯🇵 日本 02 | 1x JP
-      - 0|🇹🇼台湾 03 | 1x TW
-      - 1|🇸🇬 新加坡 03 | 1x SG
-      - 0|🇸🇬新加坡 01 | 1x SG
-      - 0|🇩🇪德国 01 | 1x DE
-      - 1|🇩🇪 德国 01 | 1x DE
-      - 12,13|香港3|@ripaojiedian
-      - 0|🇰🇷韩国 01 | 1x KR
+      - 🇩🇪_DE_德国->🇮🇸_IS_冰岛
+      - 🇺🇸_US_美国_7
+      - 🇺🇸_US_美国
+      - 🇺🇸_US_美国_9
+      - 🇺🇸_US_美国_8
+      - 🇺🇸_US_美国_6
+      - 🇺🇸_US_美国->🇨🇳_CN_中国
+      - 🇺🇸_US_美国_4
+      - 🇺🇸_US_美国_3
+      - 🇺🇸_US_美国_5
+      - 🇨🇳_CN_中国->🇺🇸_US_美国
       - 13|日本A|@ripaojiedian
-      - 1|🇮🇳 印度 01 | 1x IN
-      - 2|🌀6- |  4.5MB/s
-      - 0|🇭🇰香港 02 | 1x HK
-      - 1|🇰🇷 韩国 02 | 1x KR
-      - 1|🇭🇰 香港 02 | 1x HK
-      - 2|🇯🇵2 |  4.7MB/s
-      - 0|🇺🇸美国家宽 02 | 1x US Los Angeles
-      - 0|🇯🇵日本 01 | 1x JP
+      - 1|🇬🇧 英国住宅IP 01 | 1x UK
+      - 1|🇩🇪 德国 01 | 1x DE
+      - 0|🇹🇼台湾 03 | 1x TW
+      - 2|🇬🇧2 |  5.2MB/s
+      - 13|香港A|@ripaojiedian
+      - 12|🇰🇷 韩国特殊|@ripaojiedian
+      - 0|🇸🇬新加坡 02 | 1x SG
+      - 0|🇦🇺澳大利亚 01 | 1x AU
+      - 1|🇦🇺 澳大利亚 01 | 1x AU
       - 0|🇯🇵日本 03 | 1x JP
-      - 1|🇰🇷 韩国 01 | 1x KR
-      - 0|🇹🇼台湾 01 | 1x TW
-      - 1|🇺🇸 美国 01 | 1x US Los Angeles
-      - 12|🇭🇰 香港2|@ripaojiedian
-      - 12|🇭🇰 香港4|@ripaojiedian
+      - 12,13|台湾2|@ripaojiedian
+      - 2|🌀6- |  4.5MB/s
+      - 0|🇧🇷巴西 01 | 1x BR
+      - 12|🇯🇵 日本2|@ripaojiedian
+      - 12|🇹🇼 台湾|@ripaojiedian
+      - 0|🇹🇷土耳其 01 | 1x TR
+      - 1|🇭🇰 香港住宅IP 03 | 1x HK
+      - 12,13|香港3|@ripaojiedian
       - 1|🇯🇵 日本 01 | 1x JP
-      - 🇺🇸 美国 Xerox
-      - 🇺🇸 美国 阿勒格尼大学
-      - 🇨🇳 广东省广州市 移动 3
-      - 🇺🇸 美国 CloudFlare节点 2
+      - 12|🇰🇷 韩国|@ripaojiedian
+      - 12|🇯🇵 日本特殊|@ripaojiedian
+      - 12|🇯🇵 日本|@ripaojiedian
+      - 12|🇭🇰 香港7|@ripaojiedian
+      - 13|5paw5Yqg5Z2hfEByaXBhb2ppZWRpYW...
+      - 12|🇺🇸 美国3|@ripaojiedian
+      - 1|🇸🇬 新加坡 02 | 1x SG
+      - 2|🇸🇬4 |  5.9MB/s
+      - 0|🇮🇳印度 01 | 1x IN
+      - 0|🇰🇷韩国 02 | 1x KR
+      - 1|🇨🇦 加拿大 01 | 1x CA
+      - 0|🇭🇰香港家宽 03 | 1x HK
+      - 0|🇵🇭菲律宾 01 | 1x PH
+      - 1|🇺🇸 美国 01 | 1x US Los Angeles
+      - 0|🇨🇦加拿大 01 | 1x CA
+      - 1|🇮🇳西班牙 01 | 1x ES
+      - 2|🇸🇬6 |  5.8MB/s
+      - 0|🇺🇸美国 01 | 1x US Los Angeles
+      - 2|🌀1-T1 |  1.9MB/s
+      - 1|🇸🇬 新加坡 01 | 1x SG
+      - 0|🇯🇵日本 01 | 1x JP
+      - 12|🇭🇰 香港|@ripaojiedian
+      - 12|🇩🇪 德国|@ripaojiedian
+      - 13|香港7|@ripaojiedian
+      - 0|🇲🇾马来西亚01 | 1x MY
+      - 1|🇷🇺 俄罗斯 01 | 1x RU
+      - 2|🇯🇵8 |  2.1MB/s
+      - 1|🇹🇭泰国 01 | 1x TH
+      - 1|🇵🇭 菲律宾 01 | 1x PH
+      - 1|🇹🇷 土耳其 01 | 1x TR
+      - 0|🇹🇼台湾 02 | 1x TW
+      - 1|🇭🇰 香港 02 | 1x HK
+      - 0|🇸🇬新加坡 03 | 1x SG
+      - 1|🇻🇳 越南 01 | 1x VN
+      - 0|🇷🇺俄罗斯 01 | 1x RU
+      - 1|🇮🇩 印度尼西亚 01 | 1x ID
+      - 0|🇬🇧英国家宽 01 | 1x UK
+      - 0|🇺🇸美国 03 | 1x US Washington
+      - 0|🇸🇬新加坡 01 | 1x SG
+      - 1|🇹🇼 台湾 03 | 1x TW
+      - 12|🇸🇬 新加坡|@ripaojiedian
+      - 2|🇯🇵3 |  3.8MB/s
+      - 2|🇰🇷3 |  2.8MB/s
+      - 12|🇺🇸 美国2|@ripaojiedian
+      - 1|🇹🇼 台湾 01 | 1x TW
+      - 2|🌀16- |  2.4MB/s
+      - 1|🇰🇷 韩国 02 | 1x KR
+      - 2|🇰🇷4 |  2.6MB/s
+      - 13|香港4|@ripaojiedian
+      - 0|🇹🇼台湾 01 | 1x TW
+      - 0|🇺🇸美国家宽 02 | 1x US Los Angeles
+      - 0|🇩🇪德国 01 | 1x DE
+      - 1|🇧🇷 巴西 01 | 1x BR
+      - 13|台湾|@ripaojiedian
+      - 2|🇺🇸13 |  5.6MB/s
+      - 2|🇸🇬2 |  5.9MB/s
+      - 0|🇻🇳越南 01 | 1x VN
+      - 12|tg频道:@ripaojiedian
+      - 12|🇭🇰 香港5|@ripaojiedian
+      - 2|🇯🇵2 |  4.7MB/s
+      - 0|🇺🇦乌克兰 01 | 1x UA
+      - 1|🇭🇰 香港 01 | 1x HK
+      - 13|香港|@ripaojiedian
+      - 1|🇰🇷 韩国 01 | 1x KR
+      - 0|🇰🇷韩国 01 | 1x KR
+      - 1|🇺🇸 美国住宅IP 02 | 1x US Los Angel...
+      - 1|🇮🇳 印度 01 | 1x IN
+      - 12|🇭🇰 香港2|@ripaojiedian
+      - 2|🇰🇷2 |  5.7MB/s
+      - 0|🇯🇵日本 02 | 1x JP
+      - 1|🇯🇵 日本 03 | 1x JP
+      - 1|🇸🇬 新加坡 03 | 1x SG
+      - 0|🇹🇭泰国01  | 1x TH
+      - 13|美国3|@ripaojiedian
+      - 12|🇭🇰 香港4|@ripaojiedian
+      - 1|🇲🇾马来西亚 01 | 1x MY
+      - 2|🇺🇸12 |  1.0MB/s
+      - 12|🇺🇸 美国|@ripaojiedian
+      - 0|🇭🇰香港 02 | 1x HK
+      - 12|🇸🇬 狮城特殊|@ripaojiedian
+      - 1|🇹🇼 台湾 02 | 1x TW
+      - 1|🇯🇵 日本 02 | 1x JP
+      - 2|🇭🇰17 |  6.1MB/s
+      - 1|🇺🇦 乌克兰 01 | 1x UA
+      - 0|🇭🇰香港 01 | 1x HK
+      - 0|🇮🇩印度尼西亚 01 | 1x ID
+      - 1|🇺🇸 美国 03 | 1x US Washington
+      - 2|🇸🇬1 |  1.9MB/s
+      - 2|🇸🇬5 |  3.1MB/s
+      - 2|🌀5- |  5.3MB/s
+      - 12|🇭🇰 香港6|@ripaojiedian
+      - 🇯🇵 日本 东京Amazon数据中心
       - 🇺🇸 美国 CloudFlare节点
-      - 🇷🇺 俄罗斯 Rubtsovsk Branch of Altai State University
-      - 🇺🇸 美国 加利福尼亚州费利蒙Linode数据中心
-      - 🇨🇳 广东省广州市 移动 2
-      - 🇺🇸 美国 CloudFlare节点 4
+      - 🇺🇸 美国 佐治亚州亚特兰大市BellSouth公司
+      - 🇺🇸 美国 V2CROSS.COM
       - 🇨🇳 广东省广州市 移动
-      - 🇺🇸 北美地区 V2CROSS.COM
-      - 🇺🇸 美国 CloudFlare节点 3
-      - 🇺🇸 美国 Amazon数据中心
-      - 欧盟 V2CROSS.COM
+      - 🇺🇸 美国 加利福尼亚州费利蒙Linode数据中心 3
+      - 🇷🇺 俄罗斯 V2CROSS.COM
+      - 🇨🇳 广东省广州市 移动 2
+      - 🇨🇳 江苏省 移动
+      - 🇺🇸 美国 Fastly全球Anycast节点
+      - 🇺🇸 美国 惠普公司
+      - 🇺🇸 美国 Sprint网络
+      - 🇬🇧 英国 V2CROSS.COM
+      - 🇺🇸 美国 加利福尼亚州费利蒙Linode数据中心
+      - 🇺🇸 美国 俄勒冈州波特兰Amazon数据中心
+      - 🇺🇸 美国 加利福尼亚州费利蒙Linode数据中心 2
   - name: LOAD-BALANCE
     type: load-balance
     url: http://www.gstatic.com/generate_204
     interval: 600
     proxies:
-      - 1|🇯🇵 日本 03 | 1x JP
-      - 12|🇯🇵 日本|@ripaojiedian
-      - 🇺🇸 美国 阿勒格尼大学
-      - 1|🇺🇦 乌克兰 01 | 1x UA
-      - 12|🇹🇼 台湾|@ripaojiedian
-      - 12|🇸🇬 新加坡|@ripaojiedian
-      - 1|🇹🇼 台湾 02 | 1x TW
-      - 12|🇭🇰 香港7|@ripaojiedian
-      - 1|🇲🇾马来西亚 01 | 1x MY
-      - 🇩🇪_DE_德国->🇯🇵_JP_日本
-      - 0|🇺🇦乌克兰 01 | 1x UA
-      - 2|🇯🇵3 |  3.8MB/s
-      - 12|🇭🇰 香港|@ripaojiedian
-      - 0|🇬🇧英国家宽 01 | 1x UK
-      - 🇺🇸_US_美国->🇸🇬_SG_新加坡
-      - 0|🇸🇬新加坡 02 | 1x SG
-      - 0|🇯🇵日本 02 | 1x JP
-      - 12|🇯🇵 日本2|@ripaojiedian
-      - 0|🇨🇦加拿大 01 | 1x CA
-      - 🇷🇴_RO_罗马尼亚
-      - 🇺🇸_US_美国_4
-      - 1|🇷🇺 俄罗斯 01 | 1x RU
-      - 🇺🇸 美国 CloudFlare节点
-      - 1|🇹🇷 土耳其 01 | 1x TR
-      - 🇩🇪_DE_德国->🇺🇸_US_美国_1
-      - 2|🇬🇧2 |  5.2MB/s
-      - 0|🇺🇸美国 01 | 1x US Los Angeles
-      - 13|5paw5Yqg5Z2hfEByaXBhb2ppZWRpYW...
-      - 12|tg频道:@ripaojiedian
-      - 12|🇺🇸 美国|@ripaojiedian
-      - 2|🇺🇸13 |  5.6MB/s
-      - 2|🌀5- |  5.3MB/s
-      - 0|🇹🇭泰国01  | 1x TH
-      - 0|🇧🇷巴西 01 | 1x BR
-      - 🇺🇸 美国 CloudFlare节点 4
-      - 0|🇰🇷韩国 02 | 1x KR
-      - 13|香港7|@ripaojiedian
-      - 1|🇬🇧 英国住宅IP 01 | 1x UK
-      - 1|🇸🇬 新加坡 01 | 1x SG
-      - 2|🇸🇬4 |  5.9MB/s
-      - 1|🇵🇭 菲律宾 01 | 1x PH
-      - 1|🇦🇺 澳大利亚 01 | 1x AU
-      - 🇺🇸 美国 CloudFlare节点 3
-      - 2|🇸🇬1 |  1.9MB/s
-      - 🇨🇳 广东省广州市 移动 2
-      - 0|🇦🇺澳大利亚 01 | 1x AU
-      - 13|美国3|@ripaojiedian
-      - 0|🇮🇳印度 01 | 1x IN
-      - 2|🇺🇸12 |  1.0MB/s
-      - 12|🇯🇵 日本特殊|@ripaojiedian
-      - 12|🇰🇷 韩国|@ripaojiedian
-      - 2|🇰🇷3 |  2.8MB/s
-      - 🇺🇸 美国 Xerox
-      - 0|🇷🇺俄罗斯 01 | 1x RU
-      - 2|🇸🇬2 |  5.9MB/s
-      - 0|🇭🇰香港家宽 03 | 1x HK
-      - 1|🇹🇭泰国 01 | 1x TH
-      - 🇨🇳 广东省广州市 移动
-      - 0|🇭🇰香港 01 | 1x HK
-      - 13|香港|@ripaojiedian
-      - 12|🇭🇰 香港5|@ripaojiedian
-      - 1|🇮🇳西班牙 01 | 1x ES
-      - 1|🇺🇸 美国 03 | 1x US Washington
-      - 🇨🇳 广东省广州市 移动 3
-      - 🇺🇸_US_美国_2
-      - 13|香港A|@ripaojiedian
-      - 🇺🇸 美国 加利福尼亚州费利蒙Linode数据中心
-      - 2|🇭🇰17 |  6.1MB/s
-      - 12|🇭🇰 香港6|@ripaojiedian
-      - 1|🇹🇼 台湾 01 | 1x TW
-      - 2|🇯🇵8 |  2.1MB/s
-      - 1|🇨🇦 加拿大 01 | 1x CA
-      - 🇺🇸 美国 Amazon数据中心
-      - 欧盟 V2CROSS.COM
-      - 2|🇰🇷4 |  2.6MB/s
-      - 🇺🇸_US_美国_3
-      - 0|🇹🇷土耳其 01 | 1x TR
-      - 12|🇸🇬 狮城特殊|@ripaojiedian
-      - 🇺🇸 美国 CloudFlare节点 2
-      - 12,13|台湾2|@ripaojiedian
-      - 1|🇻🇳 越南 01 | 1x VN
-      - 0|🇮🇩印度尼西亚 01 | 1x ID
-      - 2|🌀16- |  2.4MB/s
-      - 12|🇰🇷 韩国特殊|@ripaojiedian
-      - 13|香港4|@ripaojiedian
-      - 🇩🇪_DE_德国->🇮🇸_IS_冰岛
-      - 1|🇭🇰 香港住宅IP 03 | 1x HK
-      - 12|🇩🇪 德国|@ripaojiedian
-      - 0|🇺🇸美国 03 | 1x US Washington
-      - 2|🇸🇬6 |  5.8MB/s
-      - 0|🇻🇳越南 01 | 1x VN
-      - 1|🇸🇬 新加坡 02 | 1x SG
-      - 2|🇸🇬5 |  3.1MB/s
-      - 🇺🇸 北美地区 V2CROSS.COM
-      - 12|🇺🇸 美国2|@ripaojiedian
-      - 2|🇰🇷2 |  5.7MB/s
-      - 1|🇺🇸 美国住宅IP 02 | 1x US Los Angel...
-      - 12|🇺🇸 美国3|@ripaojiedian
-      - 🇺🇸_US_美国_1
-      - 13|台湾|@ripaojiedian
-      - 0|🇲🇾马来西亚01 | 1x MY
-      - 0|🇸🇬新加坡 03 | 1x SG
-      - 1|🇮🇩 印度尼西亚 01 | 1x ID
-      - 2|🌀1-T1 |  1.9MB/s
-      - 🇷🇺 俄罗斯 Rubtsovsk Branch of Altai State University
-      - 0|🇹🇼台湾 02 | 1x TW
-      - 0|🇵🇭菲律宾 01 | 1x PH
-      - 1|🇭🇰 香港 01 | 1x HK
-      - 1|🇧🇷 巴西 01 | 1x BR
-      - 🇺🇸_US_美国
-      - 1|🇹🇼 台湾 03 | 1x TW
-      - 1|🇯🇵 日本 02 | 1x JP
-      - 🇩🇪_DE_德国->🇺🇸_US_美国
-      - 0|🇹🇼台湾 03 | 1x TW
-      - 1|🇸🇬 新加坡 03 | 1x SG
-      - 0|🇸🇬新加坡 01 | 1x SG
-      - 🇺🇸_US_美国_5
-      - 0|🇩🇪德国 01 | 1x DE
-      - 1|🇩🇪 德国 01 | 1x DE
-      - 12,13|香港3|@ripaojiedian
-      - 0|🇰🇷韩国 01 | 1x KR
+      - 🇸🇬_SG_新加坡
       - 13|日本A|@ripaojiedian
-      - 1|🇮🇳 印度 01 | 1x IN
-      - 2|🌀6- |  4.5MB/s
-      - 0|🇭🇰香港 02 | 1x HK
-      - 1|🇰🇷 韩国 02 | 1x KR
-      - 1|🇭🇰 香港 02 | 1x HK
-      - 🇮🇸_IS_冰岛
-      - 2|🇯🇵2 |  4.7MB/s
-      - 0|🇺🇸美国家宽 02 | 1x US Los Angeles
-      - 0|🇯🇵日本 01 | 1x JP
+      - 1|🇬🇧 英国住宅IP 01 | 1x UK
+      - 1|🇩🇪 德国 01 | 1x DE
+      - 🇬🇧 英国 V2CROSS.COM
+      - 🇺🇸_US_美国_4
+      - 0|🇹🇼台湾 03 | 1x TW
+      - 🇺🇸_US_美国_3
+      - 2|🇬🇧2 |  5.2MB/s
+      - 13|香港A|@ripaojiedian
+      - 🇺🇸 美国 加利福尼亚州费利蒙Linode数据中心 2
+      - 12|🇰🇷 韩国特殊|@ripaojiedian
+      - 🇷🇺 俄罗斯 V2CROSS.COM
+      - 0|🇸🇬新加坡 02 | 1x SG
+      - 0|🇦🇺澳大利亚 01 | 1x AU
+      - 🇨🇳 广东省广州市 移动
+      - 1|🇦🇺 澳大利亚 01 | 1x AU
       - 0|🇯🇵日本 03 | 1x JP
-      - 1|🇰🇷 韩国 01 | 1x KR
-      - 0|🇹🇼台湾 01 | 1x TW
-      - 1|🇺🇸 美国 01 | 1x US Los Angeles
-      - 12|🇭🇰 香港2|@ripaojiedian
-      - 12|🇭🇰 香港4|@ripaojiedian
+      - 🇺🇸 美国 加利福尼亚州费利蒙Linode数据中心 3
+      - 12,13|台湾2|@ripaojiedian
+      - 2|🌀6- |  4.5MB/s
+      - 0|🇧🇷巴西 01 | 1x BR
+      - 12|🇯🇵 日本2|@ripaojiedian
+      - 12|🇹🇼 台湾|@ripaojiedian
+      - 🇺🇸_US_美国->🇨🇳_CN_中国
+      - 0|🇹🇷土耳其 01 | 1x TR
+      - 1|🇭🇰 香港住宅IP 03 | 1x HK
+      - 12,13|香港3|@ripaojiedian
+      - 🇵🇱_PL_波兰->🇨🇳_CN_中国
+      - 🇺🇸_US_美国_2
       - 1|🇯🇵 日本 01 | 1x JP
+      - 🇺🇸_US_美国_8
+      - 12|🇰🇷 韩国|@ripaojiedian
+      - 12|🇯🇵 日本特殊|@ripaojiedian
+      - 🇮🇸_IS_冰岛
+      - 12|🇯🇵 日本|@ripaojiedian
+      - 12|🇭🇰 香港7|@ripaojiedian
+      - 13|5paw5Yqg5Z2hfEByaXBhb2ppZWRpYW...
+      - 12|🇺🇸 美国3|@ripaojiedian
+      - 1|🇸🇬 新加坡 02 | 1x SG
+      - 2|🇸🇬4 |  5.9MB/s
+      - 🇨🇳_CN_中国->🇺🇸_US_美国
+      - 0|🇮🇳印度 01 | 1x IN
+      - 🇺🇸_US_美国_6
+      - 🇺🇸 美国 加利福尼亚州费利蒙Linode数据中心
+      - 0|🇰🇷韩国 02 | 1x KR
+      - 1|🇨🇦 加拿大 01 | 1x CA
+      - 🇯🇵 日本 东京Amazon数据中心
+      - 🇺🇸 美国 佐治亚州亚特兰大市BellSouth公司
+      - 0|🇭🇰香港家宽 03 | 1x HK
+      - 0|🇵🇭菲律宾 01 | 1x PH
+      - 🇺🇸_US_美国_7
+      - 1|🇺🇸 美国 01 | 1x US Los Angeles
+      - 0|🇨🇦加拿大 01 | 1x CA
+      - 1|🇮🇳西班牙 01 | 1x ES
+      - 2|🇸🇬6 |  5.8MB/s
+      - 0|🇺🇸美国 01 | 1x US Los Angeles
+      - 🇺🇸 美国 V2CROSS.COM
+      - 🇺🇸_US_美国_1
+      - 2|🌀1-T1 |  1.9MB/s
+      - 1|🇸🇬 新加坡 01 | 1x SG
+      - 0|🇯🇵日本 01 | 1x JP
+      - 12|🇭🇰 香港|@ripaojiedian
+      - 🇺🇸 美国 惠普公司
+      - 12|🇩🇪 德国|@ripaojiedian
+      - 13|香港7|@ripaojiedian
+      - 0|🇲🇾马来西亚01 | 1x MY
+      - 🇨🇳 广东省广州市 移动 2
+      - 1|🇷🇺 俄罗斯 01 | 1x RU
+      - 2|🇯🇵8 |  2.1MB/s
+      - 1|🇹🇭泰国 01 | 1x TH
+      - 1|🇵🇭 菲律宾 01 | 1x PH
+      - 1|🇹🇷 土耳其 01 | 1x TR
+      - 0|🇹🇼台湾 02 | 1x TW
+      - 1|🇭🇰 香港 02 | 1x HK
+      - 0|🇸🇬新加坡 03 | 1x SG
+      - 1|🇻🇳 越南 01 | 1x VN
+      - 0|🇷🇺俄罗斯 01 | 1x RU
+      - 1|🇮🇩 印度尼西亚 01 | 1x ID
+      - 🇺🇸_US_美国_5
+      - 0|🇺🇸美国 03 | 1x US Washington
+      - 0|🇬🇧英国家宽 01 | 1x UK
+      - 0|🇸🇬新加坡 01 | 1x SG
+      - 1|🇹🇼 台湾 03 | 1x TW
+      - 12|🇸🇬 新加坡|@ripaojiedian
+      - 2|🇯🇵3 |  3.8MB/s
+      - 2|🇰🇷3 |  2.8MB/s
+      - 12|🇺🇸 美国2|@ripaojiedian
+      - 1|🇹🇼 台湾 01 | 1x TW
+      - 2|🌀16- |  2.4MB/s
+      - 1|🇰🇷 韩国 02 | 1x KR
+      - 2|🇰🇷4 |  2.6MB/s
+      - 13|香港4|@ripaojiedian
+      - 0|🇹🇼台湾 01 | 1x TW
+      - 0|🇺🇸美国家宽 02 | 1x US Los Angeles
+      - 0|🇩🇪德国 01 | 1x DE
+      - 1|🇧🇷 巴西 01 | 1x BR
+      - 13|台湾|@ripaojiedian
+      - 2|🇺🇸13 |  5.6MB/s
+      - 2|🇸🇬2 |  5.9MB/s
+      - 🇺🇸 美国 Sprint网络
+      - 0|🇻🇳越南 01 | 1x VN
+      - 12|tg频道:@ripaojiedian
+      - 12|🇭🇰 香港5|@ripaojiedian
+      - 2|🇯🇵2 |  4.7MB/s
+      - 0|🇺🇦乌克兰 01 | 1x UA
+      - 1|🇭🇰 香港 01 | 1x HK
+      - 13|香港|@ripaojiedian
+      - 🇺🇸_US_美国
+      - 1|🇰🇷 韩国 01 | 1x KR
+      - 0|🇰🇷韩国 01 | 1x KR
+      - 1|🇺🇸 美国住宅IP 02 | 1x US Los Angel...
+      - 1|🇮🇳 印度 01 | 1x IN
+      - 12|🇭🇰 香港2|@ripaojiedian
+      - 2|🇰🇷2 |  5.7MB/s
+      - 0|🇯🇵日本 02 | 1x JP
+      - 1|🇯🇵 日本 03 | 1x JP
+      - 1|🇸🇬 新加坡 03 | 1x SG
+      - 🇺🇸 美国 Fastly全球Anycast节点
+      - 🇺🇸_US_美国_9
+      - 0|🇹🇭泰国01  | 1x TH
+      - 13|美国3|@ripaojiedian
+      - 12|🇭🇰 香港4|@ripaojiedian
+      - 1|🇲🇾马来西亚 01 | 1x MY
+      - 🇺🇸 美国 俄勒冈州波特兰Amazon数据中心
+      - 2|🇺🇸12 |  1.0MB/s
+      - 12|🇺🇸 美国|@ripaojiedian
+      - 0|🇭🇰香港 02 | 1x HK
+      - 12|🇸🇬 狮城特殊|@ripaojiedian
+      - 🇩🇪_DE_德国->🇮🇸_IS_冰岛
+      - 1|🇹🇼 台湾 02 | 1x TW
+      - 1|🇯🇵 日本 02 | 1x JP
+      - 2|🇭🇰17 |  6.1MB/s
+      - 1|🇺🇦 乌克兰 01 | 1x UA
+      - 0|🇭🇰香港 01 | 1x HK
+      - 0|🇮🇩印度尼西亚 01 | 1x ID
+      - 🇺🇸 美国 CloudFlare节点
+      - 1|🇺🇸 美国 03 | 1x US Washington
+      - 2|🇸🇬1 |  1.9MB/s
+      - 🇨🇳 江苏省 移动
+      - 2|🇸🇬5 |  3.1MB/s
+      - 2|🌀5- |  5.3MB/s
+      - 12|🇭🇰 香港6|@ripaojiedian
   - name: SELECT
     type: select
     proxies:
-      - 1|🇯🇵 日本 03 | 1x JP
-      - 12|🇯🇵 日本|@ripaojiedian
-      - 🇺🇸 美国 阿勒格尼大学
-      - 1|🇺🇦 乌克兰 01 | 1x UA
-      - 12|🇹🇼 台湾|@ripaojiedian
-      - 12|🇸🇬 新加坡|@ripaojiedian
-      - 1|🇹🇼 台湾 02 | 1x TW
-      - 12|🇭🇰 香港7|@ripaojiedian
-      - 1|🇲🇾马来西亚 01 | 1x MY
-      - 🇩🇪_DE_德国->🇯🇵_JP_日本
-      - 0|🇺🇦乌克兰 01 | 1x UA
-      - 2|🇯🇵3 |  3.8MB/s
-      - 12|🇭🇰 香港|@ripaojiedian
-      - 0|🇬🇧英国家宽 01 | 1x UK
-      - 🇺🇸_US_美国->🇸🇬_SG_新加坡
-      - 0|🇸🇬新加坡 02 | 1x SG
-      - 0|🇯🇵日本 02 | 1x JP
-      - 12|🇯🇵 日本2|@ripaojiedian
-      - 0|🇨🇦加拿大 01 | 1x CA
-      - 🇷🇴_RO_罗马尼亚
-      - 🇺🇸_US_美国_4
-      - 1|🇷🇺 俄罗斯 01 | 1x RU
-      - 🇺🇸 美国 CloudFlare节点
-      - 1|🇹🇷 土耳其 01 | 1x TR
-      - 🇩🇪_DE_德国->🇺🇸_US_美国_1
-      - 2|🇬🇧2 |  5.2MB/s
-      - 0|🇺🇸美国 01 | 1x US Los Angeles
-      - 13|5paw5Yqg5Z2hfEByaXBhb2ppZWRpYW...
-      - 12|tg频道:@ripaojiedian
-      - 12|🇺🇸 美国|@ripaojiedian
-      - 2|🇺🇸13 |  5.6MB/s
-      - 2|🌀5- |  5.3MB/s
-      - 0|🇹🇭泰国01  | 1x TH
-      - 0|🇧🇷巴西 01 | 1x BR
-      - 🇺🇸 美国 CloudFlare节点 4
-      - 0|🇰🇷韩国 02 | 1x KR
-      - 13|香港7|@ripaojiedian
-      - 1|🇬🇧 英国住宅IP 01 | 1x UK
-      - 1|🇸🇬 新加坡 01 | 1x SG
-      - 2|🇸🇬4 |  5.9MB/s
-      - 1|🇵🇭 菲律宾 01 | 1x PH
-      - 1|🇦🇺 澳大利亚 01 | 1x AU
-      - 🇺🇸 美国 CloudFlare节点 3
-      - 2|🇸🇬1 |  1.9MB/s
-      - 🇨🇳 广东省广州市 移动 2
-      - 0|🇦🇺澳大利亚 01 | 1x AU
-      - 13|美国3|@ripaojiedian
-      - 0|🇮🇳印度 01 | 1x IN
-      - 2|🇺🇸12 |  1.0MB/s
-      - 12|🇯🇵 日本特殊|@ripaojiedian
-      - 12|🇰🇷 韩国|@ripaojiedian
-      - 2|🇰🇷3 |  2.8MB/s
-      - 🇺🇸 美国 Xerox
-      - 0|🇷🇺俄罗斯 01 | 1x RU
-      - 2|🇸🇬2 |  5.9MB/s
-      - 0|🇭🇰香港家宽 03 | 1x HK
-      - 1|🇹🇭泰国 01 | 1x TH
-      - 🇨🇳 广东省广州市 移动
-      - 0|🇭🇰香港 01 | 1x HK
-      - 13|香港|@ripaojiedian
-      - 12|🇭🇰 香港5|@ripaojiedian
-      - 1|🇮🇳西班牙 01 | 1x ES
-      - 1|🇺🇸 美国 03 | 1x US Washington
-      - 🇨🇳 广东省广州市 移动 3
-      - 🇺🇸_US_美国_2
-      - 13|香港A|@ripaojiedian
-      - 🇺🇸 美国 加利福尼亚州费利蒙Linode数据中心
-      - 2|🇭🇰17 |  6.1MB/s
-      - 12|🇭🇰 香港6|@ripaojiedian
-      - 1|🇹🇼 台湾 01 | 1x TW
-      - 2|🇯🇵8 |  2.1MB/s
-      - 1|🇨🇦 加拿大 01 | 1x CA
-      - 🇺🇸 美国 Amazon数据中心
-      - 欧盟 V2CROSS.COM
-      - 2|🇰🇷4 |  2.6MB/s
-      - 🇺🇸_US_美国_3
-      - 0|🇹🇷土耳其 01 | 1x TR
-      - 12|🇸🇬 狮城特殊|@ripaojiedian
-      - 🇺🇸 美国 CloudFlare节点 2
-      - 12,13|台湾2|@ripaojiedian
-      - 1|🇻🇳 越南 01 | 1x VN
-      - 0|🇮🇩印度尼西亚 01 | 1x ID
-      - 2|🌀16- |  2.4MB/s
-      - 12|🇰🇷 韩国特殊|@ripaojiedian
-      - 13|香港4|@ripaojiedian
-      - 🇩🇪_DE_德国->🇮🇸_IS_冰岛
-      - 1|🇭🇰 香港住宅IP 03 | 1x HK
-      - 12|🇩🇪 德国|@ripaojiedian
-      - 0|🇺🇸美国 03 | 1x US Washington
-      - 2|🇸🇬6 |  5.8MB/s
-      - 0|🇻🇳越南 01 | 1x VN
-      - 1|🇸🇬 新加坡 02 | 1x SG
-      - 2|🇸🇬5 |  3.1MB/s
-      - 🇺🇸 北美地区 V2CROSS.COM
-      - 12|🇺🇸 美国2|@ripaojiedian
-      - 2|🇰🇷2 |  5.7MB/s
-      - 1|🇺🇸 美国住宅IP 02 | 1x US Los Angel...
-      - 12|🇺🇸 美国3|@ripaojiedian
-      - 🇺🇸_US_美国_1
-      - 13|台湾|@ripaojiedian
-      - 0|🇲🇾马来西亚01 | 1x MY
-      - 0|🇸🇬新加坡 03 | 1x SG
-      - 1|🇮🇩 印度尼西亚 01 | 1x ID
-      - 2|🌀1-T1 |  1.9MB/s
-      - 🇷🇺 俄罗斯 Rubtsovsk Branch of Altai State University
-      - 0|🇹🇼台湾 02 | 1x TW
-      - 0|🇵🇭菲律宾 01 | 1x PH
-      - 1|🇭🇰 香港 01 | 1x HK
-      - 1|🇧🇷 巴西 01 | 1x BR
-      - 🇺🇸_US_美国
-      - 1|🇹🇼 台湾 03 | 1x TW
-      - 1|🇯🇵 日本 02 | 1x JP
-      - 🇩🇪_DE_德国->🇺🇸_US_美国
-      - 0|🇹🇼台湾 03 | 1x TW
-      - 1|🇸🇬 新加坡 03 | 1x SG
-      - 0|🇸🇬新加坡 01 | 1x SG
-      - 🇺🇸_US_美国_5
-      - 0|🇩🇪德国 01 | 1x DE
-      - 1|🇩🇪 德国 01 | 1x DE
-      - 12,13|香港3|@ripaojiedian
-      - 0|🇰🇷韩国 01 | 1x KR
+      - 🇸🇬_SG_新加坡
       - 13|日本A|@ripaojiedian
-      - 1|🇮🇳 印度 01 | 1x IN
-      - 2|🌀6- |  4.5MB/s
-      - 0|🇭🇰香港 02 | 1x HK
-      - 1|🇰🇷 韩国 02 | 1x KR
-      - 1|🇭🇰 香港 02 | 1x HK
-      - 🇮🇸_IS_冰岛
-      - 2|🇯🇵2 |  4.7MB/s
-      - 0|🇺🇸美国家宽 02 | 1x US Los Angeles
-      - 0|🇯🇵日本 01 | 1x JP
+      - 1|🇬🇧 英国住宅IP 01 | 1x UK
+      - 1|🇩🇪 德国 01 | 1x DE
+      - 🇬🇧 英国 V2CROSS.COM
+      - 🇺🇸_US_美国_4
+      - 0|🇹🇼台湾 03 | 1x TW
+      - 🇺🇸_US_美国_3
+      - 2|🇬🇧2 |  5.2MB/s
+      - 13|香港A|@ripaojiedian
+      - 🇺🇸 美国 加利福尼亚州费利蒙Linode数据中心 2
+      - 12|🇰🇷 韩国特殊|@ripaojiedian
+      - 🇷🇺 俄罗斯 V2CROSS.COM
+      - 0|🇸🇬新加坡 02 | 1x SG
+      - 0|🇦🇺澳大利亚 01 | 1x AU
+      - 🇨🇳 广东省广州市 移动
+      - 1|🇦🇺 澳大利亚 01 | 1x AU
       - 0|🇯🇵日本 03 | 1x JP
-      - 1|🇰🇷 韩国 01 | 1x KR
-      - 0|🇹🇼台湾 01 | 1x TW
-      - 1|🇺🇸 美国 01 | 1x US Los Angeles
-      - 12|🇭🇰 香港2|@ripaojiedian
-      - 12|🇭🇰 香港4|@ripaojiedian
+      - 🇺🇸 美国 加利福尼亚州费利蒙Linode数据中心 3
+      - 12,13|台湾2|@ripaojiedian
+      - 2|🌀6- |  4.5MB/s
+      - 0|🇧🇷巴西 01 | 1x BR
+      - 12|🇯🇵 日本2|@ripaojiedian
+      - 12|🇹🇼 台湾|@ripaojiedian
+      - 🇺🇸_US_美国->🇨🇳_CN_中国
+      - 0|🇹🇷土耳其 01 | 1x TR
+      - 1|🇭🇰 香港住宅IP 03 | 1x HK
+      - 12,13|香港3|@ripaojiedian
+      - 🇵🇱_PL_波兰->🇨🇳_CN_中国
+      - 🇺🇸_US_美国_2
       - 1|🇯🇵 日本 01 | 1x JP
+      - 🇺🇸_US_美国_8
+      - 12|🇰🇷 韩国|@ripaojiedian
+      - 12|🇯🇵 日本特殊|@ripaojiedian
+      - 🇮🇸_IS_冰岛
+      - 12|🇯🇵 日本|@ripaojiedian
+      - 12|🇭🇰 香港7|@ripaojiedian
+      - 13|5paw5Yqg5Z2hfEByaXBhb2ppZWRpYW...
+      - 12|🇺🇸 美国3|@ripaojiedian
+      - 1|🇸🇬 新加坡 02 | 1x SG
+      - 2|🇸🇬4 |  5.9MB/s
+      - 🇨🇳_CN_中国->🇺🇸_US_美国
+      - 0|🇮🇳印度 01 | 1x IN
+      - 🇺🇸_US_美国_6
+      - 🇺🇸 美国 加利福尼亚州费利蒙Linode数据中心
+      - 0|🇰🇷韩国 02 | 1x KR
+      - 1|🇨🇦 加拿大 01 | 1x CA
+      - 🇯🇵 日本 东京Amazon数据中心
+      - 🇺🇸 美国 佐治亚州亚特兰大市BellSouth公司
+      - 0|🇭🇰香港家宽 03 | 1x HK
+      - 0|🇵🇭菲律宾 01 | 1x PH
+      - 🇺🇸_US_美国_7
+      - 1|🇺🇸 美国 01 | 1x US Los Angeles
+      - 0|🇨🇦加拿大 01 | 1x CA
+      - 1|🇮🇳西班牙 01 | 1x ES
+      - 2|🇸🇬6 |  5.8MB/s
+      - 0|🇺🇸美国 01 | 1x US Los Angeles
+      - 🇺🇸 美国 V2CROSS.COM
+      - 🇺🇸_US_美国_1
+      - 2|🌀1-T1 |  1.9MB/s
+      - 1|🇸🇬 新加坡 01 | 1x SG
+      - 0|🇯🇵日本 01 | 1x JP
+      - 12|🇭🇰 香港|@ripaojiedian
+      - 🇺🇸 美国 惠普公司
+      - 12|🇩🇪 德国|@ripaojiedian
+      - 13|香港7|@ripaojiedian
+      - 0|🇲🇾马来西亚01 | 1x MY
+      - 🇨🇳 广东省广州市 移动 2
+      - 1|🇷🇺 俄罗斯 01 | 1x RU
+      - 2|🇯🇵8 |  2.1MB/s
+      - 1|🇹🇭泰国 01 | 1x TH
+      - 1|🇵🇭 菲律宾 01 | 1x PH
+      - 1|🇹🇷 土耳其 01 | 1x TR
+      - 0|🇹🇼台湾 02 | 1x TW
+      - 1|🇭🇰 香港 02 | 1x HK
+      - 0|🇸🇬新加坡 03 | 1x SG
+      - 1|🇻🇳 越南 01 | 1x VN
+      - 0|🇷🇺俄罗斯 01 | 1x RU
+      - 1|🇮🇩 印度尼西亚 01 | 1x ID
+      - 🇺🇸_US_美国_5
+      - 0|🇺🇸美国 03 | 1x US Washington
+      - 0|🇬🇧英国家宽 01 | 1x UK
+      - 0|🇸🇬新加坡 01 | 1x SG
+      - 1|🇹🇼 台湾 03 | 1x TW
+      - 12|🇸🇬 新加坡|@ripaojiedian
+      - 2|🇯🇵3 |  3.8MB/s
+      - 2|🇰🇷3 |  2.8MB/s
+      - 12|🇺🇸 美国2|@ripaojiedian
+      - 1|🇹🇼 台湾 01 | 1x TW
+      - 2|🌀16- |  2.4MB/s
+      - 1|🇰🇷 韩国 02 | 1x KR
+      - 2|🇰🇷4 |  2.6MB/s
+      - 13|香港4|@ripaojiedian
+      - 0|🇹🇼台湾 01 | 1x TW
+      - 0|🇺🇸美国家宽 02 | 1x US Los Angeles
+      - 0|🇩🇪德国 01 | 1x DE
+      - 1|🇧🇷 巴西 01 | 1x BR
+      - 13|台湾|@ripaojiedian
+      - 2|🇺🇸13 |  5.6MB/s
+      - 2|🇸🇬2 |  5.9MB/s
+      - 🇺🇸 美国 Sprint网络
+      - 0|🇻🇳越南 01 | 1x VN
+      - 12|tg频道:@ripaojiedian
+      - 12|🇭🇰 香港5|@ripaojiedian
+      - 2|🇯🇵2 |  4.7MB/s
+      - 0|🇺🇦乌克兰 01 | 1x UA
+      - 1|🇭🇰 香港 01 | 1x HK
+      - 13|香港|@ripaojiedian
+      - 🇺🇸_US_美国
+      - 1|🇰🇷 韩国 01 | 1x KR
+      - 0|🇰🇷韩国 01 | 1x KR
+      - 1|🇺🇸 美国住宅IP 02 | 1x US Los Angel...
+      - 1|🇮🇳 印度 01 | 1x IN
+      - 12|🇭🇰 香港2|@ripaojiedian
+      - 2|🇰🇷2 |  5.7MB/s
+      - 0|🇯🇵日本 02 | 1x JP
+      - 1|🇯🇵 日本 03 | 1x JP
+      - 1|🇸🇬 新加坡 03 | 1x SG
+      - 🇺🇸 美国 Fastly全球Anycast节点
+      - 🇺🇸_US_美国_9
+      - 0|🇹🇭泰国01  | 1x TH
+      - 13|美国3|@ripaojiedian
+      - 12|🇭🇰 香港4|@ripaojiedian
+      - 1|🇲🇾马来西亚 01 | 1x MY
+      - 🇺🇸 美国 俄勒冈州波特兰Amazon数据中心
+      - 2|🇺🇸12 |  1.0MB/s
+      - 12|🇺🇸 美国|@ripaojiedian
+      - 0|🇭🇰香港 02 | 1x HK
+      - 12|🇸🇬 狮城特殊|@ripaojiedian
+      - 🇩🇪_DE_德国->🇮🇸_IS_冰岛
+      - 1|🇹🇼 台湾 02 | 1x TW
+      - 1|🇯🇵 日本 02 | 1x JP
+      - 2|🇭🇰17 |  6.1MB/s
+      - 1|🇺🇦 乌克兰 01 | 1x UA
+      - 0|🇭🇰香港 01 | 1x HK
+      - 0|🇮🇩印度尼西亚 01 | 1x ID
+      - 🇺🇸 美国 CloudFlare节点
+      - 1|🇺🇸 美国 03 | 1x US Washington
+      - 2|🇸🇬1 |  1.9MB/s
+      - 🇨🇳 江苏省 移动
+      - 2|🇸🇬5 |  3.1MB/s
+      - 2|🌀5- |  5.3MB/s
+      - 12|🇭🇰 香港6|@ripaojiedian
 rules:
-  - RULE-SET,google,DIRECT
-  - MATCH,OTHER
-  - RULE-SET,reject,AD
-  - DOMAIN,yacd.haishan.me,DIRECT
-  - RULE-SET,icloud,DIRECT
-  - RULE-SET,tld-not-cn,PROXY
-  - RULE-SET,apple,DIRECT
-  - RULE-SET,proxy,OTHER
-  - DOMAIN,clash.razord.top,DIRECT
-  - RULE-SET,cncidr,DIRECT
   - RULE-SET,gfw,PROXY
-  - RULE-SET,telegramcidr,PROXY
-  - RULE-SET,lancidr,DIRECT
-  - RULE-SET,greatfire,PROXY
-  - RULE-SET,private,DIRECT
+  - RULE-SET,cncidr,DIRECT
   - GEOIP,CN,DIRECT
+  - RULE-SET,greatfire,PROXY
+  - RULE-SET,tld-not-cn,PROXY
+  - RULE-SET,reject,AD
   - RULE-SET,applications,DIRECT
+  - RULE-SET,google,DIRECT
+  - DOMAIN,yacd.haishan.me,DIRECT
+  - RULE-SET,telegramcidr,PROXY
   - RULE-SET,direct,DIRECT
+  - RULE-SET,icloud,DIRECT
+  - RULE-SET,lancidr,DIRECT
+  - RULE-SET,private,DIRECT
+  - RULE-SET,proxy,OTHER
+  - MATCH,OTHER
+  - DOMAIN,clash.razord.top,DIRECT
+  - RULE-SET,apple,DIRECT
 rule-providers:
   reject:
     type: http

@@ -1,4 +1,4 @@
-# Update: 2025-03-28 22:07:05
+# Update: 2025-03-29 00:37:35
 # Created by caoqiang
 mixed-port: 7890
 allow-lan: true
@@ -11,12 +11,17 @@ external-controller: 0.0.0.0:9090
 global-client-fingerprint: chrome
 proxies:
   - name: 🇺🇸_US_美国
-    type: trojan
-    server: 18.169.179.112
-    port: 22222
-    sni: trojan.burgerip.co.uk
-    password: telegram-id-privatevpns
-    skip-cert-verify: false
+    type: vmess
+    server: 674ddbc7-stw740-stx214-84ap.fmt2-us.sghuawei.com
+    port: 420
+    uuid: b2ae33f6-edd2-11ee-808f-f23c93141fad
+    cipher: auto
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: 674ddbc7-stw740-stx214-84ap.fmt2-us.sghuawei.com
+    alterId: 2
   - name: 🇺🇸_US_美国_1
     type: ss
     server: 35.93.21.189
@@ -24,82 +29,120 @@ proxies:
     cipher: aes-256-cfb
     password: amazonskr05
   - name: 🇺🇸_US_美国_2
+    type: vmess
+    server: ac42c440-stw740-sxk0uf-4fy2.fmt2-us.sghuawei.com
+    port: 420
+    uuid: 753cc4e8-f9a3-11ed-bce0-f23c93665044
+    cipher: auto
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: ac42c440-stw740-sxk0uf-4fy2.fmt2-us.sghuawei.com
+    alterId: 2
+  - name: 🇺🇸_US_美国_3
     type: ss
     server: 35.161.163.245
     port: 443
     cipher: aes-256-cfb
     password: amazonskr05
-  - name: 🇺🇸_US_美国_3
-    type: ss
-    server: 184.170.241.194
-    port: 443
-    cipher: aes-128-cfb
-    password: shadowsocks
+  - name: 🇺🇸_US_美国->🇨🇳_CN_中国
+    type: vmess
+    server: 207.90.238.136
+    port: 20030
+    uuid: ea50474c-4ade-441a-bf30-b799cec05a43
+    cipher: auto
+    network: ws
+    skip-cert-verify: true
+    ws-opts:
+      path: /
+    alterId: 0
   - name: 🇺🇸_US_美国_4
+    type: vmess
+    server: 794c0cbe-stw740-styh7u-bxx2.fmt2-us.sghuawei.com
+    port: 420
+    uuid: 2cba013a-c284-11ef-92b5-f23c93136cb3
+    cipher: auto
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: 794c0cbe-stw740-styh7u-bxx2.fmt2-us.sghuawei.com
+    alterId: 2
+  - name: 🇺🇸_US_美国_5
     type: ss
-    server: 54.187.221.114
+    server: 34.219.71.252
     port: 443
     cipher: aes-256-cfb
     password: amazonskr05
-  - name: 🇩🇪_DE_德国->🇺🇸_US_美国
-    type: ss
-    server: 45.87.175.154
-    port: 8080
-    cipher: chacha20-ietf-poly1305
-    password: 4a2rfixophdjffa8KVA4Aa
-  - name: 🇷🇴_RO_罗马尼亚
-    type: ss
-    server: 194.5.215.59
-    port: 8080
-    cipher: rc4-md5
-    password: 14fFPrbezE3HDZzsMOr6
-  - name: 🇩🇪_DE_德国->🇺🇸_US_美国_1
-    type: vmess
-    server: cpanel.erade32.ir
-    port: 100
-    sni: ''
-    uuid: 628cf425-eae7-44d3-a34c-2c2fb6749b6f
-    cipher: auto
-    network: tcp
-    alterId: 0
-  - name: 🇺🇸_US_美国_5
+  - name: 🇺🇸_US_美国_6
     type: trojan
-    server: 104.21.69.41
-    port: 443
-    udp: true
-    sni: kju84.890602.XYZ
-    password: 6040a753-e35b-4384-8713-96f3c639b621
-    network: ws
+    server: 13.61.76.50
+    port: 22222
+    sni: trojan.burgerip.co.uk
+    password: telegram-id-privatevpns
+    skip-cert-verify: false
+  - name: 🇺🇸_US_美国_7
+    type: trojan
+    server: 13.36.115.203
+    port: 22222
+    sni: trojan.burgerip.co.uk
+    password: telegram-id-privatevpns
+    network: tcp
     alpn:
       - http/1.1
-    ws-opts:
-      path: /WxWOWO1YA9bs2HOmaeWimvT3
-      headers:
-        host: kju84.890602.xyz
-  - name: 🇺🇸_US_美国->🇸🇬_SG_新加坡
-    type: ss
-    server: 137.175.113.215
-    port: 8388
-    cipher: chacha20-ietf
-    password: asd123456
-  - name: 🇩🇪_DE_德国->🇯🇵_JP_日本
-    type: ss
-    server: 45.87.175.192
-    port: 8080
-    cipher: chacha20-ietf-poly1305
-    password: 4a2rfixophdjffa8KVA4Aa
   - name: 🇮🇸_IS_冰岛
     type: ss
     server: 37.235.49.152
     port: 989
     cipher: aes-256-cfb
     password: f8f7aCzcPKbsF8p3
+  - name: 🇨🇳_CN_中国->🇺🇸_US_美国
+    type: ss
+    server: zf1.10101251.xyz
+    port: 41705
+    cipher: aes-256-gcm
+    password: 4bccdfb7-f45b-44bb-9cd3-fb6f8fc8072f
+  - name: 🇵🇱_PL_波兰->🇨🇳_CN_中国
+    type: vmess
+    server: 91.185.184.61
+    port: 24301
+    sni: ''
+    uuid: d1ea8c41-67a6-4f63-e47a-c4adaca1d1a4
+    cipher: auto
+    network: tcp
+    fingerprint: ''
+    alterId: 0
+  - name: 🇺🇸_US_美国_8
+    type: vmess
+    server: 0e1f11d2-stw740-sy3miy-3kis.fmt2-us.sghuawei.com
+    port: 420
+    uuid: 117fc3d8-fd04-11ed-b345-f23c93136cb3
+    cipher: auto
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: 0e1f11d2-stw740-sy3miy-3kis.fmt2-us.sghuawei.com
+    alterId: 2
+  - name: 🇸🇬_SG_新加坡
+    type: ss
+    server: 18.140.70.168
+    port: 443
+    cipher: aes-256-cfb
+    password: amazonskr05
+  - name: 🇺🇸_US_美国_9
+    type: ss
+    server: 54.187.221.114
+    port: 443
+    cipher: aes-256-cfb
+    password: amazonskr05
   - name: 🇩🇪_DE_德国->🇮🇸_IS_冰岛
     type: ss
-    server: 45.87.175.199
+    server: 45.87.175.188
     port: 8080
     cipher: chacha20-ietf-poly1305
-    password: 1RWwXhwfAB5gAEozU4G2Pg
+    password: 4a2rfixophdjffa8KVA4Aa
 proxy-groups:
   - name: PROXY
     type: select
@@ -126,53 +169,62 @@ proxy-groups:
     lazy: true
     tolerance: 100
     proxies:
-      - 🇺🇸_US_美国->🇸🇬_SG_新加坡
-      - 🇩🇪_DE_德国->🇮🇸_IS_冰岛
-      - 🇩🇪_DE_德国->🇺🇸_US_美国
-      - 🇺🇸_US_美国_1
-      - 🇺🇸_US_美国_3
-      - 🇷🇴_RO_罗马尼亚
-      - 🇺🇸_US_美国_4
+      - 🇸🇬_SG_新加坡
+      - 🇵🇱_PL_波兰->🇨🇳_CN_中国
       - 🇺🇸_US_美国_2
-      - 🇺🇸_US_美国_5
-      - 🇩🇪_DE_德国->🇺🇸_US_美国_1
-      - 🇺🇸_US_美国
+      - 🇺🇸_US_美国_1
       - 🇮🇸_IS_冰岛
-      - 🇩🇪_DE_德国->🇯🇵_JP_日本
+      - 🇩🇪_DE_德国->🇮🇸_IS_冰岛
+      - 🇺🇸_US_美国_7
+      - 🇺🇸_US_美国
+      - 🇺🇸_US_美国_9
+      - 🇺🇸_US_美国_8
+      - 🇺🇸_US_美国_6
+      - 🇺🇸_US_美国->🇨🇳_CN_中国
+      - 🇺🇸_US_美国_4
+      - 🇺🇸_US_美国_3
+      - 🇺🇸_US_美国_5
+      - 🇨🇳_CN_中国->🇺🇸_US_美国
   - name: LOAD-BALANCE
     type: load-balance
     url: http://www.gstatic.com/generate_204
     interval: 600
     proxies:
-      - 🇺🇸_US_美国->🇸🇬_SG_新加坡
-      - 🇩🇪_DE_德国->🇮🇸_IS_冰岛
-      - 🇩🇪_DE_德国->🇺🇸_US_美国
-      - 🇺🇸_US_美国_1
-      - 🇺🇸_US_美国_3
-      - 🇷🇴_RO_罗马尼亚
-      - 🇺🇸_US_美国_4
+      - 🇸🇬_SG_新加坡
+      - 🇵🇱_PL_波兰->🇨🇳_CN_中国
       - 🇺🇸_US_美国_2
-      - 🇺🇸_US_美国_5
-      - 🇩🇪_DE_德国->🇺🇸_US_美国_1
-      - 🇺🇸_US_美国
+      - 🇺🇸_US_美国_1
       - 🇮🇸_IS_冰岛
-      - 🇩🇪_DE_德国->🇯🇵_JP_日本
+      - 🇩🇪_DE_德国->🇮🇸_IS_冰岛
+      - 🇺🇸_US_美国_7
+      - 🇺🇸_US_美国
+      - 🇺🇸_US_美国_9
+      - 🇺🇸_US_美国_8
+      - 🇺🇸_US_美国_6
+      - 🇺🇸_US_美国->🇨🇳_CN_中国
+      - 🇺🇸_US_美国_4
+      - 🇺🇸_US_美国_3
+      - 🇺🇸_US_美国_5
+      - 🇨🇳_CN_中国->🇺🇸_US_美国
   - name: SELECT
     type: select
     proxies:
-      - 🇺🇸_US_美国->🇸🇬_SG_新加坡
-      - 🇩🇪_DE_德国->🇮🇸_IS_冰岛
-      - 🇩🇪_DE_德国->🇺🇸_US_美国
-      - 🇺🇸_US_美国_1
-      - 🇺🇸_US_美国_3
-      - 🇷🇴_RO_罗马尼亚
-      - 🇺🇸_US_美国_4
+      - 🇸🇬_SG_新加坡
+      - 🇵🇱_PL_波兰->🇨🇳_CN_中国
       - 🇺🇸_US_美国_2
-      - 🇺🇸_US_美国_5
-      - 🇩🇪_DE_德国->🇺🇸_US_美国_1
-      - 🇺🇸_US_美国
+      - 🇺🇸_US_美国_1
       - 🇮🇸_IS_冰岛
-      - 🇩🇪_DE_德国->🇯🇵_JP_日本
+      - 🇩🇪_DE_德国->🇮🇸_IS_冰岛
+      - 🇺🇸_US_美国_7
+      - 🇺🇸_US_美国
+      - 🇺🇸_US_美国_9
+      - 🇺🇸_US_美国_8
+      - 🇺🇸_US_美国_6
+      - 🇺🇸_US_美国->🇨🇳_CN_中国
+      - 🇺🇸_US_美国_4
+      - 🇺🇸_US_美国_3
+      - 🇺🇸_US_美国_5
+      - 🇨🇳_CN_中国->🇺🇸_US_美国
 rules:
   - RULE-SET,applications,DIRECT
   - DOMAIN,clash.razord.top,DIRECT
