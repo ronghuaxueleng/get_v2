@@ -1,4 +1,4 @@
-# Update: 2025-03-29 14:02:07
+# Update: 2025-03-29 16:08:03
 # Created by caoqiang
 mixed-port: 7890
 allow-lan: true
@@ -10,16 +10,37 @@ log-level: info
 external-controller: 0.0.0.0:9090
 global-client-fingerprint: chrome
 proxies:
-  - {name: 🇺🇸 美国 CloudFlare节点, server: us7-02.890624.xYz, port: 80, client-fingerprint: chrome,
-    type: vmess, uuid: 4d04b30c-ef7b-4a07-8f9e-f581ec171f8a, alterId: 0, cipher: auto,
-    tls: false, servername: us7-02.890624.xYz, network: ws, ws-opts: {path: /, headers: {
-        Host: us7-02.890624.xYz}}}
-  - {name: 🇺🇸 美国 CloudFlare节点 2, server: 104.18.149.75, port: 443, client-fingerprint: chrome,
-    type: vmess, uuid: 47eab0de-97f9-49be-f2f3-2e4eb17268e6, alterId: 0, cipher: auto,
-    tls: true, network: ws, ws-opts: {path: /aa, headers: {Host: hk.insbot.filegear-sg.me}}}
-  - {name: 🇷🇺 俄罗斯 V2CROSS.COM, server: ie1.opensocks.site, port: 8388, client-fingerprint: chrome,
-    type: ss, cipher: chacha20-ietf-poly1305, password: ZTAwMGEw}
-  - {name: 🇨🇳 广东省广州市 移动, server: 120.232.153.123, port: 41402, client-fingerprint: chrome,
+  - {name: 🇺🇸 美国 V2CROSS.COM, server: 131.145.74.3, port: 443, client-fingerprint: chrome,
+    type: ss, cipher: chacha20-ietf-poly1305, password: W74XFALLLuw6m5IA}
+  - {name: 🇨🇳 广东省广州市 移动, server: 183.236.51.38, port: 55754, client-fingerprint: chrome,
+    type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 0, cipher: auto,
+    tls: false}
+  - {name: 🇨🇳 广东省湛江市 移动, server: 120.198.71.219, port: 42055, client-fingerprint: chrome,
+    type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 0, cipher: auto,
+    tls: false}
+  - {name: 🇺🇸 北美地区 V2CROSS.COM, server: 134.195.211.116, port: 21012, client-fingerprint: chrome,
+    type: vmess, uuid: f17c76c1-2c3b-4791-b2a7-15435b81ed3a, alterId: 0, cipher: auto,
+    tls: false, network: ws, ws-opts: {path: /}}
+  - {name: 🇨🇳 广东省广州市 移动 2, server: 120.232.153.63, port: 40105, client-fingerprint: chrome,
+    type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 0, cipher: auto,
+    tls: false}
+  - {name: 🇹🇷 土耳其 V2CROSS.COM, server: 84.54.13.30, port: 52807, client-fingerprint: chrome,
+    type: vmess, uuid: 559f2ab2-1b52-4f5b-9e45-7794e6f2648b, alterId: 0, cipher: auto,
+    tls: false}
+  - {name: 🇨🇳 广东省广州市 移动 3, server: 183.236.51.38, port: 56901, client-fingerprint: chrome,
+    type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 0, cipher: auto,
+    tls: false}
+  - {name: 🇺🇸 美国 CloudFlare节点, server: 172.67.51.186, port: 443, client-fingerprint: chrome,
+    type: vmess, uuid: bf67437e-6c90-45ca-abc2-c7240a5ce2aa, alterId: 0, cipher: auto,
+    tls: true, network: ws, ws-opts: {path: /eisasqa, headers: {Host: foxlux.fovi.tk}}}
+  - {name: 🇺🇸 北美地区 V2CROSS.COM 2, server: 134.195.211.116, port: 21015, client-fingerprint: chrome,
+    type: vmess, uuid: f17c76c1-2c3b-4791-b2a7-15435b81ed3a, alterId: 0, cipher: auto,
+    tls: false, network: ws, ws-opts: {path: /}}
+  - {name: 🇺🇸 美国 俄勒冈州波特兰Amazon数据中心, server: us003.421421.xyz, port: 20230, client-fingerprint: chrome,
+    type: trojan, password: fdd1d613-f234-40f6-b63d-97517e0fc4b3, sni: us003.421421.xyz}
+  - {name: 🇨🇳 广东省广州市 移动 4, server: 183.232.229.164, port: 12359, client-fingerprint: chrome,
+    type: ss, cipher: chacha20-ietf-poly1305, password: ee19fceb-cedc-4832-b460-fccf24fdc8be}
+  - {name: 🇨🇳 广东省广州市 移动 5, server: 183.236.51.38, port: 51039, client-fingerprint: chrome,
     type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 0, cipher: auto,
     tls: false}
   - {name: 🇬🇷 希腊 V2CROSS.COM, server: 144.24.200.164, port: 443, client-fingerprint: chrome,
@@ -28,22 +49,19 @@ proxies:
   - {name: 🇨🇳 广东省江门市 移动, server: 120.234.102.229, port: 31998, client-fingerprint: chrome,
     type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 0, cipher: auto,
     tls: false}
-  - {name: 🇺🇸 美国 俄勒冈州波特兰Amazon数据中心, server: us003.421421.xyz, port: 20230, client-fingerprint: chrome,
-    type: trojan, password: fdd1d613-f234-40f6-b63d-97517e0fc4b3, sni: us003.421421.xyz}
-  - {name: 🇺🇸 美国 CloudFlare节点 3, server: 104.21.48.1, port: 443, client-fingerprint: chrome,
-    type: trojan, password: a8fce442-ae9a-4cc1-a0cc-20308ff0a0db, sni: 1kM.HUaNgSHang.pP.UA,
-    alpn: [http%2F1.1], network: ws, ws-opts: {path: /lXENb74xF4ylXngZ, headers: {
-        Host: 1kM.HUaNgSHang.pP.UA}}}
-  - {name: 🇨🇳 广东省广州市 移动 2, server: 183.236.51.38, port: 56901, client-fingerprint: chrome,
-    type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 0, cipher: auto,
-    tls: false}
-  - {name: 🇺🇸 美国 CloudFlare节点 4, server: esna.twn24.ir, port: 8443, client-fingerprint: chrome,
-    type: vmess, uuid: 9d3a558b-46ef-4c59-8d20-ea017be4f18e, alterId: 0, cipher: auto,
-    tls: true, network: ws, ws-opts: {path: /4sMTyjcd, headers: {Host: esna.twn24.ir}}}
-  - {name: 🇫🇷 法国 国际航空电讯集团公司(SITA), server: 57.129.25.22, port: 443, client-fingerprint: chrome,
+  - {name: 🇸🇮 斯洛文尼亚 V2CROSS.COM, server: 92.53.188.185, port: 8443, client-fingerprint: chrome,
+    type: vmess, uuid: 191babc5-2aaf-4fe5-a563-f14244aefb4e, alterId: 0, cipher: auto,
+    tls: true, network: ws, ws-opts: {path: /xrenvws, headers: {Host: lax1.ibgfw.top}}}
+  - {name: 🇺🇸 美国 CloudFlare节点 2, server: 104.18.149.75, port: 443, client-fingerprint: chrome,
+    type: vmess, uuid: 47eab0de-97f9-49be-f2f3-2e4eb17268e6, alterId: 0, cipher: auto,
+    tls: true, network: ws, ws-opts: {path: /aa, headers: {Host: hk.insbot.filegear-sg.me}}}
+  - {name: 🇬🇧 英国 V2CROSS.COM, server: quality-kite.shiner427.skin, port: 443, client-fingerprint: chrome,
+    type: trojan, password: 74260702287384200, sni: quality-kite.shiner427.skin, skip-cert-verify: false}
+  - {name: 🇫🇷 法国 OVH, server: 51.77.20.137, port: 443, client-fingerprint: chrome,
     type: vmess, uuid: 03fcc618-b93d-6796-6aed-8a38c975d581, alterId: 0, cipher: auto,
-    tls: true, network: ws, ws-opts: {path: /linkvws, headers: {Host: 
-          wrmelmwxlf.gktevlrqznwqqozy.fabpfs66gizmnojhcvqxwl.kytrcfzqla87gvgvs6c7kjnrubuh.cc}}}
+    tls: true, network: ws, ws-opts: {path: /linkvws, headers: {Host: tilebani.com}}}
+  - {name: 🇨🇳 广东省 移动, server: 183.240.255.75, port: 12366, client-fingerprint: chrome,
+    type: ss, cipher: chacha20-ietf-poly1305, password: ee19fceb-cedc-4832-b460-fccf24fdc8be}
 proxy-groups:
   - name: PROXY
     type: select
@@ -70,47 +88,71 @@ proxy-groups:
     lazy: true
     tolerance: 100
     proxies:
+      - 🇨🇳 广东省广州市 移动
       - 🇨🇳 广东省广州市 移动 2
+      - 🇨🇳 广东省 移动
+      - 🇨🇳 广东省广州市 移动 5
+      - 🇨🇳 广东省广州市 移动 4
       - 🇺🇸 美国 CloudFlare节点 2
       - 🇺🇸 美国 俄勒冈州波特兰Amazon数据中心
-      - 🇫🇷 法国 国际航空电讯集团公司(SITA)
-      - 🇷🇺 俄罗斯 V2CROSS.COM
-      - 🇬🇷 希腊 V2CROSS.COM
-      - 🇨🇳 广东省广州市 移动
-      - 🇺🇸 美国 CloudFlare节点
-      - 🇺🇸 美国 CloudFlare节点 4
-      - 🇺🇸 美国 CloudFlare节点 3
+      - 🇺🇸 美国 V2CROSS.COM
+      - 🇺🇸 北美地区 V2CROSS.COM 2
       - 🇨🇳 广东省江门市 移动
+      - 🇺🇸 美国 CloudFlare节点
+      - 🇨🇳 广东省湛江市 移动
+      - 🇬🇧 英国 V2CROSS.COM
+      - 🇹🇷 土耳其 V2CROSS.COM
+      - 🇨🇳 广东省广州市 移动 3
+      - 🇸🇮 斯洛文尼亚 V2CROSS.COM
+      - 🇫🇷 法国 OVH
+      - 🇬🇷 希腊 V2CROSS.COM
+      - 🇺🇸 北美地区 V2CROSS.COM
   - name: LOAD-BALANCE
     type: load-balance
     url: http://www.gstatic.com/generate_204
     interval: 600
     proxies:
+      - 🇨🇳 广东省广州市 移动
       - 🇨🇳 广东省广州市 移动 2
+      - 🇨🇳 广东省 移动
+      - 🇨🇳 广东省广州市 移动 5
+      - 🇨🇳 广东省广州市 移动 4
       - 🇺🇸 美国 CloudFlare节点 2
       - 🇺🇸 美国 俄勒冈州波特兰Amazon数据中心
-      - 🇫🇷 法国 国际航空电讯集团公司(SITA)
-      - 🇷🇺 俄罗斯 V2CROSS.COM
-      - 🇬🇷 希腊 V2CROSS.COM
-      - 🇨🇳 广东省广州市 移动
-      - 🇺🇸 美国 CloudFlare节点
-      - 🇺🇸 美国 CloudFlare节点 4
-      - 🇺🇸 美国 CloudFlare节点 3
+      - 🇺🇸 美国 V2CROSS.COM
+      - 🇺🇸 北美地区 V2CROSS.COM 2
       - 🇨🇳 广东省江门市 移动
+      - 🇺🇸 美国 CloudFlare节点
+      - 🇨🇳 广东省湛江市 移动
+      - 🇬🇧 英国 V2CROSS.COM
+      - 🇹🇷 土耳其 V2CROSS.COM
+      - 🇨🇳 广东省广州市 移动 3
+      - 🇸🇮 斯洛文尼亚 V2CROSS.COM
+      - 🇫🇷 法国 OVH
+      - 🇬🇷 希腊 V2CROSS.COM
+      - 🇺🇸 北美地区 V2CROSS.COM
   - name: SELECT
     type: select
     proxies:
+      - 🇨🇳 广东省广州市 移动
       - 🇨🇳 广东省广州市 移动 2
+      - 🇨🇳 广东省 移动
+      - 🇨🇳 广东省广州市 移动 5
+      - 🇨🇳 广东省广州市 移动 4
       - 🇺🇸 美国 CloudFlare节点 2
       - 🇺🇸 美国 俄勒冈州波特兰Amazon数据中心
-      - 🇫🇷 法国 国际航空电讯集团公司(SITA)
-      - 🇷🇺 俄罗斯 V2CROSS.COM
-      - 🇬🇷 希腊 V2CROSS.COM
-      - 🇨🇳 广东省广州市 移动
-      - 🇺🇸 美国 CloudFlare节点
-      - 🇺🇸 美国 CloudFlare节点 4
-      - 🇺🇸 美国 CloudFlare节点 3
+      - 🇺🇸 美国 V2CROSS.COM
+      - 🇺🇸 北美地区 V2CROSS.COM 2
       - 🇨🇳 广东省江门市 移动
+      - 🇺🇸 美国 CloudFlare节点
+      - 🇨🇳 广东省湛江市 移动
+      - 🇬🇧 英国 V2CROSS.COM
+      - 🇹🇷 土耳其 V2CROSS.COM
+      - 🇨🇳 广东省广州市 移动 3
+      - 🇸🇮 斯洛文尼亚 V2CROSS.COM
+      - 🇫🇷 法国 OVH
+      - 🇬🇷 希腊 V2CROSS.COM
+      - 🇺🇸 北美地区 V2CROSS.COM
 rules:
   - RULE-SET,applications,DIRECT
   - DOMAIN,clash.razord.top,DIRECT
