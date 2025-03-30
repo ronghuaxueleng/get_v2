@@ -1,4 +1,4 @@
-# Update: 2025-03-30 12:13:01
+# Update: 2025-03-30 14:01:42
 # Created by caoqiang
 mixed-port: 7890
 allow-lan: true
@@ -10,68 +10,63 @@ log-level: info
 external-controller: 0.0.0.0:9090
 global-client-fingerprint: chrome
 proxies:
-  - {name: 🇱🇺 卢森堡 root数据中心, server: 94.242.230.119, port: 8443, client-fingerprint: chrome,
+  - {name: 🇭🇰 香港 Microsoft数据中心, server: ru.mjt000.com, port: 443, client-fingerprint: chrome,
+    type: trojan, password: 6557bf4a-852b-4a69-ad35-d53293386a13, sni: ru.mjt000.com}
+  - {name: 🇬🇧 英国 V2CROSS.COM, server: 193.123.81.105, port: 443, client-fingerprint: chrome,
+    type: vmess, uuid: 9b456c2a-f2c1-45e1-87a9-b7628b04bb24, alterId: 0, cipher: auto,
+    tls: true, network: ws, ws-opts: {path: /linkws, headers: {Host: beyonddsz.cfd}}}
+  - {name: 🇨🇳 广东省 移动, server: okanc.node-is.green, port: 21115, client-fingerprint: chrome,
+    type: ss, cipher: aes-256-gcm, password: 9acfc574-acc3-4c2b-ab3b-491d43a6eb83}
+  - {name: 🇺🇸 美国 CloudFlare节点, server: 172.67.135.23, port: 443, client-fingerprint: chrome,
+    type: trojan, password: 0cda5f7e-cc55-4ff2-8ad8-268b9b99dd01, sni: uS6-16.890601.xyz,
+    alpn: [http%2F1.1], network: ws, ws-opts: {path: /ILLcisbMYUd6MQzxVoMQ, headers: {
+        Host: uS6-16.890601.xyz}}}
+  - {name: 🇸🇮 斯洛文尼亚 V2CROSS.COM, server: 92.53.188.185, port: 8443, client-fingerprint: chrome,
     type: vmess, uuid: 191babc5-2aaf-4fe5-a563-f14244aefb4e, alterId: 0, cipher: auto,
     tls: true, network: ws, ws-opts: {path: /xrenvws, headers: {Host: lax1.ibgfw.top}}}
-  - {name: 🇱🇹 立陶宛 V2CROSS.COM, server: 89.116.46.96, port: 8443, client-fingerprint: chrome,
+  - {name: 🇧🇬 保加利亚 V2CROSS.COM, server: 185.176.26.209, port: 8443, client-fingerprint: chrome,
     type: vmess, uuid: 191babc5-2aaf-4fe5-a563-f14244aefb4e, alterId: 0, cipher: auto,
-    tls: true, network: ws, ws-opts: {path: /xrenvws, headers: {Host: lax1.ibgfw.top}}}
-  - {name: 🇬🇧 英国 V2CROSS.COM, server: 188.244.122.249, port: 8443, client-fingerprint: chrome,
-    type: vmess, uuid: 191babc5-2aaf-4fe5-a563-f14244aefb4e, alterId: 0, cipher: auto,
-    tls: true, network: ws, ws-opts: {path: /xrenvws, headers: {Host: lax1.ibgfw.top}}}
-  - {name: 🇨🇳 海南省 移动(全省通用), server: cm1.awslcn.info, port: 25216, client-fingerprint: chrome,
-    type: vmess, uuid: b784f479-32c2-4fa9-a6f9-0e8d3f8cb4ae, alterId: 0, cipher: auto,
-    tls: false, network: ws, ws-opts: {path: /, headers: {Host: cm1.awslcn.info}}}
-  - {name: 🇧🇷 巴西圣保罗 CloudFlare节点, server: 188.114.97.3, port: 443, client-fingerprint: chrome,
-    type: vmess, uuid: edbb1059-1633-4271-b66e-ed4fba47a1bf, alterId: 0, cipher: auto,
-    tls: true, network: ws, ws-opts: {path: /linkws, headers: {Host: linde06.indiavideo.sbs}}}
-  - {name: 🇦🇿 阿塞拜疆 V2CROSS.COM, server: 5.10.246.166, port: 8443, client-fingerprint: chrome,
-    type: vmess, uuid: 191babc5-2aaf-4fe5-a563-f14244aefb4e, alterId: 0, cipher: auto,
-    tls: true, network: ws, ws-opts: {path: /xrenvws, headers: {Host: lax1.ibgfw.top}}}
-  - {name: 🇺🇸 美国 CloudFlare节点, server: 172.67.196.112, port: 443, client-fingerprint: chrome,
-    type: vmess, uuid: edbb1059-1633-4271-b66e-ed4fba47a1bf, alterId: 0, cipher: auto,
-    tls: true, network: ws, ws-opts: {path: /linkws, headers: {Host: linde06.indiavideo.sbs}}}
-  - {name: 🇺🇸 美国 Xerox, server: 13.51.221.235, port: 22222, client-fingerprint: chrome,
-    type: trojan, password: telegram-id-privatevpns, sni: trojan.burgerip.co.uk}
-  - {name: 🇧🇷 巴西圣保罗 CloudFlare节点 2, server: 188.114.96.2, port: 443, client-fingerprint: chrome,
-    type: vmess, uuid: 05641cf5-58d2-4ba4-a9f1-b3cda0b1fb1d, alterId: 0, cipher: auto,
-    tls: true, network: ws, ws-opts: {path: /linkws, headers: {Host: obdii.cfd}}}
-  - {name: 🇺🇸 美国 CloudFlare节点 2, server: 172.67.220.10, port: 443, client-fingerprint: chrome,
-    type: vmess, uuid: 39cec18f-a439-427c-9a4e-aeb6fcdf6f53, alterId: 0, cipher: auto,
-    tls: true, network: ws, ws-opts: {path: /linkws, headers: {Host: linja05.hwcar.sbs}}}
-  - {name: 🇧🇷 巴西圣保罗 CloudFlare节点 3, server: 188.114.97.210, port: 443, client-fingerprint: chrome,
-    type: vmess, uuid: edbb1059-1633-4271-b66e-ed4fba47a1bf, alterId: 0, cipher: auto,
-    tls: true, network: ws, ws-opts: {path: /linkws, headers: {Host: linde06.indiavideo.sbs}}}
-  - {name: 🇧🇷 巴西圣保罗 CloudFlare节点 4, server: 188.114.97.8, port: 443, client-fingerprint: chrome,
-    type: vmess, uuid: f584de15-2034-4170-a723-f48c2bae5e0f, alterId: 0, cipher: auto,
-    tls: true, network: ws, ws-opts: {path: /linkws, headers: {Host: afrhms16v.bestxray.buzz}}}
-  - {name: 🇮🇳 印度 V2CROSS.COM, server: 14.102.229.82, port: 8443, client-fingerprint: chrome,
-    type: vmess, uuid: 191babc5-2aaf-4fe5-a563-f14244aefb4e, alterId: 0, cipher: auto,
-    tls: true, network: ws, ws-opts: {path: /xrenvws, headers: {Host: lax1.ibgfw.top}}}
-  - {name: 🇧🇷 巴西圣保罗 CloudFlare节点 5, server: 188.114.97.79, port: 443, client-fingerprint: chrome,
-    type: vmess, uuid: edbb1059-1633-4271-b66e-ed4fba47a1bf, alterId: 0, cipher: auto,
-    tls: true, servername: linde06.indiavideo.sbs, network: ws, ws-opts: {path: /linkws,
-      headers: {Host: linde06.indiavideo.sbs}}}
-  - {name: 🇨🇳 海南省 移动(全省通用) 2, server: cm1.awslcn.info, port: 25285, client-fingerprint: chrome,
-    type: vmess, uuid: b784f479-32c2-4fa9-a6f9-0e8d3f8cb4ae, alterId: 0, cipher: auto,
-    tls: false, network: ws, ws-opts: {path: /, headers: {Host: cm1.awslcn.info}}}
-  - {name: 🇧🇷 巴西圣保罗 CloudFlare节点 6, server: 188.114.97.6, port: 443, client-fingerprint: chrome,
-    type: vmess, uuid: edbb1059-1633-4271-b66e-ed4fba47a1bf, alterId: 0, cipher: auto,
-    tls: true, servername: linde06.indiavideo.sbs, network: ws, ws-opts: {path: /,
-      headers: {Host: linde06.indiavideo.sbs}}}
-  - {name: 🇺🇸 北美地区 V2CROSS.COM, server: 134.195.211.116, port: 21017, client-fingerprint: chrome,
-    type: vmess, uuid: f17c76c1-2c3b-4791-b2a7-15435b81ed3a, alterId: 0, cipher: auto,
-    tls: false, network: ws, ws-opts: {path: /}}
-  - {name: 🇨🇳 广东省广州市 移动, server: 183.236.51.38, port: 59554, client-fingerprint: chrome,
-    type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 0, cipher: auto,
+    tls: true, servername: lax1.ibgfw.top, network: ws, ws-opts: {path: /xrenvws,
+      headers: {Host: lax1.ibgfw.top}}}
+  - {name: 🇮🇳 印度 V2CROSS.COM, server: 202.78.162.5, port: 443, client-fingerprint: chrome,
+    type: vmess, uuid: 2ff97c6d-8557-42a4-b43f-19c77c5959ea, alterId: 0, cipher: auto,
+    tls: true, network: ws, ws-opts: {path: /, headers: {Host: irsoft.sytes.net}}}
+  - {name: 🇺🇸 美国 CloudFlare节点 2, server: 104.18.119.222, port: 2096, client-fingerprint: chrome,
+    type: vmess, uuid: 3bb3c730-e107-49c5-a0b2-b576d1b26a5e, alterId: 0, cipher: auto,
+    tls: true, network: ws, ws-opts: {path: /, headers: {Host: 1743256978.speed.adl.cccp.freefly.pp.ua}}}
+  - {name: 🇮🇷 伊朗 V2CROSS.COM, server: 5.75.195.199, port: 4500, client-fingerprint: chrome,
+    type: vmess, uuid: 89de804d-a4c4-4c00-c647-18c3af1c8c8c, alterId: 0, cipher: auto,
     tls: false}
-  - {name: 🇺🇸 美国 CloudFlare节点 3, server: 104.21.112.1, port: 443, client-fingerprint: chrome,
-    type: trojan, password: a8fce442-ae9a-4cc1-a0cc-20308ff0a0db, sni: 1kM.HUaNgSHang.pP.UA,
-    alpn: [http%2F1.1], network: ws, ws-opts: {path: /lXENb74xF4ylXngZ, headers: {
-        Host: 1kM.HUaNgSHang.pP.UA}}}
-  - {name: 🇺🇸 北美地区 V2CROSS.COM 2, server: 134.195.211.116, port: 21021, client-fingerprint: chrome,
-    type: vmess, uuid: f17c76c1-2c3b-4791-b2a7-15435b81ed3a, alterId: 0, cipher: auto,
-    tls: false, network: ws, ws-opts: {path: /}}
+  - {name: 🇬🇧 英国 V2CROSS.COM 2, server: 188.244.122.249, port: 8443, client-fingerprint: chrome,
+    type: vmess, uuid: 191babc5-2aaf-4fe5-a563-f14244aefb4e, alterId: 0, cipher: auto,
+    tls: true, network: ws, ws-opts: {path: /xrenvws, headers: {Host: lax1.ibgfw.top}}}
+  - {name: 🇫🇷 法国 巴黎Amazon数据中心, server: 52.47.146.186, port: 22222, client-fingerprint: chrome,
+    type: trojan, password: telegram-id-directvpn, sni: trojan.burgerip.co.uk, alpn: [
+      http/1.1]}
+  - {name: 🇧🇷 巴西圣保罗 CloudFlare节点, server: 188.114.96.3, port: 443, client-fingerprint: chrome,
+    type: vmess, uuid: edbb1059-1633-4271-b66e-ed4fba47a1bf, alterId: 0, cipher: auto,
+    tls: true, network: ws, ws-opts: {path: /linkws, headers: {Host: linde06.indiavideo.sbs}}}
+  - {name: 🇺🇸 美国 CloudFlare节点 3, server: US7-03.890624.xYz, port: 443, client-fingerprint: chrome,
+    type: vmess, uuid: 4d04b30c-ef7b-4a07-8f9e-f581ec171f8a, alterId: 0, cipher: auto,
+    tls: true, network: ws, ws-opts: {path: /bua2hMcbA8wMzbGFtV, headers: {Host: US7-03.890624.xYz}}}
+  - {name: 🇨🇳 广东省广州市 移动, server: tk.hzlt.tkddns.xyz, port: 22642, client-fingerprint: chrome,
+    type: vmess, uuid: 98e96c9f-4bb3-39d4-9a2c-fac04257f7c7, alterId: 2, cipher: auto,
+    tls: true, network: ws, ws-opts: {path: /, headers: {Host: zxjp-b.tkong.cc}}}
+  - {name: 🇮🇳 印度 V2CROSS.COM 2, server: 202.78.162.5, port: 443, client-fingerprint: chrome,
+    type: vmess, uuid: 118287d2-e968-42e1-80d0-12fa2f5d38d6, alterId: 0, cipher: auto,
+    tls: true, network: ws, ws-opts: {path: /, headers: {Host: sahand.serveminecraft.net}}}
+  - {name: 🇮🇳 印度 V2CROSS.COM 3, server: 202.78.162.5, port: 443, client-fingerprint: chrome,
+    type: vmess, uuid: 716eded6-2201-4dbd-9d63-1638c9e8e677, alterId: 0, cipher: auto,
+    tls: true, network: ws, ws-opts: {path: /, headers: {Host: pendar.onthewifi.com}}}
+  - {name: 🇺🇸 美国 CloudFlare节点 4, server: 104.21.6.179, port: 443, client-fingerprint: chrome,
+    type: trojan, password: 0cda5f7e-cc55-4ff2-8ad8-268b9b99dd01, sni: uS6-16.890601.xyz,
+    alpn: [http%2F1.1], network: ws, ws-opts: {path: /ILLcisbMYUd6MQzxVoMQ, headers: {
+        Host: uS6-16.890601.xyz}}}
+  - {name: 🇨🇳 广东省 移动 2, server: okanc.node-is.green, port: 21114, client-fingerprint: chrome,
+    type: ss, cipher: aes-256-gcm, password: 9acfc574-acc3-4c2b-ab3b-491d43a6eb83}
+  - {name: 🇫🇷 法国 国际航空电讯集团公司(SITA), server: 57.129.25.20, port: 443, client-fingerprint: chrome,
+    type: vmess, uuid: 03fcc618-b93d-6796-6aed-8a38c975d581, alterId: 1, cipher: auto,
+    tls: true, network: ws, ws-opts: {path: linkvws, headers: {Host: 57.129.25.20}}}
 proxy-groups:
   - name: PROXY
     type: select
@@ -98,74 +93,71 @@ proxy-groups:
     lazy: true
     tolerance: 100
     proxies:
-      - 🇧🇷 巴西圣保罗 CloudFlare节点 4
-      - 🇺🇸 美国 CloudFlare节点 3
-      - 🇨🇳 海南省 移动(全省通用) 2
-      - 🇨🇳 广东省广州市 移动
-      - 🇱🇹 立陶宛 V2CROSS.COM
-      - 🇱🇺 卢森堡 root数据中心
-      - 🇺🇸 美国 CloudFlare节点
-      - 🇺🇸 北美地区 V2CROSS.COM 2
-      - 🇺🇸 美国 Xerox
-      - 🇺🇸 美国 CloudFlare节点 2
-      - 🇧🇷 巴西圣保罗 CloudFlare节点
-      - 🇦🇿 阿塞拜疆 V2CROSS.COM
-      - 🇨🇳 海南省 移动(全省通用)
-      - 🇮🇳 印度 V2CROSS.COM
-      - 🇧🇷 巴西圣保罗 CloudFlare节点 5
-      - 🇧🇷 巴西圣保罗 CloudFlare节点 3
+      - 🇧🇬 保加利亚 V2CROSS.COM
       - 🇬🇧 英国 V2CROSS.COM
-      - 🇧🇷 巴西圣保罗 CloudFlare节点 2
-      - 🇺🇸 北美地区 V2CROSS.COM
-      - 🇧🇷 巴西圣保罗 CloudFlare节点 6
+      - 🇮🇳 印度 V2CROSS.COM
+      - 🇺🇸 美国 CloudFlare节点 3
+      - 🇺🇸 美国 CloudFlare节点 2
+      - 🇮🇷 伊朗 V2CROSS.COM
+      - 🇬🇧 英国 V2CROSS.COM 2
+      - 🇸🇮 斯洛文尼亚 V2CROSS.COM
+      - 🇨🇳 广东省 移动
+      - 🇫🇷 法国 巴黎Amazon数据中心
+      - 🇨🇳 广东省广州市 移动
+      - 🇮🇳 印度 V2CROSS.COM 3
+      - 🇧🇷 巴西圣保罗 CloudFlare节点
+      - 🇫🇷 法国 国际航空电讯集团公司(SITA)
+      - 🇺🇸 美国 CloudFlare节点 4
+      - 🇺🇸 美国 CloudFlare节点
+      - 🇮🇳 印度 V2CROSS.COM 2
+      - 🇨🇳 广东省 移动 2
+      - 🇭🇰 香港 Microsoft数据中心
   - name: LOAD-BALANCE
     type: load-balance
     url: http://www.gstatic.com/generate_204
     interval: 600
     proxies:
-      - 🇧🇷 巴西圣保罗 CloudFlare节点 4
-      - 🇺🇸 美国 CloudFlare节点 3
-      - 🇨🇳 海南省 移动(全省通用) 2
-      - 🇨🇳 广东省广州市 移动
-      - 🇱🇹 立陶宛 V2CROSS.COM
-      - 🇱🇺 卢森堡 root数据中心
-      - 🇺🇸 美国 CloudFlare节点
-      - 🇺🇸 北美地区 V2CROSS.COM 2
-      - 🇺🇸 美国 Xerox
-      - 🇺🇸 美国 CloudFlare节点 2
-      - 🇧🇷 巴西圣保罗 CloudFlare节点
-      - 🇦🇿 阿塞拜疆 V2CROSS.COM
-      - 🇨🇳 海南省 移动(全省通用)
-      - 🇮🇳 印度 V2CROSS.COM
-      - 🇧🇷 巴西圣保罗 CloudFlare节点 5
-      - 🇧🇷 巴西圣保罗 CloudFlare节点 3
+      - 🇧🇬 保加利亚 V2CROSS.COM
       - 🇬🇧 英国 V2CROSS.COM
-      - 🇧🇷 巴西圣保罗 CloudFlare节点 2
-      - 🇺🇸 北美地区 V2CROSS.COM
-      - 🇧🇷 巴西圣保罗 CloudFlare节点 6
+      - 🇮🇳 印度 V2CROSS.COM
+      - 🇺🇸 美国 CloudFlare节点 3
+      - 🇺🇸 美国 CloudFlare节点 2
+      - 🇮🇷 伊朗 V2CROSS.COM
+      - 🇬🇧 英国 V2CROSS.COM 2
+      - 🇸🇮 斯洛文尼亚 V2CROSS.COM
+      - 🇨🇳 广东省 移动
+      - 🇫🇷 法国 巴黎Amazon数据中心
+      - 🇨🇳 广东省广州市 移动
+      - 🇮🇳 印度 V2CROSS.COM 3
+      - 🇧🇷 巴西圣保罗 CloudFlare节点
+      - 🇫🇷 法国 国际航空电讯集团公司(SITA)
+      - 🇺🇸 美国 CloudFlare节点 4
+      - 🇺🇸 美国 CloudFlare节点
+      - 🇮🇳 印度 V2CROSS.COM 2
+      - 🇨🇳 广东省 移动 2
+      - 🇭🇰 香港 Microsoft数据中心
   - name: SELECT
     type: select
     proxies:
-      - 🇧🇷 巴西圣保罗 CloudFlare节点 4
-      - 🇺🇸 美国 CloudFlare节点 3
-      - 🇨🇳 海南省 移动(全省通用) 2
-      - 🇨🇳 广东省广州市 移动
-      - 🇱🇹 立陶宛 V2CROSS.COM
-      - 🇱🇺 卢森堡 root数据中心
-      - 🇺🇸 美国 CloudFlare节点
-      - 🇺🇸 北美地区 V2CROSS.COM 2
-      - 🇺🇸 美国 Xerox
-      - 🇺🇸 美国 CloudFlare节点 2
-      - 🇧🇷 巴西圣保罗 CloudFlare节点
-      - 🇦🇿 阿塞拜疆 V2CROSS.COM
-      - 🇨🇳 海南省 移动(全省通用)
-      - 🇮🇳 印度 V2CROSS.COM
-      - 🇧🇷 巴西圣保罗 CloudFlare节点 5
-      - 🇧🇷 巴西圣保罗 CloudFlare节点 3
+      - 🇧🇬 保加利亚 V2CROSS.COM
       - 🇬🇧 英国 V2CROSS.COM
-      - 🇧🇷 巴西圣保罗 CloudFlare节点 2
-      - 🇺🇸 北美地区 V2CROSS.COM
-      - 🇧🇷 巴西圣保罗 CloudFlare节点 6
+      - 🇮🇳 印度 V2CROSS.COM
+      - 🇺🇸 美国 CloudFlare节点 3
+      - 🇺🇸 美国 CloudFlare节点 2
+      - 🇮🇷 伊朗 V2CROSS.COM
+      - 🇬🇧 英国 V2CROSS.COM 2
+      - 🇸🇮 斯洛文尼亚 V2CROSS.COM
+      - 🇨🇳 广东省 移动
+      - 🇫🇷 法国 巴黎Amazon数据中心
+      - 🇨🇳 广东省广州市 移动
+      - 🇮🇳 印度 V2CROSS.COM 3
+      - 🇧🇷 巴西圣保罗 CloudFlare节点
+      - 🇫🇷 法国 国际航空电讯集团公司(SITA)
+      - 🇺🇸 美国 CloudFlare节点 4
+      - 🇺🇸 美国 CloudFlare节点
+      - 🇮🇳 印度 V2CROSS.COM 2
+      - 🇨🇳 广东省 移动 2
+      - 🇭🇰 香港 Microsoft数据中心
 rules:
   - RULE-SET,applications,DIRECT
   - DOMAIN,clash.razord.top,DIRECT
