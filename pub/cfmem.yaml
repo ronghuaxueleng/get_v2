@@ -1,4 +1,4 @@
-# Update: 2025-04-03 00:38:17
+# Update: 2025-04-03 02:54:07
 # Created by caoqiang
 mixed-port: 7890
 allow-lan: true
@@ -127,47 +127,47 @@ proxy-groups:
     lazy: true
     tolerance: 100
     proxies:
-      - 🇬🇧_GB_英国->🇺🇸_US_美国
-      - 🇺🇸_US_美国_1
-      - 🇦🇺_AU_澳大利亚
-      - 🇺🇸_US_美国_7
-      - 🇺🇸_US_美国_2
-      - 🇺🇸_US_美国_10
-      - 🇫🇷_FR_法国
       - 🇺🇸_US_美国_3
-      - 🇺🇸_US_美国_5
-      - 🇺🇸_US_美国
       - 🇺🇸_US_美国_8
+      - 🇫🇷_FR_法国
+      - 🇺🇸_US_美国_5
+      - 🇺🇸_US_美国_7
+      - 🇺🇸_US_美国_10
+      - 🇺🇸_US_美国_2
+      - 🇬🇧_GB_英国->🇺🇸_US_美国
+      - 🇦🇺_AU_澳大利亚
+      - 🇺🇸_US_美国
+      - 🇺🇸_US_美国_1
   - name: LOAD-BALANCE
     type: load-balance
     url: http://www.gstatic.com/generate_204
     interval: 600
     proxies:
-      - 🇬🇧_GB_英国->🇺🇸_US_美国
-      - 🇺🇸_US_美国_1
-      - 🇦🇺_AU_澳大利亚
-      - 🇺🇸_US_美国_7
-      - 🇺🇸_US_美国_2
-      - 🇺🇸_US_美国_10
-      - 🇫🇷_FR_法国
       - 🇺🇸_US_美国_3
-      - 🇺🇸_US_美国_5
-      - 🇺🇸_US_美国
       - 🇺🇸_US_美国_8
+      - 🇫🇷_FR_法国
+      - 🇺🇸_US_美国_5
+      - 🇺🇸_US_美国_7
+      - 🇺🇸_US_美国_10
+      - 🇺🇸_US_美国_2
+      - 🇬🇧_GB_英国->🇺🇸_US_美国
+      - 🇦🇺_AU_澳大利亚
+      - 🇺🇸_US_美国
+      - 🇺🇸_US_美国_1
   - name: SELECT
     type: select
     proxies:
-      - 🇬🇧_GB_英国->🇺🇸_US_美国
-      - 🇺🇸_US_美国_1
-      - 🇦🇺_AU_澳大利亚
-      - 🇺🇸_US_美国_7
-      - 🇺🇸_US_美国_2
-      - 🇺🇸_US_美国_10
-      - 🇫🇷_FR_法国
       - 🇺🇸_US_美国_3
-      - 🇺🇸_US_美国_5
-      - 🇺🇸_US_美国
       - 🇺🇸_US_美国_8
+      - 🇫🇷_FR_法国
+      - 🇺🇸_US_美国_5
+      - 🇺🇸_US_美国_7
+      - 🇺🇸_US_美国_10
+      - 🇺🇸_US_美国_2
+      - 🇬🇧_GB_英国->🇺🇸_US_美国
+      - 🇦🇺_AU_澳大利亚
+      - 🇺🇸_US_美国
+      - 🇺🇸_US_美国_1
 rules:
   - RULE-SET,applications,DIRECT
   - DOMAIN,clash.razord.top,DIRECT
