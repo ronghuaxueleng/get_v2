@@ -1,4 +1,4 @@
-# Update: 2025-04-07 22:07:58
+# Update: 2025-04-08 00:38:01
 # Created by caoqiang
 mixed-port: 7890
 allow-lan: true
@@ -10,31 +10,32 @@ log-level: info
 external-controller: 0.0.0.0:9090
 global-client-fingerprint: chrome
 proxies:
-  - name: 🇺🇸_US_美国
-    type: trojan
-    server: 104.21.21.226
-    port: 443
-    udp: true
-    sni: uK803.890689.Xyz
-    password: 6040a753-e35b-4384-8713-96f3c639b621
-    network: ws
-    ws-opts:
-      path: /WxWOWO1YA9bs2HOmaeWimvT3
-  - name: 🇨🇳_CN_中国->🇺🇸_US_美国
+  - name: 🇨🇳_CN_中国->🇷🇺_RU_俄罗斯
     type: vmess
-    server: v40.heduian.link
-    port: 30840
-    uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
+    server: cm1.awslcn.info
+    port: 25230
+    sni: ''
+    uuid: b784f479-32c2-4fa9-a6f9-0e8d3f8cb4ae
     cipher: auto
     network: ws
+    skip-cert-verify: true
     ws-opts:
-      path: /index
+      path: /
       headers:
-        host: api100-core-quic-lf.amemv.com
+        host: cm1.awslcn.info
     alterId: 0
-  - name: 🇺🇸_US_美国_2
+  - name: 🇬🇧_GB_英国
     type: trojan
-    server: 104.21.16.1
+    server: 52.56.98.27
+    port: 22222
+    sni: trojan.burgerip.co.uk
+    password: telegram-id-privatevpns
+    network: tcp
+    alpn:
+      - http/1.1
+  - name: 🇺🇸_US_美国
+    type: trojan
+    server: 104.21.96.1
     port: 443
     udp: true
     sni: 1g.890699.xyZ
@@ -42,13 +43,6 @@ proxies:
     network: ws
     ws-opts:
       path: /lXENb74xF4ylXngZ
-  - name: 🇬🇧_GB_英国
-    type: trojan
-    server: 51.24.55.122
-    port: 22222
-    sni: trojan.burgerip.co.uk
-    password: telegram-id-privatevpns
-    skip-cert-verify: false
   - name: 🇨🇳_CN_中国->🇨🇦_CA_加拿大
     type: vmess
     server: v25.heduian.link
@@ -63,7 +57,117 @@ proxies:
       headers:
         host: v25.heduian.link
     alterId: 2
+  - name: 🇺🇸_US_美国_2
+    type: trojan
+    server: 172.67.163.102
+    port: 443
+    udp: true
+    sni: sDFgHU.931.pP.ua
+    password: cd0e795a-4f26-4f8c-9981-ed8b7dcb6126
+    network: ws
+    ws-opts:
+      path: /93fAx7DxPbqU8RhisheV
+      headers:
+        host: sdfghu.931.pp.ua
+  - name: 🇺🇸_US_美国->🇨🇷_CR_哥斯达黎加
+    type: vmess
+    server: 104.26.2.223
+    port: 80
+    uuid: be9ac665-07b8-45b7-b99e-8b913b50da99
+    cipher: auto
+    network: ws
+    ws-opts:
+      path: /s15.html
+      headers:
+        host: 476890898548582025040715174894088.s15.chibaba.filegear-sg.me
+    alterId: 0
+  - name: 🇺🇸_US_美国_3
+    type: trojan
+    server: 104.21.21.226
+    port: 443
+    udp: true
+    sni: uK803.890689.Xyz
+    password: 6040a753-e35b-4384-8713-96f3c639b621
+    network: ws
+    ws-opts:
+      path: /WxWOWO1YA9bs2HOmaeWimvT3
+  - name: 🇨🇳_CN_中国->🇺🇸_US_美国
+    type: vmess
+    server: v29.heduian.link
+    port: 30829
+    sni: ''
+    uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
+    cipher: auto
+    network: ws
+    skip-cert-verify: true
+    ws-opts:
+      path: /oooo
+      headers:
+        host: ocbc.com
+    alterId: 2
+  - name: 🇨🇷_CR_哥斯达黎加
+    type: trojan
+    server: 144.22.250.122
+    port: 443
+    udp: true
+    sni: golinkwuxian.top
+    password: 02926f9e-153a-42c8-8ecd-8fade7009ad1
+    network: ws
+    skip-cert-verify: true
+    ws-opts:
+      path: /apple
+      headers:
+        host: 8888.golinkwuxian.top
   - name: 🇺🇸_US_美国_4
+    type: trojan
+    server: 104.21.16.1
+    port: 443
+    udp: true
+    sni: 1g.890699.xyZ
+    password: a8fce442-ae9a-4cc1-a0cc-20308ff0a0db
+    network: ws
+    ws-opts:
+      path: /lXENb74xF4ylXngZ
+  - name: 🇨🇳_CN_中国->🇬🇧_GB_英国
+    type: vmess
+    server: dxv4.pai50288.uk
+    port: 14100
+    sni: ''
+    uuid: f6866b0b-f946-4a03-8df0-c7e0016b55ad
+    cipher: auto
+    network: tcp
+    alterId: 0
+  - name: 🇷🇺_RU_俄罗斯
+    type: vmess
+    server: 195.58.49.84
+    port: 22001
+    uuid: 46afe023-db88-4d69-b1d5-7a486ee1962e
+    cipher: auto
+    network: ws
+    ws-opts:
+      path: /
+    alterId: 0
+  - name: 🇺🇸_US_美国_7
+    type: trojan
+    server: 104.21.73.150
+    port: 443
+    udp: true
+    sni: sDFgHU.931.pP.ua
+    password: cd0e795a-4f26-4f8c-9981-ed8b7dcb6126
+    network: ws
+    ws-opts:
+      path: /93fAx7DxPbqU8RhisheV
+      headers:
+        host: sdfghu.931.pp.ua
+  - name: 🇨🇳_CN_中国->🇨🇷_CR_哥斯达黎加
+    type: vmess
+    server: 65aa431e-sucv40-tcop2n-tl32.cu.plebai.net
+    port: 5228
+    uuid: 5c02ab88-7b9c-11ea-8fc9-f23c913c8d2b
+    cipher: auto
+    network: tcp
+    alterId: 0
+  - name: 🇺🇸_US_美国_8
     type: trojan
     server: 172.67.200.238
     port: 443
@@ -73,16 +177,6 @@ proxies:
     network: ws
     ws-opts:
       path: /XjTi1NYwi9A2bckpqdDoAgkondVWl
-  - name: 🇺🇸_US_美国_5
-    type: trojan
-    server: 104.21.96.1
-    port: 443
-    udp: true
-    sni: 1g.890699.xyZ
-    password: a8fce442-ae9a-4cc1-a0cc-20308ff0a0db
-    network: ws
-    ws-opts:
-      path: /lXENb74xF4ylXngZ
 proxy-groups:
   - name: PROXY
     type: select
@@ -109,35 +203,59 @@ proxy-groups:
     lazy: true
     tolerance: 100
     proxies:
-      - 🇺🇸_US_美国_2
-      - 🇺🇸_US_美国
-      - 🇺🇸_US_美国_4
-      - 🇬🇧_GB_英国
-      - 🇨🇳_CN_中国->🇺🇸_US_美国
-      - 🇺🇸_US_美国_5
       - 🇨🇳_CN_中国->🇨🇦_CA_加拿大
+      - 🇨🇳_CN_中国->🇷🇺_RU_俄罗斯
+      - 🇺🇸_US_美国_3
+      - 🇺🇸_US_美国_2
+      - 🇺🇸_US_美国->🇨🇷_CR_哥斯达黎加
+      - 🇨🇷_CR_哥斯达黎加
+      - 🇬🇧_GB_英国
+      - 🇺🇸_US_美国_4
+      - 🇨🇳_CN_中国->🇬🇧_GB_英国
+      - 🇨🇳_CN_中国->🇨🇷_CR_哥斯达黎加
+      - 🇺🇸_US_美国_7
+      - 🇺🇸_US_美国_8
+      - 🇺🇸_US_美国
+      - 🇨🇳_CN_中国->🇺🇸_US_美国
+      - 🇷🇺_RU_俄罗斯
   - name: LOAD-BALANCE
     type: load-balance
     url: http://www.gstatic.com/generate_204
     interval: 600
     proxies:
-      - 🇺🇸_US_美国_2
-      - 🇺🇸_US_美国
-      - 🇺🇸_US_美国_4
-      - 🇬🇧_GB_英国
-      - 🇨🇳_CN_中国->🇺🇸_US_美国
-      - 🇺🇸_US_美国_5
       - 🇨🇳_CN_中国->🇨🇦_CA_加拿大
+      - 🇨🇳_CN_中国->🇷🇺_RU_俄罗斯
+      - 🇺🇸_US_美国_3
+      - 🇺🇸_US_美国_2
+      - 🇺🇸_US_美国->🇨🇷_CR_哥斯达黎加
+      - 🇨🇷_CR_哥斯达黎加
+      - 🇬🇧_GB_英国
+      - 🇺🇸_US_美国_4
+      - 🇨🇳_CN_中国->🇬🇧_GB_英国
+      - 🇨🇳_CN_中国->🇨🇷_CR_哥斯达黎加
+      - 🇺🇸_US_美国_7
+      - 🇺🇸_US_美国_8
+      - 🇺🇸_US_美国
+      - 🇨🇳_CN_中国->🇺🇸_US_美国
+      - 🇷🇺_RU_俄罗斯
   - name: SELECT
     type: select
     proxies:
-      - 🇺🇸_US_美国_2
-      - 🇺🇸_US_美国
-      - 🇺🇸_US_美国_4
-      - 🇬🇧_GB_英国
-      - 🇨🇳_CN_中国->🇺🇸_US_美国
-      - 🇺🇸_US_美国_5
       - 🇨🇳_CN_中国->🇨🇦_CA_加拿大
+      - 🇨🇳_CN_中国->🇷🇺_RU_俄罗斯
+      - 🇺🇸_US_美国_3
+      - 🇺🇸_US_美国_2
+      - 🇺🇸_US_美国->🇨🇷_CR_哥斯达黎加
+      - 🇨🇷_CR_哥斯达黎加
+      - 🇬🇧_GB_英国
+      - 🇺🇸_US_美国_4
+      - 🇨🇳_CN_中国->🇬🇧_GB_英国
+      - 🇨🇳_CN_中国->🇨🇷_CR_哥斯达黎加
+      - 🇺🇸_US_美国_7
+      - 🇺🇸_US_美国_8
+      - 🇺🇸_US_美国
+      - 🇨🇳_CN_中国->🇺🇸_US_美国
+      - 🇷🇺_RU_俄罗斯
 rules:
   - RULE-SET,applications,DIRECT
   - DOMAIN,clash.razord.top,DIRECT
