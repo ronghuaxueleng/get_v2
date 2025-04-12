@@ -1,4 +1,410 @@
-# Update: 2025-04-11 22:00:54
+# Update: 2025-04-12 00:37:59
 # Created by caoqiang
-null
-...
+mixed-port: 7890
+allow-lan: true
+dns:
+  enable: false
+ipv6: true
+mode: rule
+log-level: info
+external-controller: 0.0.0.0:9090
+global-client-fingerprint: chrome
+proxies:
+  - name: 🇺🇸_US_美国->🇨🇳_CN_中国
+    type: vmess
+    server: 2b72f3b0-sunz40-suqjqq-1pr35.se.plebai.net
+    port: 8083
+    uuid: 6b7c1278-ff9d-11ee-84ca-f23c913c8d2b
+    cipher: auto
+    network: ws
+    alterId: 0
+  - name: 🇮🇱_IL_以色列->🇨🇷_CR_哥斯达黎加
+    type: vmess
+    server: 91.194.11.178
+    port: 28984
+    sni: ''
+    uuid: 9b2335af-f24c-4810-9c34-95568ebd579d
+    cipher: auto
+    network: tcp
+    fingerprint: ''
+    alterId: 0
+  - name: 🇺🇸_US_美国_1
+    type: vmess
+    server: 5.180.30.85
+    port: 18598
+    uuid: bf26f2fb-9d2a-49b6-8527-82e8aba3a9a9
+    cipher: auto
+    network: tcp
+    alterId: 0
+  - name: 🇺🇸_US_美国->🇨🇳_CN_中国_1
+    type: vmess
+    server: ce8e7ab5-suvds0-t9u6bf-ips0.se.plebai.net
+    port: 8083
+    uuid: d56dab9c-174b-4776-0492-97772dc7f7af
+    cipher: auto
+    network: ws
+    alterId: 0
+  - name: 🇨🇳_CN_中国->🇺🇸_US_美国
+    type: vmess
+    server: f37db099-sum4g0-sy7yrp-1j3kc.cu.plebai.net
+    port: 5228
+    uuid: 3a45a384-4ea7-11ed-a8bf-f23c91cfbbc9
+    cipher: auto
+    network: tcp
+    alterId: 0
+  - name: 🇨🇳_CN_中国->🇯🇵_JP_日本
+    type: vmess
+    server: v29.heduian.link
+    port: 30829
+    uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
+    cipher: auto
+    network: ws
+    ws-opts:
+      path: /oooo
+      headers:
+        host: ocbc.com
+    alterId: 2
+  - name: 🇺🇸_US_美国->🇨🇳_CN_中国_2
+    type: vmess
+    server: 8cf5cc50-sunz40-sumf02-155d9.se.plebai.net
+    port: 8083
+    uuid: 34f0cf42-0f8a-11ec-a8bf-f23c91cfbbc9
+    cipher: auto
+    network: ws
+    alterId: 0
+  - name: 🇺🇸_US_美国_2
+    type: trojan
+    server: 104.21.30.167
+    port: 443
+    udp: true
+    sni: 3y.2032.pp.ua
+    password: 2fec7227-9abe-46f2-af18-78302b836c45
+    network: ws
+    ws-opts:
+      path: /XjTi1NYwi9A2bckpqdDoAgkondVWl
+  - name: 🇺🇸_US_美国->🇨🇳_CN_中国_3
+    type: vmess
+    server: dd26bf3b-sunz40-tavn57-1mtqy.se.plebai.net
+    port: 8083
+    uuid: e27137c8-5952-11ef-aa23-f23c9164ca5d
+    cipher: auto
+    network: ws
+    alterId: 0
+  - name: 🇺🇸_US_美国_3
+    type: vmess
+    server: 45.12.138.47
+    port: 22839
+    sni: ''
+    uuid: 2858a404-d0ca-4d67-80a6-ce8e95e383ff
+    cipher: auto
+    network: tcp
+    fingerprint: ''
+    alterId: 0
+  - name: 🇺🇸_US_美国->🇨🇳_CN_中国_4
+    type: vmess
+    server: 40fd5436-suvds0-tb6yrr-1tfcw.se.plebai.net
+    port: 8083
+    uuid: 1282cc1a-f426-11ef-9495-f23c91cfbbc9
+    cipher: auto
+    network: ws
+    alterId: 0
+  - name: 🇺🇸_US_美国->🇷🇺_RU_俄罗斯
+    type: vmess
+    server: 45.12.133.43
+    port: 28444
+    sni: ''
+    uuid: 1be8eddb-4f8c-45d0-b2a1-e538eb3abd39
+    cipher: auto
+    network: tcp
+    alterId: 0
+  - name: 🇷🇺_RU_俄罗斯
+    type: ss
+    server: 89.221.225.88
+    port: 443
+    cipher: chacha20-ietf-poly1305
+    password: w2HdZnGb5ibh
+  - name: 🇺🇸_US_美国->🇨🇳_CN_中国_5
+    type: vmess
+    server: 99e8b297-sunz40-sz9bz5-1cs2x.se.plebai.net
+    port: 8083
+    uuid: c62e7da0-38bb-11ed-bd7c-f23c913c8d2b
+    cipher: auto
+    network: ws
+    alterId: 0
+  - name: 🇺🇸_US_美国_4
+    type: vmess
+    server: 45.12.114.15
+    port: 20779
+    uuid: 9dc5bff8-bcbb-4703-b0fe-4f91ba517402
+    cipher: auto
+    network: tcp
+    alterId: 0
+  - name: 🇮🇱_IL_以色列->🇺🇸_US_美国
+    type: vmess
+    server: 91.194.11.162
+    port: 58891
+    uuid: 4439cf3e-d072-4a5b-88b2-2a2ec6d71340
+    cipher: auto
+    network: tcp
+    alterId: 0
+  - name: 🇺🇸_US_美国->🇫🇷_FR_法国
+    type: trojan
+    server: 107.173.87.40
+    port: 443
+    udp: true
+    sni: golinkwuxian.top
+    password: 02926f9e-153a-42c8-8ecd-8fade7009ad1
+    network: ws
+    skip-cert-verify: true
+    ws-opts:
+      path: /apple
+      headers:
+        host: 111.golinkwuxian.top
+  - name: 🇺🇸_US_美国->🇨🇳_CN_中国_6
+    type: vmess
+    server: 186.190.215.93
+    port: 22324
+    uuid: 04621bae-ab36-11ec-b909-0242ac120002
+    cipher: auto
+    network: tcp
+    alterId: 0
+  - name: 🇺🇸_US_美国->🇨🇳_CN_中国_7
+    type: vmess
+    server: ab4cbb3b-suvds0-t0qij6-j20q.se.plebai.net
+    port: 8083
+    uuid: 5bd3e78e-f4b7-11ed-ab21-f23c913c8d2b
+    cipher: auto
+    network: ws
+    alterId: 0
+  - name: 🇺🇸_US_美国->🇷🇺_RU_俄罗斯_1
+    type: trojan
+    server: 192.9.132.79
+    port: 443
+    sni: 
+      wrmelmwxlf.gktevlrqznwqqozy.fabpfs66gizmnojhcvqxwl.kytrcfzqla87gvgvs6c7kjnrubuh.cc
+    password: 696cfe79
+    skip-cert-verify: true
+  - name: 🇺🇸_US_美国->🇨🇳_CN_中国_8
+    type: vmess
+    server: 95eeab25-sunz40-t5bgb3-l4nv.se.plebai.net
+    port: 8083
+    uuid: 1469e09e-027c-11ec-a0fc-f23c913c8d2b
+    cipher: auto
+    network: ws
+    alterId: 0
+proxy-groups:
+  - name: PROXY
+    type: select
+    proxies:
+      - URL-TEST
+      - LOAD-BALANCE
+      - SELECT
+      - DIRECT
+  - name: OTHER
+    type: select
+    proxies:
+      - PROXY
+      - DIRECT
+  - name: AD
+    type: select
+    proxies:
+      - REJECT
+      - DIRECT
+      - PROXY
+  - name: URL-TEST
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 600
+    lazy: true
+    tolerance: 100
+    proxies:
+      - 🇺🇸_US_美国_4
+      - 🇨🇳_CN_中国->🇺🇸_US_美国
+      - 🇺🇸_US_美国->🇫🇷_FR_法国
+      - 🇺🇸_US_美国->🇨🇳_CN_中国_6
+      - 🇺🇸_US_美国_1
+      - 🇺🇸_US_美国->🇨🇳_CN_中国_8
+      - 🇮🇱_IL_以色列->🇺🇸_US_美国
+      - 🇷🇺_RU_俄罗斯
+      - 🇺🇸_US_美国_3
+      - 🇺🇸_US_美国->🇨🇳_CN_中国_4
+      - 🇺🇸_US_美国->🇨🇳_CN_中国_7
+      - 🇺🇸_US_美国->🇷🇺_RU_俄罗斯
+      - 🇺🇸_US_美国->🇨🇳_CN_中国_1
+      - 🇺🇸_US_美国->🇨🇳_CN_中国_3
+      - 🇺🇸_US_美国_2
+      - 🇨🇳_CN_中国->🇯🇵_JP_日本
+      - 🇺🇸_US_美国->🇨🇳_CN_中国_5
+      - 🇺🇸_US_美国->🇷🇺_RU_俄罗斯_1
+      - 🇺🇸_US_美国->🇨🇳_CN_中国
+      - 🇺🇸_US_美国->🇨🇳_CN_中国_2
+      - 🇮🇱_IL_以色列->🇨🇷_CR_哥斯达黎加
+  - name: LOAD-BALANCE
+    type: load-balance
+    url: http://www.gstatic.com/generate_204
+    interval: 600
+    proxies:
+      - 🇺🇸_US_美国_4
+      - 🇨🇳_CN_中国->🇺🇸_US_美国
+      - 🇺🇸_US_美国->🇫🇷_FR_法国
+      - 🇺🇸_US_美国->🇨🇳_CN_中国_6
+      - 🇺🇸_US_美国_1
+      - 🇺🇸_US_美国->🇨🇳_CN_中国_8
+      - 🇮🇱_IL_以色列->🇺🇸_US_美国
+      - 🇷🇺_RU_俄罗斯
+      - 🇺🇸_US_美国_3
+      - 🇺🇸_US_美国->🇨🇳_CN_中国_4
+      - 🇺🇸_US_美国->🇨🇳_CN_中国_7
+      - 🇺🇸_US_美国->🇷🇺_RU_俄罗斯
+      - 🇺🇸_US_美国->🇨🇳_CN_中国_1
+      - 🇺🇸_US_美国->🇨🇳_CN_中国_3
+      - 🇺🇸_US_美国_2
+      - 🇨🇳_CN_中国->🇯🇵_JP_日本
+      - 🇺🇸_US_美国->🇨🇳_CN_中国_5
+      - 🇺🇸_US_美国->🇷🇺_RU_俄罗斯_1
+      - 🇺🇸_US_美国->🇨🇳_CN_中国
+      - 🇺🇸_US_美国->🇨🇳_CN_中国_2
+      - 🇮🇱_IL_以色列->🇨🇷_CR_哥斯达黎加
+  - name: SELECT
+    type: select
+    proxies:
+      - 🇺🇸_US_美国_4
+      - 🇨🇳_CN_中国->🇺🇸_US_美国
+      - 🇺🇸_US_美国->🇫🇷_FR_法国
+      - 🇺🇸_US_美国->🇨🇳_CN_中国_6
+      - 🇺🇸_US_美国_1
+      - 🇺🇸_US_美国->🇨🇳_CN_中国_8
+      - 🇮🇱_IL_以色列->🇺🇸_US_美国
+      - 🇷🇺_RU_俄罗斯
+      - 🇺🇸_US_美国_3
+      - 🇺🇸_US_美国->🇨🇳_CN_中国_4
+      - 🇺🇸_US_美国->🇨🇳_CN_中国_7
+      - 🇺🇸_US_美国->🇷🇺_RU_俄罗斯
+      - 🇺🇸_US_美国->🇨🇳_CN_中国_1
+      - 🇺🇸_US_美国->🇨🇳_CN_中国_3
+      - 🇺🇸_US_美国_2
+      - 🇨🇳_CN_中国->🇯🇵_JP_日本
+      - 🇺🇸_US_美国->🇨🇳_CN_中国_5
+      - 🇺🇸_US_美国->🇷🇺_RU_俄罗斯_1
+      - 🇺🇸_US_美国->🇨🇳_CN_中国
+      - 🇺🇸_US_美国->🇨🇳_CN_中国_2
+      - 🇮🇱_IL_以色列->🇨🇷_CR_哥斯达黎加
+rules:
+  - RULE-SET,applications,DIRECT
+  - DOMAIN,clash.razord.top,DIRECT
+  - DOMAIN,yacd.haishan.me,DIRECT
+  - RULE-SET,private,DIRECT
+  - RULE-SET,reject,AD
+  - RULE-SET,icloud,DIRECT
+  - RULE-SET,apple,DIRECT
+  - RULE-SET,google,DIRECT
+  - RULE-SET,tld-not-cn,PROXY
+  - RULE-SET,gfw,PROXY
+  - RULE-SET,greatfire,PROXY
+  - RULE-SET,telegramcidr,PROXY
+  - RULE-SET,lancidr,DIRECT
+  - RULE-SET,cncidr,DIRECT
+  - GEOIP,CN,DIRECT
+  - RULE-SET,direct,DIRECT
+  - RULE-SET,proxy,OTHER
+  - MATCH,OTHER
+rule-providers:
+  reject:
+    type: http
+    behavior: domain
+    url: 
+      https://gh.xxooo.cf/https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/reject.txt
+    path: ./ruleset/reject.yaml
+    interval: 86400
+  icloud:
+    type: http
+    behavior: domain
+    url: 
+      https://gh.xxooo.cf/https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/icloud.txt
+    path: ./ruleset/icloud.yaml
+    interval: 86400
+  apple:
+    type: http
+    behavior: domain
+    url: 
+      https://gh.xxooo.cf/https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/apple.txt
+    path: ./ruleset/apple.yaml
+    interval: 86400
+  google:
+    type: http
+    behavior: domain
+    url: 
+      https://gh.xxooo.cf/https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/google.txt
+    path: ./ruleset/google.yaml
+    interval: 86400
+  proxy:
+    type: http
+    behavior: domain
+    url: 
+      https://gh.xxooo.cf/https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/proxy.txt
+    path: ./ruleset/proxy.yaml
+    interval: 86400
+  direct:
+    type: http
+    behavior: domain
+    url: 
+      https://gh.xxooo.cf/https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/direct.txt
+    path: ./ruleset/direct.yaml
+    interval: 86400
+  private:
+    type: http
+    behavior: domain
+    url: 
+      https://gh.xxooo.cf/https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/private.txt
+    path: ./ruleset/private.yaml
+    interval: 86400
+  gfw:
+    type: http
+    behavior: domain
+    url: 
+      https://gh.xxooo.cf/https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/gfw.txt
+    path: ./ruleset/gfw.yaml
+    interval: 86400
+  greatfire:
+    type: http
+    behavior: domain
+    url: 
+      https://gh.xxooo.cf/https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/greatfire.txt
+    path: ./ruleset/greatfire.yaml
+    interval: 86400
+  tld-not-cn:
+    type: http
+    behavior: domain
+    url: 
+      https://gh.xxooo.cf/https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/tld-not-cn.txt
+    path: ./ruleset/tld-not-cn.yaml
+    interval: 86400
+  telegramcidr:
+    type: http
+    behavior: ipcidr
+    url: 
+      https://gh.xxooo.cf/https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/telegramcidr.txt
+    path: ./ruleset/telegramcidr.yaml
+    interval: 86400
+  cncidr:
+    type: http
+    behavior: ipcidr
+    url: 
+      https://gh.xxooo.cf/https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/cncidr.txt
+    path: ./ruleset/cncidr.yaml
+    interval: 86400
+  lancidr:
+    type: http
+    behavior: ipcidr
+    url: 
+      https://gh.xxooo.cf/https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/lancidr.txt
+    path: ./ruleset/lancidr.yaml
+    interval: 86400
+  applications:
+    type: http
+    behavior: classical
+    url: 
+      https://gh.xxooo.cf/https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/applications.txt
+    path: ./ruleset/applications.yaml
+    interval: 86400
+tcp-concurrent: true
