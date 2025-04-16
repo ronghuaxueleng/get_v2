@@ -1,4 +1,4 @@
-# Update: 2025-04-15 22:09:03
+# Update: 2025-04-16 00:39:58
 # Created by caoqiang
 mixed-port: 7890
 allow-lan: true
@@ -10,60 +10,64 @@ log-level: info
 external-controller: 0.0.0.0:9090
 global-client-fingerprint: chrome
 proxies:
+  - {name: 🇨🇳 湖南省怀化市 电信, server: hk01.x.quickcht3.club, port: 52611, client-fingerprint: chrome,
+    type: ss, cipher: chacha20-ietf-poly1305, password: 2be0c954-4291-45ea-b47d-ca713180550b}
+  - {name: 🇨🇳 广东省 联通, server: ba91e0a1-sutj40-t1k53r-1jm8i.cu.plebai.net, port: 5228,
+    client-fingerprint: chrome, type: vmess, uuid: a6ddfc37-05eb-11ed-af40-f23c91cfbbc9,
+    alterId: 0, cipher: auto, tls: false}
+  - {name: 🇨🇳 广东省汕头市 移动, server: 81f6bf37-sutj40-svgpxu-y2gs.cm5.p5pv.com, port: 17233,
+    client-fingerprint: chrome, type: vmess, uuid: b806b388-5f97-11ee-8014-f23c913c8d2b,
+    alterId: 0, cipher: auto, tls: false}
+  - {name: 🇮🇳 印度 V2CROSS.COM, server: supreme-penguin.shiner427.skin, port: 443, client-fingerprint: chrome,
+    type: trojan, password: 74260698218909400, sni: supreme-penguin.shiner427.skin}
   - {name: 🇨🇳 广东省广州市 移动, server: 120.232.153.41, port: 44491, client-fingerprint: chrome,
+    type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 0, cipher: auto,
+    tls: false}
+  - {name: 🇨🇳 上海市徐汇区 联通漕河泾数据中心, server: 112.65.92.20, port: 45402, client-fingerprint: chrome,
+    type: vmess, uuid: 469e0b31-30c3-4dab-800d-711232634ce1, alterId: 0, cipher: auto,
+    tls: false}
+  - {name: 🇨🇳 广东省深圳市 移动, server: cloudgd.coemn.com, port: 46003, client-fingerprint: chrome,
+    type: vmess, uuid: 4c5a8a75-7d65-40a9-8c3b-a67abae08534, alterId: 0, cipher: auto,
+    tls: false, network: ws, ws-opts: {path: /zh-cn, headers: {Host: cloudgd.coemn.com}}}
+  - {name: 🇨🇳 广东省湛江市 移动, server: 120.198.71.214, port: 46345, client-fingerprint: chrome,
+    type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 0, cipher: auto,
+    tls: false}
+  - {name: 🇺🇸 美国 CloudFlare节点, server: de01.sh-cloudflare.sbs, port: 2096, client-fingerprint: chrome,
+    type: vmess, uuid: b3928f8d-ea81-4d75-bcec-4016a072adff, alterId: 0, cipher: auto,
+    tls: true, network: ws, ws-opts: {path: /, headers: {Host: de01.sh-cloudflare.sbs}}}
+  - {name: 🇨🇳 广东省中山市 移动, server: zz5.fgmcx.top, port: 41068, client-fingerprint: chrome,
+    type: ss, cipher: chacha20-ietf-poly1305, password: be443689-bc64-49ff-85a5-8eecaa2235d3}
+  - {name: 🇨🇳 广东省肇庆市 中移铁通, server: csuzhou01.1cooldns.com, port: 42303, client-fingerprint: chrome,
+    type: trojan, password: VMhGp5wEIyCDf90T, sni: hk06.run.place, skip-cert-verify: false}
+  - {name: 🇨🇳 山东省青岛市 联通, server: gysz0000.dynu.net, port: 38340, client-fingerprint: chrome,
+    type: trojan, password: VMhGp5wEIyCDf90T, sni: hk39.work.gd, skip-cert-verify: true}
+  - {name: 🇺🇸 美国 CloudFlare节点 2, server: 172.67.154.84, port: 443, client-fingerprint: chrome,
+    type: vmess, uuid: e537f2f5-2a0c-4f59-92c9-832ca6433bf3, alterId: 0, cipher: auto,
+    tls: true, network: ws, ws-opts: {path: /linkws, headers: {Host: irvideo.cfd}}}
+  - {name: 🇨🇳 广东省汕头市 移动 2, server: b79d3418-sux8g0-swe4j1-1rfon.cm5.p5pv.com, port: 17232,
+    client-fingerprint: chrome, type: vmess, uuid: aed1cc24-351d-11ef-ba52-f23c9164ca5d,
+    alterId: 0, cipher: auto, tls: false}
+  - {name: 🇨🇳 广东省湛江市 移动 2, server: 120.198.71.216, port: 35001, client-fingerprint: chrome,
+    type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 0, cipher: auto,
+    tls: false}
+  - {name: 🇬🇷 希腊 V2CROSS.COM, server: 144.24.4.176, port: 52803, client-fingerprint: chrome,
+    type: trojan, password: 20bc0771-1fde-45ee-8052-3c26249c43dc, sni: seoul3.678789.xyz}
+  - {name: 🇨🇳 广东省中山市 移动 2, server: hzz9.fgmcx.top, port: 23919, client-fingerprint: chrome,
+    type: vmess, uuid: be443689-bc64-49ff-85a5-8eecaa2235d3, alterId: 0, cipher: auto,
+    tls: false}
+  - {name: 🇨🇳 广东省广州市 移动 2, server: 120.232.153.40, port: 59082, client-fingerprint: chrome,
     type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 0, cipher: auto,
     tls: false}
   - {name: 🇧🇷 巴西圣保罗 CloudFlare节点, server: 188.114.96.3, port: 443, client-fingerprint: chrome,
     type: vmess, uuid: edbb1059-1633-4271-b66e-ed4fba47a1bf, alterId: 0, cipher: auto,
     tls: true, network: ws, ws-opts: {path: /linkws, headers: {Host: linde06.indiavideo.sbs}}}
-  - {name: 🇺🇸 美国 CloudFlare节点, server: 104.21.77.44, port: 443, client-fingerprint: chrome,
-    type: trojan, password: 0cda5f7e-cc55-4ff2-8ad8-268b9b99dd01, sni: us6-02.890603.Xyz,
-    alpn: [http%2F1.1], network: ws, ws-opts: {path: /ILLcisbMYUd6MQzxVoMQ, headers: {
-        Host: us6-02.890603.Xyz}}}
-  - {name: 🇺🇸 美国 CloudFlare节点 2, server: 172.67.200.11, port: 443, client-fingerprint: chrome,
-    type: trojan, password: 0cda5f7e-cc55-4ff2-8ad8-268b9b99dd01, sni: Us6-08.890606.xYZ,
-    alpn: [http%2F1.1], network: ws, ws-opts: {path: /ILLcisbMYUd6MQzxVoMQ, headers: {
-        Host: Us6-08.890606.xYZ}}}
-  - {name: 🇨🇳 广东省 联通, server: f5f98477-sutj40-tdcdb7-1k27l.cu.plebai.net, port: 5229,
-    client-fingerprint: chrome, type: vmess, uuid: ba4b1f2e-c985-11ed-9c0c-f23c913c8d2b,
+  - {name: 🇭🇰 香港 腾讯云, server: 43.154.34.74, port: 1935, client-fingerprint: chrome,
+    type: vmess, uuid: 2e5bfd4a-0852-4df4-b9e7-9b6f207113b4, alterId: 0, cipher: auto,
+    tls: true, servername: djdjjrjjrhk.lzj520hxw.dpdns.org, network: ws, ws-opts: {
+      path: /vmess-argo, headers: {Host: djdjjrjjrhk.lzj520hxw.dpdns.org}}}
+  - {name: 🇨🇳 广东省 移动, server: 81137562-sutj40-suyhjm-1hhyy.cm.plebai.net, port: 15229,
+    client-fingerprint: chrome, type: vmess, uuid: c594c7ec-8b10-11ef-a2b8-f23c9164ca5d,
     alterId: 0, cipher: auto, tls: false}
-  - {name: 🇨🇳 广东省 联通 2, server: ba91e0a1-sutj40-t1k53r-1jm8i.cu.plebai.net, port: 5228,
-    client-fingerprint: chrome, type: vmess, uuid: a6ddfc37-05eb-11ed-af40-f23c91cfbbc9,
-    alterId: 0, cipher: auto, tls: false}
-  - {name: 🇺🇸 美国 Amazon数据中心, server: 13.37.111.96, port: 22222, client-fingerprint: chrome,
-    type: trojan, password: telegram-id-directvpn, sni: trojan.burgerip.co.uk, alpn: [
-      http/1.1]}
-  - {name: 🇨🇳 广东省广州市 移动 2, server: 120.232.153.40, port: 36609, client-fingerprint: chrome,
-    type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 64, cipher: auto,
-    tls: false}
-  - {name: 🇨🇳 广东省中山市 移动, server: hk2.fgmcx.top, port: 41049, client-fingerprint: chrome,
-    type: ss, cipher: chacha20-ietf-poly1305, password: be443689-bc64-49ff-85a5-8eecaa2235d3}
-  - {name: 🇨🇳 山东省青岛市 联通, server: gysz0000.dynu.net, port: 56277, client-fingerprint: chrome,
-    type: ss, cipher: aes-128-gcm, password: VMhGp5wEIyCDf90T}
-  - {name: 🇺🇸 美国 CloudFlare节点 3, server: de01.sh-cloudflare.sbs, port: 2096, client-fingerprint: chrome,
-    type: vmess, uuid: 75a0885f-0ca5-42a4-8651-391cf8193154, alterId: 0, cipher: auto,
-    tls: true, network: ws, ws-opts: {path: /, headers: {Host: de01.sh-cloudflare.sbs}}}
-  - {name: 🇨🇳 广东省广州市 移动 3, server: 120.232.153.63, port: 37805, client-fingerprint: chrome,
-    type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 0, cipher: auto,
-    tls: false}
-  - {name: 🇨🇳 吉林省 移动(全省通用), server: v40.heduian.link, port: 30840, client-fingerprint: chrome,
-    type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 0, cipher: auto,
-    tls: false, network: ws, ws-opts: {path: /index, headers: {Host: api100-core-quic-lf.amemv.com}}}
-  - {name: 🇨🇳 广东省汕头市 移动, server: 00fd0574-sux8g0-sv07nd-jtx1.cm5.p5pv.com, port: 17235,
-    client-fingerprint: chrome, type: vmess, uuid: 947dde8e-bcf5-11ef-af4a-f23c91cfbbc9,
-    alterId: 0, cipher: auto, tls: false}
-  - {name: 🇨🇳 广东省广州市 移动 4, server: 183.236.51.38, port: 42524, client-fingerprint: chrome,
-    type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 0, cipher: auto,
-    tls: false}
-  - {name: 🇨🇳 广东省湛江市 移动, server: 120.198.71.214, port: 46345, client-fingerprint: chrome,
-    type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 0, cipher: auto,
-    tls: false}
-  - {name: 🇺🇸 美国 CloudFlare节点 4, server: 104.21.6.179, port: 443, client-fingerprint: chrome,
-    type: trojan, password: 0cda5f7e-cc55-4ff2-8ad8-268b9b99dd01, sni: uS6-16.890601.xyz,
-    network: ws, ws-opts: {path: /ILLcisbMYUd6MQzxVoMQ, headers: {Host: uS6-16.890601.xyz}}}
-  - {name: 🇨🇳 广东省广州市 移动 5, server: 183.236.51.38, port: 59554, client-fingerprint: chrome,
-    type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 0, cipher: auto,
-    tls: false}
 proxy-groups:
   - name: PROXY
     type: select
@@ -90,68 +94,77 @@ proxy-groups:
     lazy: true
     tolerance: 100
     proxies:
-      - 🇺🇸 美国 Amazon数据中心
-      - 🇨🇳 广东省中山市 移动
-      - 🇺🇸 美国 CloudFlare节点 3
+      - 🇨🇳 广东省 移动
+      - 🇨🇳 广东省深圳市 移动
       - 🇨🇳 广东省湛江市 移动
-      - 🇺🇸 美国 CloudFlare节点 4
+      - 🇨🇳 广东省广州市 移动
+      - 🇬🇷 希腊 V2CROSS.COM
+      - 🇨🇳 广东省湛江市 移动 2
+      - 🇺🇸 美国 CloudFlare节点
+      - 🇨🇳 广东省肇庆市 中移铁通
+      - 🇨🇳 上海市徐汇区 联通漕河泾数据中心
+      - 🇨🇳 湖南省怀化市 电信
+      - 🇨🇳 广东省中山市 移动
+      - 🇨🇳 广东省中山市 移动 2
+      - 🇨🇳 广东省广州市 移动 2
+      - 🇺🇸 美国 CloudFlare节点 2
       - 🇨🇳 广东省汕头市 移动
-      - 🇨🇳 广东省广州市 移动 5
-      - 🇨🇳 广东省广州市 移动 3
-      - 🇨🇳 广东省 联通 2
+      - 🇨🇳 山东省青岛市 联通
+      - 🇮🇳 印度 V2CROSS.COM
+      - 🇨🇳 广东省汕头市 移动 2
       - 🇨🇳 广东省 联通
       - 🇧🇷 巴西圣保罗 CloudFlare节点
-      - 🇺🇸 美国 CloudFlare节点
-      - 🇨🇳 山东省青岛市 联通
-      - 🇨🇳 吉林省 移动(全省通用)
-      - 🇨🇳 广东省广州市 移动 4
-      - 🇺🇸 美国 CloudFlare节点 2
-      - 🇨🇳 广东省广州市 移动 2
-      - 🇨🇳 广东省广州市 移动
+      - 🇭🇰 香港 腾讯云
   - name: LOAD-BALANCE
     type: load-balance
     url: http://www.gstatic.com/generate_204
     interval: 600
     proxies:
-      - 🇺🇸 美国 Amazon数据中心
-      - 🇨🇳 广东省中山市 移动
-      - 🇺🇸 美国 CloudFlare节点 3
+      - 🇨🇳 广东省 移动
+      - 🇨🇳 广东省深圳市 移动
       - 🇨🇳 广东省湛江市 移动
-      - 🇺🇸 美国 CloudFlare节点 4
+      - 🇨🇳 广东省广州市 移动
+      - 🇬🇷 希腊 V2CROSS.COM
+      - 🇨🇳 广东省湛江市 移动 2
+      - 🇺🇸 美国 CloudFlare节点
+      - 🇨🇳 广东省肇庆市 中移铁通
+      - 🇨🇳 上海市徐汇区 联通漕河泾数据中心
+      - 🇨🇳 湖南省怀化市 电信
+      - 🇨🇳 广东省中山市 移动
+      - 🇨🇳 广东省中山市 移动 2
+      - 🇨🇳 广东省广州市 移动 2
+      - 🇺🇸 美国 CloudFlare节点 2
       - 🇨🇳 广东省汕头市 移动
-      - 🇨🇳 广东省广州市 移动 5
-      - 🇨🇳 广东省广州市 移动 3
-      - 🇨🇳 广东省 联通 2
+      - 🇨🇳 山东省青岛市 联通
+      - 🇮🇳 印度 V2CROSS.COM
+      - 🇨🇳 广东省汕头市 移动 2
       - 🇨🇳 广东省 联通
       - 🇧🇷 巴西圣保罗 CloudFlare节点
-      - 🇺🇸 美国 CloudFlare节点
-      - 🇨🇳 山东省青岛市 联通
-      - 🇨🇳 吉林省 移动(全省通用)
-      - 🇨🇳 广东省广州市 移动 4
-      - 🇺🇸 美国 CloudFlare节点 2
-      - 🇨🇳 广东省广州市 移动 2
-      - 🇨🇳 广东省广州市 移动
+      - 🇭🇰 香港 腾讯云
   - name: SELECT
     type: select
     proxies:
-      - 🇺🇸 美国 Amazon数据中心
-      - 🇨🇳 广东省中山市 移动
-      - 🇺🇸 美国 CloudFlare节点 3
+      - 🇨🇳 广东省 移动
+      - 🇨🇳 广东省深圳市 移动
       - 🇨🇳 广东省湛江市 移动
-      - 🇺🇸 美国 CloudFlare节点 4
+      - 🇨🇳 广东省广州市 移动
+      - 🇬🇷 希腊 V2CROSS.COM
+      - 🇨🇳 广东省湛江市 移动 2
+      - 🇺🇸 美国 CloudFlare节点
+      - 🇨🇳 广东省肇庆市 中移铁通
+      - 🇨🇳 上海市徐汇区 联通漕河泾数据中心
+      - 🇨🇳 湖南省怀化市 电信
+      - 🇨🇳 广东省中山市 移动
+      - 🇨🇳 广东省中山市 移动 2
+      - 🇨🇳 广东省广州市 移动 2
+      - 🇺🇸 美国 CloudFlare节点 2
       - 🇨🇳 广东省汕头市 移动
-      - 🇨🇳 广东省广州市 移动 5
-      - 🇨🇳 广东省广州市 移动 3
-      - 🇨🇳 广东省 联通 2
+      - 🇨🇳 山东省青岛市 联通
+      - 🇮🇳 印度 V2CROSS.COM
+      - 🇨🇳 广东省汕头市 移动 2
       - 🇨🇳 广东省 联通
       - 🇧🇷 巴西圣保罗 CloudFlare节点
-      - 🇺🇸 美国 CloudFlare节点
-      - 🇨🇳 山东省青岛市 联通
-      - 🇨🇳 吉林省 移动(全省通用)
-      - 🇨🇳 广东省广州市 移动 4
-      - 🇺🇸 美国 CloudFlare节点 2
-      - 🇨🇳 广东省广州市 移动 2
-      - 🇨🇳 广东省广州市 移动
+      - 🇭🇰 香港 腾讯云
 rules:
   - RULE-SET,applications,DIRECT
   - DOMAIN,clash.razord.top,DIRECT
